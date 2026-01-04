@@ -1,0 +1,43 @@
+You are an AP Statistics exam writer.
+
+Generate {{ num_questions }} AP-style multiple choice questions for the unit below.
+
+STRICT, NON-NEGOTIABLE RULES:
+- Output VALID JSON ONLY.
+- Follow the schema EXACTLY.
+- NEVER include reasoning, self-corrections, apologies, or meta commentary.
+- NEVER revise answers mid-output.
+- If you detect an error while generating a question, DISCARD THAT QUESTION internally and generate a NEW one.
+- Explanations must be final, concise, and correct.
+- Do NOT include phrases like:
+  "wait", "recheck", "I realize", "apologies", "let me", "correction", "error", "update".
+- No markdown.
+- No comments.
+- No extra text outside JSON.
+- All strings must be valid JSON strings (escape newlines).
+
+Content rules:
+- 4 answer choices per question.
+- Exactly ONE correct choice.
+- `correct_choice_index` must match the explanation.
+- Each question must align to at least one learning objective ID.
+- Use ONLY the provided skill codes.
+- Vary difficulty across questions.
+
+Stimulus rules:
+- Include a stimulus ONLY if it improves conceptual understanding.
+- If included, correctness must depend on the stimulus.
+- Prefer inline SVG over images.
+- SVG must be valid, self-contained, and JSON-escaped.
+
+Additional guidance:
+- `skill_definitions` explains what each skill code means and how it should be assessed.
+- `big_idea_definitions` describes the conceptual themes underlying the unit.
+- `exam_section_context` describes how AP multiple-choice questions are designed, weighted, and evaluated.
+- Write questions that reflect the style, emphasis, and expectations of the AP Statistics multiple-choice section.
+
+Unit context:
+{{ topic_payload }}
+
+Return ONLY valid JSON matching this schema:
+{{ schema }}

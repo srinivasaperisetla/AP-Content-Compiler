@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>{{ course }} FRQs — {{ unit }} (Set {{ set_number }})</title>
+
+  <style>
+    body {
+      font-family: "Times New Roman", serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px;
+      color: #1a1a1a;
+    }
+
+    h1 {
+      text-align: center;
+      border-bottom: 2px solid #000;
+      padding-bottom: 20px;
+      margin-bottom: 40px;
+    }
+
+    .frq {
+      margin-bottom: 60px;
+      page-break-inside: avoid;
+    }
+
+    .frq h2 {
+      font-family: Arial, sans-serif;
+      color: #333;
+      border-left: 5px solid #4A90E2;
+      padding-left: 10px;
+      margin-bottom: 15px;
+    }
+
+    .prompt {
+      margin-bottom: 20px;
+      font-size: 1.05rem;
+    }
+
+    .part {
+      margin-top: 10px;
+    }
+
+    .part-label {
+      font-weight: bold;
+    }
+
+    .diagram {
+      text-align: center;
+      margin: 25px 0;
+      padding: 20px;
+      background: #f9f9f9;
+      border: 1px solid #eee;
+      border-radius: 6px;
+    }
+
+    .diagram svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .guidelines {
+      background: #f0f7ff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 25px;
+      border-left: 5px solid #4A90E2;
+    }
+
+    .guidelines h3 {
+      margin-top: 0;
+      font-family: Arial, sans-serif;
+      font-size: 1rem;
+      color: #004488;
+    }
+
+    .guidelines ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .guidelines li {
+      margin-bottom: 8px;
+    }
+
+    .meta {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 10px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 60px 0;
+    }
+
+    @media print {
+      body {
+        padding: 20px;
+      }
+
+      .guidelines {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>{{ course }} FRQs — {{ unit }} (Set {{ set_number }})</h1>
+
+{% for frq in frqs %}
+  <div
+    class="frq"
+    id="{{ frq.id }}"
+    data-difficulty="{{ frq.difficulty }}"
+    data-skill-codes="{{ frq.skill_codes | join(',') }}"
+    data-learning-objectives="{{ frq.aligned_lo_ids | join(',') }}"
+  >
+
+    <h2>FRQ {{ loop.index }}</h2>
+
+    <div class="prompt">
+      {{ frq.context }}
+    </div>
+
+    {% if frq.stimulus %}
+      <div class="diagram">
+        {% if frq.stimulus.type == "svg" %}
+          {{ frq.stimulus.content | safe }}
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% for part in frq.parts %}
+      <div class="part">
+        <span class="part-label">{{ part.label }}.</span>
+        {{ part.prompt }}
+      </div>
+    {% endfor %}
+
+    {% if frq.scoring_guidelines %}
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          {% for guideline in frq.scoring_guidelines %}
+            <li>{{ guideline }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
+    {% if frq.meta %}
+      <div class="meta">
+        {{ frq.meta }}
+      </div>
+    {% endif %}
+
+  </div>
+
+  {% if not loop.last %}
+    <hr/>
+  {% endif %}
+{% endfor %}
+
+</body>
+</html>

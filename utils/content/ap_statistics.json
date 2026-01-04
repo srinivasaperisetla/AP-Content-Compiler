@@ -1,0 +1,538 @@
+{
+  "name": "AP Statistics",
+  "skills": [
+    {
+      "skill_name": "Selecting Statistical Methods",
+      "skill_description": "Select methods for collecting and/or analyzing data for statistical inference.",
+      "subskills": [
+        {
+          "subskill_name": "1.A",
+          "subskill_description": "Identify the question to be answered or problem to be solved (not assessed)."
+        },
+        {
+          "subskill_name": "1.B",
+          "subskill_description": "Identify key and relevant information to answer a question or solve a problem."
+        },
+        {
+          "subskill_name": "1.C",
+          "subskill_description": "Describe an appropriate method for gathering and representing data."
+        },
+        {
+          "subskill_name": "1.D",
+          "subskill_description": "Identify an appropriate inference method for confidence intervals."
+        },
+        {
+          "subskill_name": "1.E",
+          "subskill_description": "Identify an appropriate inference method for significance tests."
+        },
+        {
+          "subskill_name": "1.F",
+          "subskill_description": "Identify null and alternative hypotheses."
+        }
+      ]
+    },
+    {
+      "skill_name": "Data Analysis",
+      "skill_description": "Describe patterns, trends, associations, and relationships in data.",
+      "subskills": [
+        {
+          "subskill_name": "2.A",
+          "subskill_description": "Describe data presented numerically or graphically."
+        },
+        {
+          "subskill_name": "2.B",
+          "subskill_description": "Construct numerical or graphical representations of distributions."
+        },
+        {
+          "subskill_name": "2.C",
+          "subskill_description": "Calculate summary statistics, relative positions of points within a distribution, correlation, and predicted response."
+        },
+        {
+          "subskill_name": "2.D",
+          "subskill_description": "Compare distributions or relative positions of points within a distribution."
+        }
+      ]
+    },
+    {
+      "skill_name": "Using Probability and Simulation",
+      "skill_description": "Explore random phenomena.",
+      "subskills": [
+        {
+          "subskill_name": "3.A",
+          "subskill_description": "Determine relative frequencies, proportions, or probabilities using simulation or calculations."
+        },
+        {
+          "subskill_name": "3.B",
+          "subskill_description": "Determine parameters for probability distributions."
+        },
+        {
+          "subskill_name": "3.C",
+          "subskill_description": "Describe probability distributions."
+        },
+        {
+          "subskill_name": "3.D",
+          "subskill_description": "Construct a confidence interval, provided conditions for inference are met."
+        },
+        {
+          "subskill_name": "3.E",
+          "subskill_description": "Calculate a test statistic and find a p-value, provided conditions for inference are met."
+        }
+      ]
+    },
+    {
+      "skill_name": "Argumentation",
+      "skill_description": "Develop an explanation or justify a conclusion using evidence from data, definitions, or statistical inference.",
+      "subskills": [
+        {
+          "subskill_name": "4.A",
+          "subskill_description": "Make an appropriate claim or draw an appropriate conclusion."
+        },
+        {
+          "subskill_name": "4.B",
+          "subskill_description": "Interpret statistical calculations and findings to assign meaning or assess a claim."
+        },
+        {
+          "subskill_name": "4.C",
+          "subskill_description": "Verify that inference procedures apply in a given situation."
+        },
+        {
+          "subskill_name": "4.D",
+          "subskill_description": "Justify a claim based on a confidence interval."
+        },
+        {
+          "subskill_name": "4.E",
+          "subskill_description": "Justify a claim using a decision based on significance tests."
+        }
+      ]
+    }
+  ],
+  "big_ideas": [
+    {
+      "id": "VAR",
+      "name": "VARIATION AND DISTRIBUTION",
+      "description": "The distribution of measures for individuals within a sample or population describes variation. The value of a statistic varies from sample to sample. How can we determine whether differences between measures represent random variation or meaningful distinctions? Statistical methods based on probabilistic reasoning provide the basis for shared understandings about variation and about the likelihood that variation between and among measures, samples, and populations is random or meaningful."
+    },
+    {
+      "id": "UNC",
+      "name": "PATTERNS AND UNCERTAINTY",
+      "description": "Statistical tools allow us to represent and describe patterns in data and to classify departures from patterns. Simulation and probabilistic reasoning allow us to anticipate patterns in data and to determine the likelihood of errors in inference."
+    },
+    {
+      "id": "DAT",
+      "name": "DATA-BASED PREDICTIONS, DECISIONS, AND CONCLUSIONS",
+      "description": "Data-based regression models describe relationships between variables and are a tool for making predictions for values of a response variable. Collecting data using random sampling or randomized experimental design means that findings may be generalized to the part of the population from which the selection was made. Statistical inference allows us to make data-based decisions."
+    }
+  ],
+  "units": [
+    {
+      "name": "Exploring One-Variable Data",
+      "developing_understanding": "Unit 1 introduces students to data and the vocabulary of statistics. Students also learn to talk about data in real-world contexts. Variability in data may seem to suggest certain conclusions about the data distribution, but not all variation is meaningful. Statistics allows us to develop shared understandings of uncertainty and variation. In this unit, students will define and represent categorical and quantitative variables, describe and compare distributions of one-variable data, and interpret statistical calculations to assess claims about individual data points or samples. Students will also begin to apply the normal distribution model as an introduction to how theoretical models for populations can be used to describe some distributions of sample data. Later units will more fully develop probabilistic modeling and inference.",
+      "building_practices": "Having access to a world of data is meaningless without the ability to organize and analyze that information. To develop these skills, students will need multiple opportunities to interact with data presented in different formats, i.e., as a table, a graph, or even just a list of values. Students should be asked to verbally describe the patterns and characteristics they see in the data (including shape, center, variability, and unusual features for a quantitative variable) and then compare the characteristics of two different sets of data. Students should also create displays that appropriately represent the data (e.g., using a bar graph for categorical data). Teachers can provide explicit feedback on students’ verbal responses so they understand the level of detail needed. For example, when students are asked to describe a distribution of quantitative data, they often provide an acronym associated with that type of distribution (e.g., SOCS or CUSS) but then struggle to discuss all the elements the acronym stands for. In particular, students often neglect to discuss unusual features such as gaps or outliers. Teachers can reinforce that these elements must be addressed in their descriptions and that all data has context (e.g., the variable of interest, including any units of measurement).",
+      "preparing_for_exam": "In preparation for the AP Exam, teachers can encourage students to carefully read each question and completely answer the question asked. When interpreting representations of quantitative data, for example, students should describe shape, center, and variability, as well as unusual features, such as outliers. A response focused only on the center, for example, would be considered incomplete. Students should also provide complete explanations in context for all conclusions made from data. If asked to justify the selection of a particular conclusion over other options, students should include both a reasoning for their choice and rationales for not choosing the others.",
+      "topics": [
+        {
+          "name": "Introducing Statistics: What Can We Learn from Data?",
+          "big_ideas": [
+            "VAR-1"
+          ],
+          "suggested_subskill_codes": [
+            "1.A"
+          ],
+          "learning_objectives": [
+            {
+              "id": "VAR-1.A",
+              "description": "Identify questions to be answered, based on variation in one-variable data. [Skill 1.A]",
+              "essential_knowledge": [
+                "Numbers may convey meaningful information, when placed in context."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "The Language of Variation: Variables",
+          "big_ideas": [
+            "VAR-1"
+          ],
+          "suggested_subskill_codes": [
+            "2.A"
+          ],
+          "learning_objectives": [
+            {
+              "id": "VAR-1.B",
+              "description": "Identify variables in a set of data. [Skill 2.A]",
+              "essential_knowledge": [
+                "A variable is a characteristic that changes from one individual to another."
+              ]
+            },
+            {
+              "id": "VAR-1.C",
+              "description": "Classify types of variables. [Skill 2.A]",
+              "essential_knowledge": [
+                "A categorical variable takes on values that are category names or group labels.",
+                "A quantitative variable is one that takes on numerical values for a measured or counted quantity."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Representing a Categorical Variable with Tables",
+          "big_ideas": [
+            "UNC-1"
+          ],
+          "suggested_subskill_codes": [
+            "2.B",
+            "2.A"
+          ],
+          "learning_objectives": [
+            {
+              "id": "UNC-1.A",
+              "description": "Represent categorical data using frequency or relative frequency tables. [Skill 2.B]",
+              "essential_knowledge": [
+                "A frequency table gives the number of cases falling into each category. A relative frequency table gives the proportion of cases falling into each category."
+              ]
+            },
+            {
+              "id": "UNC-1.B",
+              "description": "Describe categorical data represented in frequency or relative tables. [Skill 2.A]",
+              "essential_knowledge": [
+                "Percentages, relative frequencies, and rates all provide the same information as proportions.",
+                "Counts and relative frequencies of categorical data reveal information that can be used to justify claims about the data in context."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Representing a Categorical Variable with Graphs",
+          "big_ideas": [
+            "UNC-1"
+          ],
+          "suggested_subskill_codes": [
+            "2.B",
+            "2.A",
+            "2.D"
+          ],
+          "learning_objectives": [
+            {
+              "id": "UNC-1.C",
+              "description": "Represent categorical data graphically. [Skill 2.B]",
+              "essential_knowledge": [
+                "Bar charts (or bar graphs) are used to display frequencies (counts) or relative frequencies (proportions) for categorical data.",
+                "The height or length of each bar in a bar graph corresponds to either the number or proportion of observations falling within each category.",
+                "There are many additional ways to represent frequencies (counts) or relative frequencies (proportions) for categorical data."
+              ]
+            },
+            {
+              "id": "UNC-1.D",
+              "description": "Describe categorical data represented graphically. [Skill 2.A]",
+              "essential_knowledge": [
+                "Graphical representations of a categorical variable reveal information that can be used to justify claims about the data in context."
+              ]
+            },
+            {
+              "id": "UNC-1.E",
+              "description": "Compare multiple sets of categorical data. [Skill 2.D]",
+              "essential_knowledge": [
+                "Frequency tables, bar graphs, or other representations can be used to compare two or more data sets in terms of the same categorical variable."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Representing a Quantitative Variable with Graphs",
+          "big_ideas": [
+            "UNC-1"
+          ],
+          "suggested_subskill_codes": [
+            "2.A",
+            "2.B"
+          ],
+          "learning_objectives": [
+            {
+              "id": "UNC-1.F",
+              "description": "Classify types of quantitative variables. [Skill 2.A]",
+              "essential_knowledge": [
+                "A discrete variable can take on a countable number of values. The number of values may be finite or countably infinite, as with the counting numbers.",
+                "A continuous variable can take on infinitely many values, but those values cannot be counted. No matter how small the interval between two values of a continuous variable, it is always possible to determine another value between them."
+              ]
+            },
+            {
+              "id": "UNC-1.G",
+              "description": "Represent quantitative data graphically. [Skill 2.B]",
+              "essential_knowledge": [
+                "In a histogram, the height of each bar shows the number or proportion of observations that fall within the interval corresponding to that bar. Altering the interval widths can change the appearance of the histogram.",
+                "In a stem and leaf plot, each data value is split into a “stem” (the first digit or digits) and a “leaf” (usually the last digit).",
+                "A dotplot represents each observation by a dot, with the position on the horizontal axis corresponding to the data value of that observation, with nearly identical values stacked on top of each other.",
+                "A cumulative graph represents the number or proportion of a data set less than or equal to a given number.",
+                "There are many additional ways to graphically represent distributions of quantitative data."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Describing the Distribution of a Quantitative Variable",
+          "big_ideas": [
+            "UNC-1"
+          ],
+          "suggested_subskill_codes": [
+            "2.A"
+          ],
+          "learning_objectives": [
+            {
+              "id": "UNC-1.H",
+              "description": "Describe the characteristics of quantitative data distributions. [Skill 2.A]",
+              "essential_knowledge": [
+                "Descriptions of the distribution of quantitative data include shape, center, and variability (spread), as well as any unusual features such as outliers, gaps, clusters, or multiple peaks.",
+                "Outliers for one-variable data are data points that are unusually small or large relative to the rest of the data.",
+                "A distribution is skewed to the right (positive skew) if the right tail is longer than the left. A distribution is skewed to the left (negative skew) if the left tail is longer than the right. A distribution is symmetric if the left half is the mirror image of the right half.",
+                "Univariate graphs with one main peak are known as unimodal. Graphs with two prominent peaks are bimodal. A graph where each bar height is approximately the same (no prominent peaks) is approximately uniform.",
+                "A gap is a region of a distribution between two data values where there are no observed data.",
+                "Clusters are concentrations of data usually separated by gaps.",
+                "Descriptive statistics does not attribute properties of a data set to a larger population, but may provide the basis for conjectures for subsequent testing."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Summary Statistics for a Quantitative Variable",
+          "big_ideas": [
+            "UNC-1"
+          ],
+          "suggested_subskill_codes": [
+            "2.C",
+            "4.B"
+          ],
+          "learning_objectives": [
+            {
+              "id": "UNC-1.I",
+              "description": "Calculate measures of center and position for quantitative data. [Skill 2.C]",
+              "essential_knowledge": [
+                "A statistic is a numerical summary of sample data.",
+                "The mean is the sum of all the data values divided by the number of values. For a sample, the mean is denoted by x-bar: (1/n) * sum(xi), where xi represents the ith data point in the sample and n represents the number of data values in the sample.",
+                "The median of a data set is the middle value when data are ordered. When the number of data points is even, the median can take on any value between the two middle values. In AP Statistics, the most commonly used value for the median of a data set with an even number of values is the average of the two middle values.",
+                "The first quartile, Q1, is the median of the half of the ordered data set from the minimum to the position of the median. The third quartile, Q3, is the median of the half of the ordered data set from the position of the median to the maximum. Q1 and Q3 form the boundaries for the middle 50% of values in an ordered data set.",
+                "The pth percentile is interpreted as the value that has p% of the data less than or equal to it."
+              ]
+            },
+            {
+              "id": "UNC-1.J",
+              "description": "Calculate measures of variability for quantitative data. [Skill 2.C]",
+              "essential_knowledge": [
+                "Three commonly used measures of variability (or spread) in a distribution are the range, interquartile range, and standard deviation.",
+                "The range is defined as the difference between the maximum data value and the minimum data value. The interquartile range (IQR) is defined as the difference between the third and first quartiles: Q3 − Q1. Both the range and the interquartile range are possible ways of measuring variability of the distribution of a quantitative variable.",
+                "Standard deviation is a way to measure variability of the distribution of a quantitative variable. For a sample, the standard deviation is denoted by sx: sqrt( (1/(n-1)) * sum((xi-x_bar)^2) ). The square of the sample standard deviation, s^2, is called the sample variance.",
+                "Changing units of measurement affects the values of the calculated statistics."
+              ]
+            },
+            {
+              "id": "UNC-1.K",
+              "description": "Explain the selection of a particular measure of center and/or variability for describing a set of quantitative data. [Skill 4.B]",
+              "essential_knowledge": [
+                "There are many methods for determining outliers. Two methods frequently used in this course are: i. An outlier is a value greater than 1.5 × IQR above the third quartile or more than 1.5 × IQR below the first quartile. ii. An outlier is a value located 2 or more standard deviations above, or below, the mean.",
+                "The mean, standard deviation, and range are considered nonresistant (or non-robust) because they are influenced by outliers. The median and IQR are considered resistant (or robust), because outliers do not greatly (if at all) affect their value."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Graphical Representations of Summary Statistics",
+          "big_ideas": [
+            "UNC-1"
+          ],
+          "suggested_subskill_codes": [
+            "2.B",
+            "2.A"
+          ],
+          "learning_objectives": [
+            {
+              "id": "UNC-1.L",
+              "description": "Represent summary statistics for quantitative data graphically. [Skill 2.B]",
+              "essential_knowledge": [
+                "Taken together, the minimum data value, the first quartile (Q1), the median, the third quartile (Q3), and the maximum data value make up the five-number summary.",
+                "A boxplot is a graphical representation of the five-number summary (minimum, first quartile, median, third quartile, maximum). The box represents the middle 50% of data, with a line at the median and the ends of the box corresponding to the quartiles. Lines (“whiskers”) extend from the quartiles to the most extreme point that is not an outlier, and outliers are indicated by their own symbol beyond this."
+              ]
+            },
+            {
+              "id": "UNC-1.M",
+              "description": "Describe summary statistics of quantitative data sets represented graphically. [Skill 2.A]",
+              "essential_knowledge": [
+                "Summary statistics of quantitative data, or of sets of quantitative data, can be used to justify claims about the data in context.",
+                "If a distribution is relatively symmetric, then the mean and median are relatively close to one another. If a distribution is skewed right, then the mean is usually to the right of the median. If the distribution is skewed left, then the mean is usually to the left of the median."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Comparing Distributions of a Quantitative Variable",
+          "big_ideas": [
+            "UNC-1"
+          ],
+          "suggested_subskill_codes": [
+            "2.D"
+          ],
+          "learning_objectives": [
+            {
+              "id": "UNC-1.N",
+              "description": "Compare graphical representations for multiple sets of quantitative data. [Skill 2.D]",
+              "essential_knowledge": [
+                "Any of the graphical representations, e.g., histograms, side-by-side boxplots, etc., can be used to compare two or more independent samples on center, variability, clusters, gaps, outliers, and other features."
+              ]
+            },
+            {
+              "id": "UNC-1.O",
+              "description": "Compare summary statistics for multiple sets of quantitative data. [Skill 2.D]",
+              "essential_knowledge": [
+                "Any of the numerical summaries (e.g., mean, standard deviation, relative frequency, etc.) can be used to compare two or more independent samples."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "The Normal Distribution",
+          "big_ideas": [
+            "VAR-2"
+          ],
+          "suggested_subskill_codes": [
+            "2.D",
+            "3.A"
+          ],
+          "learning_objectives": [
+            {
+              "id": "VAR-2.A",
+              "description": "Compare a data distribution to the normal distribution model. [Skill 2.D]",
+              "essential_knowledge": [
+                "A parameter is a numerical summary of a population.",
+                "Some sets of data may be described as approximately normally distributed. A normal curve is mound-shaped and symmetric. The parameters of a normal distribution are the population mean, µ, and the population standard deviation, σ.",
+                "For a normal distribution, approximately 68% of the observations are within 1 standard deviation of the mean, approximately 95% of observations are within 2 standard deviations of the mean, and approximately 99.7% of observations are within 3 standard deviations of the mean. This is called the empirical rule.",
+                "Many variables can be modeled by a normal distribution."
+              ]
+            },
+            {
+              "id": "VAR-2.B",
+              "description": "Determine proportions and percentiles from a normal distribution. [Skill 3.A]",
+              "essential_knowledge": [
+                "A standardized score for a particular data value is calculated as (data value – mean)/(standard deviation), and measures the number of standard deviations a data value falls above or below the mean.",
+                "One example of a standardized score is a z-score, which is calculated as z-score = (xi - µ) / σ. A z-score measures how many standard deviations a data value is from the mean.",
+                "Technology, such as a calculator, a standard normal table, or computer-generated output, can be used to find the proportion of data values located on a given interval of a normally distributed random variable.",
+                "Given the area of a region under the graph of the normal distribution curve, it is possible to use technology, such as a calculator, a standard normal table, or computer-generated output, to estimate parameters for some populations."
+              ]
+            },
+            {
+              "id": "VAR-2.C",
+              "description": "Compare measures of relative position in data sets. [Skill 2.D]",
+              "essential_knowledge": [
+                "Percentiles and z-scores may be used to compare relative positions of points within a data set or between data sets."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exam_sections": [
+    {
+      "section": "I",
+      "question_type": "Multiple-choice questions",
+      "Number of Questions": "40",
+      "exam_weighting": "50%",
+      "timing": "90 minutes",
+      "descriptions": [
+        "The multiple-choice section of the AP Exam assesses the nine units of the course with the following exam weighting:",
+        "Unit 1: Exploring One-Variable Data 15–23%",
+        "Unit 2: Exploring Two-Variable Data 5–7%",
+        "Unit 3: Collecting Data 12–15%",
+        "Unit 4: Probability, Random Variables, and Probability Distributions 10–20%",
+        "Unit 5: Sampling Distributions 7–12%",
+        "Unit 6: Inference for Categorical Data: Proportions 12–15%",
+        "Unit 7: Inference for Quantitative Data: Means 10–18%",
+        "Unit 8: Inference for Categorical Data: Chi-Square 2–5%",
+        "Unit 9: Inference for Quantitative Data: Slopes 2–5%",
+        "All four AP Statistics skill categories are assessed in the multiple-choice section with the following weighting:",
+        "Skill 1: Selecting Statistical Methods 15–23%",
+        "Skill 2: Data Analysis 15–23%",
+        "Skill 3: Using Probability and Simulation 30–40%",
+        "Skill 4: Statistical Argumentation 25–35%",
+        "Multiple-choice questions assess students’ ability to select methods for collecting and/or analyzing data for statistical inference. Students will need to identify key and relevant information to answer a question or solve a problem (including appropriate inference methods), describe appropriate methods for gathering and representing data, and identify null and alternative hypotheses.",
+        "Multiple-choice questions will assess students’ ability to describe patterns, trends, associations, and relationships in data. Students will need to describe data presented numerically or graphically, perform statistical calculations, and compare distributions.",
+        "Multiple-choice questions will assess students’ ability to explore random phenomena. Students will need to determine relative frequencies, proportions, or probabilities using simulation or calculations. Additionally, students will need to describe and determine parameters for probability distributions. Students will also need to construct confidence intervals and calculate test statistics.",
+        "Multiple-choice questions will assess students’ ability to develop an explanation or justify a conclusion using evidence from data, definitions, or statistical inference. Students will need to make appropriate claims, interpret statistical calculations, verify application of inference procedures, and justify statistical claims."
+      ]
+    },
+    {
+      "section": "II",
+      "question_type": "Free-response questions",
+      "Number of Questions": "6",
+      "exam_weighting": "50%",
+      "timing": "90 minutes",
+      "descriptions": [
+        "The second section of the AP Statistics Exam includes six free-response questions, including one investigative task.",
+        "Part A: Questions 1–5 (37.5%, 65 minutes)",
+        "Part B: Question 6: Investigative task (12.5%, 25 minutes)",
+        "The five free-response questions in Part A include the following:",
+        "One multi-part question with a primary focus on Collecting Data, assessing Skill Category 1: Selecting Statistical Methods.",
+        "One multi-part question with a primary focus on Exploring Data, assessing Skill Category 2: Data Analysis.",
+        "One multi-part question with a primary focus on Probability and Sampling Distributions, assessing Skill Category 3: Using Probability and Simulation.",
+        "One question with a primary focus on Inference, assessing the inference skills associated with Skill Categories 1, 3, and 4.",
+        "One question that focuses on two or more skill categories.",
+        "The investigative task (Part B) assesses multiple skill categories and content areas, focusing on the application of skills and content in new contexts or in non-routine ways.",
+        "One free-response question will primarily focus on collecting data, assessing Skills 1.B and/or 1.C. Other free-response questions may also assess this skill category.",
+        "One free-response question will primarily focus on exploring data, assessing some combination of Skills 2.A, 2.B, 2.C, and/or 2.D. Other free-response questions may also assess this skill category.",
+        "One free-response question will primarily focus on probability and sampling distributions, assessing some combination of Skills 3.A, 3.B, and/or 3.C. Other free-response questions may also assess this skill category.",
+        "At least three of the first five free-response questions, as well as the investigative task, will assess statistical argumentation."
+      ]
+    }
+  ],
+  "task_verbs": [
+    {
+      "verb": "Calculate",
+      "description": "Perform mathematical steps to arrive at a final answer (e.g., algebraic expressions or diagrams with properly substituted numbers and correct labeling). Calculate tasks are also phrased with “Find” or interrogatory questions such as “How many?”, “What is?”, “What values?”, “How likely?”, or “How often?”"
+    },
+    {
+      "verb": "Compare",
+      "description": "Provide a description or explanation of similarities and/or differences."
+    },
+    {
+      "verb": "Construct/Complete",
+      "description": "Represent data in graphical or numerical form."
+    },
+    {
+      "verb": "Describe",
+      "description": "Provide the relevant characteristics of representations, distributions, or methods."
+    },
+    {
+      "verb": "Determine",
+      "description": "Apply an appropriate definition or perform calculations to identify values, intervals, or solutions. Determine tasks are also phrased with interrogatory questions such as “Do the data support?”, “Do the data provide?”, “Is there evidence?”, “Which is better?”, “Does your answer match?”, or “Can it be assumed?”"
+    },
+    {
+      "verb": "Estimate",
+      "description": "Use models or representations to find approximate values for functions."
+    },
+    {
+      "verb": "Explain",
+      "description": "Provide information about how or why a relationship, process, pattern, position, situation, or outcome occurs, using evidence and/or reasoning to support or qualify a claim. “Explain” tasks may also be phrased as “Give a reason for . . . .”"
+    },
+    {
+      "verb": "Give a point estimate or interval estimate",
+      "description": "Use models or representations to find approximate values for uncertain figures."
+    },
+    {
+      "verb": "Give examples",
+      "description": "Provide a specific example that meets given criteria."
+    },
+    {
+      "verb": "Identify/Indicate/Circle",
+      "description": "Indicate or provide information about a specified topic in words or by circling, shading, or marking given information, without elaboration or explanation. Also phrased as “What is? or “Which?”"
+    },
+    {
+      "verb": "Interpret",
+      "description": "Describe the connection between a mathematical expression, representation, or solution and its meaning within the realistic context of a problem, sometimes including consideration of units."
+    },
+    {
+      "verb": "Justify",
+      "description": "Provide evidence to support, qualify, or defend a claim and/or provide statistical reasoning to explain how that evidence supports or qualifies the claim."
+    },
+    {
+      "verb": "Verify",
+      "description": "Confirm that the conditions of a particular definition, distribution, or inference method are met in order to verify that it is applicable in a given situation. Verify tasks may also be phrased as “Have the conditions been met?” or “Can it be assumed?”"
+    }
+  ]
+}

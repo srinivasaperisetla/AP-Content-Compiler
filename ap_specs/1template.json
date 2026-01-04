@@ -1,0 +1,71 @@
+{
+  "name": "Course name",
+
+  "skills": [
+    {
+      "skill_name": "Name of the skill name/category or Science Practice etc...",
+      "skill_description": "Brief description of what this skill measures",
+      "subskills": [
+        {
+          "subskill_name": "Subskill code (e.g., 1.A)",
+          "subskill_description": "Specific ability students demonstrate under this subskill"
+        }
+      ]
+    }
+  ],
+
+  "big_ideas": [
+    {
+      "id": "Big idea / Theme identifier",
+      "name": "Big idea / Theme title",
+      "description": "High-level unifying concept that recurs throughout the course"
+    }
+  ],
+
+  "units": [
+    {
+      "name": "Unit title",
+      "developing_understanding": "What conceptual understanding students should develop in this unit",
+      "building_practices": "Science practices and/or Course skills emphasized in this unit",
+      "preparing_for_exam": "How this unit prepares students for AP-style exam questions",
+      "topics": [
+        {
+          "name": "Topic title",
+          "big_ideas": ["Related big idea IDs"],
+          "suggested_subskill_codes": ["Relevant science practice / Course skills subskills"],
+          "learning_objectives": [
+            {
+              "id": "Learning objective identifier",
+              "description": "What students should be able to do after instruction",
+              "essential_knowledge": [
+                "Key content knowledge students must understand for this objective"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "exam_sections": [
+    {
+      "section": "Exam section identifier (e.g., I or II)",
+      "question_type": "Type of questions in this section",
+      "Number of Questions": "Total number of questions in this section",
+      "exam_weighting": "Percentage of total exam score",
+      "timing": "Time allotted for this section",
+      "descriptions": [
+        "Contextual description of how this section assesses student learning",
+        "Descriptions of question types or expectations in this section",
+        "Any extra descriptions of weightage per unit"
+      ]
+    }
+  ],
+
+  "task_verbs": [
+    {
+      "verb": "Task verb used in exam questions",
+      "description": "What students are expected to do when this verb is used"
+    }
+  ]
+}

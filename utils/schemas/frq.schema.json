@@ -1,0 +1,150 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["frqs"],
+  "additionalProperties": false,
+
+  "properties": {
+    "frqs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "context",
+          "parts",
+          "aligned_lo_ids",
+          "skill_codes",
+          "difficulty"
+        ],
+
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique FRQ identifier (e.g., U1_FRQ_1)"
+          },
+
+          "difficulty": {
+            "type": "string",
+            "enum": ["easy", "medium", "hard"]
+          },
+
+          "context": {
+            "type": "string",
+            "minLength": 20,
+            "description": "Introductory scenario or experimental context for the FRQ"
+          },
+
+          "stimulus": {
+            "type": "object",
+            "description": "Optional visual stimulus (SVG only)",
+            "additionalProperties": false,
+            "required": ["type", "content"],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["svg"]
+              },
+              "content": {
+                "type": "string",
+                "description": "Inline SVG markup (JSON-escaped)"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "stimulus_id": {
+                "type": "string",
+                "description": "Optional ID for stimulus reuse"
+              }
+            }
+          },
+
+          "parts": {
+            "type": "array",
+            "minItems": 1,
+            "description": "FRQ subparts (a, b, c, ...)",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["label", "prompt"],
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "pattern": "^[a-z]$",
+                  "description": "Lowercase part label (a, b, c, ...)"
+                },
+                "prompt": {
+                  "type": "string",
+                  "minLength": 10,
+                  "description": "Task prompt for this part"
+                },
+                "task_verb": {
+                  "type": "string",
+                  "description": "Optional AP task verb (e.g., describe, explain, calculate)"
+                },
+                "points": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "description": "Optional point value for this part"
+                }
+              }
+            }
+          },
+
+          "scoring_guidelines": {
+            "type": "array",
+            "description": "Optional scoring rubric bullets",
+            "items": {
+              "type": "string",
+              "minLength": 10
+            }
+          },
+
+          "aligned_lo_ids": {
+            "type": "array",
+            "minItems": 1,
+            "description": "Learning objective IDs aligned to this FRQ",
+            "items": {
+              "type": "string"
+            }
+          },
+
+          "skill_codes": {
+            "type": "array",
+            "minItems": 1,
+            "description": "Skill / science practice subskill codes",
+            "items": {
+              "type": "string"
+            }
+          },
+
+          "big_ideas": {
+            "type": "array",
+            "description": "Optional big idea identifiers",
+            "items": {
+              "type": "string"
+            }
+          },
+
+          "exam_section": {
+            "type": "string",
+            "description": "Optional exam section identifier (e.g., Section II)"
+          },
+
+          "suggested_time_minutes": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Optional suggested time for this FRQ"
+          },
+
+          "meta": {
+            "type": "string",
+            "description": "Optional metadata for teachers (not shown to students)"
+          }
+        }
+      }
+    }
+  }
+}
