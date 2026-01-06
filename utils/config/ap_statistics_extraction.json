@@ -1,0 +1,57 @@
+{
+  "course_id": "ap_statistics",
+  "pdf_file": "courses/ap_statistics.pdf",
+  "extraction_method": "vision_model",
+  "model": "gemini-2.0-flash-exp",
+  "section_guide": {
+    "skills": {
+      "detection_method": "auto",
+      "hints": [
+        "Skills",
+        "Science Practices",
+        "Course Skills"
+      ],
+      "required": true
+    },
+    "big_ideas": {
+      "detection_method": "auto",
+      "hints": [
+        "Big Ideas",
+        "Themes",
+        "Enduring Understandings"
+      ],
+      "required": true
+    },
+    "units": {
+      "detection_method": "auto",
+      "hints": [
+        "Unit 1",
+        "Unit 2",
+        "Course Units",
+        "Module"
+      ],
+      "required": true,
+      "extract_each_unit_separately": true
+    },
+    "exam_sections": {
+      "detection_method": "auto",
+      "hints": [
+        "Exam Information",
+        "Section I",
+        "Section II",
+        "Multiple Choice",
+        "Free Response"
+      ],
+      "required": true
+    },
+    "task_verbs": {
+      "detection_method": "auto",
+      "hints": [
+        "Task Verbs",
+        "Command Terms",
+        "Action Verbs"
+      ],
+      "required": false
+    }
+  }
+}

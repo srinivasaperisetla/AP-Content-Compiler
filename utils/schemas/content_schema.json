@@ -1,0 +1,234 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "course_metadata",
+    "skills",
+    "big_ideas",
+    "units",
+    "exam_sections"
+  ],
+  "properties": {
+    "course_metadata": {
+      "type": "object",
+      "required": ["course_id", "name", "extraction_method", "extraction_date"],
+      "properties": {
+        "course_id": {
+          "type": "string",
+          "description": "Course identifier (e.g., ap_statistics)"
+        },
+        "name": {
+          "type": "string",
+          "description": "Full course name (e.g., AP Statistics)"
+        },
+        "version": {
+          "type": "string",
+          "description": "CED version (e.g., 2024-2025)"
+        },
+        "extraction_method": {
+          "type": "string",
+          "description": "Method used for extraction (e.g., vision_model)"
+        },
+        "extraction_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO format date when extraction was performed"
+        }
+      },
+      "additionalProperties": false
+    },
+    "skills": {
+      "type": "array",
+      "description": "Course skills with subskills",
+      "items": {
+        "type": "object",
+        "required": ["skill_name", "subskills"],
+        "properties": {
+          "skill_name": {
+            "type": "string",
+            "description": "Name of the skill category"
+          },
+          "skill_description": {
+            "type": "string",
+            "description": "Description of what this skill measures"
+          },
+          "subskills": {
+            "type": "array",
+            "description": "List of subskills under this skill category",
+            "items": {
+              "type": "object",
+              "required": ["subskill_name", "subskill_description"],
+              "properties": {
+                "subskill_name": {
+                  "type": "string",
+                  "description": "Subskill code (e.g., 1.A, 2.B)"
+                },
+                "subskill_description": {
+                  "type": "string",
+                  "description": "Description of what this subskill measures"
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "big_ideas": {
+      "type": "array",
+      "description": "Big ideas or themes that recur throughout the course",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "description"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Big idea identifier (e.g., VAR, UNC, DAT)"
+          },
+          "name": {
+            "type": "string",
+            "description": "Full name of the big idea"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the big idea"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "units": {
+      "type": "array",
+      "description": "Course units with topics and learning objectives",
+      "items": {
+        "type": "object",
+        "required": ["name", "topics"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Unit name (e.g., Unit 1: Exploring One-Variable Data)"
+          },
+          "developing_understanding": {
+            "type": "string",
+            "description": "Text describing what conceptual understanding students should develop"
+          },
+          "building_practices": {
+            "type": "string",
+            "description": "Text describing practices/skills emphasized in this unit"
+          },
+          "preparing_for_exam": {
+            "type": "string",
+            "description": "Text describing how this unit prepares students for the exam"
+          },
+          "topics": {
+            "type": "array",
+            "description": "Topics within this unit",
+            "items": {
+              "type": "object",
+              "required": ["name", "learning_objectives"],
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "Topic name"
+                },
+                "big_ideas": {
+                  "type": "array",
+                  "description": "Big idea IDs related to this topic",
+                  "items": { "type": "string" }
+                },
+                "suggested_subskill_codes": {
+                  "type": "array",
+                  "description": "Skill codes suggested for this topic",
+                  "items": { "type": "string" }
+                },
+                "learning_objectives": {
+                  "type": "array",
+                  "description": "Learning objectives for this topic",
+                  "items": {
+                    "type": "object",
+                    "required": ["id", "description"],
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "description": "Learning objective ID (e.g., VAR-1.A)"
+                      },
+                      "description": {
+                        "type": "string",
+                        "description": "Description of what students should be able to do"
+                      },
+                      "essential_knowledge": {
+                        "type": "array",
+                        "description": "Essential knowledge points for this learning objective",
+                        "items": { "type": "string" }
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "exam_sections": {
+      "type": "array",
+      "description": "Exam section information (Section I: MCQ, Section II: FRQ)",
+      "items": {
+        "type": "object",
+        "required": ["section", "question_type"],
+        "properties": {
+          "section": {
+            "type": "string",
+            "description": "Section identifier (I or II)"
+          },
+          "question_type": {
+            "type": "string",
+            "description": "Type of questions (e.g., Multiple-choice questions, Free-response questions)"
+          },
+          "Number of Questions": {
+            "type": "string",
+            "description": "Number of questions in this section"
+          },
+          "exam_weighting": {
+            "type": "string",
+            "description": "Percentage of total exam score (e.g., 50%)"
+          },
+          "timing": {
+            "type": "string",
+            "description": "Time allotted (e.g., 90 minutes)"
+          },
+          "descriptions": {
+            "type": "array",
+            "description": "Descriptions of section requirements and expectations",
+            "items": { "type": "string" }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "task_verbs": {
+      "type": "array",
+      "description": "Task verbs used in FRQ questions (optional, not all courses have this)",
+      "items": {
+        "type": "object",
+        "required": ["verb", "description"],
+        "properties": {
+          "verb": {
+            "type": "string",
+            "description": "Task verb (e.g., Calculate, Justify, Explain)"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of what students must do when this verb is used"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

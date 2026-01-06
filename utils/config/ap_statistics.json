@@ -1,0 +1,47 @@
+{
+  "course_id": "ap_statistics",
+  "name": "AP Statistics",
+  "question_types": ["mcq", "frq"],
+
+  "stimulus_config": {
+    "supported_types": ["svg", "table"],
+    "default_type": "svg",
+    "generation_strategy": "inline"
+  },
+
+  "generation_config": {
+    "mcq": {
+      "batch_size": 5,
+      "questions_per_set": 25,
+      "model": "gemini-2.5-pro",
+      "num_choices": 4
+    },
+    "frq": {
+      "batch_size": 1,
+      "frqs_per_set": 25,
+      "model": "gemini-2.5-pro"
+    }
+  },
+
+  "prompt_config": {
+    "mcq_prompt": "utils/prompts/mcq_prompt.txt",
+    "frq_prompt": "utils/prompts/frq_prompt.txt",
+    "enhancements": {
+      "include_misconceptions": false,
+      "include_real_world_context": true,
+      "blooms_taxonomy_level": "application"
+    }
+  },
+
+  "exam_section_mapping": {
+    "mcq": "I",
+    "frq": "II"
+  },
+
+  "special_requirements": {
+    "needs_passages": false,
+    "needs_historical_images": false,
+    "needs_experimental_data": false,
+    "needs_formulas": true
+  }
+}
