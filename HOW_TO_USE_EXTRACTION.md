@@ -51,11 +51,13 @@ Standardized JSON (utils/content/ap_statistics.json)
 ### Prerequisites
 
 1. **Install dependencies:**
+
 ```bash
 pip install google-genai python-dotenv jsonschema pdf2image Pillow
 ```
 
 2. **Install poppler** (required for PDF to image conversion):
+
    - **macOS**: `brew install poppler`
    - **Linux**: `sudo apt-get install poppler-utils`
    - **Windows**: Download from https://github.com/oschwartz10612/poppler-windows/releases
@@ -79,6 +81,7 @@ python pdf_to_json.py ap_statistics
 ```
 
 This will:
+
 1. Look for `courses/ap_statistics.pdf`
 2. Auto-generate extraction config if needed (`utils/config/ap_statistics_extraction.json`)
 3. Extract all content
@@ -91,6 +94,7 @@ python pdf_to_json.py
 ```
 
 This will:
+
 1. Show list of all available PDFs in `courses/` directory
 2. Let you select by number or type course ID
 3. Extract the selected course
@@ -100,12 +104,14 @@ This will:
 ## 🔍 Step-by-Step: What Happens When You Run It
 
 ### Step 1: Configuration
+
 ```
 Script checks for: utils/config/ap_statistics_extraction.json
 If not found → Creates default config with section hints
 ```
 
 ### Step 2: PDF Structure Analysis
+
 ```
 📊 Analyzing PDF structure: courses/ap_statistics.pdf
    Uses Gemini 2.0 Flash Vision to analyze first 10 pages
@@ -118,6 +124,7 @@ If not found → Creates default config with section hints
 ```
 
 ### Step 3: Section Extraction
+
 ```
 📄 Extracting Skills (pages 5-12)
    ✅ Skills extracted successfully
@@ -133,6 +140,7 @@ If not found → Creates default config with section hints
 ```
 
 ### Step 4: Unit Extraction
+
 ```
 📚 Extracting Unit 1: Exploring One-Variable Data (pages 20-45)
    ✅ Unit 1 extracted: 10 topics
@@ -144,6 +152,7 @@ If not found → Creates default config with section hints
 ```
 
 ### Step 5: Normalization & Validation
+
 ```
 ✅ Content validated against schema
 
@@ -163,6 +172,7 @@ If not found → Creates default config with section hints
 ### Generated Files
 
 1. **Extraction Config** (auto-generated if missing):
+
    - `utils/config/ap_statistics_extraction.json`
    - Contains section detection hints and settings
 
@@ -223,11 +233,13 @@ If not found → Creates default config with section hints
 ### Customizing Extraction
 
 You can customize the extraction by editing:
+
 ```
 utils/config/ap_statistics_extraction.json
 ```
 
 **Example customization:**
+
 ```json
 {
   "course_id": "ap_statistics",
@@ -246,6 +258,7 @@ utils/config/ap_statistics_extraction.json
 ```
 
 **Why customize?**
+
 - If vision model misses a section, add more specific hints
 - If sections are in unusual locations, you can provide page hints
 - Adjust detection method if needed
@@ -255,24 +268,29 @@ utils/config/ap_statistics_extraction.json
 ## 🐛 Troubleshooting
 
 ### Error: "PDF not found"
+
 - **Solution**: Make sure `courses/ap_statistics.pdf` exists
 - Check the filename matches exactly (case-sensitive)
 
 ### Error: "Failed to convert PDF to images"
+
 - **Solution**: Install poppler (see Prerequisites)
 - On macOS: `brew install poppler`
 - Verify: `which pdftoppm` should return a path
 
 ### Error: "Missing GEMINI_API_KEY"
+
 - **Solution**: Set API key in `.env` file or environment variable
 - Create `.env` file: `GEMINI_API_KEY=your-key`
 
 ### Error: "Section not found"
+
 - **Solution**: The vision model couldn't find the section
 - Edit `utils/config/ap_statistics_extraction.json` to add more hints
 - Or manually specify page ranges if you know them
 
 ### Validation Warnings
+
 - **What it means**: Extracted content doesn't fully match schema
 - **Solution**: Review the extracted JSON, may need manual correction
 - Check that all required fields are present
@@ -331,6 +349,7 @@ Extracting CED for: ap_statistics
 ## 🎯 What Happens Next?
 
 After extraction, you'll have:
+
 - ✅ `utils/content/ap_statistics.json` - Ready for question generation
 - ✅ All skills, big ideas, units, learning objectives extracted
 - ✅ Validated against schema
@@ -362,4 +381,3 @@ After extraction, you'll have:
 **Time**: ~5-10 minutes for a typical CED
 
 **Result**: Standardized JSON ready for question generation!
-
