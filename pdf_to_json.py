@@ -3,150 +3,167 @@ import json
 import pdfplumber
 from dotenv import load_dotenv
 from google import genai
+import certifi
 
-AP_COURSES = [
-  "ap_statistics"
-]
+os.environ["SSL_CERT_FILE"] = certifi.where()
+
+AP_COURSES = ["ap_statistics"]
+
+# -----------------------
+# INIT
+# -----------------------
+
+print("🔧 Initializing environment...")
+load_dotenv()
+API_KEY = os.getenv("GEMINI_API_KEY")
+assert API_KEY, "Missing GEMINI_API_KEY"
+client = genai.Client(api_key=API_KEY)
+print("✅ Gemini client initialized")
+
+# -----------------------
+# HELPERS
+# -----------------------
+
+def extract_pdf_text(path):
+	print(f"    📄 Extracting text from PDF: {path}")
+	text = []
+	with pdfplumber.open(path) as pdf:
+		for i, page in enumerate(pdf.pages, start=1):
+			page_text = page.extract_text()
+			if page_text:
+				text.append(page_text)
+			else:
+				print(f"      ⚠️ Page {i} had no extractable text")
+	return "\n\n".join(text)
+
+def load_template(path):
+	print(f"📄 Loading JSON template: {path}")
+	with open(path, "r", encoding="utf-8") as f:
+		return json.load(f)
+
+def generate_json_with_retry(model, contents, max_retries=3):
+	for attempt in range(1, max_retries + 1):
+		print(f"    🤖 Gemini attempt {attempt}/{max_retries}")
+		response = client.models.generate_content(
+			model=model,
+			contents=contents,
+			config={"response_mime_type": "application/json"}
+		)
+
+		raw = response.text.strip()
+
+		try:
+			parsed = json.loads(raw)
+			print("    ✅ Valid JSON received")
+			return parsed
+		except json.JSONDecodeError:
+			print("    ❌ Invalid JSON returned by Gemini")
+
+			with open(f"debug_gemini_output_attempt_{attempt}.txt", "w", encoding="utf-8") as f:
+				f.write(raw)
+
+			if attempt == max_retries:
+				raise RuntimeError("Gemini failed to return valid JSON after retries")
+
+# -----------------------
+# MAIN PIPELINE
+# -----------------------
 
 for course in AP_COURSES:
+	print(f"\n📘 Starting course processing: {course}")
 
-  BASE_DIR = f"ap_specs/{course}"
-  OUTPUT_PATH = f"utils/content/{course}.json"
-  UNITS_DIR = f"ap_specs/{course}/units"
-  TEMPLATE_PATH = "ap_specs/1template.json"
+	BASE_DIR = f"ap_specs/{course}"
+	UNITS_DIR = f"{BASE_DIR}/units"
+	TEMPLATE_PATH = "ap_specs/1template.json"
+	OUTPUT_PATH = f"utils/content/{course}.json"
 
-  PDF_FILES = {
-    "skills": f"skills_{course}.pdf",
-    "big_ideas": f"big_ideas_{course}.pdf",
-    "exam_sections": f"exam_sections_{course}.pdf",
-    "task_verbs" : f"task_verbs_{course}.pdf"
-  }
+	PDF_FILES = {
+		"skills": f"skills_{course}.pdf",
+		"big_ideas": f"big_ideas_{course}.pdf",
+		"exam_sections": f"exam_sections_{course}.pdf",
+		"task_verbs": f"task_verbs_{course}.pdf"
+	}
 
-  load_dotenv()
-  API_KEY = os.getenv("GEMINI_API_KEY")
-  assert API_KEY, "Missing GEMINI_API_KEY"
-  client = genai.Client(api_key=API_KEY)
+	result = load_template(TEMPLATE_PATH)
+	result["name"] = course.replace("_", " ").title()
 
-  def extract_pdf_text(path):
-    text = []
-    with pdfplumber.open(path) as pdf:
-      for page in pdf.pages:
-        page_text = page.extract_text()
-        if page_text:
-          text.append(page_text)
-    return "\n\n".join(text)
+	# -----------------------
+	# STATIC SECTIONS
+	# -----------------------
 
-  def load_template():
-    with open(TEMPLATE_PATH, "r", encoding="utf-8") as f:
-      return json.load(f)
+	print("\n📚 Processing static course sections...")
 
-  print("📄 Extracting PDFs...")
-  static_texts = {
-    key: extract_pdf_text(os.path.join(BASE_DIR, fname))
-    for key, fname in PDF_FILES.items()
-  }
+	for section, filename in PDF_FILES.items():
+		print(f"\n🔹 Parsing section: {section}")
+		pdf_path = os.path.join(BASE_DIR, filename)
 
-  print("📄 Extracting unit PDFs...")
-  unit_files = sorted(f for f in os.listdir(UNITS_DIR) if f.endswith(".pdf"))
+		text = extract_pdf_text(pdf_path)
 
-  unit_texts = [
-    {
-      "unit_file": f,
-      "text": extract_pdf_text(os.path.join(UNITS_DIR, f))
-    }
-    for f in unit_files
-  ]
+		contents = [{
+			"parts": [{
+				"text": f"""
+You are parsing the **{section}** section of an AP course framework.
 
-  template = load_template()
+Populate ONLY the `{section}` field of the JSON.
 
-  SYSTEM_PROMPT = f"""
-  You are an AP Course Framework parser.
+TEXT:
+{text}
+"""
+			}]
+		}]
 
-  Your job:
-  - Read authoritative course framework text
-  - Populate a JSON object EXACTLY matching this template
-  - Do NOT invent information
-  - Use ONLY the provided text and copy and paste
-  - Preserve wording faithfully where appropriate
+		parsed_section = generate_json_with_retry(
+			model="gemini-2.5-flash",
+			contents=contents,
+			max_retries=3
+		)
 
-  JSON TEMPLATE:
-  {json.dumps(template, indent=2)}
+		result[section] = parsed_section[section]
+		print(f"✅ Finished parsing section: {section}")
 
-  Rules:
-  - Output VALID JSON only
-  - No markdown
-  - No commentary
-  """
+	# -----------------------
+	# UNITS
+	# -----------------------
 
-  contents = []
+	print("\n📘 Processing course units...")
+	result["units"] = []
 
-  contents.append({
-    "parts": [{
-      "text": SYSTEM_PROMPT
-    }]
-  })
+	unit_files = sorted(f for f in os.listdir(UNITS_DIR) if f.endswith(".pdf"))
 
-  for section, text in static_texts.items():
-    contents.append({
-      "parts": [{
-          "text": f"""
-          The following text corresponds to the **{section.upper()}** section of the course framework.
+	for i, unit_file in enumerate(unit_files, start=1):
+		print(f"\n🧩 Parsing Unit {i}: {unit_file}")
 
-          Populate ONLY the relevant fields.
+		unit_path = os.path.join(UNITS_DIR, unit_file)
+		unit_text = extract_pdf_text(unit_path)
 
-          TEXT:
-          {text}
-          """
-      }]
-    })
+		contents = [{
+			"parts": [{
+				"text": f"""
+You are parsing ONE AP course unit.
 
+Return a SINGLE unit object matching the template exactly.
 
-  for unit in unit_texts:
-    contents.append({
-      "parts": [{
-        "text": f"""
-        The following text corresponds to a SINGLE COURSE UNIT.
+TEXT:
+{unit_text}
+"""
+			}]
+		}]
 
-        Extract:
-        - Unit name
-        - Developing Understanding
-        - Building Practices
-        - Preparing for Exam
-        - Topics
-        - Learning Objectives
-        - Essential Knowledge
+		unit_json = generate_json_with_retry(
+			model="gemini-2.5-flash",
+			contents=contents,
+			max_retries=3
+		)
 
-        Append this unit as a NEW entry in the "units" array.
+		result["units"].append(unit_json)
+		print(f"✅ Unit {i} parsed and appended")
 
-        SOURCE FILE: {unit['unit_file']}
+	# -----------------------
+	# SAVE OUTPUT
+	# -----------------------
 
-        TEXT:
-        {unit['text']}
-        """
-      }]
-    })
+	print("\n💾 Writing final JSON output...")
+	with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
+		json.dump(result, f, indent=2, ensure_ascii=False)
 
-  contents.append({
-    "parts": [{
-      "text": "Now return the COMPLETE populated JSON object."
-    }]
-  })
-
-  print("🤖 Generating JSON with Gemini...")
-  response = client.models.generate_content(
-      model="gemini-2.5-flash",
-      contents=contents,
-      config={
-        "response_mime_type": "application/json"
-      }
-  )
-
-  try:
-    parsed = json.loads(response.text)
-  except json.JSONDecodeError as e:
-    raise RuntimeError("Gemini did not return valid JSON") from e
-
-  with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
-    json.dump(parsed, f, indent=2, ensure_ascii=False)
-
-  print(f"✅ JSON successfully generated → {OUTPUT_PATH}")
+	print(f"🎉 Course JSON successfully generated → {OUTPUT_PATH}")

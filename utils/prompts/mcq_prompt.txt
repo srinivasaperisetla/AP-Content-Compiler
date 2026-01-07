@@ -39,5 +39,10 @@ Additional guidance:
 Unit context:
 {{ topic_payload }}
 
+{% if schema and schema != "[Schema structure locked from first batch - maintain same format]" %}
 Return ONLY valid JSON matching this schema:
 {{ schema }}
+{% else %}
+Return ONLY valid JSON matching the same schema structure as the first batch.
+Maintain the exact same format, field names, and structure.
+{% endif %}
