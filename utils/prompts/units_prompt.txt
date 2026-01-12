@@ -1,0 +1,68 @@
+Task:
+Normalize the Unit + Topics content into a STRICT, MACHINE-PARSABLE TSV.
+
+Rules:
+- Use ONLY text present in the document.
+- Preserve wording exactly (no paraphrasing).
+- Do NOT summarize, infer, merge, or add content.
+- Do NOT output any headers, page numbers, footers, or navigation text.
+- Return PLAIN TEXT ONLY.
+
+Output format:
+- Output one record per line.
+- Columns are TAB-separated.
+- Each line MUST start with a Record Type in column 1.
+- Record types allowed: UNIT, TOPIC, SUBSKILL, BIGIDEA, LO, EK
+- Do NOT invent IDs. If an ID is not explicitly present, output an EMPTY string in that field.
+
+Record Types and Columns:
+
+1) UNIT (exactly 6 columns):
+UNIT<TAB>unit_id<TAB>unit_name<TAB>developing_understanding<TAB>building_practices<TAB>preparing_for_exam
+
+Rules for UNIT fields:
+- unit_id should be the unit number if present (e.g., "1", "2").
+- unit_name should be the unit title.
+- developing_understanding should be the Unit Overview / Developing Understanding text if present, else empty.
+- building_practices should be the Building Practices / Skills emphasis text if present, else empty.
+- preparing_for_exam should be the Preparing for the Exam text if present, else empty.
+
+2) TOPIC (exactly 3 columns):
+TOPIC<TAB>topic_id<TAB>topic_name
+
+Rules:
+- topic_id should be like "1.1", "2.3" if present, else empty.
+- topic_name is the topic title.
+
+3) SUBSKILL (exactly 3 columns):
+SUBSKILL<TAB>topic_id<TAB>subskill_code
+
+Rules:
+- subskill_code is the suggested subskill/science practice code(s) for the topic (e.g., "1.A", "3.B").
+- Output ONE subskill per line. If multiple, repeat SUBSKILL lines.
+
+4) BIGIDEA (exactly 4 columns):
+BIGIDEA<TAB>topic_id<TAB>big_idea_id<TAB>big_idea_description
+
+Rules:
+- big_idea_id is the identifier shown (e.g., "VAR", "UNC", "DAT", or "EU 1", etc.) if present, else empty.
+- big_idea_description must include the exact text associated with that big idea / enduring understanding for this topic if present, else empty.
+- Output ONE big idea per line. If multiple, repeat BIGIDEA lines.
+
+5) LO (Learning Objective) (exactly 4 columns):
+LO<TAB>topic_id<TAB>learning_objective_id<TAB>learning_objective_description
+
+Rules:
+- learning_objective_id is the identifier if present, else empty.
+- learning_objective_description is the LO statement if present, else empty.
+- Output ONE LO per line.
+
+6) EK (Essential Knowledge) (exactly 5 columns):
+EK<TAB>topic_id<TAB>learning_objective_id<TAB>essential_knowledge_id<TAB>essential_knowledge_description
+
+Rules:
+- If EK is not explicitly tied to a learning objective, output EMPTY in learning_objective_id.
+- essential_knowledge_id is the identifier if present, else empty.
+- essential_knowledge_description is the EK statement text.
+
+Return plain text only, TSV only.

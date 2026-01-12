@@ -1,581 +1,847 @@
+'''
+Problems right now:
+- Retry logic for only the questions that are invalid and that is missed so that the LLM can fix them easily instead of regenerating the entire set. 
+- Trim Unit Context as well as the prompt to save on tokens.
+
+
+- Optional Split generation into: planning pass (topics → question plan) then generation pass (plan → TSV)
+- Optional Parallelize of units
+'''
+
+
 import os
 import json
+import re
+from pathlib import Path
+from typing import Dict, List, Tuple, Any, Optional
+from datetime import datetime
+
 from dotenv import load_dotenv
 from google import genai
-from jsonschema import validate, ValidationError
 from jinja2 import Template
 import certifi
-import time
-import re
 
 os.environ["SSL_CERT_FILE"] = certifi.where()
 
-# -----------------------
-# CONFIG
-# -----------------------
-
-AP_COURSES = ["ap_statistics"]
+MODEL = "gemini-2.5-pro"
 
 NUM_SETS_PER_UNIT = 20
 QUESTIONS_PER_SET = 25
 
-BASE_SPEC_DIR = "utils"
-OUTPUT_BASE_DIR = "output"
+MAX_RETRIES_PER_SET = 4
 
-MCQ_SCHEMA_PATH = "utils/schemas/mcq.schema.json"
-MCQ_HTML_TEMPLATE_PATH = "utils/templates/mcq.html"
-MCQ_PROMPT_PATH = "utils/prompts/mcq_prompt.txt"
+AP_COURSES = [
+	"ap_statistics",
+]
 
-MODEL = "gemini-2.5-pro"
+CONTENT_DIR = Path("utils/content")
+PROMPT_PATH = Path("utils/prompts/mcq_prompt.txt")
+HTML_TEMPLATE_PATH = Path("utils/templates/mcq.html")
+OUTPUT_DIR = Path("output")
 
-# -----------------------
-# INIT
-# -----------------------
+DEBUG = True
+MAX_PROMPT_CHARS = 6000
 
-load_dotenv()
-assert os.getenv("GEMINI_API_KEY"), "Missing GEMINI_API_KEY"
-client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 # -----------------------
-# HELPERS
+# Debug logging
 # -----------------------
+def _ts() -> str:
+	return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-def markdown_table_to_html(md: str) -> str:
-	lines = [line.strip() for line in md.splitlines() if line.strip()]
-	if len(lines) < 2:
-		return f"<pre>{md}</pre>"
 
-	headers = [h.strip() for h in lines[0].split("|")]
-	rows = [[cell.strip() for cell in line.split("|")] for line in lines[2:]]
+def log(msg: str) -> None:
+	print(f"[{_ts()}] {msg}")
 
+
+def log_block(title: str, text: str, max_chars: int) -> None:
+	if not DEBUG:
+		return
+	log(f"{title} (chars={len(text)} showing up to {max_chars})")
+	print(text[:max_chars])
+	if len(text) > max_chars:
+		print("... [TRUNCATED] ...")
+
+
+def log_context(course: str, unit_index: int, unit_name: str, set_index: int) -> str:
+	return f"{course} | Unit {unit_index + 1}: {unit_name} | Set {set_index + 1}/{NUM_SETS_PER_UNIT}"
+
+
+# -----------------------
+# Init Gemini client
+# -----------------------
+def init_client() -> genai.Client:
+	load_dotenv()
+	api_key = os.getenv("GEMINI_API_KEY")
+	assert api_key, "Missing GEMINI_API_KEY"
+	google_client = genai.Client(api_key=api_key)
+	print("Gemini client initialized")
+	return google_client
+
+# -----------------------
+# Utilities
+# -----------------------
+def load_json(path: Path) -> dict:
+	with path.open("r", encoding="utf-8") as f:
+		return json.load(f)
+
+
+def load_text(path: Path) -> str:
+	with path.open("r", encoding="utf-8") as f:
+		return f.read()
+
+
+def ensure_dir(path: Path) -> None:
+	path.mkdir(parents=True, exist_ok=True)
+
+
+def safe_join_lines(lines: List[str]) -> str:
+	return "\n".join([ln.rstrip() for ln in lines if ln and ln.strip()])
+
+
+def normalize_whitespace(s: str) -> str:
+	return re.sub(r"[ \t]+", " ", (s or "").strip())
+
+
+def pipe_table_to_html(table_text: str) -> str:
+	if not table_text:
+		return ""
+
+	# Normalize escaped newlines
+	text = table_text.replace("\\n", "\n")
+	lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
+
+	# Strict structural validation
+	if not is_strict_pipe_table(lines):
+		return ""
+
+	# Parse header and data
+	headers = [h.strip() for h in lines[0].strip("|").split("|")]
+	data_lines = lines[2:]  # skip header + separator
+
+	if not headers or not data_lines:
+		return ""
+
+	# Build HTML
 	html = "<table class='data-table'><thead><tr>"
 	for h in headers:
 		html += f"<th>{h}</th>"
 	html += "</tr></thead><tbody>"
 
-	for row in rows:
+	for ln in data_lines:
+		cells = [c.strip() for c in ln.strip("|").split("|")]
+		if len(cells) != len(headers):
+			return ""  # hard fail, triggers repair
 		html += "<tr>"
-		for cell in row:
+		for cell in cells:
 			html += f"<td>{cell}</td>"
 		html += "</tr>"
 
 	html += "</tbody></table>"
 	return html
 
-def strip_choice_labels(choice: str) -> str:
-	return choice.lstrip("ABCD. ").strip()
 
-def load_json(path: str):
-	with open(path, "r", encoding="utf-8") as f:
-		return json.load(f)
 
-def load_text(path: str) -> str:
-	with open(path, "r", encoding="utf-8") as f:
-		return f.read()
 
-def ensure_dir(path: str):
-	os.makedirs(path, exist_ok=True)
+# -----------------------
+# Validation
+# -----------------------
+def is_valid_svg(svg: str) -> bool:
+	if not svg:
+		return False
 
-def mcq_set_exists(course, unit_index, set_index):
-	path = f"{OUTPUT_BASE_DIR}/{course}/unit_{unit_index + 1}/mcqs/set_{set_index + 1}.html"
-	return os.path.exists(path)
+	s = svg.strip()
 
-def validate_unit_payload(unit_payload: dict):
+	if not (s.startswith("<svg") and s.endswith("</svg>")):
+		return False
+
+	if "<script" in s.lower():
+		return False
+
+	if s.count("<text") > 8:
+		return False
+
+	if 'font-size="' in s:
+		sizes = re.findall(r'font-size="(\d+)"', s)
+		if any(int(sz) < 12 for sz in sizes):
+			return False
+
+	return True
+
+
+def is_strict_pipe_table(lines: List[str]) -> bool:
+	if len(lines) < 3:
+		return False
+
+	# all rows must start/end with |
+	if not all(ln.startswith("|") and ln.endswith("|") for ln in lines):
+		return False
+
+	# separator row must be dashes
+	sep = lines[1].strip("|").split("|")
+	if not all(set(cell.strip()) <= {"-"} for cell in sep):
+		return False
+
+	# consistent column count
+	col_count = len(lines[0].split("|"))
+	return all(len(ln.split("|")) == col_count for ln in lines)
+
+
+def validate_rows_individually(
+	rows: List[List[str]],
+	constraints: Dict[str, Any],
+	context_label: str
+) -> Tuple[List[dict], List[dict]]:
 	"""
-	Validate that unit payload has sufficient metadata for MCQ generation.
-	Returns (is_valid, error_message)
+	Returns:
+	  valid_questions: List[question_dict]
+	  invalid_reports: List[{row_index, reason, detail}]
 	"""
-	has_learning_objectives = len(unit_payload.get('learning_objectives', [])) > 0
-	has_skill_codes = len(unit_payload.get('skill_codes', [])) > 0
-	
-	if not has_learning_objectives:
-		return False, "No learning objectives found in unit payload"
-	
-	if not has_skill_codes:
-		return False, "No skill codes found in unit payload"
-	
-	# Validate that learning objectives have IDs
-	for lo in unit_payload.get('learning_objectives', []):
-		if not lo.get('id'):
-			return False, f"Learning objective missing ID: {lo}"
-	
-	# Validate that skill codes have definitions
-	skill_codes = set(unit_payload.get('skill_codes', []))
-	skill_definitions = unit_payload.get('skill_definitions', {})
-	missing_definitions = skill_codes - set(skill_definitions.keys())
-	if missing_definitions:
-		return False, f"Missing skill definitions for codes: {missing_definitions}"
-	
-	return True, ""
+	valid_questions = []
+	invalid_reports = []
 
-def build_and_validate_unit_payload(
-	course_name: str,
-	unit_index: int,
-	unit: dict,
-	course_spec: dict,
-	max_retries: int = 3
-) -> dict:
-	"""
-	Build unit payload with retry logic and validation.
-	Retries if payload is invalid, throws error after max retries.
-	"""
-	for attempt in range(1, max_retries + 1):
-		try:
-			unit_payload = build_unit_payload(course_name, unit_index, unit, course_spec)
-			
-			# Validate payload before returning
-			is_valid, error_msg = validate_unit_payload(unit_payload)
-			
-			if is_valid:
-				return unit_payload
-			else:
-				if attempt < max_retries:
-					print(f"  ⚠️  Payload validation failed (attempt {attempt}/{max_retries}): {error_msg}")
-					print(f"     Retrying payload construction...")
-					time.sleep(0.5 * attempt)  # Small backoff between retries
-				else:
-					raise RuntimeError(
-						f"Failed to build valid unit payload after {max_retries} attempts. "
-						f"Last error: {error_msg}. "
-						f"Payload summary: LOs={len(unit_payload.get('learning_objectives', []))}, "
-						f"Skills={len(unit_payload.get('skill_codes', []))}, "
-						f"Big Ideas={len(unit_payload.get('big_ideas', []))}"
-					)
-		except Exception as e:
-			if attempt < max_retries:
-				print(f"  ⚠️  Error building payload (attempt {attempt}/{max_retries}): {e}")
-				print(f"     Retrying...")
-				time.sleep(0.5 * attempt)
-			else:
-				raise RuntimeError(
-					f"Failed to build unit payload after {max_retries} attempts. "
-					f"Last error: {e}"
-				)
-	
-	# Should never reach here, but just in case
-	raise RuntimeError("Unexpected error in build_and_validate_unit_payload")
-
-def build_unit_payload(course_name: str, unit_index: int, unit: dict, course_spec: dict) -> dict:
-	"""
-	Build unit payload respecting n-tier hierarchy:
-	Course → Unit → Topic → Learning Objective → Skill Codes → Big Ideas
-	
-	Handles actual course JSON structure where:
-	- skills are flat array with 'code' and 'description'
-	- big_ideas have 'acronym' instead of 'id'
-	- topics have 'skills' array (not 'suggested_subskill_codes')
-	- learning_objectives have 'code' (not 'id') and 'skill_code'
-	"""
-	learning_objectives = []
-	
-	# Extract learning objectives from topics
-	for topic in unit.get("topics", []):
-		# Handle both structures: direct learning_objectives or nested
-		topic_los = topic.get("learning_objectives", [])
-		if not topic_los:
+	for row_i, cols in enumerate(rows, start=1):
+		error = validate_tsv_row(cols)
+		if error:
+			invalid_reports.append({
+				"row_index": row_i,
+				"reason": "row_invalid",
+				"detail": error
+			})
 			continue
-			
-		for lo in topic_los:
-			# Handle both 'id' and 'code' fields
-			lo_id = lo.get("id") or lo.get("code") or lo.get("learning_objective_code", "")
+
+		qid, diff, skills, los, idx, qtext, A, B, C, D, stim_type, stim_payload = [
+			c.strip() for c in cols
+		]
+
+		skill_codes = [s for s in skills.split(",") if s]
+		if any(s not in constraints["allowed_skill_codes"] for s in skill_codes):
+			invalid_reports.append({
+				"row_index": row_i,
+				"reason": "skill_not_allowed",
+				"detail": skills
+			})
+			continue
+
+		lo_ids = [s for s in los.split(",") if s]
+		if any(lo not in constraints["allowed_lo_ids"] for lo in lo_ids):
+			invalid_reports.append({
+				"row_index": row_i,
+				"reason": "lo_not_allowed",
+				"detail": los
+			})
+			continue
+
+		if stim_type == "svg" and not is_valid_svg(stim_payload):
+			invalid_reports.append({
+				"row_index": row_i,
+				"reason": "svg_invalid",
+				"detail": ""
+			})
+			continue
+
+		if stim_type == "table":
+			if "<table" not in pipe_table_to_html(stim_payload):
+				invalid_reports.append({
+					"row_index": row_i,
+					"reason": "table_invalid",
+					"detail": ""
+				})
+				continue
+
+		stimulus = None
+		if stim_type == "table":
+			html_table = pipe_table_to_html(stim_payload)
+			if "<table" not in html_table:
+				continue
+			stimulus = {"type": "table", "content": html_table}
+
+		elif stim_type == "svg":
+			if not is_valid_svg(stim_payload):
+				continue
+			stimulus = {"type": "svg", "content": stim_payload}
+
+		valid_questions.append({
+			"id": qid,
+			"difficulty": diff,
+			"skill_codes": skill_codes,
+			"aligned_lo_ids": lo_ids,
+			"correct_choice_index": int(idx),
+			"question": qtext,
+			"choices": [A, B, C, D],
+			"stimulus": stimulus
+		})
+
+
+	return valid_questions, invalid_reports
+
+def summarize_errors(invalid_reports: List[dict]) -> str:
+	counts = {}
+	for r in invalid_reports:
+		counts[r["reason"]] = counts.get(r["reason"], 0) + 1
+
+	lines = []
+	for k, v in sorted(counts.items()):
+		lines.append(f"- {k}: {v}")
+
+	return "\n".join(lines)
+
+
+def validate_tsv_row(cols: List[str]) -> Optional[str]:
+	if len(cols) != 12:
+		return "Wrong column count"
+
+	qid, diff, skills, los, idx, qtext, A, B, C, D, stim_type, stim_payload = cols
+
+	if not qid.strip():
+		return "Empty question_id"
+
+	if diff not in {"easy", "medium", "hard"}:
+		return "Invalid difficulty"
+
+	if not skills.strip():
+		return "Empty skill_codes"
+
+	if not los.strip():
+		return "Empty learning_objective_ids"
+
+	if not qtext.strip():
+		return "Empty question text"
+
+	if not all([A.strip(), B.strip(), C.strip(), D.strip()]):
+		return "Empty choice"
+
+	if stim_type not in {"none", "svg", "table"}:
+		return "Invalid stimulus_type"
+
+	try:
+		i = int(idx)
+		if i not in {0, 1, 2, 3}:
+			return "Invalid correct_index"
+	except:
+		return "Non-integer correct_index"
+
+	if stim_type == "none" and stim_payload.strip():
+		return "stimulus_payload must be empty when stimulus_type=none"
+
+	if stim_type != "none" and not stim_payload.strip():
+		return "Missing stimulus_payload"
+
+	return None
+
+
+
+# -----------------------
+# Lookups
+# -----------------------
+def build_skill_lookup(course_spec: dict) -> Dict[str, Dict[str, str]]:
+	out = {}
+	for skill_cat in course_spec.get("skills", []):
+		cat_name = skill_cat.get("skill_name", "")
+		for sub in skill_cat.get("subskills", []):
+			code = str(sub.get("subskill_name", "")).strip()
+			if not code:
+				continue
+			out[code] = {
+				"category": cat_name,
+				"description": sub.get("subskill_description", "")
+			}
+	return out
+
+
+def build_big_idea_lookup(course_spec: dict) -> Dict[str, Dict[str, str]]:
+	out = {}
+	for bi in course_spec.get("big_ideas", []):
+		bi_id = str(bi.get("id", "")).strip()
+		if not bi_id:
+			continue
+		out[bi_id] = {
+			"name": bi.get("name", ""),
+			"description": bi.get("description", "")
+		}
+	return out
+
+
+# -----------------------
+# Unit context builder
+# -----------------------
+def build_unit_context(
+	course_spec: dict,
+	unit: dict,
+	unit_index: int,
+	skill_lookup: Dict[str, Dict[str, str]],
+	big_idea_lookup: Dict[str, Dict[str, str]],
+	max_ek_per_lo: int = 0,              # keep OFF for compression
+	include_skill_descriptions: bool = True,
+	include_course_big_ideas: bool = True,
+	include_topic_big_idea_descriptions: bool = True,
+	max_topic_name_chars: int = 90,
+	max_lo_desc_chars: int = 200,
+	max_skill_desc_chars: int = 140,
+) -> Tuple[str, Dict[str, Any]]:
+
+	def trunc(s: str, n: int) -> str:
+		s = normalize_whitespace(s or "")
+		return s if len(s) <= n else s[: n - 3] + "..."
+
+	allowed_skill_codes: set = set()
+	allowed_lo_ids: set = set()
+
+	used_skill_codes: set = set()
+
+	# Topic-level big ideas (e.g., VAR-1, UNC-1, VAR-2)
+	used_topic_big_ids: set = set()
+	topic_big_desc: Dict[str, str] = {}
+
+	# Course-level big idea categories (e.g., VAR, UNC, DAT)
+	used_course_big_ids: set = set()
+	course_big_desc: Dict[str, str] = {}
+	course_big_name: Dict[str, str] = {}
+
+	topic_blocks: List[str] = []
+
+	# -----------------------
+	# Extract per-topic content
+	# -----------------------
+	for topic in unit.get("topics", []) or []:
+		topic_id = str(topic.get("id", "")).strip()
+		topic_name = trunc(topic.get("name", ""), max_topic_name_chars)
+
+		# Skills for topic
+		ssc = [
+			str(x).strip()
+			for x in (topic.get("suggested_subskill_codes") or [])
+			if str(x).strip()
+		]
+		for code in ssc:
+			allowed_skill_codes.add(code)
+			used_skill_codes.add(code)
+
+		# Topic-level big ideas for topic
+		bis: List[str] = []
+		for bi in (topic.get("big_ideas") or []):
+			bi_id = str(bi.get("id", "")).strip()
+			bi_d = normalize_whitespace(bi.get("description", "") or "")
+			if not bi_id:
+				continue
+
+			bis.append(bi_id)
+			used_topic_big_ids.add(bi_id)
+
+			# keep the (usually short) description from topic if present
+			if include_topic_big_idea_descriptions and bi_d and bi_id not in topic_big_desc:
+				topic_big_desc[bi_id] = bi_d
+
+			# also track course-level category prefix: VAR / UNC / DAT
+			if "-" in bi_id:
+				prefix = bi_id.split("-", 1)[0]
+				if prefix:
+					used_course_big_ids.add(prefix)
+
+		# Learning objectives (core)
+		lo_lines: List[str] = []
+		for lo in (topic.get("learning_objectives") or []):
+			lo_id = str(lo.get("id", "")).strip()
 			if not lo_id:
 				continue
-				
-			learning_objectives.append({
-				"id": lo_id,
-				"description": lo.get("description", ""),
-				"essential_knowledge": lo.get("essential_knowledge", []) or lo.get("essential_knowledge_codes", []) or []
-			})
 
-	# Extract skill codes from topics (handle 'skills' array or 'suggested_subskill_codes')
-	skill_codes = set()
-	
-	# From unit-level skills
-	for skill in unit.get("skills", []):
-		code = skill.get("code") if isinstance(skill, dict) else skill
-		if code:
-			skill_codes.add(str(code))
-	
-	# From topic-level skills
-	for topic in unit.get("topics", []):
-		# Try 'skills' array first (actual structure)
-		topic_skills = topic.get("skills", []) or topic.get("suggested_subskill_codes", [])
-		for skill in topic_skills:
-			code = skill.get("code") if isinstance(skill, dict) else skill
-			if code:
-				skill_codes.add(str(code))
-		
-		# Also extract from learning objectives' skill_code
-		for lo in topic.get("learning_objectives", []):
-			skill_code = lo.get("skill_code")
-			if skill_code:
-				skill_codes.add(str(skill_code))
+			allowed_lo_ids.add(lo_id)
+			lo_desc = trunc(lo.get("description", ""), max_lo_desc_chars)
+			lo_lines.append(f"{lo_id}: {lo_desc}")
 
-	skill_codes = sorted(list(skill_codes))
+			# Optional EKs (off by default)
+			if max_ek_per_lo and (lo.get("essential_knowledge") or []):
+				for ek in (lo.get("essential_knowledge") or [])[:max_ek_per_lo]:
+					ek_id = str(ek.get("id", "")).strip()
+					ek_desc = trunc(ek.get("description", ""), max_lo_desc_chars)
+					if ek_id and ek_desc:
+						lo_lines.append(f"  - {ek_id}: {ek_desc}")
 
-	# Extract big ideas from unit and topics
-	big_ideas = set()
-	
-	# From unit-level big_ideas
-	for bi in unit.get("big_ideas", []):
-		if isinstance(bi, str):
-			big_ideas.add(str(bi))
-		elif isinstance(bi, dict):
-			bi_id = bi.get("acronym") or bi.get("id") or bi.get("name", "")
-			if bi_id:
-				big_ideas.add(str(bi_id))
-	
-	# From topic-level big_ideas
-	for topic in unit.get("topics", []):
-		# Handle direct big_ideas array
-		topic_bis = topic.get("big_ideas", [])
-		for bi in topic_bis:
-			bi_id = bi if isinstance(bi, str) else (bi.get("acronym") or bi.get("id") or bi.get("name", ""))
-			if bi_id:
-				big_ideas.add(str(bi_id))
-		
-		# Handle enduring_understanding structure (can be dict or string)
-		eu = topic.get("enduring_understanding")
-		if eu:
-			if isinstance(eu, dict):
-				eu_acronym = eu.get("acronym", "")
-				if eu_acronym:
-					big_ideas.add(str(eu_acronym))
-			elif isinstance(eu, str):
-				# If it's a string, treat it as the acronym directly
-				big_ideas.add(str(eu))
+		skills_str = ",".join(ssc) if ssc else "-"
+		bi_str = ",".join(bis) if bis else "-"
 
-	big_ideas = sorted(list(big_ideas))
-
-	# Build skill definitions from course_spec
-	skill_definitions = {}
-	# Handle flat skills array structure
-	for skill in course_spec.get("skills", []):
-		code = skill.get("code") or skill.get("subskill_name", "")
-		if code in skill_codes:
-			skill_definitions[str(code)] = {
-				"category": skill.get("category") or skill.get("skill_name", ""),
-				"description": skill.get("description") or skill.get("subskill_description", "")
-			}
-	
-	# Handle nested skills structure (if present)
-	for skill in course_spec.get("skills", []):
-		if "subskills" in skill:
-			for sub in skill.get("subskills", []):
-				code = sub.get("subskill_name") or sub.get("code", "")
-				if code in skill_codes:
-					skill_definitions[str(code)] = {
-						"category": skill.get("skill_name", ""),
-						"description": sub.get("subskill_description", "")
-					}
-
-	# Build big idea definitions from course_spec
-	big_idea_definitions = {}
-	for bi in course_spec.get("big_ideas", []):
-		bi_id = bi.get("acronym") or bi.get("id", "")
-		if bi_id in big_ideas:
-			big_idea_definitions[str(bi_id)] = {
-				"name": bi.get("name") or bi.get("title", ""),
-				"description": bi.get("description", "")
-			}
-
-	# Extract exam context
-	mcq_exam_context = None
-	for section in course_spec.get("exam_sections", []):
-		if section.get("section") == "I":
-			mcq_exam_context = {
-				"question_type": section.get("question_type", ""),
-				"exam_weighting": section.get("exam_weighting", ""),
-				"timing": section.get("timing", ""),
-				"descriptions": section.get("descriptions", []) or []
-			}
-			break
-
-	return {
-		"course": course_name,
-		"unit": f"Unit {unit_index + 1}: {unit.get('title') or unit.get('name', '')}",
-		"developing_understanding": unit.get("developing_understanding", ""),
-		"building_practices": unit.get("building_practices", ""),
-		"preparing_for_exam": unit.get("preparing_for_exam", ""),
-		"learning_objectives": learning_objectives,
-		"skill_codes": skill_codes,
-		"skill_definitions": skill_definitions,
-		"big_ideas": big_ideas,
-		"big_idea_definitions": big_idea_definitions,
-		"exam_section_context": mcq_exam_context
-	}
-
-# -----------------------
-# MCQ GENERATION (BATCHED)
-# -----------------------
-
-_CONTROL_CHARS_RE = re.compile(r"[\x00-\x1F\x7F]")
-
-def _clean_model_text(s: str) -> str:
-	# Strip common junk that breaks JSON parsing
-	s = (s or "").strip()
-	s = s.replace("\r", "")
-	s = s.replace("\u0000", "")
-	s = _CONTROL_CHARS_RE.sub("", s)
-	return s
-
-def generate_valid_mcqs(
-	prompt_template,
-	unit_payload: dict,
-	total_questions: int,
-	batch_size: int = 10,
-	max_batches: int = 20,
-	validate_items: bool = False,
-	backoff_seconds: float = 0.75,
-	debug_dir: str = "debug_mcq_outputs"
-):
-	"""
-	Optimized MCQ generator:
-	- Pre-serializes unit_payload JSON once per set
-	- Pre-serializes schema JSON once per run (global)
-	- Injects schema only into first batch per set
-	- Validates at batch level by default (fast path)
-	- Optionally validates each question (slower, for debugging)
-	- Uses exponential backoff only on true model failures
-	"""
-
-	assert 0 < batch_size <= total_questions
-
-	# Pre-serialize unit_payload once per set (big win)
-	unit_payload_json = json.dumps(unit_payload, separators=(",", ":"))
-	# Schema is pre-serialized globally as SCHEMA_JSON
-
-	ensure_dir(debug_dir)
-
-	all_questions = []
-	batches_attempted = 0
-	consecutive_failures = 0
-	schema_injected = False  # Track if schema has been injected for this set
-
-	# Useful for avoiding infinite loops if the model keeps returning invalid JSON
-	min_batches_needed = (total_questions + batch_size - 1) // batch_size
-	# Give yourself some slack beyond the theoretical minimum
-	effective_max_batches = max(max_batches, min_batches_needed + 5)
-
-	print(f"    Starting MCQ generation: total={total_questions}, batch_size={batch_size}")
-
-	while len(all_questions) < total_questions and batches_attempted < effective_max_batches:
-		batches_attempted += 1
-		remaining = total_questions - len(all_questions)
-		n = min(batch_size, remaining)
-
-		print(f"      Batch {batches_attempted}: requesting n={n} (have {len(all_questions)}/{total_questions})")
-
-		# Inject schema only into first batch per set
-		# Subsequent batches rely on structure lock-in from first batch
-		if schema_injected:
-			# For subsequent batches, use schema reference only (not full schema)
-			prompt = prompt_template.render(
-				num_questions=n,
-				topic_payload=unit_payload_json,
-				schema="[Schema structure locked from first batch - maintain same format]"
-			)
-		else:
-			# First batch gets full schema
-			prompt = prompt_template.render(
-				num_questions=n,
-				topic_payload=unit_payload_json,
-				schema=SCHEMA_JSON
-			)
-			schema_injected = True
-
-		try:
-			response = client.models.generate_content(
-				model=MODEL,
-				contents=prompt,
-				config={"response_mime_type": "application/json"}
-			)
-		except Exception as e:
-			# Only backoff on true model failures (network, API errors)
-			consecutive_failures += 1
-			backoff_time = backoff_seconds * (2 ** min(consecutive_failures - 1, 4))
-			print(f"      Model call failed ({type(e).__name__}). failures={consecutive_failures}, backing off {backoff_time:.2f}s")
-			time.sleep(backoff_time)
-			continue
-
-		raw = _clean_model_text(getattr(response, "text", ""))
-
-		# Parse JSON
-		try:
-			parsed = json.loads(raw)
-		except json.JSONDecodeError as e:
-			consecutive_failures += 1
-			print(f"      Invalid JSON (parse error). failures={consecutive_failures}")
-			
-			# Save for inspection
-			debug_path = os.path.join(debug_dir, f"batch_{batches_attempted}_need_{n}_parse_error.txt")
-			with open(debug_path, "w", encoding="utf-8") as f:
-				f.write(f"JSON Parse Error: {e}\n\nRaw response:\n{raw}")
-			
-			# No backoff for JSON parse errors - likely prompt issue
-			continue
-
-		# Batch-level schema validation (fast path)
-		# Only validate if we have a valid structure
-		if not isinstance(parsed, dict):
-			consecutive_failures += 1
-			print(f"      Invalid response structure (not a dict). failures={consecutive_failures}")
-			debug_path = os.path.join(debug_dir, f"batch_{batches_attempted}_need_{n}_structure_error.txt")
-			with open(debug_path, "w", encoding="utf-8") as f:
-				f.write(f"Response is not a dict. Type: {type(parsed)}\n\nContent:\n{json.dumps(parsed, indent=2)}")
-			continue
-		
-		try:
-			validate(instance=parsed, schema=MCQ_SCHEMA)
-		except ValidationError as e:
-			consecutive_failures += 1
-			print(f"      Schema validation failed. failures={consecutive_failures}")
-			# Show the path where validation failed
-			error_path = " -> ".join(str(p) for p in e.absolute_path) if e.absolute_path else "root"
-			print(f"      Error at: {error_path}")
-			print(f"      Message: {e.message[:200]}")
-
-			# Save for inspection
-			debug_path = os.path.join(debug_dir, f"batch_{batches_attempted}_need_{n}_schema_error.txt")
-			with open(debug_path, "w", encoding="utf-8") as f:
-				f.write(f"Schema Validation Error: {e}\n\nParsed JSON:\n{json.dumps(parsed, indent=2)}")
-
-			# No backoff for schema errors - likely model output issue
-			continue
-
-		# Reset failure counter on success
-		consecutive_failures = 0
-
-		qs = parsed.get("questions", [])
-		if not isinstance(qs, list) or len(qs) == 0:
-			print("      Parsed but contained no questions; retrying batch")
-			continue
-
-		added = 0
-		for q in qs:
-			if validate_items:
-				try:
-					validate(instance=q, schema=QUESTION_SCHEMA)
-				except Exception:
-					continue
-
-			all_questions.append(q)
-			added += 1
-
-			if len(all_questions) >= total_questions:
-				break
-
-		print(f"      Added {added}. total now {len(all_questions)}/{total_questions}")
-
-	if len(all_questions) < total_questions:
-		raise RuntimeError(
-			f"Failed to generate {total_questions} MCQs "
-			f"(got {len(all_questions)} after {batches_attempted} batches)"
+		topic_blocks.append(
+			safe_join_lines([
+				f"T{topic_id} {topic_name} | skills:{skills_str} | big:{bi_str}",
+				*lo_lines
+			])
 		)
 
-	print(f"    Finished MCQ generation: {len(all_questions)} questions")
-	return {"questions": all_questions[:total_questions]}
-
-
-# -----------------------
-# LOAD STATIC ASSETS
-# -----------------------
-
-MCQ_SCHEMA = load_json(MCQ_SCHEMA_PATH)
-QUESTION_SCHEMA = MCQ_SCHEMA["properties"]["questions"]["items"]
-MCQ_HTML_TEMPLATE = Template(load_text(MCQ_HTML_TEMPLATE_PATH))
-MCQ_PROMPT_TEMPLATE = Template(load_text(MCQ_PROMPT_PATH))
-
-# Pre-serialize schema once per run (performance optimization)
-SCHEMA_JSON = json.dumps(MCQ_SCHEMA, separators=(",", ":"))
-
-# -----------------------
-# MAIN LOOP (ROUND-ROBIN BY SET)
-# -----------------------
-
-for course in AP_COURSES:
-	print(f"\n📘 Processing course: {course}")
-
-	course_spec = load_json(f"{BASE_SPEC_DIR}/content/{course}.json")
-	course_name = course_spec.get("name", course)
-	units = course_spec.get("units", [])
-
-	print(f"📦 Total units: {len(units)}")
-	print(f"📦 Sets per unit: {NUM_SETS_PER_UNIT}")
-
-	# OUTER LOOP: SET INDEX
-	for set_index in range(NUM_SETS_PER_UNIT):
-		print("\n======================================")
-		print(f"🧩 STARTING SET {set_index + 1}/{NUM_SETS_PER_UNIT}")
-		print("======================================")
-
-		# INNER LOOP: UNITS
-		for unit_index, unit in enumerate(units):
-			unit_title = unit.get("title") or unit.get("name") or f"Unit {unit_index + 1}"
-
-			print("\n--------------------------------------")
-			print(f"📄 UNIT {unit_index + 1}/{len(units)}")
-			print(f"📘 {unit_title}")
-			print(f"🧩 SET {set_index + 1}")
-			print("--------------------------------------")
-
-			# Check if output already exists - only skip in this case
-			output_dir = f"{OUTPUT_BASE_DIR}/{course}/unit_{unit_index + 1}/mcqs"
-			ensure_dir(output_dir)
-			
-			if mcq_set_exists(course, unit_index, set_index):
-				print(f"  ⏭️  Skipping — already exists (unit {unit_index + 1}, set {set_index + 1})")
+	# -----------------------
+	# Course-level big ideas (VAR/UNC/DAT) full descriptions (NO truncation)
+	# -----------------------
+	if include_course_big_ideas and used_course_big_ids:
+		for bi in course_spec.get("big_ideas", []) or []:
+			bi_id = str(bi.get("id", "")).strip()
+			if not bi_id or bi_id not in used_course_big_ids:
 				continue
+			course_big_name[bi_id] = normalize_whitespace(bi.get("name", "") or "")
+			course_big_desc[bi_id] = normalize_whitespace(bi.get("description", "") or "")
 
-			# Build and validate payload with retry logic
-			# This will throw an error if payload can't be validated after retries
-			print(f"  🔍 Building and validating unit payload...")
-			unit_payload = build_and_validate_unit_payload(
-				course_name,
-				unit_index,
-				unit,
-				course_spec,
-				max_retries=3
-			)
+	# -----------------------
+	# Skill descriptions (compact but readable)
+	# -----------------------
+	skill_desc_lines: List[str] = []
+	if include_skill_descriptions and used_skill_codes:
+		for code in sorted(used_skill_codes):
+			desc = trunc(skill_lookup.get(code, {}).get("description", ""), max_skill_desc_chars)
+			skill_desc_lines.append(f"{code}={desc}" if desc else code)
 
-			print(f"  ✅ Payload validated successfully")
-			print(f"  🧠 Payload summary:")
-			print(f"     • Learning objectives: {len(unit_payload['learning_objectives'])}")
-			print(f"     • Skill codes: {len(unit_payload['skill_codes'])}")
-			print(f"     • Big ideas: {len(unit_payload['big_ideas'])}")
-			print(f"     • Skill definitions: {len(unit_payload.get('skill_definitions', {}))}")
-			print(f"     • Big idea definitions: {len(unit_payload.get('big_idea_definitions', {}))}")
+	# -----------------------
+	# Topic big idea descriptions (VAR-1 etc.) — short, useful
+	# If some are missing from topic_big_desc, fall back to big_idea_lookup
+	# -----------------------
+	topic_big_desc_lines: List[str] = []
+	if include_topic_big_idea_descriptions and used_topic_big_ids:
+		for bi_id in sorted(used_topic_big_ids):
+			desc = topic_big_desc.get(bi_id, "")
+			if not desc:
+				# fallback: your big_idea_lookup may store these if you built it that way
+				desc = normalize_whitespace(big_idea_lookup.get(bi_id, {}).get("description", "") or "")
+			if desc:
+				topic_big_desc_lines.append(f"{bi_id}: {desc}")
+			else:
+				topic_big_desc_lines.append(f"{bi_id}")
 
-			print(f"  🚀 Generating MCQs for this unit/set")
+	# -----------------------
+	# Build final unit context (with section line breaks)
+	# -----------------------
+	unit_context_parts: List[str] = [
+		f"{course_spec.get('name', '').strip()} | Unit {unit_index + 1}: {unit.get('name', '').strip()}",
+		"",
+		"ALLOWED_SKILLS: " + ",".join(sorted(allowed_skill_codes)),
+	]
+	if skill_desc_lines:
+		unit_context_parts.append("ALLOWED_SKILL_DESC: " + " ; ".join(skill_desc_lines))
 
-			mcq_json = generate_valid_mcqs(
-				MCQ_PROMPT_TEMPLATE,
-				unit_payload,
-				QUESTIONS_PER_SET,
-				batch_size=10,  # Safe batch size (can increase to 15-20 if needed)
-				validate_items=False  # Batch-level validation is sufficient
-			)
+	unit_context_parts.extend([
+		"",
+		"ALLOWED_LOS: " + ",".join(sorted(allowed_lo_ids)),
+	])
 
-			print("  ✂️ Cleaning answer choices")
-			for q in mcq_json["questions"]:
-				q["choices"] = [strip_choice_labels(c) for c in q["choices"]]
+	# Course big ideas
+	if include_course_big_ideas and course_big_desc:
+		unit_context_parts.append("")
+		unit_context_parts.append("BIG_IDEAS: " + ",".join(sorted(course_big_desc.keys())))
+		unit_context_parts.append("BIG_IDEAS_DESC:")
+		for bi_id in sorted(course_big_desc.keys()):
+			name = course_big_name.get(bi_id, "").strip()
+			desc = (course_big_desc.get(bi_id, "") or "").strip()
+			# Keep FULL (no truncation), but still single line per item
+			if name:
+				unit_context_parts.append(f"{bi_id} ({name}): {desc}")
+			else:
+				unit_context_parts.append(f"{bi_id}: {desc}")
 
-			print("  🧱 Converting table stimuli (if any)")
-			for q in mcq_json["questions"]:
-				stim = q.get("stimulus")
-				if stim and stim["type"] == "table":
-					stim["content"] = markdown_table_to_html(stim["content"])
+	# Topic big ideas (VAR-1 etc.)
+	if topic_big_desc_lines:
+		unit_context_parts.append("")
+		unit_context_parts.append("TOPIC_BIG_IDEAS: " + ",".join(sorted(used_topic_big_ids)))
+		unit_context_parts.append("TOPIC_BIG_IDEA_DESC:")
+		unit_context_parts.extend(topic_big_desc_lines)
 
-			html_output = MCQ_HTML_TEMPLATE.render(
-				course=course_name,
-				unit=f"Unit {unit_index + 1}: {unit_title}",
-				questions=mcq_json["questions"]
-			)
+	# Topics and LOs
+	unit_context_parts.append("")
+	unit_context_parts.append("TOPICS_AND_LOS:")
+	unit_context_parts.extend(topic_blocks)
 
-			output_path = f"{output_dir}/set_{set_index + 1}.html"
-			with open(output_path, "w", encoding="utf-8") as f:
-				f.write(html_output)
+	unit_context = safe_join_lines(unit_context_parts)
 
-			print(f"  💾 Saved → {output_path}")
+	constraints = {
+		"allowed_skill_codes": sorted(allowed_skill_codes),
+		"allowed_lo_ids": sorted(allowed_lo_ids),
+	}
 
-print("\n🎉 All MCQ sets generated successfully (round-robin mode).")
+	return unit_context, constraints
+
+
+
+# -----------------------
+# Gemini call
+# -----------------------
+def generate_repair_tsv(
+	client,
+	course_name: str,
+	repair_prompt_template: Template,
+	unit_context: str,
+	missing: int,
+	used_ids: List[str],
+	error_summary: str,
+	context_label: str
+) -> str:
+	prompt = repair_prompt_template.render(
+		num_questions=missing,
+		course_name=course_name,
+		unit_context=unit_context,
+		used_ids=",".join(used_ids),
+		error_summary=error_summary
+	)
+
+	# log_block(f"[{context_label}] REPAIR PROMPT", prompt, MAX_PROMPT_CHARS)
+
+	try:
+		resp = client.models.generate_content(
+			model=MODEL,
+			contents=prompt
+		)
+	except Exception as e:
+		log(f"[{context_label}] Repair Gemini call failed: {repr(e)}")
+		return ""
+
+	return (resp.text or "").strip()
+
+
+def generate_mcq_tsv(client, course_name, prompt_template, unit_context, context_label: str) -> str:
+	print("Generating MCQ Prompt...")
+	prompt = prompt_template.render(
+		num_questions=QUESTIONS_PER_SET,
+		unit_context=unit_context,
+		course_name=course_name
+	)
+
+	# if PRINT_PROMPT:
+	# 	log_block(f"[{context_label}] PROMPT", prompt, MAX_PROMPT_CHARS)
+
+	# print(prompt)
+	# print("\n")
+
+	if len(prompt) > MAX_PROMPT_CHARS:
+		print(f"[{context_label}] WARNING: Prompt length {len(prompt)} exceeds {MAX_PROMPT_CHARS}")
+
+	print("Generating MCQ TSV...")
+	try:
+		resp = client.models.generate_content(
+			model=MODEL,
+			contents=prompt
+		)
+	except Exception as e:
+		log(f"[{context_label}] Gemini call failed: {repr(e)}")
+		return ""
+
+	out = (resp.text or "").strip()
+
+	# if PRINT_TSV:
+	# 	log_block(f"[{context_label}] TSV OUTPUT", out, MAX_TSV_CHARS)
+
+	return out
+
+
+# -----------------------
+# TSV parsing
+# -----------------------
+def parse_tsv(tsv_text: str, context_label: str) -> List[List[str]]:
+	lines = [ln for ln in (tsv_text or "").splitlines() if ln.strip()]
+	log(f"[{context_label}] parse_tsv: {len(lines)} non-empty lines found")
+
+	rows = []
+	for i, ln in enumerate(lines, start=1):
+		cols = ln.split("\t")
+
+		# Auto-fix: missing stimulus_payload column
+		if len(cols) == 11:
+			cols.append("")
+
+		rows.append(cols)
+
+	return rows
+
+
+
+def tsv_to_questions(rows: List[List[str]], constraints: Dict[str, Any], context_label: str) -> List[dict]:
+	questions = []
+	rejected = {
+		"row_invalid": 0,
+		"skill_not_allowed": 0,
+		"lo_not_allowed": 0,
+		"svg_invalid": 0,
+		"table_invalid": 0
+	}
+
+	for row_i, cols in enumerate(rows, start=1):
+		error = validate_tsv_row(cols)
+		if error:
+			rejected["row_invalid"] += 1
+			log(f"[{context_label}] Row {row_i} rejected: {error} | cols={len(cols)}")
+			# if DEBUG:
+			# 	print(cols)
+			continue
+
+		qid, diff, skills, los, idx, qtext, A, B, C, D, stim_type, stim_payload = [
+			c.strip() for c in cols
+		]
+
+		correct_index = int(idx)
+
+		skill_codes = [s.strip() for s in skills.split(",") if s.strip()]
+		if any(s not in constraints["allowed_skill_codes"] for s in skill_codes):
+			rejected["skill_not_allowed"] += 1
+			log(f"[{context_label}] Row {row_i} rejected: skill_codes not allowed | {skill_codes}")
+			continue
+
+		lo_ids = [s.strip() for s in los.split(",") if s.strip()]
+		if any(lo not in constraints["allowed_lo_ids"] for lo in lo_ids):
+			rejected["lo_not_allowed"] += 1
+			log(f"[{context_label}] Row {row_i} rejected: LO ids not allowed | {lo_ids}")
+			continue
+
+		stimulus = None
+		if stim_type == "svg":
+			if not is_valid_svg(stim_payload):
+				rejected["svg_invalid"] += 1
+				log(f"[{context_label}] Row {row_i} rejected: invalid svg payload")
+				continue
+			stimulus = {"type": "svg", "content": stim_payload}
+
+		elif stim_type == "table":
+			html_table = pipe_table_to_html(stim_payload)
+			if "<table" not in html_table:
+				rejected["table_invalid"] += 1
+				log(f"[{context_label}] Row {row_i} rejected: table could not be converted to html table")
+				continue
+			stimulus = {"type": "table", "content": html_table}
+
+		questions.append({
+			"id": qid,
+			"difficulty": diff,
+			"skill_codes": skill_codes,
+			"aligned_lo_ids": lo_ids,
+			"correct_choice_index": correct_index,
+			"question": qtext,
+			"choices": [A, B, C, D],
+			"stimulus": stimulus
+		})
+
+	log(f"[{context_label}] tsv_to_questions: accepted={len(questions)} rejected={rejected}")
+	return questions
+
+
+# -----------------------
+# Render + save
+# -----------------------
+def render_html(html_template, course, unit_title, unit_index, set_index, questions, context_label: str):
+	out_dir = OUTPUT_DIR / course / "mcq"
+	ensure_dir(out_dir)
+
+	html = html_template.render(
+		course=course,
+		unit=f"Unit {unit_index + 1}: {unit_title}",
+		questions=questions
+	)
+
+	path = out_dir / f"unit{unit_index + 1}-set{set_index + 1}.html"
+
+	if path.exists():
+		log(f"[{context_label}] Skipping existing file: {path}")
+		return path
+
+	path.write_text(html, encoding="utf-8")
+	log(f"[{context_label}] Wrote file: {path}")
+	return path
+
+
+# -----------------------
+# Main
+# -----------------------
+def main():
+	log("Starting MCQ generation run")
+
+	client = init_client()
+	prompt_template = Template(load_text(PROMPT_PATH))
+	repair_prompt_template = Template(load_text(Path("utils/prompts/repair_prompt.txt")))
+	html_template = Template(load_text(HTML_TEMPLATE_PATH))
+
+	for course in AP_COURSES:
+		course_spec = load_json(CONTENT_DIR / f"{course}.json")
+		skill_lookup = build_skill_lookup(course_spec)
+		big_idea_lookup = build_big_idea_lookup(course_spec)
+
+		for set_index in range(NUM_SETS_PER_UNIT):
+			for unit_index, unit in enumerate(course_spec.get("units", [])):
+				unit_context, constraints = build_unit_context(
+					course_spec,
+					unit,
+					unit_index,
+					skill_lookup,
+					big_idea_lookup
+				)
+
+				context_label = log_context(course, unit_index, unit.get("name", ""), set_index)
+				log(f"[{context_label}] Generating set")
+
+				all_questions: List[dict] = []
+				used_ids: set = set()
+
+				# ---------- INITIAL GENERATION ----------
+				tsv = generate_mcq_tsv(
+					client,
+					course,
+					prompt_template,
+					unit_context,
+					context_label
+				)
+
+				rows = parse_tsv(tsv, context_label)
+				valid, invalid = validate_rows_individually(rows, constraints, context_label)
+
+				all_questions.extend(valid)
+				used_ids.update(q["id"] for q in valid)
+
+				# ---------- REPAIR LOOP ----------
+				repair_round = 0
+				while len(all_questions) < QUESTIONS_PER_SET and repair_round < MAX_RETRIES_PER_SET:
+					repair_round += 1
+					missing = QUESTIONS_PER_SET - len(all_questions)
+
+					log(f"[{context_label}] Repair round {repair_round}, missing={missing}")
+
+					error_summary = summarize_errors(invalid)
+
+					repair_tsv = generate_repair_tsv(
+						client,
+						course,
+						repair_prompt_template,
+						unit_context,
+						missing,
+						list(used_ids),
+						error_summary,
+						context_label
+					)
+
+					if not repair_tsv:
+						break
+
+					repair_rows = parse_tsv(repair_tsv, context_label)
+					valid, invalid = validate_rows_individually(
+						repair_rows, constraints, context_label
+					)
+
+					for q in valid:
+						if q["id"] not in used_ids:
+							all_questions.append(q)
+							used_ids.add(q["id"])
+
+				# ---------- FINAL CHECK ----------
+				if len(all_questions) != QUESTIONS_PER_SET:
+					log(f"[{context_label}] ❌ Failed to reach {QUESTIONS_PER_SET}")
+					continue
+
+				path = render_html(
+					html_template,
+					course,
+					unit.get("name", ""),
+					unit_index,
+					set_index,
+					all_questions,
+					context_label
+				)
+
+				if path:
+					log(f"[{context_label}] ✅ SUCCESS")
+					break
+				break
+			break
+		break
+
+
+if __name__ == "__main__":
+	main()

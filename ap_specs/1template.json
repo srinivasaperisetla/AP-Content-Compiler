@@ -24,21 +24,33 @@
 
   "units": [
     {
+      "id": "Unit Identifier eg 1, 2, 3 etc...",
       "name": "Unit title",
       "developing_understanding": "What conceptual understanding students should develop in this unit",
       "building_practices": "Science practices and/or Course skills emphasized in this unit",
       "preparing_for_exam": "How this unit prepares students for AP-style exam questions",
       "topics": [
         {
+          "id": "Topic Identifier eg 1.1, 2.3, 3.7 etc...",
           "name": "Topic title",
-          "big_ideas": ["Related big idea IDs"],
-          "suggested_subskill_codes": ["Relevant science practice / Course skills subskills"],
+          "suggested_subskill_codes": [
+            "Relevant science practice / Course skills subskills"
+          ],
+          "big_ideas": [
+            {
+              "id": "Big Idea or Enduring Understanding identifier found in the text",
+              "description": "Description of the Big Idea or Enduring Understanding"
+            }
+          ],
           "learning_objectives": [
             {
               "id": "Learning objective identifier",
               "description": "What students should be able to do after instruction",
               "essential_knowledge": [
-                "Key content knowledge students must understand for this objective"
+                {
+                  "id": "Key content knowledge identifier",
+                  "description": "Key content knowledge students must understand for this objective"
+                }
               ]
             }
           ]

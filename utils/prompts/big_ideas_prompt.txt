@@ -1,0 +1,30 @@
+Task:
+Normalize the Big Ideas / Themes section into a consistent tabular format.
+
+Rules:
+- Use ONLY text present in the document.
+- Preserve wording exactly (no paraphrasing).
+- Do NOT summarize, infer, or add content.
+- Output ONE Big Idea per line.
+- ALWAYS output exactly THREE TAB-SEPARATED columns in this order:
+	Big Idea ID<TAB>Big Idea Name<TAB>Big Idea Description
+
+Definitions:
+- Big Idea ID:
+	- Use the short identifier found in parentheses, if present (e.g., "VAR", "UNC", "DAT").
+	- If no parenthetical identifier exists in the document, output an EMPTY string.
+- Big Idea Name:
+	- The title of the idea (e.g., "VARIATION AND DISTRIBUTION", "EVOLUTION").
+	- Do NOT include the words "BIG IDEA", numbers, or parenthetical identifiers.
+- Big Idea Description:
+	- ALL descriptive sentences associated with the idea.
+	- Preserve sentence order and wording exactly.
+
+Formatting rules:
+- If the title and description appear on the same line, split them logically.
+- If the document does not explicitly separate title and description:
+	- Treat the first sentence as the name.
+	- Treat all remaining sentences as the description.
+- Do NOT include headers, footers, page numbers, or navigation text.
+- Do NOT include explanations or commentary.
+- Return plain text only.

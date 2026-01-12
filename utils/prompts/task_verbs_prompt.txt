@@ -1,0 +1,21 @@
+Task:
+Normalize the Task Verbs table into a strict tabular format.
+
+Rules:
+- Use ONLY text present in the document.
+- Preserve wording exactly (no paraphrasing).
+- Do NOT summarize or infer.
+- Do NOT output table headers, footers, or page numbers.
+
+Output format:
+- Output ONE verb per line.
+- ALWAYS output exactly TWO TAB-SEPARATED columns in this order:
+
+	Verb<TAB>Description
+
+Cell rules:
+- Verb must be the task verb as shown in the table.
+- Description must be the full description associated with that verb.
+- If a cell is visually empty, output an EMPTY string for that column.
+
+Return plain text only.

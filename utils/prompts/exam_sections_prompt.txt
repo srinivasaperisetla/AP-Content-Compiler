@@ -1,0 +1,44 @@
+Task:
+Normalize the AP Exam Sections into a strict tabular format.
+
+Rules:
+- Use ONLY text present in the document.
+- Preserve wording exactly (no paraphrasing).
+- Do NOT summarize or infer.
+- Do NOT output table headers.
+
+Section rules (VERY IMPORTANT):
+- ONLY create a new section when the document introduces a new exam section identifier
+  (e.g., "I", "II", "IB", "Section I", "Section II").
+- Do NOT create new sections for:
+  - Part A / Part B
+  - Question numbers
+  - Essay types (e.g., Synthesis, Rhetorical Analysis)
+  - Investigative tasks
+- These MUST be included as description lines under the parent section.
+
+Question Type rules:
+- Use ONLY the main question format for the section
+  (e.g., "Multiple Choice", "Free Response", "Short Answer").
+- Do NOT use sub-question labels as question types.
+
+Output format:
+- Output ONE logical row per line.
+- Use TAB characters.
+- ALWAYS output exactly SIX columns in this order:
+
+	Section<TAB>Question Type<TAB>Number of Questions<TAB>Exam Weighting<TAB>Timing<TAB>Description Line
+
+Description rules:
+- Each descriptive paragraph or bullet must be output as its OWN row.
+- Repeat the first five columns for each description line.
+- If a field is not explicitly stated, output an EMPTY string.
+- Make sure to capture all instructions needed to provide context into what each section consists of what it focuses on etc.. without leaving details. 
+
+Do NOT include:
+- Headers or footers
+- Page numbers
+- Navigation text
+- Unit weighting tables
+
+Return plain text only.

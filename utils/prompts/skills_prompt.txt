@@ -1,0 +1,14 @@
+Task:
+Reconstruct the Course Skills table exactly as it appears in the document.
+
+Rules:
+- Use ONLY text present in the document.
+- Preserve wording exactly (no paraphrasing).
+- Do NOT summarize, infer, or reorganize content.
+- Reconstruct full logical rows by combining text across columns.
+- Output ONE logical row per line.
+- Use TAB characters between columns in this EXACT order:
+	Skill Category/Practice Label<TAB>Skill Name<TAB>Skill Description (or EMPTY if not present in the table)<TAB>Subskill Code<TAB>Subskill Description
+- If a field is visually absent in the table, output an EMPTY string.
+- Do not include headers, footers, page numbers, or navigation text.
+- Return plain text only.

@@ -1,0 +1,90 @@
+{
+  "name": "Ap Biology",
+  "skills": [],
+  "big_ideas": [],
+  "units": [
+    {
+      "name": "Unit title",
+      "developing_understanding": "What conceptual understanding students should develop in this unit",
+      "building_practices": "Science practices and/or Course skills emphasized in this unit",
+      "preparing_for_exam": "How this unit prepares students for AP-style exam questions",
+      "topics": [
+        {
+          "name": "Topic title",
+          "big_ideas": [
+            {
+              "id": "description found in the text"
+            }
+          ],
+          "suggested_subskill_codes": [
+            "Relevant science practice / Course skills subskills"
+          ],
+          "learning_objectives": [
+            {
+              "id": "Learning objective identifier",
+              "description": "What students should be able to do after instruction",
+              "essential_knowledge": [
+                "Key content knowledge students must understand for this objective"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exam_sections": [],
+  "task_verbs": [
+    {
+      "verb": "Calculate",
+      "description": "Perform mathematical steps to arrive at a final answer, including algebraic expressions, properly substituted numbers, and correct labeling of units and significant figures."
+    },
+    {
+      "verb": "Construct/Draw",
+      "description": "Create a diagram, graph, representation, or model that illustrates or explains relationships or phenomena. Labels may or may not be required."
+    },
+    {
+      "verb": "Describe",
+      "description": "Provide relevant characteristic(s) of a specified topic."
+    },
+    {
+      "verb": "Determine",
+      "description": "Decide or conclude after reasoning, observation, or applying mathematical routines (calculations)."
+    },
+    {
+      "verb": "Evaluate",
+      "description": "Judge or determine the significance or importance of information, or the quality or accuracy of a claim."
+    },
+    {
+      "verb": "Explain",
+      "description": "Provide information about how or why a relationship, process, pattern, position, situation, or outcome occurs, using evidence and/or reasoning to support or qualify a claim. Explain \"how\" typically requires analyzing the relationship, process, pattern, position, situation, or outcome. Explain \"why\" typically requires analysis of motivations or reasons for the relationship, process, pattern, position, situation, or outcome."
+    },
+    {
+      "verb": "Identify",
+      "description": "Indicate or provide information about a specified topic, without elaboration."
+    },
+    {
+      "verb": "Justify",
+      "description": "Provide evidence to support, qualify, or defend a claim, and provide reasoning to explain how that evidence supports or qualifies the claim."
+    },
+    {
+      "verb": "Make a claim",
+      "description": "Make an assertion that is based on evidence or knowledge."
+    },
+    {
+      "verb": "Predict/Make a prediction",
+      "description": "Predict the causes or effects of a change in, or disruption to, one or more components in a relationship, pattern, process, or system."
+    },
+    {
+      "verb": "Represent",
+      "description": "Use appropriate graphs, symbols, words, illustrations, and tables of numerical values to describe biological concepts, characteristics, and/or relationships."
+    },
+    {
+      "verb": "State (the null hypothesis)",
+      "description": "Indicate or provide a hypothesis to support or defend a claim about a scientifically testable question related to the experimental variables."
+    },
+    {
+      "verb": "Support a claim",
+      "description": "Provide reasoning to explain how evidence supports or qualifies a claim"
+    }
+  ]
+}
