@@ -1,1097 +1,1007 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AP Statistics — Unit 7: Inference for Quantitative Data: Means MCQ Set</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AP Statistics — Unit 7: Inference for Quantitative Data: Means MCQ Set</title>
 
-  <style>
-    .data-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1rem 0;
-      font-size: 0.95rem;
-    }
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
 
-    .data-table th,
-    .data-table td {
-      border: 1px solid #ccc;
-      padding: 0.5rem 0.75rem;
-      text-align: center;
-    }
-
-    .data-table th {
-      background-color: #f2f2f2;
-      font-weight: 600;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem;
-      color: #333;
-    }
-
-    h1 {
-      border-bottom: 2px solid #333;
-      padding-bottom: 0.5rem;
-    }
-
-    .question-card {
-      border: 1px solid #ddd;
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-      border-radius: 8px;
-      background-color: #fafafa;
-      break-inside: avoid;
-    }
-
-    .question-header {
-      margin-bottom: 0.75rem;
-      font-size: 0.95rem;
-      color: #666;
-    }
-
-    .question-text {
-      font-weight: 600;
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-    }
-
-    .diagram {
-      margin: 1rem 0;
-      text-align: center;
-      border: 1px solid #eee;
-      background: white;
-      padding: 10px;
-      border-radius: 4px;
-      overflow: hidden;
-    }
-
-    .diagram svg {
-      max-width: 100%;
-      height: auto;
-      max-height: 400px;
-      display: inline-block;
-    }
-
-    .choices {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .choices li {
-      margin-bottom: 0.5rem;
-    }
-
-    .key-section {
-      margin-top: 4rem;
-      border-top: 4px solid #333;
-      padding-top: 2rem;
-    }
-
-    .key-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-      gap: 1rem;
-    }
-
-    @media print {
-      .question-card {
-        border: none;
-        padding: 0;
-        margin-bottom: 3rem;
+    <style>
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-size: 0.95rem;
       }
-      .diagram {
+
+      .data-table th,
+      .data-table td {
         border: 1px solid #ccc;
+        padding: 0.5rem 0.75rem;
+        text-align: center;
       }
-    }
-  </style>
-</head>
 
-<body>
+      .data-table th {
+        background-color: #f2f2f2;
+        font-weight: 600;
+      }
 
-<h1>AP Statistics — Unit 7: Inference for Quantitative Data: Means</h1>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+        color: #333;
+      }
 
-<hr />
+      h1 {
+        border-bottom: 2px solid #333;
+        padding-bottom: 0.5rem;
+      }
 
-<div class="mcq-container">
+      .question-card {
+        border: 1px solid #ddd;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        border-radius: 8px;
+        background-color: #fafafa;
+        break-inside: avoid;
+      }
 
+      .question-header {
+        margin-bottom: 0.75rem;
+        font-size: 0.95rem;
+        color: #666;
+      }
 
-  <div
-    class="question-card"
-    id="ap_statistics_MCQ_U7S5Q1"
-    data-difficulty="medium"
-    data-skill-codes="3.D"
-    data-learning-objectives="UNC-4.R"
-    data-correct-index="2"
-  >
+      .question-text {
+        font-weight: 600;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+      }
 
-    <div class="question-header">
-      <strong>Q1.</strong> (ID: ap_statistics_MCQ_U7S5Q1)
-    </div>
+      .diagram {
+        margin: 1rem 0;
+        text-align: center;
+        border: 1px solid #eee;
+        background: white;
+        padding: 10px;
+        border-radius: 4px;
+        overflow: hidden;
+      }
 
-    
-      <div class="diagram">
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+        max-height: 400px;
+        display: inline-block;
+      }
+
+      .choices {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .choices li {
+        margin-bottom: 0.5rem;
+      }
+
+      .key-section {
+        margin-top: 4rem;
+        border-top: 4px solid #333;
+        padding-top: 2rem;
+      }
+
+      .key-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 1rem;
+      }
+
+      @media print {
+        .question-card {
+          border: none;
+          padding: 0;
+          margin-bottom: 3rem;
+        }
+        .diagram {
+          border: 1px solid #ccc;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics — Unit 7: Inference for Quantitative Data: Means</h1>
+
+    <hr />
+
+    <div class="mcq-container">
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U7S5Q1"
+        data-difficulty="easy"
+        data-skill-codes="1.A"
+        data-learning-objectives="VAR-1.1"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q1.</strong> (ID: ap_statistics_MCQ_U7S5Q1)
+        </div>
+
         
-          <table class='data-table'><thead><tr><th>Statistic</th><th>Value</th></tr></thead><tbody><tr><td>Sample Size (n)</td><td>25</td></tr><tr><td>Sample Mean (x̄)</td><td>31.8 minutes</td></tr><tr><td>Sample Standard Deviation (s)</td><td>5.0 minutes</td></tr></tbody></table>
+
+        <div class="question-text">A medical researcher is developing a new drug to lower blood pressure. She plans to conduct a hypothesis test to determine if the drug is effective. What is a key question about errors in statistical inference that she should consider?</div>
+
+        <ul class="choices">
+          
+          <li>A. What is the probability that the drug will be approved?</li>
+          
+          <li>B. What is the probability of incorrectly concluding the drug is effective when it is not, or vice versa?</li>
+          
+          <li>C. What is the probability that patients will experience side effects?</li>
+          
+          <li>D. What is the probability of finding a larger sample size?</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U7S5Q2"
+        data-difficulty="easy"
+        data-skill-codes="3.C"
+        data-learning-objectives="VAR-7.A"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q2.</strong> (ID: ap_statistics_MCQ_U7S5Q2)
+        </div>
+
+        
+
+        <div class="question-text">Which of the following statements is true regarding a t-distribution?</div>
+
+        <ul class="choices">
+          
+          <li>A. It is always symmetric and bell-shaped, but has thinner tails than a normal distribution.</li>
+          
+          <li>B. It is always skewed to the right, with a mean greater than 0.</li>
+          
+          <li>C. It is always symmetric and bell-shaped, with thicker tails than a normal distribution.</li>
+          
+          <li>D. Its shape depends solely on the population standard deviation.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U7S5Q3"
+        data-difficulty="medium"
+        data-skill-codes="1.D"
+        data-learning-objectives="UNC-4.0"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q3.</strong> (ID: ap_statistics_MCQ_U7S5Q3)
+        </div>
+
+        
+
+        <div class="question-text">A veterinarian wants to estimate the average weight of a certain breed of dog. She collects a random sample of 30 dogs of this breed. The population standard deviation of weights is unknown. Which of the following inference procedures should she use to construct a confidence interval for the population mean weight?</div>
+
+        <ul class="choices">
+          
+          <li>A. One-sample z-interval for a population mean.</li>
+          
+          <li>B. One-sample t-interval for a population mean.</li>
+          
+          <li>C. Two-sample t-interval for a difference of means.</li>
+          
+          <li>D. One-sample z-interval for a population proportion.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U7S5Q4"
+        data-difficulty="medium"
+        data-skill-codes="4.C"
+        data-learning-objectives="UNC-4.P"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q4.</strong> (ID: ap_statistics_MCQ_U7S5Q4)
+        </div>
+
+        
+
+        <div class="question-text">A company wants to estimate the average amount of time customers spend on its website per visit. A random sample of 40 customer visits is taken. The histogram of the sample visit times shows a moderate right skew, but no extreme outliers. Which condition for constructing a t-interval for the population mean is met?</div>
+
+        <ul class="choices">
+          
+          <li>A. The data are from a normal distribution.</li>
+          
+          <li>B. The sample size is sufficiently large for the Central Limit Theorem to apply.</li>
+          
+          <li>C. The population standard deviation is known.</li>
+          
+          <li>D. The sample is a convenience sample.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U7S5Q5"
+        data-difficulty="medium"
+        data-skill-codes="3.D"
+        data-learning-objectives="UNC-4.Q"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q5.</strong> (ID: ap_statistics_MCQ_U7S5Q5)
+        </div>
+
+        
+
+        <div class="question-text">A random sample of 25 students achieved a mean score of $\bar{x} = 75$ on a standardized test with a sample standard deviation of $s = 8$. To calculate a 95% confidence interval for the true mean score, which of the following expressions represents the margin of error?</div>
+
+        <ul class="choices">
+          
+          <li>A. $1.96 \cdot \frac{8}{\sqrt{25}}$</li>
+          
+          <li>B. $2.064 \cdot \frac{8}{\sqrt{25}}$</li>
+          
+          <li>C. $1.96 \cdot \frac{8}{25}$</li>
+          
+          <li>D. $2.064 \cdot \frac{8}{25}$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U7S5Q6"
+        data-difficulty="hard"
+        data-skill-codes="3.D"
+        data-learning-objectives="UNC-4.R"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q6.</strong> (ID: ap_statistics_MCQ_U7S5Q6)
+        </div>
+
+        
+
+        <div class="question-text">A random sample of 16 bags of a certain brand of potato chips has a mean weight of 14.8 ounces and a standard deviation of 0.3 ounces. Assuming the conditions for inference are met, what is a 90% confidence interval for the true mean weight of potato chips of this brand?</div>
+
+        <ul class="choices">
+          
+          <li>A. $(14.8 - 1.753 \cdot \frac{0.3}{\sqrt{16}}, 14.8 + 1.753 \cdot \frac{0.3}{\sqrt{16}})$</li>
+          
+          <li>B. $(14.8 - 1.96 \cdot \frac{0.3}{\sqrt{16}}, 14.8 + 1.96 \cdot \frac{0.3}{\sqrt{16}})$</li>
+          
+          <li>C. $(14.8 - 1.341 \cdot \frac{0.3}{\sqrt{16}}, 14.8 + 1.341 \cdot \frac{0.3}{\sqrt{16}})$</li>
+          
+          <li>D. $(14.8 - 1.746 \cdot \frac{0.3}{\sqrt{16}}, 14.8 + 1.746 \cdot \frac{0.3}{\sqrt{16}})$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U7S5Q7"
+        data-difficulty="medium"
+        data-skill-codes="1.D"
+        data-learning-objectives="UNC-4.0"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q7.</strong> (ID: ap_statistics_MCQ_U7S5Q7)
+        </div>
+
+        
+
+        <div class="question-text">A researcher wants to compare the effectiveness of two different exercise programs on reducing blood pressure. They recruit 20 participants and measure each participant's blood pressure before and after completing one specific program. What is the most appropriate procedure to construct a confidence interval for the mean reduction in blood pressure?</div>
+
+        <ul class="choices">
+          
+          <li>A. Two-sample t-interval for the difference between two means.</li>
+          
+          <li>B. One-sample t-interval for a population mean.</li>
+          
+          <li>C. Matched-pairs t-interval for a mean difference.</li>
+          
+          <li>D. Two-sample z-interval for the difference between two means.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U7S5Q8"
+        data-difficulty="easy"
+        data-skill-codes="4.B"
+        data-learning-objectives="UNC-4.S"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q8.</strong> (ID: ap_statistics_MCQ_U7S5Q8)
+        </div>
+
+        
+
+        <div class="question-text">A 95% confidence interval for the average height of adult males in a city is found to be (68.5 inches, 70.3 inches). Which of the following is the correct interpretation of this interval?</div>
+
+        <ul class="choices">
+          
+          <li>A. 95% of adult males in the city have heights between 68.5 and 70.3 inches.</li>
+          
+          <li>B. There is a 95% probability that a randomly selected adult male's height is between 68.5 and 70.3 inches.</li>
+          
+          <li>C. We are 95% confident that the true average height of adult males in the city is between 68.5 and 70.3 inches.</li>
+          
+          <li>D. If we take many samples, 95% of the sample means will fall between 68.5 and 70.3 inches.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U7S5Q9"
+        data-difficulty="medium"
+        data-skill-codes="4.D"
+        data-learning-objectives="UNC-4.T"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q9.</strong> (ID: ap_statistics_MCQ_U7S5Q9)
+        </div>
+
+        
+
+        <div class="question-text">A researcher constructs a 90% confidence interval for the mean daily screen time of teenagers and finds it to be (4.2 hours, 5.8 hours). A government health organization claims that teenagers spend more than 4 hours a day on screens. Based on this interval, can the researcher support the claim?</div>
+
+        <ul class="choices">
+          
+          <li>A. No, because 4 hours is within the interval.</li>
+          
+          <li>B. Yes, because the entire interval (4.2, 5.8) is above 4 hours.</li>
+          
+          <li>C. No, because the interval is too wide to make a definitive conclusion.</li>
+          
+          <li>D. Yes, because the midpoint of the interval, 5 hours, is greater than 4 hours.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U7S5Q10"
+        data-difficulty="easy"
+        data-skill-codes="4.A"
+        data-learning-objectives="UNC-4.U"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q10.</strong> (ID: ap_statistics_MCQ_U7S5Q10)
+        </div>
+
+        
+
+        <div class="question-text">If a researcher increases the sample size while keeping the confidence level constant, what will generally happen to the width of a confidence interval for a population mean?</div>
+
+        <ul class="choices">
+          
+          <li>A. The width will increase.</li>
+          
+          <li>B. The width will decrease.</li>
+          
+          <li>C. The width will remain the same.</li>
+          
+          <li>D. The width will become unpredictable.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U7S5Q11"
+        data-difficulty="medium"
+        data-skill-codes="1.E"
+        data-learning-objectives="VAR-7.B"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q11.</strong> (ID: ap_statistics_MCQ_U7S5Q11)
+        </div>
+
+        
+
+        <div class="question-text">A quality control manager wants to determine if the mean fill volume of soda cans produced by a machine is different from the target of 12 fluid ounces. They take a random sample of 25 cans and find the sample mean fill volume. The population standard deviation is unknown. Which of the following is the most appropriate test?</div>
+
+        <ul class="choices">
+          
+          <li>A. One-sample z-test for a population mean.</li>
+          
+          <li>B. One-sample t-test for a population mean.</li>
+          
+          <li>C. Two-sample t-test for a difference of means.</li>
+          
+          <li>D. Paired t-test for a mean difference.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U7S5Q12"
+        data-difficulty="medium"
+        data-skill-codes="1.F"
+        data-learning-objectives="VAR-7.C"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q12.</strong> (ID: ap_statistics_MCQ_U7S5Q12)
+        </div>
+
+        
+
+        <div class="question-text">A university claims the average GPA of its graduates is 3.0. A student organization believes the average GPA is actually lower. They plan to conduct a hypothesis test. What are the appropriate null and alternative hypotheses?</div>
+
+        <ul class="choices">
+          
+          <li>A. $H_0: \mu = 3.0, H_a: \mu \ne 3.0$</li>
+          
+          <li>B. $H_0: \mu < 3.0, H_a: \mu = 3.0$</li>
+          
+          <li>C. $H_0: \mu = 3.0, H_a: \mu < 3.0$</li>
+          
+          <li>D. $H_0: \bar{x} = 3.0, H_a: \bar{x} < 3.0$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U7S5Q13"
+        data-difficulty="easy"
+        data-skill-codes="4.C"
+        data-learning-objectives="VAR-7.D"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q13.</strong> (ID: ap_statistics_MCQ_U7S5Q13)
+        </div>
+
+        
+
+        <div class="question-text">A school administrator wants to test if the average SAT score of students in their district is higher than the national average of 1000. They plan to take a random sample of 60 students. Which condition is crucial for carrying out a t-test for a population mean?</div>
+
+        <ul class="choices">
+          
+          <li>A. The sample standard deviation must be known.</li>
+          
+          <li>B. The population must be perfectly normally distributed.</li>
+          
+          <li>C. The sample size must be at least 30, allowing the Central Limit Theorem to apply.</li>
+          
+          <li>D. The data must be collected using a stratified random sample.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U7S5Q14"
+        data-difficulty="medium"
+        data-skill-codes="3.E"
+        data-learning-objectives="VAR-7.E"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q14.</strong> (ID: ap_statistics_MCQ_U7S5Q14)
+        </div>
+
+        
+
+        <div class="question-text">A random sample of 36 apples has a mean weight of 150 grams and a standard deviation of 9 grams. The producer claims the average weight is 155 grams. Calculate the test statistic for a hypothesis test to determine if the true mean weight is different from 155 grams.</div>
+
+        <ul class="choices">
+          
+          <li>A. $t = \frac{150 - 155}{9/\sqrt{36}}$</li>
+          
+          <li>B. $t = \frac{150 - 155}{9/36}$</li>
+          
+          <li>C. $t = \frac{155 - 150}{9/\sqrt{36}}$</li>
+          
+          <li>D. $t = \frac{150 - 155}{9}$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U7S5Q15"
+        data-difficulty="easy"
+        data-skill-codes="4.B"
+        data-learning-objectives="DAT-3.E"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q15.</strong> (ID: ap_statistics_MCQ_U7S5Q15)
+        </div>
+
+        
+
+        <div class="question-text">In a significance test for the mean weight of a product, the p-value is calculated to be 0.03. Which of the following is the correct interpretation of this p-value?</div>
+
+        <ul class="choices">
+          
+          <li>A. There is a 3% chance that the null hypothesis is true.</li>
+          
+          <li>B. There is a 3% chance of observing a sample mean as extreme as, or more extreme than, the one observed, assuming the null hypothesis is true.</li>
+          
+          <li>C. There is a 3% chance of making a Type I error.</li>
+          
+          <li>D. There is a 3% chance that the alternative hypothesis is true.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U7S5Q16"
+        data-difficulty="medium"
+        data-skill-codes="4.E"
+        data-learning-objectives="DAT-3.F"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q16.</strong> (ID: ap_statistics_MCQ_U7S5Q16)
+        </div>
+
+        
+
+        <div class="question-text">A researcher tests $H_0: \mu = 20$ versus $H_a: \mu > 20$ with a significance level of $\alpha = 0.05$. The p-value for the test is 0.015. What conclusion should the researcher draw?</div>
+
+        <ul class="choices">
+          
+          <li>A. Fail to reject $H_0$ because the p-value is less than $\alpha$.</li>
+          
+          <li>B. Reject $H_0$ because the p-value is less than $\alpha$, providing evidence that $\mu > 20$.</li>
+          
+          <li>C. Fail to reject $H_0$ because the p-value is greater than $\alpha$.</li>
+          
+          <li>D. Reject $H_0$ because the p-value is greater than $\alpha$, providing evidence that $\mu \ne 20$.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U7S5Q17"
+        data-difficulty="hard"
+        data-skill-codes="3.E"
+        data-learning-objectives="VAR-7.E"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q17.</strong> (ID: ap_statistics_MCQ_U7S5Q17)
+        </div>
+
+        
+
+        <div class="question-text">A company wants to determine if a new training program improves employee productivity. Ten employees are randomly selected, and their productivity is measured before and after the program. The mean difference (after - before) in productivity is $d = 5$ units, with a standard deviation of differences $s_d = 8$ units. What is the test statistic for a matched-pairs t-test to determine if there is a significant improvement?</div>
+
+        <ul class="choices">
+          
+          <li>A. $t = \frac{5 - 0}{8/\sqrt{10}}$</li>
+          
+          <li>B. $t = \frac{5 - 0}{8/10}$</li>
+          
+          <li>C. $t = \frac{5}{8/\sqrt{9}}$</li>
+          
+          <li>D. $t = \frac{5 - 0}{8}$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U7S5Q18"
+        data-difficulty="medium"
+        data-skill-codes="1.D"
+        data-learning-objectives="UNC-4.V"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q18.</strong> (ID: ap_statistics_MCQ_U7S5Q18)
+        </div>
+
+        
+
+        <div class="question-text">Researchers want to compare the average recovery time for patients treated with two different medications. They randomly assign 30 patients to Medication A and 35 patients to Medication B. The recovery times are measured for all patients. Which is the most appropriate procedure to construct a confidence interval for the difference in mean recovery times?</div>
+
+        <ul class="choices">
+          
+          <li>A. One-sample t-interval for a population mean.</li>
+          
+          <li>B. Matched-pairs t-interval for a mean difference.</li>
+          
+          <li>C. Two-sample t-interval for a difference of two population means.</li>
+          
+          <li>D. Two-sample z-interval for a difference of two population means.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U7S5Q19"
+        data-difficulty="medium"
+        data-skill-codes="4.C"
+        data-learning-objectives="UNC-4.W"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q19.</strong> (ID: ap_statistics_MCQ_U7S5Q19)
+        </div>
+
+        
+
+        <div class="question-text">Two independent random samples are taken: Sample 1 (n=20) shows a roughly symmetric distribution with no outliers. Sample 2 (n=25) shows a slightly skewed distribution, but also no outliers. Both samples are from populations whose standard deviations are unknown. Which condition for constructing a two-sample t-interval for the difference of two means is most relevant to the sample sizes and shapes?</div>
+
+        <ul class="choices">
+          
+          <li>A. The population standard deviations are known.</li>
+          
+          <li>B. Both population distributions are normal.</li>
+          
+          <li>C. The sample sizes are large enough (or distributions are not strongly skewed with no outliers) for the sampling distribution of the difference in means to be approximately normal.</li>
+          
+          <li>D. The samples are dependent.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U7S5Q20"
+        data-difficulty="hard"
+        data-skill-codes="3.D"
+        data-learning-objectives="UNC-4.X"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q20.</strong> (ID: ap_statistics_MCQ_U7S5Q20)
+        </div>
+
+        
+
+        <div class="question-text">Two independent random samples of heights are taken: Sample 1 (n=10, $\bar{x}_1 = 68$, $s_1 = 3$) and Sample 2 (n=12, $\bar{x}_2 = 70$, $s_2 = 4$). To construct a 95% confidence interval for the difference of means $(\mu_1 - \mu_2)$, what is the appropriate formula for the margin of error?</div>
+
+        <ul class="choices">
+          
+          <li>A. $t^* \cdot \sqrt{\frac{3^2}{10} + \frac{4^2}{12}}$</li>
+          
+          <li>B. $z^* \cdot \sqrt{\frac{3^2}{10} + \frac{4^2}{12}}$</li>
+          
+          <li>C. $t^* \cdot \frac{s_1}{\sqrt{n_1}} + t^* \cdot \frac{s_2}{\sqrt{n_2}}$</li>
+          
+          <li>D. $t^* \cdot \sqrt{\frac{3^2}{10} - \frac{4^2}{12}}$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U7S5Q21"
+        data-difficulty="hard"
+        data-skill-codes="3.D"
+        data-learning-objectives="UNC-4.Y"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q21.</strong> (ID: ap_statistics_MCQ_U7S5Q21)
+        </div>
+
+        
+
+        <div class="question-text">A random sample of 20 males had a mean height of 69 inches with a standard deviation of 2.5 inches. A random sample of 25 females had a mean height of 64 inches with a standard deviation of 2.2 inches. Assuming conditions are met, calculate a 90% confidence interval for the true difference in mean heights (males - females). Use $t^* \approx 1.699$ (conservative df=19).</div>
+
+        <ul class="choices">
+          
+          <li>A. $(69 - 64) \pm 1.699 \cdot \sqrt{\frac{2.5^2}{20} + \frac{2.2^2}{25}}$</li>
+          
+          <li>B. $(69 - 64) \pm 1.96 \cdot \sqrt{\frac{2.5^2}{20} + \frac{2.2^2}{25}}$</li>
+          
+          <li>C. $(69 - 64) \pm 1.699 \cdot \left(\frac{2.5}{\sqrt{20}} + \frac{2.2}{\sqrt{25}}\right)$</li>
+          
+          <li>D. $(69 - 64) \pm 2.093 \cdot \sqrt{\frac{2.5^2}{20} + \frac{2.2^2}{25}}$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U7S5Q22"
+        data-difficulty="easy"
+        data-skill-codes="4.B"
+        data-learning-objectives="UNC-4.Z"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q22.</strong> (ID: ap_statistics_MCQ_U7S5Q22)
+        </div>
+
+        
+
+        <div class="question-text">A 95% confidence interval for the difference in mean test scores (Group A - Group B) is $(-3.2, 1.8)$. Which of the following is a correct interpretation of this interval?</div>
+
+        <ul class="choices">
+          
+          <li>A. We are 95% confident that the mean score for Group A is between 3.2 points lower and 1.8 points higher than Group B.</li>
+          
+          <li>B. We are 95% confident that Group A scored lower than Group B.</li>
+          
+          <li>C. We are 95% confident that there is no difference between the mean scores of Group A and Group B.</li>
+          
+          <li>D. 95% of students in Group A scored between 3.2 points lower and 1.8 points higher than students in Group B.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U7S5Q23"
+        data-difficulty="medium"
+        data-skill-codes="4.D"
+        data-learning-objectives="UNC-4.AA"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q23.</strong> (ID: ap_statistics_MCQ_U7S5Q23)
+        </div>
+
+        
+
+        <div class="question-text">A 99% confidence interval for the difference in mean yield (New Fertilizer - Old Fertilizer) is (1.5 bushels, 4.0 bushels). A farmer wants to know if the new fertilizer significantly increases yield compared to the old one. What conclusion can be drawn?</div>
+
+        <ul class="choices">
+          
+          <li>A. There is no significant difference in yield because 0 is not in the interval.</li>
+          
+          <li>B. The new fertilizer significantly decreases yield because the interval contains only positive values.</li>
+          
+          <li>C. The new fertilizer significantly increases yield because the entire interval is above 0.</li>
+          
+          <li>D. The old fertilizer significantly increases yield because the interval is positive for New - Old.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U7S5Q24"
+        data-difficulty="easy"
+        data-skill-codes="4.A"
+        data-learning-objectives="UNC-4.AB"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q24.</strong> (ID: ap_statistics_MCQ_U7S5Q24)
+        </div>
+
+        
+
+        <div class="question-text">To reduce the width of a confidence interval for the difference of two means, assuming all other factors remain constant, what action could a researcher take?</div>
+
+        <ul class="choices">
+          
+          <li>A. Decrease the sample sizes of both groups.</li>
+          
+          <li>B. Increase the confidence level.</li>
+          
+          <li>C. Increase the sample sizes of both groups.</li>
+          
+          <li>D. Increase the standard deviation of one sample.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U7S5Q25"
+        data-difficulty="medium"
+        data-skill-codes="1.E"
+        data-learning-objectives="VAR-7.F"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q25.</strong> (ID: ap_statistics_MCQ_U7S5Q25)
+        </div>
+
+        
+
+        <div class="question-text">A consumer advocacy group wants to determine if there is a difference in the average lifespan of two brands of light bulbs. They randomly select 50 bulbs of Brand X and 50 bulbs of Brand Y and record their lifespans. Which statistical test should they use?</div>
+
+        <ul class="choices">
+          
+          <li>A. One-sample t-test for a population mean.</li>
+          
+          <li>B. Matched-pairs t-test for a mean difference.</li>
+          
+          <li>C. Two-sample t-test for a difference of two population means.</li>
+          
+          <li>D. Chi-square test for independence.</li>
+          
+        </ul>
+      </div>
+      
+    </div>
+
+    <div class="key-section">
+      <h2>Answer Key</h2>
+
+      <div class="key-grid">
+        
+        <div>
+          <strong>1.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>2.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>3.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>4.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>5.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>6.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>7.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>8.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>9.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>10.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>11.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>12.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>13.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>14.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>15.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>16.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>17.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>18.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>19.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>20.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>21.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>22.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>23.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>24.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>25.</strong>
+          C
+        </div>
         
       </div>
-    
-
-    <div class="question-text">
-      A study on daily commute times collected data from a random sample of 25 commuters. The summary statistics are shown. Calculate a 90% confidence interval for the true mean commute time.
     </div>
 
-    <ul class="choices">
-      
-        <li>A. (28.51, 35.09)</li>
-      
-        <li>B. (29.62, 33.98)</li>
-      
-        <li>C. (30.09, 33.51)</li>
-      
-        <li>D. (30.34, 33.26)</li>
-      
-    </ul>
-
-  </div>
-
-  <div
-    class="question-card"
-    id="ap_statistics_MCQ_U7S5Q2"
-    data-difficulty="easy"
-    data-skill-codes="4.B"
-    data-learning-objectives="UNC-4.S"
-    data-correct-index="0"
-  >
-
-    <div class="question-header">
-      <strong>Q2.</strong> (ID: ap_statistics_MCQ_U7S5Q2)
-    </div>
-
-    
-
-    <div class="question-text">
-      A 90% confidence interval for the mean weight of a certain type of fruit is (120 grams, 130 grams). Which of the following is the correct interpretation of this interval?
-    </div>
-
-    <ul class="choices">
-      
-        <li>A. We are 90% confident that the true mean weight of this type of fruit is between 120 grams and 130 grams.</li>
-      
-        <li>B. 90% of all fruit of this type weigh between 120 grams and 130 grams.</li>
-      
-        <li>C. There is a 90% probability that a randomly selected fruit will weigh between 120 grams and 130 grams.</li>
-      
-        <li>D. We are 90% confident that the mean weight of a sample of this type of fruit is between 120 grams and 130 grams.</li>
-      
-    </ul>
-
-  </div>
-
-  <div
-    class="question-card"
-    id="ap_statistics_MCQ_U7S5Q3"
-    data-difficulty="medium"
-    data-skill-codes="3.D"
-    data-learning-objectives="UNC-4.R"
-    data-correct-index="1"
-  >
-
-    <div class="question-header">
-      <strong>Q3.</strong> (ID: ap_statistics_MCQ_U7S5Q3)
-    </div>
-
-    
-
-    <div class="question-text">
-      A random sample of 36 students from a large university was selected, and their mean GPA was found to be 3.1 with a standard deviation of 0.45. Assuming the conditions for inference are met, which of the following is a 95% confidence interval for the true mean GPA of all students at this university?
-    </div>
-
-    <ul class="choices">
-      
-        <li>A. (3.01, 3.19)</li>
-      
-        <li>B. (2.95, 3.25)</li>
-      
-        <li>C. (2.99, 3.21)</li>
-      
-        <li>D. (3.03, 3.17)</li>
-      
-    </ul>
-
-  </div>
-
-  <div
-    class="question-card"
-    id="ap_statistics_MCQ_U7S5Q4"
-    data-difficulty="medium"
-    data-skill-codes="4.D"
-    data-learning-objectives="UNC-4.T"
-    data-correct-index="3"
-  >
-
-    <div class="question-header">
-      <strong>Q4.</strong> (ID: ap_statistics_MCQ_U7S5Q4)
-    </div>
-
-    
-
-    <div class="question-text">
-      A researcher claims that the average time spent on social media by adults is less than 3 hours per day. A 95% confidence interval for the mean time spent on social media, based on a random sample, is found to be (3.15 hours, 3.85 hours). Based on this interval, what conclusion can be made about the researcher's claim?
-    </div>
-
-    <ul class="choices">
-      
-        <li>A. The researcher's claim is supported because 3 hours is close to the lower bound of the interval.</li>
-      
-        <li>B. The researcher's claim is supported because the interval is relatively narrow.</li>
-      
-        <li>C. The researcher's claim is not supported because the interval does not contain 3 hours.</li>
-      
-        <li>D. The researcher's claim is not supported because the entire interval is above 3 hours, indicating the true mean is likely greater than 3 hours.</li>
-      
-    </ul>
-
-  </div>
-
-  <div
-    class="question-card"
-    id="ap_statistics_MCQ_U7S5Q5"
-    data-difficulty="easy"
-    data-skill-codes="4.A"
-    data-learning-objectives="UNC-4.U"
-    data-correct-index="0"
-  >
-
-    <div class="question-header">
-      <strong>Q5.</strong> (ID: ap_statistics_MCQ_U7S5Q5)
-    </div>
-
-    
-
-    <div class="question-text">
-      Which of the following would result in a narrower confidence interval for a population mean, assuming all other factors remain constant?
-    </div>
-
-    <ul class="choices">
-      
-        <li>A. Increasing the sample size.</li>
-      
-        <li>B. Decreasing the sample size.</li>
-      
-        <li>C. Increasing the confidence level.</li>
-      
-        <li>D. Using a larger population standard deviation.</li>
-      
-    </ul>
-
-  </div>
-
-  <div
-    class="question-card"
-    id="ap_statistics_MCQ_U7S5Q6"
-    data-difficulty="medium"
-    data-skill-codes="1.D"
-    data-learning-objectives="UNC-4.0"
-    data-correct-index="1"
-  >
-
-    <div class="question-header">
-      <strong>Q6.</strong> (ID: ap_statistics_MCQ_U7S5Q6)
-    </div>
-
-    
-
-    <div class="question-text">
-      A medical researcher wants to investigate if a new drug affects blood pressure. She measures the blood pressure of 15 patients before and after administering the drug. Which of the following is the most appropriate inference procedure to estimate the mean change in blood pressure?
-    </div>
-
-    <ul class="choices">
-      
-        <li>A. A one-sample t-interval for the population mean blood pressure after the drug.</li>
-      
-        <li>B. A one-sample t-interval for the population mean difference in blood pressure (after - before).</li>
-      
-        <li>C. A two-sample t-interval for the difference in population mean blood pressure (after - before).</li>
-      
-        <li>D. A z-interval for the population mean blood pressure change.</li>
-      
-    </ul>
-
-  </div>
-
-  <div
-    class="question-card"
-    id="ap_statistics_MCQ_U7S5Q7"
-    data-difficulty="medium"
-    data-skill-codes="3.D"
-    data-learning-objectives="UNC-4.R"
-    data-correct-index="2"
-  >
-
-    <div class="question-header">
-      <strong>Q7.</strong> (ID: ap_statistics_MCQ_U7S5Q7)
-    </div>
-
-    
-
-    <div class="question-text">
-      To assess the effectiveness of a new fertilizer, 12 plots of land were divided in half. One half received the new fertilizer, and the other received the standard fertilizer. The yield difference (new - standard) in kilograms was recorded for each plot. The mean difference was 5.2 kg, and the standard deviation of the differences was 3.8 kg. Assuming conditions for inference are met, which of the following is a 90% confidence interval for the true mean difference in yield?
-    </div>
-
-    <ul class="choices">
-      
-        <li>A. (3.08, 7.32)</li>
-      
-        <li>B. (3.26, 7.14)</li>
-      
-        <li>C. (3.39, 7.01)</li>
-      
-        <li>D. (3.51, 6.89)</li>
-      
-    </ul>
-
-  </div>
-
-  <div
-    class="question-card"
-    id="ap_statistics_MCQ_U7S5Q8"
-    data-difficulty="easy"
-    data-skill-codes="1.F"
-    data-learning-objectives="VAR-7.C"
-    data-correct-index="0"
-  >
-
-    <div class="question-header">
-      <strong>Q8.</strong> (ID: ap_statistics_MCQ_U7S5Q8)
-    </div>
-
-    
-
-    <div class="question-text">
-      A factory manager wants to determine if the average weight of product packages is exactly 200 grams. A random sample of packages is taken. Which of the following represents the appropriate null and alternative hypotheses for a significance test?
-    </div>
-
-    <ul class="choices">
-      
-        <li>A. H₀: μ = 200 grams, Hₐ: μ ≠ 200 grams</li>
-      
-        <li>B. H₀: μ ≠ 200 grams, Hₐ: μ = 200 grams</li>
-      
-        <li>C. H₀: x̄ = 200 grams, Hₐ: x̄ ≠ 200 grams</li>
-      
-        <li>D. H₀: μ > 200 grams, Hₐ: μ < 200 grams</li>
-      
-    </ul>
-
-  </div>
-
-  <div
-    class="question-card"
-    id="ap_statistics_MCQ_U7S5Q9"
-    data-difficulty="medium"
-    data-skill-codes="3.E"
-    data-learning-objectives="VAR-7.E"
-    data-correct-index="3"
-  >
-
-    <div class="question-header">
-      <strong>Q9.</strong> (ID: ap_statistics_MCQ_U7S5Q9)
-    </div>
-
-    
-
-    <div class="question-text">
-      A consumer protection agency wants to test if the mean caffeine content in a certain brand of energy drink is 150 mg. A random sample of 16 drinks has a mean caffeine content of 154 mg and a standard deviation of 8 mg. What is the value of the test statistic for a t-test of the hypotheses H₀: μ = 150 mg versus Hₐ: μ ≠ 150 mg?
-    </div>
-
-    <ul class="choices">
-      
-        <li>A. t = 0.5</li>
-      
-        <li>B. t = 1.0</li>
-      
-        <li>C. t = 1.5</li>
-      
-        <li>D. t = 2.0</li>
-      
-    </ul>
-
-  </div>
-
-  <div
-    class="question-card"
-    id="ap_statistics_MCQ_U7S5Q10"
-    data-difficulty="medium"
-    data-skill-codes="4.B"
-    data-learning-objectives="DAT-3.E"
-    data-correct-index="0"
-  >
-
-    <div class="question-header">
-      <strong>Q10.</strong> (ID: ap_statistics_MCQ_U7S5Q10)
-    </div>
-
-    
-
-    <div class="question-text">
-      A one-sample t-test for the mean commute time to work yielded a p-value of 0.035. Which of the following is a correct interpretation of this p-value?
-    </div>
-
-    <ul class="choices">
-      
-        <li>A. Assuming the true mean commute time is equal to the null hypothesis value, there is a 3.5% chance of observing a sample mean commute time as extreme as or more extreme than the one observed, by random chance.</li>
-      
-        <li>B. There is a 3.5% chance that the null hypothesis is true.</li>
-      
-        <li>C. There is a 96.5% chance that the alternative hypothesis is true.</li>
-      
-        <li>D. The probability that the true mean commute time is less than the null hypothesis value is 0.035.</li>
-      
-    </ul>
-
-  </div>
-
-  <div
-    class="question-card"
-    id="ap_statistics_MCQ_U7S5Q11"
-    data-difficulty="hard"
-    data-skill-codes="4.E"
-    data-learning-objectives="DAT-3.F"
-    data-correct-index="1"
-  >
-
-    <div class="question-header">
-      <strong>Q11.</strong> (ID: ap_statistics_MCQ_U7S5Q11)
-    </div>
-
-    
-
-    <div class="question-text">
-      A study was conducted to determine if the mean lifespan of a new type of battery is greater than 80 hours. A random sample of 25 batteries had a mean lifespan of 83 hours with a standard deviation of 7 hours. A significance test yielded a p-value of 0.028. Using a significance level of α = 0.05, what is the appropriate conclusion?
-    </div>
-
-    <ul class="choices">
-      
-        <li>A. Since the p-value (0.028) is greater than α (0.05), we fail to reject the null hypothesis and conclude there is not convincing evidence that the mean lifespan is greater than 80 hours.</li>
-      
-        <li>B. Since the p-value (0.028) is less than α (0.05), we reject the null hypothesis and conclude there is convincing evidence that the mean lifespan of the new battery is greater than 80 hours.</li>
-      
-        <li>C. Since the p-value (0.028) is less than α (0.05), we fail to reject the null hypothesis.</li>
-      
-        <li>D. Since the p-value (0.028) is greater than α (0.05), we reject the null hypothesis.</li>
-      
-    </ul>
-
-  </div>
-
-  <div
-    class="question-card"
-    id="ap_statistics_MCQ_U7S5Q12"
-    data-difficulty="medium"
-    data-skill-codes="1.D"
-    data-learning-objectives="UNC-4.V"
-    data-correct-index="2"
-  >
-
-    <div class="question-header">
-      <strong>Q12.</strong> (ID: ap_statistics_MCQ_U7S5Q12)
-    </div>
-
-    
-
-    <div class="question-text">
-      Researchers want to compare the mean blood pressure of two different groups of patients, one group receiving a new medication and another receiving a placebo. The groups are independent and randomly selected. Which of the following is the most appropriate inference procedure to estimate the difference in mean blood pressure between the two groups?
-    </div>
-
-    <ul class="choices">
-      
-        <li>A. A one-sample t-interval for the mean blood pressure of the medication group.</li>
-      
-        <li>B. A matched-pairs t-interval for the difference in mean blood pressure.</li>
-      
-        <li>C. A two-sample t-interval for the difference of two population means.</li>
-      
-        <li>D. A two-sample z-interval for the difference of two population means.</li>
-      
-    </ul>
-
-  </div>
-
-  <div
-    class="question-card"
-    id="ap_statistics_MCQ_U7S5Q13"
-    data-difficulty="medium"
-    data-skill-codes="3.D"
-    data-learning-objectives="UNC-4.Y"
-    data-correct-index="2"
-  >
-
-    <div class="question-header">
-      <strong>Q13.</strong> (ID: ap_statistics_MCQ_U7S5Q13)
-    </div>
-
-    
-
-    <div class="question-text">
-      Researchers investigated the effectiveness of a new teaching method. Group 1 (new method, n=45) had a mean test score of 82 with a standard deviation of 7. Group 2 (traditional method, n=50) had a mean test score of 78 with a standard deviation of 8. Assuming conditions for inference are met, which of the following is a 99% confidence interval for the difference in population mean test scores (Group 1 - Group 2)?
-    </div>
-
-    <ul class="choices">
-      
-        <li>A. (0.33, 7.67)</li>
-      
-        <li>B. (-0.11, 8.11)</li>
-      
-        <li>C. (0.05, 7.95)</li>
-      
-        <li>D. (0.58, 7.42)</li>
-      
-    </ul>
-
-  </div>
-
-  <div
-    class="question-card"
-    id="ap_statistics_MCQ_U7S5Q14"
-    data-difficulty="easy"
-    data-skill-codes="4.B"
-    data-learning-objectives="UNC-4.Z"
-    data-correct-index="3"
-  >
-
-    <div class="question-header">
-      <strong>Q14.</strong> (ID: ap_statistics_MCQ_U7S5Q14)
-    </div>
-
-    
-
-    <div class="question-text">
-      A 95% confidence interval for the difference in mean heights (men - women) is found to be (2.5 inches, 4.5 inches). Which of the following is a correct interpretation of this interval?
-    </div>
-
-    <ul class="choices">
-      
-        <li>A. We are 95% confident that the mean height of men is 2.5 inches to 4.5 inches taller than the mean height of women.</li>
-      
-        <li>B. We are 95% confident that the mean height of women is 2.5 inches to 4.5 inches taller than the mean height of men.</li>
-      
-        <li>C. There is a 95% probability that the mean height difference between any man and woman is between 2.5 and 4.5 inches.</li>
-      
-        <li>D. Since the interval does not contain 0, there is a statistically significant difference in mean heights between men and women.</li>
-      
-    </ul>
-
-  </div>
-
-  <div
-    class="question-card"
-    id="ap_statistics_MCQ_U7S5Q15"
-    data-difficulty="medium"
-    data-skill-codes="4.D"
-    data-learning-objectives="UNC-4.AA"
-    data-correct-index="1"
-  >
-
-    <div class="question-header">
-      <strong>Q15.</strong> (ID: ap_statistics_MCQ_U7S5Q15)
-    </div>
-
-    
-
-    <div class="question-text">
-      A pharmaceutical company claims its new pain reliever (Drug A) acts faster than a competitor's drug (Drug B). A 90% confidence interval for the mean difference in relief time (Drug A - Drug B) is (-3 minutes, 1 minute). Based on this interval, what can be concluded about the company's claim?
-    </div>
-
-    <ul class="choices">
-      
-        <li>A. The company's claim is supported because the interval includes negative values, suggesting Drug A might be faster.</li>
-      
-        <li>B. The company's claim is not supported because the interval includes 0 and positive values, indicating that Drug A could be slower or have no difference.</li>
-      
-        <li>C. The company's claim is supported because the interval is fairly narrow.</li>
-      
-        <li>D. The company's claim is inconclusive because the interval crosses zero.</li>
-      
-    </ul>
-
-  </div>
-
-  <div
-    class="question-card"
-    id="ap_statistics_MCQ_U7S5Q16"
-    data-difficulty="easy"
-    data-skill-codes="4.A"
-    data-learning-objectives="UNC-4.AB"
-    data-correct-index="2"
-  >
-
-    <div class="question-header">
-      <strong>Q16.</strong> (ID: ap_statistics_MCQ_U7S5Q16)
-    </div>
-
-    
-
-    <div class="question-text">
-      To reduce the width of a 95% confidence interval for the difference between two population means, which of the following actions would be most effective?
-    </div>
-
-    <ul class="choices">
-      
-        <li>A. Increase the confidence level to 99%.</li>
-      
-        <li>B. Decrease the sample size of one group.</li>
-      
-        <li>C. Increase the sample sizes of both groups.</li>
-      
-        <li>D. Keep sample sizes constant but increase the variability within each group.</li>
-      
-    </ul>
-
-  </div>
-
-  <div
-    class="question-card"
-    id="ap_statistics_MCQ_U7S5Q17"
-    data-difficulty="easy"
-    data-skill-codes="1.F"
-    data-learning-objectives="VAR-7.G"
-    data-correct-index="2"
-  >
-
-    <div class="question-header">
-      <strong>Q17.</strong> (ID: ap_statistics_MCQ_U7S5Q17)
-    </div>
-
-    
-
-    <div class="question-text">
-      A nutritionist wants to determine if a new diet plan causes a different average weight loss compared to a standard diet plan. Two independent groups of participants are randomly assigned to either the new diet or the standard diet. Which of the following represents the appropriate null and alternative hypotheses?
-    </div>
-
-    <ul class="choices">
-      
-        <li>A. H₀: μ_new < μ_standard, Hₐ: μ_new > μ_standard</li>
-      
-        <li>B. H₀: μ_new = μ_standard, Hₐ: μ_new < μ_standard</li>
-      
-        <li>C. H₀: μ_new = μ_standard, Hₐ: μ_new ≠ μ_standard</li>
-      
-        <li>D. H₀: μ_new ≠ μ_standard, Hₐ: μ_new = μ_standard</li>
-      
-    </ul>
-
-  </div>
-
-  <div
-    class="question-card"
-    id="ap_statistics_MCQ_U7S5Q18"
-    data-difficulty="medium"
-    data-skill-codes="4.C"
-    data-learning-objectives="VAR-7.H"
-    data-correct-index="1"
-  >
-
-    <div class="question-header">
-      <strong>Q18.</strong> (ID: ap_statistics_MCQ_U7S5Q18)
-    </div>
-
-    
-
-    <div class="question-text">
-      A researcher is comparing the mean reaction times of two independent groups of subjects (Group A vs. Group B). Group A has 25 subjects, and Group B has 20 subjects. Which condition regarding the distributions of the populations must be met to perform a two-sample t-test?
-    </div>
-
-    <ul class="choices">
-      
-        <li>A. Both population distributions must be exactly normal.</li>
-      
-        <li>B. Both population distributions must be approximately normal, or both sample sizes must be large (typically n ≥ 30).</li>
-      
-        <li>C. At least one of the population distributions must be approximately normal.</li>
-      
-        <li>D. The population standard deviations must be equal.</li>
-      
-    </ul>
-
-  </div>
-
-  <div
-    class="question-card"
-    id="ap_statistics_MCQ_U7S5Q19"
-    data-difficulty="medium"
-    data-skill-codes="4.B"
-    data-learning-objectives="DAT-3.G"
-    data-correct-index="2"
-  >
-
-    <div class="question-header">
-      <strong>Q19.</strong> (ID: ap_statistics_MCQ_U7S5Q19)
-    </div>
-
-    
-
-    <div class="question-text">
-      In a two-sample t-test comparing the mean breaking strength of two types of fishing line, a p-value of 0.008 was obtained. Which of the following is the correct interpretation of this p-value?
-    </div>
-
-    <ul class="choices">
-      
-        <li>A. There is an 0.8% chance that the null hypothesis is true.</li>
-      
-        <li>B. The probability of obtaining sample means as extreme as or more extreme than those observed, assuming there is no difference in the true mean breaking strengths, is 0.008.</li>
-      
-        <li>C. There is an 0.8% chance that the alternative hypothesis is true.</li>
-      
-        <li>D. If the true mean breaking strengths are different, there is an 0.8% chance of observing these results.</li>
-      
-    </ul>
-
-  </div>
-
-  <div
-    class="question-card"
-    id="ap_statistics_MCQ_U7S5Q20"
-    data-difficulty="medium"
-    data-skill-codes="4.C"
-    data-learning-objectives="UNC-4.P"
-    data-correct-index="2"
-  >
-
-    <div class="question-header">
-      <strong>Q20.</strong> (ID: ap_statistics_MCQ_U7S5Q20)
-    </div>
-
-    
-
-    <div class="question-text">
-      A researcher wants to construct a 95% confidence interval for the mean height of adult men in a certain city. A random sample of 20 men is selected, and a histogram of their heights shows a slight skew to the left. Which of the following conditions for constructing a t-interval is of most concern?
-    </div>
-
-    <ul class="choices">
-      
-        <li>A. The sample was not a simple random sample.</li>
-      
-        <li>B. The population standard deviation of heights is unknown.</li>
-      
-        <li>C. The population distribution of heights might not be approximately normal, and the sample size is small.</li>
-      
-        <li>D. The sample size is less than 10% of the population size.</li>
-      
-    </ul>
-
-  </div>
-
-  <div
-    class="question-card"
-    id="ap_statistics_MCQ_U7S5Q21"
-    data-difficulty="medium"
-    data-skill-codes="3.C"
-    data-learning-objectives="VAR-7.A"
-    data-correct-index="3"
-  >
-
-    <div class="question-header">
-      <strong>Q21.</strong> (ID: ap_statistics_MCQ_U7S5Q21)
-    </div>
-
-    
-
-    <div class="question-text">
-      Which of the following is a characteristic of a t-distribution?
-    </div>
-
-    <ul class="choices">
-      
-        <li>A. As the degrees of freedom decrease, the t-distribution approaches the standard normal distribution.</li>
-      
-        <li>B. The t-distribution is always skewed to the right.</li>
-      
-        <li>C. The t-distribution has less variability than the standard normal distribution for the same number of degrees of freedom.</li>
-      
-        <li>D. The t-distribution has heavier tails than the standard normal distribution, especially for small degrees of freedom.</li>
-      
-    </ul>
-
-  </div>
-
-  <div
-    class="question-card"
-    id="ap_statistics_MCQ_U7S5Q22"
-    data-difficulty="medium"
-    data-skill-codes="4.E"
-    data-learning-objectives="DAT-3.H"
-    data-correct-index="1"
-  >
-
-    <div class="question-header">
-      <strong>Q22.</strong> (ID: ap_statistics_MCQ_U7S5Q22)
-    </div>
-
-    
-
-    <div class="question-text">
-      A marketing team launched a new advertising campaign and wants to determine if it increased the average daily sales. They compared the average daily sales for 30 days before the campaign (mean = $1200, sd = $150) and 30 days after the campaign (mean = $1350, sd = $180). A two-sample t-test resulted in a p-value of 0.003. Using a significance level of α = 0.01, what conclusion can be drawn?
-    </div>
-
-    <ul class="choices">
-      
-        <li>A. Since the p-value (0.003) is greater than α (0.01), we fail to reject the null hypothesis and conclude there is not convincing evidence that the advertising campaign increased average daily sales.</li>
-      
-        <li>B. Since the p-value (0.003) is less than α (0.01), we reject the null hypothesis and conclude there is convincing evidence that the advertising campaign increased average daily sales.</li>
-      
-        <li>C. Since the p-value (0.003) is less than α (0.01), we accept the alternative hypothesis.</li>
-      
-        <li>D. The p-value is too small to make a conclusive decision.</li>
-      
-    </ul>
-
-  </div>
-
-  <div
-    class="question-card"
-    id="ap_statistics_MCQ_U7S5Q23"
-    data-difficulty="medium"
-    data-skill-codes="4.B,4.A"
-    data-learning-objectives="UNC-4.S,UNC-4.U"
-    data-correct-index="1"
-  >
-
-    <div class="question-header">
-      <strong>Q23.</strong> (ID: ap_statistics_MCQ_U7S5Q23)
-    </div>
-
-    
-
-    <div class="question-text">
-      A 95% confidence interval for the mean weight loss of participants in a new diet program is calculated to be (5.2 pounds, 8.8 pounds). If the researchers wanted to achieve a narrower confidence interval while keeping the confidence level at 95%, which of the following actions would be most effective?
-    </div>
-
-    <ul class="choices">
-      
-        <li>A. Decrease the sample size.</li>
-      
-        <li>B. Increase the sample size.</li>
-      
-        <li>C. Increase the confidence level to 99%.</li>
-      
-        <li>D. Use a different statistical software to calculate the interval.</li>
-      
-    </ul>
-
-  </div>
-
-  <div
-    class="question-card"
-    id="ap_statistics_MCQ_U7S5Q24"
-    data-difficulty="easy"
-    data-skill-codes="4.C"
-    data-learning-objectives="VAR-7.D"
-    data-correct-index="1"
-  >
-
-    <div class="question-header">
-      <strong>Q24.</strong> (ID: ap_statistics_MCQ_U7S5Q24)
-    </div>
-
-    
-
-    <div class="question-text">
-      A researcher wants to perform a one-sample t-test to determine if the mean caffeine content of a certain brand of energy drink is significantly different from 80 mg. A random sample of 25 drinks is selected, and their caffeine content is measured. Which of the following conditions is LEAST important to check for this test?
-    </div>
-
-    <ul class="choices">
-      
-        <li>A. The sample is a simple random sample.</li>
-      
-        <li>B. The population standard deviation is known.</li>
-      
-        <li>C. The sample size is sufficiently large, or the population distribution of caffeine content is approximately normal.</li>
-      
-        <li>D. The individual observations are independent.</li>
-      
-    </ul>
-
-  </div>
-
-  <div
-    class="question-card"
-    id="ap_statistics_MCQ_U7S5Q25"
-    data-difficulty="hard"
-    data-skill-codes="3.E,4.E"
-    data-learning-objectives="VAR-7.1,DAT-3.H"
-    data-correct-index="0"
-  >
-
-    <div class="question-header">
-      <strong>Q25.</strong> (ID: ap_statistics_MCQ_U7S5Q25)
-    </div>
-
-    
-      <div class="diagram">
-        
-          <table class='data-table'><thead><tr><th>Fertilizer</th><th>Sample Size (n)</th><th>Sample Mean (x̄)</th><th>Sample Standard Deviation (s)</th></tr></thead><tbody><tr><td>A</td><td>30</td><td>75</td><td>8</td></tr><tr><td>B</td><td>35</td><td>70</td><td>9</td></tr></tbody></table>
-        
-      </div>
-    
-
-    <div class="question-text">
-      A study was conducted to compare the effectiveness of two different fertilizers, A and B, on crop yield. Fertilizer A was applied to a random sample of 30 plots, and Fertilizer B was applied to a random sample of 35 plots. The summary statistics for crop yield (in bushels per acre) are provided in the table. Assume all conditions for inference are met. Test the hypothesis that there is no difference in the mean crop yields between the two fertilizers versus the alternative that Fertilizer A leads to a higher mean crop yield.
-    </div>
-
-    <ul class="choices">
-      
-        <li>A. The test statistic is approximately 2.37. Since the p-value is less than 0.05, there is sufficient evidence to conclude that Fertilizer A leads to a higher mean crop yield.</li>
-      
-        <li>B. The test statistic is approximately 2.37. Since the p-value is greater than 0.05, there is not sufficient evidence to conclude that Fertilizer A leads to a higher mean crop yield.</li>
-      
-        <li>C. The test statistic is approximately 1.87. Since the p-value is less than 0.05, there is sufficient evidence to conclude that Fertilizer A leads to a higher mean crop yield.</li>
-      
-        <li>D. The test statistic is approximately 1.87. Since the p-value is greater than 0.05, there is not sufficient evidence to conclude that Fertilizer A leads to a higher mean crop yield.</li>
-      
-    </ul>
-
-  </div>
-
-
-</div>
-
-<div class="key-section">
-  <h2>Answer Key</h2>
-
-  <div class="key-grid">
-    
-      <div>
-        <strong>1.</strong>
-        C
-      </div>
-    
-      <div>
-        <strong>2.</strong>
-        A
-      </div>
-    
-      <div>
-        <strong>3.</strong>
-        B
-      </div>
-    
-      <div>
-        <strong>4.</strong>
-        D
-      </div>
-    
-      <div>
-        <strong>5.</strong>
-        A
-      </div>
-    
-      <div>
-        <strong>6.</strong>
-        B
-      </div>
-    
-      <div>
-        <strong>7.</strong>
-        C
-      </div>
-    
-      <div>
-        <strong>8.</strong>
-        A
-      </div>
-    
-      <div>
-        <strong>9.</strong>
-        D
-      </div>
-    
-      <div>
-        <strong>10.</strong>
-        A
-      </div>
-    
-      <div>
-        <strong>11.</strong>
-        B
-      </div>
-    
-      <div>
-        <strong>12.</strong>
-        C
-      </div>
-    
-      <div>
-        <strong>13.</strong>
-        C
-      </div>
-    
-      <div>
-        <strong>14.</strong>
-        D
-      </div>
-    
-      <div>
-        <strong>15.</strong>
-        B
-      </div>
-    
-      <div>
-        <strong>16.</strong>
-        C
-      </div>
-    
-      <div>
-        <strong>17.</strong>
-        C
-      </div>
-    
-      <div>
-        <strong>18.</strong>
-        B
-      </div>
-    
-      <div>
-        <strong>19.</strong>
-        C
-      </div>
-    
-      <div>
-        <strong>20.</strong>
-        C
-      </div>
-    
-      <div>
-        <strong>21.</strong>
-        D
-      </div>
-    
-      <div>
-        <strong>22.</strong>
-        B
-      </div>
-    
-      <div>
-        <strong>23.</strong>
-        B
-      </div>
-    
-      <div>
-        <strong>24.</strong>
-        B
-      </div>
-    
-      <div>
-        <strong>25.</strong>
-        A
-      </div>
-    
-  </div>
-</div>
-
-</body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
 </html>

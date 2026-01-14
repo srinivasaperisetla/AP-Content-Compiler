@@ -4,6 +4,20 @@
     <meta charset="UTF-8" />
     <title>{{ course }} FRQs — {{ unit }} (Set {{ set_number }})</title>
 
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
     <style>
       body {
         font-family: "Times New Roman", serif;
@@ -152,5 +166,17 @@
     {% if not loop.last %}
     <hr />
     {% endif %} {% endfor %}
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
   </body>
 </html>

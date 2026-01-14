@@ -51,6 +51,27 @@ stim_type:
 - none | svg | table
 
 ====================
+MATHEMATICAL NOTATION
+====================
+
+- ALL mathematical expressions MUST use LaTeX format
+- Inline math: $expression$ (e.g., $\alpha$, $H_0: p = 0.75$, $\hat{p}$)
+- Display math: $$expression$$ (for larger equations on separate line)
+- Common symbols:
+  * Greek: $\alpha$, $\beta$, $\mu$, $\sigma$, $\pi$
+  * Operators: $\ge$, $\le$, $\ne$, $\pm$, $\times$, $\div$
+  * Stats: $\bar{x}$, $\hat{p}$, $s^2$, $\sqrt{n}$, $\frac{a}{b}$
+  * Subscripts/superscripts: $x_i$, $n^2$
+- Examples:
+  * GOOD: "Test $H_0: p = 0.75$ versus $H_a: p < 0.75$"
+  * GOOD: "If $n\hat{p} \ge 10$ and $n(1-\hat{p}) \ge 10$, then..."
+  * GOOD: "The test statistic is $\frac{\bar{x} - \mu}{s/\sqrt{n}}$"
+  * BAD: "Test H_0: p = 0.75 versus H_a: p < 0.75"
+  * BAD: "(x - mu) / (s / sqrt(n))"
+- Apply LaTeX formatting in context, parts, and scoring_guidelines
+- Tables should use LaTeX for any math in cells
+
+====================
 TABLE FORMAT (STRICT)
 ====================
 

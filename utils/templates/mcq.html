@@ -1,183 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ course }} — {{ unit }} MCQ Set</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ course }} — {{ unit }} MCQ Set</title>
 
-  <style>
-    .data-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1rem 0;
-      font-size: 0.95rem;
-    }
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
 
-    .data-table th,
-    .data-table td {
-      border: 1px solid #ccc;
-      padding: 0.5rem 0.75rem;
-      text-align: center;
-    }
-
-    .data-table th {
-      background-color: #f2f2f2;
-      font-weight: 600;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem;
-      color: #333;
-    }
-
-    h1 {
-      border-bottom: 2px solid #333;
-      padding-bottom: 0.5rem;
-    }
-
-    .question-card {
-      border: 1px solid #ddd;
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-      border-radius: 8px;
-      background-color: #fafafa;
-      break-inside: avoid;
-    }
-
-    .question-header {
-      margin-bottom: 0.75rem;
-      font-size: 0.95rem;
-      color: #666;
-    }
-
-    .question-text {
-      font-weight: 600;
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-    }
-
-    .diagram {
-      margin: 1rem 0;
-      text-align: center;
-      border: 1px solid #eee;
-      background: white;
-      padding: 10px;
-      border-radius: 4px;
-      overflow: hidden;
-    }
-
-    .diagram svg {
-      max-width: 100%;
-      height: auto;
-      max-height: 400px;
-      display: inline-block;
-    }
-
-    .choices {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .choices li {
-      margin-bottom: 0.5rem;
-    }
-
-    .key-section {
-      margin-top: 4rem;
-      border-top: 4px solid #333;
-      padding-top: 2rem;
-    }
-
-    .key-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-      gap: 1rem;
-    }
-
-    @media print {
-      .question-card {
-        border: none;
-        padding: 0;
-        margin-bottom: 3rem;
+    <style>
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-size: 0.95rem;
       }
-      .diagram {
+
+      .data-table th,
+      .data-table td {
         border: 1px solid #ccc;
+        padding: 0.5rem 0.75rem;
+        text-align: center;
       }
-    }
-  </style>
-</head>
 
-<body>
+      .data-table th {
+        background-color: #f2f2f2;
+        font-weight: 600;
+      }
 
-<h1>{{ course }} — {{ unit }}</h1>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+        color: #333;
+      }
 
-<hr />
+      h1 {
+        border-bottom: 2px solid #333;
+        padding-bottom: 0.5rem;
+      }
 
-<div class="mcq-container">
+      .question-card {
+        border: 1px solid #ddd;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        border-radius: 8px;
+        background-color: #fafafa;
+        break-inside: avoid;
+      }
 
-{% for q in questions %}
-  <div
-    class="question-card"
-    id="{{ q.id }}"
-    data-difficulty="{{ q.difficulty }}"
-    data-skill-codes="{{ q.skill_codes | join(',') }}"
-    data-learning-objectives="{{ q.aligned_lo_ids | join(',') }}"
-    data-correct-index="{{ q.correct_choice_index }}"
-  >
+      .question-header {
+        margin-bottom: 0.75rem;
+        font-size: 0.95rem;
+        color: #666;
+      }
 
-    <div class="question-header">
-      <strong>Q{{ loop.index }}.</strong> (ID: {{ q.id }})
-    </div>
+      .question-text {
+        font-weight: 600;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+      }
 
-    {% if q.stimulus %}
-      <div class="diagram">
-        {% if q.stimulus.type == "svg" %}
-          {{ q.stimulus.content | safe }}
+      .diagram {
+        margin: 1rem 0;
+        text-align: center;
+        border: 1px solid #eee;
+        background: white;
+        padding: 10px;
+        border-radius: 4px;
+        overflow: hidden;
+      }
 
-        {% elif q.stimulus.type == "image" %}
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+        max-height: 400px;
+        display: inline-block;
+      }
+
+      .choices {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .choices li {
+        margin-bottom: 0.5rem;
+      }
+
+      .key-section {
+        margin-top: 4rem;
+        border-top: 4px solid #333;
+        padding-top: 2rem;
+      }
+
+      .key-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 1rem;
+      }
+
+      @media print {
+        .question-card {
+          border: none;
+          padding: 0;
+          margin-bottom: 3rem;
+        }
+        .diagram {
+          border: 1px solid #ccc;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>{{ course }} — {{ unit }}</h1>
+
+    <hr />
+
+    <div class="mcq-container">
+      {% for q in questions %}
+      <div
+        class="question-card"
+        id="{{ q.id }}"
+        data-difficulty="{{ q.difficulty }}"
+        data-skill-codes="{{ q.skill_codes | join(',') }}"
+        data-learning-objectives="{{ q.aligned_lo_ids | join(',') }}"
+        data-correct-index="{{ q.correct_choice_index }}"
+      >
+        <div class="question-header">
+          <strong>Q{{ loop.index }}.</strong> (ID: {{ q.id }})
+        </div>
+
+        {% if q.stimulus %}
+        <div class="diagram">
+          {% if q.stimulus.type == "svg" %} {{ q.stimulus.content | safe }} {%
+          elif q.stimulus.type == "image" %}
           <img
             src="{{ q.stimulus.content }}"
             alt="{{ q.stimulus.alt or 'Related diagram' }}"
-            style="max-width: 100%; height: auto;"
+            style="max-width: 100%; height: auto"
           />
 
-        {% elif q.stimulus.type == "table" %}
-          {{ q.stimulus.content | safe }}
+          {% elif q.stimulus.type == "table" %} {{ q.stimulus.content | safe }}
+          {% endif %}
+        </div>
         {% endif %}
-      </div>
-    {% endif %}
 
-    <div class="question-text">
-      {{ q.question }}
+        <div class="question-text">{{ q.question }}</div>
+
+        <ul class="choices">
+          {% for choice in q.choices %}
+          <li>{{ "ABCD"[loop.index0] }}. {{ choice }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
     </div>
 
-    <ul class="choices">
-      {% for choice in q.choices %}
-        <li>{{ "ABCD"[loop.index0] }}. {{ choice }}</li>
-      {% endfor %}
-    </ul>
+    <div class="key-section">
+      <h2>Answer Key</h2>
 
-  </div>
-{% endfor %}
-
-</div>
-
-<div class="key-section">
-  <h2>Answer Key</h2>
-
-  <div class="key-grid">
-    {% for q in questions %}
-      <div>
-        <strong>{{ loop.index }}.</strong>
-        {{ "ABCD"[q.correct_choice_index] }}
+      <div class="key-grid">
+        {% for q in questions %}
+        <div>
+          <strong>{{ loop.index }}.</strong>
+          {{ "ABCD"[q.correct_choice_index] }}
+        </div>
+        {% endfor %}
       </div>
-    {% endfor %}
-  </div>
-</div>
+    </div>
 
-</body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
 </html>

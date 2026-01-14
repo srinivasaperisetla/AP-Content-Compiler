@@ -14,7 +14,7 @@ CRITICAL REMINDERS:
 - Follow TSV format EXACTLY
 
 VALID TSV EXAMPLE (for reference):
-medium	1.A,2.B,4.A	VAR-1.A,VAR-2.C	A study examined the relationship between study time (hours) and test scores.	a. Calculate the mean study time|b. Describe the relationship shown in the data|c. Justify whether the relationship is strong	Part a (1pt): Correct calculation with work shown|Part b (2pts): Accurate description of direction and form|Part c (1pt): Valid justification using correlation	none	
+medium	1.A,2.B,4.A	VAR-1.A,VAR-2.C	A study examined $n=100$ students. The sample mean $\bar{x} = 82$ and standard deviation $s = 6$.	a. Calculate the standard error $SE = \frac{s}{\sqrt{n}}$|b. Construct a 95% confidence interval for $\mu$|c. Interpret the interval in context	Part a (1pt): Correct calculation $SE = 6/\sqrt{100} = 0.6$|Part b (2pts): Interval $82 \pm 1.96(0.6)$|Part c (1pt): Valid interpretation with context	none	
 
 Note: Above has 8 columns separated by TABS. Parts and scoring_guidelines use pipe (|) separators.
 
@@ -63,6 +63,27 @@ scoring_guidelines:
 
 stim_type:
 - none | svg | table
+
+====================
+MATHEMATICAL NOTATION
+====================
+
+- ALL mathematical expressions MUST use LaTeX format
+- Inline math: $expression$ (e.g., $\alpha$, $H_0: p = 0.75$, $\hat{p}$)
+- Display math: $$expression$$ (for larger equations on separate line)
+- Common symbols:
+  * Greek: $\alpha$, $\beta$, $\mu$, $\sigma$, $\pi$
+  * Operators: $\ge$, $\le$, $\ne$, $\pm$, $\times$, $\div$
+  * Stats: $\bar{x}$, $\hat{p}$, $s^2$, $\sqrt{n}$, $\frac{a}{b}$
+  * Subscripts/superscripts: $x_i$, $n^2$
+- Examples:
+  * GOOD: "Test $H_0: p = 0.75$ versus $H_a: p < 0.75$"
+  * GOOD: "If $n\hat{p} \ge 10$ and $n(1-\hat{p}) \ge 10$, then..."
+  * GOOD: "The test statistic is $\frac{\bar{x} - \mu}{s/\sqrt{n}}$"
+  * BAD: "Test H_0: p = 0.75 versus H_a: p < 0.75"
+  * BAD: "(x - mu) / (s / sqrt(n))"
+- Apply LaTeX formatting in context, parts, and scoring_guidelines
+- Tables should use LaTeX for any math in cells
 
 ====================
 TABLE FORMAT (STRICT)

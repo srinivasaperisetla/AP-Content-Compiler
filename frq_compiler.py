@@ -736,7 +736,7 @@ async def main_async():
 		
 		for unit_index, unit in enumerate(course_spec.get("units", [])):
 
-			if unit_index != 5:
+			if unit_index != 6:
 				continue
 
 			# Initialize coverage tracker per unit

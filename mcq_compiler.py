@@ -675,7 +675,7 @@ async def main_async():
 		big_idea_lookup = build_big_idea_lookup(course_spec)
 		
 		for unit_index, unit in enumerate(course_spec.get("units", [])):
-			if unit_index != 5:
+			if unit_index != 6:
 				continue
 			
 			# Initialize coverage tracker per unit
