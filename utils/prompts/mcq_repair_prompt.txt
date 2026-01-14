@@ -1,7 +1,21 @@
 Role: AP {{ course_name }} item writer.
 
-TASK
-Create exactly {{ num_questions }} AP-style multiple-choice questions using the UNIT CONTEXT provided.
+REPAIR TASK
+The previous generation produced validation errors. Generate exactly {{ num_questions }} REPLACEMENT questions.
+
+COMMON VALIDATION ERRORS TO AVOID:
+{{ error_summary }}
+
+CRITICAL REMINDERS:
+- Generate COMPLETE questions (not partial fixes)
+- Use ONLY these allowed skills: {{ allowed_skills_preview }}
+- Use ONLY these allowed LOs: {{ allowed_los_preview }}
+- Follow TSV format EXACTLY (no deviations)
+
+VALID TSV EXAMPLE (for reference):
+easy	1.A,2.B	VAR-1.A,VAR-1.B	0	A researcher recorded heights (in cm) of 50 students. Which measure best describes the center?	Sample mean	Sample median	Range	Standard deviation	none	
+
+Note: Above has 11 columns separated by TABS (not spaces). Column order: diff, skill_codes, lo_ids, correct_idx, stem, A, B, C, D, stim_type, stim_payload
 
 OUTPUT (STRICT TSV)
 - EXACTLY {{ num_questions }} lines
@@ -17,14 +31,13 @@ diff:
 
 skill_codes:
 - Comma-separated
-- ALL codes MUST be from ALLOWED_SKILLS
+- ALL codes MUST be from ALLOWED_SKILLS in unit context
 - At least one required
 
 lo_ids:
 - Comma-separated
-- ALL IDs MUST be from ALLOWED_LOS
+- ALL IDs MUST be from ALLOWED_LOS in unit context
 - At least one required
-- PRIORITIZE these under-covered LOs: {{ priority_los }}
 
 correct_idx:
 - 0 | 1 | 2 | 3  (A=0, B=1, C=2, D=3)

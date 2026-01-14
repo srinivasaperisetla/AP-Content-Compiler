@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 9)</title>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 9)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S9Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.A,UNC-4.B,UNC-4.D,UNC-4.F"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A local pizza shop claims that 70% of its customers prefer their new thin-crust pizza over the traditional thick-crust. To investigate this claim, a random sample of 120 customers was selected, and 78 stated a preference for the thin-crust pizza.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the true proportion of customers who prefer the thin-crust pizza.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval calculated in part (b) in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a one-sample z-interval for a proportion (1pt); Verifies random sampling, 10% condition (120 < 10% of all customers), and Normal condition (np̂=78 >= 10, n(1-p̂)=42 >= 10) (1pt).</li>
+          
+          <li>Part b (2pts): Correctly calculates the sample proportion p̂ (0.65) and standard error (1pt); Calculates the correct confidence interval (0.567, 0.733) (1pt).</li>
+          
+          <li>Part c (1pt): Provides a correct interpretation of the confidence interval in context, stating that we are 95% confident that the true proportion of customers preferring thin-crust pizza is between 0.567 and 0.733 (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S9Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.D,VAR-6.E,VAR-6.F,VAR-6.G,DAT-3.A,DAT-3.B"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A national health organization claims that the proportion of adults who regularly exercise is greater than 0.45. A researcher wants to test this claim and collects data from a random sample of 250 adults, finding that 120 of them exercise regularly.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for this test and identify the appropriate inference method.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for conducting this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the p-value and state a conclusion in context at the α = 0.05 significance level.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States H0: p = 0.45 and Ha: p > 0.45 (1/2 pt); Identifies a one-sample z-test for a population proportion (1/2 pt).</li>
+          
+          <li>Part b (1pt): Verifies random sampling, 10% condition (250 < 10% of all adults), and Normal condition (np0=250*0.45=112.5 >= 10, n(1-p0)=250*0.55=137.5 >= 10) (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the sample proportion p̂ (0.48) and the correct test statistic z = 0.95 (1pt); Calculates the correct p-value (0.171) (1pt).</li>
+          
+          <li>Part d (2pts): Interprets the p-value correctly (the probability of observing a sample proportion of 0.48 or greater, assuming the true proportion is 0.45, is 0.171) (1pt); States a correct conclusion comparing p-value to α and fails to reject H0, concluding there is not sufficient evidence to support the claim that the proportion is greater than 0.45 (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S9Q3"
+      data-difficulty="easy"
+      data-skill-codes="1.B,4.B,4.A"
+      data-learning-objectives="UNC-5.A,UNC-5.C,UNC-5.D"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A pharmaceutical company is testing a new drug designed to reduce cholesterol. The company wants to test if the proportion of patients who experience a significant reduction in cholesterol is greater than 0.60. They plan to conduct a significance test at the α = 0.05 level.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe a Type I error and a Type II error in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain a potential consequence of making a Type I error in this situation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If the company wanted to reduce the probability of a Type I error, how would that affect the probability of a Type II error, assuming the sample size remains the same?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly describes Type I error (rejecting H0 when H0 is true - concluding the drug is effective when it is not) in context (1pt); Correctly describes Type II error (failing to reject H0 when Ha is true - concluding the drug is not effective when it actually is) in context (1pt).</li>
+          
+          <li>Part b (1pt): Explains a plausible consequence, such as the company marketing an ineffective drug, wasting resources, or patients relying on an ineffective treatment (1pt).</li>
+          
+          <li>Part c (1pt): States that reducing the probability of a Type I error (e.g., by lowering α) would increase the probability of a Type II error (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S9Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.I,UNC-4.J,UNC-4.K,UNC-4.M,UNC-4.N"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A health study investigated whether there is a difference in the proportion of people who prefer morning exercise versus evening exercise between two age groups: young adults (18-30 years) and middle-aged adults (31-50 years). A random sample of 150 young adults found 78 preferred morning exercise. A separate random sample of 120 middle-aged adults found 54 preferred morning exercise.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 90% confidence interval for the difference in the proportion of young adults and middle-aged adults who prefer morning exercise.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval in context and use it to justify whether there is a significant difference in preference for morning exercise between the two age groups.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a two-sample z-interval for a difference in proportions (1pt); Verifies random sampling for both groups, 10% condition for both samples, and Normal condition for both samples (n1p̂1=78>=10, n1(1-p̂1)=72>=10, n2p̂2=54>=10, n2(1-p̂2)=66>=10) (1pt).</li>
+          
+          <li>Part b (2pts): Correctly calculates sample proportions (p̂1=0.52, p̂2=0.45) and the standard error for the difference (1pt); Calculates the correct 90% confidence interval (-0.030, 0.170) (1pt).</li>
+          
+          <li>Part c (2pts): Interprets the confidence interval in context, stating we are 90% confident that the true difference in proportions is between -0.030 and 0.170 (1pt); Justifies that since the interval contains 0, there is no significant evidence of a difference in preference between the two groups at the 90% confidence level (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S9Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.H,VAR-6.I,VAR-6.J,VAR-6.K,DAT-3.C,DAT-3.D"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A tutoring center claims that its new online program is more effective than its traditional in-person program. They believe the proportion of students passing a standardized test after using the online program is higher than for those using the in-person program. A random sample of 100 students using the online program had 85 pass the test. A separate random sample of 120 students using the in-person program had 90 pass the test.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses to test the center's claim and identify the appropriate inference method.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for conducting this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the p-value and state a conclusion in context at the α = 0.01 significance level.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States H0: p_online = p_in-person (or p_online - p_in-person = 0) and Ha: p_online > p_in-person (or p_online - p_in-person > 0) (1/2 pt); Identifies a two-sample z-test for a difference in population proportions (1/2 pt).</li>
+          
+          <li>Part b (1pt): Verifies random sampling for both groups, 10% condition for both samples, and Normal condition using pooled proportion (p̂_pooled = (85+90)/(100+120) = 175/220 ≈ 0.795, n1p̂_pooled=79.5>=10, n1(1-p̂_pooled)=20.5>=10, n2p̂_pooled=95.4>=10, n2(1-p̂_pooled)=24.6>=10) (1pt).</li>
+          
+          <li>Part c (2pts): Calculates sample proportions (p̂_online=0.85, p̂_in-person=0.75) and the pooled proportion; Calculates the correct test statistic z = 1.95 (1pt); Calculates the correct p-value (0.0256) (1pt).</li>
+          
+          <li>Part d (2pts): Interprets the p-value correctly (the probability of observing a difference in sample proportions as extreme or more extreme than 0.10, assuming no true difference, is 0.0256) (1pt); States a correct conclusion comparing p-value to α and fails to reject H0 (p-value 0.0256 > α 0.01), concluding there is not sufficient evidence to support the claim that the online program is more effective (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+  </body>
+</html>

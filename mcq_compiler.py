@@ -1,41 +1,65 @@
 '''
 Problems right now:
-- Retry logic for only the questions that are invalid and that is missed so that the LLM can fix them easily instead of regenerating the entire set. 
-- Trim Unit Context as well as the prompt to save on tokens.
-
+- Find a way to tag each question with easy hard medium etc.
+- Make sure prompts work across all AP course for stem atleast for stem. 
+- Comment the code properly and neatly
+- Find a way to make sure that questions are not repeating across sets and within sets dedupe logic. 
+- Add new repair prompt to feed context into invalid questions
 
 - Optional Split generation into: planning pass (topics → question plan) then generation pass (plan → TSV)
 - Optional Parallelize of units
 '''
 
-
 import os
-import json
 import re
 from pathlib import Path
 from typing import Dict, List, Tuple, Any, Optional
-from datetime import datetime
+
+import asyncio
 
 from dotenv import load_dotenv
 from google import genai
 from jinja2 import Template
 import certifi
 
+from utility_functions import (
+	log,
+	log_block,
+	log_context,
+	init_client,
+	load_json,
+	load_text,
+	ensure_dir,
+	safe_join_lines,
+	normalize_whitespace,
+	build_skill_lookup,
+	build_big_idea_lookup,
+	is_valid_svg,
+	is_strict_pipe_table,
+	pipe_table_to_html,
+	_looks_like_pipe_table,
+	summarize_invalid_reports,
+	compress_lo_description,
+	initialize_lo_coverage,
+	get_priority_los,
+)
+
+#Environment and Variables
 os.environ["SSL_CERT_FILE"] = certifi.where()
 
-MODEL = "gemini-2.5-pro"
+MODEL = "gemini-2.5-flash"
 
 NUM_SETS_PER_UNIT = 20
 QUESTIONS_PER_SET = 25
-
 MAX_RETRIES_PER_SET = 4
 
-AP_COURSES = [
-	"ap_statistics",
-]
+AP_COURSES = {
+	"AP Statistics": "ap_statistics",
+}
 
 CONTENT_DIR = Path("utils/content")
 PROMPT_PATH = Path("utils/prompts/mcq_prompt.txt")
+REPAIR_PROMPT_PATH = Path("utils/prompts/mcq_repair_prompt.txt")
 HTML_TEMPLATE_PATH = Path("utils/templates/mcq.html")
 OUTPUT_DIR = Path("output")
 
@@ -43,150 +67,7 @@ DEBUG = True
 MAX_PROMPT_CHARS = 6000
 
 
-# -----------------------
-# Debug logging
-# -----------------------
-def _ts() -> str:
-	return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
-
-def log(msg: str) -> None:
-	print(f"[{_ts()}] {msg}")
-
-
-def log_block(title: str, text: str, max_chars: int) -> None:
-	if not DEBUG:
-		return
-	log(f"{title} (chars={len(text)} showing up to {max_chars})")
-	print(text[:max_chars])
-	if len(text) > max_chars:
-		print("... [TRUNCATED] ...")
-
-
-def log_context(course: str, unit_index: int, unit_name: str, set_index: int) -> str:
-	return f"{course} | Unit {unit_index + 1}: {unit_name} | Set {set_index + 1}/{NUM_SETS_PER_UNIT}"
-
-
-# -----------------------
-# Init Gemini client
-# -----------------------
-def init_client() -> genai.Client:
-	load_dotenv()
-	api_key = os.getenv("GEMINI_API_KEY")
-	assert api_key, "Missing GEMINI_API_KEY"
-	google_client = genai.Client(api_key=api_key)
-	print("Gemini client initialized")
-	return google_client
-
-# -----------------------
-# Utilities
-# -----------------------
-def load_json(path: Path) -> dict:
-	with path.open("r", encoding="utf-8") as f:
-		return json.load(f)
-
-
-def load_text(path: Path) -> str:
-	with path.open("r", encoding="utf-8") as f:
-		return f.read()
-
-
-def ensure_dir(path: Path) -> None:
-	path.mkdir(parents=True, exist_ok=True)
-
-
-def safe_join_lines(lines: List[str]) -> str:
-	return "\n".join([ln.rstrip() for ln in lines if ln and ln.strip()])
-
-
-def normalize_whitespace(s: str) -> str:
-	return re.sub(r"[ \t]+", " ", (s or "").strip())
-
-
-def pipe_table_to_html(table_text: str) -> str:
-	if not table_text:
-		return ""
-
-	# Normalize escaped newlines
-	text = table_text.replace("\\n", "\n")
-	lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
-
-	# Strict structural validation
-	if not is_strict_pipe_table(lines):
-		return ""
-
-	# Parse header and data
-	headers = [h.strip() for h in lines[0].strip("|").split("|")]
-	data_lines = lines[2:]  # skip header + separator
-
-	if not headers or not data_lines:
-		return ""
-
-	# Build HTML
-	html = "<table class='data-table'><thead><tr>"
-	for h in headers:
-		html += f"<th>{h}</th>"
-	html += "</tr></thead><tbody>"
-
-	for ln in data_lines:
-		cells = [c.strip() for c in ln.strip("|").split("|")]
-		if len(cells) != len(headers):
-			return ""  # hard fail, triggers repair
-		html += "<tr>"
-		for cell in cells:
-			html += f"<td>{cell}</td>"
-		html += "</tr>"
-
-	html += "</tbody></table>"
-	return html
-
-
-
-
-# -----------------------
-# Validation
-# -----------------------
-def is_valid_svg(svg: str) -> bool:
-	if not svg:
-		return False
-
-	s = svg.strip()
-
-	if not (s.startswith("<svg") and s.endswith("</svg>")):
-		return False
-
-	if "<script" in s.lower():
-		return False
-
-	if s.count("<text") > 8:
-		return False
-
-	if 'font-size="' in s:
-		sizes = re.findall(r'font-size="(\d+)"', s)
-		if any(int(sz) < 12 for sz in sizes):
-			return False
-
-	return True
-
-
-def is_strict_pipe_table(lines: List[str]) -> bool:
-	if len(lines) < 3:
-		return False
-
-	# all rows must start/end with |
-	if not all(ln.startswith("|") and ln.endswith("|") for ln in lines):
-		return False
-
-	# separator row must be dashes
-	sep = lines[1].strip("|").split("|")
-	if not all(set(cell.strip()) <= {"-"} for cell in sep):
-		return False
-
-	# consistent column count
-	col_count = len(lines[0].split("|"))
-	return all(len(ln.split("|")) == col_count for ln in lines)
-
-
+# Validation Functions
 def validate_rows_individually(
 	rows: List[List[str]],
 	constraints: Dict[str, Any],
@@ -208,9 +89,11 @@ def validate_rows_individually(
 				"reason": "row_invalid",
 				"detail": error
 			})
+			if DEBUG:
+				log(f"[{context_label}] Row {row_i} rejected: {error} | cols={len(cols)}")
 			continue
 
-		qid, diff, skills, los, idx, qtext, A, B, C, D, stim_type, stim_payload = [
+		diff, skills, los, idx, qtext, A, B, C, D, stim_type, stim_payload = cols = [
 			c.strip() for c in cols
 		]
 
@@ -221,6 +104,9 @@ def validate_rows_individually(
 				"reason": "skill_not_allowed",
 				"detail": skills
 			})
+			if DEBUG:
+				invalid_skills = [s for s in skill_codes if s not in constraints["allowed_skill_codes"]]
+				log(f"[{context_label}] Row {row_i} rejected: Invalid skills {invalid_skills}")
 			continue
 
 		lo_ids = [s for s in los.split(",") if s]
@@ -230,6 +116,9 @@ def validate_rows_individually(
 				"reason": "lo_not_allowed",
 				"detail": los
 			})
+			if DEBUG:
+				invalid_los = [lo for lo in lo_ids if lo not in constraints["allowed_lo_ids"]]
+				log(f"[{context_label}] Row {row_i} rejected: Invalid LOs {invalid_los}")
 			continue
 
 		if stim_type == "svg" and not is_valid_svg(stim_payload):
@@ -238,6 +127,8 @@ def validate_rows_individually(
 				"reason": "svg_invalid",
 				"detail": ""
 			})
+			if DEBUG:
+				log(f"[{context_label}] Row {row_i} rejected: Invalid SVG")
 			continue
 
 		if stim_type == "table":
@@ -247,6 +138,8 @@ def validate_rows_individually(
 					"reason": "table_invalid",
 					"detail": ""
 				})
+				if DEBUG:
+					log(f"[{context_label}] Row {row_i} rejected: Invalid table format")
 				continue
 
 		stimulus = None
@@ -262,7 +155,7 @@ def validate_rows_individually(
 			stimulus = {"type": "svg", "content": stim_payload}
 
 		valid_questions.append({
-			"id": qid,
+			"id": None,
 			"difficulty": diff,
 			"skill_codes": skill_codes,
 			"aligned_lo_ids": lo_ids,
@@ -275,26 +168,11 @@ def validate_rows_individually(
 
 	return valid_questions, invalid_reports
 
-def summarize_errors(invalid_reports: List[dict]) -> str:
-	counts = {}
-	for r in invalid_reports:
-		counts[r["reason"]] = counts.get(r["reason"], 0) + 1
-
-	lines = []
-	for k, v in sorted(counts.items()):
-		lines.append(f"- {k}: {v}")
-
-	return "\n".join(lines)
-
-
 def validate_tsv_row(cols: List[str]) -> Optional[str]:
-	if len(cols) != 12:
+	if len(cols) != 11:
 		return "Wrong column count"
 
-	qid, diff, skills, los, idx, qtext, A, B, C, D, stim_type, stim_payload = cols
-
-	if not qid.strip():
-		return "Empty question_id"
+	diff, skills, los, idx, qtext, A, B, C, D, stim_type, stim_payload = cols
 
 	if diff not in {"easy", "medium", "hard"}:
 		return "Invalid difficulty"
@@ -326,51 +204,21 @@ def validate_tsv_row(cols: List[str]) -> Optional[str]:
 
 	if stim_type != "none" and not stim_payload.strip():
 		return "Missing stimulus_payload"
+	
+	if any(_looks_like_pipe_table(x) for x in [A, B, C, D]):
+		return "Answer choices must not contain tables; use stim_type=table + stim_payload"
 
 	return None
 
 
-
-# -----------------------
-# Lookups
-# -----------------------
-def build_skill_lookup(course_spec: dict) -> Dict[str, Dict[str, str]]:
-	out = {}
-	for skill_cat in course_spec.get("skills", []):
-		cat_name = skill_cat.get("skill_name", "")
-		for sub in skill_cat.get("subskills", []):
-			code = str(sub.get("subskill_name", "")).strip()
-			if not code:
-				continue
-			out[code] = {
-				"category": cat_name,
-				"description": sub.get("subskill_description", "")
-			}
-	return out
-
-
-def build_big_idea_lookup(course_spec: dict) -> Dict[str, Dict[str, str]]:
-	out = {}
-	for bi in course_spec.get("big_ideas", []):
-		bi_id = str(bi.get("id", "")).strip()
-		if not bi_id:
-			continue
-		out[bi_id] = {
-			"name": bi.get("name", ""),
-			"description": bi.get("description", "")
-		}
-	return out
-
-
-# -----------------------
 # Unit context builder
-# -----------------------
 def build_unit_context(
 	course_spec: dict,
 	unit: dict,
 	unit_index: int,
 	skill_lookup: Dict[str, Dict[str, str]],
 	big_idea_lookup: Dict[str, Dict[str, str]],
+	question_type: str = "mcq",  # NEW: "mcq" or "frq"
 	max_ek_per_lo: int = 0,              # keep OFF for compression
 	include_skill_descriptions: bool = True,
 	include_course_big_ideas: bool = True,
@@ -446,7 +294,10 @@ def build_unit_context(
 				continue
 
 			allowed_lo_ids.add(lo_id)
-			lo_desc = trunc(lo.get("description", ""), max_lo_desc_chars)
+			# Apply LO compression before truncation
+			lo_desc_raw = lo.get("description", "")
+			lo_desc_compressed = compress_lo_description(lo_desc_raw)
+			lo_desc = trunc(lo_desc_compressed, max_lo_desc_chars)
 			lo_lines.append(f"{lo_id}: {lo_desc}")
 
 			# Optional EKs (off by default)
@@ -504,13 +355,60 @@ def build_unit_context(
 				topic_big_desc_lines.append(f"{bi_id}")
 
 	# -----------------------
+	# Exam Section Context (NEW)
+	# -----------------------
+	exam_context_lines = []
+	section_key = "I" if question_type == "mcq" else "II"
+	
+	for section in course_spec.get("exam_sections", []):
+		if section.get("section") == section_key:
+			# Only include descriptions array
+			descriptions = section.get("descriptions", [])
+			if descriptions:
+				exam_context_lines.append("EXAM_CONTEXT:")
+				for desc in descriptions:
+					# Keep full descriptions, no truncation
+					exam_context_lines.append(f"- {desc}")
+			
+			break  # Only one section
+	
+	# -----------------------
+	# Task Verbs (FRQ only) (NEW)
+	# -----------------------
+	task_verb_lines = []
+	if question_type == "frq":
+		# Prioritized verbs for AP Statistics
+		priority_verbs = [
+			"Calculate", "Explain", "Justify", "Describe",
+			"Interpret", "Compare", "Identify", "Construct",
+			"Determine", "Verify"
+		]
+		
+		task_verb_lines.append("TASK_VERBS:")
+		for verb_obj in course_spec.get("task_verbs", []):
+			verb = verb_obj.get("verb", "")
+			# Check if this is a priority verb
+			if any(pv in verb for pv in priority_verbs):
+				desc = verb_obj.get("description", "")
+				# Compress description (max 100 chars)
+				desc_short = desc[:100] + ("..." if len(desc) > 100 else "")
+				task_verb_lines.append(f"  {verb}: {desc_short}")
+	
+	# -----------------------
 	# Build final unit context (with section line breaks)
 	# -----------------------
 	unit_context_parts: List[str] = [
 		f"{course_spec.get('name', '').strip()} | Unit {unit_index + 1}: {unit.get('name', '').strip()}",
 		"",
-		"ALLOWED_SKILLS: " + ",".join(sorted(allowed_skill_codes)),
 	]
+	
+	# Add exam context early (NEW)
+	if exam_context_lines:
+		unit_context_parts.extend(exam_context_lines)
+		unit_context_parts.append("")
+	
+	# Continue with existing
+	unit_context_parts.append("ALLOWED_SKILLS: " + ",".join(sorted(allowed_skill_codes)))
 	if skill_desc_lines:
 		unit_context_parts.append("ALLOWED_SKILL_DESC: " + " ; ".join(skill_desc_lines))
 
@@ -544,6 +442,11 @@ def build_unit_context(
 	unit_context_parts.append("")
 	unit_context_parts.append("TOPICS_AND_LOS:")
 	unit_context_parts.extend(topic_blocks)
+	
+	# Task verbs at end (FRQ only) (NEW)
+	if task_verb_lines:
+		unit_context_parts.append("")
+		unit_context_parts.extend(task_verb_lines)
 
 	unit_context = safe_join_lines(unit_context_parts)
 
@@ -555,80 +458,158 @@ def build_unit_context(
 	return unit_context, constraints
 
 
-
-# -----------------------
-# Gemini call
-# -----------------------
-def generate_repair_tsv(
-	client,
+# Gemini call to process a single set. 
+async def process_single_set(
+	sem: asyncio.Semaphore,
+	client: genai.Client,
 	course_name: str,
+	course_id: str,
+	unit: dict, 
+	unit_index: int, 
+	set_index: int,
+	prompt_template: Template,
 	repair_prompt_template: Template,
+	html_template: Template,
 	unit_context: str,
-	missing: int,
-	used_ids: List[str],
-	error_summary: str,
-	context_label: str
-) -> str:
-	prompt = repair_prompt_template.render(
-		num_questions=missing,
-		course_name=course_name,
-		unit_context=unit_context,
-		used_ids=",".join(used_ids),
-		error_summary=error_summary
-	)
-
-	# log_block(f"[{context_label}] REPAIR PROMPT", prompt, MAX_PROMPT_CHARS)
-
-	try:
-		resp = client.models.generate_content(
-			model=MODEL,
-			contents=prompt
+	constraints: dict,
+	coverage_tracker: Dict[str, int]
+):
+	context_label = f"{course_id} | U{unit_index+1} | Set{set_index+1}"
+	unit_title = unit.get("name", "")
+	
+	# Wait for permission from Semaphore (Rate Limit Guard)
+	async with sem:
+		log(f"[{context_label}] Starting generation...")
+		all_questions = []
+		
+		# ----------------------------------------
+		# 1. Initial Generation
+		# ----------------------------------------
+		
+		# Get under-covered LOs
+		priority_los = get_priority_los(
+			coverage_tracker,
+			constraints["allowed_lo_ids"],
+			top_n=10  # Top 10 least-covered
 		)
-	except Exception as e:
-		log(f"[{context_label}] Repair Gemini call failed: {repr(e)}")
-		return ""
-
-	return (resp.text or "").strip()
-
-
-def generate_mcq_tsv(client, course_name, prompt_template, unit_context, context_label: str) -> str:
-	print("Generating MCQ Prompt...")
-	prompt = prompt_template.render(
-		num_questions=QUESTIONS_PER_SET,
-		unit_context=unit_context,
-		course_name=course_name
-	)
-
-	# if PRINT_PROMPT:
-	# 	log_block(f"[{context_label}] PROMPT", prompt, MAX_PROMPT_CHARS)
-
-	# print(prompt)
-	# print("\n")
-
-	if len(prompt) > MAX_PROMPT_CHARS:
-		print(f"[{context_label}] WARNING: Prompt length {len(prompt)} exceeds {MAX_PROMPT_CHARS}")
-
-	print("Generating MCQ TSV...")
-	try:
-		resp = client.models.generate_content(
-			model=MODEL,
-			contents=prompt
+		priority_los_str = ",".join(priority_los)
+		
+		prompt = prompt_template.render(
+			num_questions=QUESTIONS_PER_SET,
+			unit_context=unit_context,
+			course_name=course_name,
+			priority_los=priority_los_str
 		)
-	except Exception as e:
-		log(f"[{context_label}] Gemini call failed: {repr(e)}")
-		return ""
+		
+		try:
+			# ASYNC CALL
+			response = await client.aio.models.generate_content(
+				model=MODEL,
+				contents=prompt
+			)
+			tsv = response.text or ""
+		except Exception as e:
+			log(f"[{context_label}] Initial API Error: {e}")
+			tsv = ""
+		
+		# Synchronous Parsing
+		rows = parse_tsv(tsv, context_label)
+		valid, invalid_initial = validate_rows_individually(rows, constraints, context_label)
+		all_questions.extend(valid)
+		
+		# Track all invalid reports for error summary
+		all_invalid_reports = invalid_initial.copy()
+		
+		# ----------------------------------------
+		# 2. Repair Loop
+		# ----------------------------------------
+		repair_round = 0
+		while len(all_questions) < QUESTIONS_PER_SET and repair_round < MAX_RETRIES_PER_SET:
+			repair_round += 1
+			missing = QUESTIONS_PER_SET - len(all_questions)
+			
+			# Add buffer to repair requests (ask for more than needed)
+			if missing <= 3:
+				# For small requests, add fixed buffer of 3
+				request_count = missing + 3
+			else:
+				# For larger requests, add 30-50% buffer (min 2, max 10)
+				buffer = max(2, min(10, int(missing * 0.5)))
+				request_count = missing + buffer
+			
+			log(f"[{context_label}] Repair {repair_round}: missing {missing}, requesting {request_count}")
+			
+			# Generate error summary from accumulated invalid reports
+			error_summary = summarize_invalid_reports(all_invalid_reports)
+			
+			# Preview of allowed constraints (first 10)
+			allowed_skills_preview = ",".join(constraints["allowed_skill_codes"][:10])
+			allowed_los_preview = ",".join(constraints["allowed_lo_ids"][:10])
+			
+			repair_prompt_text = repair_prompt_template.render(
+				num_questions=request_count,
+				unit_context=unit_context,
+				course_name=course_name,
+				error_summary=error_summary,
+				allowed_skills_preview=allowed_skills_preview,
+				allowed_los_preview=allowed_los_preview
+			)
+			
+			try:
+				repair_resp = await client.aio.models.generate_content(
+					model=MODEL,
+					contents=repair_prompt_text
+				)
+				repair_tsv = repair_resp.text or ""
+				
+				repair_rows = parse_tsv(repair_tsv, context_label)
+				valid_repair, invalid_repair = validate_rows_individually(
+					repair_rows,
+					constraints,
+					context_label
+				)
+				all_questions.extend(valid_repair)
+				all_invalid_reports.extend(invalid_repair)  # Accumulate for next repair
+			
+			except Exception as e:
+				log(f"[{context_label}] Repair API Error: {e}")
+				break
+		
+		# ----------------------------------------
+		# 3. Final Check & Save
+		# ----------------------------------------
+		if len(all_questions) >= QUESTIONS_PER_SET:
+			all_questions = all_questions[:QUESTIONS_PER_SET]
+			
+			assign_question_ids(
+				all_questions,
+				course_id,
+				unit_index,
+				set_index
+			)
+			
+			render_html(
+				html_template=html_template,
+				course_name=course_name,
+				course_id=course_id,
+				unit_title=unit_title,
+				unit_index=unit_index,
+				set_index=set_index,
+				questions=all_questions,
+				context_label=context_label
+			)
+			
+			# Update coverage tracker
+			for question in all_questions:
+				for lo_id in question.get("aligned_lo_ids", []):
+					if lo_id in coverage_tracker:
+						coverage_tracker[lo_id] += 1
+			
+			log(f"[{context_label}] ✅ SUCCESS: Saved {len(all_questions)} questions")
+		else:
+			log(f"[{context_label}] ❌ FAILED: Only got {len(all_questions)}/{QUESTIONS_PER_SET}")
 
-	out = (resp.text or "").strip()
-
-	# if PRINT_TSV:
-	# 	log_block(f"[{context_label}] TSV OUTPUT", out, MAX_TSV_CHARS)
-
-	return out
-
-
-# -----------------------
 # TSV parsing
-# -----------------------
 def parse_tsv(tsv_text: str, context_label: str) -> List[List[str]]:
 	lines = [ln for ln in (tsv_text or "").splitlines() if ln.strip()]
 	log(f"[{context_label}] parse_tsv: {len(lines)} non-empty lines found")
@@ -637,93 +618,18 @@ def parse_tsv(tsv_text: str, context_label: str) -> List[List[str]]:
 	for i, ln in enumerate(lines, start=1):
 		cols = ln.split("\t")
 
-		# Auto-fix: missing stimulus_payload column
-		if len(cols) == 11:
-			cols.append("")
-
 		rows.append(cols)
 
 	return rows
 
 
-
-def tsv_to_questions(rows: List[List[str]], constraints: Dict[str, Any], context_label: str) -> List[dict]:
-	questions = []
-	rejected = {
-		"row_invalid": 0,
-		"skill_not_allowed": 0,
-		"lo_not_allowed": 0,
-		"svg_invalid": 0,
-		"table_invalid": 0
-	}
-
-	for row_i, cols in enumerate(rows, start=1):
-		error = validate_tsv_row(cols)
-		if error:
-			rejected["row_invalid"] += 1
-			log(f"[{context_label}] Row {row_i} rejected: {error} | cols={len(cols)}")
-			# if DEBUG:
-			# 	print(cols)
-			continue
-
-		qid, diff, skills, los, idx, qtext, A, B, C, D, stim_type, stim_payload = [
-			c.strip() for c in cols
-		]
-
-		correct_index = int(idx)
-
-		skill_codes = [s.strip() for s in skills.split(",") if s.strip()]
-		if any(s not in constraints["allowed_skill_codes"] for s in skill_codes):
-			rejected["skill_not_allowed"] += 1
-			log(f"[{context_label}] Row {row_i} rejected: skill_codes not allowed | {skill_codes}")
-			continue
-
-		lo_ids = [s.strip() for s in los.split(",") if s.strip()]
-		if any(lo not in constraints["allowed_lo_ids"] for lo in lo_ids):
-			rejected["lo_not_allowed"] += 1
-			log(f"[{context_label}] Row {row_i} rejected: LO ids not allowed | {lo_ids}")
-			continue
-
-		stimulus = None
-		if stim_type == "svg":
-			if not is_valid_svg(stim_payload):
-				rejected["svg_invalid"] += 1
-				log(f"[{context_label}] Row {row_i} rejected: invalid svg payload")
-				continue
-			stimulus = {"type": "svg", "content": stim_payload}
-
-		elif stim_type == "table":
-			html_table = pipe_table_to_html(stim_payload)
-			if "<table" not in html_table:
-				rejected["table_invalid"] += 1
-				log(f"[{context_label}] Row {row_i} rejected: table could not be converted to html table")
-				continue
-			stimulus = {"type": "table", "content": html_table}
-
-		questions.append({
-			"id": qid,
-			"difficulty": diff,
-			"skill_codes": skill_codes,
-			"aligned_lo_ids": lo_ids,
-			"correct_choice_index": correct_index,
-			"question": qtext,
-			"choices": [A, B, C, D],
-			"stimulus": stimulus
-		})
-
-	log(f"[{context_label}] tsv_to_questions: accepted={len(questions)} rejected={rejected}")
-	return questions
-
-
-# -----------------------
-# Render + save
-# -----------------------
-def render_html(html_template, course, unit_title, unit_index, set_index, questions, context_label: str):
-	out_dir = OUTPUT_DIR / course / "mcq"
+# Render + save to HTML Template
+def render_html(html_template, course_name, course_id, unit_title, unit_index, set_index, questions, context_label: str):
+	out_dir = OUTPUT_DIR / course_id / "mcq"
 	ensure_dir(out_dir)
 
 	html = html_template.render(
-		course=course,
+		course=course_name,
 		unit=f"Unit {unit_index + 1}: {unit_title}",
 		questions=questions
 	)
@@ -738,110 +644,74 @@ def render_html(html_template, course, unit_title, unit_index, set_index, questi
 	log(f"[{context_label}] Wrote file: {path}")
 	return path
 
+def assign_question_ids(
+	questions: List[dict],
+	course_id: str,
+	unit_index: int,
+	set_index: int
+) -> None:
+	for i, q in enumerate(questions, start=1):
+		q["id"] = f"{course_id}_MCQ_U{unit_index + 1}S{set_index + 1}Q{i}"
 
-# -----------------------
-# Main
-# -----------------------
-def main():
-	log("Starting MCQ generation run")
 
+
+# Main Async Process
+async def main_async():
 	client = init_client()
+	
+	# Load templates ONCE
 	prompt_template = Template(load_text(PROMPT_PATH))
-	repair_prompt_template = Template(load_text(Path("utils/prompts/repair_prompt.txt")))
+	repair_prompt_template = Template(load_text(REPAIR_PROMPT_PATH))
 	html_template = Template(load_text(HTML_TEMPLATE_PATH))
-
-	for course in AP_COURSES:
-		course_spec = load_json(CONTENT_DIR / f"{course}.json")
+	
+	# Semaphore: adjust as needed
+	sem = asyncio.Semaphore(60)
+	
+	tasks = []
+	
+	for course_name, course_id in AP_COURSES.items():
+		course_spec = load_json(CONTENT_DIR / f"{course_id}.json")
 		skill_lookup = build_skill_lookup(course_spec)
 		big_idea_lookup = build_big_idea_lookup(course_spec)
-
-		for set_index in range(NUM_SETS_PER_UNIT):
-			for unit_index, unit in enumerate(course_spec.get("units", [])):
-				unit_context, constraints = build_unit_context(
-					course_spec,
-					unit,
-					unit_index,
-					skill_lookup,
-					big_idea_lookup
-				)
-
-				context_label = log_context(course, unit_index, unit.get("name", ""), set_index)
-				log(f"[{context_label}] Generating set")
-
-				all_questions: List[dict] = []
-				used_ids: set = set()
-
-				# ---------- INITIAL GENERATION ----------
-				tsv = generate_mcq_tsv(
-					client,
-					course,
-					prompt_template,
-					unit_context,
-					context_label
-				)
-
-				rows = parse_tsv(tsv, context_label)
-				valid, invalid = validate_rows_individually(rows, constraints, context_label)
-
-				all_questions.extend(valid)
-				used_ids.update(q["id"] for q in valid)
-
-				# ---------- REPAIR LOOP ----------
-				repair_round = 0
-				while len(all_questions) < QUESTIONS_PER_SET and repair_round < MAX_RETRIES_PER_SET:
-					repair_round += 1
-					missing = QUESTIONS_PER_SET - len(all_questions)
-
-					log(f"[{context_label}] Repair round {repair_round}, missing={missing}")
-
-					error_summary = summarize_errors(invalid)
-
-					repair_tsv = generate_repair_tsv(
+		
+		for unit_index, unit in enumerate(course_spec.get("units", [])):
+			if unit_index != 5:
+				continue
+			
+			# Initialize coverage tracker per unit
+			coverage_tracker = initialize_lo_coverage(unit)
+			
+			unit_context, constraints = build_unit_context(
+				course_spec,
+				unit,
+				unit_index,
+				skill_lookup,
+				big_idea_lookup,
+				question_type="mcq"
+			)
+			
+			for set_index in range(NUM_SETS_PER_UNIT):
+				tasks.append(
+					process_single_set(
+						sem,
 						client,
-						course,
+						course_name,
+						course_id,
+						unit,
+						unit_index,
+						set_index,
+						prompt_template,
 						repair_prompt_template,
+						html_template,
 						unit_context,
-						missing,
-						list(used_ids),
-						error_summary,
-						context_label
+						constraints,
+						coverage_tracker
 					)
-
-					if not repair_tsv:
-						break
-
-					repair_rows = parse_tsv(repair_tsv, context_label)
-					valid, invalid = validate_rows_individually(
-						repair_rows, constraints, context_label
-					)
-
-					for q in valid:
-						if q["id"] not in used_ids:
-							all_questions.append(q)
-							used_ids.add(q["id"])
-
-				# ---------- FINAL CHECK ----------
-				if len(all_questions) != QUESTIONS_PER_SET:
-					log(f"[{context_label}] ❌ Failed to reach {QUESTIONS_PER_SET}")
-					continue
-
-				path = render_html(
-					html_template,
-					course,
-					unit.get("name", ""),
-					unit_index,
-					set_index,
-					all_questions,
-					context_label
 				)
-
-				if path:
-					log(f"[{context_label}] ✅ SUCCESS")
-					break
-				break
-			break
-		break
+	
+	print(f"Starting {len(tasks)} parallel tasks...")
+	await asyncio.gather(*tasks)
 
 
 if __name__ == "__main__":
-	main()
+	asyncio.run(main_async())

@@ -1,7 +1,22 @@
 Role: AP {{ course_name }} FRQ writer.
 
-TASK
-Create exactly {{ num_frqs }} AP-style Free Response Questions (FRQs) using the UNIT CONTEXT provided.
+REPAIR TASK
+The previous generation produced validation errors. Generate exactly {{ num_frqs }} REPLACEMENT FRQs.
+
+COMMON VALIDATION ERRORS TO AVOID:
+{{ error_summary }}
+
+CRITICAL REMINDERS:
+- Generate COMPLETE FRQs (not partial fixes)
+- Use ONLY these allowed skills: {{ allowed_skills_preview }}
+- Use ONLY these allowed LOs: {{ allowed_los_preview }}
+- Parts MUST have labels (a., b., c., etc.)
+- Follow TSV format EXACTLY
+
+VALID TSV EXAMPLE (for reference):
+medium	1.A,2.B,4.A	VAR-1.A,VAR-2.C	A study examined the relationship between study time (hours) and test scores.	a. Calculate the mean study time|b. Describe the relationship shown in the data|c. Justify whether the relationship is strong	Part a (1pt): Correct calculation with work shown|Part b (2pts): Accurate description of direction and form|Part c (1pt): Valid justification using correlation	none	
+
+Note: Above has 8 columns separated by TABS. Parts and scoring_guidelines use pipe (|) separators.
 
 OUTPUT (STRICT TSV)
 - EXACTLY {{ num_frqs }} lines
@@ -17,14 +32,13 @@ diff:
 
 skill_codes:
 - Comma-separated
-- ALL codes MUST be from ALLOWED_SKILLS
+- ALL codes MUST be from ALLOWED_SKILLS in unit context
 - At least one required
 
 lo_ids:
 - Comma-separated
-- ALL IDs MUST be from ALLOWED_LOS
+- ALL IDs MUST be from ALLOWED_LOS in unit context
 - At least one required
-- PRIORITIZE these under-covered LOs: {{ priority_los }}
 
 context:
 - The main FRQ scenario/prompt that sets up the question

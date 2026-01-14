@@ -1,247 +1,779 @@
+'''
+FRQ Compiler - Async/Parallel Pipeline
+Follows the same architecture as mcq_compiler.py:
+- TSV-based generation and validation
+- Async API calls with rate limiting
+- Row-by-row validation with repair loops
+- Parallel task execution across units/sets
+'''
+
 import os
-import json
+import re
+from pathlib import Path
+from typing import Dict, List, Tuple, Any, Optional
+
+import asyncio
+
 from dotenv import load_dotenv
 from google import genai
-from jsonschema import validate
 from jinja2 import Template
+import certifi
 
-# -----------------------
-# CONFIG
-# -----------------------
+from utility_functions import (
+	log,
+	log_block,
+	log_context,
+	init_client,
+	load_json,
+	load_text,
+	ensure_dir,
+	safe_join_lines,
+	normalize_whitespace,
+	build_skill_lookup,
+	build_big_idea_lookup,
+	is_valid_svg,
+	is_strict_pipe_table,
+	pipe_table_to_html,
+	_looks_like_pipe_table,
+	summarize_invalid_reports,
+	compress_lo_description,
+	initialize_lo_coverage,
+	get_priority_los,
+)
 
-AP_COURSES = ["ap_statistics"]
+# Environment and Variables
+os.environ["SSL_CERT_FILE"] = certifi.where()
 
-NUM_SETS_PER_UNIT = 1  # Later 10 sets
-FRQS_PER_SET = 25
+MODEL = "gemini-2.5-flash"
 
-BASE_SPEC_DIR = "utils"
-OUTPUT_BASE_DIR = "output"
+NUM_SETS_PER_UNIT = 20
+FRQS_PER_SET = 5
+MAX_RETRIES_PER_SET = 4
 
-FRQ_SCHEMA_PATH = "utils/schemas/frq.schema.json"
-FRQ_HTML_TEMPLATE_PATH = "utils/templates/frq.html"
-FRQ_PROMPT_PATH = "utils/prompts/frq_prompt.txt"
+AP_COURSES = {
+	"AP Statistics": "ap_statistics",
+}
 
-MODEL = "gemini-2.5-pro"
+CONTENT_DIR = Path("utils/content")
+PROMPT_PATH = Path("utils/prompts/frq_prompt.txt")
+REPAIR_PROMPT_PATH = Path("utils/prompts/frq_repair_prompt.txt")
+HTML_TEMPLATE_PATH = Path("utils/templates/frq.html")
+OUTPUT_DIR = Path("output")
 
-# -----------------------
-# INIT
-# -----------------------
+DEBUG = True
+MAX_PROMPT_CHARS = 6000
 
-load_dotenv()
-assert os.getenv("GEMINI_API_KEY"), "Missing GEMINI_API_KEY"
-client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
-# -----------------------
-# SHARED HELPERS
-# -----------------------
+# Parsing Helper Functions
+def parse_parts(parts_string: str) -> List[dict]:
+	"""
+	Parse pipe-separated parts string into structured format.
+	Example: "a. Describe...|b. Calculate...|c. Justify..."
+	Returns: [{"label": "a", "prompt": "Describe..."}, ...]
+	"""
+	if not parts_string or not parts_string.strip():
+		return []
+	
+	parts = []
+	segments = parts_string.split("|")
+	
+	for segment in segments:
+		segment = segment.strip()
+		if not segment:
+			continue
+		
+		# Match pattern like "a. " or "(a) " at the start
+		match = re.match(r'^([a-z])[.)]\s*(.+)', segment, re.IGNORECASE | re.DOTALL)
+		if match:
+			label = match.group(1).lower()
+			prompt = match.group(2).strip()
+			parts.append({"label": label, "prompt": prompt})
+		else:
+			# No label found, use sequential letters
+			label = chr(ord('a') + len(parts))
+			parts.append({"label": label, "prompt": segment})
+	
+	return parts
 
-def load_json(path):
-	with open(path, "r", encoding="utf-8") as f:
-		return json.load(f)
 
-def load_text(path):
-	with open(path, "r", encoding="utf-8") as f:
-		return f.read()
+def parse_scoring_guidelines(guidelines_string: str) -> List[str]:
+	"""
+	Parse pipe-separated scoring guidelines into list.
+	Example: "Part a (1pt): Description...|Part b (2pts): Calculation..."
+	Returns: ["Part a (1pt): Description...", "Part b (2pts): Calculation..."]
+	"""
+	if not guidelines_string or not guidelines_string.strip():
+		return []
+	
+	guidelines = []
+	segments = guidelines_string.split("|")
+	
+	for segment in segments:
+		segment = segment.strip()
+		if segment:
+			guidelines.append(segment)
+	
+	return guidelines
 
-def ensure_dir(path):
-	os.makedirs(path, exist_ok=True)
 
-def build_unit_payload(course_name, unit_index, unit, course_spec):
-	learning_objectives = []
-	for topic in unit.get("topics", []):
-		for lo in topic.get("learning_objectives", []):
-			learning_objectives.append({
-				"id": lo.get("id", ""),
-				"description": lo.get("description", ""),
-				"essential_knowledge": lo.get("essential_knowledge", []) or []
+# Validation Functions
+def validate_tsv_row(cols: List[str]) -> Optional[str]:
+	"""Validate a single FRQ TSV row."""
+	if len(cols) != 8:
+		return f"Wrong column count (expected 8, got {len(cols)})"
+	
+	diff, skills, los, context, parts, guidelines, stim_type, stim_payload = cols
+	
+	if diff not in {"easy", "medium", "hard"}:
+		return "Invalid difficulty"
+	
+	if not skills.strip():
+		return "Empty skill_codes"
+	
+	if not los.strip():
+		return "Empty learning_objective_ids"
+	
+	if not context.strip():
+		return "Empty context"
+	
+	if not parts.strip():
+		return "Empty parts"
+	
+	# Parts must contain at least one labeled part
+	if not re.search(r'[a-z][.)]', parts, re.IGNORECASE):
+		return "Parts must contain labeled sections (a., b., etc.)"
+	
+	if stim_type not in {"none", "svg", "table"}:
+		return "Invalid stimulus_type"
+	
+	if stim_type == "none" and stim_payload.strip():
+		return "stimulus_payload must be empty when stimulus_type=none"
+	
+	if stim_type != "none" and not stim_payload.strip():
+		return "Missing stimulus_payload"
+	
+	return None
+
+
+def validate_rows_individually(
+	rows: List[List[str]],
+	constraints: Dict[str, Any],
+	context_label: str
+) -> Tuple[List[dict], List[dict]]:
+	"""
+	Validate FRQ TSV rows individually.
+	Returns:
+	  valid_frqs: List[frq_dict]
+	  invalid_reports: List[{row_index, reason, detail}]
+	"""
+	valid_frqs = []
+	invalid_reports = []
+	
+	for row_i, cols in enumerate(rows, start=1):
+		error = validate_tsv_row(cols)
+		if error:
+			invalid_reports.append({
+				"row_index": row_i,
+				"reason": "row_invalid",
+				"detail": error
 			})
-
-	skill_codes = sorted({
-		code
-		for topic in unit.get("topics", [])
-		for code in topic.get("suggested_subskill_codes", []) or []
-	})
-
-	big_ideas = sorted({
-		bi
-		for topic in unit.get("topics", [])
-		for bi in topic.get("big_ideas", []) or []
-	})
-
-	skill_definitions = {}
-	for skill in course_spec.get("skills", []):
-		for sub in skill.get("subskills", []):
-			code = sub.get("subskill_name")
-			if code in skill_codes:
-				skill_definitions[code] = {
-					"category": skill.get("skill_name"),
-					"description": sub.get("subskill_description")
-				}
-
-	big_idea_definitions = {}
-	for bi in course_spec.get("big_ideas", []):
-		if bi.get("id") in big_ideas:
-			big_idea_definitions[bi["id"]] = {
-				"name": bi.get("name"),
-				"description": bi.get("description")
-			}
-
-	frq_exam_context = None
-	for section in course_spec.get("exam_sections", []):
-		if section.get("section") == "II":
-			frq_exam_context = {
-				"question_type": section.get("question_type"),
-				"exam_weighting": section.get("exam_weighting"),
-				"timing": section.get("timing"),
-				"descriptions": section.get("descriptions", [])
-			}
-			break
-
-	task_verbs = []
-	for verb in course_spec.get("task_verbs", []):
-		task_verbs.append({
-			"verb": verb.get("verb"),
-			"description": verb.get("description")
+			if DEBUG:
+				log(f"[{context_label}] Row {row_i} rejected: {error} | cols={len(cols)}")
+			continue
+		
+		diff, skills, los, context, parts_str, guidelines_str, stim_type, stim_payload = [
+			c.strip() for c in cols
+		]
+		
+		# Validate skill codes
+		skill_codes = [s.strip() for s in skills.split(",") if s.strip()]
+		if any(s not in constraints["allowed_skill_codes"] for s in skill_codes):
+			invalid_reports.append({
+				"row_index": row_i,
+				"reason": "skill_not_allowed",
+				"detail": skills
+			})
+			if DEBUG:
+				invalid_skills = [s for s in skill_codes if s not in constraints["allowed_skill_codes"]]
+				log(f"[{context_label}] Row {row_i} rejected: Invalid skills {invalid_skills}")
+			continue
+		
+		# Validate learning objectives
+		lo_ids = [s.strip() for s in los.split(",") if s.strip()]
+		if any(lo not in constraints["allowed_lo_ids"] for lo in lo_ids):
+			invalid_reports.append({
+				"row_index": row_i,
+				"reason": "lo_not_allowed",
+				"detail": los
+			})
+			if DEBUG:
+				invalid_los = [lo for lo in lo_ids if lo not in constraints["allowed_lo_ids"]]
+				log(f"[{context_label}] Row {row_i} rejected: Invalid LOs {invalid_los}")
+			continue
+		
+		# Validate SVG if present
+		if stim_type == "svg" and not is_valid_svg(stim_payload):
+			invalid_reports.append({
+				"row_index": row_i,
+				"reason": "svg_invalid",
+				"detail": ""
+			})
+			if DEBUG:
+				log(f"[{context_label}] Row {row_i} rejected: Invalid SVG")
+			continue
+		
+		# Validate table if present
+		if stim_type == "table":
+			html_table = pipe_table_to_html(stim_payload)
+			if "<table" not in html_table:
+				invalid_reports.append({
+					"row_index": row_i,
+					"reason": "table_invalid",
+					"detail": "Could not convert pipe table to HTML"
+				})
+				if DEBUG:
+					log(f"[{context_label}] Row {row_i} rejected: Invalid table format")
+				continue
+		
+		# Parse parts
+		parts_list = parse_parts(parts_str)
+		if not parts_list:
+			invalid_reports.append({
+				"row_index": row_i,
+				"reason": "parts_parse_failed",
+				"detail": "Could not parse parts string"
+			})
+			continue
+		
+		# Parse scoring guidelines
+		scoring_guidelines = parse_scoring_guidelines(guidelines_str)
+		
+		# Build stimulus object
+		stimulus = None
+		if stim_type == "table":
+			html_table = pipe_table_to_html(stim_payload)
+			if "<table" not in html_table:
+				continue  # Skip if table conversion failed
+			stimulus = {"type": "table", "content": html_table}
+		
+		elif stim_type == "svg":
+			stimulus = {"type": "svg", "content": stim_payload}
+		
+		valid_frqs.append({
+			"id": None,  # Will be assigned later
+			"difficulty": diff,
+			"skill_codes": skill_codes,
+			"aligned_lo_ids": lo_ids,
+			"context": context,
+			"parts": parts_list,
+			"scoring_guidelines": scoring_guidelines,
+			"stimulus": stimulus
 		})
+	
+	return valid_frqs, invalid_reports
 
-	return {
-		"course": course_name,
-		"unit": f"Unit {unit_index + 1}: {unit.get('name','')}",
-		"developing_understanding": unit.get("developing_understanding", ""),
-		"building_practices": unit.get("building_practices", ""),
-		"preparing_for_exam": unit.get("preparing_for_exam", ""),
-		"learning_objectives": learning_objectives,
-		"skill_codes": skill_codes,
-		"skill_definitions": skill_definitions,
-		"big_ideas": big_ideas,
-		"big_idea_definitions": big_idea_definitions,
-		"exam_section_context": frq_exam_context,
-		"task_verbs": task_verbs
+
+# Unit context builder (reuse from mcq_compiler logic)
+def build_unit_context(
+	course_spec: dict,
+	unit: dict,
+	unit_index: int,
+	skill_lookup: Dict[str, Dict[str, str]],
+	big_idea_lookup: Dict[str, Dict[str, str]],
+	question_type: str = "frq",  # NEW
+	max_ek_per_lo: int = 0,
+	include_skill_descriptions: bool = True,
+	include_course_big_ideas: bool = True,
+	include_topic_big_idea_descriptions: bool = True,
+	max_topic_name_chars: int = 90,
+	max_lo_desc_chars: int = 200,
+	max_skill_desc_chars: int = 140,
+) -> Tuple[str, Dict[str, Any]]:
+	"""Build compressed unit context string and constraints dict."""
+	
+	def trunc(s: str, n: int) -> str:
+		s = normalize_whitespace(s or "")
+		return s if len(s) <= n else s[: n - 3] + "..."
+	
+	allowed_skill_codes: set = set()
+	allowed_lo_ids: set = set()
+	
+	used_skill_codes: set = set()
+	used_topic_big_ids: set = set()
+	topic_big_desc: Dict[str, str] = {}
+	
+	used_course_big_ids: set = set()
+	course_big_desc: Dict[str, str] = {}
+	course_big_name: Dict[str, str] = {}
+	
+	topic_blocks: List[str] = []
+	
+	# Extract per-topic content
+	for topic in unit.get("topics", []) or []:
+		topic_id = str(topic.get("id", "")).strip()
+		topic_name = trunc(topic.get("name", ""), max_topic_name_chars)
+		
+		# Skills for topic
+		ssc = [
+			str(x).strip()
+			for x in (topic.get("suggested_subskill_codes") or [])
+			if str(x).strip()
+		]
+		for code in ssc:
+			allowed_skill_codes.add(code)
+			used_skill_codes.add(code)
+		
+		# Topic-level big ideas
+		bis: List[str] = []
+		for bi in (topic.get("big_ideas") or []):
+			bi_id = str(bi.get("id", "")).strip()
+			bi_d = normalize_whitespace(bi.get("description", "") or "")
+			if not bi_id:
+				continue
+			
+			bis.append(bi_id)
+			used_topic_big_ids.add(bi_id)
+			
+			if include_topic_big_idea_descriptions and bi_d and bi_id not in topic_big_desc:
+				topic_big_desc[bi_id] = bi_d
+			
+			if "-" in bi_id:
+				prefix = bi_id.split("-", 1)[0]
+				if prefix:
+					used_course_big_ids.add(prefix)
+		
+		# Learning objectives
+		lo_lines: List[str] = []
+		for lo in (topic.get("learning_objectives") or []):
+			lo_id = str(lo.get("id", "")).strip()
+			if not lo_id:
+				continue
+			
+			allowed_lo_ids.add(lo_id)
+			# Apply LO compression before truncation
+			lo_desc_raw = lo.get("description", "")
+			lo_desc_compressed = compress_lo_description(lo_desc_raw)
+			lo_desc = trunc(lo_desc_compressed, max_lo_desc_chars)
+			lo_lines.append(f"{lo_id}: {lo_desc}")
+			
+			# Optional EKs
+			if max_ek_per_lo and (lo.get("essential_knowledge") or []):
+				for ek in (lo.get("essential_knowledge") or [])[:max_ek_per_lo]:
+					ek_id = str(ek.get("id", "")).strip()
+					ek_desc = trunc(ek.get("description", ""), max_lo_desc_chars)
+					if ek_id and ek_desc:
+						lo_lines.append(f"  - {ek_id}: {ek_desc}")
+		
+		skills_str = ",".join(ssc) if ssc else "-"
+		bi_str = ",".join(bis) if bis else "-"
+		
+		topic_blocks.append(
+			safe_join_lines([
+				f"T{topic_id} {topic_name} | skills:{skills_str} | big:{bi_str}",
+				*lo_lines
+			])
+		)
+	
+	# Course-level big ideas
+	if include_course_big_ideas and used_course_big_ids:
+		for bi in course_spec.get("big_ideas", []) or []:
+			bi_id = str(bi.get("id", "")).strip()
+			if not bi_id or bi_id not in used_course_big_ids:
+				continue
+			course_big_name[bi_id] = normalize_whitespace(bi.get("name", "") or "")
+			course_big_desc[bi_id] = normalize_whitespace(bi.get("description", "") or "")
+	
+	# Skill descriptions
+	skill_desc_lines: List[str] = []
+	if include_skill_descriptions and used_skill_codes:
+		for code in sorted(used_skill_codes):
+			desc = trunc(skill_lookup.get(code, {}).get("description", ""), max_skill_desc_chars)
+			skill_desc_lines.append(f"{code}={desc}" if desc else code)
+	
+	# Topic big idea descriptions
+	topic_big_desc_lines: List[str] = []
+	if include_topic_big_idea_descriptions and used_topic_big_ids:
+		for bi_id in sorted(used_topic_big_ids):
+			desc = topic_big_desc.get(bi_id, "")
+			if not desc:
+				desc = normalize_whitespace(big_idea_lookup.get(bi_id, {}).get("description", "") or "")
+			if desc:
+				topic_big_desc_lines.append(f"{bi_id}: {desc}")
+			else:
+				topic_big_desc_lines.append(f"{bi_id}")
+	
+	# -----------------------
+	# Exam Section Context (NEW)
+	# -----------------------
+	exam_context_lines = []
+	section_key = "I" if question_type == "mcq" else "II"
+	
+	for section in course_spec.get("exam_sections", []):
+		if section.get("section") == section_key:
+			# Only include descriptions array
+			descriptions = section.get("descriptions", [])
+			if descriptions:
+				exam_context_lines.append("EXAM_CONTEXT:")
+				for desc in descriptions:
+					# Keep full descriptions, no truncation
+					exam_context_lines.append(f"- {desc}")
+			
+			break  # Only one section
+	
+	# -----------------------
+	# Task Verbs (FRQ only) (NEW)
+	# -----------------------
+	task_verb_lines = []
+	if question_type == "frq":
+		# Prioritized verbs for AP Statistics
+		priority_verbs = [
+			"Calculate", "Explain", "Justify", "Describe",
+			"Interpret", "Compare", "Identify", "Construct",
+			"Determine", "Verify"
+		]
+		
+		task_verb_lines.append("TASK_VERBS:")
+		for verb_obj in course_spec.get("task_verbs", []):
+			verb = verb_obj.get("verb", "")
+			# Check if this is a priority verb
+			if any(pv in verb for pv in priority_verbs):
+				desc = verb_obj.get("description", "")
+				# Compress description (max 100 chars)
+				desc_short = desc[:100] + ("..." if len(desc) > 100 else "")
+				task_verb_lines.append(f"  {verb}: {desc_short}")
+	
+	# Build final unit context
+	unit_context_parts: List[str] = [
+		f"{course_spec.get('name', '').strip()} | Unit {unit_index + 1}: {unit.get('name', '').strip()}",
+		"",
+	]
+	
+	# Add exam context early (NEW)
+	if exam_context_lines:
+		unit_context_parts.extend(exam_context_lines)
+		unit_context_parts.append("")
+	
+	# Continue with existing
+	unit_context_parts.append("ALLOWED_SKILLS: " + ",".join(sorted(allowed_skill_codes)))
+	if skill_desc_lines:
+		unit_context_parts.append("ALLOWED_SKILL_DESC: " + " ; ".join(skill_desc_lines))
+	
+	unit_context_parts.extend([
+		"",
+		"ALLOWED_LOS: " + ",".join(sorted(allowed_lo_ids)),
+	])
+	
+	# Course big ideas
+	if include_course_big_ideas and course_big_desc:
+		unit_context_parts.append("")
+		unit_context_parts.append("BIG_IDEAS: " + ",".join(sorted(course_big_desc.keys())))
+		unit_context_parts.append("BIG_IDEAS_DESC:")
+		for bi_id in sorted(course_big_desc.keys()):
+			name = course_big_name.get(bi_id, "").strip()
+			desc = (course_big_desc.get(bi_id, "") or "").strip()
+			if name:
+				unit_context_parts.append(f"{bi_id} ({name}): {desc}")
+			else:
+				unit_context_parts.append(f"{bi_id}: {desc}")
+	
+	# Topic big ideas
+	if topic_big_desc_lines:
+		unit_context_parts.append("")
+		unit_context_parts.append("TOPIC_BIG_IDEAS: " + ",".join(sorted(used_topic_big_ids)))
+		unit_context_parts.append("TOPIC_BIG_IDEA_DESC:")
+		unit_context_parts.extend(topic_big_desc_lines)
+	
+	# Topics and LOs
+	unit_context_parts.append("")
+	unit_context_parts.append("TOPICS_AND_LOS:")
+	unit_context_parts.extend(topic_blocks)
+	
+	# Task verbs at end (FRQ only) (NEW)
+	if task_verb_lines:
+		unit_context_parts.append("")
+		unit_context_parts.extend(task_verb_lines)
+	
+	unit_context = safe_join_lines(unit_context_parts)
+	
+	constraints = {
+		"allowed_skill_codes": sorted(allowed_skill_codes),
+		"allowed_lo_ids": sorted(allowed_lo_ids),
 	}
+	
+	return unit_context, constraints
 
 
-# -----------------------
-# FRQ GENERATION (BATCHED)
-# -----------------------
-
-def generate_valid_frqs(prompt_template, unit_payload, total_frqs, batch_size=1, max_batches=50):
-	all_frqs = []
-	seen_ids = set()
-	batches = 0
-
-	print(f"    🔁 Target FRQs: {total_frqs} (batch size = {batch_size})")
-
-	while len(all_frqs) < total_frqs and batches < max_batches:
-		batches += 1
-		remaining = total_frqs - len(all_frqs)
-		n = min(batch_size, remaining)
-
-		print(f"      ▶ Batch {batches}: requesting {n} FRQ(s) ({len(all_frqs)}/{total_frqs} collected)")
+# Gemini call to process a single set
+async def process_single_set(
+	sem: asyncio.Semaphore,
+	client: genai.Client,
+	course_name: str,
+	course_id: str,
+	unit: dict,
+	unit_index: int,
+	set_index: int,
+	prompt_template: Template,
+	repair_prompt_template: Template,
+	html_template: Template,
+	unit_context: str,
+	constraints: dict,
+	coverage_tracker: Dict[str, int]
+):
+	"""Process a single FRQ set with async generation and repair loop."""
+	context_label = f"{course_id} | U{unit_index+1} | Set{set_index+1}"
+	unit_title = unit.get("name", "")
+	
+	# Wait for permission from Semaphore (Rate Limit Guard)
+	async with sem:
+		log(f"[{context_label}] Starting FRQ generation...")
+		all_frqs = []
+		
+		# ----------------------------------------
+		# 1. Initial Generation
+		# ----------------------------------------
+		
+		# Get under-covered LOs
+		priority_los = get_priority_los(
+			coverage_tracker,
+			constraints["allowed_lo_ids"],
+			top_n=10  # Top 10 least-covered
+		)
+		priority_los_str = ",".join(priority_los)
 
 		prompt = prompt_template.render(
-			num_frqs=n,
-			start_index=len(all_frqs) + 1,
-			topic_payload=json.dumps(unit_payload, indent=2),
-			schema=json.dumps(FRQ_SCHEMA, indent=2)
+			num_frqs=FRQS_PER_SET,
+			unit_context=unit_context,
+			course_name=course_name,
+			priority_los=priority_los_str
 		)
-
-		response = client.models.generate_content(
-			model=MODEL,
-			contents=prompt,
-			config={"response_mime_type": "application/json"}
-		)
-
-		raw = response.text.strip().replace("\u0000", "").replace("\r", "")
-
+		
 		try:
-			parsed = json.loads(raw)
-			validate(parsed, FRQ_SCHEMA)
-		except Exception:
-			print(f"      ⚠️ Batch {batches}: invalid FRQ JSON/schema — retrying")
-			continue
-
-		added_this_batch = 0
-
-		for frq in parsed.get("frqs", []):
-			fid = frq.get("id")
-			# if not fid or fid in seen_ids:
-			# 	print(f"        ↪ Skipped duplicate or missing FRQ id")
-			# 	continue
-
+			# ASYNC CALL
+			response = await client.aio.models.generate_content(
+			model=MODEL,
+				contents=prompt
+			)
+			tsv = response.text or ""
+		except Exception as e:
+			log(f"[{context_label}] Initial API Error: {e}")
+			tsv = ""
+		
+		# Synchronous Parsing
+		rows = parse_tsv(tsv, context_label)
+		valid, invalid_initial = validate_rows_individually(rows, constraints, context_label)
+		all_frqs.extend(valid)
+		
+		# Track all invalid reports for error summary
+		all_invalid_reports = invalid_initial.copy()
+		
+		# ----------------------------------------
+		# 2. Repair Loop
+		# ----------------------------------------
+		repair_round = 0
+		while len(all_frqs) < FRQS_PER_SET and repair_round < MAX_RETRIES_PER_SET:
+			repair_round += 1
+			missing = FRQS_PER_SET - len(all_frqs)
+			
+			# Add buffer to repair requests (ask for more than needed)
+			if missing <= 3:
+				# For small requests, add fixed buffer of 3
+				request_count = missing + 3
+			else:
+				# For larger requests, add 30-50% buffer (min 2, max 10)
+				buffer = max(2, min(10, int(missing * 0.5)))
+				request_count = missing + buffer
+			
+			log(f"[{context_label}] Repair {repair_round}: missing {missing}, requesting {request_count}")
+			
+			# Generate error summary from accumulated invalid reports
+			error_summary = summarize_invalid_reports(all_invalid_reports)
+			
+			# Preview of allowed constraints (first 10)
+			allowed_skills_preview = ",".join(constraints["allowed_skill_codes"][:10])
+			allowed_los_preview = ",".join(constraints["allowed_lo_ids"][:10])
+			
+			repair_prompt_text = repair_prompt_template.render(
+				num_frqs=request_count,
+				unit_context=unit_context,
+				course_name=course_name,
+				error_summary=error_summary,
+				allowed_skills_preview=allowed_skills_preview,
+				allowed_los_preview=allowed_los_preview
+			)
+			
 			try:
-				validate(frq, FRQ_ITEM_SCHEMA)
-			except Exception:
-				print(f"        ⚠️ FRQ {fid}: failed item-level validation")
-				continue
-
-			all_frqs.append(frq)
-			seen_ids.add(fid)
-			added_this_batch += 1
-
-			if len(all_frqs) >= total_frqs:
+				repair_resp = await client.aio.models.generate_content(
+					model=MODEL,
+					contents=repair_prompt_text
+				)
+				repair_tsv = repair_resp.text or ""
+				
+				repair_rows = parse_tsv(repair_tsv, context_label)
+				valid_repair, invalid_repair = validate_rows_individually(
+					repair_rows,
+					constraints,
+					context_label
+				)
+				all_frqs.extend(valid_repair)
+				all_invalid_reports.extend(invalid_repair)  # Accumulate for next repair
+			
+			except Exception as e:
+				log(f"[{context_label}] Repair API Error: {e}")
 				break
 
-		print(f"      ✅ Batch {batches}: added {added_this_batch} FRQ(s)")
-
-	if len(all_frqs) < total_frqs:
-		raise RuntimeError(
-			f"Failed to generate {total_frqs} FRQs "
-			f"(got {len(all_frqs)} after {batches} batches)"
-		)
-
-	print(f"    🎯 Successfully generated {len(all_frqs)} FRQs")
-	return {"frqs": all_frqs[:total_frqs]}
-
-# -----------------------
-# LOAD STATIC ASSETS
-# -----------------------
-
-FRQ_SCHEMA = load_json(FRQ_SCHEMA_PATH)
-FRQ_ITEM_SCHEMA = FRQ_SCHEMA["properties"]["frqs"]["items"]
-
-FRQ_HTML_TEMPLATE = Template(load_text(FRQ_HTML_TEMPLATE_PATH))
-FRQ_PROMPT_TEMPLATE = Template(load_text(FRQ_PROMPT_PATH))
-
-# -----------------------
-# MAIN LOOP
-# -----------------------
-
-for course in AP_COURSES:
-	print(f"\n📘 Processing course: {course}")
-
-	course_spec = load_json(f"{BASE_SPEC_DIR}/content/{course}.json")
-	course_name = course_spec.get("name", course)
-
-	for unit_index, unit in enumerate(course_spec.get("units", [])):
-		unit_title = unit.get("name", f"Unit {unit_index + 1}")
-		print(f"  📄 Generating FRQ SETS for Unit {unit_index + 1}: {unit_title}")
-
-		unit_payload = build_unit_payload(course_name, unit_index, unit, course_spec)
-
-		output_dir = f"{OUTPUT_BASE_DIR}/{course}/unit_{unit_index + 1}/frqs"
-		ensure_dir(output_dir)
-
-		for set_index in range(NUM_SETS_PER_UNIT):
-			print(f"    🧩 Starting FRQ Set {set_index + 1}")
-
-			frq_json = generate_valid_frqs(
-				FRQ_PROMPT_TEMPLATE,
-				unit_payload,
-				FRQS_PER_SET,
-				batch_size=5
+		# ----------------------------------------
+		# 3. Final Check & Save
+		# ----------------------------------------
+		if len(all_frqs) >= FRQS_PER_SET:
+			all_frqs = all_frqs[:FRQS_PER_SET]
+			
+			assign_frq_ids(
+				all_frqs,
+				course_id,
+				unit_index,
+				set_index
 			)
-
-			html = FRQ_HTML_TEMPLATE.render(
-				course=course_name,
-				unit=f"Unit {unit_index + 1}: {unit_title}",
-				set_number=set_index + 1,
-				frqs=frq_json["frqs"]
+			
+			render_html(
+				html_template=html_template,
+				course_name=course_name,
+				course_id=course_id,
+				unit_title=unit_title,
+				unit_index=unit_index,
+				set_index=set_index,
+				frqs=all_frqs,
+				context_label=context_label
 			)
+			
+			# Update coverage tracker
+			for frq in all_frqs:
+				for lo_id in frq.get("aligned_lo_ids", []):
+					if lo_id in coverage_tracker:
+						coverage_tracker[lo_id] += 1
+			
+			log(f"[{context_label}] ✅ SUCCESS: Saved {len(all_frqs)} FRQs")
+		else:
+			log(f"[{context_label}] ❌ FAILED: Only got {len(all_frqs)}/{FRQS_PER_SET}")
 
-			path = f"{output_dir}/set_{set_index + 1}.html"
-			with open(path, "w", encoding="utf-8") as f:
-				f.write(html)
 
-			print(f"    ✅ Saved → {path}")
+# TSV parsing
+def parse_tsv(tsv_text: str, context_label: str) -> List[List[str]]:
+	"""Parse TSV text into rows of columns."""
+	lines = [ln for ln in (tsv_text or "").splitlines() if ln.strip()]
+	log(f"[{context_label}] parse_tsv: {len(lines)} non-empty lines found")
+	
+	rows = []
+	for i, ln in enumerate(lines, start=1):
+		cols = ln.split("\t")
+		rows.append(cols)
+	
+	return rows
 
-print("\n🎉 All FRQ sets generated successfully.")
+
+# Render + save to HTML Template
+def render_html(
+	html_template,
+	course_name,
+	course_id,
+	unit_title,
+	unit_index,
+	set_index,
+	frqs,
+	context_label: str
+):
+	"""Render FRQs to HTML and save to file."""
+	out_dir = OUTPUT_DIR / course_id / "frq"
+	ensure_dir(out_dir)
+	
+	html = html_template.render(
+		course=course_name,
+		unit=f"Unit {unit_index + 1}: {unit_title}",
+		set_number=set_index + 1,
+		frqs=frqs
+	)
+	
+	path = out_dir / f"unit{unit_index + 1}-set{set_index + 1}.html"
+	
+	if path.exists():
+		log(f"[{context_label}] Skipping existing file: {path}")
+		return path
+	
+	path.write_text(html, encoding="utf-8")
+	log(f"[{context_label}] Wrote file: {path}")
+	return path
+
+
+def assign_frq_ids(
+	frqs: List[dict],
+	course_id: str,
+	unit_index: int,
+	set_index: int
+) -> None:
+	"""Assign unique IDs to FRQs in format: {course_id}_FRQ_U{unit}S{set}Q{num}"""
+	for i, frq in enumerate(frqs, start=1):
+		frq["id"] = f"{course_id}_FRQ_U{unit_index + 1}S{set_index + 1}Q{i}"
+
+
+# Main Async Process
+async def main_async():
+	"""Main entry point for async FRQ generation."""
+	client = init_client()
+	
+	# Load templates ONCE
+	prompt_template = Template(load_text(PROMPT_PATH))
+	repair_prompt_template = Template(load_text(REPAIR_PROMPT_PATH))
+	html_template = Template(load_text(HTML_TEMPLATE_PATH))
+	
+	# Semaphore: adjust as needed
+	sem = asyncio.Semaphore(60)
+	
+	tasks = []
+	
+	for course_name, course_id in AP_COURSES.items():
+		course_spec = load_json(CONTENT_DIR / f"{course_id}.json")
+		skill_lookup = build_skill_lookup(course_spec)
+		big_idea_lookup = build_big_idea_lookup(course_spec)
+		
+		for unit_index, unit in enumerate(course_spec.get("units", [])):
+
+			if unit_index != 5:
+				continue
+
+			# Initialize coverage tracker per unit
+			coverage_tracker = initialize_lo_coverage(unit)
+
+			# Build unit context ONCE per unit
+			unit_context, constraints = build_unit_context(
+				course_spec,
+				unit,
+				unit_index,
+				skill_lookup,
+				big_idea_lookup,
+				question_type="frq"
+			)
+			
+			for set_index in range(NUM_SETS_PER_UNIT):
+				tasks.append(
+					process_single_set(
+						sem,
+						client,
+						course_name,
+						course_id,
+						unit,
+						unit_index,
+						set_index,
+						prompt_template,
+						repair_prompt_template,
+						html_template,
+						unit_context,
+						constraints,
+						coverage_tracker
+					)
+				)
+	
+	print(f"Starting {len(tasks)} parallel FRQ tasks...")
+	await asyncio.gather(*tasks)
+
+
+if __name__ == "__main__":
+	asyncio.run(main_async())

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 12)</title>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 12)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S12Q1"
+      data-difficulty="medium"
+      data-skill-codes="4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.B,UNC-4.D,UNC-4.F,UNC-4.G"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A school administrator wants to estimate the proportion of students who feel prepared for college after graduating from their high school. A random sample of 150 recent graduates was surveyed, and 108 of them indicated that they felt prepared for college.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Verify the conditions for constructing a confidence interval for the proportion of all graduates who feel prepared for college.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Construct a 95% confidence interval for the proportion of all graduates who feel prepared for college. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval from part (b) in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The administrator wants to claim that more than 70% of their graduates feel prepared for college. Based on your confidence interval, is there convincing evidence to support this claim? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Checks random sample, 10% condition, and large counts condition for success and failure.</li>
+          
+          <li>Part b (2pts): Correct formula/method, correct calculation of interval.</li>
+          
+          <li>Part c (1pt): Correct interpretation of CI in context.</li>
+          
+          <li>Part d (1pt): Correct justification based on the CI relative to 70%.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S12Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.D,VAR-6.F,VAR-6.G,DAT-3.A,DAT-3.B"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A company manufactures light bulbs and claims that no more than 5% of their bulbs are defective. A consumer advocacy group suspects the defect rate is higher. They test a random sample of 200 bulbs and find 16 defective bulbs.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your p-value, what conclusion should the consumer advocacy group make at the significance level of α = 0.05? Justify your conclusion in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correct null and alternative hypotheses defined with parameter.</li>
+          
+          <li>Part b (1pt): Checks random sample, 10% condition, and large counts condition for expected successes/failures.</li>
+          
+          <li>Part c (2pts): Correct calculation of z-test statistic and correct p-value.</li>
+          
+          <li>Part d (1pt): Correct conclusion based on p-value and significance level, justified in context.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S12Q3"
+      data-difficulty="easy"
+      data-skill-codes="1.B,4.B,4.A"
+      data-learning-objectives="UNC-5.A,UNC-5.D,UNC-5.C"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A medical researcher is conducting a clinical trial to test a new drug that aims to reduce the proportion of patients experiencing severe allergic reactions to a common vaccine. The current proportion of patients experiencing severe reactions is known to be 0.02 (2%). The researcher wants to test if the new drug reduces this proportion.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe a Type I error in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe a Type II error in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If the drug company wants to minimize the risk of a Type I error, what would be a consequence for the patients? Explain one way the researcher could reduce the probability of a Type II error without changing the significance level.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correct description of Type I error in context.</li>
+          
+          <li>Part b (1pt): Correct description of Type II error in context.</li>
+          
+          <li>Part c (2pts): Explains consequence of minimizing Type I error (e.g., drug not approved when effective), explains one way to reduce Type II error (e.g., increase sample size, increase alpha, stronger treatment effect).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S12Q4"
+      data-difficulty="hard"
+      data-skill-codes="1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.H,VAR-6.J,VAR-6.K,DAT-3.C,DAT-3.D"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A public health organization is investigating whether a new awareness campaign has increased the proportion of people who report getting a flu shot. Before the campaign, a random sample of 300 adults found 120 reported getting a flu shot. After the campaign, a separate random sample of 350 adults found 165 reported getting a flu shot.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a significance test to determine if the campaign increased the proportion of people getting a flu shot.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your p-value, what conclusion should the public health organization make at the significance level of α = 0.01? Justify your conclusion in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correct null and alternative hypotheses for difference of proportions defined with parameters (p_after - p_before).</li>
+          
+          <li>Part b (1pt): Checks random samples (independent), 10% condition, and large counts condition for pooled expected successes/failures for both groups.</li>
+          
+          <li>Part c (2pts): Correct calculation of z-test statistic (pooled proportion) and correct p-value.</li>
+          
+          <li>Part d (1pt): Correct conclusion based on p-value and significance level, justified in context.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S12Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.A,UNC-4.B,UNC-4.D,UNC-4.F,UNC-4.G"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A school administrator wants to estimate the proportion of students who support a proposed change to the school's dress code. A random sample of 150 students was surveyed, and 87 of them indicated support for the change.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure by name and verify the conditions required for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the true proportion of students who support the change.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the calculated confidence interval in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The administrator believes that more than 50% of students support the change. Based on your confidence interval, does the data provide convincing evidence to support this belief? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly identifies a one-sample z-interval for a proportion AND verifies Random, Normal (Large Counts), and Independent conditions.</li>
+          
+          <li>Part b (1pt): Correctly calculates the 95% confidence interval with work shown (e.g., formula or calculator output).</li>
+          
+          <li>Part c (1pt): Provides a correct interpretation of the confidence interval in context.</li>
+          
+          <li>Part d (1pt): States whether there is convincing evidence AND justifies the conclusion by referencing the confidence interval.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+  </body>
+</html>

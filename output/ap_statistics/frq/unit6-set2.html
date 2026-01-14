@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 2)</title>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 2)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S2Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D,4.A"
+      data-learning-objectives="UNC-4.A,UNC-4.B,UNC-4.C,UNC-4.D,UNC-4.F,UNC-4.G,UNC-4.H"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A market research firm wants to estimate the proportion of adults in a certain city who regularly use public transportation. They conduct a random survey of 400 adults in the city and find that 128 of them regularly use public transportation.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the true proportion of adults in the city who regularly use public transportation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the margin of error for the 95% confidence interval constructed in part (b).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the 95% confidence interval in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Based on this interval, can the firm claim that less than 35% of adults in the city regularly use public transportation? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a one-sample z-interval for a population proportion (1pt); Verifies conditions for random sampling, 10% condition (400 < 10% of city adults), and Large Counts condition (np>=10 and n(1-p)>=10) (1pt).</li>
+          
+          <li>Part b (1pt): Correctly calculates the 95% confidence interval (0.274, 0.366) (1pt).</li>
+          
+          <li>Part c (1pt): Correctly calculates the margin of error (0.046) (1pt).</li>
+          
+          <li>Part d (1pt): Provides a correct interpretation of the confidence interval in context (e.g., "We are 95% confident that the true proportion of adults in the city who regularly use public transportation is between 27.4% and 36.6%") (1pt).</li>
+          
+          <li>Part e (1pt): Makes a correct conclusion (No, because the interval contains values above 0.35) and provides a clear justification based on the interval (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S2Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.D,VAR-6.E,VAR-6.F,VAR-6.G,DAT-3.A,DAT-3.B"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A company claims that 80% of its customers are satisfied with their service. An independent consumer group believes this claim is too high. They conduct a random survey of 150 customers and find that 108 of them are satisfied.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for the consumer group's investigation. Define the parameter of interest.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the appropriate inference method and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value and a significance level of $\alpha = 0.05$, what conclusion should the consumer group make? Justify your conclusion in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses ($H_0: p=0.80$, $H_a: p<0.80$) and defines p as the true proportion of satisfied customers (1pt).</li>
+          
+          <li>Part b (1pt): Identifies one-sample z-test for a population proportion (0.5pt); Verifies random sample, 10% condition (150 < 10% of all customers), and Large Counts condition (np>=10 and n(1-p)>=10 based on $H_0$) (0.5pt).</li>
+          
+          <li>Part c (2pts): Calculates the correct test statistic ($z = \frac{\hat{p}-p_0}{\sqrt{p_0(1-p_0)/n}} = \frac{0.72-0.80}{\sqrt{0.80(0.20)/150}} \approx -2.45$) (1pt); Calculates the correct p-value (approx. 0.0071) (1pt).</li>
+          
+          <li>Part d (2pts): Compares p-value to $\alpha$ (0.0071 < 0.05) and states to reject $H_0$ (1pt); Justifies conclusion in context (e.g., "There is sufficient evidence to conclude that the true proportion of satisfied customers is less than 80%") (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S2Q3"
+      data-difficulty="hard"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.I,UNC-4.J,UNC-4.K,UNC-4.M,UNC-4.N"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A company offers two different versions of its website, Version A and Version B, to potential customers. To determine which version is more effective at converting visitors into customers, they randomly assign new visitors to one of the two versions. Out of 500 visitors assigned to Version A, 75 made a purchase. Out of 450 visitors assigned to Version B, 54 made a purchase.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Construct a 90% confidence interval for the difference in the proportion of visitors who make a purchase (Version A - Version B).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval in the context of the problem and explain what it suggests about the effectiveness of the two website versions.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a two-sample z-interval for a difference of population proportions (1pt); Verifies conditions for independent random samples/assignment, 10% condition for each group (if applicable), and Large Counts condition for each group (successes and failures >= 10 for both A and B) (1pt).</li>
+          
+          <li>Part b (2pts): Correctly calculates the 90% confidence interval (approx. (-0.0098, 0.0698)) (2pts: 1pt for correct point estimate/standard error, 1pt for interval).</li>
+          
+          <li>Part c (2pts): Interprets the confidence interval in context (e.g., "We are 90% confident that the true difference in proportions of purchases (Version A - Version B) is between -0.0098 and 0.0698") (1pt); Explains what the interval suggests about effectiveness (e.g., "Since the interval contains 0, there is no statistically significant evidence at the 90% confidence level that one version is more effective than the other") (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S2Q4"
+      data-difficulty="hard"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.H,VAR-6.I,VAR-6.J,VAR-6.K,DAT-3.C,DAT-3.D"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A health organization wants to determine if a new public health campaign significantly increased the proportion of people who report getting a flu shot in two different regions. Before the campaign, 30% of people in Region X reported getting a flu shot. After the campaign, a random sample of 250 people in Region X showed 85 reported getting a flu shot. In Region Y, where a different campaign was run, a random sample of 200 people showed 75 reported getting a flu shot. Assume the proportion of people who got a flu shot before the campaign in Region Y was also 30%. The organization wants to test if the proportion of people getting flu shots in Region Y is greater than in Region X after their respective campaigns.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses to address the organization's question. Define the parameters of interest.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the appropriate inference method and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value and a significance level of $\alpha = 0.01$, what conclusion should the organization make? Justify your conclusion in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses ($H_0: p_Y - p_X = 0$, $H_a: p_Y - p_X > 0$) or equivalent; Defines $p_X$ as the true proportion of flu shots in Region X after campaign and $p_Y$ for Region Y (1pt).</li>
+          
+          <li>Part b (1pt): Identifies a two-sample z-test for a difference of population proportions (0.5pt); Verifies conditions for independent random samples, 10% condition for each group, and Large Counts condition for each group (successes and failures >= 10 for both X and Y using pooled proportion) (0.5pt).</li>
+          
+          <li>Part c (2pts): Calculates the correct test statistic (approx. $z = 0.77$) (1pt); Calculates the correct p-value (approx. 0.2206) (1pt).</li>
+          
+          <li>Part d (2pts): Compares p-value to $\alpha$ (0.2206 > 0.01) and states to fail to reject $H_0$ (1pt); Justifies conclusion in context (e.g., "There is not sufficient evidence at $\alpha=0.01$ to conclude that the proportion of people getting flu shots in Region Y is greater than in Region X after their respective campaigns") (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S2Q5"
+      data-difficulty="easy"
+      data-skill-codes="1.B,4.B,4.A"
+      data-learning-objectives="UNC-5.A,UNC-5.D,UNC-5.C"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A pharmaceutical company is testing a new drug designed to reduce the proportion of patients experiencing a specific side effect from another common medication. Historically, 25% of patients taking the common medication experience this side effect. The company plans to conduct a clinical trial to see if the new drug can reduce this proportion, setting up hypotheses $H_0: p = 0.25$ and $H_a: p < 0.25$, where $p$ is the true proportion of patients experiencing the side effect when taking the new drug.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe a Type I error in the context of this problem and state a potential consequence.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe a Type II error in the context of this problem and state a potential consequence.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Without increasing the sample size, describe one change to the hypothesis test design that would decrease the probability of a Type II error. Explain why this change would have the desired effect.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Describes a Type I error (rejecting $H_0$ when $H_0$ is true) in context (e.g., "The company concludes the new drug reduces the side effect proportion when, in reality, it does not") (1pt); States a potential consequence (e.g., "The company might market an ineffective drug, wasting resources and potentially harming patients") (1pt).</li>
+          
+          <li>Part b (2pts): Describes a Type II error (failing to reject $H_0$ when $H_a$ is true) in context (e.g., "The company concludes the new drug does not reduce the side effect proportion when, in reality, it does") (1pt); States a potential consequence (e.g., "The company might fail to market a beneficial drug, missing a public health opportunity and potential profits") (1pt).</li>
+          
+          <li>Part c (1pt): Describes a change that would decrease Type II error (e.g., "Increase the significance level ($\alpha$)" or "Increase the effect size") (0.5pt); Explains why (e.g., "Increasing $\alpha$ makes it easier to reject $H_0$, thus reducing the chance of failing to reject a false $H_0$") (0.5pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+  </body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 19)</title>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 19)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S19Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.A,UNC-4.B,UNC-4.D,UNC-4.F,UNC-4.G"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A government agency wants to estimate the proportion of eligible voters in a certain city who support a proposed new environmental policy. A random sample of 500 eligible voters was surveyed, and 280 of them indicated support for the policy.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Construct a 95% confidence interval for the true proportion of eligible voters in the city who support the new environmental policy.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The agency claims that more than half of the eligible voters support the policy. Based on your interval, does the data support this claim? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly identifies a one-sample z-interval for proportions and verifies the random sampling, nearly normal (large counts), and independence conditions.</li>
+          
+          <li>Part b (1pt): Correctly calculates the 95% confidence interval for the proportion.</li>
+          
+          <li>Part c (1pt): Correctly interprets the confidence interval in context, mentioning the confidence level and the parameter being estimated.</li>
+          
+          <li>Part d (1pt): Correctly states whether the data supports the claim and provides a justification based on the confidence interval.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S19Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.D,VAR-6.E,VAR-6.F,VAR-6.G,DAT-3.A,DAT-3.B"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A company that produces light bulbs claims that no more than 10% of their bulbs are defective. A consumer advocacy group suspects that the true proportion of defective bulbs is higher than 10%. They take a random sample of 400 bulbs and find that 52 of them are defective.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses and identify the correct inference procedure for this situation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this inference procedure.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value, what conclusion should the consumer advocacy group draw at the significance level of alpha = 0.05? Justify your conclusion in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses and identifies a one-sample z-test for proportions.</li>
+          
+          <li>Part b (1pt): Verifies the random sampling, nearly normal (large counts), and independence conditions.</li>
+          
+          <li>Part c (1pt): Calculates the correct test statistic (z-score) and p-value.</li>
+          
+          <li>Part d (2pts): Compares p-value to alpha, states correct conclusion (reject/fail to reject H0), and justifies it in context regarding the company's claim.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S19Q3"
+      data-difficulty="easy"
+      data-skill-codes="1.B,4.B,4.A"
+      data-learning-objectives="UNC-5.A,UNC-5.D,UNC-5.C"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A pharmaceutical company is testing a new drug designed to reduce the severity of allergy symptoms. They plan to conduct a significance test to see if the proportion of patients experiencing reduced symptoms with the new drug (p) is greater than the proportion with the old drug (p0 = 0.60). They set their null hypothesis as H0: p = 0.60 and alternative hypothesis as Ha: p > 0.60.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe a Type I error in the context of this problem and explain a potential consequence.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe a Type II error in the context of this problem and explain a potential consequence.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Without performing any calculations, describe one way to increase the power of the test.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly describes Type I error (rejecting true H0) in context and states a reasonable consequence.</li>
+          
+          <li>Part b (2pts): Correctly describes Type II error (failing to reject false H0) in context and states a reasonable consequence.</li>
+          
+          <li>Part c (1pt): Describes a correct way to increase power (e.g., increase sample size, increase alpha, increase effect size).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S19Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.I,UNC-4.J,UNC-4.K,UNC-4.M,UNC-4.N"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">Researchers are investigating the effectiveness of two different fertilizers, Fertilizer A and Fertilizer B, on crop yield. They randomly select 200 plants for Fertilizer A and 250 plants for Fertilizer B. For Fertilizer A, 150 plants showed increased yield, while for Fertilizer B, 160 plants showed increased yield.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Construct a 90% confidence interval for the difference in the true proportions of plants showing increased yield between Fertilizer A and Fertilizer B (pA - pB).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval in context. Based on this interval, is there convincing evidence of a difference in the proportions of plants showing increased yield between the two fertilizers? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a two-sample z-interval for proportions and verifies random sampling, nearly normal (large counts for both groups), and independence conditions.</li>
+          
+          <li>Part b (1pt): Calculates the correct 90% confidence interval for the difference in proportions.</li>
+          
+          <li>Part c (2pts): Interprets the confidence interval in context AND correctly concludes whether there is convincing evidence of a difference, justifying based on whether 0 is included in the interval.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S19Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.H,VAR-6.I,VAR-6.J,VAR-6.K,DAT-3.C,DAT-3.D"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A health organization wants to compare the proportion of adults in two different regions (Region X and Region Y) who have received a flu shot in the past year. They conducted independent random surveys in both regions. The results are summarized in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Region</th><th>Received Flu Shot</th><th>Did Not Receive Flu Shot</th><th>Total Surveyed</th></tr></thead><tbody><tr><td>X</td><td>120</td><td>180</td><td>300</td></tr><tr><td>Y</td><td>150</td><td>150</td><td>300</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses to test if there is a difference in the true proportions of adults who received a flu shot between Region X and Region Y. Identify the appropriate inference procedure.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value and a significance level of alpha = 0.01, what conclusion should the health organization draw? Justify your answer in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses and identifies a two-sample z-test for proportions.</li>
+          
+          <li>Part b (1pt): Verifies the random sampling, nearly normal (large counts for both groups using pooled proportion), and independence conditions.</li>
+          
+          <li>Part c (1pt): Calculates the correct test statistic (z-score) and p-value.</li>
+          
+          <li>Part d (2pts): Compares p-value to alpha, states correct conclusion (reject/fail to reject H0), and justifies it in context regarding a difference in proportions between the regions.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+  </body>
+</html>
