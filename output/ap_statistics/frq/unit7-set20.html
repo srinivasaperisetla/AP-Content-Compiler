@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 20)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 20)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S20Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A farmer claims that a new organic fertilizer increases the average yield of corn per acre beyond the current average of 120 bushels. To test this claim, the farmer applies the new fertilizer to a simple random sample of 30 acres of corn. The average yield for these 30 acres was $\bar{x} = 124.5$ bushels with a standard deviation of $s = 10.3$ bushels.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value and a significance level of $\alpha = 0.05$, what conclusion should the farmer make? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States $H_0: \mu = 120$ and $H_a: \mu > 120$ in context (1pt).</li>
+          
+          <li>Part b (2pts): Verifies conditions: Random sample (1pt), $n < 10\%$ of population (1pt), and normal/large sample ($n=30 \ge 30$) or normal population (1pt). (Maximum 2 points for Part b)</li>
+          
+          <li>Part c (2pts): Calculates the test statistic $t = \frac{\bar{x} - \mu_0}{s/\sqrt{n}} = \frac{124.5 - 120}{10.3/\sqrt{30}} \approx 2.383$ (1pt); Calculates the p-value using $df = 29$, $P(t > 2.383) \approx 0.012$ (1pt).</li>
+          
+          <li>Part d (1pt): Compares p-value ($0.012$) to $\alpha$ ($0.05$). Since $0.012 < 0.05$, rejects $H_0$. Concludes there is convincing evidence that the new fertilizer increases the average yield beyond 120 bushels (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S20Q2"
+      data-difficulty="hard"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.F,VAR-7.G,VAR-7.H,VAR-7.1,DAT-3.G,DAT-3.H"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A statistics teacher wants to compare the effectiveness of two different teaching methods, Method A and Method B, on student test scores. She randomly assigns 25 students to Method A and 28 students to Method B. At the end of the course, all students take the same exam. The results are summarized below:\n| Method | Sample Size | Mean Score | Standard Deviation |\n|---|---|---|---|\n| A | 25 | 82.5 | 6.8 |\n| B | 28 | 79.1 | 7.5 |\nAssume that the conditions for inference have been met.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Method</th><th>Sample Size</th><th>Mean Score</th><th>Standard Deviation</th></tr></thead><tbody><tr><td>A</td><td>25</td><td>82.5</td><td>6.8</td></tr><tr><td>B</td><td>28</td><td>79.1</td><td>7.5</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses to determine if there is a significant difference in the true mean test scores between the two teaching methods.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the test statistic for this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the p-value for this test. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value and a significance level of $\alpha = 0.01$, what conclusion should the teacher make regarding the effectiveness of the two teaching methods? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States $H_0: \mu_A = \mu_B$ and $H_a: \mu_A \ne \mu_B$ in context (1pt).</li>
+          
+          <li>Part b (2pts): Identifies the correct formula for a two-sample t-test statistic (1pt); Calculates the test statistic $t = \frac{(82.5 - 79.1) - 0}{\sqrt{\frac{6.8^2}{25} + \frac{7.5^2}{28}}} \approx 1.76$ (1pt).</li>
+          
+          <li>Part c (1pt): Calculates the p-value using appropriate degrees of freedom (e.g., $df \approx 50.9$ from calculator or $df = 24$ conservatively) for a two-tailed test, $P(</li>
+          
+          <li>t</li>
+          
+          <li>> 1.76) \approx 2 \times 0.042 = 0.084$ (1pt).</li>
+          
+          <li>Part d (1pt): Compares p-value ($0.084$) to $\alpha$ ($0.01$). Since $0.084 > 0.01$, fails to reject $H_0$. Concludes there is not convincing evidence of a significant difference in true mean test scores between the two methods (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S20Q3"
+      data-difficulty="easy"
+      data-skill-codes="4.A,4.B"
+      data-learning-objectives="UNC-4.U,UNC-4.AA,UNC-4.AB"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A manufacturer wants to estimate the true mean lifespan (in hours) of a new type of light bulb with a 95% confidence interval.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe how increasing the sample size, while keeping the confidence level and sample standard deviation constant, would affect the width of the confidence interval.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe how increasing the confidence level from 90% to 99%, while keeping the sample size and sample standard deviation constant, would affect the width of the confidence interval.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If the manufacturer desires a narrower confidence interval without changing the confidence level, identify two ways this could be achieved.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States that increasing sample size decreases the standard error ($\frac{s}{\sqrt{n}}$) in the margin of error, thus decreasing the width of the confidence interval (1pt).</li>
+          
+          <li>Part b (1pt): States that increasing the confidence level requires a larger critical value ($t^*$), which increases the margin of error and thus increases the width of the confidence interval (1pt).</li>
+          
+          <li>Part c (2pts): Identifies two ways: 1) Increase the sample size ($n$) (1pt); 2) Decrease the variability (sample standard deviation, $s$) in the population (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S20Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.R,UNC-4.S"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A coffee company wants to estimate the true mean amount of coffee dispensed into their 12-ounce cups. A random sample of 25 cups is selected, and the mean amount dispensed is $\bar{x} = 11.8$ ounces with a standard deviation of $s = 0.5$ ounces.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure for this situation and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the true mean amount of coffee dispensed into 12-ounce cups.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval calculated in part (b) in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a one-sample t-interval for a population mean (1pt). Verifies conditions: Random sample (given), $n=25 < 30$ but assume population is approximately normal (central limit theorem condition for $t$-interval needs sample size $\ge 30$ or normal population, with $n=25$ it is usually assumed the population is normal, or a graph of the sample data shows no strong skewness/outliers) (1pt).</li>
+          
+          <li>Part b (2pts): Calculates the correct degrees of freedom ($df=24$) and critical t-value (e.g., $t^* \approx 2.064$) (1pt). Calculates the interval $11.8 \pm 2.064 \left(\frac{0.5}{\sqrt{25}}\right) = 11.8 \pm 0.2064$, resulting in $(11.5936, 12.0064)$ (1pt).</li>
+          
+          <li>Part c (1pt): Correctly interprets the interval: "We are 95% confident that the true mean amount of coffee dispensed into 12-ounce cups is between $11.5936$ ounces and $12.0064$ ounces."</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S20Q5"
+      data-difficulty="easy"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.E"
+      data-learning-objectives="VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.F"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A factory claims that the mean weight of their potato chip bags is 14 ounces. A quality control manager suspects the true mean weight is less than 14 ounces. She takes a random sample of 30 bags and finds a mean weight of $\bar{x} = 13.8$ ounces with a standard deviation of $s = 0.4$ ounces.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a significance test and identify the appropriate test procedure.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and $p$-value for this test. Based on a significance level of $\alpha = 0.05$, what conclusion should the quality control manager make? Justify your conclusion.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States $H_0: \mu = 14$ and $H_a: \mu < 14$ (1pt). Identifies a one-sample t-test for a population mean (1pt).</li>
+          
+          <li>Part b (1pt): Verifies conditions: Random sample (given), $n=30 \ge 30$ (sufficiently large for CLT for t-test) (1pt).</li>
+          
+          <li>Part c (3pts): Calculates test statistic $t = \frac{13.8 - 14}{0.4/\sqrt{30}} \approx -2.739$ with $df=29$ (1pt). Calculates $p$-value $P(t < -2.739) \approx 0.0051$ (1pt). Compares $p$-value to $\alpha$ ($0.0051 < 0.05$) and concludes to reject $H_0$. Justifies that there is significant evidence that the true mean weight of potato chip bags is less than 14 ounces (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

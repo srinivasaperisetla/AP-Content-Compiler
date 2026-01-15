@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 12)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 12)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S12Q1"
+      data-difficulty="easy"
+      data-skill-codes="3.A,4.B"
+      data-learning-objectives="UNC-2.A,VAR-4.A"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A company manufactures light bulbs, and 15% are defective. A quality control manager wants to estimate the probability that in a random sample of 10 bulbs, exactly 2 are defective.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe how you would set up and perform a simulation using a table of random digits to estimate the probability that exactly 2 out of 10 bulbs are defective. Clearly indicate what each digit represents and how you would count the number of defective bulbs.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Using the binomial probability formula, calculate the theoretical probability that exactly 2 out of 10 randomly selected bulbs are defective, assuming the company's claim is true.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If a simulation yielded an estimated probability of $0.20$, explain how this compares to your calculated theoretical probability from part (b).
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Assigns digits for defective/non-defective (1pt); Describes how to select 10 digits and count defective bulbs, repeating for multiple trials (1pt).</li>
+          
+          <li>Part b (1pt): Sets up binomial probability with correct $n, k, p$ values and calculates $P(X=2) = \binom{10}{2}(0.15)^2(0.85)^8 \approx 0.2759$ (1pt).</li>
+          
+          <li>Part c (1pt): Compares the simulated probability ($0.20$) to the theoretical probability ($0.2759$) and explains the difference (e.g., simulation is an estimate, not exact; closer with more trials) (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S12Q2"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.B,UNC-3.C,UNC-3.D"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A recent study claims that 70% of high school students use social media for more than 3 hours a day. A random sample of 15 high school students is selected. Let $X$ be the number of students in the sample who use social media for more than 3 hours a day.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Justify why $X$ can be modeled by a binomial distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the probability that exactly 12 students in the sample use social media for more than 3 hours a day.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the mean and standard deviation of $X$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the mean calculated in part (c) in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States the four binomial conditions are met: Fixed number of trials ($n=15$), two outcomes (success/failure), independent trials (random sample), constant probability of success ($p=0.70$) (1pt).</li>
+          
+          <li>Part b (1pt): Uses binomial formula $P(X=12) = \binom{15}{12}(0.70)^{12}(0.30)^3 \approx 0.1700$ (1pt).</li>
+          
+          <li>Part c (2pts): Calculates mean $\mu_X = np = 15(0.70) = 10.5$ (1pt); Calculates standard deviation $\sigma_X = \sqrt{np(1-p)} = \sqrt{15(0.70)(0.30)} = \sqrt{3.15} \approx 1.7748$ (1pt).</li>
+          
+          <li>Part d (1pt): Interprets $\mu_X=10.5$ as the average number of students in many such samples of 15 that would use social media for more than 3 hours a day (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S12Q3"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.E,UNC-3.F,UNC-3.G,VAR-4.D"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">An automobile manufacturer knows that 1 out of every 20 cars produced has a minor defect. Cars are inspected sequentially as they come off the assembly line.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What is the probability that the first car with a minor defect is the 5th car inspected?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What is the expected number of cars that need to be inspected until the first car with a minor defect is found? Interpret this value in context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Given that the first 3 cars inspected had no minor defects, what is the probability that the first car with a minor defect is found on the 5th car inspected?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies this as a geometric distribution with $p = 1/20 = 0.05$ and calculates $P(X=5) = (0.95)^{4}(0.05) \approx 0.0407$ (1pt).</li>
+          
+          <li>Part b (2pts): Calculates the expected value $E(X) = 1/p = 1/0.05 = 20$ (1pt); Interprets $E(X)=20$ as the long-run average number of cars inspected until the first defect is found (1pt).</li>
+          
+          <li>Part c (2pts): Recognizes the memoryless property of geometric distribution or uses conditional probability directly. $P(X=5</li>
+          
+          <li>X>3) = P(X=2 \text{ for new count}) = (0.95)^1(0.05) \approx 0.0475$ (1pt for correct understanding of independence/memoryless, 1pt for correct calculation) (2pts).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S12Q4"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C"
+      data-learning-objectives="VAR-5.E,VAR-5.F"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A small coffee shop records the time (in minutes) a customer spends ordering at the counter, $C$, and the time a customer spends waiting for their drink to be prepared, $W$. Both $C$ and $W$ are independent random variables. The mean and standard deviation for each are: $E(C) = 2.5$ minutes, $\sigma_C = 0.8$ minutes; $E(W) = 3.0$ minutes, $\sigma_W = 1.2$ minutes. A customer's total time in the shop, $T$, is given by $T = C + W$. The shop also offers a premium service where the ordering time is reduced by 1 minute and then multiplied by 0.5. Let $C'$ be the ordering time for the premium service.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the mean and standard deviation of $C'$, the ordering time for the premium service.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe the effect of the linear transformation on the mean and standard deviation of the ordering time from $C$ to $C'$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the mean and standard deviation of the total time $T$ a regular customer spends in the shop.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): For $C' = 0.5(C-1)$, calculates $E(C') = 0.5(E(C)-1) = 0.5(2.5-1) = 0.5(1.5) = 0.75$ minutes (1pt); Calculates $\sigma_{C'} =</li>
+          
+          <li>0.5</li>
+          
+          <li>\sigma_C = 0.5(0.8) = 0.4$ minutes (1pt).</li>
+          
+          <li>Part b (1pt): Explains that subtracting a constant affects only the mean (shifts it), not the standard deviation; multiplying by a constant affects both the mean (scaled by the constant) and the standard deviation (scaled by the absolute value of the constant) (1pt).</li>
+          
+          <li>Part c (2pts): Calculates $E(T) = E(C+W) = E(C) + E(W) = 2.5 + 3.0 = 5.5$ minutes (1pt); Calculates $\sigma_T = \sqrt{\sigma_C^2 + \sigma_W^2} = \sqrt{(0.8)^2 + (1.2)^2} = \sqrt{0.64 + 1.44} = \sqrt{2.08} \approx 1.4422$ minutes (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S12Q5"
+      data-difficulty="medium"
+      data-skill-codes="3.A,4.B"
+      data-learning-objectives="VAR-4.A,VAR-4.B,VAR-4.C,VAR-4.D"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A survey was conducted among 200 residents in a city about their pet ownership and living situation (apartment or house). The results are summarized in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th></th><th>Owns Pet</th><th>Does Not Own Pet</th><th>Total</th></tr></thead><tbody><tr><td>Lives in Apartment</td><td>30</td><td>40</td><td>70</td></tr><tr><td>Lives in House</td><td>50</td><td>80</td><td>130</td></tr><tr><td>Total</td><td>80</td><td>120</td><td>200</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What is the probability that a randomly selected resident owns a pet?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Given that a randomly selected resident lives in an apartment, what is the probability that they own a pet?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Are the events "owns a pet" and "lives in an apartment" mutually exclusive? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Are the events "owns a pet" and "lives in an apartment" independent? Justify your answer using probabilities.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correct calculation $P(\text{Owns Pet}) = \frac{80}{200} = 0.40$</li>
+          
+          <li>Part b (1pt): Correct calculation $P(\text{Owns Pet</li>
+          
+          <li>Apartment}) = \frac{30}{70} \approx 0.4286$</li>
+          
+          <li>Part c (1pt): States "not mutually exclusive" AND provides correct justification (e.g., $P(\text{Owns Pet and Apartment}) = 30/200 \ne 0$)</li>
+          
+          <li>Part d (2pts): States "not independent" AND provides correct justification (e.g., $P(\text{Owns Pet}) \ne P(\text{Owns Pet</li>
+          
+          <li>Apartment})$ or $P(\text{Owns Pet and Apartment}) \ne P(\text{Owns Pet}) \times P(\text{Apartment})$)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

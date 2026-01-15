@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 9)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 9)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S9Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.A,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.B,VAR-8.C,VAR-8.E,VAR-8.D,VAR-8.F,VAR-8.G,DAT-3.I,DAT-3.J"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A cereal company claims that 30% of its cereal boxes contain a prize, 50% contain a coupon for a free milk, and 20% contain nothing. A consumer advocacy group suspects the proportions are different. To test this, they randomly select 200 boxes of cereal and find that 50 boxes contain a prize, 120 contain a coupon, and 30 contain nothing.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this test, specifically addressing the expected counts.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected number of boxes for each category assuming the company's claim is true.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Calculate the chi-square test statistic for these data.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Based on the test statistic and a p-value of $0.007$, what conclusion can be made at the $\alpha = 0.05$ significance level? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states $H_0: p_{prize}=0.30, p_{coupon}=0.50, p_{nothing}=0.20$ and $H_a:$ At least one proportion is different from the stated value.</li>
+          
+          <li>Part b (1pt): Verifies random sample (given). Shows calculation of expected counts for each category (60, 100, 40) and states all are $\ge 5$.</li>
+          
+          <li>Part c (1pt): Calculates expected counts: Prize: $200 \times 0.30 = 60$; Coupon: $200 \times 0.50 = 100$; Nothing: $200 \times 0.20 = 40$.</li>
+          
+          <li>Part d (1pt): Calculates $\chi^2 = \frac{(50-60)^2}{60} + \frac{(120-100)^2}{100} + \frac{(30-40)^2}{40} = 1.667 + 4 + 2.5 = 8.167$.</li>
+          
+          <li>Part e (1pt): Since $p$-value $0.007 < \alpha=0.05$, reject $H_0$. Conclude there is significant evidence that the true proportions of prizes, coupons, and nothing in the cereal boxes are different from the company's claim.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S9Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.A,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.H,VAR-8.L,VAR-8.M,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A large chain of department stores wants to compare customer satisfaction levels across three of its major locations (Location A, Location B, Location C). They randomly surveyed 150 customers from each location and classified their satisfaction as "Satisfied," "Neutral," or "Dissatisfied." The results are summarized in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Location</th><th>Satisfied</th><th>Neutral</th><th>Dissatisfied</th></tr></thead><tbody><tr><td>A</td><td>90</td><td>35</td><td>25</td></tr><tr><td>B</td><td>105</td><td>30</td><td>15</td></tr><tr><td>C</td><td>80</td><td>40</td><td>30</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the appropriate chi-square test and describe how to verify the conditions for inference, specifically addressing the expected counts condition.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected number of "Dissatisfied" customers for Location A if there is no difference in satisfaction levels across locations.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Given that the chi-square test statistic is $14.12$ with $4$ degrees of freedom, and the p-value is $0.007$, interpret this p-value in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Based on the p-value and a significance level of $\alpha = 0.01$, what conclusion should the store chain make?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): $H_0:$ The distribution of customer satisfaction is the same across the three store locations. $H_a:$ The distribution of customer satisfaction is not the same across the three store locations.</li>
+          
+          <li>Part b (1pt): Identifies a chi-square test for homogeneity. Describes conditions: Random samples (given in context). Describes how to check expected counts by calculating $E_{rc} = \frac{(\text{row total}) \times (\text{column total})}{(\text{grand total})}$ for each cell and states that all calculated expected counts must be at least 5.</li>
+          
+          <li>Part c (1pt): Total Dissatisfied $= 25+15+30=70$. Total customers surveyed $= 150+150+150=450$. Expected for Location A Dissatisfied $= \frac{150 \times 70}{450} \approx 23.33$.</li>
+          
+          <li>Part d (1pt): If there were no difference in customer satisfaction across locations, there would be a $0.007$ probability of observing sample results as extreme as, or more extreme than, those observed by chance alone.</li>
+          
+          <li>Part e (1pt): Since $p$-value $0.007 < \alpha=0.01$, reject $H_0$. There is convincing evidence that the distribution of customer satisfaction is not the same across the three store locations.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S9Q3"
+      data-difficulty="hard"
+      data-skill-codes="1.F,1.E,4.C,3.A,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.H,VAR-8.L,VAR-8.M,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A researcher wants to investigate if there is an association between the type of pet a person owns (Dog, Cat, Other) and their preferred method of relaxation (Reading, Outdoor Activities, Watching TV). A random sample of 360 adults was surveyed, and the results are summarized in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Pet Ownership</th><th>Reading</th><th>Outdoor Activities</th><th>Watching TV</th><th>Total</th></tr></thead><tbody><tr><td>Dog</td><td>80</td><td>60</td><td>40</td><td>180</td></tr><tr><td>Cat</td><td>30</td><td>45</td><td>50</td><td>125</td></tr><tr><td>Other</td><td>10</td><td>15</td><td>30</td><td>55</td></tr><tr><td>Total</td><td>120</td><td>120</td><td>120</td><td>360</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the appropriate chi-square test and explain why it is appropriate for this scenario.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected number of people who own "Dogs" and prefer "Watching TV" if there is no association between pet ownership and preferred relaxation method.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The chi-square test statistic is calculated to be $9.85$ with $4$ degrees of freedom, and the corresponding p-value is $0.043$. Interpret this p-value in the context of the problem and make a conclusion at the $\alpha = 0.05$ significance level.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        If a significant association is found, explain which combination(s) of pet ownership and relaxation method would contribute most to the chi-square statistic. (No calculation needed, focus on general principle).
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): $H_0:$ There is no association between pet ownership and preferred relaxation method. $H_a:$ There is an association between pet ownership and preferred relaxation method.</li>
+          
+          <li>Part b (1pt): Identifies a chi-square test for independence. Explains it is appropriate because two categorical variables are being compared from a single sample to see if there is an association.</li>
+          
+          <li>Part c (1pt): Row total for Dogs = $180$. Column total for Watching TV = $120$. Grand total = $360$. Expected count for (Dogs, Watching TV) $= \frac{180 \times 120}{360} = 60$.</li>
+          
+          <li>Part d (1pt): P-value interpretation: Assuming there is no association between pet ownership and preferred relaxation method, there is a $0.043$ probability of observing a chi-square test statistic as extreme as $9.85$ or more extreme by chance alone. Conclusion: Since $p$-value $0.043 < \alpha=0.05$, reject $H_0$. There is convincing evidence of an association between pet ownership and preferred relaxation method.</li>
+          
+          <li>Part e (1pt): The cells where the observed count is furthest from the expected count would contribute most to the chi-square statistic. Specifically, cells with large $(Observed - Expected)^2$ values relative to their expected counts.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S9Q4"
+      data-difficulty="easy"
+      data-skill-codes="1.F,1.E,4.C,3.A,4.B"
+      data-learning-objectives="VAR-8.B,VAR-8.C,VAR-8.E,VAR-8.D,VAR-1.J,DAT-3.I"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A board game enthusiast suspects that a particular six-sided die is not fair. To test this, they roll the die 120 times and record the outcome of each roll. The results are shown in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Outcome</th><th>Frequency</th></tr></thead><tbody><tr><td>1</td><td>15</td></tr><tr><td>2</td><td>22</td></tr><tr><td>3</td><td>18</td></tr><tr><td>4</td><td>25</td></tr><tr><td>5</td><td>17</td></tr><tr><td>6</td><td>23</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses to test if the die is fair.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected number of times each outcome (1 through 6) should occur if the die is fair.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Explain what the "conditions for inference" are for this chi-square test, specifically regarding expected counts and sample size.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        If the calculated chi-square test statistic is very large, what would that suggest about the fairness of the die?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): $H_0: p_1=p_2=p_3=p_4=p_5=p_6=\frac{1}{6}$. $H_a:$ At least one proportion is different from $\frac{1}{6}$.</li>
+          
+          <li>Part b (1pt): Expected count for each outcome $= 120 \times \frac{1}{6} = 20$.</li>
+          
+          <li>Part c (1pt): Conditions are: 1. Random sample/independent trials. 2. All expected counts must be at least 5. (Here, all expected counts are 20, which is $\ge 5$). 3. Large enough sample size for chi-square approximation.</li>
+          
+          <li>Part d (1pt): A very large chi-square test statistic suggests that the observed counts are significantly different from the expected counts. This would provide strong evidence against the null hypothesis, suggesting that the die is not fair.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S9Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.C,VAR-8.J,VAR-8.K,VAR-8.I,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A school district is evaluating the effectiveness of two different online learning platforms, Platform A and Platform B, on student engagement. They randomly selected 100 students from High School X to use Platform A and 100 different students from High School Y to use Platform B. After one semester, they classified each student's engagement level as "High," "Medium," or "Low." The researcher wants to determine if there is a difference in the distribution of engagement levels between students using Platform A and students using Platform B.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate chi-square test for this scenario and justify your choice.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        State the null and alternative hypotheses for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The calculated chi-square test statistic is $7.50$ with $2$ degrees of freedom, and the corresponding p-value is $0.023$. Interpret this p-value in the context of the problem and make a conclusion at the $\alpha = 0.05$ significance level.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Describe a Type I error in the context of this study.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): A chi-square test for homogeneity is appropriate. Justification: Two independent random samples (one from High School X/Platform A, one from High School Y/Platform B) are being compared on the distribution of a single categorical variable (engagement level).</li>
+          
+          <li>Part b (1pt): $H_0:$ The distribution of student engagement levels is the same for Platform A and Platform B. $H_a:$ The distribution of student engagement levels is not the same for Platform A and Platform B.</li>
+          
+          <li>Part c (1pt): P-value interpretation: Assuming there is no difference in the distribution of student engagement levels between Platform A and Platform B, there is a $0.023$ probability of observing a chi-square test statistic as extreme as $7.50$ or more extreme by chance alone. Conclusion: Since $p$-value $0.023 < \alpha=0.05$, reject $H_0$. There is convincing evidence that the distribution of student engagement levels is different for Platform A and Platform B.</li>
+          
+          <li>Part d (1pt): A Type I error would occur if the school district concludes that there is a difference in the distribution of student engagement levels between Platform A and Platform B, when in reality there is no difference.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

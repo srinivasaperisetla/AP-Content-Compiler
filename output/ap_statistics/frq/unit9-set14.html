@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 14)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 14)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S14Q1"
+      data-difficulty="easy"
+      data-skill-codes="1.A,4.C"
+      data-learning-objectives="VAR-1.K,VAR-7.L"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A researcher is investigating the relationship between the number of hours spent studying for an exam ($x$) and the score received on the exam ($y$) for a random sample of 20 students. A scatterplot of the data shows a general positive linear trend, and residual plots appear scattered with no obvious pattern.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify a statistical question about the relationship between study hours and exam scores that could be answered using inference for the slope of a regression model.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe how to verify the conditions for performing inference for the slope of the regression model in this context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Student identifies a question about whether there is a significant linear relationship between study hours and exam scores in the population, or estimates the rate of change of exam score per hour of study.</li>
+          
+          <li>Part b (2pts): Student describes checking linearity (scatterplot/residual plot shows linear pattern and no obvious pattern in residuals), independence (random sample of 20 students and 20 < 10% of all students), normality of residuals (normal probability plot or histogram of residuals is approximately normal), equal variance of residuals (residual plot shows no fan shape), and random sampling.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S14Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.D,3.D,4.C"
+      data-learning-objectives="UNC-4.AC,UNC-4.AF,UNC-4.AD"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A forester wants to estimate the relationship between a tree's height (in meters) and its trunk diameter (in centimeters). Data from a random sample of 30 trees were collected. The least-squares regression line is $\hat{y} = 1.2 + 0.5x$, where $x$ is diameter and $y$ is height. A computer output shows the standard error of the slope as $SE_b = 0.08$ and the degrees of freedom as $df = 28$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure to estimate the slope of the true regression line.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for constructing a confidence interval for the slope of the regression model, assuming relevant plots and data suggest they are met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate a 95% confidence interval for the slope of the true regression line.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identify a t-interval for the slope of a regression model.</li>
+          
+          <li>Part b (2pts): Verifies linearity (scatterplot showed linear trend, residual plot showed no pattern), independence (random sample of 30 trees, 30 < 10% of all trees), normality of residuals (normal probability plot of residuals approximately linear), equal variance of residuals (residual plot showed no fan shape), and random sampling.</li>
+          
+          <li>Part c (2pts): Calculate $b \pm t^* SE_b$. For $df=28$ and 95% confidence, $t^*_{28, 0.025} \approx 2.048$. Interval: $0.5 \pm 2.048(0.08) = 0.5 \pm 0.16384 = (0.336, 0.664)$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S14Q3"
+      data-difficulty="medium"
+      data-skill-codes="4.A,4.B,4.D"
+      data-learning-objectives="UNC-4.AG,UNC-4.AH,UNC-4.AI"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A company is studying the relationship between its monthly advertising expenditures (in thousands of dollars) and its monthly sales (in thousands of units). A 90% confidence interval for the true slope of the regression line relating sales to advertising expenditures is $(0.85, 1.25)$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Interpret the 90% confidence interval for the slope in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        The company claims that for every additional thousand dollars spent on advertising, sales increase by at least 1000 units. Justify whether this claim is supported by the confidence interval.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe how increasing the sample size (number of months) used to construct the confidence interval would affect the width of the interval, assuming all other factors remain constant.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): We are 90% confident that for every additional thousand dollars spent on advertising, the true mean increase in monthly sales is between 0.85 thousand units and 1.25 thousand units.</li>
+          
+          <li>Part b (1pt): Since the entire interval $(0.85, 1.25)$ is above 1 (which represents a 1000-unit increase per thousand dollars), the claim that sales increase by at least 1000 units per thousand dollars of advertising is supported.</li>
+          
+          <li>Part c (1pt): Increasing the sample size would generally decrease the standard error of the slope, leading to a smaller margin of error and thus a narrower confidence interval.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S14Q4"
+      data-difficulty="easy"
+      data-skill-codes="1.E,1.F,4.C"
+      data-learning-objectives="VAR-7.J,VAR-7.K,VAR-7.L"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">An ice cream shop owner wants to determine if there is a linear relationship between the daily high temperature (in degrees Fahrenheit) and the number of ice cream cones sold. Data for 25 randomly selected days were collected. The owner plans to perform a significance test for the slope of the regression line.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate selection of a testing method for the slope of the regression model.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        State the null and alternative hypotheses for the significance test the owner plans to perform.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe how to verify the conditions for conducting this significance test, assuming the owner has access to all necessary plots and calculations.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identify a t-test for the slope of a regression model.</li>
+          
+          <li>Part b (1pt): $H_0: \beta = 0$ (There is no linear relationship between daily high temperature and ice cream cones sold) versus $H_a: \beta \ne 0$ (There is a linear relationship between daily high temperature and ice cream cones sold).</li>
+          
+          <li>Part c (2pts): Describe checking linearity (scatterplot of data, residual plot), independence (random sample of 25 days, 25 < 10% of all days), normality of residuals (normal probability plot or histogram of residuals), equal variance of residuals (residual plot), and random sampling.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S14Q5"
+      data-difficulty="medium"
+      data-skill-codes="3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.M,DAT-3.M,DAT-3.N"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A farming company is investigating the relationship between the amount of fertilizer applied (in kg per acre) and the resulting crop yield (in bushels per acre). For a random sample of 40 plots, a linear regression model was fitted. The estimated slope is $b = 5.2$ and its standard error is $SE_b = 2.1$. The degrees of freedom are 38. A significance test for the slope resulted in a p-value of 0.019.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the test statistic for the slope of the regression line.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Interpret the p-value in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on the results, justify a claim about the effect of fertilizer on crop yield at the $\alpha = 0.05$ significance level.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): $t = \frac{b - \beta_0}{SE_b} = \frac{5.2 - 0}{2.1} \approx 2.476$.</li>
+          
+          <li>Part b (2pts): Assuming there is no linear relationship between fertilizer amount and crop yield, there is a 0.019 probability of observing a sample slope as extreme as or more extreme than $b=5.2$ by random chance alone.</li>
+          
+          <li>Part c (1pt): Since the p-value of $0.019 < \alpha = 0.05$, we reject the null hypothesis. There is sufficient evidence to conclude that there is a significant linear relationship between the amount of fertilizer applied and crop yield.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

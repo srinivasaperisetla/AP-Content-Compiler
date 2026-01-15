@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 16)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 16)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S16Q1"
+      data-difficulty="easy"
+      data-skill-codes="1.A,4.C"
+      data-learning-objectives="VAR-1.K,UNC-4.AD,VAR-7.L"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A biologist is studying the growth of a certain plant species. She measured the height (in cm) of 25 plants over a period of 10 days and recorded the number of days since planting ($x$) and the average height ($y$). The scatterplot of the data and the corresponding residual plot are shown below.</div>
+
+      
+      <div class="diagram">
+         <svg width="400" height="300" viewBox="0 0 400 300" style="background-color:white;"><rect x="0" y="0" width="400" height="300" fill="white" /><g transform="translate(50,250) scale(1,-1)"><rect x="0" y="0" width="250" height="200" stroke="black" fill="none" /><line x1="0" y1="0" x2="250" y2="0" stroke="black" /><line x1="0" y1="0" x2="0" y2="200" stroke="black" /><text x="125" y="-30" text-anchor="middle" font-size="12" fill="black" transform="scale(1,-1)">Days Since Planting (x)</text><text x="-30" y="100" text-anchor="middle" font-size="12" fill="black" transform="rotate(270) scale(1,-1)">Average Height (cm) (y)</text><circle cx="10" cy="15" r="2" fill="black" /><circle cx="20" cy="25" r="2" fill="black" /><circle cx="30" cy="35" r="2" fill="black" /><circle cx="40" cy="45" r="2" fill="black" /><circle cx="50" cy="55" r="2" fill="black" /><circle cx="60" cy="65" r="2" fill="black" /><circle cx="70" cy="75" r="2" fill="black" /><circle cx="80" cy="85" r="2" fill="black" /><circle cx="90" cy="95" r="2" fill="black" /><circle cx="100" cy="105" r="2" fill="black" /><circle cx="110" cy="115" r="2" fill="black" /><circle cx="120" cy="125" r="2" fill="black" /><circle cx="130" cy="135" r="2" fill="black" /><circle cx="140" cy="145" r="2" fill="black" /><circle cx="150" cy="155" r="2" fill="black" /><circle cx="160" cy="160" r="2" fill="black" /><circle cx="170" cy="165" r="2" fill="black" /><circle cx="180" cy="170" r="2" fill="black" /><circle cx="190" cy="175" r="2" fill="black" /><circle cx="200" cy="180" r="2" fill="black" /><circle cx="210" cy="185" r="2" fill="black" /><circle cx="220" cy="190" r="2" fill="black" /><circle cx="230" cy="195" r="2" fill="black" /><circle cx="240" cy="198" r="2" fill="black" /></g><text x="150" y="20" font-size="14" font-weight="bold" text-anchor="middle" fill="black">Scatterplot of Plant Height vs. Days</text><g transform="translate(50,250) scale(1,-1)"><g transform="translate(0,-110)"><rect x="0" y="0" width="250" height="100" stroke="black" fill="none" /><line x1="0" y1="50" x2="250" y2="50" stroke="black" /><text x="125" y="-20" text-anchor="middle" font-size="12" fill="black" transform="scale(1,-1)">Days Since Planting (x)</text><text x="-30" y="50" text-anchor="middle" font-size="12" fill="black" transform="rotate(270) scale(1,-1)">Residuals</text><circle cx="10" cy="52" r="2" fill="black" /><circle cx="20" cy="48" r="2" fill="black" /><circle cx="30" cy="51" r="2" fill="black" /><circle cx="40" cy="49" r="2" fill="black" /><circle cx="50" cy="53" r="2" fill="black" /><circle cx="60" cy="47" r="2" fill="black" /><circle cx="70" cy="50" r="2" fill="black" /><circle cx="80" cy="52" r="2" fill="black" /><circle cx="90" cy="49" r="2" fill="black" /><circle cx="100" cy="51" r="2" fill="black" /><circle cx="110" cy="48" r="2" fill="black" /><circle cx="120" cy="53" r="2" fill="black" /><circle cx="130" cy="47" r="2" fill="black" /><circle cx="140" cy="50" r="2" fill="black" /><circle cx="150" cy="52" r="2" fill="black" /><circle cx="160" cy="49" r="2" fill="black" /><circle cx="170" cy="51" r="2" fill="black" /><circle cx="180" cy="48" r="2" fill="black" /><circle cx="190" cy="53" r="2" fill="black" /><circle cx="200" cy="47" r="2" fill="black" /><circle cx="210" cy="50" r="2" fill="black" /><circle cx="220" cy="52" r="2" fill="black" /><circle cx="230" cy="49" r="2" fill="black" /><circle cx="240" cy="51" r="2" fill="black" /></g></g><text x="150" y="160" font-size="14" font-weight="bold" text-anchor="middle" fill="black">Residual Plot</text></svg> 
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Based on the scatterplot, describe the direction, form, and strength of the relationship between the number of days since planting and the average plant height. Does the scatterplot suggest a linear relationship is appropriate for modeling the data?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Use the provided graphs to verify the conditions necessary for performing inference for the slope of the regression line.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Describes the direction (positive), form (linear), and strength (strong) of the relationship (1pt). States that a linear relationship is appropriate based on the scatterplot's appearance (1pt).</li>
+          
+          <li>Part b (2pts): Verifies linearity condition using the scatterplot (no obvious curve) and residual plot (no pattern) (1pt). Verifies equal variance condition using the residual plot (no fanning/funneling) (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S16Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.AC,UNC-4.AD,UNC-4.AF,UNC-4.AG"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A researcher is studying the relationship between the number of hours students spend studying per week and their GPA. A random sample of 30 students was selected, and data on their weekly study hours ($x$) and GPA ($y$) were collected. A linear regression analysis was performed, yielding the following results: $\hat{y} = 2.5 + 0.05x$, standard error of the slope $SE_b = 0.012$, and degrees of freedom $df = 28$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference method to construct a confidence interval for the true slope of the regression line relating weekly study hours to GPA.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for constructing this confidence interval. Assume a residual plot shows no clear pattern, and a histogram of residuals shows no strong skewness or outliers.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate a 95% confidence interval for the true slope of the regression line.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the calculated confidence interval in the context of this study.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly identifies a t-interval for the slope of a regression line.</li>
+          
+          <li>Part b (1pt): States and verifies (or acknowledges assumption of) linearity, independence, normality of residuals, equal variance of residuals, and randomness of data collection.</li>
+          
+          <li>Part c (2pts): Shows correct calculation using $b \pm t^* SE_b$. For $df=28$, $t^*=2.048$. Interval: $0.05 \pm 2.048(0.012) = (0.025424, 0.074576)$.</li>
+          
+          <li>Part d (1pt): Correctly interprets the interval as "We are 95% confident that for each additional hour a student studies per week, their GPA will increase by an amount between 0.0254 and 0.0746, on average."</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S16Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.E"
+      data-learning-objectives="VAR-7.J,VAR-7.K,VAR-7.L,VAR-7.M,DAT-3.N"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A company wants to determine if there is a linear relationship between the age of an employee (in years) and their annual sick days taken. A random sample of 25 employees was taken. The regression analysis yielded a sample slope of $b = 0.25$ sick days per year, with a standard error of the slope $SE_b = 0.10$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses to test if there is a positive linear relationship between employee age and annual sick days.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test. Assume a scatterplot shows a linear pattern, and residuals are approximately normally distributed with constant variance.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic for the slope.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on a significance level of $\alpha = 0.05$, what conclusion can be made regarding the relationship between employee age and annual sick days? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states $H_0: \beta = 0$ and $H_a: \beta > 0$.</li>
+          
+          <li>Part b (1pt): States and verifies (or acknowledges assumption of) linearity, independence, normality of residuals, equal variance of residuals, and randomness of data collection.</li>
+          
+          <li>Part c (1pt): Calculates test statistic $t = \frac{b - \beta_0}{SE_b} = \frac{0.25 - 0}{0.10} = 2.5$.</li>
+          
+          <li>Part d (2pts): For $df = 25-2=23$, $t=2.5$. P-value (one-sided) is between 0.005 and 0.01. Since p-value $< 0.05$, reject $H_0$. Concludes there is convincing evidence of a positive linear relationship between employee age and annual sick days.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S16Q4"
+      data-difficulty="easy"
+      data-skill-codes="4.B,4.D,4.A"
+      data-learning-objectives="UNC-4.AG,UNC-4.AH,UNC-4.AI"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A marketing analyst constructed a 90% confidence interval for the slope of the regression line relating advertising spending (in thousands of dollars) to monthly sales (in thousands of dollars). The calculated interval was $(0.85, 1.25)$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Interpret this 90% confidence interval in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        A company claims that for every additional $\$1000$ spent on advertising, monthly sales increase by more than $\$750$. Based on this confidence interval, does this claim appear plausible? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If the marketing analyst wanted to construct a narrower 90% confidence interval for the slope, what could be done, assuming all other factors remain constant?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): We are 90% confident that for every additional $\$1000$ spent on advertising, the average monthly sales will increase by an amount between $\$850$ and $\$1250$.</li>
+          
+          <li>Part b (2pts): The claim is plausible because the entire interval $(0.85, 1.25)$ is above $0.75$. Since all values in the interval are greater than $0.75$, it is plausible that the true increase is more than $\$750$ per $\$1000$ advertising.</li>
+          
+          <li>Part c (1pt): To make the interval narrower, the sample size could be increased.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S16Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.A,1.D,4.C,3.D,4.B"
+      data-learning-objectives="VAR-1.K,UNC-4.AC,UNC-4.AD,UNC-4.AF,UNC-4.AG"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A biologist is studying the growth of a certain species of tree. She collects data on the age (in years) and height (in meters) for a random sample of 15 trees. The scatterplot shows the relationship between age and height. The linear regression analysis yields a slope of $b = 0.75$ meters/year and a standard error of the slope $SE_b = 0.12$.</div>
+
+      
+      <div class="diagram">
+         <svg width="400" height="300" viewBox="0 0 400 300" style="background-color:white;"><line x1="50" y1="250" x2="350" y2="250" stroke="black"/><line x1="50" y1="250" x2="50" y2="50" stroke="black"/><text x="40" y="270" font-size="12">0</text><text x="340" y="270" font-size="12">Age (years)</text><text x="10" y="60" font-size="12" transform="rotate(-90 10 60)">Height (meters)</text><circle cx="60" cy="240" r="3" fill="black"/><circle cx="80" cy="225" r="3" fill="black"/><circle cx="100" cy="210" r="3" fill="black"/><circle cx="120" cy="200" r="3" fill="black"/><circle cx="140" cy="185" r="3" fill="black"/><circle cx="160" cy="170" r="3" fill="black"/><circle cx="180" cy="160" r="3" fill="black"/><circle cx="200" cy="145" r="3" fill="black"/><circle cx="220" cy="130" r="3" fill="black"/><circle cx="240" cy="115" r="3" fill="black"/><circle cx="260" cy="100" r="3" fill="black"/><circle cx="280" cy="90" r="3" fill="black"/><circle cx="300" cy="75" r="3" fill="black"/><circle cx="320" cy="60" r="3" fill="black"/><circle cx="340" cy="55" r="3" fill="black"/></svg> 
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the relationship between tree age and height as shown in the scatterplot.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the appropriate inference method to construct a 90% confidence interval for the true slope of the regression line.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        State and verify the conditions for constructing this confidence interval. Assume residual plots show no clear pattern and residuals are roughly normal.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Calculate a 90% confidence interval for the true slope of the regression line.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Interpret the calculated confidence interval in the context of this study.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Describes a positive, linear, moderately strong relationship with no obvious outliers between tree age and height from the provided scatterplot.</li>
+          
+          <li>Part b (1pt): A t-interval for the slope of a regression line.</li>
+          
+          <li>Part c (1pt): Conditions are: Linearity (scatterplot appears linear, residual plot shows no pattern), Independence (random sample, 15 < 10% of population), Normality of residuals (histogram of residuals approximately normal), Equal variance of residuals (residual plot shows no fanning), Randomness (random sample).</li>
+          
+          <li>Part d (2pts): For $df = 15-2=13$, $t^*=1.771$. Interval: $0.75 \pm 1.771(0.12) = (0.53748, 0.96252)$.</li>
+          
+          <li>Part e (1pt): We are 90% confident that for each additional year of age, the average height of this tree species increases by an amount between 0.5375 and 0.9625 meters.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

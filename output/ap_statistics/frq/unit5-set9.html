@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 9)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 9)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S9Q1"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.K,UNC-3.L,UNC-3.M"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A polling organization claims that 60% of registered voters in a certain state support a proposed tax reform. A random sample of 250 registered voters is selected from this state. Let $\hat{p}$ be the proportion of voters in the sample who support the tax reform.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the mean and standard deviation of the sampling distribution of $\hat{p}$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify that the sampling distribution of $\hat{p}$ can be approximated by a normal distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the sample proportion $\hat{p}$ is less than 0.55.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates $\mu_{\hat{p}} = 0.60$ (1pt) and $\sigma_{\hat{p}} = \sqrt{\frac{0.60(0.40)}{250}} \approx 0.031$ (1pt).</li>
+          
+          <li>Part b (2pts): Checks $n p = 250(0.60) = 150 \ge 10$ and $n (1-p) = 250(0.40) = 100 \ge 10$ (1pt), and states that the conditions are met, so the sampling distribution is approximately normal (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the z-score $z = \frac{0.55 - 0.60}{0.031} \approx -1.61$ (1pt) and finds the probability $P(\hat{p} < 0.55) \approx P(Z < -1.61) \approx 0.0537$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S9Q2"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.Q,UNC-3.R,UNC-3.S"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">The lifespan of a certain brand of light bulb is known to have a mean of $\mu = 800$ hours and a standard deviation of $\sigma = 60$ hours. A quality control inspector takes a random sample of 40 light bulbs. Let $\bar{x}$ be the mean lifespan of the bulbs in this sample.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample mean $\bar{x}$ by calculating its mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain why the sampling distribution of $\bar{x}$ can be approximated by a normal distribution, even if the population distribution of light bulb lifespans is not normal.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the mean lifespan of the 40 sampled light bulbs is between 785 and 810 hours.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States that $\mu_{\bar{x}} = \mu = 800$ hours (1pt) and $\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}} = \frac{60}{\sqrt{40}} \approx 9.487$ hours (1pt).</li>
+          
+          <li>Part b (1pt): Explains that because the sample size $n=40$ is large ($n \ge 30$), the Central Limit Theorem (CLT) applies, and thus the sampling distribution of $\bar{x}$ is approximately normal, regardless of the population distribution shape (1pt).</li>
+          
+          <li>Part c (2pts): Calculates $z_1 = \frac{785 - 800}{9.487} \approx -1.58$ and $z_2 = \frac{810 - 800}{9.487} \approx 1.05$ (1pt for both z-scores). Finds $P(785 < \bar{x} < 810) \approx P(-1.58 < Z < 1.05) \approx 0.8531 - 0.0571 = 0.7960$ (1pt for probability).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S9Q3"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.N,UNC-3.O,UNC-3.P"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A political scientist wants to compare the proportion of adults who approve of the current president in two different regions. In Region A, 65% of adults approve. In Region B, 58% of adults approve. A random sample of $n_A = 120$ adults is taken from Region A, and an independent random sample of $n_B = 150$ adults is taken from Region B. Let $\hat{p}_A$ and $\hat{p}_B$ be the sample proportions of adults who approve in Region A and Region B, respectively.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the mean and standard deviation of the sampling distribution of the difference in sample proportions, $\hat{p}_A - \hat{p}_B$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether the sampling distribution of $\hat{p}_A - \hat{p}_B$ can be approximated by a normal distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the sample proportion of approval in Region A is at least 10 percentage points higher than in Region B.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates $\mu_{\hat{p}_A - \hat{p}_B} = p_A - p_B = 0.65 - 0.58 = 0.07$ (1pt) and $\sigma_{\hat{p}_A - \hat{p}_B} = \sqrt{\frac{p_A(1-p_A)}{n_A} + \frac{p_B(1-p_B)}{n_B}} = \sqrt{\frac{0.65(0.35)}{120} + \frac{0.58(0.42)}{150}} \approx \sqrt{0.0018958 + 0.001624} \approx \sqrt{0.0035198} \approx 0.0593$ (1pt).</li>
+          
+          <li>Part b (2pts): Checks the four large counts conditions: $n_A p_A = 120(0.65) = 78 \ge 10$, $n_A (1-p_A) = 120(0.35) = 42 \ge 10$, $n_B p_B = 150(0.58) = 87 \ge 10$, and $n_B (1-p_B) = 150(0.42) = 63 \ge 10$ (1pt for all checks). Concludes that since all conditions are met, the sampling distribution of $\hat{p}_A - \hat{p}_B$ can be approximated by a normal distribution (1pt).</li>
+          
+          <li>Part c (2pts): Identifies the event as $P(\hat{p}_A - \hat{p}_B \ge 0.10)$ (1pt). Calculates the z-score $z = \frac{0.10 - 0.07}{0.0593} \approx 0.51$ (1pt for z-score and probability calculation). Finds $P(Z \ge 0.51) \approx 1 - 0.6950 = 0.3050$ (1pt for final probability).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S9Q4"
+      data-difficulty="medium"
+      data-skill-codes="3.B,4.B,3.C"
+      data-learning-objectives="UNC-3.I,UNC-3.J,UNC-3.H"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A manager wants to estimate the average time (in minutes) it takes for employees to complete a specific task. They record the completion times for a random sample of 5 employees: 12, 15, 13, 16, 14.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the sample mean and sample median for the given data. State which of these would typically be used as a point estimate for the population mean task completion time.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain what it means for an estimator to be unbiased. Based on previous statistical knowledge, which of the two estimates from part (a) is generally considered an unbiased estimator for the population mean?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe how you would set up a simulation to estimate the sampling distribution of the sample mean for a sample size of 5, assuming the true population of completion times follows a uniform distribution between 10 and 18 minutes.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates sample mean $\bar{x} = \frac{12+15+13+16+14}{5} = 14$ minutes (1pt). Calculates sample median = 14 minutes and states the sample mean is typically used as a point estimate for the population mean (1pt).</li>
+          
+          <li>Part b (2pts): Explains that an estimator is unbiased if the mean of its sampling distribution is equal to the true value of the population parameter being estimated (1pt). Identifies that the sample mean ($\bar{x}$) is generally an unbiased estimator for the population mean (1pt).</li>
+          
+          <li>Part c (2pts): Describes a process involving: (1) using a random number generator to select 5 random values from a uniform distribution between 10 and 18 (1pt), (2) calculating the mean of these 5 values, and (3) repeating this process many times (e.g., 1000 times) to form a distribution of sample means (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S9Q5"
+      data-difficulty="easy"
+      data-skill-codes="3.A,3.C,4.B"
+      data-learning-objectives="VAR-6.A,VAR-6.C,UNC-3.S"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">The total cholesterol levels for adults aged 20-30 are approximately normally distributed with a mean of $\mu = 180$ mg/dL and a standard deviation of $\sigma = 25$ mg/dL.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the probability that a randomly selected adult aged 20-30 has a cholesterol level less than 170 mg/dL.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        A random sample of 36 adults aged 20-30 is taken. Calculate the probability that the sample mean cholesterol level is less than 170 mg/dL.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Explain why it is appropriate to use a normal distribution to model the sampling distribution of the sample mean in part (b), even if the population distribution were not perfectly normal.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates the z-score $z = \frac{170 - 180}{25} = -0.40$ (1pt) and finds the probability $P(X < 170) \approx P(Z < -0.40) \approx 0.3446$ (1pt).</li>
+          
+          <li>Part b (2pts): Calculates the standard deviation of the sample mean $\sigma_{\bar{x}} = \frac{25}{\sqrt{36}} = \frac{25}{6} \approx 4.167$ (1pt). Calculates the z-score $z = \frac{170 - 180}{4.167} \approx -2.40$ and finds $P(\bar{x} < 170) \approx P(Z < -2.40) \approx 0.0082$ (1pt for z-score and probability).</li>
+          
+          <li>Part c (1pt): Explains that since the sample size $n=36$ is greater than or equal to 30, the Central Limit Theorem (CLT) applies, ensuring the sampling distribution of the sample mean is approximately normal (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

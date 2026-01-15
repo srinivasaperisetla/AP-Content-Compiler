@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 17)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 17)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S17Q1"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.K,UNC-3.L,UNC-3.M"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A large company is concerned about employee satisfaction. Historically, $70\%$ of its employees report being "very satisfied" with their job. A new HR initiative is implemented, and the company plans to survey a random sample of $150$ employees to see if satisfaction has changed.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample proportion of employees who report being "very satisfied" if the true proportion remains $0.70$. Include its shape, mean, and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the probability that in a random sample of $150$ employees, $65\%$ or fewer report being "very satisfied" if the true proportion is still $0.70$. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the probability calculated in part (b) in the context of the new HR initiative.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (3pts): Shape is approximately normal because conditions $n\hat{p} \ge 10$ and $n(1-\hat{p}) \ge 10$ are met ($150 \times 0.70 = 105 \ge 10$ and $150 \times 0.30 = 45 \ge 10$). Mean is $0.70$. Standard deviation is $\sqrt{\frac{0.70(1-0.70)}{150}} \approx 0.0374$.</li>
+          
+          <li>Part b (2pts): Calculates $z$-score $\frac{0.65 - 0.70}{0.0374} \approx -1.33$. Uses $P(Z \le -1.33)$ to find probability $\approx 0.0918$.</li>
+          
+          <li>Part c (1pt): Interprets $0.0918$ as the chance of observing $65\%$ or fewer satisfied employees if the HR initiative had no effect and the true proportion is still $70\%$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S17Q2"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.Q,UNC-3.R,UNC-3.S"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">The weight of adult male grizzly bears in a certain region is approximately normally distributed with a mean of $790$ pounds and a standard deviation of $105$ pounds. Wildlife biologists plan to capture and weigh a random sample of $36$ adult male grizzly bears.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample mean weight for samples of $36$ adult male grizzly bears. Include its shape, mean, and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the probability that the sample mean weight of $36$ bears will be less than $750$ pounds. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        A wildlife sanctuary has claimed that the average weight of male grizzly bears in their care is significantly lower than the regional average. Based on your answer in part (b), would a sample mean weight of $750$ pounds for $36$ bears provide strong evidence to support this claim? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (3pts): Shape is approximately normal because the population is normally distributed. Mean is $790$ pounds. Standard deviation is $\frac{105}{\sqrt{36}} = \frac{105}{6} = 17.5$ pounds.</li>
+          
+          <li>Part b (2pts): Calculates $z$-score $\frac{750 - 790}{17.5} \approx -2.29$. Uses $P(Z \le -2.29)$ to find probability $\approx 0.0110$.</li>
+          
+          <li>Part c (1pt): Yes, a probability of $0.0110$ is quite small, indicating that a sample mean of $750$ pounds would be unusual if the true mean were $790$ pounds, thus providing strong evidence against the claim that the sanctuary bears are similar to the regional average.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S17Q3"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.N,UNC-3.O,UNC-3.P"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A national survey reported that $52\%$ of adults aged $18-29$ use social media daily, while $40\%$ of adults aged $30-49$ use social media daily. A researcher plans to take a random sample of $200$ adults from the $18-29$ age group and an independent random sample of $150$ adults from the $30-49$ age group.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Determine the mean and standard deviation of the sampling distribution of the difference in sample proportions ($\hat{p}_{18-29} - \hat{p}_{30-49}$).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify that the sampling distribution of the difference in sample proportions can be approximated by a normal distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the proportion of daily social media users in the younger age group's sample is at least $10$ percentage points higher than in the older age group's sample. Show your work.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Mean of $\hat{p}_1 - \hat{p}_2$ is $p_1 - p_2 = 0.52 - 0.40 = 0.12$. Standard deviation is $\sqrt{\frac{p_1(1-p_1)}{n_1} + \frac{p_2(1-p_2)}{n_2}} = \sqrt{\frac{0.52(0.48)}{200} + \frac{0.40(0.60)}{150}} \approx \sqrt{0.001248 + 0.0016} \approx \sqrt{0.002848} \approx 0.0534$.</li>
+          
+          <li>Part b (2pts): Verifies conditions for both samples: $n_1 p_1 = 200(0.52) = 104 \ge 10$, $n_1(1-p_1) = 200(0.48) = 96 \ge 10$. $n_2 p_2 = 150(0.40) = 60 \ge 10$, $n_2(1-p_2) = 150(0.60) = 90 \ge 10$. All are $\ge 10$, so approx. normal is appropriate.</li>
+          
+          <li>Part c (2pts): Calculates $z$-score for a difference of $0.10$: $Z = \frac{0.10 - 0.12}{0.0534} \approx -0.37$. Probability $P(Z \ge -0.37) = 1 - P(Z < -0.37) \approx 1 - 0.3557 \approx 0.6443$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S17Q4"
+      data-difficulty="medium"
+      data-skill-codes="3.B,4.B"
+      data-learning-objectives="UNC-3.I,UNC-3.J"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A polling organization wants to estimate the proportion of registered voters who support a certain ballot measure. They take a simple random sample of $400$ registered voters and find that $220$ of them support the measure.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the point estimate for the proportion of all registered voters who support the ballot measure.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain what it means for an estimator to be unbiased in the context of estimating the population proportion.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The organization considers using a biased estimator, which consistently overestimates the true proportion by $0.03$. Describe a potential consequence of using such a biased estimator for repeated sampling.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): The point estimate for the population proportion $p$ is the sample proportion $\hat{p} = \frac{220}{400} = 0.55$.</li>
+          
+          <li>Part b (2pts): An estimator is unbiased if, in the long run, the mean of its sampling distribution is equal to the true population parameter being estimated. For the sample proportion $\hat{p}$, this means that the expected value of $\hat{p}$ is equal to the population proportion $p$.</li>
+          
+          <li>Part c (2pts): If the estimator consistently overestimates the true proportion by $0.03$, then in repeated sampling, the average of the estimates would be $p+0.03$ instead of $p$. This would lead to systematically incorrect conclusions about the true population proportion, consistently suggesting higher support for the measure than actually exists.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S17Q5"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.C"
+      data-learning-objectives="VAR-6.A,VAR-6.C,UNC-3.H"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">The amount of soda dispensed by a vending machine is normally distributed with a mean of $16.2$ ounces and a standard deviation of $0.15$ ounces. The machine is set to dispense $16$ ounces per cup. A student runs a simulation by taking $1000$ random samples of $5$ cups each and calculating the mean amount dispensed for each sample.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the probability that a single cup dispenses less than $16$ ounces of soda.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe how the sampling distribution of the sample mean for samples of size $5$ would differ from the distribution of individual cup amounts. Focus on shape, mean, and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on the information provided, explain why a simulation might be used to estimate the sampling distribution of the sample mean in this context, even though we know the population distribution.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates $z$-score for a single cup: $Z = \frac{16 - 16.2}{0.15} \approx -1.33$. Probability $P(X < 16) \approx P(Z < -1.33) \approx 0.0918$.</li>
+          
+          <li>Part b (3pts): The shape of the sampling distribution of $\bar{x}$ would also be normal because the population is normal, even for $n=5$. The mean of the sampling distribution would be the same as the population mean, $\mu_{\bar{x}} = 16.2$ ounces. The standard deviation of the sampling distribution would be smaller than the population standard deviation, $\sigma_{\bar{x}} = \frac{0.15}{\sqrt{5}} \approx 0.067$ ounces.</li>
+          
+          <li>Part c (1pt): A simulation might be used to confirm theoretical properties of the sampling distribution, especially for smaller sample sizes or when the population distribution might be unknown or non-normal, to see how the sample means behave. While the population is normal here, simulation can reinforce understanding or explore scenarios where the theory is less straightforward.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

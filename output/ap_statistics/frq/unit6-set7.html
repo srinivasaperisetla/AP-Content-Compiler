@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 7)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 7)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S7Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.A,UNC-4.B,UNC-4.D,UNC-4.F,UNC-4.G"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A market research firm wants to estimate the proportion of adult internet users in a large city who stream online video content daily. A random sample of 500 adult internet users from the city was surveyed, and 310 reported streaming online video content daily.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95 percent confidence interval for the proportion of adult internet users in this city who stream online video content daily.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the 95 percent confidence interval calculated in part (b) in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The market research firm claims that the proportion of adult internet users in this city who stream online video content daily is different from 60 percent. Based on the confidence interval, is there convincing evidence to support this claim? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies a one-sample z-interval for proportions and verifies the random sample, independence (10% condition $500 < 10\%$ of all adult internet users), and large counts ($n\hat{p} = 310 \ge 10$ and $n(1-\hat{p}) = 190 \ge 10$) conditions.</li>
+          
+          <li>Part b (2pts): Calculates the sample proportion $\hat{p} = 0.62$, identifies the critical value $z^* = 1.96$, calculates the margin of error ($0.043$), and correctly computes the 95% confidence interval ($0.577, 0.663$).</li>
+          
+          <li>Part c (1pt): Interprets the confidence interval as: "We are 95% confident that the true proportion of adult internet users in this city who stream online video content daily is between 0.577 and 0.663."</li>
+          
+          <li>Part d (1pt): States that there is no convincing evidence to support the claim because 0.60 (60 percent) is contained within the confidence interval. Therefore, 0.60 is a plausible value for the true proportion, so we cannot conclude it is different from 0.60.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S7Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.D,VAR-6.E,VAR-6.F,VAR-6.G,DAT-3.A,DAT-3.B"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A university claims that 85 percent of its graduating students are employed or pursuing further education within six months of graduation. A concerned alumni group believes this proportion has decreased. They collect a random sample of 150 recent graduates and find that 118 are employed or pursuing further education within six months.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for this investigation. Identify the appropriate inference method.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value, what conclusion should the alumni group draw at a significance level of $\alpha = 0.05$? Interpret this conclusion in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States $H_0: p = 0.85$ and $H_a: p < 0.85$, where $p$ is the true proportion of graduating students employed or in further education within six months. Identifies a one-sample z-test for a population proportion.</li>
+          
+          <li>Part b (1pt): Verifies random sample, independence (10% condition: $150 < 10\%$ of all recent graduates), and large counts ($np_0 = 150(0.85) = 127.5 \ge 10$ and $n(1-p_0) = 150(0.15) = 22.5 \ge 10$).</li>
+          
+          <li>Part c (2pts): Calculates the sample proportion $\hat{p} = \frac{118}{150} \approx 0.7867$. Calculates the test statistic $z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}} = \frac{0.7867 - 0.85}{\sqrt{\frac{0.85(0.15)}{150}}} \approx -2.25$. Calculates the p-value $P(Z < -2.25) \approx 0.0122$.</li>
+          
+          <li>Part d (1pt): Compares p-value to $\alpha$ ($0.0122 < 0.05$), concludes to reject $H_0$. Interprets: "There is convincing evidence that the true proportion of graduating students employed or pursuing further education within six months has decreased from 85 percent."</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S7Q3"
+      data-difficulty="hard"
+      data-skill-codes="1.B,3.A,4.A,4.B"
+      data-learning-objectives="UNC-5.A,UNC-5.B,UNC-5.D"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A hospital administrator wants to determine if the proportion of patients who receive timely discharge instructions is at least 90 percent. They plan to conduct a significance test using a random sample of patient records.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe a Type I error and a Type II error in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Suppose the hospital sets the significance level for their test at $\alpha = 0.01$. If the true proportion of patients receiving timely discharge instructions is actually 88 percent, explain whether a Type I error or a Type II error is possible in this scenario. Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If the hospital increases the sample size for their study, how would this affect the probability of a Type II error, assuming the true proportion remains 88 percent and all other factors are constant?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Type I error: Concluding that the proportion of patients receiving timely discharge instructions is less than 90% when it is actually 90% or more (rejecting $H_0$ when $H_0$ is true). Type II error: Concluding that the proportion of patients receiving timely discharge instructions is 90% or more when it is actually less than 90% (failing to reject $H_0$ when $H_a$ is true).</li>
+          
+          <li>Part b (1pt): A Type I error is not possible because the true proportion is $p = 0.88$, which means the alternative hypothesis ($H_a: p < 0.90$) is true. A Type II error is possible because we would fail to reject $H_0$ (conclude $p \ge 0.90$) when the alternative hypothesis is actually true ($p = 0.88 < 0.90$).</li>
+          
+          <li>Part c (1pt): Increasing the sample size would decrease the probability of a Type II error. A larger sample size leads to a narrower sampling distribution of the sample proportion, which increases the power of the test to detect a true difference and thus reduces the chance of failing to reject a false null hypothesis.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S7Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.I,UNC-4.J,UNC-4.K,UNC-4.M,UNC-4.N"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A company developed two new training programs, Program A and Program B, for its employees. To compare their effectiveness in improving employee retention, 200 employees were randomly assigned to Program A, and 250 employees were randomly assigned to Program B. After six months, 170 employees from Program A were still employed, and 200 employees from Program B were still employed.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 90 percent confidence interval for the difference in the proportion of retained employees (Program A minus Program B).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval from part (b) in the context of the problem and use it to justify whether there is convincing evidence of a difference in retention rates between the two programs.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies a two-sample z-interval for a difference in proportions. Verifies random assignment, independence (given by random assignment, and assume populations are large enough or employees are distinct), and large counts ($n_A\hat{p}_A = 170 \ge 10$, $n_A(1-\hat{p}_A) = 30 \ge 10$, $n_B\hat{p}_B = 200 \ge 10$, $n_B(1-\hat{p}_B) = 50 \ge 10$).</li>
+          
+          <li>Part b (2pts): Calculates $\hat{p}_A = \frac{170}{200} = 0.85$ and $\hat{p}_B = \frac{200}{250} = 0.80$. Identifies $z^* = 1.645$. Calculates the confidence interval $\hat{p}_A - \hat{p}_B \pm z^* \sqrt{\frac{\hat{p}_A(1-\hat{p}_A)}{n_A} + \frac{\hat{p}_B(1-\hat{p}_B)}{n_B}} = (0.85 - 0.80) \pm 1.645 \sqrt{\frac{0.85(0.15)}{200} + \frac{0.80(0.20)}{250}} \approx 0.05 \pm 0.0628$, resulting in $(-0.0128, 0.1128)$.</li>
+          
+          <li>Part c (2pts): Interprets: "We are 90% confident that the true difference in retention proportions (Program A minus Program B) is between -0.0128 and 0.1128." Justifies: Since the interval contains 0, it is plausible that there is no difference in the true retention rates between Program A and Program B. Therefore, there is no convincing evidence of a difference in retention rates between the two programs.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S7Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.H,VAR-6.I,VAR-6.J,VAR-6.K,DAT-3.C,DAT-3.D"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A large technology company is considering two different advertising campaigns, Campaign X and Campaign Y, to increase subscriptions to its premium service. They randomly selected 300 potential customers and showed them Campaign X, and another 350 potential customers were randomly selected and shown Campaign Y. After the campaigns, 120 of those shown Campaign X subscribed, and 150 of those shown Campaign Y subscribed. The company wants to determine if there is a significant difference in subscription rates between the two campaigns.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses to test if there is a difference in subscription rates between the two campaigns (Campaign X minus Campaign Y). Identify the appropriate inference method.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value, what conclusion should the company draw at a significance level of $\alpha = 0.10$? Interpret this conclusion in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States $H_0: p_X - p_Y = 0$ (or $p_X = p_Y$) and $H_a: p_X - p_Y \ne 0$ (or $p_X \ne p_Y$), where $p_X$ is the true proportion of subscriptions for Campaign X and $p_Y$ is for Campaign Y. Identifies a two-sample z-test for a difference in population proportions.</li>
+          
+          <li>Part b (1pt): Verifies random assignment/samples, independence (10% condition for each sample, or assumes populations are large enough, and independence between samples), and large counts using pooled proportion ($\hat{p}_c = \frac{120+150}{300+350} = \frac{270}{650} \approx 0.415$). Checks $n_X\hat{p}_c = 300(0.415) = 124.5 \ge 10$, $n_X(1-\hat{p}_c) = 300(0.585) = 175.5 \ge 10$, $n_Y\hat{p}_c = 350(0.415) = 145.25 \ge 10$, $n_Y(1-\hat{p}_c) = 350(0.585) = 204.75 \ge 10$.</li>
+          
+          <li>Part c (2pts): Calculates $\hat{p}_X = \frac{120}{300} = 0.40$ and $\hat{p}_Y = \frac{150}{350} \approx 0.4286$. Calculates the pooled proportion $\hat{p}_c = \frac{270}{650} \approx 0.4154$. Calculates the test statistic $z = \frac{(\hat{p}_X - \hat{p}_Y) - 0}{\sqrt{\hat{p}_c(1-\hat{p}_c)(\frac{1}{n_X} + \frac{1}{n_Y})}} \approx \frac{-0.0286}{\sqrt{0.4154(0.5846)(\frac{1}{300} + \frac{1}{350})}} \approx -0.739$. Calculates the p-value $2 \times P(Z < -0.739) \approx 2 \times 0.2300 = 0.4600$.</li>
+          
+          <li>Part d (1pt): Compares p-value to $\alpha$ ($0.4600 > 0.10$), concludes to fail to reject $H_0$. Interprets: "There is no convincing evidence of a significant difference in subscription rates between Campaign X and Campaign Y."</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 15)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 15)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S15Q1"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.K,UNC-3.L,UNC-3.M"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A large online retailer claims that 80% of its customers are satisfied with their recent purchases. To investigate this claim, a consumer advocacy group plans to take a random sample of 200 customers. Let $\hat{p}$ be the proportion of satisfied customers in the sample.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of $\hat{p}$ by determining its mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify that the conditions for using a normal distribution to approximate the sampling distribution of $\hat{p}$ are met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that less than 75% of the customers in the sample are satisfied, assuming the retailer's claim is true.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Mean of $\hat{p}$ correctly identified as $p=0.80$ (1pt). Standard deviation of $\hat{p}$ correctly calculated as $\sqrt{\frac{p(1-p)}{n}} = \sqrt{\frac{0.8(0.2)}{200}} \approx 0.0283$ (1pt).</li>
+          
+          <li>Part b (2pts): Large counts condition met: $n p = 200(0.8) = 160 \ge 10$ and $n(1-p) = 200(0.2) = 40 \ge 10$ (1pt). $10\%$ condition met: $200$ is less than $10\%$ of all customers (assuming a large population) (1pt).</li>
+          
+          <li>Part c (2pts): Correctly calculates Z-score $Z = \frac{0.75 - 0.80}{0.0283} \approx -1.767$ (1pt). Correctly calculates probability $P(\hat{p} < 0.75) \approx P(Z < -1.767) \approx 0.0385$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S15Q2"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.Q,UNC-3.R,UNC-3.S"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">The weight of adult male grizzly bears in a certain region is approximately normally distributed with a mean of $\mu = 300$ kg and a standard deviation of $\sigma = 40$ kg. Researchers plan to capture and weigh a random sample of 25 adult male grizzly bears. Let $\bar{x}$ be the mean weight of the bears in the sample.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of $\bar{x}$ by determining its mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify that the conditions for using a normal distribution to model the sampling distribution of $\bar{x}$ are met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the mean weight of the sample of 25 bears is greater than 310 kg.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Mean of $\bar{x}$ correctly identified as $\mu_{\bar{x}} = \mu = 300$ kg (1pt). Standard deviation of $\bar{x}$ correctly calculated as $\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}} = \frac{40}{\sqrt{25}} = 8$ kg (1pt).</li>
+          
+          <li>Part b (2pts): Random sample condition met (given) (1pt). Normality condition met because the population distribution of bear weights is approximately normally distributed (1pt).</li>
+          
+          <li>Part c (2pts): Correctly calculates Z-score $Z = \frac{310 - 300}{8} = 1.25$ (1pt). Correctly calculates probability $P(\bar{x} > 310) \approx P(Z > 1.25) \approx 0.1056$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S15Q3"
+      data-difficulty="easy"
+      data-skill-codes="3.B,4.B"
+      data-learning-objectives="UNC-3.I,UNC-3.J"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A quality control manager is interested in estimating the average lifespan of a certain brand of light bulbs. Two different methods are proposed. Method A involves selecting a random sample of 50 bulbs and calculating their sample mean lifespan, $\bar{x}$. Method B involves selecting a random sample of 50 bulbs and calculating the median lifespan of these bulbs. The true population mean lifespan is $\mu$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Suppose a random sample of 50 bulbs yielded a mean lifespan of $\bar{x} = 980$ hours and a median lifespan of 970 hours. Calculate the estimate for the population mean lifespan using Method A and using Method B.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain which of the two estimators (sample mean or sample median) is generally considered an unbiased estimator for the population mean.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Estimate for population mean using Method A is $\bar{x} = 980$ hours (1pt). Estimate for population mean using Method B is the median, which is 970 hours (1pt).</li>
+          
+          <li>Part b (2pts): The sample mean ($\bar{x}$) is generally an unbiased estimator for the population mean ($\mu$) (1pt). This means that, on average, the sample mean will equal the population mean over many samples (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S15Q4"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.N,UNC-3.O,UNC-3.P"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A company develops a new type of battery (Type A) and compares its defect rate to their older model (Type B). From a large production run, a random sample of 500 Type A batteries had 15 defects, while a random sample of 400 Type B batteries had 20 defects. Let $\hat{p}_A$ be the sample proportion of defects for Type A and $\hat{p}_B$ for Type B.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Determine the mean and standard deviation of the sampling distribution of the difference in sample proportions ($\hat{p}_A - \hat{p}_B$), assuming the true defect rates are $p_A = 0.03$ and $p_B = 0.05$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify that the conditions for using a normal distribution to approximate the sampling distribution of $\hat{p}_A - \hat{p}_B$ are met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the sample proportion of defects for Type A batteries is greater than that for Type B batteries, i.e., $P(\hat{p}_A > \hat{p}_B)$, assuming the true defect rates are $p_A = 0.03$ and $p_B = 0.05$.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Mean of $\hat{p}_A - \hat{p}_B$ is $p_A - p_B = 0.03 - 0.05 = -0.02$ (1pt). Standard deviation of $\hat{p}_A - \hat{p}_B$ is $\sqrt{\frac{p_A(1-p_A)}{n_A} + \frac{p_B(1-p_B)}{n_B}} = \sqrt{\frac{0.03(0.97)}{500} + \frac{0.05(0.95)}{400}} \approx 0.01330$ (1pt).</li>
+          
+          <li>Part b (2pts): Large counts condition met for both samples: $n_A p_A = 15 \ge 10$, $n_A(1-p_A) = 485 \ge 10$, $n_B p_B = 20 \ge 10$, $n_B(1-p_B) = 380 \ge 10$ (1pt). $10\%$ condition met for both samples, assuming large populations (1pt).</li>
+          
+          <li>Part c (2pts): Correctly identifies the event as $P(\hat{p}_A - \hat{p}_B > 0)$ and calculates Z-score $Z = \frac{0 - (-0.02)}{0.01330} \approx 1.50$ (1pt). Correctly calculates probability $P(Z > 1.50) \approx 0.0668$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S15Q5"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.T,UNC-3.U,UNC-3.V"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">Two different fertilizers, Fertilizer X and Fertilizer Y, are tested on tomato plants. The yield of tomatoes (in kg) per plant for Fertilizer X is known to have a mean of $\mu_X = 5.2$ kg with a standard deviation of $\sigma_X = 1.0$ kg. For Fertilizer Y, the mean yield is $\mu_Y = 4.8$ kg with a standard deviation of $\sigma_Y = 1.2$ kg. Assume the population distributions are approximately normal. A random sample of 30 plants is treated with Fertilizer X, and an independent random sample of 35 plants is treated with Fertilizer Y. Let $\bar{x}_X$ and $\bar{x}_Y$ be the sample mean yields.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Determine the mean and standard deviation of the sampling distribution of the difference in sample means ($\bar{x}_X - \bar{x}_Y$).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify that the conditions for using a normal distribution to model the sampling distribution of $\bar{x}_X - \bar{x}_Y$ are met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the probability $P(\bar{x}_X - \bar{x}_Y > 1)$ in the context of this study. You do not need to calculate this probability.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Mean of $\bar{x}_X - \bar{x}_Y$ is $\mu_X - \mu_Y = 5.2 - 4.8 = 0.4$ kg (1pt). Standard deviation of $\bar{x}_X - \bar{x}_Y$ is $\sqrt{\frac{\sigma_X^2}{n_X} + \frac{\sigma_Y^2}{n_Y}} = \sqrt{\frac{1.0^2}{30} + \frac{1.2^2}{35}} \approx 0.2729$ kg (1pt).</li>
+          
+          <li>Part b (2pts): Random samples and independence are met (given) (1pt). Normality condition met because both population distributions are approximately normal (given) (1pt).</li>
+          
+          <li>Part c (2pts): The probability $P(\bar{x}_X - \bar{x}_Y > 1)$ represents the chance that the sample mean yield for Fertilizer X is more than 1 kg greater than the sample mean yield for Fertilizer Y (1pt). If this probability is high, it would suggest that observing such a large difference in sample means, favoring Fertilizer X, is common when the true mean difference is 0.4 kg (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

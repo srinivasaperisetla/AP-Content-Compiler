@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 7)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 7)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S7Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,3.A,4.C,3.E,4.E"
+      data-learning-objectives="VAR-8.B,VAR-8.C,VAR-8.D,VAR-8.E,VAR-8.F,DAT-3.J"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A candy company claims that its bags of mixed candies contain 30% red, 20% yellow, 20% green, 15% orange, and 15% brown candies. A statistics student suspects the distribution is different and takes a random sample of 200 candies from a newly purchased bag.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Color</th><th>Red</th><th>Yellow</th><th>Green</th><th>Orange</th><th>Brown</th><th>Total</th></tr></thead><tbody><tr><td>Count</td><td>70</td><td>35</td><td>40</td><td>30</td><td>25</td><td>200</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected count for yellow candies and verify the conditions for conducting this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The chi-square test statistic is calculated as $\chi^2 = 7.083$. Calculate the degrees of freedom and the p-value associated with this test statistic. (You may use a chi-square table or calculator output.)
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value from part (c), what conclusion can the student make at the $\alpha = 0.05$ significance level? Justify your conclusion in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses in context ($H_0$: The distribution of candy colors matches the company's claim; $H_a$: The distribution of candy colors does not match the company's claim).</li>
+          
+          <li>Part b (2pts): Calculates expected count for yellow candies ($200 \times 0.20 = 40$). Verifies conditions (random sample, all expected counts $\ge 5$).</li>
+          
+          <li>Part c (2pts): Calculates degrees of freedom ($5-1=4$). Determines p-value (e.g., $0.131$ from calculator, or range between $0.10$ and $0.25$ from table for $df=4, \chi^2=7.083$).</li>
+          
+          <li>Part d (1pt): States correct conclusion (fail to reject $H_0$) with justification ($p > \alpha$) and in context (no significant evidence that the distribution differs from the claim).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S7Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.A,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.H,VAR-8.L,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">Researchers are investigating whether the distribution of preferred learning styles (visual, auditory, kinesthetic) is the same for students in rural, suburban, and urban schools. They survey a random sample of 150 students from each type of school, totaling 450 students.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Learning Style</th><th>Rural</th><th>Suburban</th><th>Urban</th><th>Total</th></tr></thead><tbody><tr><td>Visual</td><td>45</td><td>55</td><td>50</td><td>150</td></tr><tr><td>Auditory</td><td>60</td><td>40</td><td>50</td><td>150</td></tr><tr><td>Kinesthetic</td><td>45</td><td>55</td><td>50</td><td>150</td></tr><tr><td>Total</td><td>150</td><td>150</td><td>150</td><td>450</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate test to address the research question.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the appropriate inference method and verify the conditions for conducting this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected count for students from suburban schools who prefer auditory learning.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The test statistic for this study is $\chi^2 = 8.667$ and the p-value is 0.069. Based on these results, what conclusion should the researchers make at the $\alpha = 0.05$ significance level? Interpret the p-value in the context of this study.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses in context ($H_0$: The distribution of learning styles is the same for students in rural, suburban, and urban schools; $H_a$: The distribution of learning styles is not the same for students in rural, suburban, and urban schools).</li>
+          
+          <li>Part b (1pt): Identifies Chi-Square Test for Homogeneity and verifies conditions (random samples, all expected counts $\ge 5$).</li>
+          
+          <li>Part c (1pt): Calculates expected count for suburban/auditory: $\frac{(\text{Row Total for Auditory}) \times (\text{Column Total for Suburban})}{\text{Grand Total}} = \frac{150 \times 150}{450} = 50$.</li>
+          
+          <li>Part d (2pts): States correct conclusion (fail to reject $H_0$) with justification ($p > \alpha$). Interprets p-value correctly in context (If there were no difference in learning style distributions, there would be a $0.069$ probability of observing a test statistic as extreme or more extreme than $8.667$).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S7Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.A,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.H,VAR-8.L,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A large company wants to determine if there is an association between employee satisfaction (satisfied or not satisfied) and their primary mode of commute (car, public transport, bike/walk). They take a random sample of 300 employees and record their satisfaction level and commute mode.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Commute Mode</th><th>Satisfied</th><th>Not Satisfied</th><th>Total</th></tr></thead><tbody><tr><td>Car</td><td>100</td><td>50</td><td>150</td></tr><tr><td>Public Transport</td><td>60</td><td>30</td><td>90</td></tr><tr><td>Bike/Walk</td><td>40</td><td>20</td><td>60</td></tr><tr><td>Total</td><td>200</td><td>100</td><td>300</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate test to investigate the company's question.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the appropriate inference method and verify the conditions for conducting this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected count for employees who use public transport and are not satisfied.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The calculated chi-square test statistic is $\chi^2 = 0.00$ and the p-value is $1.00$. What conclusion can be drawn from these results at the $\alpha = 0.01$ significance level? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses in context ($H_0$: There is no association between employee satisfaction and commute mode; $H_a$: There is an association between employee satisfaction and commute mode).</li>
+          
+          <li>Part b (1pt): Identifies Chi-Square Test for Independence and verifies conditions (random sample, all expected counts $\ge 5$).</li>
+          
+          <li>Part c (1pt): Calculates expected count for public transport/not satisfied: $\frac{(\text{Row Total for Public Transport}) \times (\text{Column Total for Not Satisfied})}{\text{Grand Total}} = \frac{90 \times 100}{300} = 30$.</li>
+          
+          <li>Part d (2pts): States correct conclusion (fail to reject $H_0$) with justification ($p > \alpha$). States that there is no evidence of an association between employee satisfaction and commute mode in context.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S7Q4"
+      data-difficulty="easy"
+      data-skill-codes="1.E,1.F,3.C,4.B"
+      data-learning-objectives="VAR-1.J,VAR-8.A,VAR-8.C,VAR-8.J"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A marketing firm is designing a study to investigate customer preferences for a new product line. They are considering two different approaches.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Scenario 1: The firm wants to know if the distribution of preferences (Preference A, B, C, D) for their new product in a sample matches a pre-determined theoretical distribution based on historical market data. Identify the appropriate type of chi-square test the firm should use for this scenario, and briefly describe the chi-square distribution's general shape and how degrees of freedom affect it.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Scenario 2: The firm wants to compare the distribution of preferences (Preference A, B, C, D) between two different age groups (under 30, 30 and over). Identify the appropriate type of chi-square test for this scenario.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        In general, explain why it is inappropriate to use a chi-square test to justify a claim that there is *no* association between two variables, even if the p-value is very high.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies Chi-Square Goodness-of-Fit Test. Describes chi-square distribution as skewed right and becoming less skewed (more symmetric) with increasing degrees of freedom.</li>
+          
+          <li>Part b (1pt): Identifies Chi-Square Test for Homogeneity.</li>
+          
+          <li>Part c (1pt): Explains that a high p-value (failing to reject $H_0$) means there is insufficient evidence to conclude an association, but it does not prove that no association exists. Lack of evidence of an effect is not evidence of no effect.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S7Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.F,3.A,3.E,4.B,4.E"
+      data-learning-objectives="DAT-3.I,DAT-3.J,VAR-8.B,VAR-8.D,VAR-8.F,VAR-8.G,VAR-1.J"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A wildlife biologist is studying the habitat preferences of a certain species of bird in a national park. The park has three main habitat types: forest, wetland, and grassland. The biologist suspects that the birds do not use these habitats in equal proportions. To investigate, she tags 180 birds and observes their primary habitat during a specific period.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Habitat Type</th><th>Forest</th><th>Wetland</th><th>Grassland</th><th>Total</th></tr></thead><tbody><tr><td>Number of Birds</td><td>80</td><td>60</td><td>40</td><td>180</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for the biologist's investigation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected counts for each habitat type, assuming the birds use the habitats in equal proportions.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The calculated chi-square test statistic is $\chi^2 = 13.333$ with 2 degrees of freedom. Determine the p-value for this test statistic. (You may use a chi-square table or calculator output.)
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the results, what conclusion should the biologist draw about the bird's habitat preferences at the $\alpha = 0.01$ significance level? Justify your answer and suggest a specific habitat type that might be preferred or under-utilized compared to the equal proportion expectation.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses in context ($H_0: p_{Forest} = p_{Wetland} = p_{Grassland} = 1/3$; $H_a$: At least one of the habitat proportions is different from $1/3$).</li>
+          
+          <li>Part b (1pt): Calculates expected counts for all three habitats (For 180 birds, $180 \times \frac{1}{3} = 60$ for each habitat).</li>
+          
+          <li>Part c (1pt): Determines the p-value (e.g., $0.00127$ from calculator, or range between $0.001$ and $0.005$ from table for $df=2, \chi^2=13.333$).</li>
+          
+          <li>Part d (2pts): States correct conclusion (reject $H_0$) with justification ($p < \alpha$) and in context (There is significant evidence that the birds do not use the habitats in equal proportions). Suggests a specific habitat type that is preferred (Forest: $80$ observed vs. $60$ expected) or under-utilized (Grassland: $40$ observed vs. $60$ expected).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

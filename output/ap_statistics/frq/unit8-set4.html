@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 4)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 4)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S4Q1"
+      data-difficulty="easy"
+      data-skill-codes="1.F,4.C,3.A,3.E,4.E"
+      data-learning-objectives="VAR-8.B,VAR-8.E,VAR-8.D,VAR-8.F,DAT-3.J"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A candy company claims that its bags of fruit-flavored candies contain 30% cherry, 20% orange, 20% lemon, 15% grape, and 15% lime. A random sample of 200 candies is taken from a newly manufactured batch, and the observed counts are shown in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Flavor</th><th>Observed Count</th></tr></thead><tbody><tr><td>Cherry</td><td>70</td></tr><tr><td>Orange</td><td>35</td></tr><tr><td>Lemon</td><td>30</td></tr><tr><td>Grape</td><td>30</td></tr><tr><td>Lime</td><td>35</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for a test to determine if the distribution of candy flavors in this batch differs from the company's claim.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing a chi-square goodness-of-fit test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected count for cherry-flavored candies and then the chi-square test statistic for this sample.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your results, justify a conclusion, in context, about the company's claim at the $\alpha = 0.05$ significance level.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states null and alternative hypotheses in context.</li>
+          
+          <li>Part b (1pt): Verifies all conditions (random sample, expected counts $\ge 5$, independence) and describes how they are met.</li>
+          
+          <li>Part c (2pts): Calculates the correct expected count for cherry-flavored candies ($200 \times 0.30 = 60$) AND correctly calculates the chi-square test statistic ($X^2 \approx 9.79$).</li>
+          
+          <li>Part d (2pts): States a correct p-value (or range, e.g., $0.025 < p < 0.05$ or $p \approx 0.044$), makes a correct decision to reject $H_0$, and justifies the decision with statistical reasoning in context.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S4Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,4.C,3.A,3.E,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.K,VAR-8.H,VAR-8.L,DAT-3.L"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A school administrator wants to investigate if the distribution of preferred study locations (library, home, coffee shop) is different for high school students and college students. Independent random samples of 150 high school students and 180 college students were surveyed, and their preferred study locations were recorded. The results are summarized in the two-way table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Study Location</th><th>High School</th><th>College</th><th>Total</th></tr></thead><tbody><tr><td>Library</td><td>50</td><td>60</td><td>110</td></tr><tr><td>Home</td><td>65</td><td>70</td><td>135</td></tr><tr><td>Coffee Shop</td><td>35</td><td>50</td><td>85</td></tr><tr><td>Total</td><td>150</td><td>180</td><td>330</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected count for college students who prefer studying at home.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The chi-square test statistic for this data is $X^2 = 7.85$ with a p-value of $0.02$. Based on these results, justify a conclusion, in context, about the preferred study locations for the two groups at the $\alpha = 0.05$ significance level.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses for homogeneity in context ($H_0:$ The distribution of preferred study locations is the same for high school and college students. $H_a:$ The distribution of preferred study locations is different for high school and college students).</li>
+          
+          <li>Part b (1pt): Verifies all conditions (independent random samples, expected counts $\ge 5$, independence/10% condition) and describes how they are met.</li>
+          
+          <li>Part c (1pt): Calculates the correct expected count for college students who prefer studying at home ($\frac{135}{330} \times 180 \approx 73.64$).</li>
+          
+          <li>Part d (2pts): Makes a correct decision to reject $H_0$ (since $0.02 < 0.05$) and justifies the decision with statistical reasoning in context, concluding there is significant evidence of a difference in distributions.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S4Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.F,4.C,3.E,4.B"
+      data-learning-objectives="VAR-8.I,VAR-8.K,VAR-8.M,DAT-3.K,VAR-1.J"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A public health researcher wants to determine if there is an association between smoking status (smoker, non-smoker) and the incidence of a certain respiratory illness (present, absent) in adults. A random sample of 400 adults was selected, and their smoking status and respiratory illness status were recorded. The results are summarized in the two-way table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th></th><th>Illness Present</th><th>Illness Absent</th><th>Total</th></tr></thead><tbody><tr><td>Smoker</td><td>60</td><td>90</td><td>150</td></tr><tr><td>Non-Smoker</td><td>40</td><td>210</td><td>250</td></tr><tr><td>Total</td><td>100</td><td>300</td><td>400</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for a chi-square test to investigate if there is an association between smoking status and respiratory illness.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this chi-square test for independence.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The calculated chi-square test statistic for this data is $X^2 = 9.15$ with a p-value of $0.0025$. Interpret the p-value in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The researcher concludes there is a statistically significant association. Identify the cell(s) that contribute most to the chi-square statistic, and briefly describe what this suggests about the observed vs. expected counts for those cells.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses for independence in context ($H_0:$ There is no association between smoking status and respiratory illness. $H_a:$ There is an association between smoking status and respiratory illness).</li>
+          
+          <li>Part b (1pt): Verifies all conditions (random sample, expected counts $\ge 5$, independence) and describes how they are met.</li>
+          
+          <li>Part c (1pt): Correctly interprets the p-value in context (e.g., assuming no association, there is a 0.0025 probability of observing a chi-square statistic as extreme as 9.15 or greater).</li>
+          
+          <li>Part d (2pts): Identifies the "Smoker, Illness Present" and "Non-Smoker, Illness Absent" cells as having the largest positive contributions AND describes that for "Smoker, Illness Present", observed is greater than expected, and for "Non-Smoker, Illness Absent", observed is greater than expected (or vice versa for other cells).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S4Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.F,3.A,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.B,VAR-8.D,VAR-8.E,VAR-8.F,VAR-8.G,DAT-3.I,DAT-3.J"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A company that produces fruit snacks claims that its large bags contain an equal proportion of five different fruit flavors: cherry, orange, lemon, lime, and grape. A consumer group suspects that the proportions are not equal. To test this, they randomly selected a large bag of fruit snacks and counted the number of each flavor. The observed counts were: Cherry (58), Orange (42), Lemon (47), Lime (65), Grape (38). The total number of fruit snacks in the bag was 250.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected count for each flavor if the company's claim is true.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify the conditions for performing this chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Calculate the chi-square test statistic and the associated p-value.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Based on the p-value and a significance level of $\alpha = 0.05$, what conclusion should the consumer group draw about the company's claim? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states $H_0: p_{cherry} = p_{orange} = p_{lemon} = p_{lime} = p_{grape} = 0.20$ and $H_a:$ At least one proportion is different from 0.20.</li>
+          
+          <li>Part b (1pt): Correctly calculates expected counts for each flavor as $250 \times 0.20 = 50$.</li>
+          
+          <li>Part c (1pt): Verifies Random sample (stated), Independence (implied by random sample from large population), and Expected counts are all $\ge 5$ (all are 50).</li>
+          
+          <li>Part d (1pt): Calculates $\chi^2 = \frac{(58-50)^2}{50} + \frac{(42-50)^2}{50} + \frac{(47-50)^2}{50} + \frac{(65-50)^2}{50} + \frac{(38-50)^2}{50} = 10.96$. Degrees of freedom $df = 5-1 = 4$. Finds p-value using $\chi^2=10.96$ with $df=4$, $p \approx 0.027$.</li>
+          
+          <li>Part e (1pt): Compares $p$-value ($0.027$) to $\alpha$ ($0.05$). Since $p < \alpha$, rejects $H_0$. Concludes there is sufficient evidence that the proportions of fruit snack flavors are not equal.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S4Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,3.A,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.H,VAR-8.K,VAR-8.L,VAR-8.M,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A large company wants to determine if job satisfaction differs among employees in three different departments: Sales, Marketing, and Operations. A random sample of 100 employees from each department was surveyed. Each employee reported their job satisfaction as "Satisfied," "Neutral," or "Dissatisfied." The results are summarized in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Satisfaction</th><th>Sales</th><th>Marketing</th><th>Operations</th><th>Total</th></tr></thead><tbody><tr><td>Satisfied</td><td>65</td><td>70</td><td>60</td><td>195</td></tr><tr><td>Neutral</td><td>20</td><td>20</td><td>25</td><td>65</td></tr><tr><td>Dissatisfied</td><td>15</td><td>10</td><td>15</td><td>40</td></tr><tr><td>Total</td><td>100</td><td>100</td><td>100</td><td>300</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the name of the appropriate chi-square test and justify your choice.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected number of Sales employees who are "Neutral" if there is no difference in job satisfaction among departments.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Verify the conditions for performing this chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        The calculated chi-square test statistic is $15.20$ with a p-value of $0.004$. Based on these results and a significance level of $\alpha = 0.01$, what conclusion should the company draw? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states $H_0:$ There is no difference in the distribution of job satisfaction among the Sales, Marketing, and Operations departments. AND $H_a:$ There is a difference in the distribution of job satisfaction among the Sales, Marketing, and Operations departments.</li>
+          
+          <li>Part b (1pt): Identifies "Chi-square test for homogeneity." Justification: Compares the distribution of a categorical variable (job satisfaction) across independent samples from multiple populations (departments).</li>
+          
+          <li>Part c (1pt): Calculates the total number of neutral employees ($20+20+25=65$). Total surveyed is 300. Expected count for Sales-Neutral is $\frac{100 \times 65}{300} \approx 21.67$.</li>
+          
+          <li>Part d (1pt): Verifies conditions: Random samples (stated), Independence (employees within departments are independent; samples from departments are independent), Expected counts are all $\ge 5$ (all expected counts are checked and are $\ge 5$).</li>
+          
+          <li>Part e (1pt): Compares $p$-value ($0.004$) to $\alpha$ ($0.01$). Since $p < \alpha$, rejects $H_0$. Concludes there is sufficient evidence to suggest that there is a difference in job satisfaction among the Sales, Marketing, and Operations departments.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

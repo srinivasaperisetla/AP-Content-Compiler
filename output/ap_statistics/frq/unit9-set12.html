@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 12)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 12)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S12Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.AC,UNC-4.AD,UNC-4.AF,UNC-4.AG"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A researcher wants to investigate the relationship between the daily temperature (in degrees Celsius) and the number of kilowatt-hours (kWh) of electricity consumed by a small business. Data were collected for 15 randomly selected days. A linear regression model was fitted to the data, yielding a regression equation $\hat{y} = 150 + 5x$, where $x$ is the daily temperature and $\hat{y}$ is the predicted electricity consumption. The standard error of the slope coefficient was calculated to be $s_b = 1.2$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure to construct a confidence interval for the true slope of the relationship between temperature and electricity consumption.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions necessary for this inference procedure to be valid. Assume a scatterplot shows a linear pattern, the residuals show no obvious pattern, and the histogram of residuals is approximately normal.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate a 95% confidence interval for the true slope of the regression line. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the confidence interval calculated in part (c) in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly identifies a t-interval for the slope of a regression line.</li>
+          
+          <li>Part b (1pt): Verifies linearity, independence, normality of residuals, equal variance, and random sampling.</li>
+          
+          <li>Part c (2pts): Correctly calculates the degrees of freedom ($df=13$), the critical t-value (approx $2.160$), the margin of error ($2.592$), and the confidence interval $(2.408, 7.592)$.</li>
+          
+          <li>Part d (1pt): Provides a correct interpretation of the interval in context, stating that we are 95% confident that for every $1^\circ C$ increase in temperature, the mean electricity consumption increases by between $2.408$ and $7.592$ kWh.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S12Q2"
+      data-difficulty="medium"
+      data-skill-codes="4.B,4.D,4.A"
+      data-learning-objectives="UNC-4.AG,UNC-4.AH,UNC-4.AI"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">An educational researcher is studying the relationship between the number of hours students spend on a new online learning platform per week and their final exam scores in a statistics course. Based on a sample of 25 students, a 90% confidence interval for the true slope of the regression line relating hours on platform to exam score was calculated as $(1.8, 3.5)$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Interpret the 90% confidence interval $(1.8, 3.5)$ in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Based on this confidence interval, does the researcher have convincing evidence that there is a positive linear relationship between hours spent on the platform and final exam scores? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Suppose the researcher wanted to achieve a narrower confidence interval without changing the confidence level. Describe how increasing the sample size would likely affect the width of the confidence interval.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly interprets the interval: "We are 90% confident that for every additional hour a student spends on the online learning platform per week, their mean final exam score increases by between $1.8$ and $3.5$ points."</li>
+          
+          <li>Part b (2pts): States "Yes, there is convincing evidence." (1pt) and justifies by noting that the entire interval $(1.8, 3.5)$ is above $0$, meaning a $0$ slope (no relationship) is not a plausible value. (1pt)</li>
+          
+          <li>Part c (1pt): Explains that increasing the sample size would generally lead to a narrower confidence interval because it typically decreases the standard error of the slope, which reduces the margin of error.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S12Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.AC,UNC-4.AD,UNC-4.AF,UNC-4.AG"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A researcher is investigating the relationship between the number of hours students spend studying per week and their final exam scores in a large introductory statistics course. A random sample of $n=30$ students was selected, and the data were used to generate a least-squares regression line. The standard error of the residuals is $S=3.5$. The computer output is provided below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Predictor</th><th>Coef</th><th>SE Coef</th><th>T</th><th>P</th></tr></thead><tbody><tr><td>Constant</td><td>60.15</td><td>5.20</td><td>11.57</td><td>0.000</td></tr><tr><td>Study Hours</td><td>1.50</td><td>0.25</td><td>6.00</td><td>0.000</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure for constructing a confidence interval for the true slope of the regression line.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for inference for the slope of the regression line. Assume that residual plots show no obvious patterns and the residuals are approximately normally distributed.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate a 95% confidence interval for the true slope of the regression line.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the confidence interval for the slope in the context of this problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly identifies a t-interval for the slope of a regression line (or a t-interval for regression coefficients).</li>
+          
+          <li>Part b (1pt): Verifies all necessary conditions: Random sample, Linear relationship (checked by residual plot or visual inspection of scatterplot), Independent observations, Normal residuals (checked by normal probability plot or histogram of residuals), Equal standard deviation of residuals (checked by residual plot).</li>
+          
+          <li>Part c (1pt): Correctly calculates the 95% confidence interval for the slope using $\hat{b} \pm t^* SE_{\hat{b}}$. Shows correct calculation of $df=n-2=28$ and $t^*=2.048$. Interval: $1.5 \pm 2.048(0.25) \Rightarrow (0.988, 2.012)$.</li>
+          
+          <li>Part d (1pt): Provides a correct interpretation of the confidence interval, stating that "We are 95% confident that for each additional hour spent studying per week, the final exam score is estimated to increase by between 0.988 and 2.012 points, on average."</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S12Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.J,VAR-7.K,VAR-7.L,VAR-7.M,DAT-3.M,DAT-3.N"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">An urban planner wants to determine if there is a linear relationship between a city's population density (in people per square mile) and its average commute time (in minutes). A random sample of $n=25$ cities was collected. The least-squares regression line relating commute time (response) to population density (explanatory) was calculated. The residual plot shows no obvious pattern, and a normal probability plot of the residuals is approximately linear.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Predictor</th><th>Coef</th><th>SE Coef</th><th>T</th><th>P</th></tr></thead><tbody><tr><td>Constant</td><td>18.5</td><td>3.2</td><td>5.78</td><td>0.000</td></tr><tr><td>Pop Density</td><td>0.08</td><td>0.03</td><td>2.67</td><td>0.015</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for a test to determine if there is a linear relationship between population density and average commute time.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for inference for the slope of the regression line.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic for the slope of the regression line and interpret the $p$-value of $0.015$ in context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the $p$-value and a significance level of $\alpha=0.05$, what conclusion should the urban planner draw and justify it?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states $H_0: \beta = 0$ and $H_a: \beta \ne 0$, where $\beta$ is the true slope of the population regression line relating commute time to population density.</li>
+          
+          <li>Part b (1pt): Verifies all necessary conditions: Random sample (stated), Linear relationship (residual plot shows no pattern), Independent observations (25 cities < 10% of all cities), Normal residuals (normal probability plot is approximately linear), Equal standard deviation of residuals (residual plot shows consistent spread).</li>
+          
+          <li>Part c (1pt): Calculates the test statistic $t = \frac{\hat{b} - 0}{SE_{\hat{b}}} = \frac{0.08 - 0}{0.03} \approx 2.667$. Interprets p-value: If there is no linear relationship, there is a 0.015 probability of observing a sample slope as extreme or more extreme than 0.08 by random chance.</li>
+          
+          <li>Part d (1pt): Since the $p$-value ($0.015$) is less than $\alpha$ ($0.05$), we reject the null hypothesis. There is sufficient evidence to conclude that there is a linear relationship between a city's population density and its average commute time.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S12Q5"
+      data-difficulty="easy"
+      data-skill-codes="4.B,4.D,4.A"
+      data-learning-objectives="UNC-4.AG,UNC-4.AH,UNC-4.AI"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A plant scientist conducted an experiment to study the relationship between the amount of a new fertilizer (in grams per plant) and the plant's growth (in centimeters) over a month. A 90% confidence interval for the true slope of the regression line relating plant growth to fertilizer amount was calculated to be $(0.72, 1.18)$. A total of $n=50$ plants were used in the experiment.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Interpret the 90% confidence interval for the slope in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Based on this confidence interval, does the data provide convincing evidence that increasing the fertilizer amount is associated with an increase in plant growth? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If the scientist were to construct a 95% confidence interval using the same data, how would its width compare to the 90% confidence interval?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): We are 90% confident that for each additional gram of fertilizer per plant, the plant's growth will increase by an average of between 0.72 and 1.18 centimeters over a month.</li>
+          
+          <li>Part b (1pt): Yes, the data provides convincing evidence. Since the entire interval $(0.72, 1.18)$ contains only positive values, it suggests that increasing fertilizer amount is associated with an increase in plant growth.</li>
+          
+          <li>Part c (1pt): A 95% confidence interval would be wider than the 90% confidence interval. To be more confident, a wider range of values is needed to capture the true population parameter.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

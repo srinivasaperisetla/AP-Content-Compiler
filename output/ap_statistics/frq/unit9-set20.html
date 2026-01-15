@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 20)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 20)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S20Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D"
+      data-learning-objectives="UNC-4.AC,UNC-4.AD,UNC-4.AF"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A horticulturist is studying the relationship between the amount of fertilizer applied (in grams per plant) and the growth rate of a particular plant species (in cm per week). They collected data from 15 plants. A linear regression analysis was performed, yielding a sample slope of $b = 0.52$ cm/week/gram, with a standard error of the slope $SE_b = 0.18$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure to estimate the true slope of the relationship between fertilizer and growth rate.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this inference procedure.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate a 95% confidence interval for the true slope of the regression line.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies a t-interval for the slope of a regression line.</li>
+          
+          <li>Part b (2pts): Verifies linearity (scatterplot linear or stated), independence (random sampling or assignment, $10\%$ condition if sampling without replacement, or design implies independence), normality of residuals (normal probability plot or histogram of residuals shows no strong skewness/outliers, or large sample size), equal variance of residuals (residual plot shows no fanning), and random condition (random sample or randomized experiment).</li>
+          
+          <li>Part c (2pts): Calculates $df = n-2 = 15-2 = 13$. Identifies critical $t$-value (approx $2.160$). Calculates interval $0.52 \pm 2.160(0.18)$, resulting in $(0.130, 0.910)$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S20Q2"
+      data-difficulty="medium"
+      data-skill-codes="4.B,4.D"
+      data-learning-objectives="UNC-4.AG,UNC-4.AH"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A company develops a new coating for car windshields to improve visibility. Researchers conducted a study and found a 90% confidence interval for the true slope of the relationship between coating thickness (in micrometers) and light transmission improvement (in percentage points) to be $(0.08, 0.15)$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Interpret this 90% confidence interval for the slope in the context of the study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        The company claims that for every additional micrometer of coating thickness, the light transmission improvement will increase by more than 0.05 percentage points. Use the confidence interval to justify whether this claim is supported.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States that we are 90% confident that for every additional micrometer of coating thickness, the true mean light transmission improvement increases by an amount between 0.08 and 0.15 percentage points.</li>
+          
+          <li>Part b (2pts): Justifies that since the entire interval $(0.08, 0.15)$ is above 0.05, it provides convincing evidence that the true slope is greater than 0.05. Therefore, the company's claim is supported.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S20Q3"
+      data-difficulty="easy"
+      data-skill-codes="1.E,1.F,4.C"
+      data-learning-objectives="VAR-7.J,VAR-7.K,VAR-7.L"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A study investigated the relationship between the amount of sleep (in hours) a student gets the night before an exam and their score on a standardized math test. A random sample of 25 students was selected. The researchers want to determine if there is a positive linear relationship between sleep hours and test scores.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate significance test to investigate the researcher's question.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        State the null and alternative hypotheses for this test in terms of the true slope of the regression line.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify the conditions for performing this significance test, assuming residual plots and summary statistics from the analysis are available and indicate no major violations.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies a t-test for the slope of a regression line (or t-test for $\beta$).</li>
+          
+          <li>Part b (2pts): States $H_0: \beta = 0$ (no linear relationship between sleep hours and test scores) and $H_a: \beta > 0$ (a positive linear relationship exists). Defines $\beta$ as the true slope of the population regression line relating sleep hours to test scores.</li>
+          
+          <li>Part c (2pts): Verifies conditions: Linearity (assumed by regression), Independence (random sample, $10\%$ condition $25 < 0.10 \times \text{population}$, or reasonable to assume independence), Normality of residuals (assumed from available plots), Equal variance of residuals (assumed from available plots), Random (stated random sample).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S20Q4"
+      data-difficulty="medium"
+      data-skill-codes="3.E,4.B"
+      data-learning-objectives="VAR-7.M,DAT-3.M"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">Researchers are investigating the relationship between the number of hours spent studying per week and a student's final exam score in a large introductory statistics course. They collected data from 30 randomly selected students. A regression analysis was performed, and part of the output is shown below:</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Predictor</th><th>Coef</th><th>SE Coef</th><th>T</th><th>P</th></tr></thead><tbody><tr><td>Constant</td><td>55.20</td><td>2.50</td><td>22.08</td><td>0.000</td></tr><tr><td>Study Hours</td><td>1.85</td><td>0.45</td><td>4.11</td><td>0.000</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the $t$-test statistic for the slope of the regression line using the provided output.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Interpret the $p$-value for the slope in the context of this study.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Calculates $t = \frac{\text{Coef}}{\text{SE Coef}} = \frac{1.85}{0.45} \approx 4.111$.</li>
+          
+          <li>Part b (2pts): Interprets the p-value: If there were no true linear relationship between study hours and final exam scores (i.e., true slope is 0), there would be a 0.000 probability of observing a sample slope as extreme as or more extreme than 1.85 (or a t-statistic as extreme as or more extreme than 4.11) by random chance.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S20Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.F,4.E"
+      data-learning-objectives="VAR-7.K,DAT-3.N"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">An agricultural scientist wants to determine if a new fertilizer impacts crop yield. They perform an experiment on 40 plots of land, varying the amount of fertilizer applied and measuring the crop yield. A significance test for the slope of the regression line relating fertilizer amount to crop yield resulted in a $p$-value of $0.035$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Using a significance level of $\alpha = 0.05$, what conclusion should the scientist make based on the $p$-value? Justify your answer in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States $H_0: \beta = 0$ (no linear relationship between fertilizer amount and crop yield) and $H_a: \beta \ne 0$ (a linear relationship exists). Defines $\beta$ as the true slope of the population regression line relating fertilizer amount to crop yield.</li>
+          
+          <li>Part b (2pts): Concludes that since the $p$-value ($0.035$) is less than the significance level ($\alpha = 0.05$), we reject the null hypothesis. There is sufficient evidence to conclude that there is a linear relationship between the amount of fertilizer applied and crop yield.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

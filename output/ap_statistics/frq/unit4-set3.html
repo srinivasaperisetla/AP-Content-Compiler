@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 3)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 3)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S3Q1"
+      data-difficulty="easy"
+      data-skill-codes="3.A"
+      data-learning-objectives="UNC-2.A"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A local bakery claims that 80% of its customers purchase their popular sourdough bread. To verify this claim, a statistician decides to simulate the purchases of 10 customers.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe a simulation process using a random number generator to estimate the probability that exactly 8 out of 10 customers purchase sourdough bread, assuming the bakery's claim is true.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Using the random digits below, perform two trials of your simulation process from part (a) and report the number of customers who purchase sourdough bread in each trial. Random digits: $37059 \ 08200 \ 19301 \ 82436 \ 02947 \ 42686 \ 20689 \ 12693$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on your two trials, estimate the probability that exactly 8 out of 10 customers purchase sourdough bread.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Assigns digits for sourdough purchase and non-purchase (e.g., 00-79 for purchase, 80-99 for non-purchase) (1pt); Describes how to simulate 10 customers and record success (1pt)</li>
+          
+          <li>Part b (2pts): Correctly identifies 8 sourdough purchases in the first trial (1pt); Correctly identifies 6 sourdough purchases in the second trial (1pt)</li>
+          
+          <li>Part c (1pt): Calculates the estimated probability as $\frac{1}{2}$ based on the two trials (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S3Q2"
+      data-difficulty="medium"
+      data-skill-codes="2.B,3.B,4.B"
+      data-learning-objectives="VAR-5.A,VAR-5.C,VAR-5.D"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A game involves rolling a fair six-sided die. If you roll a 1 or a 2, you win \$5. If you roll a 3 or a 4, you lose \$2. If you roll a 5 or a 6, you win \$1. Let $X$ be the random variable representing the net winnings for one roll of the die.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Construct the probability distribution of $X$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected net winnings for one roll of the die. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the expected net winnings from part (b) in the context of the game.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly identifies all possible values of $X$ (1pt); Correctly assigns probabilities to each value (1pt)</li>
+          
+          <li>Part b (2pts): Shows correct calculation for expected value (e.g., $E(X) = 5(\frac{2}{6}) + (-2)(\frac{2}{6}) + 1(\frac{2}{6})$) (1pt); Calculates the correct expected value of $E(X) = \frac{8}{6} = \frac{4}{3} \approx \$1.33$ (1pt)</li>
+          
+          <li>Part c (1pt): Provides a correct interpretation of the expected value in context, referring to the long-run average net winnings per roll (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S3Q3"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.B,UNC-3.C,UNC-3.D"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A recent study claims that 15% of high school students use a specific social media platform for more than 3 hours a day. A principal wants to investigate this claim by randomly selecting 20 students from her school.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Verify that the conditions for a binomial distribution are met for the number of students who use the platform for more than 3 hours a day in this sample of 20.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the probability that exactly 3 students in the sample use the platform for more than 3 hours a day, assuming the claim is true.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the mean and standard deviation for the number of students in a sample of 20 who use the platform for more than 3 hours a day.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Checks and states fixed number of trials, $n=20$ (1pt); Checks and states independent trials, success/failure outcomes, and constant probability of success ($p=0.15$) (1pt)</li>
+          
+          <li>Part b (2pts): Shows correct setup for binomial probability (e.g., $\binom{20}{3}(0.15)^3(0.85)^{17}$) (1pt); Calculates the correct probability (approximately 0.2428) (1pt)</li>
+          
+          <li>Part c (2pts): Calculates the mean $\mu = np = 20(0.15) = 3$ (1pt); Calculates the standard deviation $\sigma = \sqrt{np(1-p)} = \sqrt{20(0.15)(0.85)} \approx 1.59687$ (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S3Q4"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.E,UNC-3.F,UNC-3.G"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A telemarketing company has a 10% success rate of getting a customer to sign up for a new service on any given call. Assume that each call is independent. A new telemarketer is making calls.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What is the probability that the first customer to sign up for the new service is the 5th customer the telemarketer calls?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What is the probability that it takes more than 3 calls to get the first customer to sign up for the new service?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected number of calls until the first customer signs up for the new service and interpret this value.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Calculates the probability $P(X=5) = (0.90)^4(0.10) \approx 0.06561$ (1pt)</li>
+          
+          <li>Part b (2pts): Sets up the probability $P(X > 3) = (0.90)^3$ or $1 - P(X \le 3)$ (1pt); Calculates the correct probability (0.729) (1pt)</li>
+          
+          <li>Part c (2pts): Calculates the expected number of calls $E(X) = \frac{1}{p} = \frac{1}{0.10} = 10$ calls (1pt); Interprets this value as the long-run average number of calls needed to get the first sign-up (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S3Q5"
+      data-difficulty="hard"
+      data-skill-codes="3.A,4.B"
+      data-learning-objectives="VAR-4.D,VAR-4.E"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A company produces electronic components. Historically, 8% of the components are defective. Also, 60% of the defective components are produced by Machine A. Overall, 30% of all components are produced by Machine A.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What is the probability that a randomly selected component is defective AND was produced by Machine A?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What is the probability that a randomly selected component is defective, GIVEN that it was produced by Machine A? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Are the events "component is defective" and "component was produced by Machine A" independent? Justify your answer using probabilities.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly calculates $P(\text{Defective} \cap \text{Machine A}) = P(\text{Defective}) \times P(\text{Machine A}</li>
+          
+          <li>\text{Defective}) = 0.08 \times 0.60 = 0.048$ (1pt)</li>
+          
+          <li>Part b (2pts): Shows correct setup for conditional probability $P(\text{Defective}</li>
+          
+          <li>\text{Machine A}) = \frac{P(\text{Defective} \cap \text{Machine A})}{P(\text{Machine A})}$ (1pt); Calculates the correct probability $\frac{0.048}{0.30} = 0.16$ (1pt)</li>
+          
+          <li>Part c (2pts): Compares $P(\text{Defective}</li>
+          
+          <li>\text{Machine A})$ to $P(\text{Defective})$ or $P(\text{Defective} \cap \text{Machine A})$ to $P(\text{Defective})P(\text{Machine A})$ (1pt); Concludes they are NOT independent because $0.16 \ne 0.08$ (or $0.048 \ne 0.08 \times 0.30 = 0.024$) (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

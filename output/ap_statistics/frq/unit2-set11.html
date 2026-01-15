@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 11)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 11)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S11Q1"
+      data-difficulty="medium"
+      data-skill-codes="4.B,2.C"
+      data-learning-objectives="DAT-1.H,DAT-1.D"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A real estate agent wants to predict the selling price (in thousands of dollars) of a house based on its size (in hundreds of square feet). Data from 20 recent sales were collected and a linear regression model was fitted. The computer output is provided below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Predictor</th><th>Coef</th><th>SE Coef</th><th>T</th><th>P</th></tr></thead><tbody><tr><td>Constant</td><td>10.52</td><td>5.10</td><td>2.06</td><td>0.054</td></tr><tr><td>Size (100 sq ft)</td><td>5.21</td><td>0.45</td><td>11.58</td><td>0.000</td></tr><tr><td>$S = 25.5$</td><td>$R-Sq = 89.2\%$</td><td>$R-Sq(adj) = 88.6\%$</td><td></td><td></td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Write the equation of the least-squares regression line for predicting selling price from house size.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Interpret the slope of the regression line in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the value of $s = 25.5$ in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Predict the selling price of a house that is 2200 square feet.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly writes the regression equation using appropriate variable names, e.g., $\hat{\text{Price}} = 10.52 + 5.21(\text{Size})$.</li>
+          
+          <li>Part b (1pt): Explains that for each additional 100 square feet in house size, the predicted selling price increases by \$5,210.</li>
+          
+          <li>Part c (1pt): Explains that the typical distance (or average residual size) between the actual selling prices and the predicted selling prices is \$25,500.</li>
+          
+          <li>Part d (1pt): Correctly substitutes Size = 22 and calculates $\hat{\text{Price}} = 10.52 + 5.21(22) = 125.14$ (or \$125,140).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S11Q2"
+      data-difficulty="easy"
+      data-skill-codes="2.C,2.D"
+      data-learning-objectives="UNC-1.Q,UNC-1.R"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A survey was conducted to investigate the preferred mode of transportation to work for employees at a large company, broken down by their job classification (manager or non-manager). The results are summarized in the two-way table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Mode of Transport</th><th>Manager</th><th>Non-Manager</th><th>Total</th></tr></thead><tbody><tr><td>Drive Alone</td><td>70</td><td>180</td><td>250</td></tr><tr><td>Carpool</td><td>20</td><td>50</td><td>70</td></tr><tr><td>Public Transport</td><td>5</td><td>40</td><td>45</td></tr><tr><td>Bicycle/Walk</td><td>5</td><td>30</td><td>35</td></tr><tr><td>Total</td><td>100</td><td>300</td><td>400</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What proportion of all surveyed employees prefer to take public transport to work?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What proportion of managers prefer to drive alone to work?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Compare the distributions of preferred mode of transportation for managers and non-managers.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Calculates $\frac{45}{400} = 0.1125$.</li>
+          
+          <li>Part b (1pt): Calculates $\frac{70}{100} = 0.70$.</li>
+          
+          <li>Part c (2pts): Compares conditional proportions for managers and non-managers for at least two modes of transportation, explicitly stating higher/lower proportions, and provides a clear comparative statement in context.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S11Q3"
+      data-difficulty="easy"
+      data-skill-codes="2.A,4.B"
+      data-learning-objectives="DAT-1.A,DAT-1.C"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A researcher is investigating the relationship between the number of hours a student spends studying for a statistics exam and their score on the exam. Data was collected from 10 students and plotted in the scatterplot shown.</div>
+
+      
+      <div class="diagram">
+         <svg width="350" height="250" viewBox="0 0 350 250" style="background-color:white;"><line x1="50" y1="200" x2="300" y2="200" stroke="black" stroke-width="1"/><line x1="50" y1="200" x2="50" y2="50" stroke="black" stroke-width="1"/><text x="175" y="215" text-anchor="middle" font-size="12">Study Hours</text><text x="25" y="125" text-anchor="middle" transform="rotate(-90 25 125)" font-size="12">Exam Score</text><text x="175" y="35" text-anchor="middle" font-size="14">Study Hours vs. Exam Score</text><circle cx="60" cy="180" r="3" fill="black"/><circle cx="80" cy="170" r="3" fill="black"/><circle cx="100" cy="165" r="3" fill="black"/><circle cx="120" cy="150" r="3" fill="black"/><circle cx="140" cy="145" r="3" fill="black"/><circle cx="160" cy="130" r="3" fill="black"/><circle cx="180" cy="120" r="3" fill="black"/><circle cx="200" cy="110" r="3" fill="black"/><circle cx="220" cy="95" r="3" fill="black"/><circle cx="240" cy="80" r="3" fill="black"/></svg> 
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the direction, form, and strength of the relationship between study hours and exam scores as shown in the scatterplot.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Based on the scatterplot, would you expect the correlation coefficient $r$ to be positive, negative, or close to zero? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly describes direction (positive), form (linear), and strength (moderately strong or strong).</li>
+          
+          <li>Part b (1pt): States $r$ would be positive AND provides a correct justification based on the upward trend.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S11Q4"
+      data-difficulty="medium"
+      data-skill-codes="2.C,2.D,4.B"
+      data-learning-objectives="UNC-1.Q,UNC-1.R,VAR-1.D"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A survey was conducted to investigate the relationship between a person's preferred method of news consumption (online, TV, print) and their age group (18-35, 36-55, 56+). The results from a random sample of 200 adults are summarized in the two-way table.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Age Group</th><th>Online</th><th>TV</th><th>Print</th><th>Total</th></tr></thead><tbody><tr><td>18-35</td><td>70</td><td>8</td><td>2</td><td>80</td></tr><tr><td>36-55</td><td>40</td><td>35</td><td>15</td><td>90</td></tr><tr><td>56+</td><td>10</td><td>30</td><td>40</td><td>60</td></tr><tr><td>Total</td><td>120</td><td>73</td><td>57</td><td>200</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the conditional proportion of adults aged 18-35 who prefer online news.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the conditional proportion of adults aged 56+ who prefer online news.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on your calculations in parts (a) and (b), describe the relationship between age group and preferred method of news consumption for those who prefer online news.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correct calculation $70/80 = 0.875$ or $87.5\%$.</li>
+          
+          <li>Part b (1pt): Correct calculation $10/60 = 0.167$ or $16.7\%$.</li>
+          
+          <li>Part c (2pts): Compares the proportions ($0.875$ vs $0.167$) AND describes that younger adults (18-35) are much more likely to prefer online news compared to older adults (56+).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S11Q5"
+      data-difficulty="easy"
+      data-skill-codes="2.C,4.B"
+      data-learning-objectives="DAT-1.D,DAT-1.H"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A company wants to understand the relationship between its advertising expenditure (in thousands of dollars) and its monthly sales (in thousands of dollars). A linear regression model was fitted to historical data, resulting in the equation $\widehat{\text{Sales}} = 12.5 + 2.3(\text{Advertising})$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Interpret the slope of the regression line in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Predict the monthly sales if the company spends $10$ thousand dollars on advertising.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States that for every additional thousand dollars spent on advertising, the predicted monthly sales increase by $2.3$ thousand dollars.</li>
+          
+          <li>Part b (1pt): Correct calculation $12.5 + 2.3(10) = 35.5$ thousand dollars.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

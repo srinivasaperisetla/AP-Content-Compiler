@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AP Statistics — Unit 4: Probability, Random Variables, and Probability Distributions MCQ Set</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-size: 0.95rem;
+      }
+
+      .data-table th,
+      .data-table td {
+        border: 1px solid #ccc;
+        padding: 0.5rem 0.75rem;
+        text-align: center;
+      }
+
+      .data-table th {
+        background-color: #f2f2f2;
+        font-weight: 600;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+        color: #333;
+      }
+
+      h1 {
+        border-bottom: 2px solid #333;
+        padding-bottom: 0.5rem;
+      }
+
+      .question-card {
+        border: 1px solid #ddd;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        border-radius: 8px;
+        background-color: #fafafa;
+        break-inside: avoid;
+      }
+
+      .question-header {
+        margin-bottom: 0.75rem;
+        font-size: 0.95rem;
+        color: #666;
+      }
+
+      .question-text {
+        font-weight: 600;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+      }
+
+      .diagram {
+        margin: 1rem 0;
+        text-align: center;
+        border: 1px solid #eee;
+        background: white;
+        padding: 10px;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+        max-height: 400px;
+        display: inline-block;
+      }
+
+      .choices {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .choices li {
+        margin-bottom: 0.5rem;
+      }
+
+      .key-section {
+        margin-top: 4rem;
+        border-top: 4px solid #333;
+        padding-top: 2rem;
+      }
+
+      .key-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 1rem;
+      }
+
+      @media print {
+        .question-card {
+          border: none;
+          padding: 0;
+          margin-bottom: 3rem;
+        }
+        .diagram {
+          border: 1px solid #ccc;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics — Unit 4: Probability, Random Variables, and Probability Distributions</h1>
+
+    <hr />
+
+    <div class="mcq-container">
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S1Q1"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="UNC-2.A"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q1.</strong> (ID: ap_statistics_MCQ_U4S1Q1)
+        </div>
+
+        
+        <div class="diagram">
+           <table class='data-table'><thead><tr><th>Run</th><th>Outcome</th></tr></thead><tbody><tr><td>1</td><td>S</td></tr><tr><td>2</td><td>FS</td></tr><tr><td>3</td><td>FFS</td></tr><tr><td>4</td><td>FFFS</td></tr><tr><td>5</td><td>S</td></tr><tr><td>6</td><td>FS</td></tr><tr><td>7</td><td>FFFFS</td></tr><tr><td>8</td><td>FFS</td></tr><tr><td>9</td><td>FFFS</td></tr><tr><td>10</td><td>S</td></tr></tbody></table>
+          
+        </div>
+        
+
+        <div class="question-text">A researcher wants to estimate the probability that it takes more than 3 attempts to get a success, where the probability of success is $p=0.4$. They conduct a simulation where 'S' denotes success and 'F' denotes failure. The results of 10 simulation runs are shown in the table. \n\nWhat is the estimated probability based on these simulation results?</div>
+
+        <ul class="choices">
+          
+          <li>A. 0.2</li>
+          
+          <li>B. 0.4</li>
+          
+          <li>C. 0.3</li>
+          
+          <li>D. 0.5</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S1Q2"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="UNC-3.A"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q2.</strong> (ID: ap_statistics_MCQ_U4S1Q2)
+        </div>
+
+        
+        <div class="diagram">
+           <svg width="200" height="100"><rect x="10" y="10" width="180" height="80" fill="white" stroke="black"/><text x="20" y="40" font-size="12">0-2: Lands on perch (Success)</text><text x="20" y="70" font-size="12">3-9: Does not land (Failure)</text></svg> 
+        </div>
+        
+
+        <div class="question-text">A biologist wants to simulate the number of times a certain bird lands on a specific perch out of 10 observations. Based on previous studies, the bird lands on this perch 30% of the time. The accompanying diagram shows how a random digit table could be used for one observation. \n\nIf the biologist performs 10 observations (10 random digits) and gets the sequence: 7, 1, 9, 3, 0, 4, 8, 2, 6, 5, how many times does the bird land on the perch in this simulation run?</div>
+
+        <ul class="choices">
+          
+          <li>A. 1</li>
+          
+          <li>B. 2</li>
+          
+          <li>C. 3</li>
+          
+          <li>D. 4</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S1Q3"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="VAR-4.D"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q3.</strong> (ID: ap_statistics_MCQ_U4S1Q3)
+        </div>
+
+        
+        <div class="diagram">
+           <table class='data-table'><thead><tr><th>Department</th><th>0-5 Sick Days</th><th>>5 Sick Days</th><th>Total</th></tr></thead><tbody><tr><td>A</td><td>30</td><td>20</td><td>50</td></tr><tr><td>B</td><td>40</td><td>10</td><td>50</td></tr><tr><td>Total</td><td>70</td><td>30</td><td>100</td></tr></tbody></table>
+          
+        </div>
+        
+
+        <div class="question-text">A company records employee sick days and department. The table below summarizes the data. \n\nWhat is the probability that a randomly selected employee is from Department A GIVEN that they took more than 5 sick days?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.4$</li>
+          
+          <li>B. $0.2$</li>
+          
+          <li>C. $0.3$</li>
+          
+          <li>D. $0.67$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S1Q4"
+        data-difficulty="easy"
+        data-skill-codes="1.A"
+        data-learning-objectives="VAR-1.F"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q4.</strong> (ID: ap_statistics_MCQ_U4S1Q4)
+        </div>
+
+        
+
+        <div class="question-text">A researcher observes that students who eat breakfast tend to have higher test scores. What question is suggested by this pattern in the data?</div>
+
+        <ul class="choices">
+          
+          <li>A. What percentage of students eat breakfast regularly?</li>
+          
+          <li>B. Does eating breakfast cause higher test scores?</li>
+          
+          <li>C. What is the average test score for all students?</li>
+          
+          <li>D. How much do test scores vary among students?</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S1Q5"
+        data-difficulty="medium"
+        data-skill-codes="1.A"
+        data-learning-objectives="VAR-1.F"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q5.</strong> (ID: ap_statistics_MCQ_U4S1Q5)
+        </div>
+
+        
+
+        <div class="question-text">A survey finds that people who own pets report higher levels of happiness. Which of the following is a question suggested by this observed pattern?</div>
+
+        <ul class="choices">
+          
+          <li>A. What is the average happiness score for pet owners?</li>
+          
+          <li>B. Is there a causal relationship between pet ownership and happiness?</li>
+          
+          <li>C. What percentage of people own pets?</li>
+          
+          <li>D. How many different types of pets are there?</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S1Q6"
+        data-difficulty="easy"
+        data-skill-codes="3.A"
+        data-learning-objectives="UNC-2.A"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q6.</strong> (ID: ap_statistics_MCQ_U4S1Q6)
+        </div>
+
+        
+
+        <div class="question-text">A student wants to estimate the probability of rolling a sum of 7 with two fair six-sided dice. They simulate rolling the dice 100 times and record 15 sums of 7. Based on this simulation, what is the estimated probability of rolling a sum of 7?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.07$</li>
+          
+          <li>B. $0.15$</li>
+          
+          <li>C. $0.25$</li>
+          
+          <li>D. $0.50$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S1Q7"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="UNC-2.A"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q7.</strong> (ID: ap_statistics_MCQ_U4S1Q7)
+        </div>
+
+        
+
+        <div class="question-text">To estimate the probability that at least two people in a group of 5 share the same birthday, a simulation is performed 200 times. In 84 of these simulations, at least two people shared a birthday. What is the estimated probability based on this simulation?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.084$</li>
+          
+          <li>B. $0.168$</li>
+          
+          <li>C. $0.42$</li>
+          
+          <li>D. $0.84$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S1Q8"
+        data-difficulty="easy"
+        data-skill-codes="3.A,4.B"
+        data-learning-objectives="VAR-4.A"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q8.</strong> (ID: ap_statistics_MCQ_U4S1Q8)
+        </div>
+
+        
+
+        <div class="question-text">In a bag, there are 5 red marbles and 3 blue marbles. If one marble is drawn at random, what is the probability that it is red?</div>
+
+        <ul class="choices">
+          
+          <li>A. $3/8$</li>
+          
+          <li>B. $5/8$</li>
+          
+          <li>C. $1/2$</li>
+          
+          <li>D. $1/8$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S1Q9"
+        data-difficulty="medium"
+        data-skill-codes="3.A,4.B"
+        data-learning-objectives="VAR-4.A"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q9.</strong> (ID: ap_statistics_MCQ_U4S1Q9)
+        </div>
+
+        
+
+        <div class="question-text">The probability that it rains tomorrow is $0.30$. What is the probability that it does NOT rain tomorrow?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.10$</li>
+          
+          <li>B. $0.30$</li>
+          
+          <li>C. $0.70$</li>
+          
+          <li>D. $1.00$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S1Q10"
+        data-difficulty="easy"
+        data-skill-codes="4.B"
+        data-learning-objectives="VAR-4.B"
+        data-correct-index="3"
+      >
+        <div class="question-header">
+          <strong>Q10.</strong> (ID: ap_statistics_MCQ_U4S1Q10)
+        </div>
+
+        
+
+        <div class="question-text">If the probability of an event occurring is $0.15$, what does this mean?</div>
+
+        <ul class="choices">
+          
+          <li>A. The event will happen exactly 15 times out of 100.</li>
+          
+          <li>B. The event is very unlikely to happen.</li>
+          
+          <li>C. The event is certain to happen.</li>
+          
+          <li>D. In the long run, the event will occur about 15% of the time.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S1Q11"
+        data-difficulty="medium"
+        data-skill-codes="4.B"
+        data-learning-objectives="VAR-4.B"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q11.</strong> (ID: ap_statistics_MCQ_U4S1Q11)
+        </div>
+
+        
+
+        <div class="question-text">A weather forecast states there is a 60% chance of rain. Which of the following is the best interpretation of this statement?</div>
+
+        <ul class="choices">
+          
+          <li>A. It will rain for exactly 60% of the day.</li>
+          
+          <li>B. It will rain in 60% of the area covered by the forecast.</li>
+          
+          <li>C. In similar weather conditions, it has rained about 60% of the time.</li>
+          
+          <li>D. It is more likely to not rain than to rain.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S1Q12"
+        data-difficulty="easy"
+        data-skill-codes="4.B"
+        data-learning-objectives="VAR-4.C"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q12.</strong> (ID: ap_statistics_MCQ_U4S1Q12)
+        </div>
+
+        
+
+        <div class="question-text">Let event A be drawing a king from a standard deck of cards, and event B be drawing a queen. Are events A and B mutually exclusive?</div>
+
+        <ul class="choices">
+          
+          <li>A. Yes, because you cannot draw a king and a queen at the same time.</li>
+          
+          <li>B. Yes, because the probability of drawing a king is different from drawing a queen.</li>
+          
+          <li>C. No, because you could draw a king first, then a queen.</li>
+          
+          <li>D. No, because they are both face cards.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S1Q13"
+        data-difficulty="medium"
+        data-skill-codes="4.B"
+        data-learning-objectives="VAR-4.C"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q13.</strong> (ID: ap_statistics_MCQ_U4S1Q13)
+        </div>
+
+        
+
+        <div class="question-text">Consider rolling a single six-sided die. Let event E be rolling an even number, and event F be rolling a number less than 3. Are events E and F mutually exclusive?</div>
+
+        <ul class="choices">
+          
+          <li>A. Yes, because $P(E) \ne P(F)$.</li>
+          
+          <li>B. Yes, because $E = \{2, 4, 6\}$ and $F = \{1, 2\}$. They share the outcome 2.</li>
+          
+          <li>C. No, because they can both occur at the same time (rolling a 2).</li>
+          
+          <li>D. No, because the sum of their probabilities is greater than 1.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S1Q14"
+        data-difficulty="easy"
+        data-skill-codes="3.A"
+        data-learning-objectives="VAR-4.D"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q14.</strong> (ID: ap_statistics_MCQ_U4S1Q14)
+        </div>
+
+        
+
+        <div class="question-text">A bag contains 4 red balls and 6 blue balls. A ball is drawn, not replaced, and then a second ball is drawn. What is the probability that the second ball drawn is blue, given that the first ball drawn was red?</div>
+
+        <ul class="choices">
+          
+          <li>A. $6/10$</li>
+          
+          <li>B. $6/9$</li>
+          
+          <li>C. $4/9$</li>
+          
+          <li>D. $5/9$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S1Q15"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="VAR-4.D"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q15.</strong> (ID: ap_statistics_MCQ_U4S1Q15)
+        </div>
+
+        
+
+        <div class="question-text">A company finds that 10% of its customers purchase product A, and 3% purchase both product A and product B. What is the probability that a customer purchases product B, given that they have already purchased product A?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.03$</li>
+          
+          <li>B. $0.10$</li>
+          
+          <li>C. $0.30$</li>
+          
+          <li>D. $0.70$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S1Q16"
+        data-difficulty="easy"
+        data-skill-codes="3.A"
+        data-learning-objectives="VAR-4.E"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q16.</strong> (ID: ap_statistics_MCQ_U4S1Q16)
+        </div>
+
+        
+
+        <div class="question-text">If two events, A and B, are independent, and $P(A) = 0.4$ and $P(B) = 0.5$, what is $P(A \cap B)$?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.1$</li>
+          
+          <li>B. $0.2$</li>
+          
+          <li>C. $0.9$</li>
+          
+          <li>D. $1.0$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S1Q17"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="VAR-4.E"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q17.</strong> (ID: ap_statistics_MCQ_U4S1Q17)
+        </div>
+
+        
+
+        <div class="question-text">A fair coin is flipped and a fair six-sided die is rolled. What is the probability of getting a head on the coin and an even number on the die?</div>
+
+        <ul class="choices">
+          
+          <li>A. $1/12$</li>
+          
+          <li>B. $1/6$</li>
+          
+          <li>C. $1/4$</li>
+          
+          <li>D. $1/2$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S1Q18"
+        data-difficulty="hard"
+        data-skill-codes="3.A"
+        data-learning-objectives="VAR-4.E"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q18.</strong> (ID: ap_statistics_MCQ_U4S1Q18)
+        </div>
+
+        
+
+        <div class="question-text">Two independent events, X and Y, have $P(X) = 0.6$ and $P(Y) = 0.7$. What is the probability that neither X nor Y occurs?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.08$</li>
+          
+          <li>B. $0.12$</li>
+          
+          <li>C. $0.42$</li>
+          
+          <li>D. $0.88$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S1Q19"
+        data-difficulty="easy"
+        data-skill-codes="2.B"
+        data-learning-objectives="VAR-5.A"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q19.</strong> (ID: ap_statistics_MCQ_U4S1Q19)
+        </div>
+
+        
+
+        <div class="question-text">A discrete random variable $X$ represents the number of heads in two coin flips. Which of the following is the correct probability distribution for $X$?</div>
+
+        <ul class="choices">
+          
+          <li>A. $P(X=0)=0.25, P(X=1)=0.50, P(X=2)=0.25$</li>
+          
+          <li>B. $P(X=0)=0.50, P(X=1)=0.50$</li>
+          
+          <li>C. $P(X=0)=0.33, P(X=1)=0.33, P(X=2)=0.33$</li>
+          
+          <li>D. $P(X=0)=0.25, P(X=1)=0.25, P(X=2)=0.50$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S1Q20"
+        data-difficulty="medium"
+        data-skill-codes="2.B"
+        data-learning-objectives="VAR-5.A"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q20.</strong> (ID: ap_statistics_MCQ_U4S1Q20)
+        </div>
+
+        
+        <div class="diagram">
+           <table class='data-table'><thead><tr><th>Toppings (T)</th><th>Probability</th></tr></thead><tbody><tr><td>0</td><td>0.10</td></tr><tr><td>1</td><td>0.25</td></tr><tr><td>2</td><td>0.40</td></tr><tr><td>3</td><td>0.15</td></tr><tr><td>4</td><td>?</td></tr></tbody></table>
+          
+        </div>
+        
+
+        <div class="question-text">A local pizzeria records the number of toppings ordered for their pizzas. The probability distribution for the number of toppings ($T$) is shown in the table. What probability should replace the question mark to make this a valid probability distribution?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.10$</li>
+          
+          <li>B. $0.15$</li>
+          
+          <li>C. $0.20$</li>
+          
+          <li>D. $0.25$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S1Q21"
+        data-difficulty="easy"
+        data-skill-codes="4.B"
+        data-learning-objectives="VAR-5.B"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q21.</strong> (ID: ap_statistics_MCQ_U4S1Q21)
+        </div>
+
+        
+        <div class="diagram">
+           <table class='data-table'><thead><tr><th>Number of Cars (X)</th><th>Probability</th></tr></thead><tbody><tr><td>0</td><td>0.15</td></tr><tr><td>1</td><td>0.30</td></tr><tr><td>2</td><td>0.35</td></tr><tr><td>3</td><td>0.20</td></tr></tbody></table>
+          
+        </div>
+        
+
+        <div class="question-text">A discrete probability distribution for the number of cars sold per day at a dealership is given. What is the probability that the dealership sells at least 2 cars on a given day?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.15$</li>
+          
+          <li>B. $0.35$</li>
+          
+          <li>C. $0.55$</li>
+          
+          <li>D. $0.85$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S1Q22"
+        data-difficulty="medium"
+        data-skill-codes="4.B"
+        data-learning-objectives="VAR-5.B"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q22.</strong> (ID: ap_statistics_MCQ_U4S1Q22)
+        </div>
+
+        
+        <div class="diagram">
+           <table class='data-table'><thead><tr><th>Winnings</th><th>Probability</th></tr></thead><tbody><tr><td>$10</td><td>0.2</td></tr><tr><td>$5</td><td>0.3</td></tr><tr><td>$0</td><td>0.5</td></tr></tbody></table>
+          
+        </div>
+        
+
+        <div class="question-text">In a game, a player can win $10, $5, or $0 with the probabilities shown. What is the probability that a player wins more than $0?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.2$</li>
+          
+          <li>B. $0.3$</li>
+          
+          <li>C. $0.5$</li>
+          
+          <li>D. $0.8$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S1Q23"
+        data-difficulty="easy"
+        data-skill-codes="3.B"
+        data-learning-objectives="VAR-5.C"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q23.</strong> (ID: ap_statistics_MCQ_U4S1Q23)
+        </div>
+
+        
+        <div class="diagram">
+           <table class='data-table'><thead><tr><th>X</th><th>P(X)</th></tr></thead><tbody><tr><td>0</td><td>0.2</td></tr><tr><td>1</td><td>0.3</td></tr><tr><td>2</td><td>0.5</td></tr></tbody></table>
+          
+        </div>
+        
+
+        <div class="question-text">A discrete random variable $X$ has the following probability distribution: What is the expected value (mean) of $X$?</div>
+
+        <ul class="choices">
+          
+          <li>A. $1.0$</li>
+          
+          <li>B. $1.2$</li>
+          
+          <li>C. $1.3$</li>
+          
+          <li>D. $1.5$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S1Q24"
+        data-difficulty="easy"
+        data-skill-codes="3.B"
+        data-learning-objectives="VAR-5.C"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q24.</strong> (ID: ap_statistics_MCQ_U4S1Q24)
+        </div>
+
+        
+
+        <div class="question-text">In a simple game, a player either wins $1 or loses $1, each with a probability of $0.5$. Let $X$ be the random variable representing the player's winnings. What is the standard deviation of $X$?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0$</li>
+          
+          <li>B. $0.5$</li>
+          
+          <li>C. $1$</li>
+          
+          <li>D. $2$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S1Q25"
+        data-difficulty="easy"
+        data-skill-codes="4.B"
+        data-learning-objectives="VAR-5.D"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q25.</strong> (ID: ap_statistics_MCQ_U4S1Q25)
+        </div>
+
+        
+
+        <div class="question-text">A probability distribution for the number of defects ($X$) in a manufactured product is given. The mean number of defects is $1.5$. What does this mean?</div>
+
+        <ul class="choices">
+          
+          <li>A. Every product has at least one defect.</li>
+          
+          <li>B. Most products have exactly $1.5$ defects.</li>
+          
+          <li>C. On average, a product will have $1.5$ defects.</li>
+          
+          <li>D. The probability of having $1.5$ defects is high.</li>
+          
+        </ul>
+      </div>
+      
+    </div>
+
+    <div class="key-section">
+      <h2>Answer Key</h2>
+
+      <div class="key-grid">
+        
+        <div>
+          <strong>1.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>2.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>3.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>4.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>5.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>6.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>7.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>8.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>9.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>10.</strong>
+          D
+        </div>
+        
+        <div>
+          <strong>11.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>12.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>13.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>14.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>15.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>16.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>17.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>18.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>19.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>20.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>21.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>22.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>23.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>24.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>25.</strong>
+          C
+        </div>
+        
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

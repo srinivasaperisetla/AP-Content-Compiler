@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 4)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 4)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S4Q1"
+      data-difficulty="easy"
+      data-skill-codes="3.A,4.B"
+      data-learning-objectives="VAR-4.A,VAR-4.C,VAR-4.D"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A recent survey found that $45\%$ of high school students listen to music while studying, $30\%$ watch TV while studying, and $15\%$ do both.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What is the probability that a randomly selected high school student listens to music OR watches TV while studying?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Given that a student listens to music while studying, what is the probability that they also watch TV while studying?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Are the events "listens to music while studying" and "watches TV while studying" mutually exclusive? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Calculates $P(M \cup T)$ correctly using the addition rule $P(M) + P(T) - P(M \cap T)$.</li>
+          
+          <li>Part b (1pt): Calculates $P(T</li>
+          
+          <li>M)$ correctly using the conditional probability formula $P(M \cap T) / P(M)$.</li>
+          
+          <li>Part c (2pts): States that the events are not mutually exclusive AND provides a correct justification based on $P(M \cap T) \ne 0$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S4Q2"
+      data-difficulty="medium"
+      data-skill-codes="2.B,3.B,4.B"
+      data-learning-objectives="VAR-5.A,VAR-5.C,VAR-5.D"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A small company sells a specialized electronic component. The number of defects ($X$) in a randomly selected component has the following probability distribution:</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Defects ($X$)</th><th>Probability $P(X=x)$</th></tr></thead><tbody><tr><td>0</td><td>0.85</td></tr><tr><td>1</td><td>0.10</td></tr><tr><td>2</td><td>0.04</td></tr><tr><td>3</td><td>0.01</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Construct a probability distribution table for $X$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected number of defects in a randomly selected component. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the standard deviation of the number of defects in a randomly selected component. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the expected number of defects in the context of this problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly completes the probability distribution table.</li>
+          
+          <li>Part b (1pt): Shows correct calculation for $E(X) = \sum x \cdot P(X=x)$ and provides the correct value.</li>
+          
+          <li>Part c (2pts): Shows correct calculation for $\sigma_X = \sqrt{\sum (x - \mu_X)^2 \cdot P(X=x)}$ and provides the correct value.</li>
+          
+          <li>Part d (1pt): Provides a correct interpretation of $E(X)$ in context, referring to long-run average.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S4Q3"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.B,UNC-3.C,UNC-3.D"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A manufacturer of light bulbs states that $90\%$ of their bulbs last at least 1000 hours. A quality control inspector randomly selects 15 bulbs from a large batch. Assume the manufacturer's claim is true and that the bulbs' lifetimes are independent.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Verify that the conditions for a binomial distribution are met for the number of bulbs that last at least 1000 hours in this sample.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the probability that exactly 13 of the 15 selected bulbs last at least 1000 hours. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that fewer than 12 of the 15 selected bulbs last at least 1000 hours.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Calculate the mean and standard deviation of the number of bulbs that last at least 1000 hours in a sample of 15.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Verifies all four binomial conditions (Binary, Independent, Number of trials fixed, Success probability fixed).</li>
+          
+          <li>Part b (1pt): Calculates $P(X=13)$ using the binomial probability formula or calculator function, showing formula/setup and correct value.</li>
+          
+          <li>Part c (1pt): Calculates $P(X < 12)$ by summing probabilities or using cumulative binomial probability, showing formula/setup and correct value.</li>
+          
+          <li>Part d (1pt): Calculates mean ($\mu = np$) and standard deviation ($\sigma = \sqrt{np(1-p)}$) correctly.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S4Q4"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-2.A,UNC-3.E,UNC-3.F,UNC-3.G"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A local coffee shop offers a loyalty program where customers receive a free drink for every 5 purchases. On average, $20\%$ of customers use their loyalty card. Assume each customer's use of a loyalty card is independent.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What is the probability that the first customer who uses a loyalty card is the 3rd customer in line? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the probability that at least 5 customers need to be served before the first customer uses a loyalty card.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        What is the expected number of customers the cashier needs to serve until the first customer uses a loyalty card?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Describe how you could use a simulation to estimate the probability that it takes more than 10 customers to find one who uses their loyalty card. Do not perform the simulation.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies this as a geometric setting and calculates $P(X=3)$ correctly using the geometric probability formula $(1-p)^{x-1}p$.</li>
+          
+          <li>Part b (1pt): Calculates $P(X \ge 5)$ correctly using $P(X \ge k) = (1-p)^{k-1}$.</li>
+          
+          <li>Part c (1pt): Calculates the expected number of customers $E(X) = 1/p$ correctly.</li>
+          
+          <li>Part d (2pts): Describes a valid simulation process, including assigning digits/outcomes and performing trials/repetitions.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S4Q5"
+      data-difficulty="easy"
+      data-skill-codes="3.A"
+      data-learning-objectives="UNC-2.A"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A local high school will hold a raffle to raise money for new athletic equipment. They sell 100 tickets, numbered 1 to 100. There are 3 grand prizes (tickets 1, 2, and 3). A person buys 5 tickets. The school wants to simulate the process of a person buying 5 tickets and determining how many prizes they win.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe a simulation process using a random number generator to estimate the probability that a person buying 5 tickets wins at least one prize.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Using the digits from the following random number table, starting at the first digit, perform two trials of your simulation from part (a). Clearly indicate the tickets selected and whether a prize was won in each trial. Random Digits: 84177 50873 24716 17853 00984 81102 38481
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on your two trials in part (b), what is the estimated probability that a person buying 5 tickets wins at least one prize?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Assigns numbers 01, 02, and 03 as winning tickets and 04 through 100 as non-winning tickets. Uses a random number generator to select 5 unique two-digit numbers between 01 and 100. Counts how many of the selected tickets are winning tickets. Describes repeating the process many times and calculating the proportion of trials with at least one prize.</li>
+          
+          <li>Part b (2pts): Correctly performs two trials using two-digit numbers (01-100), showing 5 unique ticket numbers for each trial, and correctly identifies if a prize was won. (Example: Trial 1: 84, 17, 75, 08, 73 -> 0 prizes. Trial 2: 24, 71, 61, 78, 53 -> 0 prizes, assuming prizes are 01, 02, 03).</li>
+          
+          <li>Part c (1pt): Correctly calculates the estimated probability based on the results of their two trials. (Example: $0/2 = 0$).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

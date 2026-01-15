@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 6)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 6)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S6Q1"
+      data-difficulty="easy"
+      data-skill-codes="3.A"
+      data-learning-objectives="VAR-4.A,VAR-4.D,VAR-4.E"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A survey was conducted among 200 high school students about their preferred mode of transportation to school (Bus, Car, Walk) and their grade level (9th, 10th, 11th, 12th). The results are summarized in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Mode \ Grade</th><th>9th</th><th>10th</th><th>11th</th><th>12th</th><th>Total</th></tr></thead><tbody><tr><td>Bus</td><td>25</td><td>20</td><td>15</td><td>10</td><td>70</td></tr><tr><td>Car</td><td>15</td><td>25</td><td>30</td><td>35</td><td>105</td></tr><tr><td>Walk</td><td>10</td><td>5</td><td>5</td><td>5</td><td>25</td></tr><tr><td>Total</td><td>50</td><td>50</td><td>50</td><td>50</td><td>200</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What is the probability that a randomly selected student is in 10th grade and prefers to travel by bus?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Given that a randomly selected student prefers to travel by car, what is the probability that the student is in 12th grade?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Are the events "prefers to travel by bus" and "is in 9th grade" independent? Justify your answer using probabilities.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correct calculation of joint probability $P(\text{10th and Bus}) = 20/200 = 0.10$.</li>
+          
+          <li>Part b (1pt): Correct calculation of conditional probability $P(\text{12th</li>
+          
+          <li>Car}) = 35/105 \approx 0.333$.</li>
+          
+          <li>Part c (2pts): Correct calculation of $P(\text{Bus}) = 70/200 = 0.35$ and $P(\text{9th}) = 50/200 = 0.25$. Correct calculation of $P(\text{Bus and 9th}) = 25/200 = 0.125$. Justification that $P(\text{Bus and 9th}) \ne P(\text{Bus}) \times P(\text{9th})$ ($0.125 \ne 0.35 \times 0.25 = 0.0875$), so they are not independent. OR Comparison of $P(\text{Bus</li>
+          
+          <li>9th}) = 25/50 = 0.5$ with $P(\text{Bus}) = 0.35$, showing they are not equal.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S6Q2"
+      data-difficulty="hard"
+      data-skill-codes="2.B,3.B,3.C,4.B"
+      data-learning-objectives="VAR-5.A,VAR-5.C,VAR-5.D,VAR-5.E,VAR-5.F"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A small company sells custom-designed t-shirts. The number of t-shirts ordered by a customer, $X$, and the profit, $Y$, for each order are random variables. The probability distribution for the number of t-shirts ordered is given in the table below. The profit for an order is given by the formula $Y = 5X - 10$ dollars, reflecting a fixed setup cost and a per-shirt profit.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Number of T-shirts ($x$)</th><th>Probability $P(X=x)$</th></tr></thead><tbody><tr><td>1</td><td>0.20</td></tr><tr><td>2</td><td>0.35</td></tr><tr><td>3</td><td>0.30</td></tr><tr><td>4</td><td>0.10</td></tr><tr><td>5</td><td>0.05</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the expected number of t-shirts ordered per customer, $E[X]$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected profit per order, $E[Y]$, and the standard deviation of the profit per order, $\sigma_Y$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        A customer places two independent orders. Let $Y_1$ be the profit from the first order and $Y_2$ be the profit from the second order. Calculate the expected total profit for the two orders, $E[Y_1 + Y_2]$, and the standard deviation of the total profit, $\sigma_{Y_1 + Y_2}$.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correct calculation of $E[X] = \sum x \cdot P(X=x) = 1(0.20) + 2(0.35) + 3(0.30) + 4(0.10) + 5(0.05) = 2.45$ t-shirts.</li>
+          
+          <li>Part b (2pts): Correct calculation of $E[Y] = E[5X - 10] = 5E[X] - 10 = 5(2.45) - 10 = 12.25 - 10 = 2.25$ dollars. Correct calculation of $\sigma_Y = \sqrt{\text{Var}(5X-10)} = \sqrt{5^2 \text{Var}(X)} = 5\sigma_X$. $\text{Var}(X) = \sum (x - E[X])^2 P(X=x) = (1-2.45)^2(0.2) + \dots = 1.0475$, so $\sigma_X = \sqrt{1.0475} \approx 1.0235$. Thus $\sigma_Y = 5(1.0235) \approx 5.1175$ dollars.</li>
+          
+          <li>Part c (2pts): Correct calculation of $E[Y_1 + Y_2] = E[Y_1] + E[Y_2] = 2.25 + 2.25 = 4.50$ dollars. Correct calculation of $\sigma_{Y_1 + Y_2} = \sqrt{\text{Var}(Y_1) + \text{Var}(Y_2)} = \sqrt{\sigma_Y^2 + \sigma_Y^2} = \sqrt{2 \sigma_Y^2} = \sigma_Y \sqrt{2} \approx 5.1175 \sqrt{2} \approx 7.237$ dollars.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S6Q3"
+      data-difficulty="easy"
+      data-skill-codes="3.A,4.B"
+      data-learning-objectives="VAR-4.A,VAR-4.C"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A survey of high school students found that 60% play a sport, 25% are in a club, and 15% do both.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What is the probability that a randomly chosen student plays a sport or is in a club?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Are playing a sport and being in a club mutually exclusive events? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correct calculation $P(S \cup C) = P(S) + P(C) - P(S \cap C) = 0.60 + 0.25 - 0.15 = 0.70$.</li>
+          
+          <li>Part b (2pts): No, because $P(S \cap C) = 0.15 \ne 0$. Mutually exclusive events have an intersection probability of 0.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S6Q4"
+      data-difficulty="medium"
+      data-skill-codes="3.A,4.B"
+      data-learning-objectives="VAR-4.D,VAR-4.E"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A company categorizes its employees by gender and job type (admin or technical). The data for 200 employees are summarized in the following table:</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th></th><th>Admin</th><th>Technical</th><th>Total</th></tr></thead><tbody><tr><td>Male</td><td>30</td><td>70</td><td>100</td></tr><tr><td>Female</td><td>50</td><td>50</td><td>100</td></tr><tr><td>Total</td><td>80</td><td>120</td><td>200</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What is the probability that a randomly selected employee is female AND works in an administrative role?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Given that an employee is technical, what is the probability that the employee is male?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Are the events "being male" and "working in a technical role" independent? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): $P(\text{Female and Admin}) = 50/200 = 0.25$.</li>
+          
+          <li>Part b (2pts): $P(\text{Male</li>
+          
+          <li>Technical}) = P(\text{Male and Technical}) / P(\text{Technical}) = (70/200) / (120/200) = 70/120 = 7/12 \approx 0.583$.</li>
+          
+          <li>Part c (2pts): $P(\text{Male}) = 100/200 = 0.5$. $P(\text{Male</li>
+          
+          <li>Technical}) = 70/120 \approx 0.583$. Since $P(\text{Male}) \ne P(\text{Male</li>
+          
+          <li>Technical})$, the events are not independent.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S6Q5"
+      data-difficulty="medium"
+      data-skill-codes="2.B,3.B,4.B"
+      data-learning-objectives="VAR-5.A,VAR-5.C,VAR-5.D"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A carnival game involves rolling a standard six-sided die. If you roll a 6, you win \$5. If you roll a 5, you win \$1. Otherwise, you win nothing. Let $X$ be the random variable representing the amount of money won in one roll.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Construct a probability distribution table for $X$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected value of $X$, $E(X)$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the expected value of $X$ in the context of the carnival game.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correct table including $x$ values and $P(X=x)$ values:\n</li>
+          
+          <li>$x$</li>
+          
+          <li>$P(X=x)$</li>
+          
+          <li>\n</li>
+          
+          <li>---</li>
+          
+          <li>---</li>
+          
+          <li>\n</li>
+          
+          <li>\$0</li>
+          
+          <li>$4/6$</li>
+          
+          <li>\n</li>
+          
+          <li>\$1</li>
+          
+          <li>$1/6$</li>
+          
+          <li>\n</li>
+          
+          <li>\$5</li>
+          
+          <li>$1/6$</li>
+          
+          <li>\n(All probabilities must sum to 1).</li>
+          
+          <li>Part b (2pts): $E(X) = 0(4/6) + 1(1/6) + 5(1/6) = 0 + 1/6 + 5/6 = 6/6 = \$1$.</li>
+          
+          <li>Part c (1pt): In the long run, if one plays this game many times, the average amount of money won per game is \$1.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

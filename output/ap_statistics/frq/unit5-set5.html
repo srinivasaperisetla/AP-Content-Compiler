@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 5)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 5)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S5Q1"
+      data-difficulty="easy"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.K,UNC-3.L,UNC-3.M"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A recent study claims that 30% of high school students use social media for more than 4 hours per day. A statistics teacher at a large high school wants to investigate this claim and takes a simple random sample (SRS) of 150 students from her school. Let $\hat{p}$ be the proportion of students in the sample who use social media for more than 4 hours per day.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample proportion $\hat{p}$ by determining its mean and standard deviation, assuming the study's claim is true.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether the sampling distribution of $\hat{p}$ can be approximated by a normal distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that a random sample of 150 students would result in a sample proportion of 35% or more using social media for more than 4 hours per day, assuming the study's claim is true.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly states the mean ($\mu_{\hat{p}} = 0.30$) and standard deviation ($\sigma_{\hat{p}} = \sqrt{\frac{0.30(0.70)}{150}}$) for the sampling distribution of $\hat{p}$.</li>
+          
+          <li>Part b (2pts): Checks the large counts condition ($n p \ge 10$ and $n (1-p) \ge 10$) with calculations and concludes that the normal approximation is appropriate.</li>
+          
+          <li>Part c (2pts): Calculates the $z$-score for $\hat{p} = 0.35$ using the correct formula and uses it to find the probability $P(\hat{p} \ge 0.35)$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S5Q2"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.Q,UNC-3.R,UNC-3.S"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">The amount of soda dispensed by a machine into 12-ounce cups is normally distributed with a mean of 12.2 ounces and a standard deviation of 0.15 ounces. A random sample of 36 cups is taken. Let $\bar{x}$ be the sample mean amount of soda dispensed into these 36 cups.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample mean $\bar{x}$ by determining its mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether the sampling distribution of $\bar{x}$ can be approximated by a normal distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the sample mean amount of soda dispensed in 36 cups is less than 12.15 ounces.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly states the mean ($\mu_{\bar{x}} = 12.2$) and standard deviation ($\sigma_{\bar{x}} = \frac{0.15}{\sqrt{36}}$) for the sampling distribution of $\bar{x}$.</li>
+          
+          <li>Part b (1pt): States that the population distribution is normal, therefore the sampling distribution of the sample mean is also normal regardless of sample size.</li>
+          
+          <li>Part c (2pts): Calculates the $z$-score for $\bar{x} = 12.15$ using the correct formula and uses it to find the probability $P(\bar{x} < 12.15)$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S5Q3"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.N,UNC-3.O,UNC-3.P"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A company develops two new advertisements for a product, Ad A and Ad B. They conduct a study to compare the effectiveness of the two ads. Ad A is shown to a random sample of 200 potential customers, and 88 of them indicate interest in the product. Ad B is shown to a separate random sample of 250 potential customers, and 90 of them indicate interest. Let $\hat{p}_A$ be the sample proportion of customers interested in Ad A and $\hat{p}_B$ be the sample proportion interested in Ad B. Assume the true proportion of interest for Ad A is $p_A = 0.45$ and for Ad B is $p_B = 0.35$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the difference in sample proportions, $\hat{p}_A - \hat{p}_B$, by determining its mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether the sampling distribution of $\hat{p}_A - \hat{p}_B$ can be approximated by a normal distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the sample proportion of interest for Ad A is greater than that for Ad B by 0.15 or more, i.e., $P(\hat{p}_A - \hat{p}_B \ge 0.15)$.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly states the mean ($\mu_{\hat{p}_A - \hat{p}_B} = p_A - p_B$) and standard deviation ($\sigma_{\hat{p}_A - \hat{p}_B} = \sqrt{\frac{p_A(1-p_A)}{n_A} + \frac{p_B(1-p_B)}{n_B}}$).</li>
+          
+          <li>Part b (2pts): Checks the large counts condition for both samples ($n_A p_A \ge 10$, $n_A (1-p_A) \ge 10$, $n_B p_B \ge 10$, $n_B (1-p_B) \ge 10$) and concludes that the normal approximation is appropriate.</li>
+          
+          <li>Part c (2pts): Calculates the $z$-score for $(\hat{p}_A - \hat{p}_B) = 0.15$ using the correct formula and uses it to find the probability $P(\hat{p}_A - \hat{p}_B \ge 0.15)$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S5Q4"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.T,UNC-3.U,UNC-3.V"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">Two different types of car tires, Brand X and Brand Y, are being tested for their average tread life (in miles). It is known that Brand X tires have a mean tread life of 50,000 miles with a standard deviation of 4,000 miles. Brand Y tires have a mean tread life of 48,000 miles with a standard deviation of 3,500 miles. Assume the distributions of tread life for both brands are approximately normal. A random sample of 30 Brand X tires and a random sample of 35 Brand Y tires are selected. Let $\bar{x}_X$ be the sample mean tread life for Brand X and $\bar{x}_Y$ be the sample mean tread life for Brand Y.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the difference in sample means, $\bar{x}_X - \bar{x}_Y$, by determining its mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether the sampling distribution of $\bar{x}_X - \bar{x}_Y$ can be approximated by a normal distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the average tread life of Brand X tires in the sample is at least 3,000 miles greater than the average tread life of Brand Y tires in the sample.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly states the mean ($\mu_{\bar{x}_X - \bar{x}_Y} = \mu_X - \mu_Y$) and standard deviation ($\sigma_{\bar{x}_X - \bar{x}_Y} = \sqrt{\frac{\sigma_X^2}{n_X} + \frac{\sigma_Y^2}{n_Y}}$).</li>
+          
+          <li>Part b (1pt): States that both population distributions are normal, which ensures the sampling distribution of the difference in means is also normal.</li>
+          
+          <li>Part c (2pts): Calculates the $z$-score for $(\bar{x}_X - \bar{x}_Y) = 3000$ using the correct formula and uses it to find the probability $P(\bar{x}_X - \bar{x}_Y \ge 3000)$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S5Q5"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.H,UNC-3.I,UNC-3.J"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A manufacturer of light bulbs states that their bulbs have a mean lifetime of 1200 hours. A consumer advocacy group suspects the true mean is lower. They plan to take a simple random sample of 40 bulbs and record their lifetimes.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Suppose a population has a mean $\mu$ and standard deviation $\sigma$. Explain what it means for an estimator to be unbiased.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        The consumer group considers two estimators for the population mean lifetime: the sample mean ($\bar{x}$) and the sample median ($\tilde{x}$). Which of these two estimators is generally considered an unbiased estimator for the population mean? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If the true mean lifetime is 1200 hours and the standard deviation is 80 hours, describe the sampling distribution of the sample mean for a sample of 40 bulbs.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Explains that an estimator is unbiased if the mean of its sampling distribution is equal to the true population parameter.</li>
+          
+          <li>Part b (2pts): Identifies the sample mean ($\bar{x}$) as the generally unbiased estimator for the population mean and justifies this based on statistical theory. Acknowledges the sample median is generally biased for skewed distributions but can be unbiased for symmetric distributions.</li>
+          
+          <li>Part c (2pts): Determines the mean ($\mu_{\bar{x}} = 1200$) and standard deviation ($\sigma_{\bar{x}} = \frac{80}{\sqrt{40}}$) of the sampling distribution of the sample mean. Mentions that it can be approximated by a normal distribution due to the Central Limit Theorem because $n=40 \ge 30$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

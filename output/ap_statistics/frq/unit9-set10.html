@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 10)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 10)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S10Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.AC,UNC-4.AD,UNC-4.AF,UNC-4.AG,UNC-4.AH"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A researcher wants to study the relationship between the number of hours a student spends studying for a statistics exam and their score on the exam. A random sample of 30 students was selected, and the data was collected. A linear regression analysis was performed, yielding the following summary statistics for the least-squares regression line $\hat{y} = a + bx$:</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Variable</th><th>Estimate</th><th>Standard Error</th><th>t-statistic</th><th>p-value</th></tr></thead><tbody><tr><td>Intercept</td><td>52.35</td><td>3.12</td><td>16.78</td><td><0.001</td></tr><tr><td>Hours Studied (slope)</td><td>2.85</td><td>0.54</td><td>5.28</td><td><0.001</td></tr><tr><td>s</td><td>8.72</td><td></td><td></td><td></td></tr><tr><td>R-squared</td><td>49.3%</td><td></td><td></td><td></td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure to estimate the true slope of the relationship between hours studied and exam score. Verify the conditions for this procedure. Assume that residual plots show no obvious patterns and the histogram of residuals is approximately normal.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the true slope of the regression line relating hours studied to exam score.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the 95% confidence interval calculated in part (b) in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on this confidence interval, is there convincing statistical evidence that for each additional hour studied, the exam score increases by more than 2 points, on average? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies a t-interval for the slope (or for $\beta$). Verifies conditions (Linearity, Independence, Normality of residuals, Equal variance).</li>
+          
+          <li>Part b (2pts): Calculates the degrees of freedom ($df = n-2 = 28$). Calculates the correct critical t-value ($t^* = 2.048$ for 95% CI with $df=28$). Calculates the confidence interval using $\hat{b} \pm t^* \times SE_b = 2.85 \pm 2.048 \times 0.54 = (1.74$, $3.96)$.</li>
+          
+          <li>Part c (1pt): Interprets the confidence interval: "We are 95% confident that for each additional hour a student studies, the predicted exam score increases by an average of 1.74 to 3.96 points."</li>
+          
+          <li>Part d (1pt): States "Yes" and justifies that since the entire interval (1.74, 3.96) is above 2, there is convincing evidence that the true slope is greater than 2.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S10Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.J,VAR-7.K,VAR-7.L,VAR-7.M,DAT-3.M,DAT-3.N"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A company believes that older machines produce more defective products. They collected data from 25 machines, recording each machine's age (in years) and the percentage of defective products it produced in a month. They want to determine if there is a significant positive linear relationship between machine age and the percentage of defective products.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Predictor</th><th>Coef</th><th>SE Coef</th><th>T</th><th>P</th></tr></thead><tbody><tr><td>Constant</td><td>0.85</td><td>0.32</td><td>2.66</td><td>0.013</td></tr><tr><td>Age (years)</td><td>0.15</td><td>0.06</td><td>2.50</td><td>0.020</td></tr><tr><td>S = 0.51</td><td>R-Sq = 21.3%</td><td>R-Sq(adj) = 18.0%</td><td></td><td></td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for a test to investigate if there is a significant positive linear relationship between machine age and the percentage of defective products. Identify the appropriate test procedure.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test. Assume residual plots show no clear patterns and a histogram of residuals is approximately normal.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Using the provided computer output, calculate the test statistic for the slope and state the $p$-value for the hypotheses from part (a).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the $p$-value in the context of the problem and state a conclusion at the $\alpha = 0.05$ significance level.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): $H_0: \beta = 0$ and $H_a: \beta > 0$ (or $H_0$: There is no linear relationship, $H_a$: There is a positive linear relationship). Identifies a t-test for the slope (or for $\beta$).</li>
+          
+          <li>Part b (1pt): Verifies conditions: Linearity (assumed from no pattern in residuals), Independence (random sample, 25 machines < 10% of all machines), Normality of residuals (assumed from histogram), Equal variance (assumed from no pattern in residuals).</li>
+          
+          <li>Part c (1pt): Identifies test statistic $t=2.50$. Identifies one-sided $p$-value $P/2 = 0.020/2 = 0.010$ (since the output's p-value is for a two-sided test).</li>
+          
+          <li>Part d (2pts): Interprets $p$-value: "Assuming there is no linear relationship between machine age and defective products, there is a 0.010 probability of observing a sample slope as extreme as or more extreme than 0.15." Conclusion: Since $p$-value (0.010) < $\alpha$ (0.05), reject $H_0$. Concludes there is convincing evidence of a significant positive linear relationship between machine age and percentage of defective products.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S10Q3"
+      data-difficulty="medium"
+      data-skill-codes="4.C,4.B"
+      data-learning-objectives="UNC-4.AD,VAR-7.L"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A student performed a linear regression analysis to predict the height of a tree (in feet) based on its age (in years). The student collected data from a random sample of 50 trees and generated the following residual plot and histogram of residuals.</div>
+
+      
+      <div class="diagram">
+         <svg width="400" height="300" style="background-color:white;">\n      <rect x="0" y="0" width="400" height="300" fill="white" stroke="none"/>\n      <!-- Residual Plot -->\n      <text x="100" y="20" font-family="Arial" font-size="14" fill="black" text-anchor="middle">Residual Plot</text>\n      <line x1="20" y1="150" x2="180" y2="150" stroke="black" stroke-width="1"/>\n      <line x1="20" y1="50" x2="20" y2="250" stroke="black" stroke-width="1"/>\n      <text x="100" y="270" font-family="Arial" font-size="12" fill="black" text-anchor="middle">Predicted Height (feet)</text>\n      <text x="5" y="150" font-family="Arial" font-size="12" fill="black" text-anchor="middle" transform="rotate(-90 5 150)">Residuals</text>\n      <!-- Example points for residual plot (random scatter for met conditions) -->\n      <circle cx="30" cy="140" r="2" fill="black"/>\n      <circle cx="45" cy="160" r="2" fill="black"/>\n      <circle cx="60" cy="130" r="2" fill="black"/>\n      <circle cx="75" cy="170" r="2" fill="black"/>\n      <circle cx="90" cy="155" r="2" fill="black"/>\n      <circle cx="105" cy="135" r="2" fill="black"/>\n      <circle cx="120" cy="165" r="2" fill="black"/>\n      <circle cx="135" cy="145" r="2" fill="black"/>\n      <circle cx="150" cy="175" r="2" fill="black"/>\n      <circle cx="165" cy="125" r="2" fill="black"/>\n\n      <!-- Histogram of Residuals -->\n      <text x="300" y="20" font-family="Arial" font-size="14" fill="black" text-anchor="middle">Histogram of Residuals</text>\n      <line x1="220" y1="250" x2="380" y2="250" stroke="black" stroke-width="1"/>\n      <line x1="220" y1="50" x2="220" y2="250" stroke="black" stroke-width="1"/>\n      <text x="300" y="270" font-family="Arial" font-size="12" fill="black" text-anchor="middle">Residuals</text>\n      <text x="210" y="150" font-family="Arial" font-size="12" fill="black" text-anchor="middle" transform="rotate(-90 210 150)">Frequency</text>\n      <!-- Example bars for histogram (roughly normal for met conditions) -->\n      <rect x="230" y="235" width="15" height="15" fill="darkgray" stroke="black"/>\n      <rect x="245" y="220" width="15" height="30" fill="darkgray" stroke="black"/>\n      <rect x="260" y="200" width="15" height="50" fill="darkgray" stroke="black"/>\n      <rect x="275" y="170" width="15" height="80" fill="darkgray" stroke="black"/>\n      <rect x="290" y="150" width="15" height="100" fill="darkgray" stroke="black"/>\n      <rect x="305" y="170" width="15" height="80" fill="darkgray" stroke="black"/>\n      <rect x="320" y="200" width="15" height="50" fill="darkgray" stroke="black"/>\n      <rect x="335" y="220" width="15" height="30" fill="darkgray" stroke="black"/>\n      <rect x="350" y="235" width="15" height="15" fill="darkgray" stroke="black"/>\n    </svg> 
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the two conditions for inference about the slope of a regression model that can be evaluated using the provided plots.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Based on the residual plot, explain whether the conditions it assesses are met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on the histogram of residuals, explain whether the condition it assesses is met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Suppose the residual plot showed a "fanning out" pattern, where the variability of residuals increased as predicted height increased. Which condition for inference would be violated, and what implication would this have for the validity of the inference procedure?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Residual plot assesses linearity and equal variance (or constant standard deviation). Histogram of residuals assesses normality of residuals.</li>
+          
+          <li>Part b (1pt): Conditions are met. Explanation: The residual plot shows no clear pattern (random scatter), indicating that a linear model is appropriate (linearity) and that the variability of the residuals is approximately constant across the predicted values (equal variance).</li>
+          
+          <li>Part c (1pt): Condition is met. Explanation: The histogram of residuals is roughly symmetric and unimodal with no extreme outliers, suggesting that the residuals are approximately normally distributed.</li>
+          
+          <li>Part d (1pt): The "fanning out" pattern would violate the Equal Variance (or Constant Standard Deviation) condition. Implication: The standard error of the slope calculated would not be a reliable estimate, and consequently, confidence intervals and $p$-values would not be accurate, making the inference results invalid.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S10Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.AC,UNC-4.AD,UNC-4.AF,UNC-4.AG"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A researcher is investigating the relationship between the number of hours spent studying for a final exam ($x$) and the score received on the exam ($y$) for a random sample of $n=30$ students. A least-squares regression line was calculated as $\hat{y} = 65 + 2.5x$, with a standard error of the slope $SE_b = 0.8$. The sum of squared residuals is $SSE = 1200$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure for the slope of a regression model in this context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for constructing a confidence interval for the slope of a regression model. Assume a scatterplot shows a linear relationship and a residual plot shows no obvious pattern or fanning.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate a 95% confidence interval for the true slope of the regression line.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the calculated confidence interval in the context of the study.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies "t-interval for the slope of a regression line" or "linear regression t-interval".</li>
+          
+          <li>Part b (2pts): Checks Linearity, Independence (random sample, $10\%$ condition if applicable), Normality (of residuals), Equal Variance (constant residual scatter), and Random condition.</li>
+          
+          <li>Part c (2pts): Calculates $df = n-2 = 28$. Finds $t^*$ for 95% CI with $df=28$ (approx $2.048$). Interval: $2.5 \pm 2.048(0.8) = (0.8616, 4.1384)$.</li>
+          
+          <li>Part d (1pt): Interprets the interval in context, stating confidence level, range, and what the slope represents (e.g., for each additional hour of study, the exam score increases by an estimated amount).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S10Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.F,4.C,3.E,4.E"
+      data-learning-objectives="VAR-7.K,VAR-7.L,VAR-7.M,DAT-3.N"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A forester is studying the relationship between the diameter at breast height (DBH, in cm) of a certain species of tree ($x$) and its height (in meters) ($y$). A random sample of $n=25$ trees was selected. The least-squares regression line for the sample is $\hat{y} = 1.8 + 0.6x$. The standard error of the slope is $SE_b = 0.25$. The forester wants to determine if there is a positive linear relationship between DBH and tree height.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate null and alternative hypotheses to test the forester's claim.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for conducting a significance test for the slope of a regression model. Assume residual plots show no pattern and a histogram of residuals is approximately normal.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value, state a conclusion in the context of the problem using a significance level of $\alpha = 0.05$.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): $H_0: \beta = 0$, $H_a: \beta > 0$ (or equivalent in context).</li>
+          
+          <li>Part b (2pts): Checks Linearity, Independence (random sample, $10\%$ condition if applicable), Normality (of residuals), Equal Variance, Random condition.</li>
+          
+          <li>Part c (2pts): Test statistic $t = \frac{b - \beta_0}{SE_b} = \frac{0.6 - 0}{0.25} = 2.4$. Degrees of freedom $df = n-2 = 23$. P-value for $t=2.4$ with $df=23$ is between $0.01$ and $0.025$ (or calculator value of approx $0.012$).</li>
+          
+          <li>Part d (1pt): Compares p-value to $\alpha$. Rejects $H_0$ because $0.012 < 0.05$. Concludes there is sufficient evidence of a positive linear relationship between DBH and tree height.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

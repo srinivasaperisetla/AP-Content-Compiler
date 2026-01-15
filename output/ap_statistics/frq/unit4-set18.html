@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 18)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 18)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S18Q1"
+      data-difficulty="easy"
+      data-skill-codes="3.A,4.B"
+      data-learning-objectives="UNC-2.A,VAR-4.A"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A company manufactures light bulbs. It is known that $10\%$ of the bulbs produced are defective. A quality control manager randomly selects 3 bulbs from a large batch.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe a method using a simulation to estimate the probability that at least one of the 3 selected bulbs is defective. You do not need to perform the simulation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Using your simulation method, if 50 trials result in 18 instances where at least one bulb is defective, estimate the probability that at least one of the 3 selected bulbs is defective.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the theoretical probability that at least one of the 3 selected bulbs is defective.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Assign digits for defective/non-defective (1pt); Describe how to simulate 3 bulbs and record outcome (1pt)</li>
+          
+          <li>Part b (1pt): Correctly calculate estimate as $\frac{18}{50} = 0.36$ (1pt)</li>
+          
+          <li>Part c (2pts): Correctly use complement rule, $P(\text{at least one defective}) = 1 - P(\text{none defective})$ (1pt); Calculate $1 - (0.90)^3 = 1 - 0.729 = 0.271$ (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S18Q2"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.B,UNC-3.C,UNC-3.D"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A recent study claims that $80\%$ of all adults in a certain city own a smartphone. A researcher takes a random sample of 15 adults from this city. Let $X$ be the number of adults in the sample who own a smartphone.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Explain why $X$ can be modeled by a binomial distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the probability that exactly 12 adults in the sample own a smartphone.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected number of adults in the sample who own a smartphone and the standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the expected number of adults in the sample who own a smartphone in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States fixed number of trials ($n=15$) (0.5pt); States two outcomes (own/don't own) (0.5pt); States constant probability of success ($p=0.80$) (0.5pt); States independent trials (0.5pt)</li>
+          
+          <li>Part b (1pt): Correctly calculates $P(X=12) = \binom{15}{12}(0.80)^{12}(0.20)^{3} \approx 0.2501$ (1pt)</li>
+          
+          <li>Part c (1pt): Correctly calculates $E(X) = np = 15(0.80) = 12$ (0.5pt); Correctly calculates $\sigma_X = \sqrt{np(1-p)} = \sqrt{15(0.80)(0.20)} = \sqrt{2.4} \approx 1.549$ (0.5pt)</li>
+          
+          <li>Part d (1pt): Correctly interprets $E(X)=12$ as the average number of smartphone owners in many such samples of 15 adults (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S18Q3"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.E,UNC-3.F,UNC-3.G"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">An online gaming company finds that historically, $25\%$ of new players will purchase a premium membership within their first month. A marketing team wants to study the behavior of new players. They randomly select new players one by one until they find the first one who purchases a premium membership. Let $Y$ be the number of players selected until the first premium member is found.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the probability that the first premium member is the 4th player selected.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the probability that the first premium member is found within the first 3 players selected.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected number of players that need to be selected until the first premium member is found.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the expected value from part (c) in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly calculates $P(Y=4) = (1-0.25)^{4-1}(0.25) = (0.75)^3(0.25) \approx 0.1055$ (1pt)</li>
+          
+          <li>Part b (2pts): Correctly identifies as $P(Y \le 3) = P(Y=1) + P(Y=2) + P(Y=3)$ (1pt); Calculates $0.25 + (0.75)(0.25) + (0.75)^2(0.25) = 0.25 + 0.1875 + 0.140625 = 0.578125$ (1pt)</li>
+          
+          <li>Part c (1pt): Correctly calculates $E(Y) = \frac{1}{p} = \frac{1}{0.25} = 4$ players (1pt)</li>
+          
+          <li>Part d (1pt): Correctly interprets $E(Y)=4$ as the average number of players to be selected until a premium member is found over many repetitions of this process (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S18Q4"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C"
+      data-learning-objectives="VAR-5.E,VAR-5.F"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A baker makes two types of cakes: vanilla and chocolate. The time (in minutes) it takes to bake a vanilla cake, $V$, is a random variable with mean $\mu_V = 40$ and standard deviation $\sigma_V = 5$. The time (in minutes) it takes to bake a chocolate cake, $C$, is a random variable with mean $\mu_C = 50$ and standard deviation $\sigma_C = 8$. Assume $V$ and $C$ are independent.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the expected total time to bake one vanilla cake and one chocolate cake.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the standard deviation of the total time to bake one vanilla cake and one chocolate cake.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The baker offers a special where customers can get a discount if the total baking time for a vanilla cake and a chocolate cake exceeds 95 minutes. Describe how the mean and standard deviation of the total baking time would change if the baking times were measured in hours instead of minutes.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly calculates $E(V+C) = E(V) + E(C) = 40 + 50 = 90$ minutes (1pt)</li>
+          
+          <li>Part b (2pts): Correctly states $\text{Var}(V+C) = \text{Var}(V) + \text{Var}(C)$ for independent variables (1pt); Calculates $\sigma_{V+C} = \sqrt{\sigma_V^2 + \sigma_C^2} = \sqrt{5^2 + 8^2} = \sqrt{25+64} = \sqrt{89} \approx 9.434$ minutes (1pt)</li>
+          
+          <li>Part c (2pts): Explains that the mean would be divided by 60 (i.e., $\frac{90}{60} = 1.5$ hours) (1pt); Explains that the standard deviation would also be divided by 60 (i.e., $\frac{9.434}{60} \approx 0.157$ hours) (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S18Q5"
+      data-difficulty="medium"
+      data-skill-codes="2.B,3.B,4.B"
+      data-learning-objectives="VAR-5.A,VAR-5.C,VAR-5.D"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A company offers a warranty on a specific electronic device. Based on past data, the number of repairs needed during the warranty period, $X$, has the following probability distribution:</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Number of Repairs ($x$)</th><th>Probability $P(X=x)$</th></tr></thead><tbody><tr><td>0</td><td>0.25</td></tr><tr><td>1</td><td>0.35</td></tr><tr><td>2</td><td>0.20</td></tr><tr><td>3</td><td>0.10</td></tr><tr><td>4</td><td>0.10</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Verify that this is a valid probability distribution. \n b. Calculate the expected number of repairs during the warranty period. \n c. Calculate the standard deviation of the number of repairs. \n d. Interpret the expected value of repairs in the context of this problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Sum of probabilities equals 1 ($0.25+0.35+0.20+0.10+0.10 = 1$)</li>
+          
+          <li>Part b (1pt): Correct calculation of expected value $E(X) = 0(0.25)+1(0.35)+2(0.20)+3(0.10)+4(0.10) = 1.45$ repairs</li>
+          
+          <li>Part c (2pts): Correct calculation of variance $Var(X) = (0-1.45)^2(0.25) + (1-1.45)^2(0.35) + (2-1.45)^2(0.20) + (3-1.45)^2(0.10) + (4-1.45)^2(0.10) = 1.7475$, and standard deviation $\sigma_X = \sqrt{1.7475} \approx 1.322$ repairs</li>
+          
+          <li>Part d (1pt): Correct interpretation stating that over many devices, the average number of repairs per device is approximately $1.45$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

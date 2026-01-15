@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 12)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 12)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S12Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.B,VAR-8.C,VAR-8.E,VAR-8.F,DAT-3.I,DAT-3.J"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A company claims that 30% of its customers prefer product A, 50% prefer product B, and 20% prefer product C. A random sample of 200 customers was surveyed, and the preferences were recorded.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for a chi-square goodness-of-fit test to investigate the company's claim.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this chi-square goodness-of-fit test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The chi-square test statistic was calculated to be $X^2 = 5.2$. Calculate the p-value for this test and interpret it in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value from part (c) and a significance level of $\alpha = 0.05$, what conclusion should the company make about its claim? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states $H_0$ and $H_a$ in context, mentioning proportions for A, B, C. ($H_0: p_A = 0.30, p_B = 0.50, p_C = 0.20$ versus $H_a:$ At least one of the proportions is different from the claimed value.)</li>
+          
+          <li>Part b (1pt): Checks random sampling and expected counts condition ($n \times p_i \ge 5$). (Random sample is stated. Expected counts: $0.30 \times 200 = 60$, $0.50 \times 200 = 100$, $0.20 \times 200 = 40$. All are $\ge 5$.)</li>
+          
+          <li>Part c (2pts): Calculates degrees of freedom $(3-1=2)$. Calculates p-value using chi-square distribution with $df=2$ and $X^2=5.2$ ($P(X^2 > 5.2) \approx 0.074$). Interprets p-value in context (probability of observed deviation or more extreme if null is true). (df = $3-1 = 2$. $P(X^2 > 5.2) \approx 0.074$. Interpretation: If the true proportions of customer preferences are 30%, 50%, and 20%, there is about a 7.4% chance of observing sample results as extreme as, or more extreme than, those obtained in this survey by random chance alone.)</li>
+          
+          <li>Part d (1pt): Compares p-value to $\alpha$ and states correct conclusion in context with justification. (Since $p$-value ($0.074$) $> \alpha$ ($0.05$), we fail to reject $H_0$. There is not sufficient evidence to conclude that the company's claimed proportions for customer preferences are incorrect.)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S12Q2"
+      data-difficulty="medium"
+      data-skill-codes="3.A,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.D,VAR-8.E,VAR-8.F,DAT-3.I,DAT-3.J"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A genetics researcher is studying the inheritance pattern of a certain gene in fruit flies. According to Mendelian genetics, the four phenotypes (A, B, C, D) are expected to occur in a ratio of 9:3:3:1. In an experiment, 160 fruit flies were observed, resulting in the following counts: Phenotype A: 85, Phenotype B: 35, Phenotype C: 28, Phenotype D: 12.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the expected counts for each of the four phenotypes if the Mendelian ratio of 9:3:3:1 is true for the 160 fruit flies.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing a chi-square goodness-of-fit test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The calculated chi-square test statistic is approximately $X^2 = 2.45$. Based on this test statistic, what is the approximate p-value for this test?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        State the conclusion of the test at the $\alpha = 0.01$ significance level. Justify your conclusion in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly calculates the expected counts for all four phenotypes. (Total ratio parts = $9+3+3+1 = 16$. Expected A: $(9/16) \times 160 = 90$. Expected B: $(3/16) \times 160 = 30$. Expected C: $(3/16) \times 160 = 30$. Expected D: $(1/16) \times 160 = 10$.)</li>
+          
+          <li>Part b (1pt): Checks random sampling (implicit/assumed random selection of flies) and expected counts condition ($\ge 5$). (The observed flies are assumed to be a random sample/representative. All calculated expected counts (90, 30, 30, 10) are greater than or equal to 5.)</li>
+          
+          <li>Part c (1pt): Calculates degrees of freedom $(4-1=3)$ and finds the p-value using chi-square distribution. (df = $4-1 = 3$. $P(X^2 > 2.45)$ with $df=3 \approx 0.484$.)</li>
+          
+          <li>Part d (1pt): Compares p-value to $\alpha$ and states correct conclusion in context with justification. (Since the $p$-value ($0.484$) is greater than $\alpha$ ($0.01$), we fail to reject the null hypothesis. There is not sufficient evidence to conclude that the observed distribution of phenotypes in fruit flies deviates significantly from the Mendelian ratio of 9:3:3:1.)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S12Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.A,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.H,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A researcher wants to compare the distribution of opinions on a new city ordinance across three different age groups: 18-30 years, 31-50 years, and 51+ years. Independent random samples were taken from each age group, and their opinions (Favor, Oppose, Neutral) were recorded. The observed counts are shown in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Opinion \ Age Group</th><th>18-30 years</th><th>31-50 years</th><th>51+ years</th><th>Total</th></tr></thead><tbody><tr><td>Favor</td><td>30</td><td>45</td><td>20</td><td>95</td></tr><tr><td>Oppose</td><td>55</td><td>40</td><td>35</td><td>130</td></tr><tr><td>Neutral</td><td>15</td><td>35</td><td>25</td><td>75</td></tr><tr><td>Total</td><td>100</td><td>120</td><td>80</td><td>300</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected count for "Favor" in the 31-50 years age group.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify the conditions for performing this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The chi-square test statistic for this study is $X^2 = 9.87$ with a p-value of $0.042$. Based on these results, what conclusion can be drawn at the $\alpha = 0.05$ level of significance? Justify your answer in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states $H_0$ and $H_a$ for a test of homogeneity in context. ($H_0:$ The distribution of opinions on the new city ordinance is the same across the three age groups. $H_a:$ The distribution of opinions on the new city ordinance is not the same across the three age groups.)</li>
+          
+          <li>Part b (1pt): Correctly calculates the expected count for "Favor" in the 31-50 years age group using the formula (row total * column total) / grand total. (Expected (Favor, 31-50) = (Total Favor $\times$ Total 31-50) / Grand Total = $(95 \times 120) / 300 = 38$.)</li>
+          
+          <li>Part c (1pt): Verifies random samples/assignment and expected counts condition ($\ge 5$). (Independent random samples were taken from each age group. All expected counts (e.g., 38, 28, 29) must be $\ge 5$.)</li>
+          
+          <li>Part d (1pt): Compares p-value to $\alpha$ and states correct conclusion in context with justification. (Since the $p$-value ($0.042$) is less than $\alpha$ ($0.05$), we reject the null hypothesis. There is statistically significant evidence to conclude that the distribution of opinions on the new city ordinance is not the same across the three age groups.)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S12Q4"
+      data-difficulty="hard"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.L,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A large national park conducts a survey of its visitors to determine if there is an association between the primary activity visitors engage in (Hiking, Photography, Wildlife Viewing) and their preferred accommodation type (Camping, Lodge, Day Trip only). A random sample of 500 visitors provided the following data.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Primary Activity \ Accommodation</th><th>Camping</th><th>Lodge</th><th>Day Trip only</th><th>Total</th></tr></thead><tbody><tr><td>Hiking</td><td>65</td><td>40</td><td>75</td><td>180</td></tr><tr><td>Photography</td><td>40</td><td>80</td><td>50</td><td>170</td></tr><tr><td>Wildlife Viewing</td><td>55</td><td>40</td><td>55</td><td>150</td></tr><tr><td>Total</td><td>160</td><td>160</td><td>180</td><td>500</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for the appropriate chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        The park management wants to ensure the conditions for this inference procedure are met. Verify the condition regarding expected counts for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The chi-square test statistic was computed as $X^2 = 18.50$. Calculate the degrees of freedom for this test and determine the p-value.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value from part (c), what conclusion can be drawn at the $\alpha = 0.01$ level? Include a detailed interpretation of the findings in the context of the problem, addressing both the statistical decision and its practical meaning.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states $H_0$ and $H_a$ for a test of independence in context. ($H_0:$ There is no association between primary activity and preferred accommodation type for visitors to the national park. $H_a:$ There is an association between primary activity and preferred accommodation type for visitors to the national park.)</li>
+          
+          <li>Part b (1pt): Explicitly states "All expected counts are $\ge 5$" and indicates they would be calculated from the given table. (All expected counts must be at least 5. (e.g., Expected (Hiking, Camping) = $(180 \times 160) / 500 = 57.6$. All expected counts based on the observed data would be calculated and confirmed to be $\ge 5$).)</li>
+          
+          <li>Part c (2pts): Calculates degrees of freedom $((3-1)(3-1)=4)$ and finds the p-value using chi-square distribution with $df=4$ and $X^2=18.50$ ($P(X^2 > 18.50) \approx 0.001$). (df = $(3-1)(3-1) = 4$. $P(X^2 > 18.50)$ with $df=4 \approx 0.001$.)</li>
+          
+          <li>Part d (2pts): Compares p-value to $\alpha$, makes a correct decision, and provides a contextual interpretation of the findings. (Since the $p$-value ($0.001$) is less than $\alpha$ ($0.01$), we reject the null hypothesis. There is statistically significant evidence to conclude that there is an association between the primary activity visitors engage in and their preferred accommodation type in the national park. This means that visitor activity is not independent of their accommodation preference; for example, certain activities might be more common among campers versus those staying at a lodge or visiting for a day.)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S12Q5"
+      data-difficulty="easy"
+      data-skill-codes="3.C,4.B,4.E"
+      data-learning-objectives="VAR-8.A,DAT-3.I,DAT-3.J"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A study investigated whether the distribution of blood types (O, A, B, AB) in a certain region matches the national distribution (O: 45%, A: 40%, B: 10%, AB: 5%). A random sample of 300 individuals from the region was taken. The observed counts were O: 145, A: 120, B: 25, AB: 10. A chi-square goodness-of-fit test was performed, and part of the output is provided below:\nChi-Square Statistic = 3.67\nDegrees of Freedom = 3\nP-value = 0.2989</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the general shape of a chi-square distribution and how degrees of freedom affect it.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Using the provided output, interpret the p-value in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on the p-value and a significance level of $\alpha = 0.10$, what conclusion can be made regarding the blood type distribution in this region compared to the national distribution? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Suppose the observed count for blood type O was 155 instead of 145, while the other counts remained the same (A: 120, B: 25, AB: 10), and the sample size was still 300. Without performing any calculations, explain how this change would likely affect the chi-square test statistic and the resulting p-value.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Describes the chi-square distribution as skewed right and explains that as df increases, the distribution becomes more symmetric/less skewed, and its center shifts to the right. (The chi-square distribution is skewed to the right. As the degrees of freedom increase, the chi-square distribution becomes less skewed and more symmetric, and its peak shifts further to the right.)</li>
+          
+          <li>Part b (1pt): Interprets the p-value in the context of the study. (If the true distribution of blood types in the region is the same as the national distribution, there is a 29.89% chance of observing a sample distribution as different from the national distribution, or more different, than the one observed in this study, purely by random chance.)</li>
+          
+          <li>Part c (1pt): Compares p-value to $\alpha$ and states correct conclusion in context with justification. (Since the p-value ($0.2989$) is greater than $\alpha$ ($0.10$), we fail to reject the null hypothesis. There is not sufficient evidence to conclude that the distribution of blood types in this region differs from the national distribution.)</li>
+          
+          <li>Part d (2pts): Explains the effect on the chi-square statistic and p-value by considering the difference between observed and expected counts. (If the observed count for O was 155, the difference from the expected count (which would be $0.45 \times 300 = 135$) would be larger ($</li>
+          
+          <li>155-135</li>
+          
+          <li>=20$) compared to the original ($</li>
+          
+          <li>145-135</li>
+          
+          <li>=10$). A larger difference between observed and expected counts generally leads to a larger contribution to the chi-square statistic, thus increasing the overall chi-square test statistic. A larger chi-square statistic would lead to a smaller p-value.)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

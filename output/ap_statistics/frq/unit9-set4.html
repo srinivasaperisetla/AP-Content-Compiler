@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 4)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 4)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S4Q1"
+      data-difficulty="easy"
+      data-skill-codes="4.C,4.B,1.A"
+      data-learning-objectives="UNC-4.AD,DAT-3.M,VAR-1.K"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A study investigated the relationship between the age of a car (in years) and its selling price (in thousands of dollars). A random sample of 20 cars was used. The least-squares regression line was $\hat{y} = 25.1 - 2.5x$, where $x$ is age and $y$ is selling price. The standard deviation of the residuals was $s_e = 3.2$. A plot of residuals versus fitted values showed a curved pattern.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Based on the residual plot description, which condition for inference for the slope of a regression model is likely violated? Explain why this violation is problematic.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Interpret the slope of the least-squares regression line in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Identify a question suggested by the variation observed in the relationship between car age and selling price beyond the linear model.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies the "linearity" or "linear relationship" condition (1pt); Explains that a curved pattern suggests the linear model is not appropriate for the data (1pt).</li>
+          
+          <li>Part b (1pt): Interprets the slope as "For each additional year in age, the predicted selling price of a car decreases by $2.5 thousand (or $2500)." (1pt).</li>
+          
+          <li>Part c (1pt): Suggests a question related to non-linear patterns, other influencing factors, or specific age ranges (e.g., "Is there a quadratic relationship between car age and selling price?", "What other factors contribute to the variation in car selling prices at a given age?", "Does the rate of depreciation change over time?") (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S4Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.AC,UNC-4.AD,UNC-4.AF,UNC-4.AG"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A university researcher wants to investigate the relationship between the number of hours a student studies per week ($x$) and their final exam score ($y$) in a large introductory statistics course. A random sample of 30 students was selected. A linear regression analysis was performed, yielding a sample slope of $b = 5.2$ and a standard error of the slope $SE_b = 1.8$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure for the slope of a regression model and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the true slope of the relationship between study hours and exam scores.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the 95% confidence interval for the slope in the context of this problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a $t$-interval for slope (1pt); Verifies conditions (Linearity, Independence, Normality of residuals, Equal variance, Random) (1pt).</li>
+          
+          <li>Part b (2pts): Calculates degrees of freedom ($df=28$) and critical $t$-value (1pt); Calculates confidence interval using $b \pm t^*SE_b$ (e.g. $5.2 \pm 2.048 \times 1.8 \approx (1.5136, 8.2864)$) (1pt).</li>
+          
+          <li>Part c (1pt): Interprets the interval correctly in context (e.g., "We are 95% confident that for each additional hour studied per week, the mean final exam score for students in this course increases by between 1.51 and 8.29 points.") (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S4Q3"
+      data-difficulty="medium"
+      data-skill-codes="4.D,4.A"
+      data-learning-objectives="UNC-4.AH,UNC-4.AI"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A car manufacturer claims that for every additional 100 pounds of weight added to a car, its fuel efficiency decreases by more than 0.5 miles per gallon (mpg). An independent consumer group conducted a study with a random sample of cars, fitting a linear regression model where $x$ is car weight (in hundreds of pounds) and $y$ is fuel efficiency (in mpg). The resulting 95% confidence interval for the true slope $\beta$ (change in mpg for each 100-pound increase) was $(-0.82, -0.48)$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Based on the given 95% confidence interval, justify whether the consumer group has evidence to support the manufacturer's claim.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        If the consumer group were to increase their sample size from 20 to 50 cars, assuming the sample slope and standard deviation of residuals remained approximately the same, what effect would this likely have on the width of the confidence interval? Explain why.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Compares the interval to the claim ($\beta < -0.5$) (1pt); Justifies the conclusion in context (e.g., "Since the interval $(-0.82, -0.48)$ includes values such as $-0.49$ which are not less than $-0.5$, the consumer group does not have sufficient evidence to support the manufacturer's claim.") (1pt).</li>
+          
+          <li>Part b (2pts): States that the width would decrease (1pt); Explains that increasing sample size increases degrees of freedom for the $t$-distribution, leading to a smaller critical $t$-value, and typically decreases the standard error of the slope, both contributing to a smaller margin of error (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S4Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.E"
+      data-learning-objectives="VAR-7.J,VAR-7.K,VAR-7.L,VAR-7.M,DAT-3.N"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A nutritionist wants to determine if there is a linear relationship between the amount of sugar (in grams) in a breakfast cereal ($x$) and the number of calories per serving ($y$). They randomly select 15 different cereals and collect data. A linear regression analysis reveals a sample slope of $b = 4.5$ and a standard error of the slope $SE_b = 1.2$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses to test if there is a positive linear relationship between sugar content and calories. Verify the conditions for this significance test, assuming a residual plot shows no obvious pattern and a normal probability plot of residuals is approximately linear.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the test statistic for this hypothesis test. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Using a significance level of $\alpha = 0.01$, draw a conclusion about whether there is a positive linear relationship between sugar content and calories in breakfast cereals.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States $H_0: \beta = 0$ and $H_a: \beta > 0$ (1pt); Verifies conditions (Random, Linearity, Independence, Normality of residuals, Equal variance), referencing provided info (1pt).</li>
+          
+          <li>Part b (1pt): Calculates $t = \frac{b - 0}{SE_b} = \frac{4.5 - 0}{1.2} = 3.75$ (1pt).</li>
+          
+          <li>Part c (2pts): Determines or approximates the p-value based on $df = 13$ and $t=3.75$ (p-value $\approx 0.0011$) (1pt); Compares p-value to $\alpha$ and draws a correct conclusion in context (e.g., "Since the p-value of $0.0011 < \alpha = 0.01$, we reject $H_0$. There is sufficient evidence to conclude that there is a positive linear relationship between sugar content and calories in breakfast cereals.") (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S4Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.J,VAR-7.K,VAR-7.L,VAR-7.M,DAT-3.M,DAT-3.N"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">An environmental scientist is studying the effect of pesticide concentration (in ppm, $x$) on the growth rate of a certain type of plant (in cm/day, $y$). They hypothesize that higher pesticide concentrations decrease the plant's growth rate. A random sample of 25 plants was exposed to varying concentrations of the pesticide. A linear regression model was fit, resulting in a slope of $b = -0.75$ and a standard error of the slope $SE_b = 0.28$. The scientist wants to test their hypothesis at the $\alpha = 0.05$ significance level.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for this test in symbols and in words. Identify the appropriate inference method.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing a significance test for the slope of a regression model, assuming a residual plot shows no obvious pattern and a histogram of residuals appears approximately normal.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the p-value in context, and based on the p-value and the significance level, what conclusion should the scientist draw? Justify your conclusion.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States $H_0: \beta = 0$ (There is no linear relationship between pesticide concentration and plant growth rate) and $H_a: \beta < 0$ (Higher pesticide concentration is associated with a decrease in plant growth rate) (1pt); Identifies a $t$-test for the slope of the regression line (1pt).</li>
+          
+          <li>Part b (1pt): Verifies conditions (Linearity, Independence, Normality of residuals, Equal variance, Random), referencing the provided information (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the test statistic $t = \frac{-0.75 - 0}{0.28} \approx -2.678$ (1pt); Calculates or approximates the p-value using $df = 23$ (p-value $\approx 0.0065$) (1pt).</li>
+          
+          <li>Part d (2pts): Interprets the p-value correctly in context (e.g., "Assuming there is no linear relationship between pesticide concentration and plant growth rate, there is a 0.0065 probability of observing a sample slope as extreme as $-0.75$ or more extreme due to random chance.") (1pt); Makes a correct decision (reject $H_0$) and states a conclusion in context, linking it to $\alpha$ (e.g., "Since the p-value $0.0065 < \alpha = 0.05$, we reject the null hypothesis. There is sufficient evidence to conclude that higher pesticide concentrations decrease the plant's growth rate.") (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

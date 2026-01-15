@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 1)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 1)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S1Q1"
+      data-difficulty="easy"
+      data-skill-codes="3.A,4.B"
+      data-learning-objectives="VAR-4.A,VAR-4.D,VAR-4.C"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A company produces two types of electronic components: Type A and Type B. Historically, 60% of components produced are Type A, and 40% are Type B. It is known that 3% of Type A components are defective and 5% of Type B components are defective.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What is the probability that a randomly selected component is Type A AND defective?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What is the probability that a randomly selected component is defective? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Given that a randomly selected component is defective, what is the probability that it is a Type B component? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Are the events "being Type A" and "being defective" mutually exclusive? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Calculates $P(\text{Type A and Defective}) = P(\text{Defective}</li>
+          
+          <li>\text{Type A}) \times P(\text{Type A}) = 0.03 \times 0.60 = 0.018$.</li>
+          
+          <li>Part b (2pts): Calculates $P(\text{Defective}) = P(\text{Defective}</li>
+          
+          <li>\text{Type A})P(\text{Type A}) + P(\text{Defective}</li>
+          
+          <li>\text{Type B})P(\text{Type B}) = (0.03 \times 0.60) + (0.05 \times 0.40) = 0.018 + 0.020 = 0.038$. Requires showing work for both components and sum.</li>
+          
+          <li>Part c (1pt): Calculates $P(\text{Type B}</li>
+          
+          <li>\text{Defective}) = \frac{P(\text{Type B and Defective})}{P(\text{Defective})} = \frac{0.05 \times 0.40}{0.038} = \frac{0.020}{0.038} \approx 0.5263$. Requires showing the conditional probability formula and calculations.</li>
+          
+          <li>Part d (1pt): States that the events are not mutually exclusive because $P(\text{Type A and Defective}) = 0.018 \ne 0$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S1Q2"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.B,UNC-3.C,UNC-3.D"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A telemarketing company finds that 15% of the calls made to potential customers result in a sale. Assume that calls are independent. A manager randomly selects 10 calls from a telemarketer's daily record.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Verify that this scenario meets the conditions for a binomial distribution. If not, state which condition(s) are not met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the probability that exactly 3 of the 10 calls result in a sale. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that at least 2 of the 10 calls result in a sale. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        What are the mean and standard deviation of the number of sales in 10 calls? Interpret the mean in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Verifies the BINS conditions: Binary (sale/no sale), Independent (stated in prompt), Number of trials fixed ($n=10$), Success probability fixed ($p=0.15$).</li>
+          
+          <li>Part b (1pt): Calculates $P(X=3) = \binom{10}{3} (0.15)^3 (0.85)^7 \approx 0.1298$. Requires formula or calculator notation with correct values.</li>
+          
+          <li>Part c (2pts): Calculates $P(X \ge 2) = 1 - P(X < 2) = 1 - (P(X=0) + P(X=1))$. Shows work for $P(X=0)$ and $P(X=1)$ and the final subtraction. $P(X=0) \approx 0.1969$, $P(X=1) \approx 0.3474$. So $P(X \ge 2) = 1 - (0.1969 + 0.3474) = 1 - 0.5443 = 0.4557$.</li>
+          
+          <li>Part d (2pts): Calculates mean $\mu_X = np = 10 \times 0.15 = 1.5$. Calculates standard deviation $\sigma_X = \sqrt{np(1-p)} = \sqrt{10 \times 0.15 \times 0.85} = \sqrt{1.275} \approx 1.129$. Interprets the mean: On average, if many sets of 10 calls are made, approximately 1.5 sales would be expected per set.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S1Q3"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.E,UNC-3.F,UNC-3.G"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">An online survey company estimates that 12% of people respond to a particular type of marketing email. Assume that responses are independent. A researcher sends out these emails sequentially until the first response is received.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What is the probability that the first response is received on the 4th email sent? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What is the probability that the researcher needs to send more than 5 emails to get the first response? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the mean and standard deviation for the number of emails that need to be sent until the first response. Interpret the mean in context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Are the conditions for a geometric distribution met in this scenario? Explain your reasoning.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Calculates $P(X=4) = (1-0.12)^{4-1} \times 0.12 = (0.88)^3 \times 0.12 \approx 0.0823$. Requires formula or calculator notation with correct values.</li>
+          
+          <li>Part b (1pt): Calculates $P(X > 5) = (1-0.12)^5 = (0.88)^5 \approx 0.5277$. Requires formula or calculator notation with correct values.</li>
+          
+          <li>Part c (2pts): Calculates mean $\mu_X = \frac{1}{p} = \frac{1}{0.12} \approx 8.333$. Calculates standard deviation $\sigma_X = \sqrt{\frac{1-p}{p^2}} = \sqrt{\frac{0.88}{(0.12)^2}} = \sqrt{\frac{0.88}{0.0144}} \approx \sqrt{61.11} \approx 7.817$. Interprets the mean: On average, approximately 8.33 emails would need to be sent until the first response is received.</li>
+          
+          <li>Part d (1pt): Verifies the BITS conditions for Geometric: Binary (response/no response), Independent (stated in prompt), Trials until first Success, Success probability fixed ($p=0.12$). Explanation needs to address each condition.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S1Q4"
+      data-difficulty="hard"
+      data-skill-codes="2.B,3.B,3.C"
+      data-learning-objectives="VAR-5.A,VAR-5.C,VAR-5.E,VAR-5.F"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">An agricultural scientist is studying the number of seeds that germinate in a packet of 10 seeds. The probability distribution for the number of germinated seeds, $X$, is given in the table below. The cost to produce a packet is \$1.50, and each germinated seed can be sold for \$0.25.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Number of Germinated Seeds (X)</th><th>Probability</th></tr></thead><tbody><tr><td>0</td><td>0.05</td></tr><tr><td>1</td><td>0.10</td></tr><tr><td>2</td><td>0.15</td></tr><tr><td>3</td><td>0.20</td></tr><tr><td>4</td><td>0.15</td></tr><tr><td>5</td><td>0.10</td></tr><tr><td>6</td><td>0.10</td></tr><tr><td>7</td><td>0.05</td></tr><tr><td>8</td><td>0.05</td></tr><tr><td>9</td><td>0.03</td></tr><tr><td>10</td><td>0.02</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Construct a probability distribution for the profit, $P$, from a packet of seeds. (Profit = Revenue - Cost).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected number of germinated seeds, $E(X)$. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected profit, $E(P)$. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Calculate the standard deviation of the number of germinated seeds, $\sigma_X$. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Using your calculated $\sigma_X$ from part (d), calculate the standard deviation of the profit, $\sigma_P$. Show your work.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Defines profit as $P = 0.25X - 1.50$. Constructs a table with correct profit values for each $X$ and associated probabilities. For example: $P(-1.50) = 0.05$, $P(-1.25) = 0.10$, etc. All $X$ values from the provided table must be present with corresponding $P$ values and probabilities.</li>
+          
+          <li>Part b (1pt): Calculates $E(X) = \sum X \cdot P(X)$. Shows the sum or key calculation steps for $E(X) = 3.92$.</li>
+          
+          <li>Part c (1pt): Calculates $E(P) = E(0.25X - 1.50) = 0.25E(X) - 1.50$. Uses the linearity property and $E(X)$ to get $E(P) = 0.25(3.92) - 1.50 = 0.98 - 1.50 = -0.52$.</li>
+          
+          <li>Part d (1pt): Calculates $\sigma_X$. Correctly sets up the variance calculation $\sigma_X^2 = \sum (X - E(X))^2 P(X)$ and computes $\sigma_X = \sqrt{3.9078} \approx 1.9768$.</li>
+          
+          <li>Part e (1pt): Calculates $\sigma_P =</li>
+          
+          <li>0.25</li>
+          
+          <li>\sigma_X$. Shows the transformation rule and uses calculated $\sigma_X$ to get $\sigma_P = 0.25 \times 1.9768 \approx 0.4942$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S1Q5"
+      data-difficulty="medium"
+      data-skill-codes="3.A,4.B"
+      data-learning-objectives="VAR-4.C,VAR-4.D,VAR-4.E"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A factory produces electronic components. Past data indicates that 8% of components have a manufacturing defect (event M), and 5% of components have a shipping defect (event S). It is known that $P(M \text{ and } S) = 0.02$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the probability that a randomly selected component has a manufacturing defect or a shipping defect.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        \t b. Given that a randomly selected component has a manufacturing defect, calculate the probability that it also has a shipping defect.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        \t c. Determine whether the events "has a manufacturing defect" and "has a shipping defect" are mutually exclusive. Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        \t d. Determine whether the events "has a manufacturing defect" and "has a shipping defect" are independent. Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correct calculation of $P(M \cup S) = P(M) + P(S) - P(M \cap S) = 0.08 + 0.05 - 0.02 = 0.11$.</li>
+          
+          <li>Part b (1pt): Correct calculation of $P(S</li>
+          
+          <li>M) = \frac{P(M \cap S)}{P(M)} = \frac{0.02}{0.08} = 0.25$.</li>
+          
+          <li>Part c (1pt): States that the events are not mutually exclusive because $P(M \cap S) = 0.02 \ne 0$.</li>
+          
+          <li>Part d (1pt): States that the events are not independent. Justification could be $P(M \cap S) \ne P(M)P(S)$ ($0.02 \ne 0.08 \times 0.05 = 0.004$) OR $P(S</li>
+          
+          <li>M) \ne P(S)$ ($0.25 \ne 0.05$).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

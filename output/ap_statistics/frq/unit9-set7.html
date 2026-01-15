@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 7)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 7)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S7Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.AC,UNC-4.AD,UNC-4.AF,UNC-4.AG"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A researcher is studying the relationship between the number of hours a student spends studying for a test (x) and the score they receive on the test (y). A random sample of 25 students was taken, and the least-squares regression line for their data was calculated as $\hat{y} = 55.3 + 1.85x$. The standard error of the slope, $s_b$, was $0.32$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure for the slope of the regression model. (Do not perform calculations.)
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions necessary for constructing this confidence interval. Assume a residual plot shows no clear pattern and the residuals appear approximately normal.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate and interpret a 95% confidence interval for the true slope of the regression line.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly identifies a t-interval for the slope of a regression line</li>
+          
+          <li>Part b (2pts): Verifies all four conditions: Random sample, Independence (10% rule: $25 < 0.10N$), Linearity (residual plot no pattern), Equal standard deviation (residual plot no fan shape), and Normality of residuals (normal probability plot or histogram of residuals, as assumed)</li>
+          
+          <li>Part c (2pts): Correctly calculates the 95% confidence interval using $df=n-2=23$ and $t^*=2.069$, showing all values. Correctly interprets the interval in the context of the problem, linking study hours and test scores.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S7Q2"
+      data-difficulty="hard"
+      data-skill-codes="1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.K,VAR-7.L,VAR-7.M,DAT-3.M,DAT-3.N"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A consumer advocacy group is investigating the relationship between the age of a light bulb (in hundreds of hours, $x$) and its brightness (in lumens, $y$). They want to determine if there is a significant negative linear relationship between these two variables. They collect data from a random sample of 30 bulbs. A regression analysis yields a sample slope $b = -2.5$ lumens per hundred hours, a standard error of the slope $s_b = 1.0$, and $n=30$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a significance test to investigate if there is a significant negative linear relationship.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test. Assume that scatterplot and residual plots support linearity, constant variance, and normality.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test. Show all work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the p-value in context and use it to justify a conclusion about whether there is a significant negative linear relationship at the $\alpha = 0.05$ significance level.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States $H_0: \beta = 0$ and $H_a: \beta < 0$, defining $\beta$ as the true slope of the linear relationship between light bulb age and brightness.</li>
+          
+          <li>Part b (1pt): Verifies all necessary conditions: Random sample, Independence ($30 < 0.10N$), Linearity, Equal standard deviation, and Normality of residuals (by assumption in prompt).</li>
+          
+          <li>Part c (2pts): Calculates test statistic $t = \frac{b - 0}{s_b} = \frac{-2.5}{1.0} = -2.5$. Calculates p-value for $t = -2.5$ with $df = 30-2=28$ (approx $0.008$).</li>
+          
+          <li>Part d (2pts): Correctly interprets the p-value (e.g., "Assuming there is no linear relationship between age and brightness, there is a 0.8% chance of observing a sample slope as extreme or more extreme than -2.5."). Justifies conclusion: since $p < 0.05$, reject $H_0$. Concludes there is convincing evidence of a significant negative linear relationship between bulb age and brightness.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S7Q3"
+      data-difficulty="easy"
+      data-skill-codes="1.A,4.A,4.B"
+      data-learning-objectives="VAR-1.K,UNC-4.AI"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A small independent music artist is interested in the relationship between the number of plays a song receives on a streaming service and the number of downloads it gets. Data for 15 of their songs are collected and plotted in a scatterplot, along with the least-squares regression line.</div>
+
+      
+      <div class="diagram">
+         <svg width="400" height="300" viewBox="0 0 400 300" style="background-color:white;"> <rect x="50" y="50" width="300" height="200" fill="none" stroke="black"/> <text x="180" y="275" font-size="12" text-anchor="middle">Plays (thousands)</text> <text x="20" y="150" font-size="12" text-anchor="middle" transform="rotate(-90,20,150)">Downloads</text> <line x1="60" y1="230" x2="340" y2="70" stroke="black" stroke-width="1"/> <circle cx="60" cy="240" r="3" fill="black"/> <circle cx="80" cy="220" r="3" fill="black"/> <circle cx="100" cy="200" r="3" fill="black"/> <circle cx="120" cy="185" r="3" fill="black"/> <circle cx="140" cy="170" r="3" fill="black"/> <circle cx="160" cy="160" r="3" fill="black"/> <circle cx="180" cy="145" r="3" fill="black"/> <circle cx="200" cy="130" r="3" fill="black"/> <circle cx="220" cy="120" r="3" fill="black"/> <circle cx="240" cy="110" r="3" fill="black"/> <circle cx="260" cy="100" r="3" fill="black"/> <circle cx="280" cy="95" r="3" fill="black"/> <circle cx="300" cy="85" r="3" fill="black"/> <circle cx="320" cy="75" r="3" fill="black"/> <circle cx="340" cy="65" r="3" fill="black"/> </svg> 
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the overall pattern of the relationship shown in the scatterplot. (Do not calculate the regression equation.)
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Based on the scatterplot, identify a question about the variation in the data that could be further investigated using statistical inference.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Suppose the artist collects data for 100 songs instead of 15. How would this larger sample size likely affect the width of a confidence interval for the true slope of the relationship between plays and downloads?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Describes the direction (positive), form (linear), and strength (moderately strong to strong) of the relationship, and mentions context.</li>
+          
+          <li>Part b (1pt): Identifies a question related to variation, e.g., "Is the linear relationship between plays and downloads statistically significant?" or "Is the slope of the relationship significantly different from zero?"</li>
+          
+          <li>Part c (1pt): Explains that a larger sample size ($n=100$) would decrease the standard error of the slope ($s_b$), which would lead to a smaller margin of error and thus a narrower confidence interval for the true slope.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S7Q4"
+      data-difficulty="easy"
+      data-skill-codes="1.E,1.F,4.B,4.E"
+      data-learning-objectives="VAR-7.J,VAR-7.K,DAT-3.M,DAT-3.N"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A health scientist is studying the effect of daily exercise time (in minutes, $x$) on a person's resting heart rate (in beats per minute, $y$). They believe that increased exercise time leads to a decrease in resting heart rate. A linear regression analysis was performed on data from a random sample of 50 individuals. The test statistic for the slope was calculated as $t = -2.85$, and the corresponding p-value was $0.003$. Assume all conditions for inference are met.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure for investigating the scientist's belief.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        State the null and alternative hypotheses for this test, defining any parameters used.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on the calculated p-value, interpret what this p-value means in the context of this study and state a conclusion at the $\alpha = 0.01$ significance level.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies a t-test for the slope of a regression model.</li>
+          
+          <li>Part b (1pt): States $H_0: \beta = 0$ and $H_a: \beta < 0$, where $\beta$ is the true slope of the linear relationship between daily exercise time and resting heart rate.</li>
+          
+          <li>Part c (2pts): Interprets the p-value: "Assuming there is no linear relationship between daily exercise time and resting heart rate ($\beta=0$), there is a 0.3% chance of observing a sample slope as extreme as or more extreme than what was found." States conclusion: Since $p=0.003 < \alpha=0.01$, reject $H_0$. Concludes there is convincing evidence that increased daily exercise time leads to a decrease in resting heart rate.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S7Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.AC,UNC-4.AD,UNC-4.AF,UNC-4.AG,UNC-4.AH"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A researcher is studying the relationship between the amount of fertilizer (in grams) applied to a plant, $X$, and its growth (in cm) over a month, $Y$. Data from $n=25$ plants yielded the following regression output for predicting growth from fertilizer amount:$$S = 2.15$$ $$R-Sq = 62.5\%$$</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Predictor</th><th>Coef</th><th>SE Coef</th><th>T</th><th>P</th></tr></thead><tbody><tr><td>Constant</td><td>12.5</td><td>1.8</td><td>6.94</td><td>0.000</td></tr><tr><td>Fertilizer</td><td>0.75</td><td>0.12</td><td>6.25</td><td>0.000</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure for estimating the true slope of the relationship between fertilizer amount and plant growth.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for constructing a confidence interval for the slope of the regression line.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate and interpret a 95% confidence interval for the slope of the regression line.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your confidence interval in part (c), justify whether there is convincing evidence of a positive linear relationship between fertilizer amount and plant growth.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly identifies a t-interval for the slope of a regression line (or similar phrasing).</li>
+          
+          <li>Part b (2pts): Verifies linearity (residual plot shows no pattern, implied from context), independence (random sample or assignment), normality (residuals approximately normal/histogram, assumed or checked from data not given), equal variance (residual plot shows constant scatter, assumed or checked). (1pt for 2-3 conditions, 2pts for all 4).</li>
+          
+          <li>Part c (2pts): Calculates the interval using $\text{df} = 23$ ($n-2$), $t^* = 2.069$ (from t-table for 95% CI, 2-sided), and computes $0.75 \pm 2.069 \times 0.12 = (0.5017, 0.9983)$.</li>
+          
+          <li>Part c (1pt): Correctly interprets the interval in context (e.g., "We are 95% confident that for each additional gram of fertilizer, the true mean plant growth increases by between $0.5017$ cm and $0.9983$ cm.").</li>
+          
+          <li>Part d (1pt): States that since the interval $(0.5017, 0.9983)$ contains only positive values, there is convincing evidence of a positive linear relationship between fertilizer amount and plant growth.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

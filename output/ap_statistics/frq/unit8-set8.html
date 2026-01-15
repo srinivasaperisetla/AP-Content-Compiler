@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 8)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 8)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S8Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,3.A,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.B,VAR-8.C,VAR-8.D,VAR-8.E,VAR-8.G,DAT-3.I,DAT-3.J"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A bag of Skittles claims to have the following color distribution: 20% Red, 20% Orange, 20% Yellow, 20% Green, and 20% Purple. A statistics student opened a large bag and counted the following number of candies:</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Color</th><th>Count</th></tr></thead><tbody><tr><td>Red</td><td>110</td></tr><tr><td>Orange</td><td>95</td></tr><tr><td>Yellow</td><td>88</td></tr><tr><td>Green</td><td>105</td></tr><tr><td>Purple</td><td>102</td></tr><tr><td>Total</td><td>500</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a chi-square goodness-of-fit test to determine if the observed distribution differs from the claimed distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected count for each color of Skittles. Show your work for at least one color.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The chi-square test statistic for this sample was calculated as $\chi^2 = 7.25$. Determine the p-value for this test. Interpret the p-value in context and, using a significance level of $\alpha = 0.05$, justify your claim about the population based on the results.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses in context.</li>
+          
+          <li>Part b (1pt): Verifies random sampling and expected count conditions (all expected counts $\ge 5$).</li>
+          
+          <li>Part c (1pt): Calculates all expected counts (e.g., $100$ for each color), showing calculation for one.</li>
+          
+          <li>Part d (2pts): Determines the correct p-value for $\chi^2 = 7.25$ with $df=4$ (1pt) AND correctly interprets the p-value in context AND states the correct conclusion regarding the claimed distribution, linked to the p-value and $\alpha$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S8Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,3.A,4.C,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.H,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A marketing firm is interested in whether the preference for a new soft drink among adults differs across three age groups: 18-30 years, 31-50 years, and over 50 years. They conducted a random survey of 600 adults, with 200 from each age group, and recorded their preference (Prefer/Don't Prefer).</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Age Group</th><th>Prefer</th><th>Don't Prefer</th><th>Total</th></tr></thead><tbody><tr><td>18-30 years</td><td>120</td><td>80</td><td>200</td></tr><tr><td>31-50 years</td><td>100</td><td>100</td><td>200</td></tr><tr><td>Over 50 years</td><td>70</td><td>130</td><td>200</td></tr><tr><td>Total</td><td>290</td><td>310</td><td>600</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a chi-square test for homogeneity.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected number of adults aged 31-50 who Prefer the soft drink, assuming the null hypothesis is true. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The chi-square test statistic for these data is $\chi^2 = 12.35$ with 2 degrees of freedom, resulting in a p-value of $0.002$. Interpret the p-value in context and, using a significance level of $\alpha = 0.05$, justify your conclusion regarding the soft drink preference across age groups.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses in context for a test of homogeneity.</li>
+          
+          <li>Part b (1pt): Calculates the correct expected count for the specified cell, showing work (e.g., $\frac{290 \times 200}{600} = 96.67$).</li>
+          
+          <li>Part c (1pt): Verifies random sampling/assignment (if applicable) and expected count conditions (all $\ge 5$).</li>
+          
+          <li>Part d (2pts): Correctly interprets the p-value in context (1pt) AND states the correct conclusion regarding homogeneity of preference across age groups, linked to the p-value and $\alpha$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S8Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,3.A,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.H,VAR-1.J,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A researcher wants to investigate if there is an association between a person's preferred method of news consumption (TV, Online, Print) and their political affiliation (Democrat, Republican, Independent). A random sample of 500 adults was surveyed.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Political Affiliation</th><th>TV News</th><th>Online News</th><th>Print News</th><th>Total</th></tr></thead><tbody><tr><td>Democrat</td><td>85</td><td>110</td><td>35</td><td>230</td></tr><tr><td>Republican</td><td>60</td><td>45</td><td>50</td><td>155</td></tr><tr><td>Independent</td><td>40</td><td>30</td><td>45</td><td>115</td></tr><tr><td>Total</td><td>185</td><td>185</td><td>130</td><td>500</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a chi-square test for independence.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected number of Republicans who prefer Online news. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify the expected count condition for this test. Then, the chi-square test statistic for these data is $\chi^2 = 18.21$. Determine the p-value for this test. Using a significance level of $\alpha = 0.01$, justify your conclusion about the association between news consumption method and political affiliation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the observed counts, which cell (combination of news method and political affiliation) contributes most to the high chi-square statistic? Briefly explain what this suggests about the observed versus expected counts for that cell.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses in context for a test of independence.</li>
+          
+          <li>Part b (1pt): Calculates the correct expected count for the specified cell, showing work (e.g., $(155 \times 185) / 500 = 57.35$).</li>
+          
+          <li>Part c (2pts): Verifies expected count condition (all expected counts $\ge 5$) (0.5pt), determines the correct p-value for $\chi^2 = 18.21$ with $df=4$ (0.5pt) AND justifies the conclusion about the association, linked to the p-value and $\alpha$ (1pt).</li>
+          
+          <li>Part d (1pt): Identifies the cell with the largest contribution (e.g., "Democrat, Print") AND explains that the observed count is notably different (lower) than the expected count for that cell.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S8Q4"
+      data-difficulty="easy"
+      data-skill-codes="3.C,4.C,4.B"
+      data-learning-objectives="VAR-8.A,VAR-8.E,VAR-1.J"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">The chi-square distribution is a family of distributions used in statistical inference for categorical data. Its shape depends on a single parameter, the degrees of freedom.</div>
+
+      
+      <div class="diagram">
+         <svg width="400" height="300" viewBox="0 0 400 300"><rect x="0" y="0" width="400" height="300" fill="white"/><line x1="50" y1="250" x2="350" y2="250" stroke="black" stroke-width="1"/><line x1="50" y1="250" x2="50" y2="50" stroke="black" stroke-width="1"/><text x="40" y="265" font-size="12" text-anchor="middle">0</text><text x="360" y="265" font-size="12" text-anchor="middle">$\chi^2$</text><text x="30" y="55" font-size="12" text-anchor="middle">Density</text><path d="M52 248 Q60 200 70 150 L90 100 L120 70 L150 60 L200 65 L250 80 L300 100 L340 120" fill="none" stroke="blue" stroke-width="2"/><text x="100" y="80" font-size="12" fill="blue">df=1</text><path d="M52 248 Q80 230 100 210 Q120 180 150 150 Q180 130 200 120 Q230 110 260 115 Q290 125 320 140" fill="none" stroke="red" stroke-width="2"/><text x="210" y="110" font-size="12" fill="red">df=5</text><path d="M52 248 Q80 240 120 230 Q160 210 200 190 Q240 170 280 160 Q320 155 350 160" fill="none" stroke="green" stroke-width="2"/><text x="300" y="150" font-size="12" fill="green">df=10</text></svg> 
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe two key characteristics of any chi-square distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain why the condition that all expected counts must be at least 5 is important for performing a chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        A chi-square test for goodness-of-fit is conducted for a six-sided die. The observed counts show a noticeable difference from the expected counts for certain faces. Briefly describe what question this variation suggests to a statistician.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Describes two characteristics such as: skewed right, non-negative values, shape determined by degrees of freedom, approaches normal as df increases.</li>
+          
+          <li>Part b (1pt): Explains that the condition ensures the chi-square distribution is a good approximation of the sampling distribution of the test statistic, preventing inaccurate p-values.</li>
+          
+          <li>Part c (1pt): Explains that the variation suggests questioning whether the die is fair or if the observed differences are due to chance alone.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S8Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.E,4.B,4.E,3.A,1.F"
+      data-learning-objectives="VAR-8.C,VAR-8.J,DAT-3.J,VAR-1.J,VAR-8.B,VAR-8.I"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A company manufactures three types of smartphone screens: Gorilla Glass, Ceramic Shield, and Sapphire Crystal. The quality control department wants to investigate two different issues: 1. Whether the proportion of defective screens is the same across the three manufacturing shifts (Day, Evening, Night). 2. Whether the overall distribution of screen types produced in a week matches a target distribution of 40% Gorilla Glass, 35% Ceramic Shield, and 25% Sapphire Crystal. They collect data on 1000 randomly selected screens for the first issue, and a random sample of 500 screens for the second issue.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        For the first issue (defective screens across shifts), identify the appropriate chi-square test to use. State the null and alternative hypotheses for this test. Briefly explain your reasoning for choosing this specific chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        For the second issue (distribution of screen types), identify the appropriate chi-square test. State the null and alternative hypotheses for this test. Calculate the expected number of Sapphire Crystal screens if the target distribution is met and 500 screens are sampled.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Suppose for the second issue, the chi-square test statistic was $\chi^2 = 8.5$ with 2 degrees of freedom, and the p-value was $0.014$. Using a significance level of $\alpha = 0.05$, what conclusion can be drawn about the company's target distribution? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the conclusion in part (c), if the company wants to investigate which specific screen types are deviating from the target, what should they examine next?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies Chi-Square Test for Homogeneity (1pt) AND states correct H_0 and H_a in context for homogeneity AND provides a clear reason for choosing homogeneity (comparing distributions of a single categorical variable across populations).</li>
+          
+          <li>Part b (2pts): Identifies Chi-Square Test for Goodness-of-Fit (1pt) AND states correct H_0 and H_a in context for goodness-of-fit (0.5pt) AND calculates expected count for Sapphire Crystal ($500 \times 0.25 = 125$) (0.5pt).</li>
+          
+          <li>Part c (1pt): States the correct conclusion (reject $H_0$, the distribution does not match the target distribution) and justifies it using the p-value ($0.014 < 0.05$).</li>
+          
+          <li>Part d (1pt): Suggests examining the contributions to the chi-square statistic from each cell or comparing the observed versus expected counts for individual screen types.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

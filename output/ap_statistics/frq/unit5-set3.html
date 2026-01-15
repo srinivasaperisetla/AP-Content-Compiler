@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 3)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 3)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S3Q1"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.K,UNC-3.L,UNC-3.M"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A national survey claims that 40% of adult Americans prefer online news sources over traditional print media. A local newspaper editor believes this proportion is higher among adults in her city. She plans to take a random sample of 200 adults from her city.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample proportion of adults in her city who prefer online news sources, assuming the national claim is true. Calculate its mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify that the conditions for using a normal distribution to approximate this sampling distribution are met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If, in her sample of 200 adults, 92 preferred online news sources, calculate the probability of observing a sample proportion this high or higher, assuming the national claim is true.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Mean $\mu_{\hat{p}} = p = 0.40$ correctly identified (1pt); Standard deviation $\sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} = \sqrt{\frac{0.40(0.60)}{200}} \approx 0.0346$ correctly calculated (1pt).</li>
+          
+          <li>Part b (2pts): $np = 200(0.40) = 80 \ge 10$ (1pt); $n(1-p) = 200(0.60) = 120 \ge 10$ (1pt).</li>
+          
+          <li>Part c (2pts): Correctly calculates $\hat{p} = \frac{92}{200} = 0.46$ (0.5pt); Correctly calculates $Z = \frac{0.46 - 0.40}{0.0346} \approx 1.734$ (1pt); Correctly calculates $P(\hat{p} \ge 0.46) \approx P(Z \ge 1.734) \approx 0.0414$ with work shown (0.5pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S3Q2"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.Q,UNC-3.R,UNC-3.S"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">The weight of a certain type of apple grown in an orchard is normally distributed with a mean of 180 grams and a standard deviation of 15 grams. A random sample of 25 apples is picked from the orchard.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample mean weight of 25 apples. Calculate its mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify why the sampling distribution of the sample mean can be described as approximately normal.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the sample mean weight of the 25 apples is less than 175 grams.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Mean $\mu_{\bar{x}} = \mu = 180$ grams correctly identified (1pt); Standard deviation $\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}} = \frac{15}{\sqrt{25}} = 3$ grams correctly calculated (1pt).</li>
+          
+          <li>Part b (1pt): The sampling distribution of the sample mean is approximately normal because the population distribution of apple weights is normally distributed. (If population distribution was not normal, then CLT would be used for $n \ge 30$).</li>
+          
+          <li>Part c (2pts): Correctly calculates $Z = \frac{175 - 180}{3} \approx -1.67$ (1pt); Correctly calculates $P(\bar{x} < 175) \approx P(Z < -1.67) \approx 0.0475$ with work shown (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S3Q3"
+      data-difficulty="easy"
+      data-skill-codes="3.B,4.B"
+      data-learning-objectives="UNC-3.J,UNC-3.I"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A company manufactures bolts. The actual length of bolts varies, but the company aims for a mean length of 5 cm. A quality control inspector takes a random sample of $n$ bolts and measures their lengths.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        If the inspector measures 10 bolts and finds their lengths (in cm) to be: 4.9, 5.1, 5.0, 4.8, 5.2, 5.0, 4.9, 5.1, 5.0, 5.1. Calculate a point estimate for the population mean length of the bolts.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain what it means for an estimator to be "unbiased" in the context of estimating the population mean length of bolts.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Suppose two different quality control methods are used to estimate the proportion of defective bolts. Method A uses a sample proportion $\hat{p}_A$ from a sample of 100 bolts, and Method B uses a sample proportion $\hat{p}_B$ from a sample of 500 bolts. Assuming both methods are unbiased, compare the variability of these two estimators.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly calculates the sample mean $\bar{x} = \frac{4.9+5.1+5.0+4.8+5.2+5.0+4.9+5.1+5.0+5.1}{10} = 5.01$ cm. (1pt)</li>
+          
+          <li>Part b (2pts): An estimator is unbiased if its expected value (long-run average) is equal to the true value of the population parameter it is estimating (1pt). In this context, the sample mean $\bar{x}$ is an unbiased estimator of the population mean length $\mu$ because $E(\bar{x}) = \mu$ (1pt).</li>
+          
+          <li>Part c (2pts): Method B ($\hat{p}_B$) will have less variability than Method A ($\hat{p}_A$) (1pt). This is because the variability of a sample proportion decreases as the sample size increases, and $n_B = 500$ is larger than $n_A = 100$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S3Q4"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.N,UNC-3.O,UNC-3.P"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A study is conducted to compare the proportion of registered voters who support a new environmental bill in two different districts, District A and District B. A random sample of 150 voters is taken from District A, and a random sample of 200 voters is taken from District B. Historically, 60% of voters in District A support the bill, and 55% of voters in District B support the bill.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the difference in sample proportions ($\hat{p}_A - \hat{p}_B$). Calculate its mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify that the conditions for using a normal distribution to approximate this sampling distribution are met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the sample proportion of supporters in District A is greater than the sample proportion of supporters in District B by 0.10 or more (i.e., $\hat{p}_A - \hat{p}_B \ge 0.10$).
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Mean $\mu_{\hat{p}_A - \hat{p}_B} = p_A - p_B = 0.60 - 0.55 = 0.05$ correctly identified (1pt); Standard deviation $\sigma_{\hat{p}_A - \hat{p}_B} = \sqrt{\frac{p_A(1-p_A)}{n_A} + \frac{p_B(1-p_B)}{n_B}} = \sqrt{\frac{0.60(0.40)}{150} + \frac{0.55(0.45)}{200}} \approx \sqrt{0.0016 + 0.0012375} \approx \sqrt{0.0028375} \approx 0.05327$ correctly calculated (1pt).</li>
+          
+          <li>Part b (2pts): $n_A p_A = 150(0.60) = 90 \ge 10$ and $n_A (1-p_A) = 150(0.40) = 60 \ge 10$ (1pt); $n_B p_B = 200(0.55) = 110 \ge 10$ and $n_B (1-p_B) = 200(0.45) = 90 \ge 10$ (1pt).</li>
+          
+          <li>Part c (2pts): Correctly calculates $Z = \frac{0.10 - 0.05}{0.05327} \approx 0.938$ (1pt); Correctly calculates $P(\hat{p}_A - \hat{p}_B \ge 0.10) \approx P(Z \ge 0.938) \approx 0.174$ with work shown (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S3Q5"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.T,UNC-3.U,UNC-3.V"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">Researchers are studying the effectiveness of two different fertilizers, Fertilizer X and Fertilizer Y, on the yield of a certain crop. They apply Fertilizer X to 30 randomly selected plots and Fertilizer Y to 35 randomly selected plots. Assume that the crop yield per plot using Fertilizer X has a mean of 120 kg and a standard deviation of 15 kg, and for Fertilizer Y, the mean is 115 kg with a standard deviation of 18 kg. Assume yields are independent.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the difference in sample means ($\bar{x}_X - \bar{x}_Y$). Calculate its mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify why the sampling distribution of the difference in sample means can be described as approximately normal.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the average yield for Fertilizer X is at least 10 kg more than the average yield for Fertilizer Y (i.e., $\bar{x}_X - \bar{x}_Y \ge 10$).
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Mean $\mu_{\bar{x}_X - \bar{x}_Y} = \mu_X - \mu_Y = 120 - 115 = 5$ kg correctly identified (1pt); Standard deviation $\sigma_{\bar{x}_X - \bar{x}_Y} = \sqrt{\frac{\sigma_X^2}{n_X} + \frac{\sigma_Y^2}{n_Y}} = \sqrt{\frac{15^2}{30} + \frac{18^2}{35}} = \sqrt{\frac{225}{30} + \frac{324}{35}} = \sqrt{7.5 + 9.257} \approx \sqrt{16.757} \approx 4.093$ kg correctly calculated (1pt).</li>
+          
+          <li>Part b (1pt): The sampling distribution of the difference in sample means is approximately normal because both sample sizes ($n_X = 30$ and $n_Y = 35$) are large enough ($n \ge 30$), satisfying the conditions for the Central Limit Theorem. (1pt)</li>
+          
+          <li>Part c (2pts): Correctly calculates $Z = \frac{10 - 5}{4.093} \approx 1.22$ (1pt); Correctly calculates $P(\bar{x}_X - \bar{x}_Y \ge 10) \approx P(Z \ge 1.22) \approx 0.1112$ with work shown (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

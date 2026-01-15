@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 12)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 12)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S12Q1"
+      data-difficulty="easy"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.Q,UNC-4.R,UNC-4.S"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A coffee shop owner wants to estimate the average amount of coffee, in ounces, dispensed by their automatic machine. A random sample of 25 cups is taken, and the average amount dispensed is $\bar{x} = 11.8$ ounces with a standard deviation of $s = 0.5$ ounces. Assume the amount of coffee dispensed is approximately normally distributed.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure for this situation and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the true average amount of coffee dispensed by the machine.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval calculated in part (b) in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a one-sample t-interval for a population mean (1pt). Verifies random sampling, approximate normality (due to small n and population normality assumption), and unknown population standard deviation (1pt).</li>
+          
+          <li>Part b (2pts): Shows correct calculation of t-critical value or uses calculator output (1pt). Calculates the correct confidence interval (1pt). E.g., $(11.8 \pm t^* \frac{0.5}{\sqrt{25}})$</li>
+          
+          <li>Part c (1pt): Correctly interprets the interval in context, stating confidence level and parameter.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S12Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A food manufacturer states that the average weight of a bag of potato chips is 14 ounces. A consumer advocacy group suspects that the true average weight is less than 14 ounces. They take a random sample of 30 bags and find the average weight to be $\bar{x} = 13.8$ ounces with a standard deviation of $s = 0.7$ ounces.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for this investigation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing a significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the p-value in context and state the conclusion of the test using a significance level of $\alpha = 0.05$.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States $H_0: \mu = 14$ and $H_a: \mu < 14$ in context, where $\mu$ is the true average weight of bags of potato chips (1pt).</li>
+          
+          <li>Part b (1pt): Verifies random sampling and checks for approximate normality (n=30 is large enough by CLT or mentions unknown population standard deviation) (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the correct test statistic $t = \frac{13.8 - 14}{0.7/\sqrt{30}} \approx -1.565$ with $df = 29$ (1pt). Calculates the correct p-value (1pt).</li>
+          
+          <li>Part d (2pts): Interprets the p-value as the probability of observing a sample mean of 13.8 ounces or less, assuming the true mean is 14 ounces (1pt). Compares p-value to $\alpha$ and concludes to fail to reject $H_0$ and states there is not enough evidence that the true mean is less than 14 ounces (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S12Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,1.E,1.F,3.E,4.E"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.R,VAR-7.B,VAR-7.C,VAR-7.D,DAT-3.F"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A company tests a new noise-canceling headphone design. Ten volunteers are selected, and their heart rates (beats per minute) are measured while listening to loud music, both with and without the headphones. The differences in heart rates (Without Headphones - With Headphones) for the 10 volunteers are: $d_i = \{8, 12, 5, 9, 7, 10, 6, 11, 4, 13\}$. The mean difference is $\bar{d} = 8.5$ bpm and the standard deviation of the differences is $s_d = 3.0$ bpm.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure to determine if the headphones reduce heart rate and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        State the null and alternative hypotheses for this investigation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and determine the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on a significance level of $\alpha = 0.01$, what conclusion can be drawn from this test? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a paired t-test for a mean difference (1pt). Verifies random sampling/random assignment of order, and approximate normality of differences (sample size 10 is small, so assume differences are approximately normal or check for strong skew/outliers if data given) (1pt).</li>
+          
+          <li>Part b (1pt): States $H_0: \mu_d = 0$ and $H_a: \mu_d > 0$ in context, where $\mu_d$ is the true mean difference in heart rates (Without - With headphones) (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the test statistic $t = \frac{8.5 - 0}{3.0/\sqrt{10}} \approx 8.97$ with $df = 9$ (1pt). Determines the p-value (1pt).</li>
+          
+          <li>Part d (1pt): Compares the very small p-value to $\alpha = 0.01$ and rejects $H_0$. Concludes there is significant evidence that the headphones reduce heart rate (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S12Q4"
+      data-difficulty="hard"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.A,4.D"
+      data-learning-objectives="UNC-4.V,UNC-4.W,UNC-4.Y,UNC-4.Z,UNC-4.AA,UNC-4.AB"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A medical researcher wants to compare the effectiveness of two different pain relievers, A and B. A random sample of 40 patients is given pain reliever A, and their pain reduction scores (on a scale of 0-10) have a mean of $\bar{x}_A = 6.5$ and a standard deviation of $s_A = 1.2$. Another random sample of 35 patients is given pain reliever B, and their pain reduction scores have a mean of $\bar{x}_B = 5.8$ and a standard deviation of $s_B = 1.0$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure to estimate the difference in true mean pain reduction scores for the two pain relievers and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 90% confidence interval for the difference in true mean pain reduction scores ($\mu_A - \mu_B$).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval from part (b) in context and justify whether there is a significant difference in the effectiveness of the two pain relievers at the 0.10 significance level.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Explain how increasing the sample sizes for both groups while keeping the confidence level and sample statistics the same would affect the width of the confidence interval.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a two-sample t-interval for a difference of population means (1pt). Verifies two independent random samples, and large enough sample sizes for approximate normality (CLT applies) (1pt).</li>
+          
+          <li>Part b (2pts): Calculates the correct degrees of freedom or uses calculator approximation (1pt). Calculates the correct 90% confidence interval. E.g., $(\bar{x}_A - \bar{x}_B) \pm t^* \sqrt{\frac{s_A^2}{n_A} + \frac{s_B^2}{n_B}}$ (1pt).</li>
+          
+          <li>Part c (2pts): Interprets the confidence interval in context, stating the confidence level and parameter (1pt). Justifies whether there is a significant difference by noting if 0 is included in the interval. Since 0 is not included, there is a significant difference (1pt).</li>
+          
+          <li>Part d (1pt): Explains that increasing sample sizes would decrease the standard error, thus decreasing the margin of error and making the confidence interval narrower (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S12Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.F,VAR-7.G,VAR-7.H,VAR-7.1,DAT-3.G,DAT-3.H"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A company is developing two new marketing strategies, A and B, for a product. To compare their effectiveness, they randomly assign 50 stores to use strategy A and another 50 stores to use strategy B. After a month, they record the average daily sales increase (in dollars) for each store. For strategy A, the mean increase was $\bar{x}_A = \$150$ with a standard deviation of $s_A = \$25$. For strategy B, the mean increase was $\bar{x}_B = \$140$ with a standard deviation of $s_B = \$20$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses to test if there is a significant difference in the true mean daily sales increases between the two strategies.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing a significance test for the difference of two population means.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the results and a significance level of $\alpha = 0.05$, what conclusion can be made about the two marketing strategies? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States $H_0: \mu_A = \mu_B$ (or $\mu_A - \mu_B = 0$) and $H_a: \mu_A \ne \mu_B$ (or $\mu_A - \mu_B \ne 0$) in context, where $\mu_A$ and $\mu_B$ are the true mean daily sales increases for strategies A and B, respectively (1pt).</li>
+          
+          <li>Part b (1pt): Verifies two independent random samples and large enough sample sizes for approximate normality (CLT applies) (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the test statistic $t = \frac{(150 - 140) - 0}{\sqrt{\frac{25^2}{50} + \frac{20^2}{50}}} \approx 2.22$ (1pt). Calculates the correct p-value (1pt).</li>
+          
+          <li>Part d (2pts): Compares the p-value to $\alpha = 0.05$ (e.g., $p \approx 0.03 < 0.05$) and rejects $H_0$ (1pt). Concludes there is significant evidence of a difference in true mean daily sales increases between the two strategies (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

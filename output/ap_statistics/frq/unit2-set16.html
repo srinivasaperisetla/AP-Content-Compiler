@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 16)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 16)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S16Q1"
+      data-difficulty="easy"
+      data-skill-codes="2.A,4.B"
+      data-learning-objectives="DAT-1.A,DAT-1.C"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A research team studied the relationship between the number of hours spent studying for a final exam and the score received on the exam for a random sample of 15 students. The data is displayed in the scatterplot.</div>
+
+      
+      <div class="diagram">
+         <svg width="350" height="250" viewBox="0 0 350 250" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="350" height="250" fill="white"/><text x="10" y="20" font-family="Arial" font-size="14">Hours Studied vs. Exam Score</text><line x1="50" y1="200" x2="300" y2="200" stroke="black" stroke-width="1"/><line x1="50" y1="200" x2="50" y2="50" stroke="black" stroke-width="1"/><text x="280" y="215" font-family="Arial" font-size="12">Hours Studied</text><text x="15" y="125" font-family="Arial" font-size="12" transform="rotate(-90 15 125)">Exam Score</text><text x="40" y="215" font-family="Arial" font-size="12">0</text><text x="295" y="215" font-family="Arial" font-size="12">10</text><text x="35" y="205" font-family="Arial" font-size="12">0</text><text x="35" y="55" font-family="Arial" font-size="12">100</text><circle cx="75" cy="140" r="3" fill="black"/><circle cx="100" cy="125" r="3" fill="black"/><circle cx="125" cy="110" r="3" fill="black"/><circle cx="150" cy="102.5" r="3" fill="black"/><circle cx="175" cy="95" r="3" fill="black"/><circle cx="200" cy="87.5" r="3" fill="black"/><circle cx="225" cy="80" r="3" fill="black"/><circle cx="250" cy="72.5" r="3" fill="black"/><circle cx="275" cy="65" r="3" fill="black"/><circle cx="300" cy="57.5" r="3" fill="black"/><circle cx="112.5" cy="117.5" r="3" fill="black"/><circle cx="162.5" cy="98" r="3" fill="black"/><circle cx="212.5" cy="83" r="3" fill="black"/><circle cx="262.5" cy="68" r="3" fill="black"/><circle cx="137.5" cy="107" r="3" fill="black"/></svg> 
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the relationship between hours studied and exam score shown in the scatterplot.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Suppose the correlation coefficient for these data is $r = 0.85$. Interpret the meaning of this correlation coefficient in the context of this study.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Describes the direction (positive), form (linear), and strength (strong) of the relationship AND includes context. Notes any unusual features or lack thereof.</li>
+          
+          <li>Part b (2pts): States that there is a strong, positive linear association between hours studied and exam score. Explains that as hours studied increase, exam scores tend to increase.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S16Q2"
+      data-difficulty="medium"
+      data-skill-codes="2.C,4.B"
+      data-learning-objectives="DAT-1.D,DAT-1.H"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A car manufacturer wants to model the relationship between a car's weight (in hundreds of pounds) and its fuel efficiency (in miles per gallon, MPG). A random sample of 12 car models was selected, and the following partial computer output for a least-squares regression analysis is provided.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Predictor</th><th>Coef</th><th>SE Coef</th><th>T</th><th>P</th></tr></thead><tbody><tr><td>Constant</td><td>45.42</td><td>1.87</td><td>24.28</td><td>0.000</td></tr><tr><td>Weight (100s lbs)</td><td>-5.56</td><td>0.45</td><td>-12.36</td><td>0.000</td></tr><tr><td>---</td><td>---</td><td>---</td><td>---</td><td>---</td></tr><tr><td>S = 2.15</td><td>R-Sq = 93.8%</td><td>R-Sq(adj) = 93.1%</td><td></td><td></td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Write the equation of the least-squares regression line for predicting fuel efficiency from car weight.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Interpret the slope of the regression line in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Predict the fuel efficiency for a car that weighs 3500 pounds.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Explain why it would not be appropriate to use this model to predict the fuel efficiency for a car that weighs 10000 pounds.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly writes the equation $\widehat{\text{MPG}} = 45.42 - 5.56 \times \text{Weight}$.</li>
+          
+          <li>Part b (1pt): Interprets the slope: For every additional 100 pounds in car weight, the predicted fuel efficiency decreases by approximately 5.56 MPG.</li>
+          
+          <li>Part c (1pt): Calculates the predicted MPG: $\widehat{\text{MPG}} = 45.42 - 5.56 \times 35 = 25.96$ MPG.</li>
+          
+          <li>Part d (1pt): Explains that 10000 pounds (100 hundreds of pounds) is outside the observed range of weights (extrapolation), and the linear relationship may not hold for such extreme values.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S16Q3"
+      data-difficulty="medium"
+      data-skill-codes="2.A,2.B"
+      data-learning-objectives="DAT-1.E,DAT-1.F"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A veterinarian collected data on the age (in years) and weight (in kg) of a random sample of 20 dogs of a particular breed. A least-squares regression line was fitted to the data to predict weight from age. The residual plot from this regression is shown below.</div>
+
+      
+      <div class="diagram">
+         <svg width="350" height="250" viewBox="0 0 350 250" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="350" height="250" fill="white"/><text x="10" y="20" font-family="Arial" font-size="14">Residual Plot</text><line x1="50" y1="125" x2="300" y2="125" stroke="black" stroke-width="1"/><line x1="50" y1="200" x2="50" y2="50" stroke="black" stroke-width="1"/><text x="290" y="140" font-family="Arial" font-size="12">Age (years)</text><text x="15" y="125" font-family="Arial" font-size="12" transform="rotate(-90 15 125)">Residual</text><text x="40" y="140" font-family="Arial" font-size="12">0</text><text x="295" y="140" font-family="Arial" font-size="12">10</text><text x="35" y="130" font-family="Arial" font-size="12">0</text><text x="35" y="55" font-family="Arial" font-size="12">Positive</text><text x="35" y="205" font-family="Arial" font-size="12">Negative</text><circle cx="62.5" cy="110" r="3" fill="black"/><circle cx="75" cy="95" r="3" fill="black"/><circle cx="87.5" cy="90" r="3" fill="black"/><circle cx="100" cy="95" r="3" fill="black"/><circle cx="125" cy="110" r="3" fill="black"/><circle cx="150" cy="130" r="3" fill="black"/><circle cx="175" cy="140" r="3" fill="black"/><circle cx="200" cy="145" r="3" fill="black"/><circle cx="225" cy="140" r="3" fill="black"/><circle cx="250" cy="130" r="3" fill="black"/><circle cx="275" cy="110" r="3" fill="black"/><circle cx="287.5" cy="95" r="3" fill="black"/><circle cx="110" cy="100" r="3" fill="black"/><circle cx="190" cy="148" r="3" fill="black"/><circle cx="230" cy="135" r="3" fill="black"/><circle cx="70" cy="105" r="3" fill="black"/><circle cx="280" cy="100" r="3" fill="black"/></svg> 
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe what a residual represents in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Based on the residual plot, is a linear model appropriate for describing the relationship between age and weight for this breed of dog? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        What does the pattern in the residual plot suggest about the model's predictions for younger versus older dogs?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): A residual is the difference between an observed dog's weight and the weight predicted by the regression line for a dog of that age.</li>
+          
+          <li>Part b (2pts): No, a linear model is not appropriate. The residual plot shows a clear curved (U-shaped) pattern, indicating that the linear model systematically overpredicts for some ages and underpredicts for others.</li>
+          
+          <li>Part c (1pt): The U-shaped pattern suggests the model underpredicts for younger dogs (positive residuals), overpredicts for middle-aged dogs (negative residuals), and underpredicts again for older dogs (positive residuals).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S16Q4"
+      data-difficulty="medium"
+      data-skill-codes="2.C,2.D"
+      data-learning-objectives="UNC-1.Q,UNC-1.R"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A survey was conducted to investigate the relationship between a person's preferred method of news consumption (TV, Online, Print) and their political affiliation (Democrat, Republican, Independent). The results from a random sample of 500 adults are summarized in the two-way table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th></th><th>TV</th><th>Online</th><th>Print</th><th>Total</th></tr></thead><tbody><tr><td>Democrat</td><td>100</td><td>80</td><td>20</td><td>200</td></tr><tr><td>Republican</td><td>60</td><td>90</td><td>0</td><td>150</td></tr><tr><td>Independent</td><td>40</td><td>60</td><td>50</td><td>150</td></tr><tr><td>Total</td><td>200</td><td>230</td><td>70</td><td>500</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the proportion of Republicans who prefer to consume news via Online sources.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Compare the proportion of Democrats who prefer TV news to the proportion of Republicans who prefer TV news.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on the data, is there an association between preferred news consumption method and political affiliation? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Shows calculation $\frac{90}{150} = 0.60$ or 60%.</li>
+          
+          <li>Part b (2pts): Calculates proportion for Democrats: $\frac{100}{200} = 0.50$. Calculates proportion for Republicans: $\frac{60}{150} = 0.40$. Compares the proportions, stating that Democrats are more likely to prefer TV news than Republicans (50% vs. 40%).</li>
+          
+          <li>Part c (1pt): Yes, there appears to be an association. The conditional proportions (e.g., preference for TV news differs across political affiliations) are not similar, indicating that the variables are not independent.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S16Q5"
+      data-difficulty="easy"
+      data-skill-codes="2.A,4.B"
+      data-learning-objectives="DAT-1.A,DAT-1.C"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A researcher collected data on the number of hours students spent studying for a final exam and their scores on the exam. The scatterplot shows a positive, linear association with no apparent outliers. The correlation coefficient was calculated as $r = 0.85$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the relationship between hours studied and exam scores based on the given information.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Interpret the value of the correlation coefficient $r = 0.85$ in the context of this study.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Description includes direction (positive), form (linear), and strength (strong).</li>
+          
+          <li>Part b (2pts): Correctly interprets $r=0.85$ as a strong, positive, linear association between hours studied and exam scores.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

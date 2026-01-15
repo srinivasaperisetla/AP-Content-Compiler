@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 16)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 16)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S16Q1"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.K,UNC-3.L,UNC-3.M"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A large online retailer claims that 80% of its customers are satisfied with their recent purchase. A consumer advocacy group plans to take a random sample of 150 customers to investigate this claim.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample proportion of satisfied customers for samples of size 150, assuming the retailer's claim is true. Be sure to calculate the mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify that the conditions for using a normal distribution to approximate the sampling distribution of the sample proportion are met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that in a random sample of 150 customers, less than 75% are satisfied.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates mean $\mu_{\hat{p}} = p = 0.80$ (1pt) and standard deviation $\sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} = \sqrt{\frac{0.80(0.20)}{150}} \approx 0.03266$ (1pt).</li>
+          
+          <li>Part b (1pt): Verifies $np \ge 10$ and $n(1-p) \ge 10$ ($150 \times 0.80 = 120 \ge 10$ and $150 \times 0.20 = 30 \ge 10$) (1pt).</li>
+          
+          <li>Part c (2pts): Calculates $z$-score $z = \frac{0.75 - 0.80}{0.03266} \approx -1.53$ (1pt) and finds probability $P(\hat{p} < 0.75) \approx 0.0630$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S16Q2"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.Q,UNC-3.R,UNC-3.S"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">The amount of cereal (in ounces) dispensed into boxes by a machine is normally distributed with a mean of 16.2 ounces and a standard deviation of 0.1 ounces. A quality control manager selects a random sample of 40 boxes.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample mean amount of cereal in ounces for samples of size 40. Be sure to calculate the mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify that the conditions for using a normal distribution to approximate the sampling distribution of the sample mean are met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the mean amount of cereal in a random sample of 40 boxes is less than 16.15 ounces.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates mean $\mu_{\bar{x}} = \mu = 16.2$ ounces (1pt) and standard deviation $\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}} = \frac{0.1}{\sqrt{40}} \approx 0.01581$ ounces (1pt).</li>
+          
+          <li>Part b (1pt): Verifies sample size $n=40 \ge 30$ (or notes population is normally distributed, which is given) and states independence (random sample, $N > 10n$) (1pt).</li>
+          
+          <li>Part c (2pts): Calculates $z$-score $z = \frac{16.15 - 16.2}{0.01581} \approx -3.16$ (1pt) and finds probability $P(\bar{x} < 16.15) \approx 0.0008$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S16Q3"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.H,UNC-3.I,UNC-3.J"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A local newspaper wants to estimate the proportion of city residents who support a new park initiative. They survey 100 residents by selecting names from the phone book. In their sample, 65 residents supported the initiative. It is known that 15% of city residents do not have a listed phone number.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the point estimate for the proportion of city residents who support the new park initiative based on this sample.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain whether this point estimate is likely to be an unbiased estimator for the true population proportion.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe how you would use a simulation to estimate the sampling distribution of the sample proportion of residents who support the initiative, accounting for the unlisted phone numbers. Assume the true proportion is $p = 0.70$.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Calculates $\hat{p} = \frac{65}{100} = 0.65$ (1pt).</li>
+          
+          <li>Part b (2pts): Explains that the estimate is likely biased because the sampling method (phone book) systematically excludes residents without listed phone numbers, who might have different opinions than those with listed numbers (1pt for identifying bias, 1pt for explanation of how it occurs/direction of bias).</li>
+          
+          <li>Part c (3pts): Describes a simulation process that includes: 1) defining a population reflecting $p=0.70$ support and 15% unlisted numbers (e.g., use a random digit table or computer to select 100 residents), 2) explicitly modeling exclusion of unlisted numbers from selection, 3) calculating $\hat{p}$ for each sample, and 4) repeating many times and creating a dotplot/histogram of the $\hat{p}$ values (1pt for simulation setup, 1pt for calculating $\hat{p}$ per sample, 1pt for repeated trials and collecting distribution).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S16Q4"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.N,UNC-3.O,UNC-3.P"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A pharmaceutical company is testing a new drug for reducing allergy symptoms. In a randomized controlled trial, 120 patients received the new drug, and 130 patients received a placebo. Of those who received the new drug, 85 reported significant symptom reduction. Of those who received the placebo, 60 reported significant symptom reduction. Assume the true proportion of symptom reduction for the drug is $p_D = 0.75$ and for the placebo is $p_P = 0.50$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the difference in sample proportions ($\hat{p}_D - \hat{p}_P$) of patients reporting symptom reduction. Be sure to calculate the mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify that the conditions for using a normal distribution to approximate the sampling distribution of the difference in sample proportions are met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the sample proportion of patients reporting symptom reduction with the new drug is at least 0.15 higher than that with the placebo.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates mean $\mu_{\hat{p}_D - \hat{p}_P} = p_D - p_P = 0.75 - 0.50 = 0.25$ (1pt) and standard deviation $\sigma_{\hat{p}_D - \hat{p}_P} = \sqrt{\frac{p_D(1-p_D)}{n_D} + \frac{p_P(1-p_P)}{n_P}} = \sqrt{\frac{0.75(0.25)}{120} + \frac{0.50(0.50)}{130}} \approx \sqrt{0.0015625 + 0.001923} \approx \sqrt{0.0034855} \approx 0.05904$ (1pt).</li>
+          
+          <li>Part b (1pt): Verifies $n_D p_D, n_D (1-p_D), n_P p_P, n_P (1-p_P)$ are all $\ge 10$. ($120 \times 0.75 = 90$, $120 \times 0.25 = 30$, $130 \times 0.50 = 65$, $130 \times 0.50 = 65$. All $\ge 10$) and states independence of samples (1pt).</li>
+          
+          <li>Part c (2pts): Calculates $z$-score for difference $(\hat{p}_D - \hat{p}_P) = 0.15$: $z = \frac{0.15 - 0.25}{0.05904} \approx -1.69$ (1pt) and finds probability $P(\hat{p}_D - \hat{p}_P \ge 0.15) = P(Z \ge -1.69) \approx 1 - 0.0455 = 0.9545$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S16Q5"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.T,UNC-3.U,UNC-3.V"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A nutritionist wants to compare the effectiveness of two different diet plans, Plan A and Plan B, on weight loss. They recruit 50 volunteers for Plan A and 60 volunteers for Plan B. After three months, the mean weight loss for Plan A is 7.5 pounds with a standard deviation of 3 pounds. For Plan B, the mean weight loss is 6.8 pounds with a standard deviation of 2.5 pounds. Assume the true mean weight loss for Plan A is $\mu_A = 8$ pounds and for Plan B is $\mu_B = 6$ pounds. Assume the standard deviations for the population are $\sigma_A = 3$ pounds and $\sigma_B = 2.5$ pounds.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the difference in sample means ($\bar{x}_A - \bar{x}_B$) for weight loss. Be sure to calculate the mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify that the conditions for using a normal distribution to approximate the sampling distribution of the difference in sample means are met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the average weight loss for Plan A is at least 3 pounds more than the average weight loss for Plan B in a random selection of samples.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates mean $\mu_{\bar{x}_A - \bar{x}_B} = \mu_A - \mu_B = 8 - 6 = 2$ pounds (1pt) and standard deviation $\sigma_{\bar{x}_A - \bar{x}_B} = \sqrt{\frac{\sigma_A^2}{n_A} + \frac{\sigma_B^2}{n_B}} = \sqrt{\frac{3^2}{50} + \frac{2.5^2}{60}} = \sqrt{\frac{9}{50} + \frac{6.25}{60}} = \sqrt{0.18 + 0.104167} = \sqrt{0.284167} \approx 0.533$ pounds (1pt).</li>
+          
+          <li>Part b (1pt): Verifies sample sizes $n_A = 50 \ge 30$ and $n_B = 60 \ge 30$ (Central Limit Theorem applies) and states independence of samples (1pt).</li>
+          
+          <li>Part c (2pts): Calculates $z$-score for difference $(\bar{x}_A - \bar{x}_B) = 3$: $z = \frac{3 - 2}{0.533} \approx 1.88$ (1pt) and finds probability $P(\bar{x}_A - \bar{x}_B \ge 3) = P(Z \ge 1.88) \approx 1 - 0.9699 = 0.0301$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

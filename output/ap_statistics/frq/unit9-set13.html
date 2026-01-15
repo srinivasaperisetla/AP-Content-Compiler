@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 13)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 13)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S13Q1"
+      data-difficulty="easy"
+      data-skill-codes="1.A,4.A"
+      data-learning-objectives="VAR-1.K,UNC-4.AI"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A student is investigating the relationship between the number of hours spent studying for an exam and the score received on the exam. They collected data from 15 students and created a scatterplot of study hours versus exam scores.</div>
+
+      
+      <div class="diagram">
+         <svg width="300" height="250" viewBox="0 0 300 250" style="background-color:white;font-family:Arial, sans-serif;font-size:12px;"><rect x="30" y="30" width="240" height="180" fill="none" stroke="black"/><line x1="30" y1="210" x2="270" y2="210" stroke="black"/><line x1="30" y1="30" x2="30" y2="210" stroke="black"/><text x="130" y="230" text-anchor="middle">Study Hours</text><text x="10" y="120" text-anchor="middle" transform="rotate(-90,10,120)">Exam Score</text><text x="25" y="215" text-anchor="end">0</text><text x="25" y="35" text-anchor="end">100</text><text x="270" y="215" text-anchor="end">10</text><circle cx="45" cy="190" r="3" fill="black"/><circle cx="55" cy="180" r="3" fill="black"/><circle cx="65" cy="170" r="3" fill="black"/><circle cx="75" cy="160" r="3" fill="black"/><circle cx="85" cy="155" r="3" fill="black"/><circle cx="95" cy="140" r="3" fill="black"/><circle cx="105" cy="130" r="3" fill="black"/><circle cx="115" cy="120" r="3" fill="black"/><circle cx="125" cy="110" r="3" fill="black"/><circle cx="135" cy="100" r="3" fill="black"/><circle cx="145" cy="95" r="3" fill="black"/><circle cx="155" cy="85" r="3" fill="black"/><circle cx="165" cy="75" r="3" fill="black"/><circle cx="175" cy="65" r="3" fill="black"/><circle cx="185" cy="55" r="3" fill="black"/></svg> 
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Based on the scatterplot, identify a question that could be investigated regarding the relationship between study hours and exam scores.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe what a positive slope in the linear regression model for this data would mean in the context of the study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If the student were to collect data from a larger sample of 50 students, how would this change likely affect the width of a confidence interval for the slope, assuming all other factors remain constant?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies a relevant question about the relationship (e.g., Is there a positive association? Does more studying lead to higher scores?) (1 pt)</li>
+          
+          <li>Part b (1pt): Correctly describes the meaning of a positive slope in context (e.g., For each additional hour of studying, the exam score is predicted to increase by the value of the slope) (1 pt)</li>
+          
+          <li>Part c (1pt): Explains that a larger sample size would generally lead to a narrower confidence interval (1 pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S13Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.E,4.C,4.B"
+      data-learning-objectives="VAR-7.J,VAR-7.L"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A marketing analyst is investigating whether there is a linear relationship between a company's monthly advertising expenditure (in thousands of dollars) and its monthly sales revenue (in tens of thousands of dollars). They plan to collect data from a random sample of months and perform a significance test for the slope of the regression line.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference method the analyst should use to test the claim that there is a linear relationship between advertising expenditure and sales revenue.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe one condition necessary for performing this inference procedure and explain how the analyst could check if this condition is met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Explain what the standard error of the slope, $SE_b$, represents in the context of this study.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies the t-test for the slope of a regression line (1 pt)</li>
+          
+          <li>Part b (2pts): Describes one of the four conditions (Linearity, Independence, Normality of Residuals, Equal Variance) and explains a method to check it (2 pts)</li>
+          
+          <li>Part c (1pt): Explains $SE_b$ as the typical variation of sample slopes from the true population slope, in context (1 pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S13Q3"
+      data-difficulty="hard"
+      data-skill-codes="4.B,4.D,4.A"
+      data-learning-objectives="UNC-4.AG,UNC-4.AH,UNC-4.AI"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">Researchers investigated the relationship between the amount of fertilizer applied (in grams per square meter, $x$) and the yield of a certain crop (in kilograms, $y$). A random sample of $n=22$ plots of land was used. The partial computer output from a linear regression analysis is shown below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Predictor</th><th>Coef</th><th>SE Coef</th><th>T</th><th>P</th></tr></thead><tbody><tr><td>Constant</td><td>12.5</td><td>3.1</td><td>4.03</td><td>0.000</td></tr><tr><td>Fertilizer</td><td>0.75</td><td>0.15</td><td>5.00</td><td>0.000</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Using the computer output, construct and interpret a 90% confidence interval for the true slope of the regression line relating fertilizer amount to crop yield.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Based on your confidence interval in part (a), is there convincing evidence that increasing the amount of fertilizer applied leads to an increase in crop yield? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If the sample size were larger, but the slope estimate and standard error remained the same, what effect would this have on the width of the confidence interval? Explain your reasoning.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly calculates the 90% confidence interval using $t$-critical value ($df=20$, $t^*=1.725$) for the slope: $0.75 \pm 1.725(0.15) \approx (0.49125, 1.00875)$. Interprets the interval in context.</li>
+          
+          <li>Part b (1pt): States that since the entire interval $(0.49125, 1.00875)$ is above zero, there is convincing evidence that increasing fertilizer leads to increased yield. Justifies by explaining the range of plausible values for the slope.</li>
+          
+          <li>Part c (1pt): Explains that a larger sample size would lead to a larger degrees of freedom, which would result in a smaller $t$-critical value, thus narrowing the confidence interval (assuming $SE_{\hat{b}}$ remains the same due to other factors).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S13Q4"
+      data-difficulty="medium"
+      data-skill-codes="4.B,4.E"
+      data-learning-objectives="DAT-3.M,DAT-3.N"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A health researcher wanted to investigate if there is a linear relationship between a person's daily screen time (in hours, $x$) and their average daily steps ($y$). A random sample of $n=30$ adults was taken. The partial computer output from a linear regression analysis is shown below. Assume all conditions for inference were met.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Predictor</th><th>Coef</th><th>SE Coef</th><th>T</th><th>P</th></tr></thead><tbody><tr><td>Constant</td><td>10500</td><td>500</td><td>21.00</td><td>0.000</td></tr><tr><td>Screen Time</td><td>-200</td><td>55</td><td>-3.64</td><td>0.001</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the conclusion of the test for a linear relationship between daily screen time and average daily steps, using a significance level of $\alpha = 0.01$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Interpret the p-value from the computer output in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Justify your claim from part (a) based on the results of the significance test.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Concludes that there is convincing evidence of a negative linear relationship between daily screen time and average daily steps.</li>
+          
+          <li>Part b (1pt): Interprets the p-value: If there were no linear relationship (true slope is 0), the probability of observing a sample slope as extreme or more extreme than $\hat{b}=-200$ due to random chance is approximately 0.001.</li>
+          
+          <li>Part c (1pt): Justifies the claim by comparing the p-value ($0.001$) to $\alpha=0.01$. Since $0.001 < 0.01$, we reject $H_0: \beta=0$, providing evidence of a linear relationship.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S13Q5"
+      data-difficulty="easy"
+      data-skill-codes="1.A,4.B,4.A"
+      data-learning-objectives="VAR-1.K,UNC-4.AG,UNC-4.AI"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A researcher is studying the relationship between the number of hours a student spends studying for a statistics exam and the score they receive on the exam. Data was collected from 20 students. A linear regression analysis was performed, yielding a least-squares regression line $\hat{y} = 55.2 + 2.8x$, where $x$ is the study hours and $y$ is the exam score. The standard error of the slope coefficient was $SE_b = 0.55$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify a statistical question that could be answered using these data regarding the relationship between study hours and exam scores.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe the meaning of the slope coefficient, $2.8$, in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Identify what effect, if any, increasing the sample size from 20 to 50 students (while maintaining a similar scatter of data points) would likely have on the width of a confidence interval for the true slope of the regression line.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States a question about the linear relationship between study hours and exam score in the population, such as "Is there a linear relationship between study hours and exam scores?".</li>
+          
+          <li>Part b (1pt): Explains that for each additional hour a student studies, the predicted exam score increases by $2.8$ points.</li>
+          
+          <li>Part c (1pt): States that increasing the sample size would likely decrease the width of a confidence interval for the true slope, because the standard error of the slope would decrease.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

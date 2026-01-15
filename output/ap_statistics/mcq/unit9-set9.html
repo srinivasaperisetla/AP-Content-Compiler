@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AP Statistics — Unit 9: Inference for Quantitative Data: Slopes MCQ Set</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-size: 0.95rem;
+      }
+
+      .data-table th,
+      .data-table td {
+        border: 1px solid #ccc;
+        padding: 0.5rem 0.75rem;
+        text-align: center;
+      }
+
+      .data-table th {
+        background-color: #f2f2f2;
+        font-weight: 600;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+        color: #333;
+      }
+
+      h1 {
+        border-bottom: 2px solid #333;
+        padding-bottom: 0.5rem;
+      }
+
+      .question-card {
+        border: 1px solid #ddd;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        border-radius: 8px;
+        background-color: #fafafa;
+        break-inside: avoid;
+      }
+
+      .question-header {
+        margin-bottom: 0.75rem;
+        font-size: 0.95rem;
+        color: #666;
+      }
+
+      .question-text {
+        font-weight: 600;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+      }
+
+      .diagram {
+        margin: 1rem 0;
+        text-align: center;
+        border: 1px solid #eee;
+        background: white;
+        padding: 10px;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+        max-height: 400px;
+        display: inline-block;
+      }
+
+      .choices {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .choices li {
+        margin-bottom: 0.5rem;
+      }
+
+      .key-section {
+        margin-top: 4rem;
+        border-top: 4px solid #333;
+        padding-top: 2rem;
+      }
+
+      .key-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 1rem;
+      }
+
+      @media print {
+        .question-card {
+          border: none;
+          padding: 0;
+          margin-bottom: 3rem;
+        }
+        .diagram {
+          border: 1px solid #ccc;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics — Unit 9: Inference for Quantitative Data: Slopes</h1>
+
+    <hr />
+
+    <div class="mcq-container">
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S9Q1"
+        data-difficulty="easy"
+        data-skill-codes="1.A"
+        data-learning-objectives="VAR-1.K"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q1.</strong> (ID: ap_statistics_MCQ_U9S9Q1)
+        </div>
+
+        
+
+        <div class="question-text">A scatterplot shows the relationship between the number of hours studied for a test and the score received on the test for a sample of 20 students. There appears to be a general upward trend, but the points are quite spread out around the trend line. Which of the following questions is most directly suggested by this variation?</div>
+
+        <ul class="choices">
+          
+          <li>A. What is the average number of hours studied by students?</li>
+          
+          <li>B. What is the highest score achieved on the test?</li>
+          
+          <li>C. How much does the test score typically vary for a given number of hours studied?</li>
+          
+          <li>D. What is the minimum number of hours a student should study to pass?</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S9Q2"
+        data-difficulty="easy"
+        data-skill-codes="1.A"
+        data-learning-objectives="VAR-1.K"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q2.</strong> (ID: ap_statistics_MCQ_U9S9Q2)
+        </div>
+
+        
+
+        <div class="question-text">A researcher collected data on the age of a car and its selling price. A scatterplot shows a clear downward trend, but for cars of the same age, the selling prices vary considerably. Which of the following is a relevant question suggested by this variation?</div>
+
+        <ul class="choices">
+          
+          <li>A. What is the average selling price of a car?</li>
+          
+          <li>B. Why do cars of the same age have different selling prices?</li>
+          
+          <li>C. What is the intercept of the regression line?</li>
+          
+          <li>D. Is there a linear relationship between age and selling price?</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S9Q3"
+        data-difficulty="easy"
+        data-skill-codes="1.D"
+        data-learning-objectives="UNC-4.AC"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q3.</strong> (ID: ap_statistics_MCQ_U9S9Q3)
+        </div>
+
+        
+
+        <div class="question-text">A statistics student wants to estimate the true slope of the linear relationship between the height of a tree (in meters) and its age (in years). Which of the following inference procedures should the student use?</div>
+
+        <ul class="choices">
+          
+          <li>A. A $t$-interval for the slope of a regression model.</li>
+          
+          <li>B. A $z$-interval for the slope of a regression model.</li>
+          
+          <li>C. A one-sample $t$-interval for a mean.</li>
+          
+          <li>D. A two-sample $t$-interval for the difference in means.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S9Q4"
+        data-difficulty="medium"
+        data-skill-codes="1.D"
+        data-learning-objectives="UNC-4.AC"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q4.</strong> (ID: ap_statistics_MCQ_U9S9Q4)
+        </div>
+
+        
+
+        <div class="question-text">A linear regression analysis was performed to model the relationship between the amount of fertilizer (in kg) applied to a crop and the resulting yield (in bushels). The researcher wants to construct a 95% confidence interval for the population slope. Which of the following is the appropriate inference procedure?</div>
+
+        <ul class="choices">
+          
+          <li>A. A confidence interval for a proportion.</li>
+          
+          <li>B. A $t$-interval for the slope of the least-squares regression line.</li>
+          
+          <li>C. A two-sample $t$-interval for means.</li>
+          
+          <li>D. A chi-square goodness-of-fit test.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S9Q5"
+        data-difficulty="medium"
+        data-skill-codes="4.C"
+        data-learning-objectives="UNC-4.AD"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q5.</strong> (ID: ap_statistics_MCQ_U9S9Q5)
+        </div>
+
+        
+
+        <div class="question-text">A manager collected data on employee experience (in years) and hourly wage (in dollars) for 30 employees. A linear regression was performed. To construct a confidence interval for the slope of the regression line, which of the following conditions is LEAST likely to be directly verified by examining the residual plot?</div>
+
+        <ul class="choices">
+          
+          <li>A. The residuals show no obvious pattern.</li>
+          
+          <li>B. The variability of residuals is constant across all predicted values.</li>
+          
+          <li>C. The sample of employees was randomly selected.</li>
+          
+          <li>D. The residuals are approximately normally distributed.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S9Q6"
+        data-difficulty="medium"
+        data-skill-codes="4.C"
+        data-learning-objectives="UNC-4.AD"
+        data-correct-index="3"
+      >
+        <div class="question-header">
+          <strong>Q6.</strong> (ID: ap_statistics_MCQ_U9S9Q6)
+        </div>
+
+        
+
+        <div class="question-text">A study investigated the relationship between the daily temperature (in degrees Celsius) and the number of ice cream cones sold at a beachside stand. Data was collected for 25 days. The conditions for constructing a confidence interval for the slope were checked. Which of the following conditions would be verified by inspecting a histogram of the residuals?</div>
+
+        <ul class="choices">
+          
+          <li>A. The relationship is linear.</li>
+          
+          <li>B. The standard deviation of the residuals is constant.</li>
+          
+          <li>C. The observations are independent.</li>
+          
+          <li>D. The residuals are approximately normally distributed.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S9Q7"
+        data-difficulty="hard"
+        data-skill-codes="4.C"
+        data-learning-objectives="UNC-4.AD"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q7.</strong> (ID: ap_statistics_MCQ_U9S9Q7)
+        </div>
+
+        
+
+        <div class="question-text">A biologist is studying the relationship between the dosage of a certain chemical (in mg) and the growth rate of a plant (in mm/day). Data were collected from 20 plants. The biologist wants to construct a 90% confidence interval for the true slope of the regression line. Which condition would require verification that the 20 plants were randomly selected and that the growth rates of individual plants are not influenced by each other?</div>
+
+        <ul class="choices">
+          
+          <li>A. Lineariy.</li>
+          
+          <li>B. Constant variability of residuals.</li>
+          
+          <li>C. Independence of observations.</li>
+          
+          <li>D. Normality of residuals.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S9Q8"
+        data-difficulty="medium"
+        data-skill-codes="3.D"
+        data-learning-objectives="UNC-4.AE"
+        data-correct-index="3"
+      >
+        <div class="question-header">
+          <strong>Q8.</strong> (ID: ap_statistics_MCQ_U9S9Q8)
+        </div>
+
+        
+
+        <div class="question-text">A least-squares regression line was calculated for a set of data relating a child's age (in months) to their height (in cm). The regression analysis output shows the estimated slope $\hat{\beta_1} = 0.65$, the standard error of the slope $SE_{\hat{\beta_1}} = 0.08$, and the sample size $n = 25$. For a 95% confidence interval, the critical $t$-value is $t^* = 2.064$ (with $23$ degrees of freedom). What is the margin of error for this confidence interval?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.65 \pm 0.08$</li>
+          
+          <li>B. $0.08$</li>
+          
+          <li>C. $0.65 \times 2.064$</li>
+          
+          <li>D. $0.08 \times 2.064$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S9Q9"
+        data-difficulty="medium"
+        data-skill-codes="3.D"
+        data-learning-objectives="UNC-4.AF"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q9.</strong> (ID: ap_statistics_MCQ_U9S9Q9)
+        </div>
+
+        
+
+        <div class="question-text">A veterinarian recorded the weight (in kg) and the daily food intake (in grams) for 15 puppies of a certain breed. A linear regression analysis produced a slope of $\hat{\beta_1} = 15.2$ grams/kg and a standard error for the slope $SE_{\hat{\beta_1}} = 3.1$. Assuming all conditions are met, calculate a 90% confidence interval for the true slope. (For $13$ degrees of freedom, $t^* = 1.771$)</div>
+
+        <ul class="choices">
+          
+          <li>A. $15.2 \pm 3.1$</li>
+          
+          <li>B. $15.2 \pm (1.771 \times 3.1)$</li>
+          
+          <li>C. $15.2 \pm (1.771 \div 3.1)$</li>
+          
+          <li>D. $3.1 \pm (1.771 \times 15.2)$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S9Q10"
+        data-difficulty="medium"
+        data-skill-codes="3.D"
+        data-learning-objectives="UNC-4.AF"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q10.</strong> (ID: ap_statistics_MCQ_U9S9Q10)
+        </div>
+
+        
+
+        <div class="question-text">A company collects data on the number of sales calls made ($x$) and the number of sales closed ($y$) by its agents. For a random sample of 20 agents, a linear regression analysis results in $\hat{\beta_1} = 0.75$ and $SE_{\hat{\beta_1}} = 0.12$. Using a $t^*$ value of $2.093$ for a 95% confidence interval, which of the following is the correct interval?</div>
+
+        <ul class="choices">
+          
+          <li>A. $(0.75 - 0.12, 0.75 + 0.12)$</li>
+          
+          <li>B. $(0.75 - (2.093 \div 0.12), 0.75 + (2.093 \div 0.12))$</li>
+          
+          <li>C. $(0.75 - (2.093 \times 0.12), 0.75 + (2.093 \times 0.12))$</li>
+          
+          <li>D. $(0.12 - (2.093 \times 0.75), 0.12 + (2.093 \times 0.75))$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S9Q11"
+        data-difficulty="medium"
+        data-skill-codes="4.B"
+        data-learning-objectives="UNC-4.AG"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q11.</strong> (ID: ap_statistics_MCQ_U9S9Q11)
+        </div>
+
+        
+
+        <div class="question-text">A 95% confidence interval for the slope of the regression line relating years of experience ($x$) to annual salary (in thousands of dollars, $y$) is $(1.25, 2.85)$. Which of the following is a correct interpretation of this interval?</div>
+
+        <ul class="choices">
+          
+          <li>A. We are 95% confident that for every one-year increase in experience, the predicted annual salary increases by an average of $1.25$ to $2.85$ thousand dollars.</li>
+          
+          <li>B. We are 95% confident that for every additional year of experience, the true mean annual salary increases by between $1.25$ and $2.85$ thousand dollars.</li>
+          
+          <li>C. 95% of employees in this sample earn between $1.25$ and $2.85$ thousand dollars more for each additional year of experience.</li>
+          
+          <li>D. There is a 95% probability that the true slope is between $1.25$ and $2.85$.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S9Q12"
+        data-difficulty="medium"
+        data-skill-codes="4.B"
+        data-learning-objectives="UNC-4.AG"
+        data-correct-index="3"
+      >
+        <div class="question-header">
+          <strong>Q12.</strong> (ID: ap_statistics_MCQ_U9S9Q12)
+        </div>
+
+        
+
+        <div class="question-text">A study calculated a 90% confidence interval for the slope of the relationship between the amount of a specific nutrient in soil (in ppm) and plant growth (in cm/week) to be $(0.80, 1.20)$. Which of the following statements is a correct interpretation of this interval?</div>
+
+        <ul class="choices">
+          
+          <li>A. There is a 90% chance that any randomly selected plant will grow between $0.80$ and $1.20$ cm/week for each additional ppm of nutrient.</li>
+          
+          <li>B. We are 90% confident that the mean plant growth is between $0.80$ and $1.20$ cm/week.</li>
+          
+          <li>C. If we collected many samples, 90% of the sample slopes would be between $0.80$ and $1.20$.</li>
+          
+          <li>D. We are 90% confident that for each additional ppm of nutrient in the soil, the true mean plant growth increases by between $0.80$ and $1.20$ cm/week.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S9Q13"
+        data-difficulty="medium"
+        data-skill-codes="4.B"
+        data-learning-objectives="UNC-4.AG"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q13.</strong> (ID: ap_statistics_MCQ_U9S9Q13)
+        </div>
+
+        
+
+        <div class="question-text">A researcher constructed a 95% confidence interval for the slope of the regression line modeling the relationship between the number of hours spent exercising per week ($x$) and body fat percentage ($y$) as $(-0.85, -0.35)$. Which of the following is the best interpretation of this interval?</div>
+
+        <ul class="choices">
+          
+          <li>A. We are 95% confident that for each additional hour of exercise per week, the true mean body fat percentage decreases by between $0.35$ and $0.85$ percent.</li>
+          
+          <li>B. We are 95% confident that the estimated body fat percentage for someone who exercises one more hour per week is between $0.35$ and $0.85$ percent lower.</li>
+          
+          <li>C. 95% of people who exercise one more hour per week will have a body fat percentage between $0.35$ and $0.85$ percent lower.</li>
+          
+          <li>D. There is a 95% probability that the body fat percentage decreases by between $0.35$ and $0.85$ percent for each additional hour of exercise.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S9Q14"
+        data-difficulty="medium"
+        data-skill-codes="4.D"
+        data-learning-objectives="UNC-4.AH"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q14.</strong> (ID: ap_statistics_MCQ_U9S9Q14)
+        </div>
+
+        
+
+        <div class="question-text">A 95% confidence interval for the slope of a regression line relating advertising spending (in thousands of dollars) to sales (in millions of dollars) is $(0.4, 0.9)$. A marketing executive claims that increasing advertising spending has a positive impact on sales. Is this claim supported by the confidence interval?</div>
+
+        <ul class="choices">
+          
+          <li>A. Yes, because the entire interval is above zero, indicating a significant positive linear association.</li>
+          
+          <li>B. Yes, because the interval contains positive values, suggesting a possible positive impact.</li>
+          
+          <li>C. No, because the interval does not include 1, so the impact is not one-to-one.</li>
+          
+          <li>D. No, because it is only a 95% confidence level, which is not strong enough to make a claim.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S9Q15"
+        data-difficulty="hard"
+        data-skill-codes="4.D"
+        data-learning-objectives="UNC-4.AH"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q15.</strong> (ID: ap_statistics_MCQ_U9S9Q15)
+        </div>
+
+        
+
+        <div class="question-text">A 99% confidence interval for the slope relating the number of hours a student sleeps ($x$) and their score on a memory test ($y$) is $(-0.5, 2.1)$. A psychologist claims that there is a significant linear relationship between sleep hours and memory test scores. Does this confidence interval support the psychologist's claim?</div>
+
+        <ul class="choices">
+          
+          <li>A. Yes, because the interval is wide, indicating a strong relationship.</li>
+          
+          <li>B. No, because the interval contains $0$, indicating that there is no statistically significant linear relationship.</li>
+          
+          <li>C. Yes, because the interval contains both negative and positive values, showing a varying but real effect.</li>
+          
+          <li>D. Not enough information to determine.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S9Q16"
+        data-difficulty="hard"
+        data-skill-codes="4.D"
+        data-learning-objectives="UNC-4.AH"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q16.</strong> (ID: ap_statistics_MCQ_U9S9Q16)
+        </div>
+
+        
+
+        <div class="question-text">A 90% confidence interval for the slope relating the number of pages in a book ($x$) to its selling price ($y$) is $(0.02, 0.08)$. A book publisher believes that for every 100 additional pages, the price increases by at least $5.00. Does the confidence interval support this belief?</div>
+
+        <ul class="choices">
+          
+          <li>A. Yes, because the interval suggests that for 100 additional pages, the price increase is between $2.00 and $8.00, which includes $5.00.</li>
+          
+          <li>B. Yes, because the entire interval is positive, indicating an increase.</li>
+          
+          <li>C. No, because the interval values are too small; the increase is only 2 to 8 cents per page, not dollars.</li>
+          
+          <li>D. No, because the interval does not contain $0.05$ precisely.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S9Q17"
+        data-difficulty="easy"
+        data-skill-codes="4.A"
+        data-learning-objectives="UNC-4.AI"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q17.</strong> (ID: ap_statistics_MCQ_U9S9Q17)
+        </div>
+
+        
+
+        <div class="question-text">How would increasing the sample size, while keeping the confidence level and other statistics constant, affect the width of a confidence interval for the slope of a regression model?</div>
+
+        <ul class="choices">
+          
+          <li>A. The width would increase.</li>
+          
+          <li>B. The width would decrease.</li>
+          
+          <li>C. The width would remain the same.</li>
+          
+          <li>D. The width would change unpredictably.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S9Q18"
+        data-difficulty="medium"
+        data-skill-codes="4.A"
+        data-learning-objectives="UNC-4.AI"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q18.</strong> (ID: ap_statistics_MCQ_U9S9Q18)
+        </div>
+
+        
+
+        <div class="question-text">A researcher calculated a 95% confidence interval for the slope of a regression line using a sample of $n=20$ data points. If the researcher were to increase the sample size to $n=100$ while everything else remained the same (including the estimated slope and standard deviation of residuals), what would be the expected effect on the confidence interval width?</div>
+
+        <ul class="choices">
+          
+          <li>A. The width would decrease due to a smaller standard error and a smaller critical $t$-value.</li>
+          
+          <li>B. The width would increase due to a larger number of degrees of freedom.</li>
+          
+          <li>C. The width would remain the same as the confidence level is unchanged.</li>
+          
+          <li>D. The width would decrease only if the estimated slope changes.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S9Q19"
+        data-difficulty="easy"
+        data-skill-codes="1.E"
+        data-learning-objectives="VAR-7.J"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q19.</strong> (ID: ap_statistics_MCQ_U9S9Q19)
+        </div>
+
+        
+
+        <div class="question-text">A scientist wants to determine if there is a statistically significant linear relationship between the concentration of a pollutant in a river and the health index of fish in that river. Which inference method is appropriate?</div>
+
+        <ul class="choices">
+          
+          <li>A. A $t$-test for the slope of a regression line.</li>
+          
+          <li>B. A $z$-test for a population proportion.</li>
+          
+          <li>C. A chi-square test for independence.</li>
+          
+          <li>D. A two-sample $t$-test for means.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S9Q20"
+        data-difficulty="medium"
+        data-skill-codes="1.E"
+        data-learning-objectives="VAR-7.J"
+        data-correct-index="3"
+      >
+        <div class="question-header">
+          <strong>Q20.</strong> (ID: ap_statistics_MCQ_U9S9Q20)
+        </div>
+
+        
+
+        <div class="question-text">A consumer watchdog group wants to test if the number of hours a washing machine is used per week has a linear effect on its average monthly electricity consumption. They collected data from 40 households. Which of the following is the most appropriate inference procedure to answer their question?</div>
+
+        <ul class="choices">
+          
+          <li>A. A confidence interval for the slope of a regression model.</li>
+          
+          <li>B. A one-sample $t$-test for a mean.</li>
+          
+          <li>C. A chi-square test for homogeneity.</li>
+          
+          <li>D. A significance test for the slope of a regression model.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S9Q21"
+        data-difficulty="medium"
+        data-skill-codes="1.E"
+        data-learning-objectives="VAR-7.J"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q21.</strong> (ID: ap_statistics_MCQ_U9S9Q21)
+        </div>
+
+        
+
+        <div class="question-text">A marketing analyst is investigating whether the number of times an advertisement is shown ($x$) influences the number of clicks it receives ($y$). The analyst has data for 50 ads. They want to check if there is a positive linear association. Which test should be performed?</div>
+
+        <ul class="choices">
+          
+          <li>A. A one-sided $t$-test for the slope of a regression model.</li>
+          
+          <li>B. A two-sided $t$-test for the slope of a regression model.</li>
+          
+          <li>C. A $z$-test for the correlation coefficient.</li>
+          
+          <li>D. A confidence interval for the slope of a regression model.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S9Q22"
+        data-difficulty="easy"
+        data-skill-codes="1.F"
+        data-learning-objectives="VAR-7.K"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q22.</strong> (ID: ap_statistics_MCQ_U9S9Q22)
+        </div>
+
+        
+
+        <div class="question-text">A researcher wants to test if there is a significant linear relationship between the number of hours spent exercising per week and resting heart rate. Let $\beta_1$ be the true slope of the regression line. What are the appropriate null and alternative hypotheses?</div>
+
+        <ul class="choices">
+          
+          <li>A. $H_0: \beta_1 = 0$ versus $H_a: \beta_1 > 0$</li>
+          
+          <li>B. $H_0: \beta_1 = 0$ versus $H_a: \beta_1 < 0$</li>
+          
+          <li>C. $H_0: \beta_1 = 0$ versus $H_a: \beta_1 \ne 0$</li>
+          
+          <li>D. $H_0: \beta_1 \ne 0$ versus $H_a: \beta_1 = 0$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S9Q23"
+        data-difficulty="easy"
+        data-skill-codes="1.F"
+        data-learning-objectives="VAR-7.K"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q23.</strong> (ID: ap_statistics_MCQ_U9S9Q23)
+        </div>
+
+        
+
+        <div class="question-text">A study aims to determine if an increase in fertilizer amount leads to an increase in crop yield. Let $\beta_1$ be the true slope of the regression line relating fertilizer amount to crop yield. What are the appropriate null and alternative hypotheses?</div>
+
+        <ul class="choices">
+          
+          <li>A. $H_0: \beta_1 = 0$ versus $H_a: \beta_1 > 0$</li>
+          
+          <li>B. $H_0: \beta_1 = 0$ versus $H_a: \beta_1 < 0$</li>
+          
+          <li>C. $H_0: \beta_1 = 0$ versus $H_a: \beta_1 \ne 0$</li>
+          
+          <li>D. $H_0: \beta_1 > 0$ versus $H_a: \beta_1 = 0$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S9Q24"
+        data-difficulty="medium"
+        data-skill-codes="1.F"
+        data-learning-objectives="VAR-7.K"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q24.</strong> (ID: ap_statistics_MCQ_U9S9Q24)
+        </div>
+
+        
+
+        <div class="question-text">A school counselor is investigating whether the number of hours a high school student spends on social media each day is negatively associated with their GPA. Let $\beta_1$ represent the true slope of the linear relationship. Which are the correct hypotheses for this test?</div>
+
+        <ul class="choices">
+          
+          <li>A. $H_0: \beta_1 = 0$ versus $H_a: \beta_1 \ne 0$</li>
+          
+          <li>B. $H_0: \beta_1 = 0$ versus $H_a: \beta_1 < 0$</li>
+          
+          <li>C. $H_0: \beta_1 < 0$ versus $H_a: \beta_1 = 0$</li>
+          
+          <li>D. $H_0: \beta_1 = 1$ versus $H_a: \beta_1 < 1$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S9Q25"
+        data-difficulty="medium"
+        data-skill-codes="4.C"
+        data-learning-objectives="VAR-7.L"
+        data-correct-index="3"
+      >
+        <div class="question-header">
+          <strong>Q25.</strong> (ID: ap_statistics_MCQ_U9S9Q25)
+        </div>
+
+        
+
+        <div class="question-text">A manager wants to test if there is a linear relationship between an employee's daily sales calls and their weekly sales figures. Data from 25 employees were collected. To verify the conditions for a significance test for the slope, which condition must be met by examining a plot of the residuals against the explanatory variable?</div>
+
+        <ul class="choices">
+          
+          <li>A. The residuals are approximately normally distributed.</li>
+          
+          <li>B. The observations are independent.</li>
+          
+          <li>C. The relationship between sales calls and sales is linear.</li>
+          
+          <li>D. The variability of the residuals is constant across all values of the explanatory variable.</li>
+          
+        </ul>
+      </div>
+      
+    </div>
+
+    <div class="key-section">
+      <h2>Answer Key</h2>
+
+      <div class="key-grid">
+        
+        <div>
+          <strong>1.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>2.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>3.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>4.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>5.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>6.</strong>
+          D
+        </div>
+        
+        <div>
+          <strong>7.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>8.</strong>
+          D
+        </div>
+        
+        <div>
+          <strong>9.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>10.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>11.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>12.</strong>
+          D
+        </div>
+        
+        <div>
+          <strong>13.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>14.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>15.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>16.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>17.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>18.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>19.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>20.</strong>
+          D
+        </div>
+        
+        <div>
+          <strong>21.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>22.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>23.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>24.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>25.</strong>
+          D
+        </div>
+        
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

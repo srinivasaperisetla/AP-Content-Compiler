@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 1: Exploring One-Variable Data (Set 4)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 1: Exploring One-Variable Data (Set 4)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U1S4Q1"
+      data-difficulty="easy"
+      data-skill-codes="2.A,2.B,2.D"
+      data-learning-objectives="UNC-1.A,UNC-1.C,UNC-1.D,UNC-1.E"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A local school surveyed 200 students about their favorite type of pet among cats, dogs, fish, and birds. The results are summarized in the incomplete table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Pet Type</th><th>Frequency</th><th>Relative Frequency</th></tr></thead><tbody><tr><td>Cat</td><td>70</td><td></td></tr><tr><td>Dog</td><td>90</td><td></td></tr><tr><td>Fish</td><td>25</td><td></td></tr><tr><td>Bird</td><td>15</td><td></td></tr><tr><td>Total</td><td>200</td><td>1.00</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Complete the "Relative Frequency" column in the table provided. Express your answers as decimals rounded to two decimal places.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Construct a bar chart to display the distribution of favorite pet types for these 200 students.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on your bar chart, describe what the data suggest about the students' preferences for these pet types.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly completes the relative frequency column with decimals rounded to two places (Cat: 0.35, Dog: 0.45, Fish: 0.125 or 0.13, Bird: 0.075 or 0.08).</li>
+          
+          <li>Part b (2pts): Correctly labels axes (Pet Type, Relative Frequency), scales axes appropriately, and draws bars of appropriate height with gaps between bars.</li>
+          
+          <li>Part c (1pt): Describes the distribution, noting the most and least popular pet types from the bar chart in context (e.g., dogs are most popular, birds are least popular).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U1S4Q2"
+      data-difficulty="medium"
+      data-skill-codes="2.A,2.B,2.D"
+      data-learning-objectives="UNC-1.G,UNC-1.H,UNC-1.N"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A botanist is studying the growth of a particular plant species under two different light conditions: full sun and partial shade. She measures the heights (in cm) of 15 plants from each condition after 4 weeks.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Condition</th><th>Heights (cm)</th></tr></thead><tbody><tr><td>Full Sun</td><td>18, 22, 25, 26, 28, 29, 30, 31, 32, 33, 34, 35, 36, 38, 40</td></tr><tr><td>Partial Shade</td><td>15, 17, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 30, 31, 32</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Construct a back-to-back stemplot to compare the distribution of plant heights for plants grown in full sun and partial shade. Ensure your stemplot includes a key.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe the shape, center, and spread of the distribution of plant heights for plants grown in full sun, based on your stemplot.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Compare the distributions of plant heights for plants grown in full sun and partial shade, addressing shape, center, and spread.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly constructs a back-to-back stemplot with a clear key (e.g., $2</li>
+          
+          <li>5$ means 25 cm) for stems and leaves, including units. Shows both distributions.</li>
+          
+          <li>Part b (1pt): Describes the shape (e.g., roughly symmetric, skewed), an estimate for the center (e.g., median), and an estimate for the spread (e.g., range, IQR) of the full sun distribution in context.</li>
+          
+          <li>Part c (2pts): Compares the shapes, centers, and spreads of the two distributions in context, noting similarities and differences for all three characteristics.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U1S4Q3"
+      data-difficulty="medium"
+      data-skill-codes="2.C,4.B"
+      data-learning-objectives="UNC-1.I,UNC-1.J,UNC-1.K,UNC-1.M"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A company records the commute times (in minutes) for a random sample of 20 employees. The data are as follows: 15, 20, 25, 25, 30, 30, 30, 35, 40, 40, 45, 50, 50, 55, 60, 60, 65, 70, 75, 120.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the mean and median commute times for these employees. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify any outliers in the data using the $1.5 \times IQR$ rule. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Explain which measure of center (mean or median) would be more appropriate to describe the typical commute time for these employees and justify your choice.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly calculates the mean ($\bar{x} = 47.75$ minutes) and median (47.5 minutes), showing formulas or sufficient work.</li>
+          
+          <li>Part b (2pts): Correctly calculates $Q_1$, $Q_3$, and $IQR$. Determines lower and upper fences. Correctly identifies any outliers. ($Q_1 = 30$, $Q_3 = 60$, $IQR = 30$. Lower fence: $30 - 1.5(30) = -15$. Upper fence: $60 + 1.5(30) = 105$. Outlier: 120 minutes).</li>
+          
+          <li>Part c (2pts): Identifies the median as more appropriate. Justifies based on the presence of an outlier (120 minutes) affecting the mean, making the median more resistant to extreme values.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U1S4Q4"
+      data-difficulty="hard"
+      data-skill-codes="3.A,2.D"
+      data-learning-objectives="VAR-2.B,VAR-2.C"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">The lifespan of a certain brand of light bulb is approximately normally distributed with a mean of 1500 hours and a standard deviation of 150 hours.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What proportion of light bulbs from this brand are expected to last between 1400 hours and 1650 hours? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        A consumer organization wants to guarantee that at least 95% of their light bulbs will last longer than a specified number of hours. Determine the minimum lifespan (in hours) they should guarantee. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Suppose another brand of light bulb has a mean lifespan of 1600 hours and a standard deviation of 100 hours. If a light bulb from the first brand lasts 1700 hours and a light bulb from the second brand lasts 1750 hours, which light bulb has a relatively longer lifespan compared to its own brand? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates the $z$-scores for 1400 and 1650 hours. Uses the Normal distribution to find the correct proportion, showing calculation ($P(1400 < X < 1650) \approx 0.588$). ($z_{1400} = \frac{1400-1500}{150} \approx -0.67$. $z_{1650} = \frac{1650-1500}{150} = 1.00$. $P(-0.67 < Z < 1.00) \approx 0.588$).</li>
+          
+          <li>Part b (2pts): Finds the $z$-score corresponding to the 5th percentile (or 95th percentile from the left). Uses the $z$-score to calculate the minimum lifespan, showing calculation. ($z \approx -1.645$. Minimum lifespan $\approx 1500 + (-1.645)(150) \approx 1253.25$ hours).</li>
+          
+          <li>Part c (2pts): Calculates the $z$-score for each light bulb. Compares the $z$-scores and states which light bulb has a relatively longer lifespan. ($z_{\text{Brand 1}} = \frac{1700-1500}{150} \approx 1.33$. $z_{\text{Brand 2}} = \frac{1750-1600}{100} = 1.50$. Brand 2 light bulb has a relatively longer lifespan because its $z$-score (1.50) is higher than Brand 1's $z$-score (1.33)).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U1S4Q5"
+      data-difficulty="easy"
+      data-skill-codes="2.B,2.A,2.D"
+      data-learning-objectives="UNC-1.C,UNC-1.D,UNC-1.E"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A survey asked 50 students about their favorite color among blue, green, red, and yellow. The results were: Blue (18 students), Green (12 students), Red (10 students), Yellow (10 students).</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Construct a relative frequency bar chart for the favorite colors.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe one characteristic of the distribution of favorite colors.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Another school surveyed 50 students and found 25 preferred blue, 15 preferred green, 5 preferred red, and 5 preferred yellow. Compare the distribution of favorite colors between the two schools.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly labeled axes (colors, relative frequency) and correctly scaled bars for each color, showing relative frequencies (e.g., Blue: 0.36, Green: 0.24, Red: 0.20, Yellow: 0.20).</li>
+          
+          <li>Part b (1pt): Describes mode (blue is most popular) or notes that red and yellow are equally preferred.</li>
+          
+          <li>Part c (2pts): Compares center (e.g., blue is the most popular in both schools, but more strongly in the second school) and spread/shape (e.g., the second school's distribution is more skewed towards blue, while the first school has a more even distribution among the other colors).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

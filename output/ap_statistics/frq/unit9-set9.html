@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 9)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 9)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S9Q1"
+      data-difficulty="easy"
+      data-skill-codes="1.A,1.E"
+      data-learning-objectives="VAR-1.K,VAR-7.J"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A teacher wants to investigate the relationship between the number of hours a student spends studying for a statistics exam and the score they receive on the exam. The teacher collects data from a random sample of students and creates the scatterplot below.</div>
+
+      
+      <div class="diagram">
+         <svg width="400" height="300" viewBox="0 0 400 300" style="background-color:white;"><rect x="50" y="50" width="300" height="200" fill="none" stroke="black"/><line x1="50" y1="250" x2="350" y2="250" stroke="black"/><line x1="50" y1="50" x2="50" y2="250" stroke="black"/><text x="40" y="260" font-size="12" text-anchor="end">0</text><text x="350" y="260" font-size="12" text-anchor="middle">10</text><text x="200" y="275" font-size="14" text-anchor="middle">Study Hours</text><text x="35" y="250" font-size="12" text-anchor="end">0</text><text x="35" y="50" font-size="12" text-anchor="end">100</text><text x="20" y="150" font-size="14" text-anchor="middle" transform="rotate(-90 20 150)">Exam Score</text><circle cx="60" cy="240" r="3" fill="black"/><circle cx="80" cy="220" r="3" fill="black"/><circle cx="100" cy="230" r="3" fill="black"/><circle cx="120" cy="200" r="3" fill="black"/><circle cx="140" cy="210" r="3" fill="black"/><circle cx="160" cy="180" r="3" fill="black"/><circle cx="180" cy="190" r="3" fill="black"/><circle cx="200" cy="170" r="3" fill="black"/><circle cx="220" cy="180" r="3" fill="black"/><circle cx="240" cy="160" r="3" fill="black"/><circle cx="260" cy="170" r="3" fill="black"/><circle cx="280" cy="140" r="3" fill="black"/><circle cx="300" cy="150" r="3" fill="black"/><circle cx="320" cy="130" r="3" fill="black"/><circle cx="340" cy="120" r="3" fill="black"/><circle cx="350" cy="110" r="3" fill="black"/></svg> 
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Based on the scatterplot, identify one question that could be investigated about the relationship between study hours and exam scores.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Suppose the teacher wants to determine if there is a statistically significant positive linear relationship between study hours and exam scores. Identify the appropriate inference method to address this question.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies a question related to variation in the scatterplot, such as "Is there a positive association between study hours and exam scores?" or "How much does the exam score increase for each additional hour of study?"</li>
+          
+          <li>Part b (1pt): Identifies the appropriate method as a t-test for the slope of the population regression line.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S9Q2"
+      data-difficulty="easy"
+      data-skill-codes="4.B,4.D,4.A"
+      data-learning-objectives="UNC-4.AG,UNC-4.AH,UNC-4.AI"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A study investigated the relationship between the number of hours a student studies per week ($x$) and their GPA ($y$). A least-squares regression line was calculated, and a 95% confidence interval for the true slope $\beta$ was found to be $(0.15, 0.28)$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Interpret the 95% confidence interval for the slope in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Based on this confidence interval, is there convincing statistical evidence of a positive linear relationship between hours studied and GPA? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If the sample size was significantly larger, but the sample slope and standard error remained roughly the same, how would the width of the confidence interval change?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correct interpretation of the interval for the slope in context (e.g., "We are 95% confident that for each additional hour studied per week, the mean GPA increases by between 0.15 and 0.28 points").</li>
+          
+          <li>Part b (1pt): Yes, because 0 is not included in the interval and all values are positive, indicating a positive relationship.</li>
+          
+          <li>Part c (1pt): The interval would become narrower because a larger sample size generally leads to a smaller margin of error.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S9Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C"
+      data-learning-objectives="VAR-7.J,VAR-7.K,VAR-7.L"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A researcher is investigating whether there is a linear relationship between the amount of fertilizer applied to a plant (in grams, $x$) and the plant's height after one month (in cm, $y$). They collected data from 30 plants.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate null and alternative hypotheses for a significance test to determine if there is a linear relationship between fertilizer amount and plant height. Define any parameters used.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the name of the appropriate inference method for this situation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Before conducting the test, the researcher needs to verify conditions. Describe two conditions for inference for the slope of a regression model and how you would check them.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): $H_0: \beta = 0$ and $H_a: \beta \ne 0$, where $\beta$ is the true slope of the regression line relating fertilizer amount to plant height.</li>
+          
+          <li>Part b (1pt): Linear regression $t$-test (or $t$-test for the slope of a regression line).</li>
+          
+          <li>Part c (2pts): For each of two conditions (e.g., Linearity: check residual plot for random scatter; Independence: check if observations are independent, $10\%$ condition if sampling without replacement; Normal residuals: check histogram/Normal probability plot of residuals for normality; Equal variance: check residual plot for constant variability), correctly describe the condition and how to check it.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S9Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.AC,UNC-4.AD,UNC-4.AF,UNC-4.AG"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A study investigated the relationship between the age of a car (in years, $x$) and its selling price (in thousands of dollars, $y$). Data from a random sample of 25 cars were collected. A computer output for the least-squares regression analysis is provided below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Predictor</th><th>Coef</th><th>SE Coef</th><th>T</th><th>P</th></tr></thead><tbody><tr><td>Constant</td><td>35.2</td><td>1.5</td><td>23.47</td><td>0.000</td></tr><tr><td>Age (years)</td><td>-1.35</td><td>0.18</td><td>-7.50</td><td>0.000</td></tr><tr><td>$S = 2.15$</td><td>$R-Sq = 71.1\%$</td><td>$R-Sq(adj) = 69.9\%$</td><td></td><td></td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure for the slope of the regression model.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for constructing a confidence interval for the slope in this situation, assuming residual plots showed no obvious patterns and a histogram of residuals was approximately normal.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate a 95% confidence interval for the slope of the regression line. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the calculated confidence interval in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): $t$-interval for the slope (or linear regression $t$-interval).</li>
+          
+          <li>Part b (2pts): Linearity: Assumed met as residual plots showed no obvious patterns. Independence: Random sample of 25 cars, $25 \le 10\%$ of all cars. Normal residuals: Assumed met as histogram of residuals was approximately normal. Equal variance: Assumed met as residual plots showed no obvious patterns.</li>
+          
+          <li>Part c (2pts): Correct calculation using $\hat{\beta} \pm t^*SE_{\hat{\beta}}$. Degrees of freedom $df = n-2 = 25-2=23$. For 95% confidence, $t^* = 2.069$. Calculation: $-1.35 \pm 2.069(0.18) = -1.35 \pm 0.37242$. Interval: $(-1.722, -0.978)$.</li>
+          
+          <li>Part d (1pt): We are 95% confident that for each additional year in age, the mean selling price of a car decreases by between \$978 and \$1722.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S9Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.K,VAR-7.L,VAR-7.M,DAT-3.M,DAT-3.N"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A coffee shop owner wants to determine if there is a linear relationship between the daily outdoor temperature (in degrees Celsius, $x$) and the number of hot coffees sold ($y$). Data for 20 randomly selected days yielded the following regression output.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Predictor</th><th>Coef</th><th>SE Coef</th><th>T</th><th>P</th></tr></thead><tbody><tr><td>Constant</td><td>120.5</td><td>15.3</td><td>7.88</td><td>0.000</td></tr><tr><td>Temperature</td><td>-2.5</td><td>0.82</td><td>-3.05</td><td>0.007</td></tr><tr><td>$S = 8.1$</td><td>$R-Sq = 34.0\%$</td><td>$R-Sq(adj) = 30.5\%$</td><td></td><td></td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for a test to determine if there is a negative linear relationship between temperature and hot coffee sales. Define any parameters used.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for conducting a significance test for the slope of the regression line, given that residual plots showed random scatter and constant variance, and a normal probability plot of residuals was approximately linear.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for the test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your results and using a significance level of $\alpha = 0.05$, what conclusion can be drawn? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): $H_0: \beta = 0$ and $H_a: \beta < 0$, where $\beta$ is the true slope of the regression line relating daily outdoor temperature to the number of hot coffees sold.</li>
+          
+          <li>Part b (2pts): Linearity: Assumed met as residual plots showed random scatter. Independence: Randomly selected days, and 20 days is less than 10% of all possible days. Normal residuals: Assumed met as normal probability plot of residuals was approximately linear. Equal variance: Assumed met as residual plots showed constant variance.</li>
+          
+          <li>Part c (2pts): Test statistic $t = \frac{\hat{\beta} - \beta_0}{SE_{\hat{\beta}}} = \frac{-2.5 - 0}{0.82} \approx -3.049$. Degrees of freedom $df = n-2 = 20-2 = 18$. P-value for $t = -3.049$ with $df = 18$ (one-sided for $H_a: \beta < 0$) is approximately $0.003$.</li>
+          
+          <li>Part d (1pt): Since p-value ($0.003$) $< \alpha (0.05)$, we reject $H_0$. There is convincing evidence of a negative linear relationship between daily outdoor temperature and the number of hot coffees sold.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

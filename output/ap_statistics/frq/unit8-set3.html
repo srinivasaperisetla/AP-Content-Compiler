@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 3)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 3)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S3Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.A,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.B,VAR-8.C,VAR-8.E,VAR-8.D,VAR-8.F,VAR-8.G,DAT-3.I,DAT-3.J"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A company claims the distribution of colors in their large bags of candies is 30% red, 20% green, 20% yellow, 15% blue, and 15% orange. A statistics student wants to test this claim. They open a random bag containing 500 candies. The observed counts are provided in the table.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Color</th><th>Observed Count</th></tr></thead><tbody><tr><td>Red</td><td>135</td></tr><tr><td>Green</td><td>90</td></tr><tr><td>Yellow</td><td>80</td></tr><tr><td>Blue</td><td>95</td></tr><tr><td>Orange</td><td>100</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected number of yellow candies and the chi-square test statistic for this sample. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The $p$-value for the test is 0.038. Using a significance level of $\alpha = 0.05$, what conclusion should the student make about the company's claim? Justify your answer in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states $H_0$ and $H_a$ for goodness of fit test.</li>
+          
+          <li>Part b (1pt): Checks random sample and expected counts condition ($n p_i \ge 5$ for all categories).</li>
+          
+          <li>Part c (2pts): Correctly calculates expected yellow candies ($500 \times 0.20 = 100$). Calculates the chi-square test statistic using $\sum \frac{(\text{Observed} - \text{Expected})^2}{\text{Expected}}$.</li>
+          
+          <li>Part d (2pts): Compares $p$-value to $\alpha$, states correct conclusion (reject $H_0$), and justifies in context.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S3Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.A,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.H,VAR-8.L,VAR-8.M,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A social scientist wants to investigate if there is a difference in preferred news sources (online, TV, print) among adults in three different age groups: 18-34, 35-54, and 55+. Independent random samples of 150 adults were selected from each age group. The observed counts are shown in the table.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>News Source</th><th>18-34</th><th>35-54</th><th>55+</th><th>Total</th></tr></thead><tbody><tr><td>Online</td><td>80</td><td>60</td><td>30</td><td>170</td></tr><tr><td>TV</td><td>40</td><td>50</td><td>70</td><td>160</td></tr><tr><td>Print</td><td>30</td><td>40</td><td>50</td><td>120</td></tr><tr><td>Total</td><td>150</td><td>150</td><td>150</td><td>450</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the appropriate inference procedure for this situation and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected count of adults aged 35-54 who prefer online news. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The chi-square test statistic is $\chi^2 = 12.87$ with a $p$-value of 0.024. Using a significance level of $\alpha = 0.05$, what conclusion should the social scientist make? Justify your answer in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states $H_0$ and $H_a$ for a test of homogeneity.</li>
+          
+          <li>Part b (2pts): Identifies Chi-square test for homogeneity and verifies conditions (independent random samples, expected counts $\ge 5$).</li>
+          
+          <li>Part c (1pt): Correctly calculates expected count for the specified cell using the formula $\frac{\text{row total} \times \text{column total}}{\text{grand total}}$.</li>
+          
+          <li>Part d (2pts): Compares $p$-value to $\alpha$, states correct conclusion (reject $H_0$), and justifies in context.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S3Q3"
+      data-difficulty="hard"
+      data-skill-codes="1.F,1.E,4.C,3.A,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.H,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A survey was conducted to investigate whether there is an association between a student's grade level (Freshman, Sophomore, Junior, Senior) and their primary mode of transportation to school (Car, Bus, Walk/Bike). A random sample of 300 students from a large high school provided the data shown in the table.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Transportation</th><th>Freshman</th><th>Sophomore</th><th>Junior</th><th>Senior</th><th>Total</th></tr></thead><tbody><tr><td>Car</td><td>25</td><td>35</td><td>50</td><td>60</td><td>170</td></tr><tr><td>Bus</td><td>40</td><td>30</td><td>20</td><td>10</td><td>100</td></tr><tr><td>Walk/Bike</td><td>15</td><td>15</td><td>5</td><td>0</td><td>35</td></tr><tr><td>Total</td><td>80</td><td>80</td><td>75</td><td>65</td><td>300</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for the appropriate statistical test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the name of the appropriate inference procedure for this situation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Are the conditions for inference met? Justify your answer by calculating at least one expected count.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Suppose the $p$-value for this test is 0.008. Using a significance level of $\alpha = 0.01$, what conclusion can be drawn from these results? Justify your answer in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states $H_0$ and $H_a$ for a test of independence.</li>
+          
+          <li>Part b (1pt): Correctly identifies Chi-square test for independence.</li>
+          
+          <li>Part c (1pt): Verifies conditions (random sample, expected counts $\ge 5$), providing calculation for at least one expected count (e.g., $(35 \times 65)/300 = 7.58$ for Senior/Walk-Bike).</li>
+          
+          <li>Part d (2pts): Compares $p$-value to $\alpha$, states correct conclusion (reject $H_0$), and justifies in context, linking to association.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S3Q4"
+      data-difficulty="easy"
+      data-skill-codes="3.C,4.B,1.A"
+      data-learning-objectives="VAR-8.A,DAT-3.I,VAR-1.J"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A medical researcher is investigating whether a new drug treatment causes a different distribution of side effects compared to a placebo. They collected data from a randomized experiment. After conducting a chi-square test, they obtained a chi-square test statistic of $\chi^2 = 1.25$ with 3 degrees of freedom and a $p$-value of 0.74.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the general shape of a chi-square distribution with 3 degrees of freedom. Is it symmetric or skewed?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Interpret the $p$-value of 0.74 in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Suppose the observed counts for one specific side effect category were much higher than their corresponding expected counts, leading to a large contribution to the chi-square statistic for that category. What question might this observation suggest to the researcher?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Describes chi-square distribution as skewed right (or positively skewed) for 3 degrees of freedom.</li>
+          
+          <li>Part b (1pt): Provides a correct interpretation of the $p$-value in context, relating it to the probability of observing such results if the null hypothesis were true.</li>
+          
+          <li>Part c (1pt): Identifies a question suggested by the large variation (e.g., "Is this specific side effect more prevalent with the drug than expected?").</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S3Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.A,4.E,4.B"
+      data-learning-objectives="VAR-8.C,VAR-8.B,VAR-8.E,VAR-8.D,DAT-3.J,DAT-3.I"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A quality control manager at a factory inspects components for defects. Historically, 6% of components have a minor defect, 3% have a major defect, and 91% have no defects. A recent random sample of 200 components showed the following: 14 minor defects, 6 major defects, and 180 no defects. The manager wants to determine if the defect distribution has changed.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What type of chi-square test is appropriate for this situation? Identify the null and alternative hypotheses for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected number of components with minor defects and major defects, assuming the historical distribution is still true. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The chi-square test statistic for this sample is $\chi^2 = 3.90$ with 2 degrees of freedom. The $p$-value is 0.142. Based on these results, using $\alpha = 0.05$, what conclusion should the manager draw? Justify your answer in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies Chi-square test for Goodness of Fit. States correct $H_0$ and $H_a$.</li>
+          
+          <li>Part b (1pt): Verifies conditions (random sample, all expected counts $\ge 5$).</li>
+          
+          <li>Part c (1pt): Correctly calculates expected counts for minor ($200 \times 0.06 = 12$) and major ($200 \times 0.03 = 6$) defects.</li>
+          
+          <li>Part d (2pts): Compares $p$-value to $\alpha$, states correct conclusion (fail to reject $H_0$), and justifies in context.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

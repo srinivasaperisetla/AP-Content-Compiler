@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AP Statistics — Unit 4: Probability, Random Variables, and Probability Distributions MCQ Set</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-size: 0.95rem;
+      }
+
+      .data-table th,
+      .data-table td {
+        border: 1px solid #ccc;
+        padding: 0.5rem 0.75rem;
+        text-align: center;
+      }
+
+      .data-table th {
+        background-color: #f2f2f2;
+        font-weight: 600;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+        color: #333;
+      }
+
+      h1 {
+        border-bottom: 2px solid #333;
+        padding-bottom: 0.5rem;
+      }
+
+      .question-card {
+        border: 1px solid #ddd;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        border-radius: 8px;
+        background-color: #fafafa;
+        break-inside: avoid;
+      }
+
+      .question-header {
+        margin-bottom: 0.75rem;
+        font-size: 0.95rem;
+        color: #666;
+      }
+
+      .question-text {
+        font-weight: 600;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+      }
+
+      .diagram {
+        margin: 1rem 0;
+        text-align: center;
+        border: 1px solid #eee;
+        background: white;
+        padding: 10px;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+        max-height: 400px;
+        display: inline-block;
+      }
+
+      .choices {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .choices li {
+        margin-bottom: 0.5rem;
+      }
+
+      .key-section {
+        margin-top: 4rem;
+        border-top: 4px solid #333;
+        padding-top: 2rem;
+      }
+
+      .key-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 1rem;
+      }
+
+      @media print {
+        .question-card {
+          border: none;
+          padding: 0;
+          margin-bottom: 3rem;
+        }
+        .diagram {
+          border: 1px solid #ccc;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics — Unit 4: Probability, Random Variables, and Probability Distributions</h1>
+
+    <hr />
+
+    <div class="mcq-container">
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S10Q1"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="VAR-4.A"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q1.</strong> (ID: ap_statistics_MCQ_U4S10Q1)
+        </div>
+
+        
+
+        <div class="question-text">If the probability of event A is $P(A) = 0.35$, what is the probability of the complement of A, denoted as $P(A^c)$?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.35$</li>
+          
+          <li>B. $0.65$</li>
+          
+          <li>C. $0.50$</li>
+          
+          <li>D. $0.15$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S10Q2"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="VAR-4.E"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q2.</strong> (ID: ap_statistics_MCQ_U4S10Q2)
+        </div>
+
+        
+
+        <div class="question-text">Given $P(A) = 0.40$, $P(B) = 0.50$, and $P(A \cap B) = 0.20$, what is $P(A \cup B)$?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.90$</li>
+          
+          <li>B. $0.70$</li>
+          
+          <li>C. $0.60$</li>
+          
+          <li>D. $1.10$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S10Q3"
+        data-difficulty="easy"
+        data-skill-codes="4.B"
+        data-learning-objectives="VAR-4.C"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q3.</strong> (ID: ap_statistics_MCQ_U4S10Q3)
+        </div>
+
+        
+
+        <div class="question-text">Events A and B are considered mutually exclusive if which of the following is true?</div>
+
+        <ul class="choices">
+          
+          <li>A. $P(A \cap B) = 0$</li>
+          
+          <li>B. $P(A \cup B) = P(A)P(B)$</li>
+          
+          <li>C. $P(A|B) = P(A)$</li>
+          
+          <li>D. $P(A) + P(B) = 1$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S10Q4"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="VAR-4.D"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q4.</strong> (ID: ap_statistics_MCQ_U4S10Q4)
+        </div>
+
+        
+        <div class="diagram">
+           <table class='data-table'><thead><tr><th>Gender</th><th>Staff</th><th>Manager</th><th>Total</th></tr></thead><tbody><tr><td>Male</td><td>0.30</td><td>0.20</td><td>0.50</td></tr><tr><td>Female</td><td>0.30</td><td>0.20</td><td>0.50</td></tr><tr><td>Total</td><td>0.60</td><td>0.40</td><td>1.00</td></tr></tbody></table>
+          
+        </div>
+        
+
+        <div class="question-text">A company categorizes its employees by gender and position. The following table shows the proportions of employees in each category. What is the probability that a randomly selected employee is male, given that the employee is a manager?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.30$</li>
+          
+          <li>B. $0.40$</li>
+          
+          <li>C. $0.50$</li>
+          
+          <li>D. $0.60$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S10Q5"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="VAR-4.E"
+        data-correct-index="3"
+      >
+        <div class="question-header">
+          <strong>Q5.</strong> (ID: ap_statistics_MCQ_U4S10Q5)
+        </div>
+
+        
+
+        <div class="question-text">Given $P(A) = 0.6$, $P(B) = 0.5$, and $P(A \text{ and } B) = 0.3$. Are events A and B independent?</div>
+
+        <ul class="choices">
+          
+          <li>A. Yes, because $P(A) + P(B) = P(A \cup B)$.</li>
+          
+          <li>B. No, because $P(A)P(B) \ne P(A \text{ and } B)$.</li>
+          
+          <li>C. No, because $P(A) + P(B) \ne 1$.</li>
+          
+          <li>D. Yes, because $P(A)P(B) = P(A \text{ and } B)$.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S10Q6"
+        data-difficulty="medium"
+        data-skill-codes="3.B"
+        data-learning-objectives="VAR-5.C"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q6.</strong> (ID: ap_statistics_MCQ_U4S10Q6)
+        </div>
+
+        
+        <div class="diagram">
+           <table class='data-table'><thead><tr><th>x</th><th>P(x)</th></tr></thead><tbody><tr><td>0</td><td>0.3</td></tr><tr><td>1</td><td>0.4</td></tr><tr><td>2</td><td>0.3</td></tr></tbody></table>
+          
+        </div>
+        
+
+        <div class="question-text">A discrete random variable X has the following probability distribution: What is the expected value of X, $E(X)$?</div>
+
+        <ul class="choices">
+          
+          <li>A. $1.1$</li>
+          
+          <li>B. $1.0$</li>
+          
+          <li>C. $1.2$</li>
+          
+          <li>D. $1.3$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S10Q7"
+        data-difficulty="hard"
+        data-skill-codes="3.B"
+        data-learning-objectives="VAR-5.C"
+        data-correct-index="3"
+      >
+        <div class="question-header">
+          <strong>Q7.</strong> (ID: ap_statistics_MCQ_U4S10Q7)
+        </div>
+
+        
+        <div class="diagram">
+           <table class='data-table'><thead><tr><th>y</th><th>P(y)</th></tr></thead><tbody><tr><td>1</td><td>0.2</td></tr><tr><td>2</td><td>0.5</td></tr><tr><td>3</td><td>0.3</td></tr></tbody></table>
+          
+        </div>
+        
+
+        <div class="question-text">A discrete random variable Y has the following probability distribution: What is the standard deviation of Y?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.49$</li>
+          
+          <li>B. $0.58$</li>
+          
+          <li>C. $0.67$</li>
+          
+          <li>D. $0.70$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S10Q8"
+        data-difficulty="medium"
+        data-skill-codes="4.B"
+        data-learning-objectives="VAR-5.D"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q8.</strong> (ID: ap_statistics_MCQ_U4S10Q8)
+        </div>
+
+        
+
+        <div class="question-text">A college student takes an average of $3.5$ courses per semester, with a standard deviation of $0.8$ courses. What does the expected value of $3.5$ courses mean in this context?</div>
+
+        <ul class="choices">
+          
+          <li>A. The student will take exactly $3.5$ courses in a given semester.</li>
+          
+          <li>B. Most students at this college take $3.5$ courses per semester.</li>
+          
+          <li>C. On average, over many semesters, this student will take $3.5$ courses per semester.</li>
+          
+          <li>D. The student takes between $2.7$ and $4.3$ courses most of the time.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S10Q9"
+        data-difficulty="medium"
+        data-skill-codes="3.B,3.C"
+        data-learning-objectives="VAR-5.E,VAR-5.F"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q9.</strong> (ID: ap_statistics_MCQ_U4S10Q9)
+        </div>
+
+        
+
+        <div class="question-text">Let X be a random variable with mean $\mu_X = 10$ and standard deviation $\sigma_X = 2$. If $Y = 3X - 5$, what are the mean and standard deviation of Y?</div>
+
+        <ul class="choices">
+          
+          <li>A. $\mu_Y = 25, \sigma_Y = 1$</li>
+          
+          <li>B. $\mu_Y = 25, \sigma_Y = 6$</li>
+          
+          <li>C. $\mu_Y = 30, \sigma_Y = 1$</li>
+          
+          <li>D. $\mu_Y = 30, \sigma_Y = 6$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S10Q10"
+        data-difficulty="medium"
+        data-skill-codes="3.B,3.C"
+        data-learning-objectives="VAR-5.E,VAR-5.F"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q10.</strong> (ID: ap_statistics_MCQ_U4S10Q10)
+        </div>
+
+        
+
+        <div class="question-text">A random variable X has a mean of 15 and a standard deviation of 3. If a new random variable Y is defined as $Y = 20 - 2X$, what is the mean of Y?</div>
+
+        <ul class="choices">
+          
+          <li>A. $10$</li>
+          
+          <li>B. $-10$</li>
+          
+          <li>C. $-20$</li>
+          
+          <li>D. $20$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S10Q11"
+        data-difficulty="medium"
+        data-skill-codes="3.B"
+        data-learning-objectives="VAR-5.E"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q11.</strong> (ID: ap_statistics_MCQ_U4S10Q11)
+        </div>
+
+        
+
+        <div class="question-text">Let X and Y be independent random variables. $E(X) = 5$, $E(Y) = 8$. What is $E(X + Y)$?</div>
+
+        <ul class="choices">
+          
+          <li>A. $13$</li>
+          
+          <li>B. $40$</li>
+          
+          <li>C. $3$</li>
+          
+          <li>D. $-3$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S10Q12"
+        data-difficulty="hard"
+        data-skill-codes="3.B"
+        data-learning-objectives="VAR-5.E"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q12.</strong> (ID: ap_statistics_MCQ_U4S10Q12)
+        </div>
+
+        
+
+        <div class="question-text">Let X and Y be independent random variables. $\text{Var}(X) = 4$, $\text{Var}(Y) = 9$. What is the standard deviation of $X - Y$?</div>
+
+        <ul class="choices">
+          
+          <li>A. $5$</li>
+          
+          <li>B. $\sqrt{13}$</li>
+          
+          <li>C. $\sqrt{5}$</li>
+          
+          <li>D. $13$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S10Q13"
+        data-difficulty="easy"
+        data-skill-codes="4.B"
+        data-learning-objectives="VAR-5.B"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q13.</strong> (ID: ap_statistics_MCQ_U4S10Q13)
+        </div>
+
+        
+
+        <div class="question-text">A discrete random variable X represents the number of heads in two coin flips. Its probability distribution is: $P(X=0)=0.25$, $P(X=1)=0.50$, $P(X=2)=0.25$. What is the probability that there is at least one head?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.75$</li>
+          
+          <li>B. $0.50$</li>
+          
+          <li>C. $0.25$</li>
+          
+          <li>D. $1.00$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S10Q14"
+        data-difficulty="easy"
+        data-skill-codes="3.A"
+        data-learning-objectives="UNC-3.B"
+        data-correct-index="3"
+      >
+        <div class="question-header">
+          <strong>Q14.</strong> (ID: ap_statistics_MCQ_U4S10Q14)
+        </div>
+
+        
+
+        <div class="question-text">Which of the following scenarios describes a binomial setting?</div>
+
+        <ul class="choices">
+          
+          <li>A. The number of times a die is rolled until a 6 appears.</li>
+          
+          <li>B. The number of defective items in a sample of items drawn without replacement.</li>
+          
+          <li>C. The heights of students in a class.</li>
+          
+          <li>D. The number of heads in 10 flips of a fair coin.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S10Q15"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="UNC-3.B"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q15.</strong> (ID: ap_statistics_MCQ_U4S10Q15)
+        </div>
+
+        
+
+        <div class="question-text">A basketball player makes $70\%$ of her free throws. If she attempts 8 free throws, what is the probability that she makes exactly 6 of them?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.010$</li>
+          
+          <li>B. $0.040$</li>
+          
+          <li>C. $0.296$</li>
+          
+          <li>D. $0.198$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S10Q16"
+        data-difficulty="easy"
+        data-skill-codes="3.B"
+        data-learning-objectives="UNC-3.C"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q16.</strong> (ID: ap_statistics_MCQ_U4S10Q16)
+        </div>
+
+        
+
+        <div class="question-text">A fair coin is flipped 100 times. Let X be the number of heads. What is the mean of X?</div>
+
+        <ul class="choices">
+          
+          <li>A. $25$</li>
+          
+          <li>B. $50$</li>
+          
+          <li>C. $75$</li>
+          
+          <li>D. $100$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S10Q17"
+        data-difficulty="medium"
+        data-skill-codes="3.B"
+        data-learning-objectives="UNC-3.C"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q17.</strong> (ID: ap_statistics_MCQ_U4S10Q17)
+        </div>
+
+        
+
+        <div class="question-text">In a city, $15\%$ of adults are vegetarians. If a random sample of 20 adults is selected, what is the standard deviation of the number of vegetarians in the sample?</div>
+
+        <ul class="choices">
+          
+          <li>A. $1.597$</li>
+          
+          <li>B. $1.750$</li>
+          
+          <li>C. $2.550$</li>
+          
+          <li>D. $3.000$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S10Q18"
+        data-difficulty="medium"
+        data-skill-codes="4.B"
+        data-learning-objectives="UNC-3.D"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q18.</strong> (ID: ap_statistics_MCQ_U4S10Q18)
+        </div>
+
+        
+
+        <div class="question-text">A binomial random variable X has $n = 10$ and $p = 0.4$. The mean is $E(X) = 4$. What does the mean of 4 represent in this context?</div>
+
+        <ul class="choices">
+          
+          <li>A. In a random sample of 10 trials, we expect to see exactly 4 successes.</li>
+          
+          <li>B. If we perform many sets of 10 trials, the average number of successes per set will be approximately 4.</li>
+          
+          <li>C. There is a $40\%$ chance of getting a success in any given trial.</li>
+          
+          <li>D. The most likely number of successes in 10 trials is 4.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S10Q19"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="UNC-3.A"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q19.</strong> (ID: ap_statistics_MCQ_U4S10Q19)
+        </div>
+
+        
+
+        <div class="question-text">A researcher wants to estimate the probability of getting at least 7 heads in 10 coin flips using a simulation. Which of the following simulation setups would be most appropriate?</div>
+
+        <ul class="choices">
+          
+          <li>A. Flip a coin 7 times and record the number of heads. Repeat 100 times.</li>
+          
+          <li>B. Flip a coin 10 times and record the number of heads. Repeat 7 times.</li>
+          
+          <li>C. Assign digits 0-4 to heads and 5-9 to tails. Generate 10 random digits and count heads. Repeat this process many times.</li>
+          
+          <li>D. Assign digits 0-6 to heads and 7-9 to tails. Generate 10 random digits and count heads. Repeat this process many times.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S10Q20"
+        data-difficulty="easy"
+        data-skill-codes="3.A"
+        data-learning-objectives="UNC-3.E"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q20.</strong> (ID: ap_statistics_MCQ_U4S10Q20)
+        </div>
+
+        
+
+        <div class="question-text">Which of the following scenarios describes a geometric setting?</div>
+
+        <ul class="choices">
+          
+          <li>A. The number of defective items in a sample of 10.</li>
+          
+          <li>B. The number of rolls of a die until the first 6 appears.</li>
+          
+          <li>C. The number of times a coin is flipped in 5 minutes.</li>
+          
+          <li>D. The number of students who pass an exam out of a class of 30.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S10Q21"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="UNC-3.E"
+        data-correct-index="3"
+      >
+        <div class="question-header">
+          <strong>Q21.</strong> (ID: ap_statistics_MCQ_U4S10Q21)
+        </div>
+
+        
+
+        <div class="question-text">The probability that a specific type of component fails is $0.05$. What is the probability that the first failure occurs on the 3rd component tested? Assume components are independent.</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.000125$</li>
+          
+          <li>B. $0.002375$</li>
+          
+          <li>C. $0.045125$</li>
+          
+          <li>D. $0.0475$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S10Q22"
+        data-difficulty="easy"
+        data-skill-codes="3.B"
+        data-learning-objectives="UNC-3.F"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q22.</strong> (ID: ap_statistics_MCQ_U4S10Q22)
+        </div>
+
+        
+
+        <div class="question-text">On average, a salesperson makes a sale on $10\%$ of customer calls. Assuming calls are independent, what is the expected number of calls until the first sale is made?</div>
+
+        <ul class="choices">
+          
+          <li>A. $1$</li>
+          
+          <li>B. $5$</li>
+          
+          <li>C. $10$</li>
+          
+          <li>D. $20$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S10Q23"
+        data-difficulty="medium"
+        data-skill-codes="4.B"
+        data-learning-objectives="UNC-3.G"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q23.</strong> (ID: ap_statistics_MCQ_U4S10Q23)
+        </div>
+
+        
+
+        <div class="question-text">A student attempts a free throw. The probability of making a free throw is $0.6$. Let X be the number of attempts until the first made free throw. If $E(X) = 1.67$, what does this value signify?</div>
+
+        <ul class="choices">
+          
+          <li>A. The student is expected to make $1.67$ free throws on average.</li>
+          
+          <li>B. On average, it takes $1.67$ attempts for the student to make their first free throw.</li>
+          
+          <li>C. The probability of making a free throw is $0.6$ for $1.67$ attempts.</li>
+          
+          <li>D. The student makes their first free throw within $1.67$ attempts most of the time.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S10Q24"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="UNC-2.A"
+        data-correct-index="3"
+      >
+        <div class="question-header">
+          <strong>Q24.</strong> (ID: ap_statistics_MCQ_U4S10Q24)
+        </div>
+
+        
+
+        <div class="question-text">A fair six-sided die is rolled twice. To estimate the probability that the sum of the two rolls is 7, which of the following is the most appropriate simulation approach?</div>
+
+        <ul class="choices">
+          
+          <li>A. Roll the die 7 times and record the sum. Repeat 10 times.</li>
+          
+          <li>B. Roll the die once and multiply the result by 2. Repeat many times.</li>
+          
+          <li>C. Roll two dice and record the result of the first die. Repeat many times.</li>
+          
+          <li>D. Roll two dice and record their sum. Repeat this process many times (e.g., 100 times).</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S10Q25"
+        data-difficulty="easy"
+        data-skill-codes="3.A"
+        data-learning-objectives="UNC-2.A"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q25.</strong> (ID: ap_statistics_MCQ_U4S10Q25)
+        </div>
+
+        
+
+        <div class="question-text">A researcher wants to estimate the probability of getting at least two heads in three coin flips. Which of the following simulation designs would be appropriate?</div>
+
+        <ul class="choices">
+          
+          <li>A. Flip a coin three times, recording the number of heads. Repeat this process for a large number of trials and calculate the proportion of trials that resulted in at least two heads.</li>
+          
+          <li>B. Roll a six-sided die three times, letting an even number represent a head and an odd number represent a tail.</li>
+          
+          <li>C. Use a random number generator to generate a number between 0 and 1. If the number is less than 0.5, it's a head; otherwise, it's a tail. Repeat three times for one trial.</li>
+          
+          <li>D. Flip a coin once and record if it's heads or tails. Repeat this process three times, then calculate the proportion of heads.</li>
+          
+        </ul>
+      </div>
+      
+    </div>
+
+    <div class="key-section">
+      <h2>Answer Key</h2>
+
+      <div class="key-grid">
+        
+        <div>
+          <strong>1.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>2.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>3.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>4.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>5.</strong>
+          D
+        </div>
+        
+        <div>
+          <strong>6.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>7.</strong>
+          D
+        </div>
+        
+        <div>
+          <strong>8.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>9.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>10.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>11.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>12.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>13.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>14.</strong>
+          D
+        </div>
+        
+        <div>
+          <strong>15.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>16.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>17.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>18.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>19.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>20.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>21.</strong>
+          D
+        </div>
+        
+        <div>
+          <strong>22.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>23.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>24.</strong>
+          D
+        </div>
+        
+        <div>
+          <strong>25.</strong>
+          A
+        </div>
+        
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

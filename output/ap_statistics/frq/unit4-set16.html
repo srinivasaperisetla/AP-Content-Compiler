@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 16)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 16)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S16Q1"
+      data-difficulty="medium"
+      data-skill-codes="3.A,4.B"
+      data-learning-objectives="VAR-4.A,VAR-4.D,VAR-4.E"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A large company conducts a survey about employee satisfaction and their preferred work arrangement. Employees were asked if they preferred working remotely full-time, hybrid, or in-office, and if they reported high job satisfaction. The results are summarized in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Work Arrangement</th><th>High Job Satisfaction</th><th>Low Job Satisfaction</th><th>Total</th></tr></thead><tbody><tr><td>Remote</td><td>120</td><td>80</td><td>200</td></tr><tr><td>Hybrid</td><td>150</td><td>50</td><td>200</td></tr><tr><td>In-office</td><td>70</td><td>130</td><td>200</td></tr><tr><td>Total</td><td>340</td><td>260</td><td>600</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What is the probability that a randomly selected employee prefers a remote work arrangement OR has high job satisfaction?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Given that an employee prefers a hybrid work arrangement, what is the probability that they have high job satisfaction?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Are the events "prefers remote work" and "high job satisfaction" independent? Justify your answer with calculations.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly calculates $P(\text{Remote} \cup \text{High Sat})$ using the given table and probability rules.</li>
+          
+          <li>Part b (1pt): Correctly calculates $P(\text{High Sat}</li>
+          
+          <li>\text{Hybrid})$ using the given table and conditional probability formula.</li>
+          
+          <li>Part c (2pts): Calculates $P(\text{Remote})$ and $P(\text{Remote}</li>
+          
+          <li>\text{High Sat})$ or $P(\text{High Sat})$ and $P(\text{High Sat}</li>
+          
+          <li>\text{Remote})$, or $P(\text{Remote} \cap \text{High Sat})$ and $P(\text{Remote}) \times P(\text{High Sat})$. Provides a correct justification based on the comparison of these probabilities.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S16Q2"
+      data-difficulty="medium"
+      data-skill-codes="2.B,3.B,4.B"
+      data-learning-objectives="VAR-5.A,VAR-5.C,VAR-5.D"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A game involves rolling a fair six-sided die. If a player rolls a 1 or a 2, they win 3 points. If they roll a 3, 4, or 5, they lose 2 points. If they roll a 6, they win 5 points. Let $X$ be the random variable representing the number of points won or lost in one roll of the die.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Construct a probability distribution table for $X$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected value of $X$. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the standard deviation of $X$. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the expected value of $X$ in the context of this game.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly lists all possible values of $X$ and their corresponding probabilities in a table.</li>
+          
+          <li>Part b (1pt): Correctly calculates $E(X) = \sum x \cdot P(X=x)$.</li>
+          
+          <li>Part c (2pts): Correctly calculates $Var(X) = \sum (x - E(X))^2 \cdot P(X=x)$ and then $\sigma_X = \sqrt{Var(X)}$.</li>
+          
+          <li>Part d (1pt): Provides a correct interpretation of $E(X)$ as the long-run average points per roll.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S16Q3"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.B,UNC-3.C,UNC-3.D"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A manufacturer claims that 85% of their smart light bulbs last for at least 50,000 hours. To test this claim, a quality control engineer randomly selects 15 bulbs for testing. Assume the manufacturer's claim is true.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Verify that the conditions for a binomial distribution are met in this context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What is the probability that exactly 12 of the 15 selected bulbs last for at least 50,000 hours? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        What is the probability that at least 13 of the 15 selected bulbs last for at least 50,000 hours? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Calculate the mean and standard deviation of the number of bulbs (out of 15) that last for at least 50,000 hours.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies the four conditions (fixed number of trials, two outcomes, independent trials, constant probability of success) and explains how each is met in context.</li>
+          
+          <li>Part b (1pt): Correctly calculates $P(X=12)$ using the binomial probability formula or calculator function, showing parameters ($n=15, p=0.85$).</li>
+          
+          <li>Part c (1pt): Correctly calculates $P(X \ge 13)$ as $1 - P(X \le 12)$ or sum of individual probabilities, showing parameters.</li>
+          
+          <li>Part d (1pt): Correctly calculates the mean ($\mu = np$) and standard deviation ($\sigma = \sqrt{np(1-p)}$).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S16Q4"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.E,UNC-3.F,UNC-3.G"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A salesperson makes cold calls to potential clients. Historically, the probability that a call results in a sale is 0.08. Assume that the outcome of each call is independent. Let $Y$ be the number of calls the salesperson makes until the first sale is achieved.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Verify that the conditions for a geometric distribution are met in this context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What is the probability that the first sale occurs on the fifth call? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        What is the probability that the salesperson needs to make more than 10 calls to get the first sale? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        On average, how many calls would the salesperson expect to make to get the first sale? Interpret this value in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies the four conditions (two outcomes, independent trials, constant probability of success, interested in number of trials until first success) and explains how each is met in context.</li>
+          
+          <li>Part b (1pt): Correctly calculates $P(Y=5)$ using the geometric probability formula $P(Y=k) = (1-p)^{k-1}p$.</li>
+          
+          <li>Part c (1pt): Correctly calculates $P(Y>10)$ using $P(Y>k) = (1-p)^k$.</li>
+          
+          <li>Part d (1pt): Calculates $E(Y) = 1/p$ and interprets it as the long-run average number of calls until the first sale.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S16Q5"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="VAR-5.E,VAR-5.F,UNC-3.A"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A small business sells two types of custom-made shirts: basic shirts and premium shirts. The number of hours to make a basic shirt, $B$, is a random variable with mean $\mu_B = 1.5$ hours and standard deviation $\sigma_B = 0.3$ hours. The number of hours to make a premium shirt, $P$, is a random variable with mean $\mu_P = 2.5$ hours and standard deviation $\sigma_P = 0.5$ hours. Assume $B$ and $P$ are independent.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        The business receives an order for 2 basic shirts and 1 premium shirt. What is the expected total number of hours to complete this order? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What is the standard deviation of the total number of hours to complete this order (2 basic shirts and 1 premium shirt)? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If the cost to make a shirt is $\$10$ per hour plus a fixed cost of $\$5$ per shirt, describe how the standard deviation of the total cost for one basic shirt would compare to the standard deviation of the hours for one basic shirt. Provide a specific calculation for the standard deviation of the cost for one basic shirt.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Suppose the business processes a large number of orders, each for 2 basic shirts and 1 premium shirt. Describe how you could use simulation to estimate the probability that a single order takes more than 7 hours to complete.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly calculates $E(2B + P) = 2E(B) + E(P)$ using properties of expectation.</li>
+          
+          <li>Part b (2pts): Correctly calculates $Var(2B + P) = Var(2B) + Var(P) = (2\sigma_B)^2 + \sigma_P^2$ (due to independence) and then takes the square root for the standard deviation.</li>
+          
+          <li>Part c (1pt): Describes that adding a constant does not change standard deviation, but multiplying by a constant multiplies the standard deviation by that constant. Calculates $\sigma_{Cost} = \$10 \times \sigma_B = \$3$.</li>
+          
+          <li>Part d (2pts): Describes a valid simulation process including defining one trial (e.g., generating 2 values from a distribution for B and 1 for P, then summing), how to conduct a trial, and how to estimate the probability (e.g., repeat many times and count proportion of orders > 7 hours).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

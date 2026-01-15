@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 14)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 14)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S14Q1"
+      data-difficulty="medium"
+      data-skill-codes="2.C,4.B"
+      data-learning-objectives="DAT-1.D,DAT-1.G,DAT-1.H"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A car manufacturer is investigating the relationship between a car's weight (in hundreds of pounds) and its fuel efficiency (in miles per gallon, MPG). A random sample of $20$ car models yielded the least-squares regression line $\widehat{\text{MPG}} = 45.1 - 0.72 \times \text{Weight}$. The coefficient of determination is $r^2 = 0.85$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Interpret the slope of the least-squares regression line in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the predicted fuel efficiency for a car that weighs $3500$ pounds.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the value of $r^2 = 0.85$ in the context of this study.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): For every additional hundred pounds of car weight, the predicted fuel efficiency decreases by $0.72$ MPG.</li>
+          
+          <li>Part b (2pts): Shows calculation: $\widehat{\text{MPG}} = 45.1 - 0.72 \times 35 = 45.1 - 25.2 = 19.9$ MPG. Correct calculation and units.</li>
+          
+          <li>Part c (1pt): $85\%$ of the variation in a car's fuel efficiency (MPG) can be explained by the linear relationship with car weight.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S14Q2"
+      data-difficulty="easy"
+      data-skill-codes="2.C,2.D"
+      data-learning-objectives="UNC-1.Q,UNC-1.R,UNC-1.P"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A survey was conducted to investigate the relationship between a person's highest level of education and their preferred news source (Television, Internet, or Newspaper). The results from $500$ randomly selected adults are summarized in the two-way table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Education Level</th><th>Television</th><th>Internet</th><th>Newspaper</th><th>Total</th></tr></thead><tbody><tr><td>High School Diploma or Less</td><td>90</td><td>80</td><td>30</td><td>200</td></tr><tr><td>College Degree</td><td>60</td><td>150</td><td>90</td><td>300</td></tr><tr><td>Total</td><td>150</td><td>230</td><td>120</td><td>500</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the proportion of individuals who prefer the Internet as their news source among those with a High School diploma or less.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Compare the distribution of preferred news sources for individuals with a College Degree and those with a High School diploma or less.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on your comparison in part (b), describe any association between education level and preferred news source.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly calculates $\frac{80}{200} = 0.40$.</li>
+          
+          <li>Part b (2pts): Calculates conditional proportions for both groups (College Degree: TV=0.2, Internet=0.5, Newspaper=0.3; High School or less: TV=0.45, Internet=0.4, Newspaper=0.15) and makes a comparison, noting differences in preferred sources.</li>
+          
+          <li>Part c (1pt): States that there appears to be an association because the distributions of preferred news sources are different for the two education levels. Specifically, college graduates prefer Internet more and TV/Newspaper less than those with a high school diploma or less.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S14Q3"
+      data-difficulty="hard"
+      data-skill-codes="2.A,2.C,4.B"
+      data-learning-objectives="DAT-1.J,DAT-1.I,DAT-1.H"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A researcher is studying the growth of a certain type of bacteria. They collect data on the time (in hours) and the number of bacteria (in thousands). A linear model for the number of bacteria versus time was found to be inappropriate due to a curved pattern in the residual plot. To address this, the researcher decided to transform the data by taking the natural logarithm of the number of bacteria, $\ln(\text{Bacteria})$. The least-squares regression line for the transformed data is $\widehat{\ln(\text{Bacteria})} = 0.5 + 0.2 \times \text{Time}$. The $R^2$ value for this transformed model is $0.98$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Interpret the slope of the transformed least-squares regression line in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Predict the number of bacteria (in thousands) after $10$ hours using the transformed model. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        After fitting the original linear model (Number of Bacteria vs. Time), a data point was identified as $(2, 100)$ where $2$ hours was very low compared to other observations, and $100$ thousand bacteria was unusually high for that time. Describe how this point might affect the slope and $R^2$ of the original least-squares regression line.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): For every additional hour, the natural logarithm of the number of bacteria is predicted to increase by $0.2$. OR For every one-unit increase in time, the predicted number of bacteria is multiplied by a factor of $e^{0.2} \approx 1.221$.</li>
+          
+          <li>Part b (2pts): Shows calculation: $\widehat{\ln(\text{Bacteria})} = 0.5 + 0.2 \times 10 = 2.5$. Then, $\widehat{\text{Bacteria}} = e^{2.5} \approx 12.18$ thousand. Correct calculation and conversion.</li>
+          
+          <li>Part c (1pt): The point $(2, 100)$ is an influential point because its $x$-value (Time=2) is relatively low, and its $y$-value (Bacteria=100) is unusually high, pulling the least squares regression line towards it. This would likely make the slope of the original regression line steeper (more positive) and decrease the $R^2$ value as it increases the overall residual sum of squares for the original linear model.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S14Q4"
+      data-difficulty="medium"
+      data-skill-codes="2.A,2.C,4.B"
+      data-learning-objectives="DAT-1.A,DAT-1.B,DAT-1.C"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A researcher studied the relationship between the number of hours students spent studying for a final exam and their scores on the exam. A scatterplot of the data from 10 randomly selected students is shown below.</div>
+
+      
+      <div class="diagram">
+         <svg width="400" height="300" style="background-color:white;"><rect x="50" y="30" width="300" height="200" style="fill:none;stroke:black;stroke-width:1;"/><line x1="50" y1="230" x2="350" y2="230" style="stroke:black;stroke-width:1;"/><text x="185" y="250" font-family="Arial" font-size="14" fill="black">Hours Studied</text><line x1="50" y1="230" x2="50" y2="225" style="stroke:black;stroke-width:1;"/><text x="40" y="245" font-family="Arial" font-size="12" fill="black">0</text><line x1="350" y1="230" x2="350" y2="225" style="stroke:black;stroke-width:1;"/><text x="340" y="245" font-family="Arial" font-size="12" fill="black">10</text><line x1="50" y1="30" x2="50" y2="230" style="stroke:black;stroke-width:1;"/><text x="20" y="130" transform="rotate(-90 20 130)" font-family="Arial" font-size="14" fill="black">Exam Score</text><line x1="50" y1="230" x2="55" y2="230" style="stroke:black;stroke-width:1;"/><text x="20" y="235" font-family="Arial" font-size="12" fill="black">60</text><line x1="50" y1="30" x2="55" y2="30" style="stroke:black;stroke-width:1;"/><text x="20" y="35" font-family="Arial" font-size="12" fill="black">100</text><circle cx="110" cy="205" r="3" fill="black"/><circle cx="140" cy="180" r="3" fill="black"/><circle cx="170" cy="155" r="3" fill="black"/><circle cx="200" cy="130" r="3" fill="black"/><circle cx="200" cy="120" r="3" fill="black"/><circle cx="230" cy="105" r="3" fill="black"/><circle cx="260" cy="80" r="3" fill="black"/><circle cx="260" cy="90" r="3" fill="black"/><circle cx="290" cy="70" r="3" fill="black"/><circle cx="320" cy="55" r="3" fill="black"/><text x="120" y="20" font-family="Arial" font-size="16" fill="black">Study Hours vs. Exam Score</text></svg> 
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the direction, form, and strength of the relationship between study hours and exam scores shown in the scatterplot.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        The correlation coefficient for this data is calculated to be $r \approx 0.96$. Interpret this value in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on the scatterplot and the correlation, would it be appropriate to use a linear model to predict exam scores from study hours? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Describes direction (positive), form (linear), and strength (strong) (1pt). Mentions context (1pt).</li>
+          
+          <li>Part b (1pt): Interprets $r=0.96$ as a strong, positive linear association between hours studied and exam scores (with context).</li>
+          
+          <li>Part c (1pt): States "Yes" (0.5pt). Justifies based on strong, linear pattern in scatterplot and high $r$ value (0.5pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S14Q5"
+      data-difficulty="easy"
+      data-skill-codes="2.C,2.D"
+      data-learning-objectives="UNC-1.Q,UNC-1.R"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A survey asked a sample of 200 adults about their preferred method of receiving news: online, TV, or print. The results are broken down by age group: 18-35 years old and 36+ years old.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Method</th><th>18-35 Years</th><th>36+ Years</th><th>Total</th></tr></thead><tbody><tr><td>Online</td><td>60</td><td>30</td><td>90</td></tr><tr><td>TV</td><td>30</td><td>50</td><td>80</td></tr><tr><td>Print</td><td>10</td><td>20</td><td>30</td></tr><tr><td>Total</td><td>100</td><td>100</td><td>200</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the conditional proportion of adults aged 18-35 who prefer online news.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the conditional proportion of adults aged 36+ who prefer online news.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Compare the preferred news methods between the two age groups based on the provided table.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correct calculation: $60/100 = 0.60$.</li>
+          
+          <li>Part b (1pt): Correct calculation: $30/100 = 0.30$.</li>
+          
+          <li>Part c (2pts): Compares that 18-35 year olds prefer online news more than 36+ year olds, who prefer TV more, and both have low print preference (1pt). Uses calculated proportions or percentages as evidence (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

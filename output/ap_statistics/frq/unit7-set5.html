@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 5)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 5)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S5Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.Q,UNC-4.R,UNC-4.S,UNC-4.T"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A company manufactures a specific type of light bulb. The production manager wants to estimate the true mean lifespan of these bulbs. A random sample of $n = 30$ bulbs is selected and tested. The sample mean lifespan is $\bar{x} = 985$ hours and the sample standard deviation is $s = 50$ hours.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure and verify the conditions for constructing a confidence interval for the true mean lifespan of the light bulbs.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the true mean lifespan of the light bulbs. Show all steps.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the 95% confidence interval in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The company claims that the average lifespan of their light bulbs is 1000 hours. Based on your confidence interval, does this claim seem plausible? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies a one-sample t-interval for a population mean and verifies conditions (random sample, $10\%$ condition, Normal/large sample condition).</li>
+          
+          <li>Part b (2pts): Shows correct formula, calculates appropriate degrees of freedom, t-critical value, margin of error, and the correct 95% confidence interval ($\bar{x} \pm t^* \frac{s}{\sqrt{n}}$).</li>
+          
+          <li>Part c (1pt): Correctly interprets the confidence interval in context (e.g., "We are 95% confident that the true mean lifespan...").</li>
+          
+          <li>Part d (1pt): States whether the claim is plausible and justifies the answer by referencing the confidence interval.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S5Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A new energy drink claims to improve athletic performance. A random sample of 25 athletes is selected. Each athlete consumes the energy drink, and their performance time in a specific task is measured. The company claims the average performance time for this task is normally 15 seconds without the drink. The sample mean performance time with the drink is $\bar{x} = 14.2$ seconds with a sample standard deviation of $s = 2.5$ seconds. Assume that performance times are approximately normally distributed for this task.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for testing if the energy drink improves performance time.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing a significance test for the true mean performance time.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the p-value in context and state a conclusion at the $\alpha = 0.05$ significance level.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States $H_0: \mu = 15$ and $H_a: \mu < 15$, defining $\mu$ as the true mean performance time with the energy drink.</li>
+          
+          <li>Part b (1pt): Verifies conditions: random sample, $10\%$ condition ($N \ge 10n$), and Normal condition (stated to be approximately normal/large enough sample).</li>
+          
+          <li>Part c (2pts): Calculates the correct test statistic $t = \frac{\bar{x} - \mu_0}{s/\sqrt{n}}$ and determines the correct p-value using appropriate degrees of freedom ($df=24$).</li>
+          
+          <li>Part d (2pts): Interprets the p-value in context (probability of observed results or more extreme if $H_0$ is true) and makes a correct conclusion comparing p-value to $\alpha = 0.05$, linking to the claim in context.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S5Q3"
+      data-difficulty="hard"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A company wants to evaluate the effectiveness of a new training program designed to reduce assembly time for a product. Ten employees are randomly selected, and their assembly times are measured before and after completing the training program. The results (in minutes) are shown in the table below. Assume the differences in assembly times are approximately normally distributed.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Employee</th><th>Before Training</th><th>After Training</th></tr></thead><tbody><tr><td>1</td><td>25</td><td>22</td></tr><tr><td>2</td><td>31</td><td>28</td></tr><tr><td>3</td><td>28</td><td>27</td></tr><tr><td>4</td><td>33</td><td>30</td></tr><tr><td>5</td><td>26</td><td>24</td></tr><tr><td>6</td><td>29</td><td>29</td></tr><tr><td>7</td><td>30</td><td>26</td></tr><tr><td>8</td><td>27</td><td>25</td></tr><tr><td>9</td><td>32</td><td>30</td></tr><tr><td>10</td><td>24</td><td>23</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Explain why a matched-pairs t-procedure is an appropriate inference method for this situation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        State the appropriate null and alternative hypotheses for a test to determine if the training program reduces the mean assembly time. Define any parameters you use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Calculate the test statistic for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Using a significance level of $\alpha = 0.01$, state a conclusion about whether the training program reduces the mean assembly time.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Explains that measurements are taken on the same individuals (before and after), making the two samples dependent and differences relevant.</li>
+          
+          <li>Part b (1pt): States $H_0: \mu_d = 0$ and $H_a: \mu_d > 0$, where $\mu_d$ is the true mean difference in assembly time (before - after).</li>
+          
+          <li>Part c (1pt): Verifies conditions: random sample of employees, $10\%$ condition ($N \ge 10n$), and Normal condition (stated to be approximately normal/large enough sample).</li>
+          
+          <li>Part d (1pt): Calculates the differences for each employee, finds $\bar{x}_d$ and $s_d$, then calculates the correct test statistic $t = \frac{\bar{x}_d - 0}{s_d/\sqrt{n}}$.</li>
+          
+          <li>Part e (2pts): Compares the p-value to $\alpha = 0.01$ and states a correct conclusion in context.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S5Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D,4.A"
+      data-learning-objectives="UNC-4.V,UNC-4.W,UNC-4.X,UNC-4.Y,UNC-4.Z,UNC-4.AA,UNC-4.AB"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">Researchers are investigating the effectiveness of two different fertilizers, Fertilizer A and Fertilizer B, on corn yield. They randomly select 40 plots of land for Fertilizer A and 35 plots for Fertilizer B. The mean corn yield (in bushels per acre) and standard deviation for each fertilizer are summarized below. Assume all conditions for inference are met.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Fertilizer</th><th>Sample Size ($n$)</th><th>Sample Mean ($\bar{x}$)</th><th>Sample Standard Deviation ($s$)</th></tr></thead><tbody><tr><td>A</td><td>40</td><td>150</td><td>12</td></tr><tr><td>B</td><td>35</td><td>142</td><td>10</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure and explain why it is appropriate in this situation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 90% confidence interval for the true difference in mean corn yield between Fertilizer A and Fertilizer B ($\mu_A - \mu_B$). Show all steps.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the 90% confidence interval in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your confidence interval, does there appear to be a statistically significant difference in the mean corn yields between the two fertilizers at the $\alpha = 0.10$ level? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        If the sample sizes for both fertilizers were increased to 100 each, how would this affect the width of the confidence interval, assuming the sample means and standard deviations remained approximately the same?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies a two-sample t-interval for a difference of means and explains its appropriateness (two independent samples, quantitative data).</li>
+          
+          <li>Part b (2pts): Shows correct formula ($\bar{x}_A - \bar{x}_B \pm t^* \sqrt{\frac{s_A^2}{n_A} + \frac{s_B^2}{n_B}}$), calculates the difference in means, appropriate degrees of freedom, t-critical value, and the correct 90% confidence interval.</li>
+          
+          <li>Part c (1pt): Correctly interprets the confidence interval in context (e.g., "We are 90% confident that the true mean difference in corn yield...").</li>
+          
+          <li>Part d (1pt): States whether there is a statistically significant difference and justifies by checking if 0 is contained within the interval.</li>
+          
+          <li>Part e (1pt): States that increasing sample sizes would decrease the width of the confidence interval and briefly explains why (larger denominator in standard error formula).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S5Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.F,VAR-7.G,VAR-7.H,VAR-7.1,DAT-3.G,DAT-3.H"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A health organization wants to compare the effectiveness of two different types of exercise routines, Routine X and Routine Y, on reducing blood pressure. They recruit 60 volunteers with high blood pressure and randomly assign 30 to Routine X and 30 to Routine Y. After 12 weeks, the reduction in systolic blood pressure (in mmHg) is recorded for each participant. For Routine X: $\bar{x}_X = 12.5$ mmHg, $s_X = 4.2$ mmHg. For Routine Y: $\bar{x}_Y = 10.3$ mmHg, $s_Y = 3.8$ mmHg. Assume that the conditions for inference have been met.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses to investigate if there is a difference in the true mean blood pressure reduction between Routine X and Routine Y. Define any parameters you use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the test statistic for this hypothesis test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Determine the p-value for the test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the p-value in context and state a conclusion at the $\alpha = 0.05$ significance level.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States $H_0: \mu_X - \mu_Y = 0$ (or $\mu_X = \mu_Y$) and $H_a: \mu_X - \mu_Y \ne 0$ (or $\mu_X \ne \mu_Y$), defining $\mu_X$ and $\mu_Y$ as the true mean blood pressure reduction for Routine X and Routine Y, respectively.</li>
+          
+          <li>Part b (1pt): Calculates the correct test statistic $t = \frac{(\bar{x}_X - \bar{x}_Y) - 0}{\sqrt{\frac{s_X^2}{n_X} + \frac{s_Y^2}{n_Y}}}$.</li>
+          
+          <li>Part c (1pt): Determines the correct p-value using the test statistic and appropriate degrees of freedom.</li>
+          
+          <li>Part d (2pts): Interprets the p-value in context (probability of observing a difference this extreme or more if no true difference exists) and makes a correct conclusion comparing p-value to $\alpha = 0.05$, linking to the claim in context.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

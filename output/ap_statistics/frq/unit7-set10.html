@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 10)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 10)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S10Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.P,UNC-4.R,UNC-4.S,UNC-4.T"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A cereal company wants to ensure that the mean weight of cereal in its "SuperCrunch" boxes is 450 grams. A quality control manager randomly selects 25 boxes of SuperCrunch cereal and measures their weights. The sample mean weight is $\bar{x} = 448.2$ grams with a sample standard deviation of $s = 5.1$ grams.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure and verify the conditions for constructing a 95% confidence interval for the true mean weight of SuperCrunch cereal boxes.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the 95% confidence interval for the true mean weight of SuperCrunch cereal boxes.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval from part (b) in context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the confidence interval, does the company have evidence that the true mean weight of its cereal boxes is different from 450 grams? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a one-sample t-interval for a mean (1pt). Verifies conditions: Random sample (given), and since $n=25 < 30$, assumes the population of weights is approximately normal or inspects a graph of sample data (robustness of t-procedure for non-severe deviations) (1pt).</li>
+          
+          <li>Part b (2pts): Calculates the correct degrees of freedom ($df=24$) (0.5pt). Correctly finds the critical t-value ($t^* \approx 2.064$) (0.5pt). Calculates the correct confidence interval using the formula $\bar{x} \pm t^* \frac{s}{\sqrt{n}}$ (e.g., $(446.08, 450.32)$) (1pt).</li>
+          
+          <li>Part c (1pt): Correctly interprets the interval in context, stating that we are 95% confident that the true mean weight of SuperCrunch cereal boxes is between the lower and upper bounds of the interval (1pt).</li>
+          
+          <li>Part d (1pt): States that there is (or is not) evidence that the mean weight is different from 450 grams (0.5pt). Justifies by explaining whether 450 grams is contained within the confidence interval (0.5pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S10Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">An engineering firm claims that a new composite material has a mean breaking strength of at least 250 megapascals (MPa). A government agency wants to test this claim. A random sample of 18 specimens of the material is tested, yielding a sample mean breaking strength of $\bar{x} = 247.5$ MPa and a sample standard deviation of $s = 8.3$ MPa.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a test to investigate the firm's claim.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for conducting a t-test for a population mean.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the p-value in the context of the problem and state the conclusion of the test using a significance level of $\alpha = 0.05$.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States $H_0: \mu = 250$ MPa and $H_a: \mu < 250$ MPa (1pt). Defines $\mu$ as the true mean breaking strength of the new material (0.5pt bonus if provided).</li>
+          
+          <li>Part b (1pt): Verifies conditions: Random sample (given), and since $n=18 < 30$, assumes the population of breaking strengths is approximately normal or inspects a graph of sample data (robustness of t-test mentioned) (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the test statistic $t = \frac{247.5 - 250}{8.3/\sqrt{18}} \approx -1.278$ (1pt). Calculates the p-value using $df=17$ for a one-tailed test (e.g., $P(T < -1.278) \approx 0.109$) (1pt).</li>
+          
+          <li>Part d (2pts): Interprets the p-value (e.g., "If the true mean breaking strength is 250 MPa, there is approximately a 10.9% chance of observing a sample mean of 247.5 MPa or less purely by random chance") (1pt). Compares p-value to $\alpha=0.05$ and states a correct conclusion in context (e.g., "Since p-value $0.109 > 0.05$, we fail to reject $H_0$. There is not sufficient evidence to conclude that the true mean breaking strength of the material is less than 250 MPa, thus we cannot dispute the firm's claim that it's at least 250 MPa") (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S10Q3"
+      data-difficulty="hard"
+      data-skill-codes="1.D,1.E,1.F,4.C,3.E,4.E"
+      data-learning-objectives="UNC-4.0,UNC-4.P,VAR-7.C,VAR-7.E,DAT-3.F"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A coach wants to determine if a new strength training program improves the vertical jump height of basketball players. Ten randomly selected players participate in the program. Their vertical jump heights (in inches) are measured before and after completing the program. The differences (After - Before) for each player are recorded. The mean difference is $\bar{x}_d = 1.4$ inches with a standard deviation of $s_d = 1.265$ inches.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Player</th><th>Before</th><th>After</th><th>Difference (After - Before)</th></tr></thead><tbody><tr><td>1</td><td>28</td><td>30</td><td>2</td></tr><tr><td>2</td><td>26</td><td>27</td><td>1</td></tr><tr><td>3</td><td>31</td><td>30</td><td>-1</td></tr><tr><td>4</td><td>29</td><td>32</td><td>3</td></tr><tr><td>5</td><td>27</td><td>29</td><td>2</td></tr><tr><td>6</td><td>30</td><td>31</td><td>1</td></tr><tr><td>7</td><td>28</td><td>29</td><td>1</td></tr><tr><td>8</td><td>25</td><td>28</td><td>3</td></tr><tr><td>9</td><td>32</td><td>33</td><td>1</td></tr><tr><td>10</td><td>27</td><td>28</td><td>1</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the name of the appropriate inference procedure and identify the null and alternative hypotheses to determine if the training program is effective.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for conducting this inference procedure.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your results, what conclusion can be made at the $\alpha = 0.01$ significance level? Justify your answer in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1.5pts): Identifies a paired t-test for a mean difference (0.5pt). States $H_0: \mu_d = 0$ and $H_a: \mu_d > 0$, where $\mu_d$ is the true mean difference (After - Before) in vertical jump height (1pt).</li>
+          
+          <li>Part b (1.5pts): Verifies conditions: Random sample of players (given). The differences are assumed to be approximately normally distributed (or check a graph of differences for strong skew/outliers, or state robustness of t-procedure for $n=10$) (1.5pts).</li>
+          
+          <li>Part c (2pts): Calculates the test statistic $t = \frac{\bar{x}_d - 0}{s_d/\sqrt{n}} = \frac{1.4 - 0}{1.265/\sqrt{10}} \approx 3.50$ (1pt). Calculates the p-value using $df=9$ for a one-tailed test (e.g., $P(T > 3.50) \approx 0.0035$) (1pt).</li>
+          
+          <li>Part d (1pt): Compares p-value to $\alpha=0.01$ and states a correct conclusion in context (e.g., "Since p-value $0.0035 < 0.01$, we reject $H_0$. There is sufficient evidence to conclude that the new strength training program is effective in increasing vertical jump height.") (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S10Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.V,UNC-4.W,UNC-4.Y,UNC-4.Z,UNC-4.AA"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A marketing company wants to compare the effectiveness of two different advertising strategies, Strategy A and Strategy B, on customer spending. They randomly assign 20 stores to implement Strategy A and another 25 stores to implement Strategy B. After one month, the average increase in daily sales (in dollars) for the two groups of stores is recorded. Strategy A: $\bar{x}_A = 1250$, $s_A = 210$, $n_A = 20$. Strategy B: $\bar{x}_B = 1180$, $s_B = 190$, $n_B = 25$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure and verify the conditions for constructing a 90% confidence interval for the true difference in mean daily sales increase between Strategy A and Strategy B ($\mu_A - \mu_B$).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the 90% confidence interval for the true difference in mean daily sales increase between Strategy A and Strategy B.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval from part (b) in context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on this confidence interval, is there convincing evidence that Strategy A leads to a higher mean increase in daily sales than Strategy B? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a two-sample t-interval for a difference of means (1pt). Verifies conditions: Two independent random samples (given), $n_A=20 < 30$ and $n_B=25 < 30$, so populations are approximately normal or graphs show no strong skew/outliers for each group (mention t-distribution robustness) (1pt).</li>
+          
+          <li>Part b (2pts): Calculates the correct degrees of freedom (e.g., using conservative $df = \min(n_A-1, n_B-1) = 19$ or software's more precise df $\approx 37.9$) (0.5pt). Correctly finds the critical t-value (or uses calculator) (0.5pt). Calculates the correct confidence interval using the formula $(\bar{x}_A - \bar{x}_B) \pm t^* \sqrt{\frac{s_A^2}{n_A} + \frac{s_B^2}{n_B}}$ (e.g., for $df=37.9$, $t^* \approx 1.687$, interval is $(70 \pm 88.07) \Rightarrow (-18.07, 158.07)$) (1pt).</li>
+          
+          <li>Part c (1pt): Correctly interprets the interval in context, stating that we are 90% confident that the true difference in mean daily sales increase ($\mu_A - \mu_B$) is between the lower and upper bounds of the interval (1pt).</li>
+          
+          <li>Part d (1pt): States whether there is convincing evidence that Strategy A leads to a higher mean increase (0.5pt). Justifies by explaining whether the entire interval is above zero (for $\mu_A - \mu_B$) or if zero is included/excluded (0.5pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S10Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.G,VAR-7.H,VAR-7.1,DAT-3.G,DAT-3.H"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A pharmaceutical company is testing two different dosages of a new drug designed to reduce reaction time. They randomly assign 30 volunteers to receive Dosage 1 and another 30 volunteers to receive Dosage 2. After administering the drug, they measure each volunteer's reaction time (in milliseconds). Dosage 1: $\bar{x}_1 = 285$ ms, $s_1 = 35$ ms, $n_1 = 30$. Dosage 2: $\bar{x}_2 = 270$ ms, $s_2 = 30$ ms, $n_2 = 30$. The company wants to determine if there is a statistically significant difference in mean reaction times between the two dosages.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for this investigation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing a two-sample t-test for the difference in means.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the p-value in context. Based on a significance level of $\alpha = 0.05$, what conclusion should the company draw? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States $H_0: \mu_1 = \mu_2$ (or $\mu_1 - \mu_2 = 0$) and $H_a: \mu_1 \ne \mu_2$ (or $\mu_1 - \mu_2 \ne 0$) (1pt). Defines $\mu_1$ as the true mean reaction time for Dosage 1 and $\mu_2$ for Dosage 2 (0.5pt bonus if provided).</li>
+          
+          <li>Part b (1pt): Verifies conditions: Two independent random samples (given). Both $n_1=30$ and $n_2=30$ are $\ge 30$, so the sampling distributions of the sample means are approximately normal by Central Limit Theorem (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the test statistic $t = \frac{(\bar{x}_1 - \bar{x}_2) - 0}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}} = \frac{(285 - 270) - 0}{\sqrt{\frac{35^2}{30} + \frac{30^2}{30}}} \approx 1.996$ (1pt). Calculates the p-value using appropriate degrees of freedom (e.g., software $df \approx 57.6$ or conservative $df=29$) for a two-tailed test (e.g., $P(</li>
+          
+          <li>T</li>
+          
+          <li>> 1.996) \approx 0.0505$ using $df=57.6$) (1pt).</li>
+          
+          <li>Part d (2pts): Interprets the p-value (e.g., "If there is no difference in true mean reaction times between the two dosages, there is approximately a 5.05% chance of observing a difference in sample means as extreme as 15 ms or more, purely by random chance") (1pt). Compares p-value to $\alpha=0.05$ and states a correct conclusion in context (e.g., "Since p-value $0.0505 > 0.05$, we fail to reject $H_0$. There is not sufficient evidence to conclude that there is a statistically significant difference in mean reaction times between the two dosages.") (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

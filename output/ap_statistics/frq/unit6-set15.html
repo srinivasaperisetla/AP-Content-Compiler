@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 15)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 15)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S15Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.A,UNC-4.B,UNC-4.D,UNC-4.F,UNC-4.G"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A large fast-food chain wants to estimate the proportion of customers who prefer their new plant-based burger over their traditional beef burger. They conduct a random sample of 250 customers, and 145 indicate a preference for the plant-based burger.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure for constructing a confidence interval for the true proportion of customers who prefer the plant-based burger, and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95 percent confidence interval for the true proportion of customers who prefer the plant-based burger.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the calculated 95 percent confidence interval in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The marketing department claims that more than half of all customers prefer the new plant-based burger. Based on your confidence interval, does this claim appear plausible? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies a one-sample z-interval for a population proportion AND verifies conditions (randomization, $n\hat{p} \ge 10$, $n(1-\hat{p}) \ge 10$, 10% condition).</li>
+          
+          <li>Part b (1pt): Calculates the correct sample proportion ($\hat{p} = 145/250 = 0.58$), standard error, and confidence interval $(0.519, 0.641)$ with appropriate work shown.</li>
+          
+          <li>Part c (1pt): Provides a correct interpretation of the confidence interval in context (e.g., "We are 95% confident that the true proportion of all customers who prefer the plant-based burger is between 0.519 and 0.641.").</li>
+          
+          <li>Part d (1pt): States that the claim is plausible and justifies by noting that 0.50 is below the lower bound of the interval.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S15Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.D,VAR-6.E,VAR-6.F,VAR-6.G,DAT-3.A,DAT-3.B"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A manufacturer claims that no more than 10 percent of their newly produced electronic components are defective. A quality control manager suspects the defect rate is actually higher. To test this, she selects a random sample of 300 components and finds 39 defective components.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for the manager's suspicion. Identify the appropriate inference method to test these hypotheses.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for conducting this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value and a significance level of $\alpha = 0.05$, what conclusion should the quality control manager draw? Justify your answer in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States $H_0: p = 0.10$ and $H_a: p > 0.10$ (or equivalent) AND identifies a one-sample z-test for a population proportion.</li>
+          
+          <li>Part b (1pt): Verifies conditions: Random sample (given), $np_0 = 300(0.10)=30 \ge 10$, $n(1-p_0) = 300(0.90)=270 \ge 10$, and 10% condition (assuming a very large production).</li>
+          
+          <li>Part c (2pts): Calculates the sample proportion ($\hat{p} = 39/300 = 0.13$). Calculates the test statistic $z = \frac{0.13 - 0.10}{\sqrt{\frac{0.10(0.90)}{300}}} \approx 1.732$. Calculates the p-value $P(Z > 1.732) \approx 0.0416$.</li>
+          
+          <li>Part d (1pt): Compares p-value to $\alpha$ ($0.0416 < 0.05$). Concludes to reject $H_0$ and justifies in context (e.g., "There is sufficient evidence to conclude that the true proportion of defective components is greater than 10 percent.").</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S15Q3"
+      data-difficulty="hard"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.H,VAR-6.I,VAR-6.J,VAR-6.K,DAT-3.C,DAT-3.D"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A medical researcher wants to compare the effectiveness of two different medications, Medication X and Medication Y, in preventing migraines. A random sample of 200 patients received Medication X, and 120 of them reported a significant reduction in migraine frequency. Another independent random sample of 180 patients received Medication Y, and 90 of them reported a significant reduction. The researcher wants to determine if Medication X is more effective than Medication Y.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses to investigate the researcher's claim. Identify the appropriate inference method.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for conducting this significance test for the difference between two population proportions.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test. Assume Medication X is population 1 and Medication Y is population 2.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value and a significance level of $\alpha = 0.01$, what conclusion should the researcher draw? Justify your answer in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States $H_0: p_X - p_Y = 0$ (or $p_X = p_Y$) and $H_a: p_X - p_Y > 0$ (or $p_X > p_Y$) AND identifies a two-sample z-test for a difference in population proportions.</li>
+          
+          <li>Part b (1pt): Verifies conditions for both samples: Random samples (given), independence (given/implied), and large counts for both success and failure for each group ($n_X \hat{p}_X = 120 \ge 10, n_X(1-\hat{p}_X) = 80 \ge 10$; $n_Y \hat{p}_Y = 90 \ge 10, n_Y(1-\hat{p}_Y) = 90 \ge 10$). Also mentions 10% condition for populations if applicable.</li>
+          
+          <li>Part c (2pts): Calculates sample proportions ($\hat{p}_X = 120/200 = 0.60$, $\hat{p}_Y = 90/180 = 0.50$). Calculates pooled proportion $\hat{p}_c = (120+90)/(200+180) = 210/380 \approx 0.5526$. Calculates test statistic $z = \frac{(0.60 - 0.50)}{\sqrt{0.5526(0.4474)(\frac{1}{200} + \frac{1}{180})}} \approx 1.96$. Calculates p-value $P(Z > 1.96) \approx 0.025$.</li>
+          
+          <li>Part d (1pt): Compares p-value to $\alpha$ ($0.025 > 0.01$). Concludes to fail to reject $H_0$ and justifies in context (e.g., "Since the p-value (0.025) is greater than $\alpha$ (0.01), we fail to reject the null hypothesis. There is not sufficient evidence to conclude that Medication X is more effective than Medication Y in preventing migraines.").</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S15Q4"
+      data-difficulty="easy"
+      data-skill-codes="1.B,3.A,4.A,4.B"
+      data-learning-objectives="UNC-5.A,UNC-5.B,UNC-5.C,UNC-5.D"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A manufacturer of cell phone batteries claims that no more than 5 percent of their batteries are defective. A consumer watchdog group believes the proportion of defective batteries is higher. They plan to conduct a significance test with $H_0: p = 0.05$ versus $H_a: p > 0.05$ at a significance level of $\alpha = 0.05$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe a Type I error and a Type II error in the context of this problem and the potential consequences of each.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        The group decides to reduce the significance level to $\alpha = 0.01$. Explain how this change would affect the probability of a Type I error and the probability of a Type II error.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Besides changing the significance level, identify one other factor that would increase the power of the test to detect a higher defect rate, and explain why it has this effect.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly describes Type I error (rejecting $H_0$ when $H_0$ is true: concluding defect rate is higher than 5% when it's not) and its consequence (e.g., unfairly damages manufacturer's reputation, costly recall). Correctly describes Type II error (failing to reject $H_0$ when $H_a$ is true: concluding defect rate is not higher than 5% when it is) and its consequence (e.g., consumers get defective batteries, loss of consumer trust, safety issues).</li>
+          
+          <li>Part b (1pt): Explains that reducing $\alpha$ to 0.01 would decrease the probability of a Type I error (because it requires stronger evidence to reject $H_0$). Explains that this would increase the probability of a Type II error (as it's harder to reject $H_0$ even when $H_a$ is true).</li>
+          
+          <li>Part c (1pt): Identifies an increased sample size (e.g., sampling more batteries) AND explains that a larger sample size reduces the standard error, making the test more sensitive to detect a true difference, thus increasing power.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S15Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.H,VAR-6.I,VAR-6.J,VAR-6.K,DAT-3.C,DAT-3.D"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A research study investigated the effectiveness of two different fertilizers, Fertilizer A and Fertilizer B, on the germination rate of a particular type of seed. Two independent random samples of 200 seeds each were treated with one of the fertilizers. The results are summarized in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Fertilizer</th><th>Number of Seeds Germinated</th><th>Total Seeds</th></tr></thead><tbody><tr><td>A</td><td>172</td><td>200</td></tr><tr><td>B</td><td>158</td><td>200</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses to investigate if there is a significant difference in the germination rates between Fertilizer A and Fertilizer B.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing a two-sample $z$-test for a difference in population proportions.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your results and using a significance level of $\alpha = 0.01$, what conclusion should the researchers make? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Let $p_A$ be the true germination rate for Fertilizer A and $p_B$ be the true germination rate for Fertilizer B. $H_0: p_A - p_B = 0$ (or $p_A = p_B$) and $H_a: p_A - p_B \ne 0$ (or $p_A \ne p_B$).</li>
+          
+          <li>Part b (2pts): Verifies independent random samples. Checks large counts for both groups: $n_A\hat{p}_A = 172 \ge 10$, $n_A(1-\hat{p}_A) = 28 \ge 10$, $n_B\hat{p}_B = 158 \ge 10$, $n_B(1-\hat{p}_B) = 42 \ge 10$. Verifies 10% condition for both samples (sample sizes 200 are less than 10% of all possible seeds for each fertilizer).</li>
+          
+          <li>Part c (2pts): Calculates $\hat{p}_A = 172/200 = 0.86$, $\hat{p}_B = 158/200 = 0.79$. Calculates pooled proportion $\hat{p}_c = (172+158)/(200+200) = 330/400 = 0.825$. Test statistic $z = \frac{\hat{p}_A - \hat{p}_B}{\sqrt{\hat{p}_c(1-\hat{p}_c)(\frac{1}{n_A} + \frac{1}{n_B})}} = \frac{0.86 - 0.79}{\sqrt{0.825(0.175)(\frac{1}{200} + \frac{1}{200})}} \approx 1.84$. P-value for two-sided test $2 \times P(Z > 1.84) \approx 2 \times 0.0329 = 0.0658$.</li>
+          
+          <li>Part d (1pt): Concludes that since the p-value $0.0658 > \alpha = 0.01$, there is not sufficient evidence to reject the null hypothesis. The researchers should conclude that there is not convincing evidence of a significant difference in the germination rates between Fertilizer A and Fertilizer B.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

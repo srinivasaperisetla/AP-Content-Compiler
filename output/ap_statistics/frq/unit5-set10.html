@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 10)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 10)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S10Q1"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.K,UNC-3.L,UNC-3.M"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A large company claims that 80% of its customers are satisfied with their service. A consumer advocacy group plans to take a random sample of 150 customers to investigate this claim.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample proportion of satisfied customers, $\hat{p}$, if the company's claim is true. Be sure to calculate the mean and standard deviation of $\hat{p}$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether it is appropriate to use a normal distribution to model the sampling distribution of $\hat{p}$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that in a random sample of 150 customers, less than 75% are satisfied, assuming the company's claim is true.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly identifies $\mu_{\hat{p}} = p = 0.80$ (1pt) and calculates $\sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} = \sqrt{\frac{0.80(0.20)}{150}} \approx 0.03266$ (1pt).</li>
+          
+          <li>Part b (1pt): Checks conditions: $n \cdot p = 150 \cdot 0.80 = 120 \ge 10$ and $n \cdot (1-p) = 150 \cdot 0.20 = 30 \ge 10$. States that since both are $\ge 10$, the sampling distribution is approximately normal (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the $z$-score $z = \frac{0.75 - 0.80}{0.03266} \approx -1.53$ (1pt) and calculates the probability $P(\hat{p} < 0.75) \approx 0.0630$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S10Q2"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.Q,UNC-3.R,UNC-3.S"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">The amount of cereal in a box is normally distributed with a mean of 368 grams and a standard deviation of 5 grams. A quality control manager takes a random sample of 40 boxes of cereal.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample mean amount of cereal, $\bar{x}$, in the 40 boxes. Be sure to calculate its mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether it is appropriate to use a normal distribution to model the sampling distribution of $\bar{x}$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the mean amount of cereal in a random sample of 40 boxes is less than 367 grams.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly identifies $\mu_{\bar{x}} = \mu = 368$ grams (1pt) and calculates $\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}} = \frac{5}{\sqrt{40}} \approx 0.7906$ grams (1pt).</li>
+          
+          <li>Part b (1pt): States that since the population distribution of cereal amounts is normally distributed, the sampling distribution of $\bar{x}$ is also normally distributed (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the $z$-score $z = \frac{367 - 368}{0.7906} \approx -1.26$ (1pt) and calculates the probability $P(\bar{x} < 367) \approx 0.1038$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S10Q3"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.N,UNC-3.O,UNC-3.P"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A company operates two large production lines, Line A and Line B. Historically, 92% of items produced on Line A are defect-free, while 85% of items produced on Line B are defect-free. A quality control engineer takes a random sample of 200 items from Line A and a random sample of 150 items from Line B. Let $\hat{p}_A$ be the sample proportion of defect-free items from Line A and $\hat{p}_B$ be the sample proportion from Line B.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the difference in sample proportions, $\hat{p}_A - \hat{p}_B$. Include the mean and standard deviation of this difference.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether the sampling distribution of $\hat{p}_A - \hat{p}_B$ can be approximated by a normal distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the sample proportion of defect-free items from Line A is more than 10 percentage points higher than that from Line B.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly identifies $\mu_{\hat{p}_A - \hat{p}_B} = p_A - p_B = 0.92 - 0.85 = 0.07$ (1pt) and calculates $\sigma_{\hat{p}_A - \hat{p}_B} = \sqrt{\frac{p_A(1-p_A)}{n_A} + \frac{p_B(1-p_B)}{n_B}} = \sqrt{\frac{0.92(0.08)}{200} + \frac{0.85(0.15)}{150}} \approx 0.0349$ (1pt).</li>
+          
+          <li>Part b (1pt): Checks all four conditions: $n_A p_A = 184 \ge 10$, $n_A (1-p_A) = 16 \ge 10$, $n_B p_B = 127.5 \ge 10$, $n_B (1-p_B) = 22.5 \ge 10$. States that since all are $\ge 10$, the sampling distribution is approximately normal (1pt).</li>
+          
+          <li>Part c (2pts): Calculates $z = \frac{0.10 - 0.07}{0.0349} \approx 0.86$ (1pt) and calculates probability $P(\hat{p}_A - \hat{p}_B > 0.10) \approx 0.1949$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S10Q4"
+      data-difficulty="medium"
+      data-skill-codes="4.B,3.B,3.C"
+      data-learning-objectives="UNC-3.I,UNC-3.J,UNC-3.H"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A researcher is interested in estimating the average weight of a certain species of fish in a large lake. She takes a random sample of 10 fish. Their weights (in pounds) are: 7.2, 8.5, 6.9, 9.1, 7.8, 8.3, 7.5, 9.0, 8.1, 7.6.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the point estimate for the population mean weight of the fish using the provided sample data.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain what it means for an estimator to be unbiased. Based on your knowledge of sampling distributions, is the estimator used in part (a) unbiased? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe how a simulation could be used to estimate the sampling distribution of the sample mean weight of fish for samples of size 10.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): The point estimate for the population mean is the sample mean $\bar{x} = \frac{7.2+8.5+6.9+9.1+7.8+8.3+7.5+9.0+8.1+7.6}{10} = 7.9$ pounds (1pt).</li>
+          
+          <li>Part b (2pts): An estimator is unbiased if the mean of its sampling distribution is equal to the true value of the population parameter being estimated (1pt). Yes, the sample mean ($\bar{x}$) is an unbiased estimator for the population mean ($\mu$), because $E(\bar{x}) = \mu$ (1pt).</li>
+          
+          <li>Part c (2pts): To estimate the sampling distribution, one would repeatedly take many random samples of size 10 from the population. For each sample, calculate the sample mean $\bar{x}$. Then, create a plot (like a histogram or dot plot) of these many sample means to visualize the shape, center, and spread of the sampling distribution of $\bar{x}$ (2pts).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S10Q5"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.C,4.B"
+      data-learning-objectives="VAR-6.A,VAR-6.C,UNC-3.S"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">The weights of adult males in a certain city are approximately normally distributed with a mean of 185 pounds and a standard deviation of 25 pounds.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the probability that a randomly selected adult male from this city weighs more than 210 pounds.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        A random sample of 36 adult males is selected. Calculate the probability that the sample mean weight for this sample is more than 190 pounds.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Explain why it is appropriate to use the normal distribution to calculate the probability in part (b), even if the population distribution of weights was not perfectly normal.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Calculates $z = \frac{210 - 185}{25} = 1.00$ and $P(X > 210) = P(Z > 1.00) \approx 0.1587$ (1pt).</li>
+          
+          <li>Part b (2pts): Calculates the standard deviation of the sample mean $\sigma_{\bar{x}} = \frac{25}{\sqrt{36}} = \frac{25}{6} \approx 4.167$ pounds (1pt). Calculates $z = \frac{190 - 185}{4.167} \approx 1.20$ and $P(\bar{x} > 190) = P(Z > 1.20) \approx 0.1151$ (1pt).</li>
+          
+          <li>Part c (1pt): Because the sample size ($n=36$) is greater than or equal to 30, the Central Limit Theorem (CLT) applies, which states that the sampling distribution of the sample mean will be approximately normal (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

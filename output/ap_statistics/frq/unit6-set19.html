@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 19)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 19)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S19Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.A,UNC-4.B,UNC-4.D,UNC-4.F"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A market research company wants to estimate the proportion of adults in a certain city who regularly use public transportation. They survey a random sample of 500 adults from the city and find that 180 of them regularly use public transportation.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the population and the parameter of interest.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for constructing a confidence interval for the population proportion of adults who regularly use public transportation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Construct a 95% confidence interval for the population proportion of adults in the city who regularly use public transportation. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the confidence interval you constructed in part (c) in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly identifies population and parameter.</li>
+          
+          <li>Part b (1pt): Verifies random sample, normal condition ($n\hat{p} \ge 10$ and $n(1-\hat{p}) \ge 10$), and independence (10% condition).</li>
+          
+          <li>Part c (2pts): Correctly calculates $\hat{p}$, standard error, and interval. Shows formula or calculator syntax.</li>
+          
+          <li>Part d (1pt): Correctly interprets the confidence interval in context.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S19Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.D,VAR-6.F,VAR-6.G,DAT-3.A,DAT-3.B"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A food company claims that 30% of its snack bars contain peanuts. A consumer advocacy group suspects this claim is too low and that the actual proportion is higher. They take a random sample of 200 snack bars and find that 70 of them contain peanuts.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for this investigation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing a one-sample $z$-test for a population proportion.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the $p$-value for this test. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your $p$-value and a significance level of $\alpha = 0.05$, what conclusion should the consumer advocacy group draw? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states $H_0: p=0.30$ and $H_a: p>0.30$ with $p$ defined.</li>
+          
+          <li>Part b (1pt): Verifies random sample, normal condition ($np \ge 10$ and $n(1-p) \ge 10$), and independence (10% condition).</li>
+          
+          <li>Part c (2pts): Calculates correct test statistic $z$ and $p$-value. Shows formula or calculator syntax.</li>
+          
+          <li>Part d (1pt): Compares $p$-value to $\alpha$ and draws a correct conclusion in context with justification.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S19Q3"
+      data-difficulty="easy"
+      data-skill-codes="1.B,4.B"
+      data-learning-objectives="UNC-5.A,UNC-5.D"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A pharmaceutical company is testing a new drug designed to reduce the proportion of patients experiencing a certain side effect. The standard drug has a side effect rate of 25%. The company wants to test if the new drug has a lower side effect rate. They set up hypotheses $H_0: p = 0.25$ and $H_a: p < 0.25$, where $p$ is the true proportion of patients experiencing the side effect with the new drug.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe a Type I error in the context of this problem and state a potential consequence.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe a Type II error in the context of this problem and state a potential consequence.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly describes Type I error (reject $H_0$ when $H_0$ is true) in context and provides a relevant consequence.</li>
+          
+          <li>Part b (2pts): Correctly describes Type II error (fail to reject $H_0$ when $H_a$ is true) in context and provides a relevant consequence.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S19Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.I,UNC-4.J,UNC-4.K,UNC-4.M"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">Researchers want to compare the effectiveness of two different fertilizers, Fertilizer A and Fertilizer B, on the germination rate of a particular type of seed. They randomly select 300 seeds and treat 150 with Fertilizer A and the remaining 150 with Fertilizer B. For Fertilizer A, 120 seeds germinate, while for Fertilizer B, 105 seeds germinate.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure to construct a confidence interval for the difference in germination rates and define the parameters of interest.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for constructing a confidence interval for the difference between the two population proportions.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Construct a 90% confidence interval for the difference in the germination rates ($p_A - p_B$) between seeds treated with Fertilizer A and seeds treated with Fertilizer B. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the 90% confidence interval you constructed in part (c) in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies a two-sample $z$-interval for a difference in proportions and defines $p_A$ and $p_B$.</li>
+          
+          <li>Part b (1pt): Verifies random assignment/sampling, normal condition for both groups ($n_A\hat{p}_A, n_A(1-\hat{p}_A), n_B\hat{p}_B, n_B(1-\hat{p}_B) \ge 10$), and independence (10% condition or random assignment implies independence).</li>
+          
+          <li>Part c (2pts): Calculates correct $\hat{p}_A$, $\hat{p}_B$, standard error, and interval. Shows formula or calculator syntax.</li>
+          
+          <li>Part d (1pt): Correctly interprets the confidence interval for the difference in proportions in context.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S19Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.H,VAR-6.J,VAR-6.K,DAT-3.C,DAT-3.D"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A public health organization wants to determine if there is a difference in the proportion of adults who smoke in two different rural counties, County X and County Y. A random sample of 300 adults from County X found 60 smokers. A separate random sample of 250 adults from County Y found 40 smokers.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses to test if there is a significant difference in the proportion of adults who smoke between the two counties.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing a two-sample $z$-test for a difference in population proportions.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the $p$-value for this test. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your $p$-value and a significance level of $\alpha = 0.01$, what conclusion should the public health organization draw? Justify your answer in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states $H_0: p_X = p_Y$ or $H_0: p_X - p_Y = 0$ and $H_a: p_X \ne p_Y$ or $H_a: p_X - p_Y = 0$ with $p_X, p_Y$ defined.</li>
+          
+          <li>Part b (1pt): Verifies two independent random samples, normal conditions for both groups using pooled proportion ($n_X\hat{p}_c, n_X(1-\hat{p}_c), n_Y\hat{p}_c, n_Y(1-\hat{p}_c) \ge 10$), and independence within each sample (10% condition).</li>
+          
+          <li>Part c (2pts): Calculates correct pooled proportion $\hat{p}_c$, test statistic $z$, and $p$-value. Shows formula or calculator syntax.</li>
+          
+          <li>Part d (1pt): Compares $p$-value to $\alpha$ and draws a correct conclusion in context with justification.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

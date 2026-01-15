@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 2)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 2)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S2Q1"
+      data-difficulty="easy"
+      data-skill-codes="3.A,4.B"
+      data-learning-objectives="VAR-4.A,VAR-4.D,VAR-4.C"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A small high school conducted a survey among its 200 students to understand their favorite type of extracurricular activity. The results are summarized in the table below, categorized by activity type and gender.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Gender \ Activity</th><th>Sports</th><th>Arts</th><th>Clubs</th><th>Total</th></tr></thead><tbody><tr><td>Male</td><td>50</td><td>30</td><td>20</td><td>100</td></tr><tr><td>Female</td><td>30</td><td>40</td><td>30</td><td>100</td></tr><tr><td>Total</td><td>80</td><td>70</td><td>50</td><td>200</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What is the probability that a randomly selected student prefers Sports?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Given that a randomly selected student prefers Arts, what is the probability that the student is Female?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Are the events "prefers Sports" and "is Male" independent? Justify your answer using probabilities.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly calculates $P(\text{Sports})$ using the total number of students preferring Sports and the total number of students.</li>
+          
+          <li>Part b (2pts): Correctly calculates $P(\text{Female}</li>
+          
+          <li>\text{Arts})$ using the appropriate conditional probability formula or by identifying the correct counts from the table.</li>
+          
+          <li>Part c (2pts): States whether the events are independent or not and provides a correct justification using a comparison of probabilities (e.g., $P(\text{Sports} \cap \text{Male})$ vs. $P(\text{Sports}) \times P(\text{Male})$ or $P(\text{Sports}</li>
+          
+          <li>\text{Male})$ vs. $P(\text{Sports})$).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S2Q2"
+      data-difficulty="medium"
+      data-skill-codes="2.B,3.B,4.B"
+      data-learning-objectives="VAR-5.A,VAR-5.C,VAR-5.D"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A small company tracks the number of technical support calls received per hour during peak times. Based on historical data, the probability distribution for the number of calls, $X$, is given below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Number of Calls ($X$)</th><th>Probability $P(X=x)$</th></tr></thead><tbody><tr><td>0</td><td>0.15</td></tr><tr><td>1</td><td>0.25</td></tr><tr><td>2</td><td>0.30</td></tr><tr><td>3</td><td>?</td></tr><tr><td>4</td><td>0.10</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Complete the probability distribution table for $X$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected number of technical support calls per hour, $E(X)$. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the standard deviation of the number of technical support calls per hour, $\sigma_X$. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the expected value from part (b) in the context of this problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly calculates the missing probability for $X=3$ as $1 - (0.15+0.25+0.30+0.10) = 0.20$.</li>
+          
+          <li>Part b (1pt): Correctly calculates $E(X) = \sum x \cdot P(X=x) = (0 \cdot 0.15) + (1 \cdot 0.25) + (2 \cdot 0.30) + (3 \cdot 0.20) + (4 \cdot 0.10) = 1.85$.</li>
+          
+          <li>Part c (2pts): Correctly calculates $\sigma_X = \sqrt{\sum (x-E(X))^2 P(X=x)} \approx 1.117$.</li>
+          
+          <li>Part d (1pt): Provides a correct interpretation of $E(X)$ in context, stating it is the long-run average number of calls per hour.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S2Q3"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.B,UNC-3.C,UNC-3.D"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A quality control manager at a manufacturing plant knows that 15% of the items produced by a certain machine are defective. A random sample of 8 items produced by this machine is selected for inspection. Assume the items are independent.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Justify that this situation can be modeled by a binomial distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the probability that exactly 2 of the 8 selected items are defective. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the mean and standard deviation of the number of defective items in a sample of 8. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        What is the probability that at least one of the 8 selected items is defective?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies the four conditions for a binomial distribution (Binary outcomes, Independent trials, Fixed number of trials, Same probability of success) and states how they are met in this context.</li>
+          
+          <li>Part b (1pt): Calculates $P(X=2) = \binom{8}{2} (0.15)^2 (0.85)^6 \approx 0.209$. Shows the formula or setup.</li>
+          
+          <li>Part c (1pt): Calculates mean $\mu_X = n p = 8(0.15) = 1.2$ and standard deviation $\sigma_X = \sqrt{np(1-p)} = \sqrt{8(0.15)(0.85)} \approx 1.01$. Shows formulas or setup.</li>
+          
+          <li>Part d (1pt): Calculates $P(X \ge 1) = 1 - P(X=0) = 1 - \binom{8}{0} (0.15)^0 (0.85)^8 = 1 - (0.85)^8 \approx 0.7275$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S2Q4"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.E,UNC-3.F,UNC-3.G"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A game involves rolling a fair six-sided die repeatedly until a 3 appears. Let $Y$ be the number of rolls required to get the first 3.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Explain why $Y$ follows a geometric distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the probability that it takes exactly 4 rolls to get the first 3. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that it takes more than 5 rolls to get the first 3. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Calculate the expected number of rolls needed to get the first 3. Interpret this value in the context of the game.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Explains the conditions for a geometric distribution (trials are independent, probability of success is constant, counting trials until the first success).</li>
+          
+          <li>Part b (1pt): Calculates $P(Y=4) = (5/6)^3 (1/6) \approx 0.09645$. Shows the formula or setup.</li>
+          
+          <li>Part c (1pt): Calculates $P(Y > 5) = (5/6)^5 \approx 0.40188$. Shows the formula or setup.</li>
+          
+          <li>Part d (2pts): Calculates $E(Y) = 1/p = 1/(1/6) = 6$. Provides a correct interpretation: on average, it will take 6 rolls to get the first 3 in the long run.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S2Q5"
+      data-difficulty="medium"
+      data-skill-codes="2.B,3.B,4.B"
+      data-learning-objectives="VAR-5.A,VAR-5.C,VAR-5.D"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A small bakery records the number of cakes sold each day. Let $X$ be the number of cakes sold on a randomly selected day. The data collected over a period of time is used to construct the probability distribution for $X$ shown in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Number of Cakes Sold (x)</th><th>Probability P(X=x)</th></tr></thead><tbody><tr><td>0</td><td>0.10</td></tr><tr><td>1</td><td>0.25</td></tr><tr><td>2</td><td>0.35</td></tr><tr><td>3</td><td>0.20</td></tr><tr><td>4</td><td>0.10</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Construct a probability histogram for the distribution of $X$. Label the axes clearly.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected number of cakes sold per day, $E(X)$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the value of $E(X)$ in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly constructs a histogram with appropriate scales and labels on both axes (e.g., $x$ on horizontal axis, $P(X=x)$ on vertical axis) and correct bar heights for each $x$ value.</li>
+          
+          <li>Part b (2pts): Calculates $E(X) = \sum x \cdot P(X=x) = (0)(0.10) + (1)(0.25) + (2)(0.35) + (3)(0.20) + (4)(0.10) = 1.95$ cakes.</li>
+          
+          <li>Part c (1pt): Interprets $E(X)$ as the long-run average number of cakes sold per day. If the bakery observes sales over many days, the average number of cakes sold per day will be approximately 1.95.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

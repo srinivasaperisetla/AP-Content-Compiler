@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 19)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 19)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S19Q1"
+      data-difficulty="easy"
+      data-skill-codes="2.C,2.D"
+      data-learning-objectives="UNC-1.Q,UNC-1.R"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A school administration wants to investigate if there is a relationship between students' favorite subject (Math, Science, English) and their preferred study method (Group Study, Individual Study). They surveyed 200 randomly selected students and recorded the following data.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Favorite Subject</th><th>Group Study</th><th>Individual Study</th><th>Total</th></tr></thead><tbody><tr><td>Math</td><td>30</td><td>45</td><td>75</td></tr><tr><td>Science</td><td>25</td><td>35</td><td>60</td></tr><tr><td>English</td><td>20</td><td>45</td><td>65</td></tr><tr><td>Total</td><td>75</td><td>125</td><td>200</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the proportion of students who prefer Group Study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the proportion of students who prefer Math given that they prefer Group Study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on the data, does there appear to be an association between favorite subject and preferred study method? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly calculates the overall proportion for Group Study ($75/200 = 0.375$).</li>
+          
+          <li>Part b (1pt): Correctly calculates the conditional proportion of students who prefer Math given Group Study ($30/75 = 0.40$).</li>
+          
+          <li>Part c (2pts): Compares relevant conditional proportions (e.g., proportion of Group Study for Math vs. Science vs. English, or vice versa) and explains if they are similar or different, concluding about association.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S19Q2"
+      data-difficulty="medium"
+      data-skill-codes="2.C,4.B"
+      data-learning-objectives="DAT-1.D,DAT-1.H"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A car manufacturer wants to model the relationship between the weight of a car (in hundreds of pounds) and its fuel efficiency (in miles per gallon, mpg). A random sample of 15 car models was selected. The least-squares regression line for predicting fuel efficiency from car weight is given by $\hat{y} = 45.1 - 0.86x$, where $\hat{y}$ is the predicted fuel efficiency and $x$ is the car weight (in hundreds of pounds). The correlation coefficient is $r = -0.78$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Interpret the slope of the least-squares regression line in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Interpret the $y$-intercept of the least-squares regression line in the context of this problem. If appropriate, comment on whether the $y$-intercept makes sense.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Predict the fuel efficiency for a car that weighs 3500 pounds.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Describe the strength and direction of the linear relationship between car weight and fuel efficiency.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Explains that for every additional 100 pounds of car weight, the predicted fuel efficiency decreases by 0.86 mpg.</li>
+          
+          <li>Part b (1pt): Interprets the y-intercept as the predicted fuel efficiency for a car with 0 weight, and states that it doesn't make sense as a car cannot have 0 weight and still function.</li>
+          
+          <li>Part c (1pt): Calculates $\hat{y} = 45.1 - 0.86(35) = 15$ mpg, showing correct use of $x=35$.</li>
+          
+          <li>Part d (1pt): States that there is a moderately strong, negative linear relationship between car weight and fuel efficiency.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S19Q3"
+      data-difficulty="hard"
+      data-skill-codes="2.A,2.C"
+      data-learning-objectives="DAT-1.I,DAT-1.J"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">An agricultural scientist is investigating the relationship between the amount of fertilizer applied to a crop (in kg per hectare) and the resulting crop yield (in tons per hectare). Data from 12 experimental plots were collected. The initial scatterplot showed a curved relationship. To linearize the relationship, the scientist applied a base-10 logarithmic transformation to the crop yield, using $\log_{10}(\text{yield})$. The least-squares regression line for predicting $\log_{10}(\text{yield})$ from fertilizer amount ($x$) is $\widehat{\log_{10}(\text{yield})} = 0.5 + 0.02x$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        One data point from the original dataset was (50 kg, 0.8 tons). After transformation, this point is (50, $\log_{10}(0.8)$). Suppose this point significantly influences the regression line. Describe what "influential point" means in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        If the point (50, 0.8) were removed, how would you expect the slope of the least-squares regression line to change? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Using the given regression equation, predict the crop yield (in tons per hectare) for a fertilizer amount of 75 kg per hectare.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): An influential point is an observation that, if removed, would significantly change the slope and/or y-intercept of the least-squares regression line.</li>
+          
+          <li>Part b (2pts): Explains that the point (50 kg, 0.8 tons) with $\log_{10}(0.8) \approx -0.097$ has high leverage ($x=50$ is likely a high $x$-value) and a large negative residual (observed $\log_{10}(0.8)$ is much lower than predicted $\widehat{\log_{10}(\text{yield})} = 0.5 + 0.02(50) = 1.5$). Removing this point, which pulls the line down at its high $x$-value, would cause the slope to increase (become steeper).</li>
+          
+          <li>Part c (1pt): Calculates $\widehat{\log_{10}(\text{yield})} = 0.5 + 0.02(75) = 2$, and correctly transforms back to $\text{yield} = 10^2 = 100$ tons per hectare.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S19Q4"
+      data-difficulty="easy"
+      data-skill-codes="2.C,2.D"
+      data-learning-objectives="UNC-1.Q,UNC-1.R"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A survey was conducted to investigate the relationship between a person's preferred method of news consumption (TV, Online, Print) and their age group (Under 30, 30-60, Over 60). The results from a random sample of 200 adults are summarized in the following table.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Preferred News Method</th><th>Under 30</th><th>30-60</th><th>Over 60</th><th>Total</th></tr></thead><tbody><tr><td>TV</td><td>10</td><td>45</td><td>25</td><td>80</td></tr><tr><td>Online</td><td>40</td><td>20</td><td>10</td><td>70</td></tr><tr><td>Print</td><td>10</td><td>15</td><td>25</td><td>50</td></tr><tr><td>Total</td><td>60</td><td>80</td><td>60</td><td>200</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the marginal distribution of preferred news consumption method.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the conditional distribution of preferred news consumption method for those in the "Under 30" age group.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on your calculations, describe any association between age group and preferred news consumption method.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly calculates and lists marginal percentages for each news method (e.g., TV: $80/200=40\%$, Online: $70/200=35\%$, Print: $50/200=25\%$).</li>
+          
+          <li>Part b (1pt): Correctly calculates and lists conditional percentages for Under 30 (e.g., TV: $10/60 \approx 16.7\%$, Online: $40/60 \approx 66.7\%$, Print: $10/60 \approx 16.7\%$).</li>
+          
+          <li>Part c (2pts): Compares the conditional distribution from (b) to the marginal distribution or other age groups and describes a clear association, such as "Under 30 prefer online news significantly more than other age groups or the overall population."</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S19Q5"
+      data-difficulty="medium"
+      data-skill-codes="2.B,2.A,2.C,4.B"
+      data-learning-objectives="UNC-1.S,DAT-1.A,DAT-1.B,DAT-1.C"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A biology student investigated the relationship between the length (in cm) and weight (in g) of a certain species of fish. Data from 6 fish are provided below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Length (cm)</th><th>Weight (g)</th></tr></thead><tbody><tr><td>10</td><td>12</td></tr><tr><td>12</td><td>18</td></tr><tr><td>15</td><td>25</td></tr><tr><td>18</td><td>32</td></tr><tr><td>20</td><td>40</td></tr><tr><td>22</td><td>48</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Construct a scatterplot for these data, with length on the horizontal axis and weight on the vertical axis.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe the relationship between fish length and weight shown in the scatterplot.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The correlation coefficient for these data is $r \approx 0.96$. Interpret this value in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly labels axes, scales axes appropriately, and plots all 6 points accurately.</li>
+          
+          <li>Part b (1pt): Describes the direction (positive), form (linear), and strength (strong) of the relationship, and mentions any unusual features if present.</li>
+          
+          <li>Part c (1pt): States that there is a strong, positive linear association between fish length and weight.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

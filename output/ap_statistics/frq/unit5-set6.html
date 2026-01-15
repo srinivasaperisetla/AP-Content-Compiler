@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 6)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 6)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S6Q1"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.K,UNC-3.L,UNC-3.M"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A battery manufacturer claims that 95% of its batteries last longer than 100 hours. A quality control manager takes a random sample of 200 batteries to test this claim. Let $\hat{p}$ be the proportion of batteries in the sample that last longer than 100 hours.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of $\hat{p}$ by determining its mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify that the sampling distribution of $\hat{p}$ can be approximated by a normal distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that in a random sample of 200 batteries, fewer than 90% last longer than 100 hours, assuming the manufacturer's claim is true.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly identifies $\mu_{\hat{p}} = p = 0.95$ (1pt) and calculates $\sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} = \sqrt{\frac{0.95(0.05)}{200}} \approx 0.0154$ (1pt).</li>
+          
+          <li>Part b (1pt): Shows $n p = 200(0.95) = 190 \ge 10$ AND $n(1-p) = 200(0.05) = 10 \ge 10$ (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the z-score $z = \frac{0.90 - 0.95}{0.0154} \approx -3.25$ (1pt) and finds the probability $P(\hat{p} < 0.90) \approx 0.0006$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S6Q2"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.Q,UNC-3.R,UNC-3.S"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">The time a customer waits in line at a popular coffee shop is known to have a mean of 4.5 minutes and a standard deviation of 1.8 minutes. A random sample of 50 customers is taken. Let $\bar{x}$ be the mean waiting time for this sample.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Determine the mean and standard deviation of the sampling distribution of $\bar{x}$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain why the sampling distribution of $\bar{x}$ can be approximated by a normal distribution, even if the population distribution of individual waiting times is not normal.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the mean waiting time for a random sample of 50 customers is greater than 5 minutes.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly identifies $\mu_{\bar{x}} = \mu = 4.5$ minutes (1pt) and calculates $\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}} = \frac{1.8}{\sqrt{50}} \approx 0.2546$ minutes (1pt).</li>
+          
+          <li>Part b (1pt): Explains that since the sample size $n=50$ is sufficiently large ($n \ge 30$), the Central Limit Theorem (CLT) applies, making the sampling distribution of $\bar{x}$ approximately normal (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the z-score $z = \frac{5 - 4.5}{0.2546} \approx 1.96$ (1pt) and finds the probability $P(\bar{x} > 5) \approx 0.025$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S6Q3"
+      data-difficulty="hard"
+      data-skill-codes="3.C,4.B"
+      data-learning-objectives="UNC-3.H,UNC-3.I"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A small town has 4 main restaurants: A, B, C, D. A local food critic wants to estimate the average customer satisfaction score (on a scale of 1-10) for all restaurants. The actual scores for each restaurant are known: Restaurant A: 7, B: 8, C: 6, D: 9. The critic plans to take a random sample of 2 restaurants.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Sample Mean ($\bar{x}$)</th><th>Frequency</th></tr></thead><tbody><tr><td>6.5</td><td>16</td></tr><tr><td>7.0</td><td>17</td></tr><tr><td>7.5</td><td>32</td></tr><tr><td>8.0</td><td>18</td></tr><tr><td>8.5</td><td>17</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Consider the sample maximum (the highest score in the sample of 2 restaurants) as an estimator for the true population maximum score (9). Is this estimator unbiased? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        A student proposes using the sample mean score from the 2 randomly selected restaurants as an estimator for the population mean score. Describe how to simulate the sampling distribution of this sample mean score.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Using the table below, which shows the results of 100 simulations of the sample mean score (each sample size $n=2$), interpret what the shape, center, and spread of this distribution suggest about the sample mean as an estimator for the population mean.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Lists all possible samples of size 2 (A,B), (A,C), (A,D), (B,C), (B,D), (C,D) and their sample maximums (8, 7, 9, 8, 9, 9). Calculates the mean of these sample maximums: $\frac{8+7+9+8+9+9}{6} = \frac{50}{6} \approx 8.33$ (1pt). Concludes that since $8.33 \ne 9$, the estimator (sample maximum) is biased (1pt).</li>
+          
+          <li>Part b (1pt): Describes a simulation process: Randomly select 2 distinct restaurants from the 4 (without replacement), calculate their mean score, and repeat this process many times (e.g., 1000 times) to create a distribution of sample means (1pt).</li>
+          
+          <li>Part c (2pts): Recognizes that the population mean is $\frac{7+8+6+9}{4} = 7.5$. Interprets that the simulation's distribution of sample means should be approximately centered around 7.5, suggesting the sample mean is an unbiased estimator. Discusses the shape (e.g., somewhat symmetric) and spread (variability of sample means) (2pts).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S6Q4"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.N,UNC-3.O,UNC-3.P"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A pharmaceutical company is testing two new drugs, Drug A and Drug B, for treating a certain condition. Drug A was given to a random sample of 150 patients, and 120 experienced an improvement. Drug B was given to a separate random sample of 180 patients, and 135 experienced an improvement. Let $p_A$ be the true proportion of patients who improve with Drug A and $p_B$ be the true proportion for Drug B. Assume $p_A=0.8$ and $p_B=0.75$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the difference in sample proportions, $\hat{p}_A - \hat{p}_B$, by determining its mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify that the sampling distribution of $\hat{p}_A - \hat{p}_B$ can be approximated by a normal distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the sample proportion of patients who improve with Drug A is at least 10 percentage points higher than the sample proportion for Drug B.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly identifies $\mu_{\hat{p}_A - \hat{p}_B} = p_A - p_B = 0.8 - 0.75 = 0.05$ (1pt) and calculates $\sigma_{\hat{p}_A - \hat{p}_B} = \sqrt{\frac{p_A(1-p_A)}{n_A} + \frac{p_B(1-p_B)}{n_B}} = \sqrt{\frac{0.8(0.2)}{150} + \frac{0.75(0.25)}{180}} \approx \sqrt{0.0010667 + 0.0010417} \approx 0.0459$ (1pt).</li>
+          
+          <li>Part b (1pt): Verifies all four conditions: $n_A p_A = 150(0.8) = 120 \ge 10$, $n_A (1-p_A) = 150(0.2) = 30 \ge 10$, $n_B p_B = 180(0.75) = 135 \ge 10$, $n_B (1-p_B) = 180(0.25) = 45 \ge 10$ (1pt).</li>
+          
+          <li>Part c (2pts): Sets up $P(\hat{p}_A - \hat{p}_B \ge 0.10)$. Calculates the z-score $z = \frac{0.10 - 0.05}{0.0459} \approx 1.09$ (1pt) and finds the probability $P(Z \ge 1.09) \approx 0.1379$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S6Q5"
+      data-difficulty="easy"
+      data-skill-codes="3.A,3.C,4.B"
+      data-learning-objectives="VAR-6.A,VAR-6.C,VAR-1.G"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">The scores on a nationwide standardized test are approximately normally distributed with a mean of 500 and a standard deviation of 100.</div>
+
+      
+      <div class="diagram">
+         <svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">\n  <rect x="0" y="0" width="400" height="200" fill="white"/>\n  <path d="M 50 150 C 70 80, 130 30, 200 30 C 270 30, 330 80, 350 150" fill="none" stroke="black" stroke-width="2"/>\n  <line x1="50" y1="150" x2="350" y2="150" stroke="black" stroke-width="1"/>\n  <line x1="200" y1="150" x2="200" y2="155" stroke="black" stroke-width="1"/>\n  <text x="200" y="170" text-anchor="middle" font-size="12">500</text>\n  <line x1="175" y1="150" x2="175" y2="155" stroke="black" stroke-width="1"/>\n  <text x="175" y="170" text-anchor="middle" font-size="12">450</text>\n  <line x1="275" y1="150" x2="275" y2="155" stroke="black" stroke-width="1"/>\n  <text x="275" y="170" text-anchor="middle" font-size="12">650</text>\n</svg> 
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        On the provided normal distribution curve, shade the region representing the probability that a randomly selected student scores between 450 and 650. Calculate this probability.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Suppose a researcher takes a random sample of 25 students. Can the normal distribution be used to describe the distribution of sample scores for these individual students? Explain your reasoning.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If two different random samples of 25 students were taken from this population, what question might be suggested by the variation observed in their sample means?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly shades the region between 450 and 650 on the normal curve (1pt). Calculates $P(450 < X < 650)$ using $z_1 = \frac{450-500}{100} = -0.5$ and $z_2 = \frac{650-500}{100} = 1.5$, finding the probability to be $\approx 0.6247$ (1pt).</li>
+          
+          <li>Part b (1pt): Explains that the normal distribution can be used to describe the distribution of individual sample scores *because the original population is normally distributed*, and not simply due to the sample size (1pt).</li>
+          
+          <li>Part c (1pt): Identifies a question such as: "Is the difference in the two sample means due to random chance (sampling variability) or does it suggest a significant underlying difference?" or "How much variation in sample means should we expect just by chance?" (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

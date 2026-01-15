@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 7)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 7)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S7Q1"
+      data-difficulty="hard"
+      data-skill-codes="2.A,2.C"
+      data-learning-objectives="DAT-1.I,DAT-1.J,DAT-1.F"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A biologist is studying the growth of a certain type of bacteria. The number of bacteria (in thousands) is recorded at different times (in hours). A scatterplot of number of bacteria versus time shows a strong curved pattern, so a transformation is applied. The least-squares regression line for $\ln(\text{Number of Bacteria})$ versus $\text{Time}$ is $\widehat{\ln(\text{Bacteria})} = 0.5 + 0.1 \times \text{Time}$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Predict the number of bacteria (in thousands) after 15 hours, using the transformed regression line.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        A residual plot for the transformed model ($\ln(\text{Number of Bacteria})$ versus $\text{Time}$) shows no apparent pattern. What does this indicate about the appropriateness of the transformed model?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        One data point from the original (untransformed) data was at 20 hours and 150 thousand bacteria. If this point had a very large residual in the transformed model AND was far from the mean of the explanatory variable (Time), explain how it could be considered an influential point.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates $\widehat{\ln(\text{Bacteria})} = 0.5 + 0.1(15) = 0.5 + 1.5 = 2.0$. Then transforms back: $\text{Predicted Bacteria} = e^{2.0} \approx 7.389$ thousand bacteria.</li>
+          
+          <li>Part b (1pt): States that no apparent pattern in the residual plot indicates that the transformed linear model is appropriate for describing the relationship between $\ln(\text{Bacteria})$ and $\text{Time}$.</li>
+          
+          <li>Part c (2pts): Explains that an influential point is a point that, if removed, would significantly change the slope of the regression line. Describes how a point far from the mean of $x$ (20 hours, indicating high leverage) with a large residual (indicating it does not fit the pattern) could pull the regression line significantly towards itself, thus influencing the slope.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S7Q2"
+      data-difficulty="easy"
+      data-skill-codes="4.B,2.C"
+      data-learning-objectives="DAT-1.C,DAT-1.D"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A study investigated the relationship between the average daily temperature (in degrees Celsius) and the number of popsicles sold at a park stand. For a certain summer month, data showed a strong positive linear correlation.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Interpret the meaning of a "strong positive linear correlation" in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Does this correlation imply that higher temperatures *cause* more popsicles to be sold? Explain your reasoning.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If the linear regression equation for this relationship is $\widehat{\text{Popsicles}} = 50 + 4 \times \text{Temperature}$, predict the number of popsicles sold on a day with an average daily temperature of $30^\circ C$.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Explains that as the average daily temperature increases, the number of popsicles sold tends to increase, and this relationship is consistently linear and strong.</li>
+          
+          <li>Part b (2pts): States that correlation does not imply causation. Explains that while there's an association, other factors (e.g., more people visiting the park on hotter days, marketing efforts) could be contributing, or it might just be an association without a direct causal link.</li>
+          
+          <li>Part c (1pt): Calculates the predicted number of popsicles: $\widehat{\text{Popsicles}} = 50 + 4(30) = 50 + 120 = 170$ popsicles.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S7Q3"
+      data-difficulty="easy"
+      data-skill-codes="2.A,4.B"
+      data-learning-objectives="DAT-1.A,DAT-1.C"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A researcher collected data on the number of hours spent studying for a final exam and the score received on the exam for 10 students. A scatterplot of the data is shown.</div>
+
+      
+      <div class="diagram">
+         <svg width="300" height="250" viewBox="0 0 300 250" style="background-color:white;">    <rect x="30" y="20" width="240" height="200" style="fill:none;stroke:black;stroke-width:1;"/>    <line x1="30" y1="220" x2="270" y2="220" style="stroke:black;stroke-width:1;"/>    <line x1="30" y1="20" x2="30" y2="220" style="stroke:black;stroke-width:1;"/>    <text x="135" y="240" font-family="Arial" font-size="12" text-anchor="middle">Hours Studied</text>    <text x="10" y="120" font-family="Arial" font-size="12" transform="rotate(-90 10 120)" text-anchor="middle">Exam Score</text>    <circle cx="50" cy="180" r="3" fill="black"/>    <circle cx="70" cy="190" r="3" fill="black"/>    <circle cx="90" cy="170" r="3" fill="black"/>    <circle cx="110" cy="150" r="3" fill="black"/>    <circle cx="130" cy="160" r="3" fill="black"/>    <circle cx="150" cy="130" r="3" fill="black"/>    <circle cx="170" cy="140" r="3" fill="black"/>    <circle cx="190" cy="110" r="3" fill="black"/>    <circle cx="210" cy="90" r="3" fill="black"/>    <circle cx="230" cy="70" r="3" fill="black"/>    <text x="25" y="225" font-family="Arial" font-size="12">0</text>    <text x="265" y="225" font-family="Arial" font-size="12">10</text>    <text x="10" y="220" font-family="Arial" font-size="12" text-anchor="end">0</text>    <text x="10" y="25" font-family="Arial" font-size="12" text-anchor="end">100</text></svg> 
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the relationship between hours studied and exam score shown in the scatterplot.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Based on the scatterplot, would you expect the correlation coefficient to be positive, negative, or close to zero? Explain your reasoning.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Description includes direction (positive), form (linear), and strength (moderately strong or strong).</li>
+          
+          <li>Part b (2pts): States positive (1pt) AND explains that as hours studied increase, exam scores tend to increase (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S7Q4"
+      data-difficulty="medium"
+      data-skill-codes="2.C,4.B"
+      data-learning-objectives="DAT-1.G,DAT-1.H"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A study investigated the relationship between the age of a car (in years) and its selling price (in thousands of dollars). The least-squares regression line for this relationship is given by $\hat{y} = 25.5 - 2.8x$, where $x$ is the age of the car and $\hat{y}$ is the predicted selling price.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Interpret the slope of the least-squares regression line in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Interpret the $y$-intercept of the least-squares regression line in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Predict the selling price of a car that is 5 years old.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly interprets the slope: for each additional year older, the predicted selling price of the car decreases by $\$2,800$ (or $2.8$ thousand dollars).</li>
+          
+          <li>Part b (2pts): Correctly interprets the $y$-intercept: a new car (0 years old) is predicted to sell for $\$25,500$ (or $25.5$ thousand dollars). Acknowledges context/limitation if appropriate, but the main interpretation is key.</li>
+          
+          <li>Part c (1pt): Correct calculation: $\hat{y} = 25.5 - 2.8(5) = 25.5 - 14 = 11.5$. The predicted selling price is $\$11,500$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S7Q5"
+      data-difficulty="hard"
+      data-skill-codes="2.B,2.A"
+      data-learning-objectives="DAT-1.E,DAT-1.F"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A statistician used a linear model to predict the fuel efficiency (miles per gallon) of various cars based on their engine size (liters). A residual plot from this regression analysis is shown below.</div>
+
+      
+      <div class="diagram">
+         <svg width="350" height="250" viewBox="0 0 350 250" style="background-color:white;">    <rect x="40" y="30" width="280" height="180" style="fill:none;stroke:black;stroke-width:1;"/>    <line x1="40" y1="120" x2="320" y2="120" style="stroke:black;stroke-width:1;"/>    <line x1="40" y1="30" x2="40" y2="210" style="stroke:black;stroke-width:1;"/>    <line x1="40" y1="210" x2="320" y2="210" style="stroke:black;stroke-width:1;"/>    <text x="180" y="230" font-family="Arial" font-size="12" text-anchor="middle">Engine Size (liters)</text>    <text x="10" y="120" font-family="Arial" font-size="12" transform="rotate(-90 10 120)" text-anchor="middle">Residuals</text>    <text x="35" y="125" font-family="Arial" font-size="12">0</text>    <text x="35" y="215" font-family="Arial" font-size="12" text-anchor="end">-5</text>    <text x="35" y="35" font-family="Arial" font-size="12" text-anchor="end">5</text>    <circle cx="60" cy="180" r="3" fill="black"/>    <circle cx="80" cy="160" r="3" fill="black"/>    <circle cx="100" cy="130" r="3" fill="black"/>    <circle cx="120" cy="110" r="3" fill="black"/>    <circle cx="140" cy="95" r="3" fill="black"/>    <circle cx="160" cy="90" r="3" fill="black"/>    <circle cx="180" cy="95" r="3" fill="black"/>    <circle cx="200" cy="110" r="3" fill="black"/>    <circle cx="220" cy="130" r="3" fill="black"/>    <circle cx="240" cy="160" r="3" fill="black"/>    <circle cx="260" cy="180" r="3" fill="black"/>    <circle cx="280" cy="190" r="3" fill="black"/>    <circle cx="300" cy="185" r="3" fill="black"/></svg> 
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe what a residual plot displays.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Based on the residual plot, is a linear model appropriate for describing the relationship between engine size and fuel efficiency? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States that a residual plot displays the difference between the observed and predicted $y$-values (residuals) against the explanatory variable ($x$) or the predicted $y$-values ($\hat{y}$).</li>
+          
+          <li>Part b (2pts): States that a linear model is NOT appropriate (1pt) because there is a clear pattern (e.g., curved pattern, U-shape) in the residual plot (1pt), indicating that the linear model is not a good fit for the data.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 8)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 8)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S8Q1"
+      data-difficulty="easy"
+      data-skill-codes="3.A,4.B"
+      data-learning-objectives="VAR-4.A,VAR-4.D"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">At a large high school, student enrollment in AP Statistics and AP Calculus was recorded. The data are summarized in the table below. There are 600 students at the high school.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th></th><th>AP Calculus</th><th>No AP Calculus</th><th>Total</th></tr></thead><tbody><tr><td>AP Statistics</td><td>120</td><td>180</td><td>300</td></tr><tr><td>No AP Statistics</td><td>80</td><td>220</td><td>300</td></tr><tr><td>Total</td><td>200</td><td>400</td><td>600</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What is the probability that a randomly selected student from this high school is enrolled in AP Statistics?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What is the probability that a randomly selected student from this high school is enrolled in AP Calculus given that they are enrolled in AP Statistics?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Are the events "enrolled in AP Statistics" and "enrolled in AP Calculus" independent? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correct calculation of $P(\text{AP Statistics}) = \frac{300}{600} = 0.5$.</li>
+          
+          <li>Part b (1pt): Correct calculation of $P(\text{AP Calculus}</li>
+          
+          <li>\text{AP Statistics}) = \frac{120}{300} = 0.4$.</li>
+          
+          <li>Part c (2pts): Correctly compares $P(\text{AP Calculus})$ to $P(\text{AP Calculus}</li>
+          
+          <li>\text{AP Statistics})$ or $P(\text{AP Statistics})$ to $P(\text{AP Statistics}</li>
+          
+          <li>\text{AP Calculus})$, or $P(A \cap B)$ to $P(A)P(B)$. Justification based on the probabilities not being equal (e.g., $0.4 \ne \frac{200}{600} \approx 0.333$). Concludes they are not independent. (1 pt for comparison, 1 pt for conclusion/justification).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S8Q2"
+      data-difficulty="medium"
+      data-skill-codes="2.B,3.B,4.B"
+      data-learning-objectives="VAR-5.A,VAR-5.C,VAR-5.D"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A company sells premium coffee beans in bags. Due to natural variation, the number of defects (e.g., broken beans, foreign material) in a randomly selected bag can vary. The probability distribution for the number of defects, $X$, in a bag is given in the table.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>$x$ (Number of Defects)</th><th>$P(X=x)$</th></tr></thead><tbody><tr><td>0</td><td>0.70</td></tr><tr><td>1</td><td>0.15</td></tr><tr><td>2</td><td>0.10</td></tr><tr><td>3</td><td>0.05</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Verify that this is a valid probability distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected number of defects in a randomly selected bag of coffee beans. Interpret this value in context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the standard deviation of the number of defects in a randomly selected bag.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States that all probabilities are between 0 and 1, inclusive, and that their sum is 1 ($0.70+0.15+0.10+0.05 = 1$).</li>
+          
+          <li>Part b (2pts): Correctly calculates the expected value $E(X) = \sum x \cdot P(X=x) = 0(0.70) + 1(0.15) + 2(0.10) + 3(0.05) = 0.5$. (1 pt for calculation). Correctly interprets $E(X)$ as the long-run average number of defects per bag if many bags were examined. (1 pt for interpretation).</li>
+          
+          <li>Part c (2pts): Correctly calculates the variance $\text{Var}(X) = \sum (x - E(X))^2 \cdot P(X=x) = (0-0.5)^2(0.70) + (1-0.5)^2(0.15) + (2-0.5)^2(0.10) + (3-0.5)^2(0.05) = 0.75$. (1 pt for calculating variance or intermediate sum of squares). Correctly calculates the standard deviation $\sigma_X = \sqrt{0.75} \approx 0.866$. (1 pt for calculation).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S8Q3"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.B,UNC-3.C,UNC-3.D"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A recent survey at a large university revealed that 60% of undergraduate students own a laptop computer. A random sample of 15 undergraduate students is selected from this university. Assume that the number of students who own a laptop in the sample follows a binomial distribution.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Verify that the conditions for a binomial distribution are met in this context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the probability that exactly 10 students in the sample own a laptop.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that at least 8 students in the sample own a laptop.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Calculate the expected number of students in the sample who own a laptop.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies the four binomial conditions: Fixed number of trials ($n=15$), two outcomes (success/failure: owns/doesn't own laptop), independent trials (large population, random sample), constant probability of success ($p=0.60$).</li>
+          
+          <li>Part b (1pt): Correctly calculates $P(X=10)$ using binomial probability formula or calculator function: $\binom{15}{10}(0.60)^{10}(0.40)^5 \approx 0.1859$.</li>
+          
+          <li>Part c (1pt): Correctly calculates $P(X \ge 8)$ using $1 - P(X \le 7)$ or by summing probabilities. $P(X \ge 8) \approx 0.6961$.</li>
+          
+          <li>Part d (1pt): Correctly calculates $E(X) = np = 15(0.60) = 9$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S8Q4"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.E,UNC-3.F,UNC-3.G"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A quality control inspector is checking components on an assembly line. She selects components at random and tests them until she finds the first defective component. Based on historical data, the probability that any given component is defective is $0.05$. Assume the tests are independent.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What is the probability that the first defective component is found on the 8th component tested?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What is the probability that the first defective component is found on or before the 5th component tested?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected number of components the inspector must test until she finds the first defective one. Interpret this value in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly uses the geometric probability formula: $P(X=8) = (1-0.05)^{8-1}(0.05) = (0.95)^7(0.05) \approx 0.0349$.</li>
+          
+          <li>Part b (1pt): Correctly calculates $P(X \le 5) = 1 - (0.95)^5 \approx 0.2262$.</li>
+          
+          <li>Part c (2pts): Correctly calculates the expected value $E(X) = \frac{1}{p} = \frac{1}{0.05} = 20$. (1 pt for calculation). Correctly interprets $E(X)$ as the long-run average number of components tested until the first defective one is found if this process were repeated many times. (1 pt for interpretation).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S8Q5"
+      data-difficulty="hard"
+      data-skill-codes="3.A,3.B,3.C"
+      data-learning-objectives="VAR-5.E,VAR-5.F,UNC-2.A"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A small bakery sells two types of specialty cakes: chocolate and vanilla. The number of chocolate cakes sold per day, $C$, and vanilla cakes sold per day, $V$, are independent random variables. The mean and standard deviation for daily sales of each cake type are given in the table.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Cake Type</th><th>Mean Daily Sales</th><th>Standard Deviation of Daily Sales</th></tr></thead><tbody><tr><td>Chocolate ($C$)</td><td>18</td><td>3</td></tr><tr><td>Vanilla ($V$)</td><td>12</td><td>2</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        The bakery owner wants to know the mean and standard deviation for the total number of cakes sold per day. Calculate these values.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        The profit from each chocolate cake is $\$15$, and from each vanilla cake is $\$12$. Let $P$ be the total daily profit from cake sales. Calculate the mean and standard deviation of $P$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The bakery owner wants to estimate the probability that on a given day, total chocolate cake sales exceed total vanilla cake sales by more than 10 cakes. Describe how you could use a simulation to estimate this probability. You do not need to perform the simulation.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly calculates $E(C+V) = E(C) + E(V) = 18 + 12 = 30$. (1 pt). Correctly calculates $\sigma_{C+V} = \sqrt{\text{Var}(C)+\text{Var}(V)} = \sqrt{3^2+2^2} = \sqrt{13} \approx 3.606$. (1 pt).</li>
+          
+          <li>Part b (2pts): Correctly calculates $E(P) = E(15C + 12V) = 15E(C) + 12E(V) = 15(18) + 12(12) = 414$. (1 pt). Correctly calculates $\sigma_P = \sqrt{15^2\text{Var}(C) + 12^2\text{Var}(V)} = \sqrt{225(3^2) + 144(2^2)} = \sqrt{2601} = 51$. (1 pt).</li>
+          
+          <li>Part c (2pts): Describes a simulation process: Use a random number generator to simulate daily sales for $C$ and $V$ based on their distributions (e.g., if normal, use $\text{N}(18,3)$ and $\text{N}(12,2)$ - though distributions are not specified, a general approach is sufficient). Calculate $C-V$ for each simulated day. Repeat many times (e.g., 1000 trials). Count the number of times $C-V > 10$. The estimated probability is this count divided by the total number of trials. (1 pt for simulating $C$ and $V$ and calculating the difference; 1 pt for repeating trials and using proportion to estimate probability).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

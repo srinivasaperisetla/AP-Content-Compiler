@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 4)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 4)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S4Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.Q,UNC-4.R,UNC-4.S"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A technology company claims that their new smartphone model has an average battery life of 18 hours. A consumer advocacy group wants to investigate this claim and randomly samples 30 new smartphones. The sample yields an average battery life of $\bar{x} = 17.2$ hours with a standard deviation of $s = 2.5$ hours.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the margin of error and a 95% confidence interval for the true average battery life of the new smartphone model.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the calculated 95% confidence interval in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a one-sample t-interval for a population mean (1pt); Verifies conditions: random sample (stated), $n = 30 \ge 30$ which is large enough for approximate normality by CLT (1pt)</li>
+          
+          <li>Part b (2pts): Calculates the correct degrees of freedom ($df=29$) and critical value ($t^* \approx 2.045$) (0.5pt); Calculates the correct margin of error ($ME = t^* \times \frac{s}{\sqrt{n}} \approx 2.045 \times \frac{2.5}{\sqrt{30}} \approx 0.934$) (0.5pt); Calculates the correct 95% confidence interval (e.g., $17.2 \pm 0.934 = (16.266, 18.134)$ hours) (1pt)</li>
+          
+          <li>Part c (1pt): Interprets the confidence interval in context, stating confidence level and parameter (e.g., "We are 95% confident that the true average battery life of this new smartphone model is between 16.266 hours and 18.134 hours.") (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S4Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A cereal company advertises that its family-size boxes contain, on average, 20 ounces of cereal. A consumer protection agency is concerned that the boxes may be underfilled. They randomly select 15 family-size boxes and find the following weights (in ounces): 19.8, 20.1, 19.7, 19.9, 19.6, 20.2, 19.5, 20.0, 19.8, 19.9, 19.7, 20.1, 19.6, 19.8, 19.7.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for this investigation and verify the conditions for performing a significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on your results from part (b), what conclusion should the consumer protection agency make at the $\alpha = 0.05$ significance level? Justify your conclusion in context and interpret the p-value.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States $H_0: \mu = 20$ and $H_a: \mu < 20$, where $\mu$ is the true mean weight of cereal in family-size boxes (1pt); Verifies conditions: random sample (stated), checks for approximate normality (e.g., no strong skewness or outliers in the provided data, or states that a graph of the data was checked and revealed no strong skewness or outliers) (1pt)</li>
+          
+          <li>Part b (2pts): Calculates the sample mean ($\bar{x} \approx 19.853$) and standard deviation ($s \approx 0.207$) (0.5pt); Calculates the correct t-test statistic ($t = \frac{\bar{x} - \mu_0}{s/\sqrt{n}} \approx \frac{19.853 - 20}{0.207/\sqrt{15}} \approx -2.75$) (0.5pt); Calculates the correct degrees of freedom ($df=14$) and p-value (e.g., $P(T_{14} < -2.75) \approx 0.0076$) (1pt)</li>
+          
+          <li>Part c (2pts): Compares p-value to $\alpha$ and states a correct decision (e.g., "Since $0.0076 < 0.05$, we reject $H_0$.") (1pt); Justifies the conclusion in context and interprets the p-value correctly (e.g., "There is convincing evidence that the true average weight of cereal boxes is less than 20 ounces. A p-value of 0.0076 means that if the true average weight were 20 ounces, there would be a 0.76% chance of observing a sample mean as low as 19.853 ounces purely by random variation.") (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S4Q3"
+      data-difficulty="hard"
+      data-skill-codes="1.D,1.E,1.F,4.C,3.E,4.E"
+      data-learning-objectives="UNC-4.0,UNC-4.P,VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.F"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A statistics teacher wants to evaluate the effectiveness of a new online module designed to improve students' understanding of hypothesis testing. Ten students are randomly selected from a large class, and their scores on a pre-test are recorded. After completing the online module, the same ten students take a post-test, and their scores are recorded. The differences in scores (Post-test score - Pre-test score) are calculated for each student: $d_i = \text{Post}_i - \text{Pre}_i$. The differences are: 5, 2, 8, -1, 4, 6, 3, 7, 0, 9.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference method and state the null and alternative hypotheses to determine if the online module improved students' scores, on average.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your results, what conclusion should the teacher make at the $\alpha = 0.01$ significance level? Justify your conclusion in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a matched-pairs t-test for a population mean difference (1pt); States $H_0: \mu_d = 0$ and $H_a: \mu_d > 0$, where $\mu_d$ is the true mean difference in scores (Post - Pre) (1pt)</li>
+          
+          <li>Part b (2pts): Verifies conditions: random sample (stated) (1pt); Checks for approximate normality of the differences (e.g., no strong skewness or outliers in the provided differences) (1pt)</li>
+          
+          <li>Part c (2pts): Calculates the sample mean difference ($\bar{d} = 4.3$) and standard deviation of differences ($s_d \approx 3.33$) (0.5pt); Calculates the correct t-test statistic ($t = \frac{\bar{d} - 0}{s_d/\sqrt{n}} \approx \frac{4.3}{3.33/\sqrt{10}} \approx 4.08$) (0.5pt); Calculates the correct degrees of freedom ($df=9$) and p-value (e.g., $P(T_9 > 4.08) \approx 0.0015$) (1pt)</li>
+          
+          <li>Part d (1pt): Compares p-value to $\alpha$ and states a correct decision (e.g., "Since $0.0015 < 0.01$, we reject $H_0$.") (0.5pt); Justifies the conclusion in context (e.g., "There is convincing evidence at the $\alpha = 0.01$ level that the online module improved students' scores on average.") (0.5pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S4Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D,4.A"
+      data-learning-objectives="UNC-4.V,UNC-4.W,UNC-4.Y,UNC-4.Z,UNC-4.AA,UNC-4.AB"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">Researchers are investigating the effect of a new energy drink on reaction time. They randomly assign 40 healthy adults to two groups: Group 1 receives the energy drink (20 subjects), and Group 2 receives a placebo (20 subjects). After 30 minutes, each subject's reaction time to a visual stimulus is measured (in milliseconds). The summary statistics are: Group 1 (Energy Drink): $\bar{x}_1 = 215$ ms, $s_1 = 25$ ms. Group 2 (Placebo): $\bar{x}_2 = 230$ ms, $s_2 = 20$ ms.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the true difference in mean reaction times (Energy Drink - Placebo).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval in context and justify whether there is convincing evidence that the energy drink affects reaction time.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Describe how increasing the sample size in both groups (while keeping means and standard deviations the same) would affect the width of the confidence interval.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a two-sample t-interval for a difference of two population means (1pt); Verifies conditions: two independent random samples/random assignment (stated), checks for approximate normality (e.g., $n_1=20, n_2=20$ are sufficiently large, or assumes approximate normality from lack of strong skew/outliers if individual data were available) (1pt)</li>
+          
+          <li>Part b (2pts): Calculates the standard error for the difference of two means ($SE \approx \sqrt{\frac{25^2}{20} + \frac{20^2}{20}} \approx 6.40$) (1pt); Calculates the correct 95% confidence interval (e.g., using $df \approx 37.03$, $t^* \approx 2.02$, $CI = (215 - 230) \pm 2.02 \times 6.40 = -15 \pm 12.93 = (-27.93, -2.07)$ ms) (1pt)</li>
+          
+          <li>Part c (2pts): Interprets the confidence interval in context (e.g., "We are 95% confident that the true mean reaction time for the energy drink group is between 2.07 ms and 27.93 ms faster than the placebo group.") (1pt); Justifies whether there is convincing evidence, relating to whether 0 is in the interval (e.g., "Since 0 is not included in the interval, there is convincing evidence that the energy drink affects reaction time, specifically making it faster.") (1pt)</li>
+          
+          <li>Part d (1pt): States that increasing the sample size in both groups would decrease (narrow) the width of the confidence interval (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S4Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.G,VAR-7.H,VAR-7.1,DAT-3.G,DAT-3.H"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">An automotive magazine wants to compare the average fuel efficiency (miles per gallon, mpg) of two new car models, Model A and Model B. They randomly select 12 cars of Model A and 15 cars of Model B. They conduct a standardized test drive for each car and record the mpg. The results are: Model A: $\bar{x}_A = 32.5$ mpg, $s_A = 2.1$ mpg. Model B: $\bar{x}_B = 30.8$ mpg, $s_B = 1.8$ mpg.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses to determine if there is a difference in the true mean fuel efficiencies between Model A and Model B.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing a significance test for the difference of two population means.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your results, what conclusion should the automotive magazine make at the $\alpha = 0.05$ significance level? Justify your conclusion in context and interpret the p-value.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States $H_0: \mu_A = \mu_B$ (or $\mu_A - \mu_B = 0$) and $H_a: \mu_A \ne \mu_B$ (or $\mu_A - \mu_B \ne 0$), where $\mu_A$ and $\mu_B$ are the true mean fuel efficiencies for Model A and Model B, respectively (1pt)</li>
+          
+          <li>Part b (2pts): Verifies conditions: two independent random samples (stated) (1pt); Checks for approximate normality of each sample (e.g., assumes approximately normal distributions for population mpg, or states plots of the sample data for each model were checked and showed no strong skewness or outliers given small sample sizes) (1pt)</li>
+          
+          <li>Part c (2pts): Calculates the standard error for the difference of two means ($SE = \sqrt{\frac{2.1^2}{12} + \frac{1.8^2}{15}} \approx 0.7638$) (1pt); Calculates the correct t-test statistic ($t = \frac{(\bar{x}_A - \bar{x}_B) - 0}{SE} = \frac{32.5 - 30.8}{0.7638} \approx 2.226$) (0.5pt); Calculates the correct degrees of freedom ($df \approx 22.8$) and p-value (e.g., $P(</li>
+          
+          <li>T_{22.8}</li>
+          
+          <li>> 2.226) \approx 2 \times 0.018 = 0.036$) (0.5pt)</li>
+          
+          <li>Part d (2pts): Compares p-value to $\alpha$ and states a correct decision (e.g., "Since $0.036 < 0.05$, we reject $H_0$.") (1pt); Justifies the conclusion in context and interprets the p-value correctly (e.g., "There is convincing evidence at the $\alpha = 0.05$ level that there is a difference in the true mean fuel efficiencies between Model A and Model B. A p-value of 0.036 means that if there were no difference in true mean fuel efficiencies, there would be a 3.6% chance of observing a sample difference as extreme as 1.7 mpg purely by random variation.") (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

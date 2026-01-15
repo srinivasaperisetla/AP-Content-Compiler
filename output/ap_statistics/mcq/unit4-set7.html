@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AP Statistics — Unit 4: Probability, Random Variables, and Probability Distributions MCQ Set</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-size: 0.95rem;
+      }
+
+      .data-table th,
+      .data-table td {
+        border: 1px solid #ccc;
+        padding: 0.5rem 0.75rem;
+        text-align: center;
+      }
+
+      .data-table th {
+        background-color: #f2f2f2;
+        font-weight: 600;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+        color: #333;
+      }
+
+      h1 {
+        border-bottom: 2px solid #333;
+        padding-bottom: 0.5rem;
+      }
+
+      .question-card {
+        border: 1px solid #ddd;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        border-radius: 8px;
+        background-color: #fafafa;
+        break-inside: avoid;
+      }
+
+      .question-header {
+        margin-bottom: 0.75rem;
+        font-size: 0.95rem;
+        color: #666;
+      }
+
+      .question-text {
+        font-weight: 600;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+      }
+
+      .diagram {
+        margin: 1rem 0;
+        text-align: center;
+        border: 1px solid #eee;
+        background: white;
+        padding: 10px;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+        max-height: 400px;
+        display: inline-block;
+      }
+
+      .choices {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .choices li {
+        margin-bottom: 0.5rem;
+      }
+
+      .key-section {
+        margin-top: 4rem;
+        border-top: 4px solid #333;
+        padding-top: 2rem;
+      }
+
+      .key-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 1rem;
+      }
+
+      @media print {
+        .question-card {
+          border: none;
+          padding: 0;
+          margin-bottom: 3rem;
+        }
+        .diagram {
+          border: 1px solid #ccc;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics — Unit 4: Probability, Random Variables, and Probability Distributions</h1>
+
+    <hr />
+
+    <div class="mcq-container">
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S7Q1"
+        data-difficulty="easy"
+        data-skill-codes="3.A"
+        data-learning-objectives="UNC-2.A"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q1.</strong> (ID: ap_statistics_MCQ_U4S7Q1)
+        </div>
+
+        
+
+        <div class="question-text">A student wants to estimate the probability of getting at least 4 heads in 5 coin tosses. She flips a coin 5 times, records the number of heads, and repeats this process 50 times. The results are summarized below.\n\nTrial Results (Number of Heads in 5 Flips):\n3, 2, 4, 1, 3, 5, 2, 3, 4, 2, 0, 3, 3, 1, 4, 2, 3, 3, 2, 4, 1, 3, 4, 3, 2, 5, 2, 3, 1, 4, 3, 2, 3, 4, 2, 3, 3, 0, 4, 1, 3, 2, 3, 4, 3, 2, 3, 4, 3, 2\n\nBased on these simulation results, what is the estimated probability of getting at least 4 heads in 5 coin tosses?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.10$</li>
+          
+          <li>B. $0.24$</li>
+          
+          <li>C. $0.30$</li>
+          
+          <li>D. $0.50$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S7Q2"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="UNC-3.A"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q2.</strong> (ID: ap_statistics_MCQ_U4S7Q2)
+        </div>
+
+        
+
+        <div class="question-text">A basketball player makes $70\%$ of his free throws. To simulate the probability that he makes exactly 3 out of 5 free throws, a student uses a random number generator. Numbers 0-6 represent a made free throw, and 7-9 represent a missed free throw. The student generates 100 sets of 5 random digits. One such set is 53810. Based on this simulation, how would the student determine the probability of making exactly 3 out of 5 free throws?</div>
+
+        <ul class="choices">
+          
+          <li>A. Count the number of sets where the first 3 digits are 0-6 and the last 2 are 7-9, then divide by 100.</li>
+          
+          <li>B. Count the number of sets where exactly 3 of the 5 digits are 0-6, regardless of order, then divide by 100.</li>
+          
+          <li>C. Count the number of sets where exactly 3 of the 5 digits are 7-9, regardless of order, then divide by 100.</li>
+          
+          <li>D. Count the number of sets where the sum of the digits is 3, then divide by 100.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S7Q3"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="UNC-3.B"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q3.</strong> (ID: ap_statistics_MCQ_U4S7Q3)
+        </div>
+
+        
+
+        <div class="question-text">A quality control inspector finds that $8\%$ of the items produced on an assembly line are defective. If a random sample of 12 items is selected, what is the probability that exactly 2 of them are defective?</div>
+
+        <ul class="choices">
+          
+          <li>A. $P(X=2) = \binom{12}{2}(0.08)^2(0.92)^{10} \approx 0.160$</li>
+          
+          <li>B. $P(X=2) = \binom{12}{2}(0.08)^2(0.92)^{10} \approx 0.183$</li>
+          
+          <li>C. $P(X=2) = \binom{12}{2}(0.08)^{10}(0.92)^2 \approx 0.002$</li>
+          
+          <li>D. $P(X=2) = (0.08)^2(0.92)^{10} \approx 0.003$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S7Q4"
+        data-difficulty="easy"
+        data-skill-codes="3.B"
+        data-learning-objectives="UNC-3.C"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q4.</strong> (ID: ap_statistics_MCQ_U4S7Q4)
+        </div>
+
+        
+
+        <div class="question-text">For a binomial distribution with $n=25$ trials and probability of success $p=0.4$, what are the mean and standard deviation of the number of successes?</div>
+
+        <ul class="choices">
+          
+          <li>A. Mean $= 10$, Standard Deviation $\approx 2.45$</li>
+          
+          <li>B. Mean $= 10$, Standard Deviation $= 6$</li>
+          
+          <li>C. Mean $= 15$, Standard Deviation $\approx 2.45$</li>
+          
+          <li>D. Mean $= 15$, Standard Deviation $= 6$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S7Q5"
+        data-difficulty="medium"
+        data-skill-codes="4.B"
+        data-learning-objectives="UNC-3.D"
+        data-correct-index="3"
+      >
+        <div class="question-header">
+          <strong>Q5.</strong> (ID: ap_statistics_MCQ_U4S7Q5)
+        </div>
+
+        
+
+        <div class="question-text">A biologist is studying a rare species of flower where the probability of a seed germinating is $0.20$. If 10 seeds are planted, the probability that exactly 3 germinate is $P(X=3) \approx 0.201$. How should this probability be interpreted?</div>
+
+        <ul class="choices">
+          
+          <li>A. If 10 seeds are planted many times, we expect about 3 seeds to germinate in about $20.1\%$ of those attempts.</li>
+          
+          <li>B. In any group of 10 seeds planted, exactly 3 will germinate about $20.1\%$ of the time.</li>
+          
+          <li>C. There is a $20.1\%$ chance that the first 3 seeds planted will germinate, and the remaining 7 will not.</li>
+          
+          <li>D. If many groups of 10 seeds are planted, about $20.1\%$ of these groups will have exactly 3 germinating seeds.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S7Q6"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="UNC-3.E"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q6.</strong> (ID: ap_statistics_MCQ_U4S7Q6)
+        </div>
+
+        
+
+        <div class="question-text">A salesperson makes cold calls until the first customer agrees to a demonstration. The probability that any given customer agrees to a demonstration is $0.15$. What is the probability that the salesperson needs to call exactly 5 customers to get the first agreement?</div>
+
+        <ul class="choices">
+          
+          <li>A. $P(X=5) = (0.15)^5 \approx 0.000076$</li>
+          
+          <li>B. $P(X=5) = (0.85)^4(0.15) \approx 0.078$</li>
+          
+          <li>C. $P(X=5) = (0.85)^4(0.15) \approx 0.088$</li>
+          
+          <li>D. $P(X=5) = \binom{5}{1}(0.15)^1(0.85)^4 \approx 0.392$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S7Q7"
+        data-difficulty="easy"
+        data-skill-codes="3.B"
+        data-learning-objectives="UNC-3.F"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q7.</strong> (ID: ap_statistics_MCQ_U4S7Q7)
+        </div>
+
+        
+
+        <div class="question-text">A student is trying to pass a difficult video game level. There is a $0.05$ probability of passing on any given attempt, and each attempt is independent. Let $X$ be the number of attempts needed until the student passes the level for the first time. What is the expected number of attempts?</div>
+
+        <ul class="choices">
+          
+          <li>A. $20$</li>
+          
+          <li>B. $0.05$</li>
+          
+          <li>C. $19$</li>
+          
+          <li>D. $200$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S7Q8"
+        data-difficulty="medium"
+        data-skill-codes="4.B"
+        data-learning-objectives="UNC-3.G"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q8.</strong> (ID: ap_statistics_MCQ_U4S7Q8)
+        </div>
+
+        
+
+        <div class="question-text">The mean of a geometric distribution modeling the number of coin flips needed to get the first head is $2$. How should this value be interpreted?</div>
+
+        <ul class="choices">
+          
+          <li>A. It is most likely that the first head will occur on the second flip.</li>
+          
+          <li>B. On average, it takes 2 coin flips to get the first head.</li>
+          
+          <li>C. The probability of getting a head is $0.5$, so $1/0.5 = 2$.</li>
+          
+          <li>D. The first head will definitely occur by the second flip.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S7Q9"
+        data-difficulty="easy"
+        data-skill-codes="3.A"
+        data-learning-objectives="VAR-4.A"
+        data-correct-index="3"
+      >
+        <div class="question-header">
+          <strong>Q9.</strong> (ID: ap_statistics_MCQ_U4S7Q9)
+        </div>
+
+        
+
+        <div class="question-text">In a survey of college students, $60\%$ indicated they own a laptop, and $25\%$ indicated they own a tablet. If $15\%$ own both, what is the probability that a randomly selected student owns a laptop but not a tablet?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.15$</li>
+          
+          <li>B. $0.25$</li>
+          
+          <li>C. $0.40$</li>
+          
+          <li>D. $0.45$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S7Q10"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="UNC-2.A"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q10.</strong> (ID: ap_statistics_MCQ_U4S7Q10)
+        </div>
+
+        
+
+        <div class="question-text">To estimate the probability of rain on 3 consecutive days, a meteorologist uses a spinner with 4 equal sections (labeled 1-4) where section 1 represents rain and sections 2-4 represent no rain. The spinner is spun 3 times to simulate 3 days. This simulation is repeated 20 times. The results are shown below, where 'R' indicates rain (section 1) and 'N' indicates no rain (sections 2-4).\n\nRNN, NNN, RNR, NRN, NNN, NNR, RNN, RRN, NNN, NNN, NNR, NNN, RRN, NRN, NNN, NNN, RNN, NRR, RNR, NNN\n\nBased on these simulation results, what is the estimated probability of rain on exactly two of the three consecutive days?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.20$</li>
+          
+          <li>B. $0.15$</li>
+          
+          <li>C. $0.25$</li>
+          
+          <li>D. $0.30$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S7Q11"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="UNC-3.A"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q11.</strong> (ID: ap_statistics_MCQ_U4S7Q11)
+        </div>
+
+        
+
+        <div class="question-text">A company manufactures electronic components, and $5\%$ are known to be defective. A quality control procedure involves inspecting batches of 10 components. To simulate the probability that a batch contains at least one defective component, a student uses a random number generator. Digits 00-04 represent defective components, and 05-99 represent non-defective components. Each set of 10 two-digit numbers represents a batch. The student runs 50 simulations. In these 50 simulations, 18 batches contained at least one defective component. Which of the following is the best estimate for the probability that a batch contains at least one defective component?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.05$</li>
+          
+          <li>B. $0.18$</li>
+          
+          <li>C. $0.36$</li>
+          
+          <li>D. $0.64$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S7Q12"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="UNC-3.B"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q12.</strong> (ID: ap_statistics_MCQ_U4S7Q12)
+        </div>
+
+        
+
+        <div class="question-text">A recent study showed that $30\%$ of adults in a certain city prefer to commute by bicycle. If a random sample of 8 adults is selected from this city, what is the probability that at most 2 of them prefer to commute by bicycle?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.5518$</li>
+          
+          <li>B. $0.3543$</li>
+          
+          <li>C. $0.0576$</li>
+          
+          <li>D. $0.2965$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S7Q13"
+        data-difficulty="medium"
+        data-skill-codes="3.C"
+        data-learning-objectives="VAR-5.F"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q13.</strong> (ID: ap_statistics_MCQ_U4S7Q13)
+        </div>
+
+        
+
+        <div class="question-text">A random variable $X$ has a mean of $10$ and a standard deviation of $2$. A new random variable $Y$ is defined as $Y = 3X + 5$. What are the mean and standard deviation of $Y$?</div>
+
+        <ul class="choices">
+          
+          <li>A. $\mu_Y = 30$, $\sigma_Y = 2$</li>
+          
+          <li>B. $\mu_Y = 35$, $\sigma_Y = 6$</li>
+          
+          <li>C. $\mu_Y = 30$, $\sigma_Y = 6$</li>
+          
+          <li>D. $\mu_Y = 35$, $\sigma_Y = 2$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S7Q14"
+        data-difficulty="medium"
+        data-skill-codes="3.B"
+        data-learning-objectives="UNC-3.C"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q14.</strong> (ID: ap_statistics_MCQ_U4S7Q14)
+        </div>
+
+        
+
+        <div class="question-text">In a survey, $70\%$ of students at a large university regularly use the campus gym. If 15 students are randomly selected, what is the standard deviation of the number of students in the sample who regularly use the campus gym?</div>
+
+        <ul class="choices">
+          
+          <li>A. $1.45$</li>
+          
+          <li>B. $1.77$</li>
+          
+          <li>C. $3.15$</li>
+          
+          <li>D. $10.5$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S7Q15"
+        data-difficulty="hard"
+        data-skill-codes="4.B"
+        data-learning-objectives="UNC-3.D"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q15.</strong> (ID: ap_statistics_MCQ_U4S7Q15)
+        </div>
+
+        
+
+        <div class="question-text">An airline finds that $5\%$ of passengers do not show up for their flights. For a flight with 200 seats, they sell 205 tickets. Let $X$ be the number of passengers who show up. This is a binomial random variable with $n=205$ and $p=0.95$. The mean is $\mu_X = 194.75$ and the standard deviation is $\sigma_X \approx 3.12$. Which of the following best describes what the standard deviation means in this context?</div>
+
+        <ul class="choices">
+          
+          <li>A. The typical deviation in the number of passengers who show up from the average of $194.75$ is about $3.12$ passengers.</li>
+          
+          <li>B. In $3.12\%$ of flights, the number of passengers who show up will exceed the mean.</li>
+          
+          <li>C. Approximately $3.12$ passengers will not show up on any given flight.</li>
+          
+          <li>D. The airline can expect between $194.75 - 3.12$ and $194.75 + 3.12$ passengers to show up on most flights.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S7Q16"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="UNC-3.E"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q16.</strong> (ID: ap_statistics_MCQ_U4S7Q16)
+        </div>
+
+        
+
+        <div class="question-text">A biased coin has a $0.3$ probability of landing on heads. If the coin is flipped until the first head appears, what is the probability that it takes at most 3 flips?</div>
+
+        <ul class="choices">
+          
+          <li>A. $P(X \le 3) = (0.3)^3$</li>
+          
+          <li>B. $P(X \le 3) = (0.7)^2(0.3)$</li>
+          
+          <li>C. $P(X \le 3) = 0.3 + (0.7)(0.3) + (0.7)^2(0.3)$</li>
+          
+          <li>D. $P(X \le 3) = 1 - (0.7)(0.3)$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S7Q17"
+        data-difficulty="medium"
+        data-skill-codes="3.B"
+        data-learning-objectives="UNC-3.F"
+        data-correct-index="3"
+      >
+        <div class="question-header">
+          <strong>Q17.</strong> (ID: ap_statistics_MCQ_U4S7Q17)
+        </div>
+
+        
+
+        <div class="question-text">A customer service representative typically needs to make 4 phone calls to reach a live person. Assuming each call is independent, what is the standard deviation of the number of calls needed until a live person is reached?</div>
+
+        <ul class="choices">
+          
+          <li>A. $3$</li>
+          
+          <li>B. $4$</li>
+          
+          <li>C. $\sqrt{3}/4 \approx 0.433$</li>
+          
+          <li>D. $\sqrt{12} \approx 3.464$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S7Q18"
+        data-difficulty="medium"
+        data-skill-codes="4.B"
+        data-learning-objectives="UNC-3.G"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q18.</strong> (ID: ap_statistics_MCQ_U4S7Q18)
+        </div>
+
+        
+
+        <div class="question-text">The probability of success in a new drug trial is $0.2$. Let $X$ be the number of patients needed until the first successful outcome. The mean of this geometric distribution is $\mu_X = 5$. Which of the following statements is the best interpretation of this mean?</div>
+
+        <ul class="choices">
+          
+          <li>A. In any group of 5 patients, exactly one will have a successful outcome.</li>
+          
+          <li>B. On average, 5 patients are expected to be treated to observe the first successful outcome.</li>
+          
+          <li>C. The most likely number of patients to be treated until the first success is 5.</li>
+          
+          <li>D. There is a $20\%$ chance that the first success occurs on the fifth patient.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S7Q19"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="VAR-4.A"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q19.</strong> (ID: ap_statistics_MCQ_U4S7Q19)
+        </div>
+
+        
+
+        <div class="question-text">A box contains 3 red balls and 5 blue balls. If two balls are drawn randomly without replacement, what is the probability that both balls are red?</div>
+
+        <ul class="choices">
+          
+          <li>A. $\frac{3}{8} \times \frac{2}{7}$</li>
+          
+          <li>B. $\frac{3}{8} \times \frac{3}{8}$</li>
+          
+          <li>C. $\frac{3}{8} + \frac{2}{7}$</li>
+          
+          <li>D. $\frac{3}{8} + \frac{3}{8}$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S7Q20"
+        data-difficulty="easy"
+        data-skill-codes="4.B"
+        data-learning-objectives="VAR-4.B"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q20.</strong> (ID: ap_statistics_MCQ_U4S7Q20)
+        </div>
+
+        
+
+        <div class="question-text">A weather forecast states that there is a $40\%$ chance of rain tomorrow. Which of the following is the best interpretation of this statement?</div>
+
+        <ul class="choices">
+          
+          <li>A. It will rain tomorrow for $40\%$ of the day.</li>
+          
+          <li>B. It will rain tomorrow in $40\%$ of the forecast region.</li>
+          
+          <li>C. In many days like tomorrow, it will rain on about $40\%$ of those days.</li>
+          
+          <li>D. There is a $60\%$ chance that it will not rain tomorrow.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S7Q21"
+        data-difficulty="medium"
+        data-skill-codes="4.B"
+        data-learning-objectives="VAR-4.C"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q21.</strong> (ID: ap_statistics_MCQ_U4S7Q21)
+        </div>
+
+        
+
+        <div class="question-text">Consider the following events for a randomly selected high school student:\nEvent A: The student plays varsity soccer.\nEvent B: The student plays varsity basketball.\nWhich of the following statements is true about events A and B?</div>
+
+        <ul class="choices">
+          
+          <li>A. Events A and B are mutually exclusive if a student can play both soccer and basketball.</li>
+          
+          <li>B. Events A and B are mutually exclusive if a student cannot play both soccer and basketball simultaneously.</li>
+          
+          <li>C. Events A and B are independent if playing soccer affects the likelihood of playing basketball.</li>
+          
+          <li>D. Events A and B are independent if $P(A \cap B) = P(A) + P(B)$.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S7Q22"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="VAR-4.D"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q22.</strong> (ID: ap_statistics_MCQ_U4S7Q22)
+        </div>
+
+        
+        <div class="diagram">
+           <table class='data-table'><thead><tr><th></th><th>Television</th><th>Internet</th><th>Total</th></tr></thead><tbody><tr><td>Male</td><td>25</td><td>35</td><td>60</td></tr><tr><td>Female</td><td>15</td><td>25</td><td>40</td></tr><tr><td>Total</td><td>40</td><td>60</td><td>100</td></tr></tbody></table>
+          
+        </div>
+        
+
+        <div class="question-text">A survey asked 100 people about their primary news source: television or internet. The results are summarized in the table below.\n\n| | Television | Internet | Total |\n|---|---|---|---|\n| Male | 25 | 35 | 60 |\n| Female | 15 | 25 | 40 |\n| Total | 40 | 60 | 100 |\n\nIf a randomly selected person from this survey is female, what is the probability that her primary news source is the internet?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.625$</li>
+          
+          <li>B. $0.417$</li>
+          
+          <li>C. $0.250$</li>
+          
+          <li>D. $0.400$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S7Q23"
+        data-difficulty="hard"
+        data-skill-codes="3.A"
+        data-learning-objectives="VAR-4.E"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q23.</strong> (ID: ap_statistics_MCQ_U4S7Q23)
+        </div>
+
+        
+
+        <div class="question-text">In a particular school, $70\%$ of students participate in sports, and $40\%$ participate in music. If $25\%$ of students participate in both sports and music, what is the probability that a randomly selected student participates in sports or music?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.70 + 0.40 = 1.10$</li>
+          
+          <li>B. $0.70 + 0.40 - 0.25 = 0.85$</li>
+          
+          <li>C. $(0.70)(0.40) = 0.28$</li>
+          
+          <li>D. $(0.70)(0.40) - 0.25 = 0.03$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S7Q24"
+        data-difficulty="medium"
+        data-skill-codes="3.B"
+        data-learning-objectives="VAR-5.C"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q24.</strong> (ID: ap_statistics_MCQ_U4S7Q24)
+        </div>
+
+        
+        <div class="diagram">
+           <table class='data-table'><thead><tr><th>Number of Complaints (x)</th><th>Probability P(X=x)</th></tr></thead><tbody><tr><td>0</td><td>0.20</td></tr><tr><td>1</td><td>0.40</td></tr><tr><td>2</td><td>0.20</td></tr><tr><td>3</td><td>0.10</td></tr><tr><td>4</td><td>0.10</td></tr></tbody></table>
+          
+        </div>
+        
+
+        <div class="question-text">The probability distribution for the number of customer complaints ($X$) received by a small business in a day is given below.\n\n| Number of Complaints (x) | Probability P(X=x) |\n|---|---|\n| 0 | 0.20 |\n| 1 | 0.40 |\n| 2 | 0.20 |\n| 3 | 0.10 |\n| 4 | 0.10 |\n\nWhat is the expected number of customer complaints per day?</div>
+
+        <ul class="choices">
+          
+          <li>A. $1.00$</li>
+          
+          <li>B. $1.50$</li>
+          
+          <li>C. $1.75$</li>
+          
+          <li>D. $2.00$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U4S7Q25"
+        data-difficulty="easy"
+        data-skill-codes="3.A"
+        data-learning-objectives="VAR-4.A"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q25.</strong> (ID: ap_statistics_MCQ_U4S7Q25)
+        </div>
+
+        
+
+        <div class="question-text">A bag contains 5 red marbles and 3 blue marbles. If one marble is drawn at random, what is the probability that it is NOT red?</div>
+
+        <ul class="choices">
+          
+          <li>A. $\frac{1}{8}$</li>
+          
+          <li>B. $\frac{3}{8}$</li>
+          
+          <li>C. $\frac{5}{8}$</li>
+          
+          <li>D. $\frac{1}{2}$</li>
+          
+        </ul>
+      </div>
+      
+    </div>
+
+    <div class="key-section">
+      <h2>Answer Key</h2>
+
+      <div class="key-grid">
+        
+        <div>
+          <strong>1.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>2.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>3.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>4.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>5.</strong>
+          D
+        </div>
+        
+        <div>
+          <strong>6.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>7.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>8.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>9.</strong>
+          D
+        </div>
+        
+        <div>
+          <strong>10.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>11.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>12.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>13.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>14.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>15.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>16.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>17.</strong>
+          D
+        </div>
+        
+        <div>
+          <strong>18.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>19.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>20.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>21.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>22.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>23.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>24.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>25.</strong>
+          B
+        </div>
+        
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

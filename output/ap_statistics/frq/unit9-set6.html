@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 6)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 6)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S6Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.AC,UNC-4.AD,UNC-4.AE,UNC-4.AF,UNC-4.AG,UNC-4.AH"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">Researchers are investigating the relationship between the age of a car (in years) and its selling price (in thousands of dollars). A random sample of 25 cars was selected, and a least-squares regression analysis was performed. The least-squares regression line is $\hat{\text{Price}} = 28.5 - 2.1 \times \text{Age}$. The standard error of the slope coefficient ($s_b$) is $0.25$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure to construct a confidence interval for the true slope of the regression line relating car age to selling price. State the name of the interval and the conditions that must be met to use it.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95 percent confidence interval for the true slope of the regression line. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval calculated in part (b) in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the confidence interval, is there convincing evidence of a negative linear relationship between car age and selling price? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly identifies a t-interval for the slope and lists the conditions (Linearity, Independence, Normal residuals, Equal variance, Random sample).</li>
+          
+          <li>Part b (2pts): Shows correct calculation of degrees of freedom ($df=23$) and t-critical value (e.g., $t^* = 2.069$), calculates the margin of error (e.g., $2.069 \times 0.25 \approx 0.51725$), and constructs the correct interval (e.g., $(-2.1 \pm 0.51725)$ or $(-2.61725, -1.58275)$).</li>
+          
+          <li>Part c (1pt): Provides a correct interpretation of the confidence interval in context (e.g., "We are 95% confident that for each additional year in age, the selling price of a car decreases by between \$1582.75 and \$2617.25, on average.").</li>
+          
+          <li>Part d (1pt): Correctly states that there is convincing evidence of a negative linear relationship because the entire interval contains only negative values.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S6Q2"
+      data-difficulty="medium"
+      data-skill-codes="4.B,4.C,4.A"
+      data-learning-objectives="UNC-4.AG,VAR-7.L,UNC-4.AI"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">Biologists are studying the growth of a certain species of tree. They collected data on the height (in meters) and the trunk diameter (in centimeters) for 40 trees. A least-squares regression analysis was performed to predict tree height from trunk diameter. The regression equation is $\hat{\text{Height}} = 0.5 + 0.8 \times \text{Diameter}$, with a standard error of the slope ($s_b$) of $0.05$. The coefficient of determination, $R^2$, is $82\%$. A scatterplot of the data and the corresponding residual plot are provided below.</div>
+
+      
+      <div class="diagram">
+         <svg width="400" height="300" viewBox="0 0 400 300" style="background-color:white;"><g transform="translate(40,240)"><line x1="0" y1="0" x2="150" y2="0" stroke="black" stroke-width="1"/><line x1="0" y1="0" x2="0" y2="-150" stroke="black" stroke-width="1"/><text x="75" y="15" text-anchor="middle" font-size="12" fill="black">Diameter (cm)</text><text x="-25" y="-75" text-anchor="middle" font-size="12" fill="black" transform="rotate(-90)">Height (m)</text><text x="75" y="-170" text-anchor="middle" font-size="12" fill="black">Scatterplot</text><circle cx="10" cy="-10" r="2" fill="black"/><circle cx="20" cy="-25" r="2" fill="black"/><circle cx="30" cy="-20" r="2" fill="black"/><circle cx="40" cy="-35" r="2" fill="black"/><circle cx="50" cy="-30" r="2" fill="black"/><circle cx="60" cy="-45" r="2" fill="black"/><circle cx="70" cy="-40" r="2" fill="black"/><circle cx="80" cy="-55" r="2" fill="black"/><circle cx="90" cy="-50" r="2" fill="black"/><circle cx="100" cy="-65" r="2" fill="black"/><circle cx="110" cy="-60" r="2" fill="black"/><circle cx="120" cy="-75" r="2" fill="black"/><circle cx="130" cy="-70" r="2" fill="black"/><circle cx="140" cy="-85" r="2" fill="black"/></g><g transform="translate(240,240)"><line x1="0" y1="0" x2="150" y2="0" stroke="black" stroke-width="1"/><line x1="0" y1="0" x2="0" y2="-150" stroke="black" stroke-width="1"/><text x="75" y="15" text-anchor="middle" font-size="12" fill="black">Diameter (cm)</text><text x="-25" y="-75" text-anchor="middle" font-size="12" fill="black" transform="rotate(-90)">Residuals</text><text x="75" y="-170" text-anchor="middle" font-size="12" fill="black">Residual Plot</text><circle cx="10" cy="5" r="2" fill="black"/><circle cx="20" cy="-5" r="2" fill="black"/><circle cx="30" cy="10" r="2" fill="black"/><circle cx="40" cy="-10" r="2" fill="black"/><circle cx="50" cy="0" r="2" fill="black"/><circle cx="60" cy="5" r="2" fill="black"/><circle cx="70" cy="-5" r="2" fill="black"/><circle cx="80" cy="10" r="2" fill="black"/><circle cx="90" cy="-10" r="2" fill="black"/><circle cx="100" cy="0" r="2" fill="black"/><circle cx="110" cy="5" r="2" fill="black"/><circle cx="120" cy="-5" r="2" fill="black"/><circle cx="130" cy="10" r="2" fill="black"/><circle cx="140" cy="-10" r="2" fill="black"/></g></svg> 
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Interpret the value of the slope of the least-squares regression line in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Based on the residual plot, evaluate whether a linear model is appropriate for these data.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Suppose an additional tree was found with a very large diameter and a height far below the predicted value for that diameter. Explain how adding this new data point to the analysis would likely affect the width of a 95 percent confidence interval for the slope.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States that for every 1 cm increase in trunk diameter, the predicted tree height increases by 0.8 meters, on average.</li>
+          
+          <li>Part b (1pt): States that a linear model is appropriate (or not) and justifies the answer by referring to the residual plot (e.g., "A linear model is appropriate because the residual plot shows no discernible pattern, and the residuals are randomly scattered around zero.").</li>
+          
+          <li>Part c (1pt): Explains that a point with a very large diameter is a high-leverage point, and if its height is far below predicted, it would be an influential point that pulls the regression line (and thus the estimated slope) toward it. This would likely decrease the standard error of the slope, thus making the confidence interval for the slope narrower.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S6Q3"
+      data-difficulty="hard"
+      data-skill-codes="1.D,1.E,4.D,4.E,4.A"
+      data-learning-objectives="UNC-4.AC,VAR-7.J,UNC-4.AH,DAT-3.N,UNC-4.AI"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A researcher is interested in whether there is a linear relationship between the amount of fertilizer applied (in kg/hectare) and the crop yield (in tons/hectare).</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Explain how a 95 percent confidence interval for the true slope of the regression line could be used to determine if there is a significant positive linear relationship between fertilizer applied and crop yield.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain how a significance test for the true slope of the regression line could be used to determine if there is a significant positive linear relationship between fertilizer applied and crop yield. Be sure to include the null and alternative hypotheses.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe how increasing the sample size, while keeping the estimated slope and residual standard deviation constant, would affect the width of a confidence interval for the slope. Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Explains that a significant positive linear relationship exists if the entire 95% confidence interval for the slope is above zero. If the lower bound is greater than zero, we are 95% confident that the true slope is positive, indicating a positive linear relationship.</li>
+          
+          <li>Part b (2pts): Explains that a significance test for $H_0: \beta = 0$ versus $H_a: \beta > 0$ is conducted. If the p-value is less than the significance level ($\alpha$), then $H_0$ is rejected, providing evidence of a significant positive linear relationship. Defines $\beta$ as the true slope of the population regression line.</li>
+          
+          <li>Part c (2pts): Explains that increasing the sample size ($n$) would increase the degrees of freedom ($n-2$) and decrease the standard error of the slope ($s_b$). A smaller standard error ($s_b$) leads to a smaller margin of error ($t^* \times s_b$) and thus a narrower confidence interval.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S6Q4"
+      data-difficulty="hard"
+      data-skill-codes="1.F,4.C,3.E,4.E"
+      data-learning-objectives="VAR-7.K,VAR-7.L,VAR-7.M,DAT-3.N"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A health organization wants to investigate if there is a linear relationship between daily screen time (in hours) and a measure of mental well-being (score from 0 to 100). A random sample of 35 individuals was surveyed. A least-squares regression line was fitted, yielding the following results: $\hat{\text{Well-being Score}} = 85.2 - 2.5 \times \text{Screen Time}$. The standard error of the slope coefficient ($s_b$) is $0.75$. The standard deviation of the residuals ($s$) is $10.3$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for testing if there is a significant negative linear relationship between daily screen time and mental well-being score. Define any parameters used.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing a significance test for the slope of the regression line.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for the test. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your results and a significance level of $\alpha = 0.01$, what conclusion can be drawn about the relationship between daily screen time and mental well-being score?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States $H_0: \beta = 0$ and $H_a: \beta < 0$, defining $\beta$ as the true slope of the population regression line relating daily screen time to mental well-being score.</li>
+          
+          <li>Part b (1pt): Verifies all 5 conditions (Linearity: assumed, Independence: random sample given, Normal residuals: $n=35$ is large enough for CLT for $b$, or assume normal residuals; Equal variance: assumed; Random: stated in prompt).</li>
+          
+          <li>Part c (2pts): Calculates the test statistic $t = \frac{b - \beta_0}{s_b} = \frac{-2.5 - 0}{0.75} \approx -3.33$. Identifies degrees of freedom ($df = n-2 = 35-2 = 33$). Calculates the p-value: $P(t_{33} < -3.33) \approx 0.0009$.</li>
+          
+          <li>Part d (1pt): Compares p-value ($0.0009$) to $\alpha = 0.01$ and states $0.0009 < 0.01$. Concludes to reject $H_0$. States in context there is convincing evidence of a negative linear relationship between daily screen time and mental well-being score.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S6Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.A"
+      data-learning-objectives="UNC-4.AC,UNC-4.AD,UNC-4.AF,UNC-4.AG,UNC-4.AI"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A researcher is investigating the relationship between the number of hours a student studies per week ($x$) and their score on a standardized exam ($y$). A random sample of 30 students was selected. The least-squares regression line calculated from the sample data is $\hat{y} = 55 + 2.5x$. The standard error of the slope coefficient is $SE_b = 0.45$. The standard deviation of the residuals is $s_e = 8.2$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure to construct a confidence interval for the true slope and verify the conditions for this procedure. Assume all plots (scatterplot, residuals plot, histogram of residuals) indicate that the conditions are met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the true slope of the regression line.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the calculated confidence interval in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Explain how increasing the sample size from 30 to 100, while keeping other statistics (like $b$ and $s_e$) similar, would affect the width of the confidence interval.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies t-interval for slope. Lists and states that the 5 conditions for inference (Linearity, Independence, Normality of residuals, Equal variance, Randomness) are met as assumed.</li>
+          
+          <li>Part b (2pts): Correctly calculates degrees of freedom $df=28$. Finds correct critical t-value (approx. $2.048$). Calculates the interval: $2.5 \pm 2.048(0.45) = (1.5784, 3.4216)$.</li>
+          
+          <li>Part c (1pt): Provides a correct interpretation in context: "We are 95% confident that for every additional hour a student studies per week, their standardized exam score increases by an average of 1.5784 to 3.4216 points."</li>
+          
+          <li>Part d (1pt): Explains that a larger sample size would decrease the standard error of the slope, leading to a narrower confidence interval.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

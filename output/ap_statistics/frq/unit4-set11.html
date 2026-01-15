@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 11)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 11)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S11Q1"
+      data-difficulty="easy"
+      data-skill-codes="3.A,4.B"
+      data-learning-objectives="VAR-4.A,VAR-4.D,VAR-4.B"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A local high school surveyed its 800 students to gather data on whether they participate in extracurricular activities (E) or have a part-time job (J). The survey revealed that 450 students participate in extracurricular activities, 300 students have a part-time job, and 150 students do both.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Construct a Venn diagram or a two-way table to display the given information.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What is the probability that a randomly selected student participates in extracurricular activities but does NOT have a part-time job?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Given that a student has a part-time job, what is the probability that they also participate in extracurricular activities?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Are participating in extracurricular activities and having a part-time job independent events? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly constructs a two-way table or Venn diagram with all counts correct.</li>
+          
+          <li>Part b (1pt): Calculates $P(E \text{ and not } J) = \frac{300}{800} = 0.375$.</li>
+          
+          <li>Part c (1pt): Calculates $P(E</li>
+          
+          <li>J) = \frac{P(E \text{ and } J)}{P(J)} = \frac{150/800}{300/800} = \frac{150}{300} = 0.5$.</li>
+          
+          <li>Part d (2pts): Calculates $P(E) = \frac{450}{800} = 0.5625$ and $P(E</li>
+          
+          <li>J) = 0.5$. Compares $P(E)$ and $P(E</li>
+          
+          <li>J)$ (or $P(E)$ and $P(E \text{ and } J) / P(J)$ or $P(E \text{ and } J)$ and $P(E)P(J)$) and concludes they are NOT independent because $0.5625 \ne 0.5$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S11Q2"
+      data-difficulty="medium"
+      data-skill-codes="2.B,3.B,4.B"
+      data-learning-objectives="VAR-5.A,VAR-5.C,VAR-5.D"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A small coffee shop observes the number of specialty coffee drinks (X) sold per hour during its peak morning hours. The probability distribution for X is given in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>X</th><th>P(X=x)</th></tr></thead><tbody><tr><td>0</td><td>0.10</td></tr><tr><td>1</td><td>0.25</td></tr><tr><td>2</td><td>0.30</td></tr><tr><td>3</td><td>0.20</td></tr><tr><td>4</td><td>0.15</td></tr><tr><td>5</td><td>0.05</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What is the probability that the coffee shop sells at least 3 specialty coffee drinks in a randomly selected peak hour?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected number of specialty coffee drinks sold per peak hour. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the standard deviation of the number of specialty coffee drinks sold per peak hour. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the expected value calculated in part (b) in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Calculates $P(X \ge 3) = P(X=3) + P(X=4) + P(X=5) = 0.20 + 0.15 + 0.05 = 0.40$.</li>
+          
+          <li>Part b (2pts): Calculates $E(X) = \sum x \cdot P(X=x) = (0 \cdot 0.10) + (1 \cdot 0.25) + (2 \cdot 0.30) + (3 \cdot 0.20) + (4 \cdot 0.15) + (5 \cdot 0.05) = 0 + 0.25 + 0.60 + 0.60 + 0.60 + 0.25 = 2.3$. Shows work for summation.</li>
+          
+          <li>Part c (2pts): Calculates $Var(X) = \sum (x - E(X))^2 \cdot P(X=x) = (0-2.3)^2(0.10) + (1-2.3)^2(0.25) + (2-2.3)^2(0.30) + (3-2.3)^2(0.20) + (4-2.3)^2(0.15) + (5-2.3)^2(0.05) = 0.529 + 0.845 + 0.027 + 0.098 + 0.4335 + 0.3645 = 2.297$. Calculates $SD(X) = \sqrt{2.297} \approx 1.5156$. Shows work.</li>
+          
+          <li>Part d (1pt): Interprets $E(X)=2.3$ as the long-run average number of specialty coffee drinks sold per peak hour if this process were repeated many times.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S11Q3"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.B,UNC-3.C,UNC-3.D"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A medical researcher believes that a new treatment for a certain allergy is effective in 80% of cases. To test this, a random sample of 15 patients with the allergy are given the new treatment. Assume the researcher's belief is correct and that the outcomes for each patient are independent.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Verify that the conditions for a binomial distribution are met for the number of patients for whom the treatment is effective in this sample.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the probability that exactly 12 patients in the sample have the treatment effective. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that fewer than 10 patients in the sample have the treatment effective. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        What are the mean and standard deviation of the number of patients for whom the treatment is effective in such samples of 15 patients?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Verifies conditions: fixed number of trials ($n=15$), two outcomes (effective/not effective), probability of success ($p=0.8$) is constant, and trials are independent (stated in problem).</li>
+          
+          <li>Part b (1pt): Calculates $P(X=12) = \binom{15}{12} (0.8)^{12} (0.2)^3 = 455 \cdot 0.068719 \cdot 0.008 = 0.2501$. Shows formula or calculator notation.</li>
+          
+          <li>Part c (2pts): Calculates $P(X < 10) = P(X \le 9)$. Shows use of binomial cumulative probability (e.g., binomcdf(15, 0.8, 9)) or summation $P(X \le 9) = \sum_{k=0}^9 \binom{15}{k} (0.8)^k (0.2)^{15-k} \approx 0.0611$.</li>
+          
+          <li>Part d (1pt): Calculates mean $\mu = np = 15 \cdot 0.8 = 12$ and standard deviation $\sigma = \sqrt{np(1-p)} = \sqrt{15 \cdot 0.8 \cdot 0.2} = \sqrt{2.4} \approx 1.549$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S11Q4"
+      data-difficulty="hard"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.E,UNC-3.F,UNC-3.G,UNC-2.A"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A company manufactures computer chips, and historically, 3% of the chips produced are defective. A quality control inspector tests chips one by one until a defective chip is found. Assume that the chips are independent and the probability of a defective chip remains constant.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What is the probability that the first defective chip is found on the 5th chip tested? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What is the expected number of chips the inspector must test until the first defective chip is found?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe how you would set up a simulation to estimate the probability that the first defective chip is found within the first 3 chips tested. You do NOT need to perform the simulation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        If the inspector finds the first defective chip on the 20th chip tested, explain what this result might suggest about the historical defect rate of 3%.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Calculates $P(X=5) = (1-0.03)^4 \cdot (0.03) = (0.97)^4 \cdot (0.03) \approx 0.0265$. Shows formula or calculator notation.</li>
+          
+          <li>Part b (1pt): Calculates $E(X) = \frac{1}{p} = \frac{1}{0.03} \approx 33.33$ chips.</li>
+          
+          <li>Part c (2pts): Explains setting up a simulation using random numbers. Assigns 01-03 as a defective chip and 04-100 as a non-defective chip. Generates random numbers until a defective chip is found, records the number of non-defective chips before the first defective. Repeats many times. States to count how often the number of non-defective chips (or total chips) is less than or equal to 3. Alternatively, assigns 1-3 as defective and 4-100 as non-defective, generates random integers from 1 to 100, and records the trial number where the first defective (1-3) occurs. Repeats many times, then calculates the proportion of trials where the first defective occurred on trial 1, 2, or 3.</li>
+          
+          <li>Part d (2pts): Calculates $P(X \ge 20) = (1-0.03)^{19} = (0.97)^{19} \approx 0.547$. Explains that finding the first defective chip on the 20th chip tested is not unusual (since $P(X \ge 20)$ is high), so this result does not necessarily suggest that the historical defect rate of 3% is incorrect. (Alternatively, $P(X=20) = (0.97)^{19}(0.03) \approx 0.0164$, which is small, but cumulative probability is better for "suggests".)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S11Q5"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C"
+      data-learning-objectives="VAR-5.E,VAR-5.F"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A small business sells two types of custom-made shirts, Basic and Premium. The daily profit (in dollars) from selling Basic shirts, $B$, is a random variable with a mean of $\mu_B = 150$ and a standard deviation of $\sigma_B = 20$. The daily profit (in dollars) from selling Premium shirts, $P$, is a random variable with a mean of $\mu_P = 250$ and a standard deviation of $\sigma_P = 40$. The daily profits for Basic and Premium shirts are independent.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the mean and standard deviation of the total daily profit from selling both types of shirts. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        If the business has a fixed daily operating cost of $C = 50, and they decide to offer a 10% discount on all sales for a promotion, let $T$ be the new total daily profit. The new total daily profit can be represented as $T = 0.90(B+P) - C$. Calculate the mean and standard deviation of $T$. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe how the mean and standard deviation of the total daily profit would be affected if the daily profits for Basic and Premium shirts were NOT independent, but positively correlated.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates mean $\mu_{B+P} = \mu_B + \mu_P = 150 + 250 = 400$. Calculates variance $\sigma_{B+P}^2 = \sigma_B^2 + \sigma_P^2 = 20^2 + 40^2 = 400 + 1600 = 2000$. Calculates standard deviation $\sigma_{B+P} = \sqrt{2000} \approx 44.72$. Shows work and assumes independence for standard deviation.</li>
+          
+          <li>Part b (2pts): Calculates mean $E(T) = E(0.90(B+P) - C) = 0.90 E(B+P) - C = 0.90(400) - 50 = 360 - 50 = 310$. Calculates variance $Var(T) = Var(0.90(B+P) - C) = (0.90)^2 Var(B+P) = (0.81)(2000) = 1620$. Calculates standard deviation $SD(T) = \sqrt{1620} \approx 40.25$. Shows work.</li>
+          
+          <li>Part c (2pts): Explains that the mean would remain the same, as the linearity property of expectation does not depend on independence: $E(B+P) = E(B) + E(P)$. Explains that the standard deviation (or variance) would increase if they are positively correlated, because $Var(B+P) = Var(B) + Var(P) + 2Cov(B,P)$, and $Cov(B,P) > 0$ for positive correlation.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

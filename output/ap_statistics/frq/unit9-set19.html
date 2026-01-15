@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 19)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 19)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S19Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D,4.A"
+      data-learning-objectives="UNC-4.AC,UNC-4.AD,UNC-4.AF,UNC-4.AG,UNC-4.AH,UNC-4.AI"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A company produces a new brand of energy-efficient light bulbs. Researchers want to investigate the relationship between the number of hours a bulb is used per day and its lifespan in months. They collected data from a random sample of 25 bulbs and fit a linear regression model. The regression output reported a sample slope of $\hat{b} = -0.55$ months per hour, with a standard error of $SE_{\hat{b}} = 0.12$ months per hour. The average daily usage ranged from 2 to 10 hours. A scatterplot of the data showed a linear pattern, and a residuals plot showed no obvious pattern.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure for this situation and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Construct a 95% confidence interval for the true slope of the regression line relating daily usage to lifespan. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval calculated in part (b) in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on this confidence interval, does the data provide convincing evidence that for each additional hour of daily use, the expected lifespan of the bulb decreases by more than half a month? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies t-interval for slope (1pt). Verifies conditions for inference for the slope of a regression model (1pt).</li>
+          
+          <li>Part b (2pts): Calculates degrees of freedom and identifies correct $t^*$ value (1pt). Correctly calculates the 95% confidence interval (1pt).</li>
+          
+          <li>Part c (1pt): Provides a correct interpretation of the confidence interval in context (1pt).</li>
+          
+          <li>Part d (1pt): Compares the value $-0.5$ (or equivalent to "more than half a month decrease") to the confidence interval and justifies the conclusion (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S19Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.J,VAR-7.K,VAR-7.L,VAR-7.M,DAT-3.M,DAT-3.N"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A health researcher is studying the relationship between the amount of sleep (in hours) a student gets per night and their performance on a standardized test (score out of 100). A random sample of 30 students was selected. The least-squares regression line for predicting test score from sleep hours was found to be $\hat{y} = 25.1 + 7.3x$, where $x$ is sleep hours. The standard error of the slope coefficient was $SE_{\hat{b}} = 1.8$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a test to determine if there is a positive linear relationship between sleep hours and test scores. Identify the appropriate inference method.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for the hypotheses stated in part (a). Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value from part (c), what conclusion should the researcher make about the relationship between sleep hours and test scores? Use a significance level of $\alpha = 0.05$.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States correct null hypothesis ($H_0: \beta = 0$) and alternative hypothesis ($H_a: \beta > 0$) (1pt). Identifies the appropriate inference method (t-test for slope) (1pt).</li>
+          
+          <li>Part b (1pt): Verifies all four conditions for inference (Linearity, Independence, Normal residuals, Equal variance) (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the correct test statistic (1pt). Finds or approximates the correct p-value (1pt).</li>
+          
+          <li>Part d (1pt): Compares the p-value to $\alpha = 0.05$ and states a correct conclusion in context (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S19Q3"
+      data-difficulty="medium"
+      data-skill-codes="3.D,4.B,4.D,4.C"
+      data-learning-objectives="UNC-4.AF,UNC-4.AG,UNC-4.AH,UNC-4.AD"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A study investigated the effect of temperature (in degrees Celsius) on the growth rate of a specific type of plant (in mm/day). Data from a controlled experiment resulted in a linear regression model for predicting growth rate from temperature. The estimated slope coefficient was $\hat{b} = 0.35$ mm/day per degree Celsius, with a standard error $SE_{\hat{b}} = 0.08$. The sample size was $n=22$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate a 99% confidence interval for the true slope of the regression line. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Interpret the confidence interval from part (a) in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        A plant biologist claims that for every 1-degree Celsius increase in temperature, the plant's growth rate increases by more than 0.2 mm/day. Based on your confidence interval, is there convincing evidence to support this claim? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Briefly describe how you would verify the condition of "equal variance of residuals" for this regression model if you had access to the full dataset.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly determines $df = n-2 = 20$ and finds the appropriate $t^*$ value (1pt). Calculates the 99% confidence interval correctly (1pt).</li>
+          
+          <li>Part b (1pt): Provides a correct interpretation of the confidence interval in context (1pt).</li>
+          
+          <li>Part c (1pt): Compares the value 0.2 to the confidence interval and justifies the conclusion based on whether 0.2 is in or out of the interval (1pt).</li>
+          
+          <li>Part d (1pt): Describes examining a residuals plot for a relatively constant spread of points around zero (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S19Q4"
+      data-difficulty="easy"
+      data-skill-codes="1.A,4.B,4.D"
+      data-learning-objectives="VAR-1.K,UNC-4.AG,UNC-4.AH"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A forester is studying the relationship between the age of a certain type of tree (in years) and its diameter at breast height (DBH, in inches). Data were collected from 20 trees. The least-squares regression line for predicting DBH from age is $\widehat{DBH} = 2.5 + 0.6(\text{Age})$. The 95% confidence interval for the true slope of the regression line is $(0.48, 0.72)$. A scatterplot of the data shows a clear positive linear association, but with increasing variability in DBH as age increases.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Based on the description, describe what the scatterplot suggests about the relationship between tree age and DBH.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Interpret the 95% confidence interval for the slope in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        A claim is made that, on average, for every 10-year increase in age, the DBH of this type of tree increases by at least 6 inches. Based on the confidence interval, justify whether this claim is supported.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Describes a positive linear association between tree age and DBH, and notes increasing variability in DBH for older trees (heteroscedasticity) (1pt).</li>
+          
+          <li>Part b (1pt): States "We are 95% confident that for every one-year increase in a tree's age, the true mean DBH increases by between 0.48 inches and 0.72 inches." (1pt).</li>
+          
+          <li>Part c (2pts): For every 10-year increase, the expected increase in DBH is between $10 \times 0.48 = 4.8$ inches and $10 \times 0.72 = 7.2$ inches (1pt). Since the entire interval (4.8 to 7.2 inches) includes values less than 6 inches, the claim that the DBH increases by *at least* 6 inches is not fully supported, because it is plausible for the increase to be less than 6 inches (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S19Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.AC,UNC-4.AD,UNC-4.AF,UNC-4.AG"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A researcher wants to study the relationship between the amount of fertilizer (in grams) applied to a plant and its subsequent growth (in centimeters) over a month. They randomly select 25 plants and apply varying amounts of fertilizer. The least-squares regression line relating plant growth ($y$) to fertilizer amount ($x$) is $\hat{y} = 5.2 + 0.8x$. The standard error of the slope coefficient is $SE_b = 0.15$. Assume all conditions for inference are met for parts (c) and (d).</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure to construct a confidence interval for the true slope of the regression line.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        State the conditions for constructing a confidence interval for the slope of a regression model. Are these conditions met for parts (c) and (d)?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate a 95% confidence interval for the true slope of the regression line.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the calculated confidence interval in the context of this study.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies a t-interval for the slope of a regression line (or a linear regression t-interval).</li>
+          
+          <li>Part b (2pts): States the 5 conditions (Linearity, Independent observations, Normal residuals, Equal standard deviation of residuals, Random sample/assignment) and confirms they are met as stated in the prompt for parts (c) and (d).</li>
+          
+          <li>Part c (2pts): Calculates the confidence interval using $b \pm t^*SE_b$. Degrees of freedom $df = n-2 = 23$. For 95% confidence, $t^*_{23} \approx 2.069$. Interval: $0.8 \pm 2.069(0.15) = 0.8 \pm 0.31035 = (0.48965, 1.11035)$.</li>
+          
+          <li>Part d (1pt): Interprets the interval as: "We are 95% confident that for every additional gram of fertilizer applied, the true mean plant growth will increase by between 0.49 cm and 1.11 cm."</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

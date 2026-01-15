@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 5)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 5)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S5Q1"
+      data-difficulty="medium"
+      data-skill-codes="3.A,4.B"
+      data-learning-objectives="UNC-2.A,VAR-4.A,VAR-4.B"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A company manufactures light bulbs, and it is known that 10% of the bulbs produced are defective. An inspector randomly selects 5 bulbs from the production line.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe how you could use a table of random digits or a calculator to simulate the number of defective bulbs among the 5 selected bulbs.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Based on your simulation method in part (a), perform 10 trials of selecting 5 bulbs and record the number of defective bulbs in each trial. Use your results to estimate the probability that exactly 1 of the 5 bulbs is defective.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        What is the theoretical probability that exactly 1 of the 5 randomly selected bulbs is defective? Show your work using appropriate notation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Compare the probability estimated from your simulation in part (b) to the theoretical probability calculated in part (c).
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Describes a valid simulation method (e.g., assigning digits 0-9, with 0=defective and 1-9=not defective, for 5 bulbs) for one trial.</li>
+          
+          <li>Part b (2pts): Performs 10 trials correctly and records the number of defective bulbs for each trial; calculates the estimated probability as (count of 1 defective in 10 trials)/10.</li>
+          
+          <li>Part c (2pts): Identifies this as a binomial distribution scenario ($n=5, p=0.10$); calculates $P(X=1) = \binom{5}{1}(0.10)^1(0.90)^4 = 5 \times 0.1 \times 0.6561 = 0.32805$.</li>
+          
+          <li>Part d (1pt): Compares the simulated estimate to the theoretical probability, noting they may differ due to random chance and that simulation is an approximation.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S5Q2"
+      data-difficulty="medium"
+      data-skill-codes="2.B,3.B,4.B"
+      data-learning-objectives="VAR-5.A,VAR-5.C,VAR-5.D"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">An online retailer ships packages daily. The number of packages delivered to a specific neighborhood on any given day, $X$, is a discrete random variable with the following probability distribution.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>$X$</th><th>$P(X)$</th></tr></thead><tbody><tr><td>0</td><td>0.10</td></tr><tr><td>1</td><td>0.20</td></tr><tr><td>2</td><td>0.25</td></tr><tr><td>3</td><td>0.30</td></tr><tr><td>4</td><td></td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Complete the probability distribution for $X$ in the table below.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected number of packages delivered to this neighborhood on a given day. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the expected value from part (b) in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Calculate the standard deviation of the number of packages delivered. Show your work.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Completes the table with $P(X=4)=0.15$.</li>
+          
+          <li>Part b (1pt): Calculates $E(X) = (0 \times 0.10) + (1 \times 0.20) + (2 \times 0.25) + (3 \times 0.30) + (4 \times 0.15) = 0 + 0.20 + 0.50 + 0.90 + 0.60 = 2.2$.</li>
+          
+          <li>Part c (1pt): Interprets $E(X)=2.2$ as the long-run average number of packages delivered per day to this neighborhood.</li>
+          
+          <li>Part d (2pts): Calculates variance $\mathrm{Var}(X) = (0-2.2)^2(0.10) + (1-2.2)^2(0.20) + (2-2.2)^2(0.25) + (3-2.2)^2(0.30) + (4-2.2)^2(0.15) = 1.46$; calculates standard deviation $\sigma_X = \sqrt{1.46} \approx 1.208$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S5Q3"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.B,UNC-3.C,UNC-3.D"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A recent study found that 60% of adults in a certain city own a smartphone. A random sample of 15 adults from this city is selected. Let $X$ be the number of adults in the sample who own a smartphone.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Explain why $X$ can be modeled by a binomial distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the probability that exactly 10 of the 15 sampled adults own a smartphone. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that at least 12 of the 15 sampled adults own a smartphone. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Calculate the mean and standard deviation of $X$. Interpret the mean in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Explains the four binomial conditions: fixed number of trials ($n=15$), two outcomes (success/failure), independent trials (random sample), constant probability of success ($p=0.60$).</li>
+          
+          <li>Part b (1pt): Calculates $P(X=10) = \binom{15}{10}(0.60)^{10}(0.40)^{5} \approx 0.1859$.</li>
+          
+          <li>Part c (2pts): Calculates $P(X \ge 12) = P(X=12) + P(X=13) + P(X=14) + P(X=15) = \binom{15}{12}(0.6)^{12}(0.4)^3 + \binom{15}{13}(0.6)^{13}(0.4)^2 + \binom{15}{14}(0.6)^{14}(0.4)^1 + \binom{15}{15}(0.6)^{15}(0.4)^0 \approx 0.0634 + 0.0219 + 0.0047 + 0.0005 \approx 0.0905$.</li>
+          
+          <li>Part d (2pts): Calculates mean $\mu_X = np = 15 \times 0.60 = 9$; calculates standard deviation $\sigma_X = \sqrt{np(1-p)} = \sqrt{15 \times 0.60 \times 0.40} = \sqrt{3.6} \approx 1.897$. Interprets $\mu_X=9$ as the expected number of smartphone owners in a sample of 15 adults in the long run.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S5Q4"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.E,UNC-3.F,UNC-3.G"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">An archer shoots arrows at a target. The probability of hitting the bullseye on any given shot is 0.3. Assume each shot is independent. Let $Y$ be the number of shots until the archer hits the bullseye for the first time.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Explain why $Y$ can be modeled by a geometric distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the probability that the archer hits the bullseye for the first time on the 4th shot. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the archer takes more than 5 shots to hit the bullseye for the first time. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Calculate the expected number of shots needed to hit the bullseye for the first time. Interpret this value in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Explains the four geometric conditions: each trial has two outcomes (hit/miss), constant probability of success ($p=0.3$), independent trials, and we are interested in the number of trials until the first success.</li>
+          
+          <li>Part b (1pt): Calculates $P(Y=4) = (1-0.3)^{4-1} \times 0.3 = (0.7)^3 \times 0.3 = 0.343 \times 0.3 = 0.1029$.</li>
+          
+          <li>Part c (2pts): Calculates $P(Y > 5) = (1-0.3)^5 = (0.7)^5 \approx 0.16807$. (Alternatively, $P(Y>5)=1 - P(Y \le 5)$ and sum probabilities).</li>
+          
+          <li>Part d (2pts): Calculates $E(Y) = \frac{1}{p} = \frac{1}{0.3} \approx 3.333$ shots. Interprets this as, in the long run, the archer is expected to take about 3.33 shots to hit the bullseye for the first time.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S5Q5"
+      data-difficulty="hard"
+      data-skill-codes="3.A,3.B,3.C,4.B"
+      data-learning-objectives="VAR-4.D,VAR-5.E,VAR-5.F"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A small cafe offers two types of coffee, Espresso and Latte. 70% of customers order Espresso, and 30% order Latte. Of those who order Espresso, 40% also order a pastry. Of those who order Latte, 60% also order a pastry. Let $E$ be the event a customer orders Espresso, $L$ be the event a customer orders Latte, and $P$ be the event a customer orders a pastry.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the probability that a randomly selected customer orders a pastry. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Given that a customer ordered a pastry, what is the probability that they ordered an Espresso? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The time it takes to prepare an Espresso, $T_E$, has a mean of 1 minute and a standard deviation of 0.2 minutes. The time to prepare a Latte, $T_L$, has a mean of 1.5 minutes and a standard deviation of 0.3 minutes. Assume $T_E$ and $T_L$ are independent. A customer orders one Espresso and one Latte. Calculate the mean and standard deviation of the total preparation time for these two drinks.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        If a random variable $X$ has a mean $\mu_X$ and standard deviation $\sigma_X$, describe how the mean and standard deviation are affected by a linear transformation $Y = aX+b$, where $a$ and $b$ are constants.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Calculates $P(P) = P(P</li>
+          
+          <li>E)P(E) + P(P</li>
+          
+          <li>L)P(L) = (0.40)(0.70) + (0.60)(0.30) = 0.28 + 0.18 = 0.46$.</li>
+          
+          <li>Part b (2pts): Calculates $P(E</li>
+          
+          <li>P) = \frac{P(P \cap E)}{P(P)} = \frac{P(P</li>
+          
+          <li>E)P(E)}{P(P)} = \frac{0.28}{0.46} \approx 0.6087$.</li>
+          
+          <li>Part c (2pts): Calculates mean $E(T_E+T_L) = E(T_E) + E(T_L) = 1 + 1.5 = 2.5$ minutes. Calculates variance $\mathrm{Var}(T_E+T_L) = \mathrm{Var}(T_E) + \mathrm{Var}(T_L) = (0.2)^2 + (0.3)^2 = 0.04 + 0.09 = 0.13$. Calculates standard deviation $\sigma_{T_E+T_L} = \sqrt{0.13} \approx 0.361$ minutes.</li>
+          
+          <li>Part d (1pt): States that $E(Y) = aE(X) + b = a\mu_X + b$ and $\sigma_Y =</li>
+          
+          <li>a</li>
+          
+          <li>\sigma_X$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

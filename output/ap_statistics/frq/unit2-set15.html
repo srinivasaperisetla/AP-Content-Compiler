@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 15)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 15)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S15Q1"
+      data-difficulty="medium"
+      data-skill-codes="2.B,2.A,2.C,4.B"
+      data-learning-objectives="UNC-1.S,DAT-1.A,DAT-1.B,DAT-1.C"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A researcher is investigating the relationship between the number of hours a student spends studying for a cumulative final exam and the student's score on that exam. Data were collected from 10 randomly selected students:</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Study Hours</th><th>Exam Score</th></tr></thead><tbody><tr><td>5</td><td>65</td></tr><tr><td>8</td><td>72</td></tr><tr><td>10</td><td>78</td></tr><tr><td>12</td><td>80</td></tr><tr><td>15</td><td>85</td></tr><tr><td>7</td><td>70</td></tr><tr><td>11</td><td>77</td></tr><tr><td>13</td><td>82</td></tr><tr><td>6</td><td>68</td></tr><tr><td>9</td><td>75</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Construct a scatterplot to display the relationship between study hours and exam scores.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe the relationship shown in the scatterplot in terms of direction, form, and strength.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The correlation coefficient for these data is $r = 0.88$. Interpret the meaning of this correlation coefficient in the context of this problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly labels axes (1pt); Correctly plots all 10 points (1pt).</li>
+          
+          <li>Part b (1pt): Describes direction (positive), form (linear), and strength (strong) (1pt).</li>
+          
+          <li>Part c (1pt): Interprets $r$ in context, mentioning strength and direction of linear association between study hours and exam scores (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S15Q2"
+      data-difficulty="medium"
+      data-skill-codes="2.C,4.B"
+      data-learning-objectives="DAT-1.G,DAT-1.H,DAT-1.D"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A study investigated the relationship between the weight (in pounds) of a car and its fuel efficiency (miles per gallon, MPG). The least-squares regression line for predicting MPG from weight is $\widehat{MPG} = 45.1 - 0.008 \times \text{Weight}$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Interpret the slope of the least-squares regression line in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Interpret the $y$-intercept of the least-squares regression line in the context of this problem. If the $y$-intercept does not have a practical interpretation, explain why.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Predict the fuel efficiency for a car that weighs 3,000 pounds.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Interprets slope as the predicted decrease in MPG for each additional pound of car weight (1pt).</li>
+          
+          <li>Part b (2pts): Interprets $y$-intercept as the predicted MPG for a car weighing 0 pounds (1pt); Explains that a car weighing 0 pounds is not practical, so the $y$-intercept has no practical interpretation (1pt).</li>
+          
+          <li>Part c (1pt): Shows calculation for prediction ($45.1 - 0.008 \times 3000$) and provides correct predicted MPG (21.1 MPG) (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S15Q3"
+      data-difficulty="hard"
+      data-skill-codes="2.A,2.B,4.B"
+      data-learning-objectives="DAT-1.E,DAT-1.F,DAT-1.A"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A data analyst is examining the relationship between the amount of time (in minutes) a customer spends on a website and the amount of money (in dollars) they spend on a purchase. The analyst created a scatterplot of the data, the least-squares regression line, and a residual plot.</div>
+
+      
+      <div class="diagram">
+         <svg width="400" height="300" viewBox="0 0 400 300" style="background-color:white;"><rect x="0" y="0" width="400" height="300" fill="white"/><line x1="50" y1="250" x2="350" y2="250" stroke="black" stroke-width="1"/><line x1="50" y1="50" x2="50" y2="250" stroke="black" stroke-width="1"/><text x="180" y="270" font-size="12" text-anchor="middle">Predicted Spending ($)</text><text x="20" y="150" font-size="12" text-anchor="middle" transform="rotate(-90 20 150)">Residual ($)</text><text x="35" y="255" font-size="12" text-anchor="end">0</text><line x1="50" y1="150" x2="350" y2="150" stroke="gray" stroke-dasharray="4,4"/><circle cx="70" cy="220" r="3" fill="black"/><circle cx="90" cy="180" r="3" fill="black"/><circle cx="110" cy="120" r="3" fill="black"/><circle cx="130" cy="80" r="3" fill="black"/><circle cx="150" cy="70" r="3" fill="black"/><circle cx="170" cy="85" r="3" fill="black"/><circle cx="190" cy="100" r="3" fill="black"/><circle cx="210" cy="120" r="3" fill="black"/><circle cx="230" cy="150" r="3" fill="black"/><circle cx="250" cy="180" r="3" fill="black"/><circle cx="270" cy="210" r="3" fill="black"/><circle cx="290" cy="230" r="3" fill="black"/><circle cx="310" cy="240" r="3" fill="black"/><circle cx="330" cy="245" r="3" fill="black"/></svg> 
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Based on the residual plot, is a linear model an appropriate model for the relationship between time spent on the website and money spent? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        One customer spent 15 minutes on the website and spent \$25. If the least-squares regression line predicts a spending of \$22.50 for a customer who spends 15 minutes on the website, calculate the residual for this customer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe one advantage of using a residual plot over just the scatterplot to assess the appropriateness of a linear model.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States that a linear model is not appropriate (1pt); Justifies by describing a clear pattern (e.g., curved pattern, increasing/decreasing spread) in the residual plot (1pt).</li>
+          
+          <li>Part b (1pt): Calculates the residual as actual - predicted ($25 - 22.50 = \$2.50$) (1pt).</li>
+          
+          <li>Part c (1pt): Explains that residual plots magnify deviations from the linear model, making patterns easier to detect than in a scatterplot (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S15Q4"
+      data-difficulty="medium"
+      data-skill-codes="2.C,4.B,2.A"
+      data-learning-objectives="DAT-1.B,DAT-1.C,DAT-1.I"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A data scientist is studying the relationship between a city's population density (people per square mile) and the average daily commute time (in minutes) for its residents. A random sample of 50 cities was taken, and the correlation coefficient between population density and average daily commute time was calculated as $r = 0.65$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Interpret the correlation coefficient $r=0.65$ in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain what it means if a point on the scatterplot of population density versus commute time is considered an "influential point."
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe one condition under which it would NOT be appropriate to calculate a correlation coefficient for a set of bivariate data, even if both variables are quantitative.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Interprets $r$ in context, mentioning moderate, positive linear association between population density and commute time (1pt).</li>
+          
+          <li>Part b (2pts): Explains that an influential point is an observation that, if removed, would significantly change the slope and/or $y$-intercept of the least-squares regression line (1pt); Mentions that it often has a large $x$-value (leverage) and may or may not have a large residual (1pt).</li>
+          
+          <li>Part c (1pt): Describes a situation where the relationship is clearly nonlinear, or there are extreme outliers that distort the linear relationship (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S15Q5"
+      data-difficulty="easy"
+      data-skill-codes="2.C,4.B"
+      data-learning-objectives="DAT-1.J,DAT-1.H"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A marine biologist is studying the relationship between the length (in cm) and weight (in grams) of a certain species of fish. A scatterplot of weight versus length showed a curved pattern. To linearize the relationship, the biologist transformed the weight data using the natural logarithm. The least-squares regression line for the transformed data is $\widehat{\ln(\text{Weight})} = -3.5 + 1.8 \times \text{Length}$. The coefficient of determination ($r^2$) for this transformed model is $0.92$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the predicted weight (in grams) for a fish with a length of 10 cm.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Interpret the value of $r^2 = 0.92$ in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Explain why the biologist chose to transform the data rather than directly fitting a linear model to the original length and weight data.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Shows calculation for $\widehat{\ln(\text{Weight})} = -3.5 + 1.8 \times 10 = 14.5$ (1pt); Calculates the predicted weight by exponentiating: $e^{14.5} \approx 728896$ grams (1pt).</li>
+          
+          <li>Part b (1pt): Interprets $r^2$ as 92% of the variation in the natural logarithm of fish weight can be explained by the linear relationship with fish length (1pt).</li>
+          
+          <li>Part c (1pt): Explains that a linear model was not appropriate for the original data because the scatterplot showed a curved (nonlinear) pattern, and transformation helped linearize the relationship (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

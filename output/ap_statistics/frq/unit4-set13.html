@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 13)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 13)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S13Q1"
+      data-difficulty="easy"
+      data-skill-codes="3.A,4.B"
+      data-learning-objectives="UNC-2.A,VAR-4.A,VAR-4.B"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A game involves drawing a card from a standard 52-card deck. If you draw an ace, you win $\$10$. If you draw a face card (Jack, Queen, King), you win $\$5$. Otherwise, you win nothing.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What is the probability of winning $\$10$ on a single draw? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What is the probability of winning nothing on a single draw? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe how you would set up and perform a simulation using a random number generator to estimate the average winnings per game if you play 100 games. You do not need to perform the simulation.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Calculates $P(\text{Ace}) = \frac{4}{52} = \frac{1}{13}$ (1pt)</li>
+          
+          <li>Part b (1pt): Calculates $P(\text{Nothing}) = 1 - P(\text{Ace}) - P(\text{Face Card}) = 1 - \frac{4}{52} - \frac{12}{52} = \frac{36}{52} = \frac{9}{13}$ (1pt)</li>
+          
+          <li>Part c (2pts): Assigns random numbers to outcomes (e.g., 01-04 Ace, 05-16 Face, 17-52 Nothing) (1pt); Describes simulating 100 games and averaging winnings (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S13Q2"
+      data-difficulty="medium"
+      data-skill-codes="2.B,3.B,4.B"
+      data-learning-objectives="VAR-5.A,VAR-5.C,VAR-5.D"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">An ice cream shop sells three sizes of sundaes: small, medium, and large. The cost for a small sundae is $\$3.00$, a medium is $\$4.50$, and a large is $\$6.00$. Based on past sales data, the probability of a customer ordering a small sundae is $0.40$, a medium is $0.35$, and a large is $0.25$. Let $X$ be the random variable representing the cost of a sundae purchased by a randomly selected customer.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Construct a probability distribution table for $X$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected value of $X$, the cost of a sundae purchased by a randomly selected customer. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the expected value calculated in part (b) in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Constructs correct probability distribution table with values of $X$ and $P(X=x)$ (1pt)</li>
+          
+          <li>Part b (2pts): Shows calculation $\sum x P(x)$ (1pt); Correctly calculates $E(X) = 3(0.40) + 4.50(0.35) + 6(0.25) = 4.275$ (1pt)</li>
+          
+          <li>Part c (1pt): Interprets $E(X)$ as the long-run average cost per sundae (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S13Q3"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C"
+      data-learning-objectives="VAR-5.E,VAR-5.F"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A bakery sells cupcakes and muffins. The mean number of cupcakes sold per day is $100$ with a standard deviation of $15$. The mean number of muffins sold per day is $70$ with a standard deviation of $10$. Assume the number of cupcakes and muffins sold each day are independent random variables.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        The bakery sells cupcakes for $\$2.50$ each and muffins for $\$2.00$ each. Calculate the expected total revenue from cupcakes and muffins sold in a day. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the standard deviation of the total revenue from cupcakes and muffins sold in a day. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If the bakery decided to increase the price of all cupcakes by $\$0.50$, describe the effect this would have on the mean and standard deviation of the revenue from cupcakes only.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies expected revenue for cupcakes $E(R_C) = 2.50 \times 100 = 250$ (1pt); Identifies expected revenue for muffins $E(R_M) = 2.00 \times 70 = 140$ and adds them $E(R_{total}) = 250 + 140 = 390$ (1pt)</li>
+          
+          <li>Part b (2pts): Calculates variance for cupcakes $\sigma^2_C = (2.50)^2 \times (15)^2 = 1406.25$ (1pt); Calculates variance for muffins $\sigma^2_M = (2.00)^2 \times (10)^2 = 400$ and adds them, then takes square root for standard deviation $\sqrt{1406.25 + 400} = \sqrt{1806.25} \approx 42.50$ (1pt)</li>
+          
+          <li>Part c (2pts): Explains that the mean revenue would increase by $0.50 \times 100 = 50$ (1pt); Explains that the standard deviation of revenue would remain unchanged (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S13Q4"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.B,UNC-3.C,UNC-3.D"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A quality control manager at a factory producing LED light bulbs knows that $5\%$ of the light bulbs produced are defective. A random sample of $20$ light bulbs is selected from the production line. Let $X$ be the number of defective light bulbs in the sample.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Explain why $X$ can be modeled by a binomial distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the probability that exactly 2 light bulbs in the sample are defective. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the mean and standard deviation of the number of defective light bulbs in a sample of 20. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        What is the probability that at least one light bulb in the sample is defective?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States fixed number of trials ($n=20$ bulbs) and two outcomes (defective/not defective) (1pt); States independent trials and constant probability of success ($p=0.05$) (1pt)</li>
+          
+          <li>Part b (1pt): Identifies parameters $n=20, p=0.05$; Calculates $P(X=2) = \binom{20}{2}(0.05)^2(0.95)^{18} \approx 0.1887$ (1pt)</li>
+          
+          <li>Part c (2pts): Calculates mean $\mu_X = np = 20(0.05) = 1$ (1pt); Calculates standard deviation $\sigma_X = \sqrt{np(1-p)} = \sqrt{20(0.05)(0.95)} = \sqrt{0.95} \approx 0.9747$ (1pt)</li>
+          
+          <li>Part d (1pt): Calculates $P(X \ge 1) = 1 - P(X=0) = 1 - (0.95)^{20} \approx 1 - 0.3585 = 0.6415$ (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S13Q5"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.E,UNC-3.F,UNC-3.G"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A game show contestant is given a chance to win a prize by rolling a standard six-sided die. To win, the contestant must roll a 3. The contestant gets to roll the die repeatedly until they roll a 3. Let $Y$ be the number of rolls needed to get the first 3.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What is the probability that the contestant rolls a 3 on the third roll? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected number of rolls needed to get the first 3. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the expected value calculated in part (b) in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Recognizes geometric probability $P(Y=3) = (5/6)^2 (1/6)$ (1pt); Calculates $P(Y=3) = \frac{25}{216} \approx 0.1157$ (1pt)</li>
+          
+          <li>Part b (1pt): Calculates $E(Y) = \frac{1}{p} = \frac{1}{1/6} = 6$ (1pt)</li>
+          
+          <li>Part c (1pt): Interprets $E(Y)=6$ as the long-run average number of rolls required to get the first 3 if the game were played many times (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

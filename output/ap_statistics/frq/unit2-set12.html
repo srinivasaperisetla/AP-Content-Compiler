@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 12)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 12)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S12Q1"
+      data-difficulty="easy"
+      data-skill-codes="2.C,4.B"
+      data-learning-objectives="DAT-1.D,DAT-1.H"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A study investigated the relationship between the age of a car (in years) and its selling price (in thousands of dollars). The least-squares regression line for these data is $\widehat{\text{Price}} = 25.5 - 1.2 \times \text{Age}$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Interpret the slope of the regression line in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Interpret the y-intercept of the regression line in the context of this problem. If it is not appropriate to interpret, explain why not.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Predict the selling price of a car that is 5 years old.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Would it be appropriate to use this model to predict the selling price of a car that is 20 years old? Explain your reasoning.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correct interpretation of slope as an average decrease of $1.2 thousand for each additional year of age.</li>
+          
+          <li>Part b (1pt): Correct interpretation of y-intercept ($25.5 thousand as the predicted price of a new car) and states it is appropriate because age 0 is within the range of data (or implies it).</li>
+          
+          <li>Part c (1pt): Calculates $\widehat{\text{Price}} = 25.5 - 1.2(5) = 19.5$ (or $19,500).</li>
+          
+          <li>Part d (1pt): Explains that it would likely be inappropriate due to extrapolation, as 20 years is likely outside the range of the observed data.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S12Q2"
+      data-difficulty="medium"
+      data-skill-codes="2.C,2.D"
+      data-learning-objectives="UNC-1.Q,UNC-1.R"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A survey asked 500 randomly selected adults about their highest level of education and whether they prefer reading physical books or e-books. The results are summarized in the two-way table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Education Level</th><th>Physical Books</th><th>E-books</th><th>Total</th></tr></thead><tbody><tr><td>High School</td><td>80</td><td>100</td><td>180</td></tr><tr><td>College Degree</td><td>120</td><td>80</td><td>200</td></tr><tr><td>Graduate Degree</td><td>40</td><td>80</td><td>120</td></tr><tr><td>Total</td><td>240</td><td>260</td><td>500</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the conditional proportion of adults with a college degree who prefer physical books.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Based on the data, is there an association between highest level of education and preference for reading physical books versus e-books? Justify your answer using appropriate calculations.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe how to display these data graphically to compare the preferences across education levels.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Calculates $\frac{120}{200} = 0.60$ or $60\%$.</li>
+          
+          <li>Part b (2pts): Calculates and compares conditional proportions (e.g., physical book preference for each education level: $\frac{80}{180} \approx 0.444$ for High School, $\frac{120}{200} = 0.60$ for College, $\frac{40}{120} \approx 0.333$ for Graduate). Concludes there is an association because these proportions are different.</li>
+          
+          <li>Part c (1pt): Describes using a segmented bar chart or side-by-side bar chart, with education level on one axis and preference proportions on the other.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S12Q3"
+      data-difficulty="easy"
+      data-skill-codes="2.C,2.D,4.B"
+      data-learning-objectives="UNC-1.Q,UNC-1.R,UNC-1.P"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A market researcher surveyed 200 adults to determine their preferred method of receiving news (Online, TV, or Print) and their age group (Under 30, 30-60, Over 60). The results are summarized in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Age Group \ News Method</th><th>Online</th><th>TV</th><th>Print</th><th>Total</th></tr></thead><tbody><tr><td>Under 30</td><td>35</td><td>15</td><td>20</td><td>70</td></tr><tr><td>30-60</td><td>25</td><td>40</td><td>15</td><td>80</td></tr><tr><td>Over 60</td><td>10</td><td>35</td><td>5</td><td>50</td></tr><tr><td>Total</td><td>70</td><td>90</td><td>40</td><td>200</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the conditional proportion of adults under 30 who prefer Online news.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Compare the proportion of adults who prefer TV news across the three age groups. Describe any notable patterns.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on these data, does there appear to be an association between age group and preferred news method? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correct calculation of $35/70 = 0.50$.</li>
+          
+          <li>Part b (2pts): Calculates proportions for TV in each group (e.g., Under 30: $15/70 \approx 0.214$, 30-60: $40/80 = 0.50$, Over 60: $35/50 = 0.70$) AND compares them, noting the increasing trend with age.</li>
+          
+          <li>Part c (1pt): States there appears to be an association AND provides justification based on different conditional distributions (e.g., preferred methods vary significantly across age groups).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S12Q4"
+      data-difficulty="medium"
+      data-skill-codes="2.A,2.B,4.B"
+      data-learning-objectives="UNC-1.S,DAT-1.A,DAT-1.C"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A biology student collected data on the number of hours of sunlight a plant received daily ($x$) and its growth in centimeters over a week ($y$). The student wants to explore the relationship between these two variables. The data collected from 10 plants are shown in the table.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Plant</th><th>Sunlight (hours)</th><th>Growth (cm)</th></tr></thead><tbody><tr><td>1</td><td>3</td><td>5.2</td></tr><tr><td>2</td><td>4</td><td>6.5</td></tr><tr><td>3</td><td>5</td><td>7.8</td></tr><tr><td>4</td><td>6</td><td>8.0</td></tr><tr><td>5</td><td>7</td><td>9.1</td></tr><tr><td>6</td><td>8</td><td>10.3</td></tr><tr><td>7</td><td>9</td><td>11.0</td></tr><tr><td>8</td><td>10</td><td>12.1</td></tr><tr><td>9</td><td>11</td><td>13.5</td></tr><tr><td>10</td><td>12</td><td>14.0</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the characteristics of the relationship between hours of sunlight and plant growth shown in the data. Include descriptions of form, direction, and strength.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        If the student were to construct a scatterplot for these data, describe what would be displayed on the horizontal and vertical axes, and how the data points would be represented.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Suppose the correlation coefficient for these data was calculated as $r = 0.85$. Interpret this value in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Describes the form as roughly linear, the direction as positive, and the strength as strong.</li>
+          
+          <li>Part b (1pt): States that hours of sunlight ($x$) would be on the horizontal axis, plant growth ($y$) on the vertical axis, and each plant's data would be represented as a point $(x,y)$.</li>
+          
+          <li>Part c (1pt): Interprets $r=0.85$ as a strong, positive linear association between hours of sunlight and plant growth.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S12Q5"
+      data-difficulty="easy"
+      data-skill-codes="2.C,4.B"
+      data-learning-objectives="DAT-1.B,DAT-1.C"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A statistics class is discussing the relationship between the number of hours students spend studying for a test and their score on the test. They collected data from a sample of students and calculated a correlation coefficient.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Explain what a correlation coefficient of $r = 0.92$ would indicate about the relationship between study hours and test scores.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain why a strong positive correlation, such as $r = 0.92$, does not necessarily mean that studying more hours *causes* higher test scores.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe a scenario in which the actual relationship between study hours and test scores might be strong but the calculated linear correlation coefficient would be close to zero.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): A strong, positive linear relationship exists between study hours and test scores; as study hours increase, test scores tend to increase.</li>
+          
+          <li>Part b (1pt): Explains that correlation does not imply causation; there could be lurking variables (e.g., student motivation, prior knowledge) that influence both study hours and test scores.</li>
+          
+          <li>Part c (2pts): Describes a non-linear relationship (e.g., quadratic where more study helps up to a point, then too much study decreases scores due to exhaustion or poor allocation of time, or simply a curved pattern) where a straight line would not fit well, leading to a low linear correlation.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

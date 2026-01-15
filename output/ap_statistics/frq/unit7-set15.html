@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 15)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 15)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S15Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.R,UNC-4.S"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A company manufactures a new type of LED lightbulb and wants to estimate its average lifespan. A random sample of 30 lightbulbs was selected and tested. The sample mean lifespan was $\bar{x} = 25,000$ hours with a sample standard deviation of $s = 1,500$ hours.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure and verify the conditions for constructing a confidence interval for the true mean lifespan of these lightbulbs.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the true mean lifespan of these lightbulbs.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the calculated confidence interval in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies one-sample t-interval (1pt), verifies conditions (random sample, $n \ge 30$ allowing for approximately normal sampling distribution) (1pt)</li>
+          
+          <li>Part b (2pts): Calculates the correct standard error and critical t-value (1pt), calculates the correct confidence interval (1pt)</li>
+          
+          <li>Part c (1pt): Interprets the confidence interval correctly in context (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S15Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.C,VAR-7.B,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A local restaurant advertises that its average wait time for a table is 15 minutes. A regular customer believes the average wait time is actually longer than 15 minutes. To investigate, she collects data from a random sample of 40 recent wait times. The sample mean wait time was $\bar{x} = 16.8$ minutes with a sample standard deviation of $s = 5.2$ minutes.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a significance test and identify the appropriate test procedure.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value, what conclusion should the customer make at the $\alpha = 0.05$ significance level? Justify your conclusion in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States correct null and alternative hypotheses ($H_0: \mu = 15$ minutes, $H_a: \mu > 15$ minutes) (1pt), identifies one-sample t-test for a mean (1pt)</li>
+          
+          <li>Part b (1pt): Verifies conditions (random sample, $n \ge 30$ allowing for approximately normal sampling distribution) (1pt)</li>
+          
+          <li>Part c (2pts): Calculates correct test statistic $t = \frac{16.8 - 15}{5.2/\sqrt{40}} \approx 2.19$ (1pt), calculates correct p-value (df=39, p-value $\approx 0.017$) (1pt)</li>
+          
+          <li>Part d (1pt): Compares p-value to $\alpha$ and makes a correct conclusion to reject $H_0$ and justifies in context (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S15Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.R,VAR-7.C,UNC-4.S"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A agricultural researcher wants to compare the effectiveness of two different fertilizers, Fertilizer A and Fertilizer B, on crop yield. She decides to use a paired design by applying both fertilizers to adjacent plots within 12 different farms. The researcher records the yield (in bushels per acre) for each fertilizer on each farm. For each farm, the difference in yield, Fertilizer A - Fertilizer B, was calculated. The mean difference was $\bar{x}_d = 3.5$ bushels per acre with a standard deviation of the differences $s_d = 2.1$ bushels per acre. Assume the differences are approximately normally distributed.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Explain why a paired design is an appropriate choice for this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        State the appropriate null and alternative hypotheses for a significance test to determine if there is a significant difference in mean crop yield between the two fertilizers.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Construct a 90% confidence interval for the true mean difference in crop yield (Fertilizer A - Fertilizer B).
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Explains that pairing helps control for farm-to-farm variability, increasing power/precision (1pt)</li>
+          
+          <li>Part b (1pt): States correct null and alternative hypotheses ($H_0: \mu_d = 0$, $H_a: \mu_d \ne 0$) (1pt)</li>
+          
+          <li>Part c (3pts): Verifies conditions (random sample of farms; normality assumed) (1pt), calculates correct standard error $\frac{s_d}{\sqrt{n}}$ and critical t-value ($t^* = 1.796$ for df=11, 90% CI) (1pt), calculates correct confidence interval ($3.5 \pm 1.796 \times (2.1/\sqrt{12}) \Rightarrow (2.41, 4.59)$) (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S15Q4"
+      data-difficulty="hard"
+      data-skill-codes="1.F,1.E,4.C,4.B,4.E"
+      data-learning-objectives="VAR-7.G,VAR-7.F,VAR-7.H,DAT-3.G,DAT-3.H"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A school district wants to compare the effectiveness of two different online learning platforms, Platform X and Platform Y, for teaching calculus. A random sample of 50 students used Platform X, and their average exam score was $\bar{x}_X = 82$ with a standard deviation $s_X = 7$. A separate random sample of 60 students used Platform Y, and their average exam score was $\bar{x}_Y = 79$ with a standard deviation $s_Y = 8$. Assume all conditions for inference are met.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses to determine if there is a significant difference in the mean calculus exam scores between the two platforms. Identify the appropriate statistical test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        The test statistic for this comparison was calculated to be $t \approx 2.37$, and the resulting p-value was approximately $0.02$. Interpret this p-value in the context of the study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on the p-value, what conclusion should the school district make at the $\alpha = 0.05$ significance level? Justify your conclusion in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States correct null and alternative hypotheses ($H_0: \mu_X = \mu_Y$ or $H_0: \mu_X - \mu_Y = 0$, $H_a: \mu_X \ne \mu_Y$ or $H_a: \mu_X - \mu_Y \ne 0$) (1pt), identifies two-sample t-test for a difference of means (1pt)</li>
+          
+          <li>Part b (1pt): Correctly interprets the p-value as the probability of observing a test statistic as extreme or more extreme than $2.37$ (or a difference in means as extreme or more extreme than observed) assuming no true difference in mean scores (1pt)</li>
+          
+          <li>Part c (2pts): Compares p-value to $\alpha$ and makes correct conclusion to reject $H_0$ (1pt), justifies conclusion in context (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S15Q5"
+      data-difficulty="medium"
+      data-skill-codes="3.D,4.B,4.D,4.A"
+      data-learning-objectives="UNC-4.Y,UNC-4.Z,UNC-4.AA,UNC-4.AB"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">An independent consumer research organization wants to estimate the difference in average annual repair costs between two luxury car brands, Brand A and Brand B. They collect random samples of repair records for 35 cars from Brand A and 40 cars from Brand B. The sample mean repair cost for Brand A was $\bar{x}_A = \$850$ with a standard deviation $s_A = \$150$. For Brand B, the sample mean was $\bar{x}_B = \$780$ with a standard deviation $s_B = \$120$. Assume all conditions for inference are met.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Construct a 95% confidence interval for the true difference in mean annual repair costs (Brand A - Brand B).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Based on this confidence interval, does there appear to be a significant difference in the average annual repair costs between Brand A and Brand B at the 5% significance level? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If the sample sizes were increased to 100 cars for Brand A and 120 cars for Brand B, but the sample means and standard deviations remained the same, how would this affect the width of the confidence interval constructed in part (a)? Explain your reasoning.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates correct standard error $\sqrt{\frac{s_A^2}{n_A} + \frac{s_B^2}{n_B}}$ and critical t-value (1pt), calculates the correct confidence interval (e.g., $(7.08, 132.92)$) (1pt)</li>
+          
+          <li>Part b (2pts): States whether zero is included in the interval and makes a correct conclusion about a significant difference (1pt), justifies the conclusion in context by explaining what the interval means relative to zero (1pt)</li>
+          
+          <li>Part c (1pt): Explains that increasing sample sizes would decrease the standard error and thus decrease the width of the confidence interval, leading to a more precise estimate (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

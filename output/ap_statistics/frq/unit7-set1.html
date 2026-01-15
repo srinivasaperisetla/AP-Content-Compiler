@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 1)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 1)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S1Q1"
+      data-difficulty="hard"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F,UNC-4.0,UNC-4.P"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A sports scientist wants to determine if a new training regimen improves vertical jump height. Ten athletes are selected, and their vertical jump heights (in cm) are measured before and after completing the training regimen. The results are shown in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Athlete</th><th>Before</th><th>After</th></tr></thead><tbody><tr><td>1</td><td>45</td><td>47</td></tr><tr><td>2</td><td>48</td><td>52</td></tr><tr><td>3</td><td>50</td><td>51</td></tr><tr><td>4</td><td>43</td><td>46</td></tr><tr><td>5</td><td>46</td><td>48</td></tr><tr><td>6</td><td>49</td><td>54</td></tr><tr><td>7</td><td>52</td><td>52</td></tr><tr><td>8</td><td>44</td><td>47</td></tr><tr><td>9</td><td>47</td><td>49</td></tr><tr><td>10</td><td>51</td><td>54</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate test to determine if the new training regimen improves vertical jump height. Identify the name of the statistical test you would use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions necessary for performing this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test. Show your calculations for the mean and standard deviation of the differences.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the p-value in the context of the problem. Based on your p-value, what conclusion should the sports scientist draw at the $\alpha = 0.01$ significance level? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States $H_0: \mu_d = 0$ and $H_a: \mu_d > 0$, where $\mu_d$ is the true mean difference (After - Before) in vertical jump height (1pt). Identifies a paired t-test for a mean difference (1pt).</li>
+          
+          <li>Part b (1pt): Verifies conditions: Random sample (assume athletes are representative/randomly selected), $n < 10\%$ of population (assume large population of athletes), and the distribution of differences is approximately normal (check histogram/boxplot or state assumption if $n < 30$) (1pt).</li>
+          
+          <li>Part c (3pts): Calculates the differences (After - Before): $2, 4, 1, 3, 2, 5, 0, 3, 2, 3$ (1pt). Calculates the mean difference $\bar{d} = 2.5 \text{ cm}$ and standard deviation of differences $s_d \approx 1.354 \text{ cm}$ (1pt). Calculates the test statistic $t = \frac{2.5 - 0}{1.354/\sqrt{10}} \approx 5.836$ and the p-value ($P(t > 5.836)$ with $df=9$) $\approx 0.0001$ (1pt).</li>
+          
+          <li>Part d (2pts): Correctly interprets the p-value in context (1pt). Draws a correct conclusion (Reject $H_0$) and justifies it by comparing the p-value to $\alpha = 0.01$ (1pt). (Since $0.0001 < 0.01$, reject $H_0$. There is strong evidence that the training regimen improves vertical jump height.)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S1Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.R,UNC-4.S,UNC-4.T"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A nutritionist wants to assess the effectiveness of a new diet plan on weight loss. Ten randomly selected participants weighed themselves before starting the diet and again after one month on the diet. The weights (in pounds) are recorded in the table below.\n| Participant | Before | After | Difference (Before - After) |\n|---|---|---|---|\n| 1 | 180 | 175 | 5 |\n| 2 | 195 | 193 | 2 |\n| 3 | 200 | 196 | 4 |\n| 4 | 160 | 158 | 2 |\n| 5 | 175 | 170 | 5 |\n| 6 | 210 | 208 | 2 |\n| 7 | 188 | 185 | 3 |\n| 8 | 170 | 166 | 4 |\n| 9 | 205 | 200 | 5 |\n| 10 | 190 | 188 | 2 |\nThe mean difference (Before - After) is $\bar{x}_d = 3.4$ pounds, and the standard deviation of the differences is $s_d = 1.35$ pounds.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Participant</th><th>Before</th><th>After</th><th>Difference (Before - After)</th></tr></thead><tbody><tr><td>1</td><td>180</td><td>175</td><td>5</td></tr><tr><td>2</td><td>195</td><td>193</td><td>2</td></tr><tr><td>3</td><td>200</td><td>196</td><td>4</td></tr><tr><td>4</td><td>160</td><td>158</td><td>2</td></tr><tr><td>5</td><td>175</td><td>170</td><td>5</td></tr><tr><td>6</td><td>210</td><td>208</td><td>2</td></tr><tr><td>7</td><td>188</td><td>185</td><td>3</td></tr><tr><td>8</td><td>170</td><td>166</td><td>4</td></tr><tr><td>9</td><td>205</td><td>200</td><td>5</td></tr><tr><td>10</td><td>190</td><td>188</td><td>2</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure and verify the conditions for constructing a 90% confidence interval for the true mean weight loss (Before - After) after one month on the diet.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 90% confidence interval for the true mean weight loss.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on this confidence interval, does the diet plan appear to be effective in promoting weight loss? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Procedure identified as a matched-pairs t-interval for a population mean difference (1pt). Conditions checked: Random sample (stated). Since $n=10 < 30$, a graph of the differences should be checked for strong skewness or outliers. (Assuming no strong skewness/outliers from data not provided, or can state "given data allows for this, or check graph of differences" to imply this, as specific data points for differences are given and no strong skewness/outliers are obvious.) (1pt).</li>
+          
+          <li>Part b (2pts): Correct calculation of standard error $SE_d = 1.35/\sqrt{10} \approx 0.4269$ (0.5pt). Correct degrees of freedom $df=9$ and critical value $t^* \approx 1.833$ (0.5pt). Correct margin of error $ME = t^* \times SE_d \approx 1.833 \times 0.4269 \approx 0.782$ (0.5pt). Correct interval $(3.4 - 0.782, 3.4 + 0.782) = (2.618, 4.182)$ pounds (0.5pt).</li>
+          
+          <li>Part c (1pt): Since the entire 90% confidence interval $(2.618, 4.182)$ contains only positive values, we are 90% confident that the true mean weight loss is positive. This suggests the diet plan is effective in promoting weight loss (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S1Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.R,UNC-4.S,UNC-4.T"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A marine biologist wants to estimate the mean length of a certain species of fish in a large lake. A random sample of $n=30$ fish of this species is caught, and their lengths (in cm) are measured. The sample mean length is $\bar{x} = 24.3$ cm, and the sample standard deviation is $s = 2.7$ cm.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure, and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Construct a 95% confidence interval for the true mean length of this species of fish.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval from part (b) in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your interval, does it provide convincing evidence that the true mean length of this fish species is greater than 23 cm? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly identifies one-sample t-interval for a mean (1pt) and verifies random sample, $n<10\%$ of population, and approximately normal population distribution (or $n \ge 30$) (1pt).</li>
+          
+          <li>Part b (2pts): Correctly calculates the interval using $df=29$ and $t^* \approx 2.045$ as $24.3 \pm 2.045 \left(\frac{2.7}{\sqrt{30}}\right) = (23.3, 25.3)$ (2pts).</li>
+          
+          <li>Part c (1pt): Provides a correct interpretation of the interval in context (e.g., "We are 95% confident that the true mean length... is between 23.3 cm and 25.3 cm").</li>
+          
+          <li>Part d (1pt): States that there is convincing evidence because the entire interval is above 23 cm (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S1Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A car manufacturer claims that a new model achieves an average highway fuel efficiency of 35 miles per gallon (mpg). An environmental agency wants to test this claim, suspecting the true average is lower. They select a random sample of $n=40$ cars of this new model and measure their highway fuel efficiency. The sample mean is $\bar{x} = 34.2$ mpg with a standard deviation of $s = 2.5$ mpg.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your results, what conclusion should the environmental agency make about the manufacturer's claim? Use a significance level of $\alpha = 0.05$.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): $H_0: \mu = 35$ mpg and $H_a: \mu < 35$ mpg (1pt).</li>
+          
+          <li>Part b (2pts): Verifies random sample (given) (1pt), $n<10\%$ of population (assume large production) (0.5pt), and $n \ge 30$ for approximate normality (given $n=40$) (0.5pt).</li>
+          
+          <li>Part c (2pts): Calculates test statistic $t = \frac{34.2 - 35}{2.5/\sqrt{40}} \approx -2.02$ (1pt) and finds p-value $P(t_{39} < -2.02) \approx 0.024$ (1pt).</li>
+          
+          <li>Part d (1pt): Compares p-value to $\alpha$ ($0.024 < 0.05$) and rejects $H_0$. Concludes there is convincing evidence that the true mean fuel efficiency is less than 35 mpg (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S1Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.E"
+      data-learning-objectives="VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.F"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A health clinic implements a new 12-week weight-loss program. To assess its effectiveness, they enroll $n=15$ volunteers and record their weight (in pounds) before starting the program and after completing it. The differences in weight (After - Before) are calculated for each participant. The mean difference is $\bar{x}_d = -5.8$ pounds with a standard deviation of $s_d = 4.1$ pounds. A dot plot of the differences shows no strong skewness or outliers.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure to determine if the program is effective, and state the null and alternative hypotheses.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        At the $\alpha = 0.01$ significance level, what conclusion should the clinic make regarding the effectiveness of the weight-loss program?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies paired t-test for a mean difference (1pt) and states $H_0: \mu_d = 0$ versus $H_a: \mu_d < 0$, where $\mu_d$ is the true mean difference (After - Before) (1pt).</li>
+          
+          <li>Part b (2pts): Verifies random assignment/selection (assume participants are representative or randomly selected, or state this is a limitation) (0.5pt), $n<10\%$ of population (assume large population of potential participants) (0.5pt), and approximately normal distribution of differences (stated dot plot shows no strong skewness/outliers) (1pt).</li>
+          
+          <li>Part c (2pts): Calculates test statistic $t = \frac{-5.8 - 0}{4.1/\sqrt{15}} \approx -5.48$ (1pt) and finds p-value $P(t_{14} < -5.48) \approx 0.000$ (very small) (1pt).</li>
+          
+          <li>Part d (1pt): Compares p-value to $\alpha$ (p-value $< 0.01$) and rejects $H_0$. Concludes there is convincing evidence that the mean weight loss is greater than 0, meaning the program is effective (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 5)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 5)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S5Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.AC,UNC-4.AD,UNC-4.AF,UNC-4.AG"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A researcher wants to investigate the relationship between the number of hours students spend studying per week and their final exam scores in a challenging course. A random sample of 25 students from a large university was selected, and data on their study hours and exam scores were collected. A linear regression model was fitted to the data, and the least-squares regression line was $\hat{y} = 55 + 2.5x$, where $x$ is the study hours and $y$ is the exam score. The standard error of the slope, $SE_b$, was calculated to be $0.65$. The conditions for inference were checked and found to be met.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference method to construct a confidence interval for the true slope of the regression line.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the true slope of the regression line.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the calculated confidence interval in the context of this study.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies a t-interval for the slope of a regression line (or a t-interval for regression coefficients).</li>
+          
+          <li>Part b (2pts): Calculates the correct degrees of freedom ($df=25-2=23$) and critical t-value (approx. $t^*=2.069$). Correctly calculates the confidence interval $2.5 \pm 2.069(0.65)$, which is $(1.15, 3.85)$.</li>
+          
+          <li>Part c (1pt): Correctly interprets the interval: We are 95% confident that for each additional hour a student studies per week, the mean final exam score increases by between 1.15 and 3.85 points.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S5Q2"
+      data-difficulty="easy"
+      data-skill-codes="1.E,1.F,4.C"
+      data-learning-objectives="VAR-7.J,VAR-7.K,VAR-7.L"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A horticulturalist is investigating whether the amount of a new organic fertilizer applied to tomato plants affects their yield. They apply varying amounts of fertilizer to 30 randomly selected tomato plants and record the total weight of tomatoes produced by each plant. A linear relationship is suspected.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for a test to determine if there is a linear relationship between fertilizer amount and tomato yield.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the appropriate inference method for carrying out this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe the conditions that must be met to perform this inference method.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States $H_0: \beta = 0$ (no linear relationship) and $H_a: \beta \ne 0$ (a linear relationship exists), where $\beta$ is the true slope of the population regression line relating fertilizer amount to tomato yield.</li>
+          
+          <li>Part b (1pt): Identifies a t-test for the slope of a regression line (or a t-test for regression coefficients).</li>
+          
+          <li>Part c (2pts): Describes the four conditions: Linear (true relationship is linear), Independent (observations are independent, often random sample/assignment), Normal (residuals are normally distributed), Equal variance (variance of residuals is constant across $x$ values).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S5Q3"
+      data-difficulty="medium"
+      data-skill-codes="3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.M,DAT-3.M,DAT-3.N"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A study investigated the relationship between the number of minutes spent exercising daily and a person's systolic blood pressure reduction over a month. Data from 40 participants yielded a least-squares regression line of $\hat{y} = 10 - 0.25x$, where $x$ is daily exercise minutes and $y$ is blood pressure reduction. The standard error of the slope was $SE_b = 0.1$. The degrees of freedom for the test were $df=38$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the test statistic for a significance test to determine if there is a negative linear association between daily exercise minutes and blood pressure reduction.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Assuming the p-value for the test is $0.009$, interpret this p-value in context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on the p-value from part (b) and a significance level of $\alpha = 0.05$, what conclusion can be drawn about the relationship between daily exercise minutes and blood pressure reduction? Justify your conclusion.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly calculates the test statistic: $t = \frac{b - \beta_0}{SE_b} = \frac{-0.25 - 0}{0.1} = -2.5$.</li>
+          
+          <li>Part b (1pt): Correctly interprets the p-value: If there were truly no linear relationship between daily exercise minutes and blood pressure reduction, there would be a 0.9% chance of observing a sample slope as extreme as or more extreme than -0.25 (or a test statistic as extreme as or more extreme than -2.5) by random chance.</li>
+          
+          <li>Part c (2pts): Since the p-value ($0.009$) is less than $\alpha = 0.05$, we reject the null hypothesis. We have convincing evidence to conclude that there is a negative linear association between daily exercise minutes and blood pressure reduction.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S5Q4"
+      data-difficulty="medium"
+      data-skill-codes="4.A,4.D"
+      data-learning-objectives="UNC-4.AI,UNC-4.AH"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A company is interested in the relationship between its monthly advertising expenditure (in thousands of dollars) and its monthly sales (in thousands of units). They collected data for two different periods.\n\n| Data Set | Sample Size | Estimated Slope ($b$) | Standard Error of Slope ($SE_b$) | 95% Confidence Interval for $\beta$ |\n| --- | --- | --- | --- | --- |\n| 1 | 20 | 0.8 | 0.15 | $(0.48, 1.12)$ |\n| 2 | 50 | 0.8 | 0.08 | $(0.64, 0.96)$ |</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Data Set</th><th>Sample Size</th><th>Estimated Slope ($b$)</th><th>Standard Error of Slope ($SE_b$)</th><th>95% Confidence Interval for $\beta$</th></tr></thead><tbody><tr><td>1</td><td>20</td><td>0.8</td><td>0.15</td><td>$(0.48, 1.12)$</td></tr><tr><td>2</td><td>50</td><td>0.8</td><td>0.08</td><td>$(0.64, 0.96)$</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the effect of the different sample sizes on the width of the 95% confidence intervals for the true slope.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        The company claims that for every additional $1,000 spent on advertising, monthly sales increase by more than 0.5 thousand units on average. Based on the confidence interval from Data Set 2, justify whether this claim is supported.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): The confidence interval for Data Set 2 (sample size 50) is narrower than for Data Set 1 (sample size 20). This is because a larger sample size generally leads to a smaller standard error of the slope, resulting in a narrower confidence interval.</li>
+          
+          <li>Part b (2pts): The 95% confidence interval for the true slope from Data Set 2 is $(0.64, 0.96)$. Since all values in this interval are greater than 0.5, we have convincing evidence at the 95% confidence level that the true mean increase in sales for every additional $1,000$ spent on advertising is greater than 0.5 thousand units. Thus, the company's claim is supported.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S5Q5"
+      data-difficulty="easy"
+      data-skill-codes="1.A"
+      data-learning-objectives="VAR-1.K"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A psychologist collects data on the number of hours of sleep a person got the previous night and their reaction time (in milliseconds) to a simple stimulus. The data for 15 individuals are plotted in the scatterplot below.</div>
+
+      
+      <div class="diagram">
+         <svg width="400" height="300" style="background-color:white;"><rect x="40" y="25" width="320" height="200" fill="none" stroke="black"/><line x1="40" y1="225" x2="360" y2="225" stroke="black"/><line x1="40" y1="25" x2="40" y2="225" stroke="black"/><text x="180" y="245" font-family="Arial" font-size="12" text-anchor="middle">Hours of Sleep</text><text x="15" y="125" font-family="Arial" font-size="12" text-anchor="middle" transform="rotate(-90 15 125)">Reaction Time (ms)</text><text x="180" y="20" font-family="Arial" font-size="14" text-anchor="middle">Sleep vs. Reaction Time</text><circle cx="60" cy="190" r="3" fill="black"/><circle cx="80" cy="175" r="3" fill="black"/><circle cx="100" cy="160" r="3" fill="black"/><circle cx="120" cy="150" r="3" fill="black"/><circle cx="140" cy="145" r="3" fill="black"/><circle cx="160" cy="130" r="3" fill="black"/><circle cx="180" cy="120" r="3" fill="black"/><circle cx="200" cy="110" r="3" fill="black"/><circle cx="220" cy="100" r="3" fill="black"/><circle cx="240" cy="90" r="3" fill="black"/><circle cx="260" cy="80" r="3" fill="black"/><circle cx="280" cy="70" r="3" fill="black"/><circle cx="300" cy="65" r="3" fill="black"/><circle cx="320" cy="55" r="3" fill="black"/><circle cx="340" cy="50" r="3" fill="black"/></svg> 
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the overall pattern of the relationship between hours of sleep and reaction time shown in the scatterplot.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify a question suggested by the variation in the scatterplot that could be investigated with further statistical analysis.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): There appears to be a negative, somewhat linear relationship, meaning as hours of sleep increase, reaction time tends to decrease. The strength appears moderate.</li>
+          
+          <li>Part b (1pt): A possible question is: Is there a statistically significant linear relationship between hours of sleep and reaction time in the population? Or, Can we predict reaction time based on hours of sleep? Or, What is the true average change in reaction time for each additional hour of sleep?</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

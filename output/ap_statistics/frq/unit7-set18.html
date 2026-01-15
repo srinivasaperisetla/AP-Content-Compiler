@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 18)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 18)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S18Q1"
+      data-difficulty="hard"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.R,VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A company wants to evaluate the effectiveness of a new training program designed to reduce assembly time for a complex product. Ten randomly selected employees were timed before and after completing the program. The assembly times (in minutes) are recorded in the table below. Let $d = \text{Before} - \text{After}$. The sample mean difference is $\bar{d} = 2.4$ minutes, and the sample standard deviation of the differences is $s_d = 1.075$ minutes.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Employee</th><th>Before</th><th>After</th></tr></thead><tbody><tr><td>1</td><td>25</td><td>22</td></tr><tr><td>2</td><td>31</td><td>28</td></tr><tr><td>3</td><td>28</td><td>27</td></tr><tr><td>4</td><td>33</td><td>30</td></tr><tr><td>5</td><td>26</td><td>25</td></tr><tr><td>6</td><td>29</td><td>26</td></tr><tr><td>7</td><td>30</td><td>28</td></tr><tr><td>8</td><td>27</td><td>26</td></tr><tr><td>9</td><td>32</td><td>30</td></tr><tr><td>10</td><td>28</td><td>27</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference method to determine if the training program is effective in reducing assembly time and explain why this method is appropriate.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        State the null and alternative hypotheses for this test. Verify the conditions necessary for performing this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your analysis, what conclusion can be drawn at the $\alpha = 0.01$ significance level? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies a paired t-test for a mean difference and explains that data are paired (before/after on same individuals) (1pt)</li>
+          
+          <li>Part b (2pts): States correct null ($H_0: \mu_d = 0$) and alternative ($H_a: \mu_d > 0$) hypotheses (1pt); Verifies conditions (random sample of differences, approximately normal distribution of differences or large sample size, independence of differences) (1pt)</li>
+          
+          <li>Part c (2pts): Calculates the correct test statistic $t = \frac{\bar{d} - 0}{s_d/\sqrt{n}}$ (1pt); Calculates the correct p-value (1pt)</li>
+          
+          <li>Part d (1pt): Compares p-value to $\alpha$ and draws a correct conclusion in context, justifying based on evidence (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S18Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D,4.A"
+      data-learning-objectives="UNC-4.V,UNC-4.W,UNC-4.X,UNC-4.Y,UNC-4.Z,UNC-4.AA,UNC-4.AB"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A researcher wants to compare the mean braking distances for two different types of tires, Tire A and Tire B, on dry pavement. A random sample of 15 cars was fitted with Tire A, and their braking distances (in feet) were measured. Another random sample of 18 cars was fitted with Tire B, and their braking distances were measured. The results are summarized below: Assume that the conditions for inference are met for both samples.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Tire Type</th><th>Sample Size</th><th>Sample Mean (feet)</th><th>Sample Standard Deviation (feet)</th></tr></thead><tbody><tr><td>A</td><td>15</td><td>$\bar{x}_A = 125$</td><td>$s_A = 8$</td></tr><tr><td>B</td><td>18</td><td>$\bar{x}_B = 132$</td><td>$s_B = 10$</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 90% confidence interval for the true difference in mean braking distances ($\mu_A - \mu_B$).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Suppose the researcher wants to obtain a narrower confidence interval without changing the confidence level. Describe two ways the researcher could achieve this.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies a two-sample t-interval for the difference of means and states conditions are met (1pt)</li>
+          
+          <li>Part b (2pts): Calculates the correct standard error and uses correct critical t-value (1pt); Calculates the correct 90% confidence interval (1pt)</li>
+          
+          <li>Part c (1pt): Provides a correct interpretation of the interval in context (1pt)</li>
+          
+          <li>Part d (1pt): Describes two valid ways to narrow the interval (e.g., increase sample size, decrease standard deviation) (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S18Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.Q,UNC-4.R,UNC-4.S,UNC-4.T"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A manufacturer of mobile phones claims that the average battery life of its newest model is 24 hours under normal usage. A consumer advocacy group suspects that the average battery life is less than 24 hours. They randomly select 15 new phones and test their battery life under controlled conditions, recording the following sample data (in hours): 22.5, 23.1, 21.9, 23.8, 22.0, 22.9, 23.5, 21.5, 22.8, 23.0, 22.4, 21.8, 23.3, 22.7, 22.2. The sample mean battery life is $\bar{x} = 22.76$ hours and the sample standard deviation is $s = 0.73$ hours.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure to estimate the true mean battery life of these phones. Verify the conditions for this procedure.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Construct a 95% confidence interval for the true mean battery life of the phones.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on this confidence interval, does the data support the manufacturer's claim that the average battery life is 24 hours? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a one-sample t-interval for a population mean (1pt). Verifies conditions: Random sample (given), $n=15 < 30$ so check normality (assume approximately normal from past data/sample not extremely skewed; or note small sample size implies a concern if not normal) (1pt).</li>
+          
+          <li>Part b (2pts): Calculates degrees of freedom $df=14$ and critical $t^*=2.145$ (1pt). Constructs interval $22.76 \pm 2.145 \left(\frac{0.73}{\sqrt{15}}\right) = 22.76 \pm 0.404 = (22.356, 23.164)$ (1pt).</li>
+          
+          <li>Part c (1pt): We are 95% confident that the true mean battery life of this model of phone is between 22.356 hours and 23.164 hours.</li>
+          
+          <li>Part d (1pt): No, the interval does not contain 24 hours. Since 24 hours is not in the interval, we have significant evidence that the true mean battery life is not 24 hours (and likely less).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S18Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A food company claims that the mean weight of its 16-ounce cereal boxes is at least 16 ounces. A consumer watchdog organization is concerned that the company is underfilling the boxes. They randomly select 20 boxes of cereal and find the mean weight to be 15.8 ounces with a standard deviation of 0.5 ounces.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses to test the watchdog organization's concern.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the appropriate inference procedure and verify the conditions for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value, what conclusion can be drawn at the $\alpha = 0.05$ significance level? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): $H_0: \mu = 16$ ounces versus $H_a: \mu < 16$ ounces, where $\mu$ is the true mean weight of the cereal boxes.</li>
+          
+          <li>Part b (2pts): Identifies a one-sample t-test for a population mean (1pt). Verifies conditions: Random sample (given). $n=20 < 30$, so check normality (assume approximately normal based on context/sample not extremely skewed or note concern about normality) (1pt).</li>
+          
+          <li>Part c (2pts): Test statistic $t = \frac{15.8 - 16}{0.5/\sqrt{20}} = \frac{-0.2}{0.1118} \approx -1.789$ (1pt). P-value $P(t < -1.789)$ with $df=19 \approx 0.044$ (1pt).</li>
+          
+          <li>Part d (1pt): Since the p-value (0.044) is less than $\alpha = 0.05$, we reject the null hypothesis. There is sufficient evidence to conclude that the true mean weight of the cereal boxes is less than 16 ounces.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S18Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.R,UNC-4.S,UNC-4.T"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A tire manufacturer wants to compare the tread wear of two different rubber compounds, Compound A and Compound B. Instead of using two separate groups of cars, they decide to use 10 cars and install one tire made with Compound A and one tire made with Compound B on the rear wheels of each car (randomly assigning sides). After 20,000 miles, the tread wear (in mm) for each tire is measured, and the difference (Compound A - Compound B) is calculated for each car. The differences are: 1.2, 0.8, -0.1, 0.5, 0.3, 1.0, 0.6, 0.7, 0.2, 0.4. The mean difference is $\bar{x}_d = 0.56$ mm and the standard deviation of the differences is $s_d = 0.38$ mm.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Explain why a paired t-procedure is appropriate for this study design.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for constructing a confidence interval for the mean difference in tread wear.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Construct a 90% confidence interval for the true mean difference in tread wear between Compound A and Compound B.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the interval, is there convincing evidence of a difference in tread wear between the two compounds? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): A paired t-procedure is appropriate because the measurements are taken on the same cars, creating dependent (paired) observations. This controls for car-to-car variability.</li>
+          
+          <li>Part b (1pt): Conditions for paired t-interval: Random assignment of tires to sides of cars for each pair, which ensures independence of differences (implicit in random assignment within pairs) (given). $n=10 < 30$, so check normality of differences (assume approximately normal as sample not extremely skewed, or note need for larger sample/normality check) (1pt).</li>
+          
+          <li>Part c (2pts): Calculates $df=9$ and critical $t^*=1.833$ (1pt). Constructs interval $0.56 \pm 1.833 \left(\frac{0.38}{\sqrt{10}}\right) = 0.56 \pm 0.220 = (0.340, 0.780)$ mm (1pt).</li>
+          
+          <li>Part d (1pt): Yes, there is convincing evidence. Since the entire 90% confidence interval $(0.340, 0.780)$ is above 0, it suggests that Compound A has a significantly higher mean tread wear (less wear) than Compound B.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

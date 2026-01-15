@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 15)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 15)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S15Q1"
+      data-difficulty="medium"
+      data-skill-codes="2.B,3.B,4.B"
+      data-learning-objectives="VAR-5.A,VAR-5.B,VAR-5.C"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A game involves rolling a fair six-sided die. If you roll a 1, 2, or 3, you lose 2 points. If you roll a 4 or 5, you gain 1 point. If you roll a 6, you gain 5 points. Let $X$ be the random variable representing the points gained or lost in one roll. The probability distribution of $X$ is shown below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>$X$ (Points)</th><th>Probability $P(X)$</th></tr></thead><tbody><tr><td>-2</td><td>1/2</td></tr><tr><td>1</td><td>1/3</td></tr><tr><td>5</td><td>1/6</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Represent the probability distribution of $X$ as a histogram.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected value of $X$, $E(X)$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the expected value of $X$ in the context of playing this game many times.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly labeled histogram with $X$ values (-2, 1, 5) on x-axis and probabilities on y-axis, with correct bar heights (0.5, 0.333, 0.167).</li>
+          
+          <li>Part b (2pts): $E(X) = (-2)(1/2) + (1)(1/3) + (5)(1/6) = -1 + 1/3 + 5/6 = -1 + 2/6 + 5/6 = -1 + 7/6 = 1/6 \approx 0.167$.</li>
+          
+          <li>Part c (1pt): In the long run, playing this game many times, a player can expect to gain approximately $1/6$ of a point per game on average.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S15Q2"
+      data-difficulty="easy"
+      data-skill-codes="3.A,4.B"
+      data-learning-objectives="VAR-4.A,VAR-4.C,VAR-4.E"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A high school surveyed its students about their favorite subject. $60\%$ prefer Math (M), $40\%$ prefer English (E), and $20\%$ prefer both Math and English.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Are the events "prefer Math" and "prefer English" mutually exclusive? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What is the probability that a randomly selected student prefers Math or English or both?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Are the events "prefer Math" and "prefer English" independent? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States No and provides correct justification that $P(M \cap E) = 0.20 \ne 0$.</li>
+          
+          <li>Part b (1pt): Correctly calculates $P(M \cup E) = P(M) + P(E) - P(M \cap E) = 0.60 + 0.40 - 0.20 = 0.80$.</li>
+          
+          <li>Part c (2pts): States No. Calculates $P(M) \times P(E) = 0.60 \times 0.40 = 0.24$. Compares $P(M \cap E) = 0.20$ with $0.24$ and concludes they are not equal, thus not independent.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S15Q3"
+      data-difficulty="medium"
+      data-skill-codes="3.A,4.B"
+      data-learning-objectives="VAR-4.D,VAR-4.B"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A company classifies its employees by gender and education level. The following table shows the proportions of employees in each category.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Gender \ Education</th><th>Bachelor's</th><th>Master's</th><th>Total</th></tr></thead><tbody><tr><td>Male</td><td>0.30</td><td>0.15</td><td>0.45</td></tr><tr><td>Female</td><td>0.20</td><td>0.35</td><td>0.55</td></tr><tr><td>Total</td><td>0.50</td><td>0.50</td><td>1.00</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What is the probability that a randomly selected employee has a Master's degree, given that the employee is female?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What is the probability that a randomly selected employee is male, given that the employee has a Bachelor's degree?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the probability calculated in part (a) in the context of this company's employees.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly identifies $P(\text{Master's }</li>
+          
+          <li>\text{ Female}) = \frac{P(\text{Master's } \cap \text{ Female})}{P(\text{Female})} = \frac{0.35}{0.55} \approx 0.6364$.</li>
+          
+          <li>Part b (1pt): Correctly identifies $P(\text{Male }</li>
+          
+          <li>\text{ Bachelor's}) = \frac{P(\text{Male } \cap \text{ Bachelor's})}{P(\text{Bachelor's})} = \frac{0.30}{0.50} = 0.60$.</li>
+          
+          <li>Part c (1pt): Provides a correct interpretation in context, e.g., "Approximately $63.64\%$ of the female employees in this company have a Master's degree."</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S15Q4"
+      data-difficulty="medium"
+      data-skill-codes="2.B,3.B,4.B"
+      data-learning-objectives="VAR-5.A,VAR-5.C,VAR-5.D"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A small bakery records the number of cakes sold each day. The probability distribution for the number of cakes sold, $X$, is shown below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>$X$ (Number of Cakes Sold)</th><th>1</th><th>2</th><th>3</th><th>4</th></tr></thead><tbody><tr><td>$P(X)$</td><td>0.15</td><td>0.25</td><td>0.30</td><td>?</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What is the value of $P(X=4)$? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected number of cakes sold per day, $E(X)$. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the standard deviation of the number of cakes sold per day, $\sigma_X$. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the expected value calculated in part (b) in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly calculates $P(X=4) = 1 - (0.15 + 0.25 + 0.30) = 1 - 0.70 = 0.30$.</li>
+          
+          <li>Part b (1pt): Correctly calculates $E(X) = (1 \times 0.15) + (2 \times 0.25) + (3 \times 0.30) + (4 \times 0.30) = 0.15 + 0.50 + 0.90 + 1.20 = 2.75$ cakes.</li>
+          
+          <li>Part c (2pts): Correctly calculates variance $\sigma_X^2 = (1-2.75)^2(0.15) + (2-2.75)^2(0.25) + (3-2.75)^2(0.30) + (4-2.75)^2(0.30) = 0.459375 + 0.140625 + 0.01875 + 0.46875 = 1.0875$. Then $\sigma_X = \sqrt{1.0875} \approx 1.0428$.</li>
+          
+          <li>Part d (1pt): Provides a correct interpretation in context, e.g., "On average, over many days, the bakery is expected to sell $2.75$ cakes per day."</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S15Q5"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C"
+      data-learning-objectives="VAR-5.E,VAR-5.F"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">An online store sells two types of custom-made T-shirts, Basic and Premium. The profit $P_B$ for a Basic T-shirt has a mean of $\$5$ and a standard deviation of $\$1.50$. The profit $P_P$ for a Premium T-shirt has a mean of $\$10$ and a standard deviation of $\$2.50$. Assume the profits from selling Basic and Premium T-shirts are independent.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the expected total profit if the store sells one Basic T-shirt and one Premium T-shirt. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the standard deviation of the total profit if the store sells one Basic T-shirt and one Premium T-shirt. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Suppose the store offers a promotion where the profit from each Basic T-shirt sold is increased by $20\%$ and a flat bonus of $\$1$. Describe how this linear transformation affects the mean and standard deviation of the profit from a Basic T-shirt.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly calculates $E(P_B + P_P) = E(P_B) + E(P_P) = \$5 + \$10 = \$15$.</li>
+          
+          <li>Part b (2pts): Correctly calculates $\text{Var}(P_B + P_P) = \text{Var}(P_B) + \text{Var}(P_P) = (1.50)^2 + (2.50)^2 = 2.25 + 6.25 = 8.50$. Then $\text{SD}(P_B + P_P) = \sqrt{8.50} \approx \$2.915$.</li>
+          
+          <li>Part c (2pts): Correctly states the new mean is $E(1.20 P_B + 1) = 1.20 E(P_B) + 1 = 1.20(\$5) + \$1 = \$7$. Correctly states the new standard deviation is $\text{SD}(1.20 P_B + 1) = 1.20 \text{SD}(P_B) = 1.20(\$1.50) = \$1.80$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 16)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 16)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S16Q1"
+      data-difficulty="easy"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.A,UNC-4.B,UNC-4.D,UNC-4.F"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A marketing firm wants to estimate the proportion of adult internet users who prefer to shop online using a mobile device. In a random sample of 500 adult internet users, 280 reported preferring a mobile device for online shopping.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure for this situation and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Construct a 95 percent confidence interval for the proportion of all adult internet users who prefer to shop online using a mobile device.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval you constructed in part (b) in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a one-sample z-interval for a proportion (1pt); Verifies random sampling, $n\hat{p} \ge 10$, and $n(1-\hat{p}) \ge 10$ (1pt)</li>
+          
+          <li>Part b (2pts): Calculates the sample proportion $\hat{p}$ and standard error (1pt); Calculates the confidence interval (1pt)</li>
+          
+          <li>Part c (1pt): Interprets the confidence interval in context, stating the confidence level and interval.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S16Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.D,VAR-6.E,VAR-6.F,VAR-6.G,DAT-3.A,DAT-3.B"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A company claims that at least 85 percent of their newly manufactured light bulbs last for more than 1,000 hours. A consumer advocacy group suspects this claim is too high. They test a random sample of 200 light bulbs and find that 162 of them last for more than 1,000 hours.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State appropriate null and alternative hypotheses to address the consumer group's suspicion. Define any parameters used.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing a significance test for a population proportion.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value calculated in part (c), what conclusion should the consumer advocacy group make at the $\alpha = 0.05$ significance level? Justify your conclusion in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct $H_0: p \ge 0.85$ and $H_a: p < 0.85$ and defines $p$ as the true proportion of light bulbs that last for more than 1,000 hours (1pt)</li>
+          
+          <li>Part b (1pt): Verifies random sample, $np_0 \ge 10$ ($200 \times 0.85 = 170 \ge 10$), and $n(1-p_0) \ge 10$ ($200 \times 0.15 = 30 \ge 10$) (1pt)</li>
+          
+          <li>Part c (2pts): Calculates the test statistic $z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}}$ (1pt); Calculates the p-value (1pt)</li>
+          
+          <li>Part d (1pt): Compares p-value to $\alpha$ and states correct conclusion in context with justification (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S16Q3"
+      data-difficulty="hard"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.H,VAR-6.I,VAR-6.J,VAR-6.K,DAT-3.C,DAT-3.D"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A medical researcher wants to compare the effectiveness of two different medications, Medication X and Medication Y, for treating a certain skin condition. A randomized double-blind experiment was conducted where 150 patients received Medication X and 150 patients received Medication Y. After two weeks, 105 patients in the Medication X group showed significant improvement, while 90 patients in the Medication Y group showed significant improvement.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for a test to determine if there is a statistically significant difference in the proportions of patients who show significant improvement between the two medications. Define any parameters used.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic for this test. You do not need to calculate the p-value.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your knowledge of significance tests and without calculating the p-value, explain how you would use the test statistic from part (c) to draw a conclusion at the $\alpha = 0.05$ significance level.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct $H_0: p_X = p_Y$ and $H_a: p_X \ne p_Y$ (or $p_X > p_Y$) and defines $p_X, p_Y$ (1pt)</li>
+          
+          <li>Part b (1pt): Verifies random assignment, $n_X\hat{p}_X \ge 10$, $n_X(1-\hat{p}_X) \ge 10$, $n_Y\hat{p}_Y \ge 10$, and $n_Y(1-\hat{p}_Y) \ge 10$ (1pt)</li>
+          
+          <li>Part c (2pts): Calculates the pooled proportion $\hat{p}_c$ (1pt); Calculates the test statistic $z = \frac{(\hat{p}_X - \hat{p}_Y) - 0}{\sqrt{\hat{p}_c(1-\hat{p}_c)(\frac{1}{n_X} + \frac{1}{n_Y})}}$ (1pt)</li>
+          
+          <li>Part d (1pt): Explains how to compare the test statistic to critical values (e.g., $z^* = \pm 1.96$) or how to use it to find a p-value to compare with $\alpha$, and states how to make a conclusion (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S16Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.A"
+      data-learning-objectives="UNC-4.A,UNC-4.B,UNC-4.C,UNC-4.D,UNC-4.H"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A political campaign manager wants to estimate the proportion of registered voters in a certain district who support their candidate. An initial pilot survey of 100 randomly selected registered voters found that 40 support the candidate. The manager wants to conduct a larger survey to estimate this proportion with a margin of error of no more than 0.03 at a 95 percent confidence level.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Based on the initial pilot survey, what is the point estimate for the proportion of registered voters who support the candidate?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain what a margin of error of 0.03 means in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Using the results from the pilot survey as an estimate for the true proportion, calculate the minimum sample size required to achieve a margin of error of no more than 0.03 at a 95 percent confidence level.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        If the campaign manager did not have a pilot survey and wanted to be conservative in estimating the sample size, what value would they use for $\hat{p}$ to calculate the minimum sample size, and why?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States the point estimate $\hat{p} = 0.40$ (1pt)</li>
+          
+          <li>Part b (1pt): Explains that a margin of error of 0.03 means the estimate (0.40) is likely within 3 percentage points (0.03) of the true proportion of voters who support the candidate (1pt)</li>
+          
+          <li>Part c (2pts): Sets up the margin of error formula $z^* \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \le 0.03$ with correct $z^* \approx 1.96$ (1pt); Solves for $n$ and rounds up (e.g., $n \ge 1024.96$, so $n=1025$) (1pt)</li>
+          
+          <li>Part d (1pt): States $\hat{p} = 0.5$ and explains why this value maximizes the product $\hat{p}(1-\hat{p})$, leading to the largest possible sample size for a given margin of error (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S16Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.A,UNC-4.B,UNC-4.D,UNC-4.F"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A polling organization wants to estimate the proportion of registered voters in a city who support a proposed new park. They randomly sample 250 registered voters and find that 135 of them support the new park.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure and verify the conditions for constructing a confidence interval for the proportion of all registered voters who support the new park.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Construct a 95% confidence interval for the proportion of all registered voters in the city who support the new park.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval from part (b) in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies one-sample $z$-interval for proportions (1pt); Verifies conditions (Random, Normal: $n\hat{p} \ge 10$ and $n(1-\hat{p}) \ge 10$, Independent: $N \ge 10n$) (1pt)</li>
+          
+          <li>Part b (2pts): Calculates $\hat{p} = 135/250 = 0.54$ (0.5pt); Calculates standard error $SE = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$ (0.5pt); Uses correct critical value (e.g., $z^* \approx 1.96$) (0.5pt); Constructs correct interval $(0.478, 0.602)$ (0.5pt)</li>
+          
+          <li>Part c (1pt): Provides a correct interpretation of the interval in context, stating confidence level and population parameter.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

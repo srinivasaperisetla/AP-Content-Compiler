@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 17)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 17)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S17Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.A,UNC-4.B,UNC-4.D,UNC-4.F,UNC-4.G"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A company conducted a survey of 400 randomly selected customers to estimate the proportion of customers who are satisfied with their new online service. Of the customers surveyed, 320 indicated they were satisfied.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure for estimating the proportion of satisfied customers.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for constructing this confidence interval.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate a 95% confidence interval for the proportion of all customers who are satisfied with the new online service.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the 95% confidence interval in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Based on this confidence interval, can the company claim that more than 75% of its customers are satisfied? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (0.5pt): Identifies a one-sample z-interval for a population proportion.</li>
+          
+          <li>Part b (1.5pts): Verifies Random (random sample given), 10% (400 is less than 10% of all customers), and Large Counts ($n\hat{p} = 400(0.8) = 320 \ge 10$ and $n(1-\hat{p}) = 400(0.2) = 80 \ge 10$).</li>
+          
+          <li>Part c (1.5pts): Calculates $\hat{p} = 320/400 = 0.8$. Margin of error $z^* \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = 1.96 \sqrt{\frac{0.8(0.2)}{400}} = 1.96 \sqrt{0.0004} = 1.96(0.02) = 0.0392$. Interval: $(0.8 - 0.0392, 0.8 + 0.0392) = (0.7608, 0.8392)$.</li>
+          
+          <li>Part d (1pt): We are 95% confident that the true proportion of all customers satisfied with the new online service is between 0.7608 and 0.8392.</li>
+          
+          <li>Part e (0.5pt): Yes, because 75% (0.75) is below the entire interval, suggesting that the true proportion is likely greater than 75%.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S17Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.D,VAR-6.E,VAR-6.F,VAR-6.G,DAT-3.A,DAT-3.B"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A health organization claims that the proportion of adults in a certain city who exercise regularly is 40%. A local researcher believes this proportion is lower. A random sample of 150 adults from the city was surveyed, and 54 reported exercising regularly.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the appropriate inference method and verify the conditions for conducting this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value, what conclusion should the researcher make at the $\alpha = 0.05$ significance level? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): $H_0: p = 0.40$ (The proportion of adults who exercise regularly is 40%). $H_a: p < 0.40$ (The proportion of adults who exercise regularly is less than 40%).</li>
+          
+          <li>Part b (1.5pts): Identifies a one-sample z-test for a population proportion. Verifies Random (random sample given), 10% (150 is less than 10% of all adults in the city), and Large Counts ($np_0 = 150(0.40) = 60 \ge 10$ and $n(1-p_0) = 150(0.60) = 90 \ge 10$).</li>
+          
+          <li>Part c (1.5pts): Calculates $\hat{p} = 54/150 = 0.36$. Test statistic $z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}} = \frac{0.36 - 0.40}{\sqrt{\frac{0.40(0.60)}{150}}} = \frac{-0.04}{\sqrt{0.0016}} = \frac{-0.04}{0.04} = -1.00$. P-value: $P(Z < -1.00) = 0.1587$.</li>
+          
+          <li>Part d (1pt): Since the p-value (0.1587) is greater than $\alpha = 0.05$, we fail to reject the null hypothesis. There is not sufficient evidence to conclude that the proportion of adults in the city who exercise regularly is less than 40%.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S17Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.B,4.B,4.A"
+      data-learning-objectives="UNC-5.A,UNC-5.D,UNC-5.C"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A pharmaceutical company is testing a new drug designed to reduce blood pressure. They want to determine if the drug is effective (i.e., if the proportion of patients whose blood pressure is reduced by the drug is significantly greater than 0.50). They conduct a clinical trial and set up their hypotheses as $H_0: p = 0.50$ versus $H_a: p > 0.50$, where $p$ is the true proportion of patients whose blood pressure is reduced.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe a Type I error in the context of this problem and state a potential consequence of making this error.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe a Type II error in the context of this problem and state a potential consequence of making this error.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Suppose the company decides to increase the sample size for the clinical trial while keeping the significance level $\alpha$ fixed. How would this affect the probability of a Type II error? Explain.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1.5pts): A Type I error occurs if the company concludes the drug is effective (rejects $H_0$) when, in reality, it is not effective (the true proportion is 0.50). A potential consequence is that an ineffective drug could be approved and prescribed, costing money and potentially delaying effective treatment for patients.</li>
+          
+          <li>Part b (1.5pts): A Type II error occurs if the company concludes the drug is not effective (fails to reject $H_0$) when, in reality, it is effective (the true proportion is greater than 0.50). A potential consequence is that a truly effective drug might not be approved, preventing patients from benefiting from a useful treatment.</li>
+          
+          <li>Part c (1pt): Increasing the sample size would decrease the probability of a Type II error. A larger sample size provides more information, leading to a more precise estimate of the proportion, thus increasing the power of the test and making it more likely to detect a true effect if one exists.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S17Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.I,UNC-4.J,UNC-4.K,UNC-4.M,UNC-4.N"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A school administrator wants to compare the proportion of students who prefer online learning between two different high schools, School A and School B. A random sample of 120 students was selected from School A, and 68 preferred online learning. A random sample of 150 students was selected from School B, and 75 preferred online learning.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure for estimating the difference in proportions of students who prefer online learning between School A and School B.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for constructing this confidence interval.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate a 90% confidence interval for the difference in proportions of students who prefer online learning ($p_A - p_B$).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the 90% confidence interval in context. Does the interval provide convincing evidence of a difference in preference for online learning between the two schools? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (0.5pt): Identifies a two-sample z-interval for a difference between population proportions.</li>
+          
+          <li>Part b (2pts): Verifies Random (random samples given from both schools), 10% (120 < 10% of School A students, 150 < 10% of School B students), and Large Counts for both samples: School A ($n_A\hat{p}_A = 68 \ge 10$, $n_A(1-\hat{p}_A) = 120-68 = 52 \ge 10$). School B ($n_B\hat{p}_B = 75 \ge 10$, $n_B(1-\hat{p}_B) = 150-75 = 75 \ge 10$).</li>
+          
+          <li>Part c (1.5pts): Calculates $\hat{p}_A = 68/120 \approx 0.567$, $\hat{p}_B = 75/150 = 0.50$. Margin of error $z^* \sqrt{\frac{\hat{p}_A(1-\hat{p}_A)}{n_A} + \frac{\hat{p}_B(1-\hat{p}_B)}{n_B}} = 1.645 \sqrt{\frac{0.567(0.433)}{120} + \frac{0.50(0.50)}{150}} \approx 1.645 \sqrt{0.00204 + 0.00167} \approx 1.645 \sqrt{0.00371} \approx 1.645(0.0609) \approx 0.100$. Interval: $(0.567 - 0.50) \pm 0.100 = 0.067 \pm 0.100 = (-0.033, 0.167)$.</li>
+          
+          <li>Part d (1pt): We are 90% confident that the true difference in the proportion of students who prefer online learning between School A and School B ($p_A - p_B$) is between -0.033 and 0.167. Since the interval includes 0, there is no convincing evidence of a difference in preference for online learning between the two schools.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S17Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.H,VAR-6.I,VAR-6.J,VAR-6.K,DAT-3.C,DAT-3.D"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A company implemented a new training program for its employees to improve their product knowledge. Before the training, 180 out of 300 randomly selected employees demonstrated sufficient product knowledge. After the new training, 210 out of 300 randomly selected employees from a different group demonstrated sufficient product knowledge. The company wants to determine if the new training program increased the proportion of employees with sufficient product knowledge.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the appropriate inference method and verify the conditions for conducting this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value, what conclusion should the company make at the $\alpha = 0.01$ significance level? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Let $p_1$ be the proportion before training and $p_2$ be the proportion after training. $H_0: p_1 = p_2$ (The new training program did not increase the proportion of employees with sufficient product knowledge). $H_a: p_1 < p_2$ (The new training program increased the proportion of employees with sufficient product knowledge). (or $H_a: p_2 - p_1 > 0$)</li>
+          
+          <li>Part b (2pts): Identifies a two-sample z-test for a difference between population proportions. Verifies Random (random samples given, independent groups), 10% (300 < 10% of all employees before and after, assuming large employee pool), and Large Counts for both samples: Before ($n_1\hat{p}_1 = 180 \ge 10$, $n_1(1-\hat{p}_1) = 120 \ge 10$). After ($n_2\hat{p}_2 = 210 \ge 10$, $n_2(1-\hat{p}_2) = 90 \ge 10$).</li>
+          
+          <li>Part c (2pts): Calculates $\hat{p}_1 = 180/300 = 0.60$, $\hat{p}_2 = 210/300 = 0.70$. Pooled proportion $\hat{p}_c = \frac{180+210}{300+300} = \frac{390}{600} = 0.65$. Test statistic $z = \frac{(\hat{p}_2 - \hat{p}_1) - 0}{\sqrt{\hat{p}_c(1-\hat{p}_c)(\frac{1}{n_1} + \frac{1}{n_2})}} = \frac{0.10}{\sqrt{0.65(0.35)(\frac{1}{300} + \frac{1}{300})}} = \frac{0.10}{\sqrt{0.2275(\frac{2}{300})}} = \frac{0.10}{\sqrt{0.00151667}} \approx \frac{0.10}{0.03894} \approx 2.568$. P-value: $P(Z > 2.568) \approx 0.0051$.</li>
+          
+          <li>Part d (1pt): Since the p-value (0.0051) is less than $\alpha = 0.01$, we reject the null hypothesis. There is sufficient evidence to conclude that the new training program increased the proportion of employees with sufficient product knowledge.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

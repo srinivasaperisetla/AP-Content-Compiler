@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 10)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 10)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S10Q1"
+      data-difficulty="easy"
+      data-skill-codes="3.A,4.B"
+      data-learning-objectives="UNC-2.A,VAR-4.A"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A company manufactures computer chips. Historically, 3% of the chips produced are defective. A quality control engineer wants to understand the probability of finding defective chips in a batch.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe how you could use a simulation with a random number generator to estimate the probability that the first defective chip is found on or before the 5th chip inspected. You do not need to perform the simulation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Based on the historical data, calculate the probability that exactly 2 out of the next 5 chips inspected are defective, assuming the chips are independent.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the probability calculated in part (b) in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Describes assigning digits for defective/non-defective chips (1pt) AND describes how to run trials until a defective is found or 5 chips are inspected, and count successes (1pt)</li>
+          
+          <li>Part b (2pts): Identifies binomial distribution and shows correct setup (e.g., $P(X=2) = \binom{5}{2}(0.03)^2(0.97)^3$) (1pt) AND calculates the correct probability (0.0082) (1pt)</li>
+          
+          <li>Part c (1pt): Provides a correct interpretation of the probability in context (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S10Q2"
+      data-difficulty="medium"
+      data-skill-codes="2.B,3.B,4.B"
+      data-learning-objectives="VAR-5.A,VAR-5.C,VAR-5.D"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A small independent coffee shop tracked the number of sugar packets requested by customers for their coffee. The following probability distribution was developed based on their observations for a randomly selected customer.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Number of Sugar Packets ($x$)</th><th>Probability $P(X=x)$</th></tr></thead><tbody><tr><td>0</td><td>0.15</td></tr><tr><td>1</td><td>0.25</td></tr><tr><td>2</td><td>0.30</td></tr><tr><td>3</td><td>0.10</td></tr><tr><td>4</td><td>?</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What is the value of $P(X=4)$? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected number of sugar packets a customer requests. Interpret this value in context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the standard deviation of the number of sugar packets a customer requests.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Shows calculation $1 - (0.15+0.25+0.30+0.10) = 1 - 0.80 = 0.20$ (1pt)</li>
+          
+          <li>Part b (2pts): Calculates $E(X) = \sum xP(x)$ (1pt) AND interprets the expected value in context (1pt)</li>
+          
+          <li>Part c (2pts): Calculates $Var(X) = \sum (x - \mu)^2 P(x)$ (1pt) AND calculates the standard deviation $\sigma_X = \sqrt{Var(X)}$ (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S10Q3"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C"
+      data-learning-objectives="VAR-5.E,VAR-5.F"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">An online retailer ships packages using two different carriers, A and B. The weight (in pounds) of packages handled by Carrier A, $W_A$, has a mean of 15 pounds and a standard deviation of 3 pounds. The weight of packages handled by Carrier B, $W_B$, has a mean of 12 pounds and a standard deviation of 2 pounds. Assume that the weights of packages handled by Carrier A and Carrier B are independent.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the mean and standard deviation of the total weight for a randomly selected package from Carrier A and a randomly selected package from Carrier B. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        The shipping cost for Carrier A is calculated as $C_A = 2W_A + 5$ dollars, and for Carrier B it is $C_B = 1.5W_B + 3$ dollars. Describe how the mean and standard deviation of the shipping cost for Carrier A would change if all weights were converted from pounds to kilograms ($1 \text{ pound} \approx 0.4536 \text{ kg}$). You do not need to calculate the new values.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (3pts): Calculates the mean of the total weight $E(W_A + W_B) = E(W_A) + E(W_B) = 15+12=27$ (1pt) AND calculates the variance of the total weight $Var(W_A + W_B) = Var(W_A) + Var(W_B) = 3^2+2^2 = 9+4=13$ (1pt) AND calculates the standard deviation of the total weight $\sigma_{W_A+W_B} = \sqrt{13} \approx 3.61$ (1pt)</li>
+          
+          <li>Part b (2pts): States that the mean would be multiplied by 0.4536 (or similar) (1pt) AND states that the standard deviation would be multiplied by 0.4536 (or similar) (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S10Q4"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.B,UNC-3.C,UNC-3.D"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A recent study claims that 80% of adults in a certain city own a smartphone. A market researcher randomly selects 10 adults from this city to verify the claim.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Verify that the conditions for a binomial distribution are met for the number of smartphone owners in this sample.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the probability that exactly 7 of the 10 selected adults own a smartphone. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the mean and standard deviation of the number of smartphone owners in a random sample of 10 adults from this city, assuming the claim is true.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        If the researcher finds only 4 smartphone owners in the sample of 10, explain whether this finding would provide convincing evidence against the study's claim.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies fixed number of trials ($n=10$) (0.5pt), independent trials (0.5pt), two outcomes (own/don't own) (0.5pt), AND constant probability of success ($p=0.80$) (0.5pt)</li>
+          
+          <li>Part b (1pt): Shows correct setup for binomial probability (e.g., $P(X=7) = \binom{10}{7}(0.80)^7(0.20)^3$) AND calculates the correct probability (0.2013) (1pt)</li>
+          
+          <li>Part c (2pts): Calculates the mean $E(X) = np = 10(0.80) = 8$ (1pt) AND calculates the standard deviation $\sigma_X = \sqrt{np(1-p)} = \sqrt{10(0.80)(0.20)} = \sqrt{1.6} \approx 1.265$ (1pt)</li>
+          
+          <li>Part d (1pt): Calculates $P(X \le 4)$ or $P(X=4)$ for context (e.g., $P(X \le 4) \approx 0.0063$) (0.5pt) AND explains that this low probability provides convincing evidence against the claim (0.5pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S10Q5"
+      data-difficulty="hard"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.E,UNC-3.F,UNC-3.G,VAR-4.D"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">An airline experiences engine trouble on 1.5% of its flights. Assume that engine trouble on one flight is independent of engine trouble on any other flight.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Define a random variable and justify why a geometric distribution would be an appropriate model for the number of flights until the first instance of engine trouble occurs for this airline.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the probability that the first instance of engine trouble occurs on the 100th flight or later.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        What is the expected number of flights until the first instance of engine trouble? Interpret this value in context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Given that no engine trouble has occurred on the first 50 flights, what is the probability that the first instance of engine trouble occurs on the 100th flight or later?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Defines a random variable $X$ as the number of flights until the first engine trouble AND justifies all geometric conditions (1pt)</li>
+          
+          <li>Part b (1pt): Calculates $P(X \ge 100) = (1-0.015)^{99} = (0.985)^{99} \approx 0.228$ (1pt)</li>
+          
+          <li>Part c (2pts): Calculates $E(X) = \frac{1}{p} = \frac{1}{0.015} \approx 66.67$ flights (1pt) AND interprets the expected value in context (1pt)</li>
+          
+          <li>Part d (2pts): Recognizes memoryless property or calculates $P(X \ge 100</li>
+          
+          <li>X > 50) = P(X \ge 50)$ (1pt) AND calculates $(1-0.015)^{49} = (0.985)^{49} \approx 0.479$ (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

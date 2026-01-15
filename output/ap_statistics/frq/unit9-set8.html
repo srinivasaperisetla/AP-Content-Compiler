@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 8)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 8)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S8Q1"
+      data-difficulty="medium"
+      data-skill-codes="4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.AD,UNC-4.AF,UNC-4.AG"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A researcher wants to investigate if there is a linear relationship between the number of hours a student studies for a statistics exam and their score on the exam. A random sample of 30 students yields a least-squares regression line $\hat{y} = 45 + 5x$, where $x$ is the study hours and $y$ is the exam score. The standard error of the slope coefficient is $SE_b = 0.95$, and the standard deviation of the residuals is $s_e = 7.2$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Verify the conditions for constructing a confidence interval for the slope of the population regression line. (You may assume linearity, independence, and approximate normality of residuals based on diagnostic plots not shown.)
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a $95\%$ confidence interval for the slope of the population regression line.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the calculated confidence interval in the context of this study.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies and verifies the equal variance condition (e.g., residual plot shows no obvious pattern or band with constant width) and identifies the random sample/independence condition.</li>
+          
+          <li>Part b (2pts): Shows correct calculation of the degrees of freedom ($df=28$) and the critical t-value ($t^* \approx 2.048$), then calculates the confidence interval using the formula $b \pm t^*SE_b$ (e.g., $5 \pm 2.048(0.95) \Rightarrow (3.05, 6.95)$).</li>
+          
+          <li>Part c (1pt): Provides a correct interpretation of the confidence interval in context, stating that we are $95\%$ confident that for each additional hour of study, the true mean exam score increases by an amount within the interval.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S8Q2"
+      data-difficulty="hard"
+      data-skill-codes="4.C,3.E"
+      data-learning-objectives="VAR-7.L,VAR-7.M"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">An agricultural researcher wants to model the relationship between the amount of a new organic fertilizer (in kilograms per plot) and the yield of a certain crop (in bushels per plot). Data were collected from 25 randomly selected plots of land, and a least-squares regression line was calculated. The residual plot showed no apparent pattern and the residuals appeared to be normally distributed when viewed in a histogram. However, the scatterplot of yield versus fertilizer amount showed some increase in variability of yield as the amount of fertilizer increased.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Verify the conditions for performing a significance test for the slope of the population regression line based on the given information. Clearly state which conditions are met, which are not, and why.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        The least-squares regression line was $\hat{y} = 50 + 2.5x$, where $x$ is the fertilizer amount and $y$ is the crop yield. The standard error of the slope coefficient was $SE_b = 0.8$. Calculate the test statistic for determining if there is a positive linear relationship between fertilizer amount and crop yield.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies and verifies the Independence (random selection) and Normality (residuals appear normal) conditions as met. Identifies and explains that the Equal Variance condition is violated due to increasing variability in the scatterplot, which makes inference less reliable, and therefore, the conditions for inference are not fully met.</li>
+          
+          <li>Part b (2pts): States the null hypothesis $H_0: \beta = 0$ (or similar) and the alternative hypothesis $H_a: \beta > 0$. Shows correct calculation of the test statistic: $t = \frac{b - \beta_0}{SE_b} = \frac{2.5 - 0}{0.8} = 3.125$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S8Q3"
+      data-difficulty="medium"
+      data-skill-codes="4.B,4.A,4.D"
+      data-learning-objectives="UNC-4.AG,UNC-4.AI,UNC-4.AH"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A biologist is studying the relationship between the age of a certain species of tree (in years) and its height (in meters). For a random sample of 40 trees, a $95\%$ confidence interval for the slope of the population regression line relating height to age was calculated as $(0.15, 0.23)$. A colleague performs a similar study with a random sample of 100 trees and calculates a new $95\%$ confidence interval for the slope.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Interpret the $95\%$ confidence interval $(0.15, 0.23)$ in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain how increasing the sample size from 40 to 100 trees would affect the width of the $95\%$ confidence interval for the slope, assuming all other factors remain constant.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The biologist claims that, on average, for every additional year a tree ages, its height increases by more than $0.1$ meters. Using the confidence interval $(0.15, 0.23)$, justify whether this claim is supported.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly interprets the interval: We are $95\%$ confident that for each additional year of age, the true mean height of this tree species increases by between $0.15$ and $0.23$ meters.</li>
+          
+          <li>Part b (1pt): Explains that a larger sample size ($n=100$) will lead to a smaller standard error for the slope ($SE_b$), which will result in a narrower confidence interval.</li>
+          
+          <li>Part c (2pts): States that since the entire interval $(0.15, 0.23)$ is above $0.1$, there is convincing evidence to support the claim that the true mean increase in height is more than $0.1$ meters per year of age.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S8Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.AC,UNC-4.AD,UNC-4.AF,UNC-4.AG"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A forester wants to investigate the relationship between the age of a certain tree species (in years) and its height (in meters). A random sample of 25 trees was taken. The data yielded a standard error of the residuals $s=1.25$ and was used to fit a least-squares regression line. The computer output is provided below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Predictor</th><th>Coef</th><th>SE Coef</th><th>T</th><th>P</th></tr></thead><tbody><tr><td>Constant</td><td>1.832</td><td>0.951</td><td>1.93</td><td>0.065</td></tr><tr><td>Age (years)</td><td>0.457</td><td>0.038</td><td>12.03</td><td>0.000</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure for the slope of the regression model.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for constructing a confidence interval for the slope. You do not need to check graphical conditions, but state what you would look for.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate a 95% confidence interval for the slope of the regression line. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the confidence interval calculated in part (c) in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies "t-interval for the slope of a regression line" or "linear regression t-interval".</li>
+          
+          <li>Part b (2pts): States Random (given), Linear (assumed from problem, or would look for scatterplot), Independent (10% condition: $25 < 10\%$ of all trees of this species), Normal (would look for normal probability plot of residuals), Equal Variance (would look for residual plot). Need to mention $df = n-2 = 23$ for t-distribution.</li>
+          
+          <li>Part c (2pts): Calculates $t^* = 2.069$ (for $df=23, 95\% CI$). Interval: $0.457 \pm 2.069(0.038) = (0.378, 0.536)$. (1pt for correct $t^*$ or formula, 1pt for correct interval).</li>
+          
+          <li>Part d (1pt): Correct interpretation in context (e.g., "We are 95% confident that for every additional year in age, the predicted height of this tree species increases by an average of 0.378 to 0.536 meters.").</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S8Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.J,VAR-7.K,VAR-7.L,VAR-7.M,DAT-3.M,DAT-3.N"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A teacher is investigating if the number of hours a student studies for an exam is linearly related to their score on the exam. A random sample of 30 students was selected, and their study times (in hours) and exam scores (out of 100) were recorded. The least-squares regression output is provided. The standard error of the residuals was $s=5.1$.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Predictor</th><th>Coef</th><th>SE Coef</th><th>T</th><th>P</th></tr></thead><tbody><tr><td>Constant</td><td>52.34</td><td>2.89</td><td>18.11</td><td>0.000</td></tr><tr><td>Study Hours</td><td>3.56</td><td>0.32</td><td>11.12</td><td>0.000</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate significance test for the slope of the regression model and state the null and alternative hypotheses.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for conducting this significance test. You do not need to check graphical conditions, but state what you would look for.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic for the slope of the regression line. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Using the output, interpret the p-value for the slope in the context of the problem and make a conclusion at the $\alpha = 0.05$ significance level.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies "t-test for the slope of a regression line". States $H_0: \beta = 0$ and $H_a: \beta \ne 0$ (or $H_a: \beta > 0$ or $H_a: \beta < 0$ based on context, here general relationship is fine).</li>
+          
+          <li>Part b (2pts): States Random (given), Linear (assumed from problem, or would look for scatterplot), Independent (10% condition: $30 < 10\%$ of all students), Normal (would look for normal probability plot of residuals), Equal Variance (would look for residual plot). Need to mention $df = n-2 = 28$ for t-distribution.</li>
+          
+          <li>Part c (1pt): Calculates $t = \frac{0.457 - 0}{0.038}$ (using Coef and SE Coef from table, but from context for study hours: $t = \frac{3.56 - 0}{0.32} = 11.125$). Correct calculation of $t = 11.125$. (Student uses info for "Study Hours").</li>
+          
+          <li>Part d (2pts): Interpretation of p-value (e.g., "Assuming there is no linear relationship between study hours and exam scores, there is a 0.000 probability of observing a slope as extreme as or more extreme than 3.56 by chance alone.") (1pt). Conclusion: Since $p \approx 0.000 < \alpha = 0.05$, reject $H_0$. There is convincing evidence of a linear relationship between study hours and exam scores (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

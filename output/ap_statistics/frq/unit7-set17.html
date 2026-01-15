@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 17)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 17)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S17Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.R,UNC-4.S,UNC-4.T"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A company advertises that its new energy-efficient light bulbs have an average lifespan of 8,000 hours. A consumer advocacy group wants to estimate the true average lifespan. They randomly selected 30 bulbs and found a sample mean lifespan of $\bar{x} = 7920$ hours with a sample standard deviation of $s = 250$ hours.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure and verify the conditions for constructing a confidence interval for the true average lifespan of the light bulbs.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the true average lifespan of the light bulbs.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval from part (b) in context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on this confidence interval, does the data provide convincing evidence that the true average lifespan is different from 8,000 hours? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies one-sample $t$-interval for a mean (1pt); Verifies conditions (Random, Independent, Normal/Large Sample) (1pt).</li>
+          
+          <li>Part b (2pts): Calculates degrees of freedom and critical $t$-value (0.5pt); Correctly calculates the 95% confidence interval for $\mu$ (1.5pts).</li>
+          
+          <li>Part c (1pt): Correct interpretation of the confidence interval in context (1pt).</li>
+          
+          <li>Part d (1pt): Correctly answers the question with justification based on the confidence interval (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S17Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A machine is designed to fill cereal boxes with an average of 450 grams of cereal. A quality control inspector suspects the machine is underfilling the boxes. A random sample of 25 boxes is taken, and their contents are weighed. The sample mean is $\bar{x} = 448.5$ grams, and the sample standard deviation is $s = 5.2$ grams.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a test to determine if the machine is underfilling the boxes. Define any parameters you use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the appropriate inference method and verify the conditions for carrying out this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the p-value in context and state your conclusion based on a significance level of $\alpha = 0.05$. Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct $H_0: \mu = 450$ and $H_a: \mu < 450$, defining $\mu$ as the true average weight of cereal in boxes (1pt).</li>
+          
+          <li>Part b (2pts): Identifies one-sample $t$-test for a mean (1pt); Verifies conditions (Random sample, Independence, Normality/Large sample justification - e.g., "assume population is normal since $n < 30$") (1pt).</li>
+          
+          <li>Part c (2pts): Calculates correct test statistic $t$ (1pt); Calculates correct p-value (1pt).</li>
+          
+          <li>Part d (1pt): Correct interpretation of the p-value in context (0.5pt); States correct conclusion (reject $H_0$) and justifies based on p-value $< \alpha$ (0.5pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S17Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A company wants to determine if a new fertilizer improves corn yield. Ten plots of land are selected. Each plot is divided in half; one half receives the new fertilizer, and the other half receives the standard fertilizer. The corn yield (in bushels per acre) is recorded for each half of each plot. The results are shown in the table below:</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Plot</th><th>New Fertilizer (bushels/acre)</th><th>Standard Fertilizer (bushels/acre)</th></tr></thead><tbody><tr><td>1</td><td>120</td><td>115</td></tr><tr><td>2</td><td>125</td><td>120</td></tr><tr><td>3</td><td>118</td><td>119</td></tr><tr><td>4</td><td>130</td><td>125</td></tr><tr><td>5</td><td>122</td><td>118</td></tr><tr><td>6</td><td>128</td><td>123</td></tr><tr><td>7</td><td>115</td><td>110</td></tr><tr><td>8</td><td>126</td><td>120</td></tr><tr><td>9</td><td>119</td><td>117</td></tr><tr><td>10</td><td>123</td><td>120</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Explain why a paired $t$-test is an appropriate inference procedure for this situation. State the null and alternative hypotheses for this test, defining any parameters you use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the mean difference (New - Standard) $\bar{x}_d$ and the standard deviation of the differences $s_d$. Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your results and using a significance level of $\alpha = 0.05$, what conclusion should the company make about the new fertilizer? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Explains paired design is appropriate due to comparing two treatments on the same experimental units/matched plots (1pt); States correct $H_0: \mu_d = 0$ and $H_a: \mu_d > 0$, defining $\mu_d$ as the true mean difference in corn yield (New - Standard) (1pt).</li>
+          
+          <li>Part b (2pts): Correctly calculates $\bar{x}_d$ and $s_d$ (1pt); Verifies conditions (Random assignment to halves, Independence of differences, Normality of differences - e.g., "check plot of differences or assume normal since $n < 30$") (1pt).</li>
+          
+          <li>Part c (1pt): Calculates correct test statistic $t$ and p-value (1pt).</li>
+          
+          <li>Part d (1pt): States correct conclusion with justification based on p-value and $\alpha$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S17Q4"
+      data-difficulty="hard"
+      data-skill-codes="1.D,4.C,3.D,4.D,4.A"
+      data-learning-objectives="UNC-4.V,UNC-4.W,UNC-4.Y,UNC-4.AA,UNC-4.AB"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">An automotive engineer wants to compare the fuel efficiency of two new engine designs, Design A and Design B. They randomly select 35 cars with Design A engines and 40 cars with Design B engines. The sample data are summarized below: Design A: $n_A = 35$, $\bar{x}_A = 32.5$ mpg, $s_A = 2.8$ mpg. Design B: $n_B = 40$, $\bar{x}_B = 30.1$ mpg, $s_B = 3.1$ mpg.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure and verify the conditions for constructing a confidence interval for the difference in true average fuel efficiencies ($\mu_A - \mu_B$).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 90% confidence interval for the difference in true average fuel efficiencies.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval from part (b) in context and justify whether there appears to be a statistically significant difference in the true average fuel efficiencies of the two engine designs.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        If the engineer wanted to halve the margin of error of the confidence interval in part (b) while maintaining the same confidence level, describe the impact on the required sample sizes, assuming similar standard deviations.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies two-sample $t$-interval for the difference of means (1pt); Verifies conditions (Random samples, Independent samples, Large sample sizes, or assumes normality) (1pt).</li>
+          
+          <li>Part b (2pts): Calculates degrees of freedom (0.5pt); Correctly calculates the 90% confidence interval for $\mu_A - \mu_B$ (1.5pts).</li>
+          
+          <li>Part c (1pt): Correct interpretation of the confidence interval in context (0.5pt); Justifies statistical significance based on whether the interval contains 0 (0.5pt).</li>
+          
+          <li>Part d (1pt): States that the sample sizes would need to be quadrupled (0.5pt); Explains this is because the margin of error is proportional to $\frac{1}{\sqrt{n}}$ (0.5pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S17Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.F,VAR-7.G,VAR-7.H,VAR-7.1,DAT-3.G,DAT-3.H"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A health researcher wants to investigate if there is a difference in the average daily screen time (in hours) between teenagers who participate in extracurricular sports and those who do not. A random sample of 50 teenagers involved in sports showed a mean screen time of $\bar{x}_S = 4.8$ hours with a standard deviation of $s_S = 1.5$ hours. A random sample of 45 teenagers not involved in sports showed a mean screen time of $\bar{x}_{NS} = 6.2$ hours with a standard deviation of $s_{NS} = 2.1$ hours.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for this investigation. Define any parameters you use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the appropriate inference method and verify the conditions for carrying out this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The p-value for this test is approximately $0.0001$. Interpret this p-value in context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Based on the p-value from part (d) and using a significance level of $\alpha = 0.01$, what conclusion should the researcher make? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct $H_0: \mu_S = \mu_{NS}$ and $H_a: \mu_S \ne \mu_{NS}$, defining parameters $\mu_S$ and $\mu_{NS}$ (1pt).</li>
+          
+          <li>Part b (2pts): Identifies two-sample $t$-test for the difference of means (1pt); Verifies conditions (Random samples, Independent samples, Large sample sizes) (1pt).</li>
+          
+          <li>Part c (1pt): Calculates correct test statistic $t$ (1pt).</li>
+          
+          <li>Part d (1pt): Correct interpretation of the p-value in context (1pt).</li>
+          
+          <li>Part e (1pt): States correct conclusion (reject $H_0$) and justifies based on p-value $< \alpha$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

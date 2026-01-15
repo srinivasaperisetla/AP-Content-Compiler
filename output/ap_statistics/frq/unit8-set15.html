@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 15)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 15)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S15Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,3.A,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.B,VAR-8.C,VAR-8.D,VAR-8.E,VAR-8.F,DAT-3.J"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A candy company claims that its bags of mini-candies contain 20% red, 20% blue, 20% green, 15% yellow, 15% orange, and 10% brown candies. A student believes the distribution is different and collects a random sample of 200 mini-candies. The observed counts are: 35 red, 45 blue, 30 green, 25 yellow, 30 orange, and 35 brown. The student wants to perform a chi-square goodness-of-fit test.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate test to address the student's belief.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected count for green candies and the chi-square test statistic. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The p-value for this test is approximately $0.038$. Using a significance level of $\alpha = 0.05$, what conclusion should the student make? Justify your answer in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses in context.</li>
+          
+          <li>Part b (1pt): Checks and verifies the conditions for a chi-square goodness-of-fit test (Random, Large Sample Size (Expected counts $\ge 5$)).</li>
+          
+          <li>Part c (2pts): Calculates the expected count for green candies ($200 \times 0.20 = 40$) and calculates the chi-square test statistic (shows formula and calculation).</li>
+          
+          <li>Part d (2pts): Compares p-value to $\alpha$, states correct decision (Reject $H_0$), and justifies the conclusion in the context of the candy color distribution claim.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S15Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.A,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.H,VAR-8.L,DAT-3.L"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A restaurant chain wants to determine if customer satisfaction levels are the same across three of its locations. They randomly survey 100 customers from Location A, 120 from Location B, and 80 from Location C. The results are summarized in the following table:</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Satisfaction Level</th><th>Location A</th><th>Location B</th><th>Location C</th><th>Total</th></tr></thead><tbody><tr><td>Satisfied</td><td>60</td><td>70</td><td>70</td><td>200</td></tr><tr><td>Neutral</td><td>25</td><td>30</td><td>5</td><td>60</td></tr><tr><td>Dissatisfied</td><td>15</td><td>20</td><td>5</td><td>40</td></tr><tr><td>Total</td><td>100</td><td>120</td><td>80</td><td>300</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the appropriate inference method for this situation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Calculate the expected count for customers who are "Satisfied" at Location B. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        The test statistic is calculated to be $\chi^2 = 7.15$ with $df = 4$. If the p-value is $0.128$, what conclusion should the restaurant chain make using a significance level of $\alpha = 0.05$? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses, identifying the variables and populations.</li>
+          
+          <li>Part b (1pt): Identifies the test as a chi-square test for homogeneity.</li>
+          
+          <li>Part c (1pt): Verifies the conditions for a chi-square test for homogeneity (Random samples, Large Sample Size (all expected counts $\ge 5$)).</li>
+          
+          <li>Part d (1pt): Calculates the expected count for "Satisfied" customers at Location B using the formula: $\frac{\text{row total} \times \text{column total}}{\text{grand total}}$. Expected count = $\frac{200 \times 120}{300} = 80$.</li>
+          
+          <li>Part e (2pts): Compares p-value to $\alpha$, states correct decision (Fail to Reject $H_0$), and justifies the conclusion in context that there is no significant difference in customer satisfaction across locations.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S15Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.A,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.H,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A researcher wants to investigate if there is an association between daily screen time (less than 2 hours, 2-4 hours, more than 4 hours) and perceived sleep quality (poor, fair, good) among a random sample of 500 adults. The observed counts are given in the table below. A chi-square test for independence was conducted, and the p-value was found to be $0.003$.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Screen Time</th><th>Poor Sleep Quality</th><th>Fair Sleep Quality</th><th>Good Sleep Quality</th><th>Total</th></tr></thead><tbody><tr><td>Less than 2 hours</td><td>30</td><td>70</td><td>100</td><td>200</td></tr><tr><td>2-4 hours</td><td>50</td><td>60</td><td>70</td><td>180</td></tr><tr><td>More than 4 hours</td><td>70</td><td>20</td><td>30</td><td>120</td></tr><tr><td>Total</td><td>150</td><td>150</td><td>200</td><td>500</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test. (You do not need to calculate all expected counts, but state the criteria.)
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        What is the approximate expected count for adults who spend "More than 4 hours" of screen time and have "Poor" sleep quality? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the given p-value of $0.003$ and a significance level of $\alpha = 0.01$, what conclusion can be drawn about the association between daily screen time and perceived sleep quality? Justify your answer in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses for a test of independence in context.</li>
+          
+          <li>Part b (1pt): Verifies the conditions: Random sample, and explicitly states that all expected counts must be at least 5.</li>
+          
+          <li>Part c (1pt): Calculates the expected count for "More than 4 hours" and "Poor" sleep quality. Expected count = $\frac{120 \times 150}{500} = 36$.</li>
+          
+          <li>Part d (2pts): Compares p-value to $\alpha$, states correct decision (Reject $H_0$), and justifies the conclusion that there is a significant association between daily screen time and perceived sleep quality.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S15Q4"
+      data-difficulty="easy"
+      data-skill-codes="1.E,4.C,3.A,4.B"
+      data-learning-objectives="VAR-8.K,VAR-8.H,DAT-3.K,VAR-1.J"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A social media company wants to understand if the type of content shared by users (news, entertainment, educational) is independent of their age group (18-29, 30-49, 50+). A random sample of 300 users was selected, and their content preferences and age groups were recorded. The observed counts are given in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Content Type</th><th>18-29</th><th>30-49</th><th>50+</th><th>Total</th></tr></thead><tbody><tr><td>News</td><td>50</td><td>60</td><td>40</td><td>150</td></tr><tr><td>Entertainment</td><td>40</td><td>30</td><td>20</td><td>90</td></tr><tr><td>Educational</td><td>10</td><td>10</td><td>40</td><td>60</td></tr><tr><td>Total</td><td>100</td><td>100</td><td>100</td><td>300</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure to determine if there is an association between content type and age group.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Suppose the expected count for users aged "50+" who share "News" content is 45. Explain how this value is calculated.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If the chi-square test statistic was calculated to be $\chi^2 = 1.25$ with $df = 4$ and a p-value of $0.869$, interpret the meaning of this p-value in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the provided chi-square test statistic and p-value, identify a question that might be suggested by the variation between the observed and expected counts, or lack thereof.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies the appropriate procedure as a chi-square test for independence.</li>
+          
+          <li>Part b (1pt): Explains the calculation of the expected count using the formula: $\frac{\text{row total for news} \times \text{column total for 50+}}{\text{grand total}}$. This is $\frac{150 \times 90}{300} = 45$.</li>
+          
+          <li>Part c (1pt): Interprets the p-value: If there were no association between content type and age group, there would be an 86.9% chance of observing a test statistic as extreme as or more extreme than $\chi^2 = 1.25$ by random chance alone.</li>
+          
+          <li>Part d (1pt): Identifies that the high p-value suggests the observed variation is likely due to random chance, implying there might not be a meaningful association, or questions if there's enough variation to detect a real difference.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S15Q5"
+      data-difficulty="hard"
+      data-skill-codes="3.C,4.B,1.A,3.E,4.E"
+      data-learning-objectives="VAR-8.A,VAR-1.J,DAT-3.J,VAR-8.F"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A botanist conducts an experiment to test if the observed distribution of flower colors (red, white, pink) in a hybrid plant species matches a theoretically expected ratio of $1:2:1$. Out of 160 randomly selected hybrid plants, 30 were red, 90 were white, and 40 were pink.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the general shape of a chi-square distribution and how degrees of freedom affect it.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        State the specific question that this study is designed to answer regarding the flower colors.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected count for each flower color, assuming the theoretical ratio holds.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Calculate the chi-square test statistic for these data. Show your work, using the formula $\chi^2 = \sum \frac{(\text{Observed} - \text{Expected})^2}{\text{Expected}}$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        If the calculated p-value for this test is $0.063$, using a significance level of $\alpha = 0.05$, justify whether the observed distribution of flower colors is consistent with the theoretically expected ratio.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Describes the chi-square distribution as skewed right and explains that as degrees of freedom increase, the distribution becomes more symmetric and approaches a normal distribution.</li>
+          
+          <li>Part b (1pt): States the question: "Does the observed distribution of red, white, and pink flower colors in the hybrid plants differ significantly from the theoretically expected ratio of $1:2:1$?" (or similar).</li>
+          
+          <li>Part c (1pt): Calculates the expected counts: Red: $160 \times (1/4) = 40$; White: $160 \times (2/4) = 80$; Pink: $160 \times (1/4) = 40$.</li>
+          
+          <li>Part d (2pts): Calculates the chi-square test statistic: $\chi^2 = \frac{(30-40)^2}{40} + \frac{(90-80)^2}{80} + \frac{(40-40)^2}{40} = \frac{100}{40} + \frac{100}{80} + \frac{0}{40} = 2.5 + 1.25 + 0 = 3.75$. Shows work clearly.</li>
+          
+          <li>Part e (1pt): Compares p-value ($0.063$) to $\alpha$ ($0.05$). Since $p > \alpha$, fails to reject $H_0$. Justifies that there is not enough evidence to conclude that the observed distribution of flower colors is significantly different from the $1:2:1$ ratio.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

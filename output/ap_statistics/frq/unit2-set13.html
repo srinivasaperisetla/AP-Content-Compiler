@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 13)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 13)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S13Q1"
+      data-difficulty="medium"
+      data-skill-codes="2.C,4.B"
+      data-learning-objectives="DAT-1.G,DAT-1.H,DAT-1.D"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A real estate agent wants to predict the selling price of a house (in thousands of dollars) based on its size (in square feet). Data from 15 recently sold homes yielded the following summary statistics: mean size $\bar{x} = 1800$ sq ft, standard deviation of size $s_x = 250$ sq ft, mean price $\bar{y} = 300$ thousand dollars, standard deviation of price $s_y = 50$ thousand dollars. The correlation coefficient between size and price is $r = 0.80$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the equation of the least-squares regression line for predicting selling price from house size. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Interpret the slope of the regression line in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Use your regression equation from part (a) to predict the selling price of a house that is 2000 square feet. Show your work.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates slope $b = r \frac{s_y}{s_x} = 0.80 \frac{50}{250} = 0.16$. Calculates intercept $a = \bar{y} - b\bar{x} = 300 - 0.16(1800) = 12$. Writes equation $\hat{y} = 12 + 0.16x$. Shows calculations.</li>
+          
+          <li>Part b (1pt): For every additional square foot in house size, the predicted selling price increases by $0.16$ thousand dollars (or $160). Uses context and units.</li>
+          
+          <li>Part c (1pt): Substitutes $x=2000$ into the equation: $\hat{y} = 12 + 0.16(2000) = 12 + 320 = 332$. States the predicted selling price is $332$ thousand dollars.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S13Q2"
+      data-difficulty="easy"
+      data-skill-codes="2.C,2.D"
+      data-learning-objectives="UNC-1.Q,UNC-1.R,VAR-1.D"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A survey was conducted among 200 high school students to investigate the relationship between their favorite subject (Math, Science, English) and their preferred learning style (Visual, Auditory, Kinesthetic). The results are summarized in the two-way table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Favorite Subject</th><th>Visual</th><th>Auditory</th><th>Kinesthetic</th><th>Total</th></tr></thead><tbody><tr><td>Math</td><td>25</td><td>15</td><td>20</td><td>60</td></tr><tr><td>Science</td><td>35</td><td>30</td><td>5</td><td>70</td></tr><tr><td>English</td><td>35</td><td>10</td><td>25</td><td>70</td></tr><tr><td>Total</td><td>95</td><td>55</td><td>50</td><td>200</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What proportion of students whose favorite subject is Science prefer the Auditory learning style? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Compare the proportion of students who prefer Visual learning among those whose favorite subject is Math to those whose favorite subject is English. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on your calculations in part (b), does there appear to be an association between favorite subject and preferred learning style? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Calculates $\frac{30}{70} \approx 0.4286$ or $42.86\%$. Shows work.</li>
+          
+          <li>Part b (2pts): Calculates proportion for Math: $\frac{25}{60} \approx 0.4167$. Calculates proportion for English: $\frac{35}{70} = 0.50$. Compares the two proportions, noting that students whose favorite subject is English are more likely to prefer Visual learning than those whose favorite subject is Math.</li>
+          
+          <li>Part c (1pt): States whether there appears to be an association (Yes, due to difference in proportions). Justifies by referring to the difference (or similarity) in conditional proportions found in part (b), indicating that preferred learning style varies depending on the favorite subject.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S13Q3"
+      data-difficulty="hard"
+      data-skill-codes="2.C,4.B,2.A"
+      data-learning-objectives="DAT-1.J,DAT-1.H,DAT-1.I"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">The relationship between the concentration of a chemical ($x$, in ppm) and its reaction time ($y$, in seconds) is believed to be non-linear. To linearize the relationship, a researcher applies a logarithmic transformation to the reaction time. The least-squares regression line for the transformed data, $\ln(\text{Reaction Time})$ versus Concentration, is $\widehat{\ln(y)} = 1.2 + 0.05x$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Interpret the value of the slope, $0.05$, in the context of this transformed model.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Predict the reaction time (in seconds) when the chemical concentration is 15 ppm. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Suppose the researcher had initially tried to fit a linear model to the original untransformed data $(x,y)$. If an observation with a concentration of 5 ppm and a reaction time of 100 seconds was present, explain what kind of impact this point would likely have on the least-squares regression line for the untransformed data.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): For every 1 ppm increase in chemical concentration, the predicted natural logarithm of reaction time increases by $0.05$.</li>
+          
+          <li>Part b (2pts): Substitute $x=15$: $\widehat{\ln(y)} = 1.2 + 0.05(15) = 1.2 + 0.75 = 1.95$. Exponentiate to find predicted reaction time: $\hat{y} = e^{1.95} \approx 7.029$ seconds. Shows calculation.</li>
+          
+          <li>Part c (2pts): Explains that the point $(5, 100)$ would be an outlier (large residual) and/or a high leverage point. Describes that it would pull the regression line strongly towards itself, likely increasing the slope and/or intercept of the regression line significantly, or distorting its fit to the other data.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S13Q4"
+      data-difficulty="medium"
+      data-skill-codes="2.A,2.C,4.B"
+      data-learning-objectives="DAT-1.A,DAT-1.H,DAT-1.D"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A researcher studied the relationship between the number of hours students spent reviewing for a standardized test and their score on the test. Data for 10 students are shown in the scatterplot. The least-squares regression line for these data is $\hat{y} = 2.5x + 60$, where $x$ is the number of hours spent reviewing and $\hat{y}$ is the predicted test score.</div>
+
+      
+      <div class="diagram">
+         <svg width="350" height="250" viewBox="0 0 350 250" style="background-color:white; font-family:sans-serif;"><rect x="50" y="30" width="250" height="180" fill="none" stroke="black" stroke-width="1"/><line x1="50" y1="210" x2="300" y2="210" stroke="black" stroke-width="1"/><line x1="50" y1="210" x2="50" y2="30" stroke="black" stroke-width="1"/><text x="175" y="235" font-size="12" text-anchor="middle">Hours Reviewing (x)</text><text x="20" y="120" font-size="12" text-anchor="middle" transform="rotate(-90 20 120)">Test Score (y)</text><text x="50" y="225" font-size="12" text-anchor="middle">0</text><text x="175" y="225" font-size="12" text-anchor="middle">10</text><text x="300" y="225" font-size="12" text-anchor="middle">20</text><text x="40" y="210" font-size="12" text-anchor="end">60</text><text x="40" y="120" font-size="12" text-anchor="end">80</text><text x="40" y="30" font-size="12" text-anchor="end">100</text><circle cx="75" cy="207.5" r="3" fill="black"/><circle cx="100" cy="190" r="3" fill="black"/><circle cx="112.5" cy="167.5" r="3" fill="black"/><circle cx="125" cy="163" r="3" fill="black"/><circle cx="150" cy="140" r="3" fill="black"/><circle cx="175" cy="126.5" r="3" fill="black"/><circle cx="200" cy="90" r="3" fill="black"/><circle cx="225" cy="76.5" r="3" fill="black"/><circle cx="237.5" cy="72" r="3" fill="black"/><circle cx="275" cy="40" r="3" fill="black"/><line x1="50" y1="210" x2="275" y2="7.5" stroke="red" stroke-width="2"/></svg> 
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the relationship between hours spent reviewing and test score shown in the scatterplot, considering direction, form, and strength.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Interpret the slope of the least-squares regression line in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Predict the test score for a student who spent 8 hours reviewing for the test.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies positive direction (1pt) and linear form (1pt).</li>
+          
+          <li>Part b (1pt): Correctly interprets slope as an increase of 2.5 points in test score for each additional hour of review.</li>
+          
+          <li>Part c (1pt): Correctly calculates $\hat{y} = 2.5(8) + 60 = 80$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S13Q5"
+      data-difficulty="easy"
+      data-skill-codes="2.C,2.D"
+      data-learning-objectives="UNC-1.Q,UNC-1.R"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A survey was conducted to investigate the preferred primary news source (Television, Internet, or Print) among two age groups (Under 30 and 30 or Older). The results are summarized in the following table.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>News Source</th><th>Under 30</th><th>30 or Older</th><th>Total</th></tr></thead><tbody><tr><td>Television</td><td>70</td><td>100</td><td>170</td></tr><tr><td>Internet</td><td>120</td><td>100</td><td>220</td></tr><tr><td>Print</td><td>30</td><td>100</td><td>130</td></tr><tr><td>Total</td><td>220</td><td>300</td><td>520</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the percentage of respondents who are Under 30 and prefer the Internet as their primary news source.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the conditional percentage of respondents aged 30 or Older who prefer Print as their primary news source.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on these data, does there appear to be an association between age group and preferred primary news source? Justify your answer using percentages from the table.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correct calculation: $\frac{120}{520} \times 100\% \approx 23.08\%$.</li>
+          
+          <li>Part b (1pt): Correct calculation: Total for 30 or Older is $100+100+100 = 300$. Percentage is $\frac{100}{300} \times 100\% \approx 33.33\%$.</li>
+          
+          <li>Part c (2pts): Compares conditional percentages for at least two categories across age groups (1pt) and draws a reasonable conclusion about association based on the comparison (1pt). For example, (Internet</li>
+          
+          <li>Under 30) = $\frac{120}{220} \approx 54.55\%$ vs (Internet</li>
+          
+          <li>30 or Older) = $\frac{100}{300} \approx 33.33\%$. Since these are different, there appears to be an association.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

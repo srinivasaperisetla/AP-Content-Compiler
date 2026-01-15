@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 2)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 2)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S2Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.A,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.B,VAR-8.C,VAR-8.E,VAR-8.D,VAR-8.F,DAT-3.I,DAT-3.J"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A candy company claims that its bags of multi-colored candies contain 30% red, 20% blue, 20% green, 15% yellow, and 15% orange candies. A statistics student suspects the proportions are different and collects a random sample of 200 candies from a large bag. The observed counts are given in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Color</th><th>Observed Count</th></tr></thead><tbody><tr><td>Red</td><td>55</td></tr><tr><td>Blue</td><td>35</td></tr><tr><td>Green</td><td>30</td></tr><tr><td>Yellow</td><td>40</td></tr><tr><td>Orange</td><td>40</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a test to determine if the company's stated proportions are correct.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the appropriate inference method and verify the conditions for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected count for green candies. Then, state the degrees of freedom for this chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Given the calculated chi-square test statistic is $\chi^2 = 8.76$ with a p-value of 0.067, interpret the p-value in the context of this study. Justify whether the student has convincing evidence at the $\alpha = 0.05$ significance level that the company's stated proportions are incorrect.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses, including parameters in context.</li>
+          
+          <li>Part b (2pts): Identifies chi-square goodness-of-fit test. Verifies the Random condition (random sample stated). Verifies the Large Counts condition (all expected counts $\ge 5$).</li>
+          
+          <li>Part c (1pt): Calculates expected count for green candies correctly ($40$). States degrees of freedom correctly ($5-1=4$).</li>
+          
+          <li>Part d (2pts): Interprets the p-value correctly in context. Makes a correct decision based on the p-value and $\alpha$ level. Provides a correct justification for the decision in context.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S2Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.A,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.H,VAR-8.L,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A company implemented two different training programs (Program A and Program B) for new employees. After the training, 250 employees who completed Program A and 200 employees who completed Program B were randomly selected. Their job performance was evaluated and categorized as "Below Expectations," "Meets Expectations," or "Exceeds Expectations." The results are summarized in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Performance Rating</th><th>Program A</th><th>Program B</th><th>Total</th></tr></thead><tbody><tr><td>Below Expectations</td><td>40</td><td>60</td><td>100</td></tr><tr><td>Meets Expectations</td><td>145</td><td>110</td><td>255</td></tr><tr><td>Exceeds Expectations</td><td>65</td><td>30</td><td>95</td></tr><tr><td>Total</td><td>250</td><td>200</td><td>450</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a test to determine if there is a difference in the distribution of job performance ratings between employees who completed Program A and those who completed Program B.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the appropriate inference method and verify the conditions for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected count for employees who completed Program A and received a "Below Expectations" rating.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Given that the chi-square test statistic is $\chi^2 = 9.15$ with 2 degrees of freedom and a p-value of 0.0103, interpret this p-value in the context of this study. Justify your conclusion at the $\alpha = 0.01$ significance level regarding the training programs.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses, referencing the distribution of job performance across training programs.</li>
+          
+          <li>Part b (2pts): Identifies chi-square test for homogeneity. Verifies the Random condition (random samples stated). Verifies the Large Counts condition (all expected counts $\ge 5$).</li>
+          
+          <li>Part c (1pt): Calculates the expected count for Program A and "Below Expectations" correctly ($\frac{100 \times 250}{450} \approx 55.56$).</li>
+          
+          <li>Part d (2pts): Interprets the p-value correctly in context. Makes a correct decision based on the p-value and $\alpha$ level. Provides a correct justification for the decision in context.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S2Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.A,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.H,VAR-8.L,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">Researchers conducted a survey to investigate if there is an association between the primary social media platform used by individuals and their political views. A random sample of 500 adults was surveyed, and their primary platform (Facebook, Instagram, Twitter/X, Other) and political views (Conservative, Moderate, Liberal) were recorded. The observed counts are displayed in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Political Views</th><th>Facebook</th><th>Instagram</th><th>Twitter/X</th><th>Other</th><th>Total</th></tr></thead><tbody><tr><td>Conservative</td><td>70</td><td>45</td><td>30</td><td>25</td><td>170</td></tr><tr><td>Moderate</td><td>60</td><td>60</td><td>20</td><td>10</td><td>150</td></tr><tr><td>Liberal</td><td>40</td><td>45</td><td>45</td><td>50</td><td>180</td></tr><tr><td>Total</td><td>170</td><td>150</td><td>95</td><td>85</td><td>500</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a test to determine if there is an association between primary social media platform and political views.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the appropriate inference method and verify the conditions for this test. Describe the distribution of the chi-square statistic under the null hypothesis, including its degrees of freedom.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected count for individuals who primarily use Instagram and have Moderate political views. Explain what this expected count represents.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Given that the chi-square test statistic is $\chi^2 = 14.50$ and a p-value of 0.043, determine if there is convincing evidence at the $\alpha = 0.05$ significance level of an association between primary social media platform and political views. Justify your conclusion.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses for independence/association.</li>
+          
+          <li>Part b (2pts): Identifies chi-square test for independence. Verifies the Random condition (random sample stated). Verifies the Large Counts condition (all expected counts $\ge 5$). Describes the chi-square distribution with correct degrees of freedom ($ (4-1)(3-1) = 3 \times 2 = 6$).</li>
+          
+          <li>Part c (1pt): Calculates the expected count for Instagram and Moderate views correctly ($\frac{150 \times 150}{500} = 45$). Explains that this is the count expected if there were no association.</li>
+          
+          <li>Part d (2pts): Makes a correct decision based on the p-value and $\alpha$ level. Provides a correct justification for the decision in context.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S2Q4"
+      data-difficulty="easy"
+      data-skill-codes="1.F,1.E,4.C,3.A,3.C"
+      data-learning-objectives="VAR-8.B,VAR-8.C,VAR-8.E,VAR-8.D,VAR-8.A"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A geneticist claims that a certain dihybrid cross of fruit flies will result in offspring with phenotypes in the ratio of 9:3:3:1. A random sample of 160 offspring is collected. The observed counts are shown below. The geneticist wants to perform a chi-square goodness-of-fit test to see if the observed distribution matches the expected genetic ratio.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Phenotype</th><th>Observed Count</th></tr></thead><tbody><tr><td>Phenotype 1</td><td>98</td></tr><tr><td>Phenotype 2</td><td>28</td></tr><tr><td>Phenotype 3</td><td>25</td></tr><tr><td>Phenotype 4</td><td>9</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected count for each phenotype based on the geneticist's claim. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify the conditions for performing a chi-square goodness-of-fit test using these data.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Describe the shape, center, and spread of the chi-square distribution that would be used for this test under the null hypothesis.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses, referencing the 9:3:3:1 ratio and phenotype distribution.</li>
+          
+          <li>Part b (2pts): Calculates all four expected counts correctly (Phenotype 1: $9/16 \times 160 = 90$; Phenotype 2: $3/16 \times 160 = 30$; Phenotype 3: $3/16 \times 160 = 30$; Phenotype 4: $1/16 \times 160 = 10$). Shows calculations.</li>
+          
+          <li>Part c (1pt): Verifies the Random condition (random sample stated). Verifies the Large Counts condition (all expected counts $\ge 5$).</li>
+          
+          <li>Part d (1pt): Describes the chi-square distribution as skewed right (shape), with mean equal to degrees of freedom (center), and degrees of freedom = 3 (spread/parameter).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S2Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.E,1.F,4.B,4.E,1.A"
+      data-learning-objectives="DAT-3.J,DAT-3.K,VAR-1.J"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A school administrator claims that the distribution of student enrollment across the four grade levels (9th, 10th, 11th, 12th) is uniform. To test this claim, a random sample of 400 students was selected, and their grade level was recorded. A chi-square goodness-of-fit test was performed, yielding a chi-square test statistic of $\chi^2 = 12.8$ with 3 degrees of freedom and a p-value of 0.0051. The observed and expected counts are shown below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Grade Level</th><th>Observed Count</th><th>Expected Count</th></tr></thead><tbody><tr><td>9th</td><td>120</td><td>100</td></tr><tr><td>10th</td><td>110</td><td>100</td></tr><tr><td>11th</td><td>80</td><td>100</td></tr><tr><td>12th</td><td>90</td><td>100</td></tr><tr><td>Total</td><td>400</td><td>400</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for this test. Based on the p-value and a significance level of $\alpha = 0.01$, what conclusion can be drawn? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        For each grade level, calculate the chi-square component $(observed - expected)^2/expected$. Identify which grade level contributes most to the calculated chi-square test statistic. Explain what this large contribution suggests.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The observed counts for 9th and 10th grade were 120 and 110, respectively. What questions might be suggested by the variation between these observed and their expected counts, given the overall conclusion of the test?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Suppose the sample of 400 students was not a random sample, but instead consisted of all students present on a particular day when attendance was unusually low among 11th and 12th graders due to a field trip. Explain how this would affect the validity of the conclusions drawn from the test.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States correct null and alternative hypotheses (uniform distribution of students across grades). Makes a correct decision (reject $H_0$) based on p-value and $\alpha$. Provides correct justification that there is convincing evidence that the distribution is not uniform.</li>
+          
+          <li>Part b (2pts): Calculates chi-square component for each grade level: 9th: $\frac{(120-100)^2}{100} = 4$; 10th: $\frac{(110-100)^2}{100} = 1$; 11th: $\frac{(80-100)^2}{100} = 4$; 12th: $\frac{(90-100)^2}{100} = 1$. Identifies 9th and 11th grades as contributing most. Explains that these grades deviate most from their expected counts, suggesting disproportionate enrollment compared to a uniform distribution.</li>
+          
+          <li>Part c (1pt): Formulates questions regarding the specific reason for the observed deviation (e.g., "Why are there significantly more 9th graders and significantly fewer 11th graders than expected?", "Is there an underlying reason for the enrollment discrepancies in these grades?").</li>
+          
+          <li>Part d (1pt): Explains that the non-random sample (and bias) violates the inference conditions, making the conclusions invalid or not generalizable to the entire student population. The sample is not representative.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

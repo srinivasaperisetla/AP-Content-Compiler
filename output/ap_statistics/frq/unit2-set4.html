@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 4)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 4)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S4Q1"
+      data-difficulty="medium"
+      data-skill-codes="2.C,4.B"
+      data-learning-objectives="DAT-1.D,DAT-1.G,DAT-1.H"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A study investigated the relationship between the amount of sleep a student gets (in hours) and their score on a standardized math test (out of 100). The least-squares regression line calculated from the data is $\hat{y} = 45.2 + 6.8x$, where $x$ is the number of hours of sleep and $\hat{y}$ is the predicted math test score. The coefficient of determination is $r^2 = 0.7225$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Interpret the slope of the least-squares regression line in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Interpret the $y$-intercept of the least-squares regression line in the context of this study. If appropriate, explain any limitations.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Predict the math test score for a student who gets 7.5 hours of sleep.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the value of $r^2$ in the context of this study.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Interprets the slope as an estimated increase of 6.8 points in math test score for each additional hour of sleep.</li>
+          
+          <li>Part b (1pt): Interprets the $y$-intercept as a predicted math test score of 45.2 for a student who gets 0 hours of sleep, and notes that this might not be meaningful as 0 hours of sleep is outside the typical range of observed data.</li>
+          
+          <li>Part c (1pt): Shows calculation $\hat{y} = 45.2 + 6.8(7.5) = 96.2$ and states the predicted score is 96.2.</li>
+          
+          <li>Part d (1pt): Interprets $r^2 = 0.7225$ as approximately 72.25% of the variation in math test scores can be explained by the linear relationship with hours of sleep.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S4Q2"
+      data-difficulty="medium"
+      data-skill-codes="2.A,2.B"
+      data-learning-objectives="DAT-1.E,DAT-1.F"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A researcher wants to determine if a linear model is appropriate to describe the relationship between the age of a car (in years) and its resale value (in thousands of dollars). Data for 10 cars was collected and a least-squares regression line was fitted. The table below shows the age of the cars, their resale value, and the corresponding predicted values and residuals.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Age (years)</th><th>Resale Value (\$1000s)</th><th>Predicted Value ($\hat{y}$)</th><th>Residual</th></tr></thead><tbody><tr><td>1</td><td>25</td><td>20</td><td>5</td></tr><tr><td>2</td><td>23</td><td>19</td><td>4</td></tr><tr><td>3</td><td>18</td><td>18</td><td>0</td></tr><tr><td>4</td><td>14</td><td>17</td><td>-3</td></tr><tr><td>5</td><td>11</td><td>16</td><td>-5</td></tr><tr><td>6</td><td>9</td><td>15</td><td>-6</td></tr><tr><td>7</td><td>8</td><td>14</td><td>-6</td></tr><tr><td>8</td><td>9</td><td>13</td><td>-4</td></tr><tr><td>9</td><td>11</td><td>12</td><td>-1</td></tr><tr><td>10</td><td>14</td><td>11</td><td>3</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Construct a residual plot for these data using the grid provided.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Based on the residual plot constructed in part (a), is a linear model appropriate for describing the relationship between the age of a car and its resale value? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly plots all 10 residuals against the age (x-values) or predicted values ($\hat{y}$). Axes should be labeled appropriately.</li>
+          
+          <li>Part b (1pt): States that a linear model is NOT appropriate. Justifies by noting a clear pattern (e.g., curved shape) in the residual plot, indicating that the linear model does not fit the data well.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S4Q3"
+      data-difficulty="easy"
+      data-skill-codes="2.C,2.D"
+      data-learning-objectives="UNC-1.Q,UNC-1.R"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A survey was conducted to investigate the relationship between a person's preferred method of consuming news (TV, Online, Print) and their age group (Under 30, 30-60, Over 60). The results from a random sample of 500 respondents are summarized in the two-way table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th></th><th>TV</th><th>Online</th><th>Print</th><th>Total</th></tr></thead><tbody><tr><td>Under 30</td><td>10</td><td>120</td><td>20</td><td>150</td></tr><tr><td>30-60</td><td>80</td><td>100</td><td>70</td><td>250</td></tr><tr><td>Over 60</td><td>60</td><td>20</td><td>20</td><td>100</td></tr><tr><td>Total</td><td>150</td><td>240</td><td>110</td><td>500</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the proportion of respondents who prefer Online news among those in the "Under 30" age group.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the proportion of respondents who prefer Online news among those in the "Over 60" age group.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on your answers to parts (a) and (b), describe the relationship between age group and preferred method of consuming news for Online news consumption.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        For the entire sample, what proportion of respondents prefer Print news?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Calculates $\frac{120}{150} = 0.80$.</li>
+          
+          <li>Part b (1pt): Calculates $\frac{20}{100} = 0.20$.</li>
+          
+          <li>Part c (1pt): States that a much higher proportion of people under 30 prefer online news compared to people over 60, suggesting a relationship where younger people are more likely to prefer online news.</li>
+          
+          <li>Part d (1pt): Calculates $\frac{110}{500} = 0.22$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S4Q4"
+      data-difficulty="medium"
+      data-skill-codes="2.C,2.D"
+      data-learning-objectives="UNC-1.Q,UNC-1.R"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A survey was conducted to investigate the association between preferred mode of transportation to work (Car, Public Transit, Bicycle) and job satisfaction level (High, Moderate, Low) among 500 randomly selected employees. The results are summarized in the two-way table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Transportation</th><th>High Job Satisfaction</th><th>Moderate Job Satisfaction</th><th>Low Job Satisfaction</th><th>Total</th></tr></thead><tbody><tr><td>Car</td><td>60</td><td>120</td><td>70</td><td>250</td></tr><tr><td>Public Transit</td><td>30</td><td>50</td><td>20</td><td>100</td></tr><tr><td>Bicycle</td><td>30</td><td>80</td><td>40</td><td>150</td></tr><tr><td>Total</td><td>120</td><td>250</td><td>130</td><td>500</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the conditional proportion of employees who use Public Transit, given that they have High job satisfaction.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Compare the proportion of employees with High job satisfaction among those who use Car, Public Transit, and Bicycle as their primary mode of transportation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on your comparison in part (b), is there evidence of an association between preferred mode of transportation and job satisfaction level? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correct calculation $\frac{30}{120} = 0.25$.</li>
+          
+          <li>Part b (2pts): Proportions: Car: $\frac{60}{250} = 0.24$; Public Transit: $\frac{30}{100} = 0.30$; Bicycle: $\frac{30}{150} = 0.20$. Clear comparison showing differences, e.g., "The proportion of high job satisfaction is highest for public transit users (0.30), followed by car users (0.24), and lowest for bicycle users (0.20)."</li>
+          
+          <li>Part c (1pt): Yes, there is evidence of an association because the conditional proportions of high job satisfaction vary across the different transportation modes.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S4Q5"
+      data-difficulty="medium"
+      data-skill-codes="2.A,2.B,2.C"
+      data-learning-objectives="DAT-1.E,DAT-1.F"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A company models the relationship between the number of sales calls made in a day ($x$) and the number of sales ($y$) achieved. The least squares regression line is $\hat{y} = 2 + 0.5x$. The data for 5 days is provided in the table.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Sales Calls (x)</th><th>Sales (y)</th></tr></thead><tbody><tr><td>2</td><td>3</td></tr><tr><td>4</td><td>4</td></tr><tr><td>6</td><td>6</td></tr><tr><td>8</td><td>5</td></tr><tr><td>10</td><td>8</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the residual for each of the 5 days using the given regression line.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Construct a residual plot for these data. Clearly label your axes.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on your residual plot, describe whether a linear model is appropriate for these data. Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correct calculation of all residuals: (2,3) $\rightarrow$ $0$; (4,4) $\rightarrow$ $0$; (6,6) $\rightarrow$ $1$; (8,5) $\rightarrow$ $-1$; (10,8) $\rightarrow$ $1$.</li>
+          
+          <li>Part b (2pts): Correctly plotted residual points (2,0), (4,0), (6,1), (8,-1), (10,1) with x-axis labeled 'Sales Calls (x)' and y-axis labeled 'Residual'. A horizontal line at Residual = 0 is included. Axes should be scaled appropriately.</li>
+          
+          <li>Part c (1pt): A linear model appears appropriate because there is no obvious pattern (e.g., curved pattern, fanning out) in the residual plot; the residuals are randomly scattered around 0.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

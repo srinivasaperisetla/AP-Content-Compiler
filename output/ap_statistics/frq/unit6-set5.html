@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 5)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 5)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S5Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.A,UNC-4.B,UNC-4.D,UNC-4.F,UNC-4.G"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A recent study investigated the proportion of U.S. adults who believe that climate change is a serious threat. A random sample of 1,000 U.S. adults was surveyed, and 630 of them stated that they believe climate change is a serious threat.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure and verify the conditions for constructing a confidence interval for the true proportion of U.S. adults who believe climate change is a serious threat.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Construct a 95% confidence interval for the true proportion of U.S. adults who believe climate change is a serious threat.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the 95% confidence interval you constructed in part (b) in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        A news article claims that more than 60% of U.S. adults believe climate change is a serious threat. Based on your interval, justify whether this claim is supported.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a one-sample z-interval for a population proportion (1pt); Verifies random sample, $n\hat{p} \ge 10$, and $n(1-\hat{p}) \ge 10$ (1pt).</li>
+          
+          <li>Part b (1pt): Calculates the correct 95% confidence interval for the proportion ($0.600, 0.660$) (1pt).</li>
+          
+          <li>Part c (1pt): Provides a correct interpretation of the confidence interval in context (1pt).</li>
+          
+          <li>Part d (1pt): Justifies that the claim is supported because 0.60 is below the lower bound of the interval (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S5Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.D,VAR-6.E,VAR-6.F,VAR-6.G,DAT-3.A,DAT-3.B"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A company claims that 80% of its customers are satisfied with their service. A consumer advocacy group suspects this claim is too high and conducts its own survey. They randomly sample 250 customers and find that 185 are satisfied.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a test to investigate the advocacy group's suspicion. Also, identify the appropriate statistical inference method.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for conducting this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your p-value, what conclusion should the advocacy group make at the $\alpha = 0.05$ significance level? Interpret this conclusion in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct hypotheses $H_0: p = 0.80$, $H_a: p < 0.80$ and identifies one-sample z-test for proportion (1pt).</li>
+          
+          <li>Part b (1pt): Verifies random sample, $np \ge 10$, and $n(1-p) \ge 10$ using hypothesized proportion (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the correct test statistic $z = -1.976$ (1pt); Calculates the correct p-value $P(Z < -1.976) = 0.0240$ (1pt).</li>
+          
+          <li>Part d (2pts): Compares p-value to $\alpha$ and correctly states conclusion (reject $H_0$) (1pt); Interprets conclusion in context, linking to sufficient evidence to support the advocacy group's suspicion that the true proportion of satisfied customers is less than 0.80 (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S5Q3"
+      data-difficulty="hard"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.I,UNC-4.J,UNC-4.K,UNC-4.M,UNC-4.N"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A health researcher wants to compare the proportion of adults who regularly exercise in two different cities, City A and City B. A random sample of 300 adults from City A revealed that 180 exercise regularly. A separate random sample of 250 adults from City B revealed that 125 exercise regularly.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure and verify the conditions for constructing a confidence interval for the difference in the true proportions of adults who regularly exercise in City A and City B.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Construct a 90% confidence interval for the difference in the true proportions of adults who regularly exercise in City A and City B ($p_A - p_B$).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the 90% confidence interval constructed in part (b) in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your interval, is there convincing evidence of a difference in the proportions of adults who regularly exercise between City A and City B? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a two-sample z-interval for a difference in population proportions (1pt); Verifies random samples, independence, $n_A\hat{p}_A \ge 10$, $n_A(1-\hat{p}_A) \ge 10$, $n_B\hat{p}_B \ge 10$, and $n_B(1-\hat{p}_B) \ge 10$ (1pt).</li>
+          
+          <li>Part b (1pt): Calculates the correct 90% confidence interval for $p_A - p_B$ ($0.023, 0.177$) (1pt).</li>
+          
+          <li>Part c (1pt): Provides a correct interpretation of the confidence interval for the difference in proportions in context (1pt).</li>
+          
+          <li>Part d (1pt): Justifies that there is convincing evidence of a difference because 0 is not included in the interval (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S5Q4"
+      data-difficulty="hard"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.H,VAR-6.I,VAR-6.J,VAR-6.K,DAT-3.C,DAT-3.D"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A marketing team wants to determine if a new advertisement campaign is more effective than the old one in attracting new customers. They randomly select 400 potential customers and expose 200 to the old advertisement (Group O) and 200 to the new advertisement (Group N). After the exposure, 48 customers from Group O made a purchase, while 64 customers from Group N made a purchase.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses to test if the new advertisement is more effective than the old one. Also, identify the appropriate statistical inference method.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for conducting this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value, what conclusion should the marketing team make at the $\alpha = 0.01$ significance level? Interpret this conclusion in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct hypotheses $H_0: p_N - p_O = 0$, $H_a: p_N - p_O > 0$ and identifies two-sample z-test for difference in proportions (1pt).</li>
+          
+          <li>Part b (1pt): Verifies random assignment/samples, independence, and combined sample size conditions for proportions ($n\hat{p} \ge 10$ and $n(1-\hat{p}) \ge 10$ for each group) (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the correct test statistic $z = 1.95$ (1pt); Calculates the correct p-value $P(Z > 1.95) = 0.0256$ (1pt).</li>
+          
+          <li>Part d (2pts): Compares p-value to $\alpha$ and correctly states conclusion (do not reject $H_0$) (1pt); Interprets conclusion in context, linking to insufficient evidence that the new ad is more effective at the $\alpha = 0.01$ level (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S5Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.B,4.A,4.B"
+      data-learning-objectives="UNC-5.A,UNC-5.D,UNC-5.C"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A pharmaceutical company is testing a new drug for a common ailment. They claim the drug is effective for 75% of patients. A researcher plans to conduct a significance test to see if the true proportion of effective treatments is actually lower than 75% for a specific patient demographic. The null hypothesis is $H_0: p = 0.75$, and the alternative hypothesis is $H_a: p < 0.75$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe a Type I error and a Type II error in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain one way to decrease the probability of a Type I error, and describe how this action would affect the probability of a Type II error.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Explain one way to decrease the probability of a Type II error (without increasing the significance level), and describe how this action would affect the probability of a Type I error.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Describes a Type I error in context (e.g., concluding the drug is less effective when it actually is 75% effective) (1pt); Describes a Type II error in context (e.g., failing to conclude the drug is less effective when it actually is) (1pt).</li>
+          
+          <li>Part b (1pt): Explains decreasing $\alpha$ (significance level) to reduce Type I error, and notes it would increase Type II error (1pt).</li>
+          
+          <li>Part c (2pts): Explains increasing sample size to decrease Type II error (1pt); States that it does not affect the probability of a Type I error (as $\alpha$ is set) (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

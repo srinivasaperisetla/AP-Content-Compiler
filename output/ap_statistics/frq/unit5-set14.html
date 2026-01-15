@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 14)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 14)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S14Q1"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.K,UNC-3.L,UNC-3.M"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A company produces a certain type of battery. Historically, 15% of these batteries are defective. A quality control manager takes a random sample of 100 batteries from a large production batch.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample proportion of defective batteries by calculating its mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify that the conditions for using a normal distribution to approximate the sampling distribution of the sample proportion are met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        What is the probability that the sample of 100 batteries will contain 10% or fewer defective batteries?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates mean $\mu_{\hat{p}} = 0.15$ (1pt) and standard deviation $\sigma_{\hat{p}} = \sqrt{\frac{0.15(0.85)}{100}} \approx 0.0357$ (1pt).</li>
+          
+          <li>Part b (2pts): Checks $n p = 100(0.15) = 15 \ge 10$ and $n(1-p) = 100(0.85) = 85 \ge 10$ (1pt). States that because conditions are met, the sampling distribution is approximately normal (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the $z$-score $z = \frac{0.10 - 0.15}{0.0357} \approx -1.40$ (1pt). Uses the $z$-score to find $P(\hat{p} \le 0.10) \approx 0.0808$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S14Q2"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.Q,UNC-3.R,UNC-3.S"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">The weight of adult male grizzly bears in a certain region follows a distribution with a mean of $\mu = 500$ pounds and a standard deviation of $\sigma = 75$ pounds. A researcher captures and weighs a random sample of 36 adult male grizzly bears.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample mean weight of the grizzly bears by calculating its mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain why the sampling distribution of the sample mean can be approximated by a normal distribution, even if the population distribution of bear weights is not known to be normal.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        What is the probability that the sample mean weight of the 36 grizzly bears will be greater than 525 pounds?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates mean $\mu_{\bar{x}} = 500$ pounds (1pt) and standard deviation $\sigma_{\bar{x}} = \frac{75}{\sqrt{36}} = 12.5$ pounds (1pt).</li>
+          
+          <li>Part b (1pt): Explains that because the sample size $n=36$ is large (typically $n \ge 30$), the Central Limit Theorem (CLT) applies, allowing the sampling distribution of the sample mean to be approximated by a normal distribution (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the $z$-score $z = \frac{525 - 500}{12.5} = 2.00$ (1pt). Uses the $z$-score to find $P(\bar{x} > 525) \approx 0.0228$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S14Q3"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.N,UNC-3.O,UNC-3.P"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A pharmaceutical company is testing two new allergy medications, Medication A and Medication B. In a large clinical trial, 25% of patients taking Medication A reported drowsiness, while 20% of patients taking Medication B reported drowsiness. Researchers select a random sample of 100 patients who took Medication A and an independent random sample of 120 patients who took Medication B.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the mean and standard deviation of the sampling distribution for the difference in sample proportions ($\hat{p}_A - \hat{p}_B$).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify that the conditions are met for the sampling distribution of the difference in sample proportions to be approximately normal.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        What is the probability that the sample proportion of patients reporting drowsiness for Medication A is at least 10 percentage points higher than for Medication B?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates mean $\mu_{\hat{p}_A - \hat{p}_B} = 0.25 - 0.20 = 0.05$ (1pt). Calculates standard deviation $\sigma_{\hat{p}_A - \hat{p}_B} = \sqrt{\frac{0.25(0.75)}{100} + \frac{0.20(0.80)}{120}} = \sqrt{0.001875 + 0.001333} \approx \sqrt{0.003208} \approx 0.0566$ (1pt).</li>
+          
+          <li>Part b (2pts): Verifies conditions for both samples: For A: $n_A p_A = 100(0.25)=25 \ge 10$, $n_A(1-p_A) = 100(0.75)=75 \ge 10$. For B: $n_B p_B = 120(0.20)=24 \ge 10$, $n_B(1-p_B) = 120(0.80)=96 \ge 10$ (1pt for all four checks). States that because all conditions are met and samples are independent, the sampling distribution of the difference is approximately normal (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the $z$-score for a difference of $0.10$: $z = \frac{0.10 - 0.05}{0.0566} \approx 0.88$ (1pt). Uses the $z$-score to find $P(\hat{p}_A - \hat{p}_B \ge 0.10) \approx P(Z \ge 0.88) \approx 0.1894$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S14Q4"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.T,UNC-3.U,UNC-3.V"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A consumer advocacy group wants to compare the average fuel efficiency of two car models, Model X and Model Y. Fuel efficiency for Model X cars has a mean of $\mu_X = 35$ mpg and a standard deviation of $\sigma_X = 3.5$ mpg. For Model Y cars, the mean is $\mu_Y = 32$ mpg and the standard deviation is $\sigma_Y = 4.0$ mpg. The group takes a random sample of 40 Model X cars and an independent random sample of 50 Model Y cars.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the mean and standard deviation of the sampling distribution for the difference in sample means ($\bar{x}_X - \bar{x}_Y$).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain why the sampling distribution for the difference in sample means can be approximated by a normal distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        What is the probability that the sample mean fuel efficiency of Model X cars is less than the sample mean fuel efficiency of Model Y cars?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates mean $\mu_{\bar{x}_X - \bar{x}_Y} = 35 - 32 = 3$ mpg (1pt). Calculates standard deviation $\sigma_{\bar{x}_X - \bar{x}_Y} = \sqrt{\frac{3.5^2}{40} + \frac{4.0^2}{50}} = \sqrt{\frac{12.25}{40} + \frac{16}{50}} = \sqrt{0.30625 + 0.32} = \sqrt{0.62625} \approx 0.7913$ mpg (1pt).</li>
+          
+          <li>Part b (1pt): Explains that because both sample sizes ($n_X=40$ and $n_Y=50$) are large (both $\ge 30$), the Central Limit Theorem (CLT) applies to both sample means, and thus to their difference, allowing the sampling distribution of the difference in sample means to be approximated by a normal distribution (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the $z$-score for a difference of $0$: $z = \frac{0 - 3}{0.7913} \approx -3.79$ (1pt). Uses the $z$-score to find $P(\bar{x}_X - \bar{x}_Y < 0) \approx P(Z < -3.79) \approx 0.0001$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S14Q5"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.H,UNC-3.I,UNC-3.J"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A town planning committee wants to estimate the proportion of households that support building a new community center. They decide to survey a random sample of 50 households. The true proportion of households supporting the center in the town is $p=0.6$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Define what it means for an estimator to be unbiased in the context of estimating the population proportion of households supporting the center. Is the sample proportion $\hat{p}$ an unbiased estimator of $p$? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        The committee conducts the survey and finds 28 households support the center. Calculate the point estimate for the proportion of households supporting the center.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe how you would use a simulation with random numbers to estimate the sampling distribution of the sample proportion $\hat{p}$ for samples of size 50 if the true proportion is $p=0.6$. Outline the steps clearly, assuming you have access to a random number generator.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Defines an unbiased estimator as one whose sampling distribution has a mean equal to the true population parameter (1pt). States that $\hat{p}$ is an unbiased estimator of $p$ because $\mu_{\hat{p}} = p$ (1pt).</li>
+          
+          <li>Part b (1pt): Calculates the point estimate $\hat{p} = \frac{28}{50} = 0.56$ (1pt).</li>
+          
+          <li>Part c (3pts): Step 1: Assign digits (e.g., 0-5 for support, 6-9 for not support, or similar split for 60% and 40%) (1pt). Step 2: Generate 50 random digits (representing 50 households) and count the number of 'support' outcomes, then calculate the sample proportion for this sample (1pt). Step 3: Repeat steps 1 and 2 many times (e.g., hundreds or thousands of times) to create a distribution of sample proportions (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

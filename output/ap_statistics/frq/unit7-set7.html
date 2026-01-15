@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 7)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 7)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S7Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D,4.A"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.Q,UNC-4.R,UNC-4.S,UNC-4.T,UNC-4.U"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A cereal manufacturer claims that the net weight of its "Crunchy Oats" cereal boxes is 14 ounces. A consumer advocacy group is concerned that the boxes may be underfilled. They randomly select 18 boxes of "Crunchy Oats" cereal from a recent production run and measure their net weights. The sample mean weight is $\bar{x} = 13.8$ ounces with a sample standard deviation of $s = 0.5$ ounces.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure for estimating the true mean net weight of "Crunchy Oats" cereal boxes and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the true mean net weight of "Crunchy Oats" cereal boxes.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the confidence interval, does the consumer advocacy group have convincing evidence that the true mean net weight is less than 14 ounces? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        If the consumer advocacy group wanted to decrease the width of their 95% confidence interval without changing the confidence level, describe one way they could achieve this.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies one-sample t-interval for a mean (1pt); Verifies conditions: Random sample, $n < 10\%$ of population, and checks for approximate normality (e.g., sample size is 18, so needs to examine population or assume normality, or state that sample size is small so cannot assume normality from CLT) (1pt)</li>
+          
+          <li>Part b (1pt): Calculates the correct 95% confidence interval. (e.g., $13.8 \pm 2.109 \times \frac{0.5}{\sqrt{18}} = (13.55, 14.05)$) (1pt)</li>
+          
+          <li>Part c (1pt): Interprets the confidence interval in context. (e.g., "We are 95% confident that the true mean net weight of Crunchy Oats cereal boxes is between 13.55 ounces and 14.05 ounces.") (1pt)</li>
+          
+          <li>Part d (1pt): States that there is no convincing evidence and justifies based on the interval including 14 ounces. (1pt)</li>
+          
+          <li>Part e (1pt): Describes increasing the sample size or decreasing the confidence level. (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S7Q2"
+      data-difficulty="hard"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A nutritionist claims that the average adult in a certain city consumes 2000 calories per day. A health researcher believes this claim is too low and wants to conduct a study to see if the true mean daily caloric intake is actually higher. A random sample of 30 adults from the city yields a mean daily caloric intake of $\bar{x} = 2150$ calories with a standard deviation of $s = 400$ calories.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for a test to investigate the researcher's belief.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the p-value in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Based on the p-value and a significance level of $\alpha = 0.05$, what conclusion should the researcher make? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses ($H_0: \mu = 2000$, $H_a: \mu > 2000$, where $\mu$ is the true mean daily caloric intake of adults in the city) (1pt)</li>
+          
+          <li>Part b (1pt): Verifies conditions: Random sample, $n < 10\%$ of population (30 is less than 10% of all adults in a city), and approximate normality (sample size $n=30$ is large enough by Central Limit Theorem, or states that population distribution of caloric intake is approximately normal) (1pt)</li>
+          
+          <li>Part c (2pts): Calculates the correct test statistic ($t = \frac{2150 - 2000}{400/\sqrt{30}} \approx 2.05$) (1pt); Calculates the correct p-value (using $df=29$, $P(t > 2.05) \approx 0.024$) (1pt)</li>
+          
+          <li>Part d (1pt): Interprets the p-value in context (e.g., "Assuming the true mean daily caloric intake is 2000 calories, there is a 0.024 probability of observing a sample mean of 2150 calories or more in a random sample of 30 adults.") (1pt)</li>
+          
+          <li>Part e (1pt): States the correct conclusion (reject $H_0$) and justifies based on p-value ($0.024 < 0.05$). Concludes that there is convincing evidence that the true mean daily caloric intake is greater than 2000 calories. (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S7Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.R,UNC-4.S"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A company develops a new training program designed to improve employee productivity. To assess its effectiveness, a random sample of 12 employees is selected. Each employee's productivity is measured before the training program and again after completing the program. The differences in productivity (After - Before) for the 12 employees are calculated. The mean difference is $\bar{d} = 5.5$ units with a standard deviation of $s_d = 8.2$ units. A dot plot of the differences shows no strong skewness or outliers.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure for estimating the true mean difference in productivity, and state the parameter of interest.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for constructing this confidence interval.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate a 90% confidence interval for the true mean difference in productivity.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your interval, does it appear that the training program is effective in improving productivity? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies matched-pairs t-interval for a mean difference (1pt); States parameter of interest as $\mu_d$ or $\mu_{\text{After-Before}}$, the true mean difference in productivity (After - Before). (1pt)</li>
+          
+          <li>Part b (1pt): Verifies conditions: Random sample of differences (or employees), $n < 10\%$ of population (12 is less than 10% of all employees), and approximate normality (dot plot shows no strong skewness or outliers, given sample size 12). (1pt)</li>
+          
+          <li>Part c (2pts): Calculates the correct 90% confidence interval. (e.g., $5.5 \pm t^* \times \frac{8.2}{\sqrt{12}}$, with $t^*=1.796$ for $df=11$, so $5.5 \pm 1.796 \times \frac{8.2}{\sqrt{12}} = (1.15, 9.85)$) (2pts: 1pt for correct $t^*$ or calculation setup, 1pt for correct interval)</li>
+          
+          <li>Part d (1pt): Concludes that the training program appears effective and justifies because the entire interval is above zero, suggesting a positive mean difference. (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S7Q4"
+      data-difficulty="hard"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.F,VAR-7.G,VAR-7.H,VAR-7.1,DAT-3.G,DAT-3.H"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A company is comparing the average lifespan of light bulbs produced by two different manufacturers, A and B. A random sample of 35 bulbs from Manufacturer A has a mean lifespan of $\bar{x}_A = 1200$ hours and a standard deviation of $s_A = 90$ hours. A random sample of 40 bulbs from Manufacturer B has a mean lifespan of $\bar{x}_B = 1150$ hours and a standard deviation of $s_B = 80$ hours.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for a test to determine if there is a significant difference in the true mean lifespans of light bulbs from the two manufacturers.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic for this test. You do not need to calculate the p-value.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Suppose the p-value for this test is $0.005$. Interpret this p-value in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Based on the p-value and a significance level of $\alpha = 0.01$, what conclusion should the company make? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses ($H_0: \mu_A = \mu_B$ or $\mu_A - \mu_B = 0$, $H_a: \mu_A \ne \mu_B$ or $\mu_A - \mu_B \ne 0$, where $\mu_A$ and $\mu_B$ are the true mean lifespans for Manufacturers A and B, respectively) (1pt)</li>
+          
+          <li>Part b (1pt): Verifies conditions: Two independent random samples, $n_A < 10\%$ of population A and $n_B < 10\%$ of population B, and approximate normality for both samples (both $n_A=35$ and $n_B=40$ are $\ge 30$ by CLT) (1pt)</li>
+          
+          <li>Part c (2pts): Calculates the correct test statistic ($t = \frac{(1200 - 1150) - 0}{\sqrt{\frac{90^2}{35} + \frac{80^2}{40}}} \approx 2.528$) (2pts: 1pt for correct formula setup, 1pt for correct value)</li>
+          
+          <li>Part d (1pt): Interprets the p-value in context (e.g., "Assuming there is no difference in the true mean lifespans of light bulbs from the two manufacturers, there is a 0.005 probability of observing a difference in sample means as extreme as or more extreme than 50 hours in either direction.") (1pt)</li>
+          
+          <li>Part e (1pt): States the correct conclusion (reject $H_0$) and justifies based on p-value ($0.005 < 0.01$). Concludes that there is convincing evidence of a significant difference in the true mean lifespans. (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S7Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D,4.A"
+      data-learning-objectives="UNC-4.V,UNC-4.W,UNC-4.X,UNC-4.Y,UNC-4.Z,UNC-4.AA,UNC-4.AB"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A researcher is investigating if there is a difference in the average reaction time between people who regularly consume caffeine and those who do not. A random sample of 25 caffeine consumers had a mean reaction time of $\bar{x}_C = 250$ milliseconds with a standard deviation of $s_C = 30$ ms. A separate random sample of 30 non-caffeine consumers had a mean reaction time of $\bar{x}_{NC} = 270$ ms with a standard deviation of $s_{NC} = 25$ ms. Assume all conditions for inference are met.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate a 95% confidence interval for the true difference in mean reaction times ($\mu_C - \mu_{NC}$).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Interpret the 95% confidence interval in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on your confidence interval, is there convincing evidence of a difference in true mean reaction times between caffeine consumers and non-caffeine consumers? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        If the researcher had instead collected larger samples (e.g., $n_C = 100$ and $n_{NC} = 120$) while keeping the sample means and standard deviations approximately the same, how would this affect the width of the 95% confidence interval? Explain your reasoning.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates the correct 95% confidence interval. (e.g., $(250 - 270) \pm t^* \sqrt{\frac{30^2}{25} + \frac{25^2}{30}}$, with $df \approx 50.8$ (calculator) or conservative $df=24$. Using $df=24$, $t^*=2.064$. So $-20 \pm 2.064 \sqrt{36+20.83} = -20 \pm 2.064 \times 7.538 = -20 \pm 15.55$. Interval is $(-35.55, -4.45)$) (2pts: 1pt for correct standard error calculation, 1pt for correct interval)</li>
+          
+          <li>Part b (1pt): Interprets the confidence interval in context (e.g., "We are 95% confident that the true mean reaction time for caffeine consumers is between 4.45 milliseconds and 35.55 milliseconds *less* than for non-caffeine consumers.") (1pt)</li>
+          
+          <li>Part c (1pt): Concludes there is convincing evidence of a difference and justifies because the entire interval does not contain 0. (1pt)</li>
+          
+          <li>Part d (1pt): Explains that increasing sample sizes would decrease the width of the confidence interval. Justifies that larger $n$ values decrease the standard error of the estimate, thus decreasing the margin of error. (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

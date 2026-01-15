@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AP Statistics — Unit 9: Inference for Quantitative Data: Slopes MCQ Set</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-size: 0.95rem;
+      }
+
+      .data-table th,
+      .data-table td {
+        border: 1px solid #ccc;
+        padding: 0.5rem 0.75rem;
+        text-align: center;
+      }
+
+      .data-table th {
+        background-color: #f2f2f2;
+        font-weight: 600;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+        color: #333;
+      }
+
+      h1 {
+        border-bottom: 2px solid #333;
+        padding-bottom: 0.5rem;
+      }
+
+      .question-card {
+        border: 1px solid #ddd;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        border-radius: 8px;
+        background-color: #fafafa;
+        break-inside: avoid;
+      }
+
+      .question-header {
+        margin-bottom: 0.75rem;
+        font-size: 0.95rem;
+        color: #666;
+      }
+
+      .question-text {
+        font-weight: 600;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+      }
+
+      .diagram {
+        margin: 1rem 0;
+        text-align: center;
+        border: 1px solid #eee;
+        background: white;
+        padding: 10px;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+        max-height: 400px;
+        display: inline-block;
+      }
+
+      .choices {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .choices li {
+        margin-bottom: 0.5rem;
+      }
+
+      .key-section {
+        margin-top: 4rem;
+        border-top: 4px solid #333;
+        padding-top: 2rem;
+      }
+
+      .key-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 1rem;
+      }
+
+      @media print {
+        .question-card {
+          border: none;
+          padding: 0;
+          margin-bottom: 3rem;
+        }
+        .diagram {
+          border: 1px solid #ccc;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics — Unit 9: Inference for Quantitative Data: Slopes</h1>
+
+    <hr />
+
+    <div class="mcq-container">
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S7Q1"
+        data-difficulty="easy"
+        data-skill-codes="1.A"
+        data-learning-objectives="VAR-1.K"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q1.</strong> (ID: ap_statistics_MCQ_U9S7Q1)
+        </div>
+
+        
+
+        <div class="question-text">A scatterplot displays the relationship between the number of hours studied and a student's score on a final exam. Which of the following questions is suggested by the variation in the scatterplot?</div>
+
+        <ul class="choices">
+          
+          <li>A. Is there a linear association between hours studied and exam score?</li>
+          
+          <li>B. Is the exam score normally distributed?</li>
+          
+          <li>C. What is the mean number of hours studied?</li>
+          
+          <li>D. How many students studied for more than 10 hours?</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S7Q2"
+        data-difficulty="medium"
+        data-skill-codes="1.D"
+        data-learning-objectives="UNC-4.AC"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q2.</strong> (ID: ap_statistics_MCQ_U9S7Q2)
+        </div>
+
+        
+
+        <div class="question-text">A researcher wants to estimate the true slope of the linear relationship between advertising spending and sales for a new product. Which inference procedure is most appropriate?</div>
+
+        <ul class="choices">
+          
+          <li>A. A $t$-interval for the slope of a regression model</li>
+          
+          <li>B. A $z$-interval for the population mean</li>
+          
+          <li>C. A one-sample $t$-interval for a population mean</li>
+          
+          <li>D. A two-sample $t$-interval for the difference in means</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S7Q3"
+        data-difficulty="hard"
+        data-skill-codes="4.C"
+        data-learning-objectives="UNC-4.AD"
+        data-correct-index="3"
+      >
+        <div class="question-header">
+          <strong>Q3.</strong> (ID: ap_statistics_MCQ_U9S7Q3)
+        </div>
+
+        
+
+        <div class="question-text">A study investigates the relationship between temperature (in degrees Celsius) and the reaction time (in seconds) of a chemical process. The data are collected from 20 independent experiments. Which of the following conditions is LEAST important to verify for constructing a confidence interval for the slope of the regression model?</div>
+
+        <ul class="choices">
+          
+          <li>A. The distribution of residuals is approximately normal.</li>
+          
+          <li>B. The relationship between temperature and reaction time is linear.</li>
+          
+          <li>C. The standard deviation of the residuals is constant across all temperatures.</li>
+          
+          <li>D. The sample size is sufficiently large, typically $n \ge 30$.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S7Q4"
+        data-difficulty="medium"
+        data-skill-codes="3.D"
+        data-learning-objectives="UNC-4.AE"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q4.</strong> (ID: ap_statistics_MCQ_U9S7Q4)
+        </div>
+
+        
+
+        <div class="question-text">A least-squares regression line is calculated to predict a car's fuel efficiency (miles per gallon) from its weight (in pounds). The estimated slope is $b = -0.012$ and the standard error of the slope is $SE_b = 0.003$. For a 95% confidence interval with 28 degrees of freedom, the critical $t$-value is $t^* = 2.048$. What is the margin of error for the slope?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.012$</li>
+          
+          <li>B. $0.006144$</li>
+          
+          <li>C. $0.003$</li>
+          
+          <li>D. $-0.012$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S7Q5"
+        data-difficulty="medium"
+        data-skill-codes="3.D"
+        data-learning-objectives="UNC-4.AF"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q5.</strong> (ID: ap_statistics_MCQ_U9S7Q5)
+        </div>
+
+        
+
+        <div class="question-text">A study models the relationship between the number of hours of sleep a person gets ($x$) and their reaction time ($y$, in milliseconds). Based on a sample of 25 people, the estimated slope is $b = -2.5$, and the standard error of the slope is $SE_b = 0.8$. The critical value for a 90% confidence interval for the slope is $t^* = 1.711$. What is the 90% confidence interval for the true slope $\beta$?</div>
+
+        <ul class="choices">
+          
+          <li>A. $(-2.5 \pm 0.8)$</li>
+          
+          <li>B. $(-2.5 \pm 1.711)$</li>
+          
+          <li>C. $(-2.5 \pm 1.3688)$</li>
+          
+          <li>D. $(-1.711 \pm 0.8)$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S7Q6"
+        data-difficulty="easy"
+        data-skill-codes="4.B"
+        data-learning-objectives="UNC-4.AG"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q6.</strong> (ID: ap_statistics_MCQ_U9S7Q6)
+        </div>
+
+        
+
+        <div class="question-text">A 95% confidence interval for the slope of the regression line relating advertising spending (in thousands of dollars) to sales (in thousands of units) is $(0.8, 1.5)$. How should this interval be interpreted?</div>
+
+        <ul class="choices">
+          
+          <li>A. We are 95% confident that for every additional thousand dollars spent on advertising, sales will increase by between 0.8 and 1.5 thousand units.</li>
+          
+          <li>B. There is a 95% probability that the true slope is between 0.8 and 1.5.</li>
+          
+          <li>C. 95% of the time, the observed slope will be between 0.8 and 1.5.</li>
+          
+          <li>D. We are 95% confident that the mean sales for a given advertising spending is between 0.8 and 1.5.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S7Q7"
+        data-difficulty="medium"
+        data-skill-codes="4.D"
+        data-learning-objectives="UNC-4.AH"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q7.</strong> (ID: ap_statistics_MCQ_U9S7Q7)
+        </div>
+
+        
+
+        <div class="question-text">A 90% confidence interval for the slope of the relationship between tree height (meters) and tree age (years) is $(0.15, 0.35)$. A forestry expert claims that for every additional year of age, a tree grows by more than 0.1 meters on average. Based on this confidence interval, what conclusion can be drawn?</div>
+
+        <ul class="choices">
+          
+          <li>A. The expert's claim is supported because the entire interval is above 0.1.</li>
+          
+          <li>B. The expert's claim is not supported because the interval contains values below 0.1.</li>
+          
+          <li>C. The expert's claim cannot be evaluated because the interval does not include 0.1.</li>
+          
+          <li>D. The confidence interval is too wide to make a definitive conclusion.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S7Q8"
+        data-difficulty="easy"
+        data-skill-codes="4.A"
+        data-learning-objectives="UNC-4.AI"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q8.</strong> (ID: ap_statistics_MCQ_U9S7Q8)
+        </div>
+
+        
+
+        <div class="question-text">A researcher computes a 95% confidence interval for the slope of a regression line using a sample of $n=50$ observations. If the researcher were to double the sample size to $n=100$ while keeping all other factors (like variability) the same, what would be the likely effect on the width of the confidence interval?</div>
+
+        <ul class="choices">
+          
+          <li>A. The width would increase.</li>
+          
+          <li>B. The width would stay approximately the same.</li>
+          
+          <li>C. The width would decrease.</li>
+          
+          <li>D. The width would become zero.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S7Q9"
+        data-difficulty="medium"
+        data-skill-codes="1.E"
+        data-learning-objectives="VAR-7.J"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q9.</strong> (ID: ap_statistics_MCQ_U9S7Q9)
+        </div>
+
+        
+
+        <div class="question-text">A principal wants to determine if there is a linear relationship between the number of hours a student spends on extracurricular activities per week and their GPA. Which inference procedure is appropriate to answer this question?</div>
+
+        <ul class="choices">
+          
+          <li>A. A $t$-test for the slope of a regression model</li>
+          
+          <li>B. A $z$-test for a population proportion</li>
+          
+          <li>C. A $\chi^2$ test for independence</li>
+          
+          <li>D. A $t$-test for the difference in two means</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S7Q10"
+        data-difficulty="easy"
+        data-skill-codes="1.F"
+        data-learning-objectives="VAR-7.K"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q10.</strong> (ID: ap_statistics_MCQ_U9S7Q10)
+        </div>
+
+        
+
+        <div class="question-text">A medical researcher wants to test if there is a significant linear relationship between a patient's age and their blood pressure. Which of the following are the appropriate null and alternative hypotheses for the slope $\beta$ of the regression line?</div>
+
+        <ul class="choices">
+          
+          <li>A. $H_0: \beta = 0$, $H_a: \beta \ne 0$</li>
+          
+          <li>B. $H_0: \beta \ne 0$, $H_a: \beta = 0$</li>
+          
+          <li>C. $H_0: \beta = 0$, $H_a: \beta > 0$</li>
+          
+          <li>D. $H_0: \beta = 0$, $H_a: \beta < 0$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S7Q11"
+        data-difficulty="hard"
+        data-skill-codes="4.C"
+        data-learning-objectives="VAR-7.L"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q11.</strong> (ID: ap_statistics_MCQ_U9S7Q11)
+        </div>
+
+        
+
+        <div class="question-text">A study investigates the relationship between the amount of fertilizer applied ($x$) and crop yield ($y$). Data is collected from 15 plots, with varying fertilizer amounts. To perform a significance test for the slope of the regression line, which condition is most crucial to check, especially for predicting outside the range of $x$ values?</div>
+
+        <ul class="choices">
+          
+          <li>A. The residuals show no obvious pattern when plotted against the predicted values.</li>
+          
+          <li>B. The plots were randomly assigned different fertilizer amounts.</li>
+          
+          <li>C. The distribution of crop yields is approximately normal for each fertilizer level.</li>
+          
+          <li>D. The variability of crop yield is constant across different fertilizer levels.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S7Q12"
+        data-difficulty="medium"
+        data-skill-codes="3.E"
+        data-learning-objectives="VAR-7.M"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q12.</strong> (ID: ap_statistics_MCQ_U9S7Q12)
+        </div>
+
+        
+
+        <div class="question-text">A linear regression model is fit to a dataset of $n=30$ observations. The estimated slope is $b = 1.5$, and the standard error of the slope is $SE_b = 0.6$. The null hypothesis is $H_0: \beta = 0$. What is the value of the $t$-test statistic?</div>
+
+        <ul class="choices">
+          
+          <li>A. $1.5$</li>
+          
+          <li>B. $2.5$</li>
+          
+          <li>C. $0.4$</li>
+          
+          <li>D. $0.9$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S7Q13"
+        data-difficulty="medium"
+        data-skill-codes="4.B"
+        data-learning-objectives="DAT-3.M"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q13.</strong> (ID: ap_statistics_MCQ_U9S7Q13)
+        </div>
+
+        
+
+        <div class="question-text">A significance test for the slope of a regression line yields a $p$-value of 0.02. If the null hypothesis states that the true slope is 0 ($H_0: \beta=0$), how should this $p$-value be interpreted?</div>
+
+        <ul class="choices">
+          
+          <li>A. Assuming the true slope is 0, there is a 2% chance of observing a sample slope as extreme or more extreme than the one observed.</li>
+          
+          <li>B. There is a 2% chance that the null hypothesis is true.</li>
+          
+          <li>C. There is a 98% chance that the alternative hypothesis is true.</li>
+          
+          <li>D. The true slope is 0 with 98% confidence.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S7Q14"
+        data-difficulty="easy"
+        data-skill-codes="4.E"
+        data-learning-objectives="DAT-3.N"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q14.</strong> (ID: ap_statistics_MCQ_U9S7Q14)
+        </div>
+
+        
+
+        <div class="question-text">A company conducts a hypothesis test to determine if there is a significant positive linear relationship between employee training hours and productivity scores. The $p$-value for the test of the slope is 0.005. Using a significance level of $\alpha = 0.01$, what conclusion should be made?</div>
+
+        <ul class="choices">
+          
+          <li>A. Fail to reject $H_0$, there is no significant evidence of a positive linear relationship.</li>
+          
+          <li>B. Reject $H_0$, there is significant evidence of a positive linear relationship.</li>
+          
+          <li>C. Accept $H_0$, the relationship is not statistically significant.</li>
+          
+          <li>D. The data is inconclusive.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S7Q15"
+        data-difficulty="easy"
+        data-skill-codes="1.A"
+        data-learning-objectives="VAR-1.K"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q15.</strong> (ID: ap_statistics_MCQ_U9S7Q15)
+        </div>
+
+        
+
+        <div class="question-text">A scatterplot shows the number of hours students spent studying for a test versus their test scores. The points show a general upward trend but are spread out. What does this variation suggest?</div>
+
+        <ul class="choices">
+          
+          <li>A. That there is a moderate positive linear association between studying hours and test scores.</li>
+          
+          <li>B. That there is no relationship between studying hours and test scores.</li>
+          
+          <li>C. That all students who study for the same amount of time get the same score.</li>
+          
+          <li>D. That test scores are solely determined by studying hours.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S7Q16"
+        data-difficulty="medium"
+        data-skill-codes="1.D,4.C"
+        data-learning-objectives="UNC-4.AC,UNC-4.AD"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q16.</strong> (ID: ap_statistics_MCQ_U9S7Q16)
+        </div>
+
+        
+
+        <div class="question-text">A study aims to construct a confidence interval for the slope of the relationship between annual income and charitable donations. Assuming a random sample of 100 individuals was taken, which additional condition is most crucial for the validity of the chosen procedure?</div>
+
+        <ul class="choices">
+          
+          <li>A. The relationship between income and donations appears linear in the scatterplot.</li>
+          
+          <li>B. The variance of donations is equal across all income levels.</li>
+          
+          <li>C. The sample size is greater than 30.</li>
+          
+          <li>D. The data points are independent of each other.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S7Q17"
+        data-difficulty="medium"
+        data-skill-codes="1.D"
+        data-learning-objectives="UNC-4.AC"
+        data-correct-index="3"
+      >
+        <div class="question-header">
+          <strong>Q17.</strong> (ID: ap_statistics_MCQ_U9S7Q17)
+        </div>
+
+        
+
+        <div class="question-text">When constructing a confidence interval for the slope of a population regression line, which distribution is typically used to find the critical value?</div>
+
+        <ul class="choices">
+          
+          <li>A. The $z$-distribution</li>
+          
+          <li>B. The chi-square distribution</li>
+          
+          <li>C. The $F$-distribution</li>
+          
+          <li>D. The $t$-distribution</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S7Q18"
+        data-difficulty="medium"
+        data-skill-codes="4.B"
+        data-learning-objectives="UNC-4.AG"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q18.</strong> (ID: ap_statistics_MCQ_U9S7Q18)
+        </div>
+
+        
+
+        <div class="question-text">A 99% confidence interval for the slope of the regression line modeling the relationship between years of experience and hourly wage is $(0.75, 1.25)$. What is the correct interpretation of this interval?</div>
+
+        <ul class="choices">
+          
+          <li>A. We are 99% confident that for each additional year of experience, the hourly wage increases by between $0.75 and $1.25.</li>
+          
+          <li>B. There is a 99% probability that the average hourly wage for any experience level is between $0.75 and $1.25.</li>
+          
+          <li>C. 99% of all hourly wages are between $0.75 and $1.25 higher per year of experience.</li>
+          
+          <li>D. We are 99% confident that the estimated slope from our sample is between $0.75 and $1.25.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S7Q19"
+        data-difficulty="easy"
+        data-skill-codes="4.D"
+        data-learning-objectives="UNC-4.AH"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q19.</strong> (ID: ap_statistics_MCQ_U9S7Q19)
+        </div>
+
+        
+
+        <div class="question-text">A 95% confidence interval for the slope of a regression model relating the number of hours exercised per week to body fat percentage is $(-0.5, -0.1)$. Does this interval provide evidence that exercising more reduces body fat percentage?</div>
+
+        <ul class="choices">
+          
+          <li>A. Yes, because the entire interval is negative, indicating a decrease.</li>
+          
+          <li>B. No, because the interval does not include zero.</li>
+          
+          <li>C. Yes, because the interval is close to zero.</li>
+          
+          <li>D. No, because the interval is too wide to be conclusive.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S7Q20"
+        data-difficulty="medium"
+        data-skill-codes="4.A"
+        data-learning-objectives="UNC-4.AI"
+        data-correct-index="3"
+      >
+        <div class="question-header">
+          <strong>Q20.</strong> (ID: ap_statistics_MCQ_U9S7Q20)
+        </div>
+
+        
+
+        <div class="question-text">A researcher wants to reduce the width of a 95% confidence interval for the slope of a regression line. Which of the following actions would most effectively achieve this goal, assuming all other factors remain constant?</div>
+
+        <ul class="choices">
+          
+          <li>A. Decrease the confidence level to 90%.</li>
+          
+          <li>B. Increase the variability of the explanatory variable.</li>
+          
+          <li>C. Decrease the sample size.</li>
+          
+          <li>D. Increase the sample size.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S7Q21"
+        data-difficulty="easy"
+        data-skill-codes="1.E"
+        data-learning-objectives="VAR-7.J"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q21.</strong> (ID: ap_statistics_MCQ_U9S7Q21)
+        </div>
+
+        
+
+        <div class="question-text">To determine if the average daily temperature linearly affects the amount of ice cream sold by a vendor, what type of significance test should be performed?</div>
+
+        <ul class="choices">
+          
+          <li>A. A $t$-test for the slope of a least-squares regression line</li>
+          
+          <li>B. A $z$-test for a population mean</li>
+          
+          <li>C. A $t$-test for a population mean</li>
+          
+          <li>D. A $\chi^2$ test for goodness of fit</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S7Q22"
+        data-difficulty="easy"
+        data-skill-codes="1.F"
+        data-learning-objectives="VAR-7.K"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q22.</strong> (ID: ap_statistics_MCQ_U9S7Q22)
+        </div>
+
+        
+
+        <div class="question-text">A meteorologist wants to test if there is a negative linear relationship between air pressure and precipitation amount. Which of the following sets of hypotheses is appropriate for the slope $\beta$?</div>
+
+        <ul class="choices">
+          
+          <li>A. $H_0: \beta = 0$ versus $H_a: \beta < 0$</li>
+          
+          <li>B. $H_0: \beta < 0$ versus $H_a: \beta = 0$</li>
+          
+          <li>C. $H_0: \beta = 0$ versus $H_a: \beta > 0$</li>
+          
+          <li>D. $H_0: \beta = 0$ versus $H_a: \beta \ne 0$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S7Q23"
+        data-difficulty="hard"
+        data-skill-codes="4.C"
+        data-learning-objectives="VAR-7.L"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q23.</strong> (ID: ap_statistics_MCQ_U9S7Q23)
+        </div>
+
+        
+
+        <div class="question-text">A study is conducted to determine if the amount of sleep (in hours) affects a student's score on a creativity test. Data from 25 randomly selected students is collected. A significance test for the slope of the regression line is planned. Which assumption is LEAST likely to be perfectly met in practice, but often assumed to hold reasonably well for such data?</div>
+
+        <ul class="choices">
+          
+          <li>A. The relationship between sleep and creativity score is linear.</li>
+          
+          <li>B. The standard deviation of creativity scores is constant for all amounts of sleep.</li>
+          
+          <li>C. The residuals are normally distributed.</li>
+          
+          <li>D. The students' creativity scores are independent.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S7Q24"
+        data-difficulty="medium"
+        data-skill-codes="3.E"
+        data-learning-objectives="VAR-7.M"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q24.</strong> (ID: ap_statistics_MCQ_U9S7Q24)
+        </div>
+
+        
+
+        <div class="question-text">A regression analysis is performed on the relationship between study time (hours) and exam scores (points). The estimated slope is $b = 3.5$ and the standard error of the slope is $SE_b = 1.0$. If the null hypothesis is $H_0: \beta = 0$, what is the test statistic?</div>
+
+        <ul class="choices">
+          
+          <li>A. $3.5$</li>
+          
+          <li>B. $1.0$</li>
+          
+          <li>C. $0.35$</li>
+          
+          <li>D. $2.5$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U9S7Q25"
+        data-difficulty="medium"
+        data-skill-codes="4.B"
+        data-learning-objectives="DAT-3.M"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q25.</strong> (ID: ap_statistics_MCQ_U9S7Q25)
+        </div>
+
+        
+
+        <div class="question-text">In a test for the significance of a regression slope, the $p$-value is $0.065$. If the significance level is $\alpha = 0.05$, what can be concluded about the null hypothesis $H_0: \beta = 0$?</div>
+
+        <ul class="choices">
+          
+          <li>A. Reject $H_0$, there is sufficient evidence of a linear relationship.</li>
+          
+          <li>B. Fail to reject $H_0$, there is a strong linear relationship.</li>
+          
+          <li>C. Fail to reject $H_0$, there is not sufficient evidence of a linear relationship.</li>
+          
+          <li>D. Reject $H_0$, there is no linear relationship.</li>
+          
+        </ul>
+      </div>
+      
+    </div>
+
+    <div class="key-section">
+      <h2>Answer Key</h2>
+
+      <div class="key-grid">
+        
+        <div>
+          <strong>1.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>2.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>3.</strong>
+          D
+        </div>
+        
+        <div>
+          <strong>4.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>5.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>6.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>7.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>8.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>9.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>10.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>11.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>12.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>13.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>14.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>15.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>16.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>17.</strong>
+          D
+        </div>
+        
+        <div>
+          <strong>18.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>19.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>20.</strong>
+          D
+        </div>
+        
+        <div>
+          <strong>21.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>22.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>23.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>24.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>25.</strong>
+          C
+        </div>
+        
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

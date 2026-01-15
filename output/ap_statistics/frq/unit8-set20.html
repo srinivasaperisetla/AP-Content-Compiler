@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 20)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 20)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S20Q1"
+      data-difficulty="easy"
+      data-skill-codes="1.F,1.E,4.C,3.A"
+      data-learning-objectives="VAR-8.B,VAR-8.C,VAR-8.E,VAR-8.D"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A cereal company claims that 30% of its customers prefer "Crunchy Corn," 50% prefer "Sweet Wheat," and 20% prefer "Fruity Flakes." To test this claim, a random sample of 200 customers is surveyed about their preferred cereal. The observed counts are given in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Cereal</th><th>Observed Count</th></tr></thead><tbody><tr><td>Crunchy Corn</td><td>55</td></tr><tr><td>Sweet Wheat</td><td>90</td></tr><tr><td>Fruity Flakes</td><td>55</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Name the appropriate statistical test and verify the conditions for inference.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected count for "Sweet Wheat" if the company's claim is true.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null ($H_0$) and alternative ($H_a$) hypotheses in words or symbols.</li>
+          
+          <li>Part b (2pts): Names Chi-Square Goodness-of-Fit test. Verifies the random sample condition. Verifies the expected counts condition (showing calculation or stating all expected counts are $\ge 5$).</li>
+          
+          <li>Part c (1pt): Calculates the correct expected count for Sweet Wheat ($200 \times 0.50 = 100$).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S20Q2"
+      data-difficulty="medium"
+      data-skill-codes="3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.F,VAR-8.G,DAT-3.I,DAT-3.J"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A botanist believes that a certain flower's petal color distribution follows a specific genetic ratio: 25% red, 50% pink, and 25% white. A sample of 120 flowers is observed, revealing 25 red, 70 pink, and 25 white petals. The expected counts under the genetic model are 30 red, 60 pink, and 30 white. Assume conditions for inference have been met.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the chi-square test statistic for this study. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Based on your calculation in part (a), determine the p-value for the test using 2 degrees of freedom. (You do not need to show the full table lookup, but indicate the range.)
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the p-value from part (b) in context and state the conclusion of the test at the $\alpha = 0.05$ significance level.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Calculates the correct chi-square test statistic, showing components of the calculation: $\chi^2 = \frac{(25-30)^2}{30} + \frac{(70-60)^2}{60} + \frac{(25-30)^2}{30} = 0.833 + 1.667 + 0.833 = 3.333$.</li>
+          
+          <li>Part b (1pt): Determines the p-value range using the chi-square distribution with $df=2$. For $\chi^2=3.333$, $0.10 < p < 0.25$.</li>
+          
+          <li>Part c (2pts): Correctly interprets the p-value in context (e.g., "Assuming the true distribution is 25% red, 50% pink, 25% white, there is a 0.10 to 0.25 probability of observing sample results as extreme or more extreme than those observed by random chance."). Justifies a conclusion (e.g., "Since the p-value is greater than $\alpha = 0.05$, we fail to reject the null hypothesis. There is not sufficient evidence to conclude that the distribution of petal colors differs from the hypothesized genetic ratio.").</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S20Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.A"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.H"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A research team wants to investigate if there is an association between a person's primary mode of transportation to work (Car, Public Transit, Bike/Walk) and their satisfaction with their commute (Satisfied, Neutral, Dissatisfied). A random sample of 300 commuters is surveyed, and the results are summarized in the two-way table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Mode of Transport</th><th>Satisfied</th><th>Neutral</th><th>Dissatisfied</th><th>Total</th></tr></thead><tbody><tr><td>Car</td><td>80</td><td>60</td><td>30</td><td>170</td></tr><tr><td>Public Transit</td><td>50</td><td>20</td><td>10</td><td>80</td></tr><tr><td>Bike/Walk</td><td>20</td><td>10</td><td>20</td><td>50</td></tr><tr><td>Total</td><td>150</td><td>90</td><td>60</td><td>300</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses to test for an association between mode of transportation and commute satisfaction.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Name the appropriate statistical test and verify the conditions for inference for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected count for commuters who use Public Transit and are Satisfied.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null ($H_0$) and alternative ($H_a$) hypotheses. $H_0$: There is no association between primary mode of transportation and commute satisfaction. $H_a$: There is an association between primary mode of transportation and commute satisfaction (or variables are independent vs. dependent).</li>
+          
+          <li>Part b (2pts): Names Chi-Square Test for Independence. Verifies the random sample condition. Verifies the expected counts condition (states all expected counts are $\ge 5$, showing the calculation of one or more to support this, or refers to all expected counts being large enough).</li>
+          
+          <li>Part c (1pt): Calculates the correct expected count for Public Transit and Satisfied. (Row Total for Public Transit = $50+20+10 = 80$; Column Total for Satisfied = $80+50+20=150$; Total $n=300$). Expected count = $\frac{80 \times 150}{300} = 40$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S20Q4"
+      data-difficulty="medium"
+      data-skill-codes="3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.L,VAR-8.M,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A marketing firm is comparing customer preferences for three different designs of a new product (Design A, Design B, Design C) across two distinct regions (Region 1 and Region 2). A random sample of customers was taken from each region, and their preferences were recorded. The observed counts are given below. The chi-square test statistic for homogeneity was calculated as $\chi^2 = 7.89$.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Design Preference</th><th>Region 1</th><th>Region 2</th><th>Total</th></tr></thead><tbody><tr><td>Design A</td><td>45</td><td>35</td><td>80</td></tr><tr><td>Design B</td><td>60</td><td>40</td><td>100</td></tr><tr><td>Design C</td><td>25</td><td>15</td><td>40</td></tr><tr><td>Total</td><td>130</td><td>90</td><td>220</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the degrees of freedom for this chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Using the provided chi-square test statistic, determine the p-value. You may use a chi-square distribution table or a calculator function (state the range or value).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the p-value in context and justify a conclusion at the $\alpha = 0.01$ significance level.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Calculates the correct degrees of freedom. $df = (r-1)(c-1) = (2-1)(3-1) = 1 \times 2 = 2$.</li>
+          
+          <li>Part b (1pt): Determines the p-value for $\chi^2 = 7.89$ with $df=2$. Using a calculator, $p \approx 0.0193$. Using a table, $0.01 < p < 0.025$.</li>
+          
+          <li>Part c (2pts): Correctly interprets the p-value in context (e.g., "Assuming there is no difference in the distribution of product design preferences between Region 1 and Region 2, there is a 0.0193 probability of observing sample results as extreme or more extreme by random chance."). Justifies a conclusion (e.g., "Since the p-value ($0.0193$) is greater than $\alpha = 0.01$, we fail to reject the null hypothesis. There is not sufficient evidence to conclude that the distribution of product design preferences differs between Region 1 and Region 2.").</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S20Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.E,1.F,4.C,4.B,4.E"
+      data-learning-objectives="VAR-8.A,VAR-8.J,VAR-8.K,DAT-3.K,DAT-3.L,VAR-1.J"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A school district is considering implementing a new after-school program. They want to know if students' interest in this program is dependent on their grade level (Middle School, High School). A survey was conducted with a random sample of 250 students, resulting in the following observed counts of interest (Interested, Not Interested).</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Grade Level</th><th>Interested</th><th>Not Interested</th><th>Total</th></tr></thead><tbody><tr><td>Middle School</td><td>70</td><td>50</td><td>120</td></tr><tr><td>High School</td><td>60</td><td>70</td><td>130</td></tr><tr><td>Total</td><td>130</td><td>120</td><td>250</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate chi-square test to investigate whether interest in the program is independent of grade level, and state the null and alternative hypotheses.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        One of the conditions for performing this test is that all expected counts must be at least 5. Explain why this condition is important for the validity of the chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Suppose the calculated chi-square test statistic is $\chi^2 = 0.82$ with 1 degree of freedom. Determine the p-value. Based on this p-value, describe what this value suggests about the observed variation between interest levels across grade levels, particularly relating to the idea of "unexpected results" (VAR-1.J).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The school principal interprets the high p-value (from part c) as strong evidence that there is absolutely no difference in interest levels between middle and high school students. Critically evaluate the principal's statement and provide a more appropriate conclusion for a significance level of $\alpha = 0.05$.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies Chi-Square Test for Independence. States correct null ($H_0$) and alternative ($H_a$) hypotheses in context: $H_0$: Student interest in the program is independent of grade level. $H_a$: Student interest in the program is dependent on grade level.</li>
+          
+          <li>Part b (1pt): Explains that the expected counts condition ensures the chi-square distribution is a good approximation for the sampling distribution of the test statistic. Small expected counts can lead to an inflated chi-square statistic and an inaccurate p-value, violating the assumption of a continuous distribution.</li>
+          
+          <li>Part c (1pt): Determines the p-value for $\chi^2 = 0.82$ with $df=1$. Using a calculator, $p \approx 0.365$. Describes that this high p-value suggests that the observed differences in interest levels between middle and high school students are not statistically significant and could easily occur by random chance, meaning the results are not "unexpected" under the assumption of independence (ties to VAR-1.J).</li>
+          
+          <li>Part d (2pts): Critically evaluates the principal's statement, pointing out that failing to reject $H_0$ does not mean $H_0$ is true (i.e., "absolutely no difference"). Explains that a lack of evidence of difference is not evidence of a lack of difference. Provides an appropriate conclusion: "Since the p-value ($0.365$) is greater than $\alpha = 0.05$, we fail to reject the null hypothesis. There is not sufficient evidence to conclude that student interest in the program is dependent on grade level."</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

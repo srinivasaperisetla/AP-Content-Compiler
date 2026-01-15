@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 9)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 9)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S9Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.R,UNC-4.S,UNC-4.T"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A cereal manufacturer wants to estimate the true mean weight of cereal in their "Large Family Size" boxes. A random sample of 12 boxes is taken, and the weight of cereal (in ounces) in each box is measured. The sample mean weight is $\bar{x} = 20.2$ ounces, and the sample standard deviation is $s = 0.3$ ounces. A histogram of the sample weights shows no strong skewness or outliers.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the true mean weight of cereal in "Large Family Size" boxes.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The cereal boxes are advertised to contain 20 ounces of cereal. Based on your interval in part (b), is there convincing statistical evidence that the true mean weight of cereal is greater than 20 ounces? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a one-sample t-interval for a mean (1pt); Verifies conditions: random sample, $n < 10\%$ of population, and approximately normal population (satisfied by no strong skewness/outliers in histogram for $n=12$) (1pt)</li>
+          
+          <li>Part b (2pts): Calculates degrees of freedom $df = 11$ and finds $t^* = 2.201$ (1pt); Calculates interval using $\bar{x} \pm t^* \left(\frac{s}{\sqrt{n}}\right) = 20.2 \pm 2.201 \left(\frac{0.3}{\sqrt{12}}\right) \approx (20.009, 20.391)$ (1pt)</li>
+          
+          <li>Part c (1pt): Interprets the confidence interval in context, stating "We are 95% confident that the true mean weight of cereal in 'Large Family Size' boxes is between 20.009 and 20.391 ounces." (1pt)</li>
+          
+          <li>Part d (1pt): States that there is convincing statistical evidence that the true mean weight is greater than 20 ounces AND justifies by noting that 20 ounces is not contained within the interval, or that the entire interval is above 20 ounces (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S9Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A company claims that its new energy-efficient light bulbs have an average lifespan of 10,000 hours. A consumer advocacy group suspects that the true mean lifespan is less than 10,000 hours. They randomly sample 15 light bulbs and test them, finding a sample mean lifespan of $\bar{x} = 9,750$ hours with a sample standard deviation of $s = 500$ hours. A dot plot of the sample data appears roughly symmetric with no outliers.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for this investigation. Define any parameters you use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing a significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        State your conclusion in the context of the problem, using a significance level of $\alpha = 0.05$.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States $H_0: \mu = 10,000$ hours and $H_a: \mu < 10,000$ hours (1pt); Defines $\mu$ as the true mean lifespan of the new energy-efficient light bulbs (1pt)</li>
+          
+          <li>Part b (1pt): Verifies conditions: random sample (given), $n < 10\%$ of population (assume large population of bulbs), and approximately normal population (satisfied by dot plot showing no strong skewness or outliers for $n=15$) (1pt)</li>
+          
+          <li>Part c (2pts): Calculates test statistic $t = \frac{\bar{x} - \mu_0}{s/\sqrt{n}} = \frac{9750 - 10000}{500/\sqrt{15}} \approx -1.936$ (1pt); Finds p-value using $df = 14$, $P(t < -1.936) \approx 0.036$ (1pt)</li>
+          
+          <li>Part d (1pt): States a correct conclusion in context, based on comparing the p-value to $\alpha=0.05$, clearly linking the decision to the p-value (e.g., "Since the p-value of 0.036 is less than $\alpha = 0.05$, we reject the null hypothesis. There is convincing statistical evidence that the true mean lifespan of the new energy-efficient light bulbs is less than 10,000 hours.") (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S9Q3"
+      data-difficulty="hard"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.E"
+      data-learning-objectives="VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.F"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A sleep research center wants to determine if a new sleep aid medication reduces the time it takes for insomniacs to fall asleep. Ten volunteer insomniacs were selected, and their time to fall asleep (in minutes) was recorded before taking the medication and after taking the medication for one week. The data are provided in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Subject</th><th>Before (minutes)</th><th>After (minutes)</th></tr></thead><tbody><tr><td>1</td><td>65</td><td>58</td></tr><tr><td>2</td><td>78</td><td>70</td></tr><tr><td>3</td><td>92</td><td>85</td></tr><tr><td>4</td><td>55</td><td>50</td></tr><tr><td>5</td><td>80</td><td>72</td></tr><tr><td>6</td><td>70</td><td>65</td></tr><tr><td>7</td><td>85</td><td>78</td></tr><tr><td>8</td><td>60</td><td>55</td></tr><tr><td>9</td><td>95</td><td>86</td></tr><tr><td>10</td><td>72</td><td>67</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Define the parameter of interest and state the appropriate null and alternative hypotheses for this investigation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing a significance test for paired data.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your test, what conclusion should the sleep research center draw at the $\alpha = 0.01$ significance level?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Defines $\mu_d$ as the true mean difference (Before - After) in time to fall asleep for insomniacs AND states $H_0: \mu_d = 0$ and $H_a: \mu_d > 0$ (1pt)</li>
+          
+          <li>Part b (1pt): Verifies conditions: Random sample (given); $n < 10\%$ of population (assume large population of insomniacs); and checks differences for approximate normality (e.g., states that a graph of the differences shows no strong skew or outliers, for $n=10$) (1pt)</li>
+          
+          <li>Part c (2pts): Calculates sample mean difference $\bar{d}=6.6$ and sample standard deviation of differences $s_d \approx 1.526$ (not scored separately but needed); Calculates test statistic $t = \frac{\bar{d} - 0}{s_d/\sqrt{n}} = \frac{6.6}{1.526/\sqrt{10}} \approx 13.68$ (1pt); Finds p-value using $df = 9$, $P(t > 13.68) \approx 0$ (1pt)</li>
+          
+          <li>Part d (1pt): States a correct conclusion in context based on the p-value and $\alpha=0.01$, clearly linking the decision to the p-value (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S9Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D,4.A"
+      data-learning-objectives="UNC-4.V,UNC-4.W,UNC-4.Y,UNC-4.Z,UNC-4.AA,UNC-4.AB"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A company develops two new types of durable paint, Paint A and Paint B, and wants to estimate the difference in their mean drying times (in hours). A random sample of 30 surfaces painted with Paint A yielded a mean drying time of $\bar{x}_A = 2.5$ hours with a standard deviation of $s_A = 0.4$ hours. An independent random sample of 35 surfaces painted with Paint B yielded a mean drying time of $\bar{x}_B = 2.8$ hours with a standard deviation of $s_B = 0.5$ hours.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 90% confidence interval for the true difference in mean drying times ($\mu_A - \mu_B$).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval in context. Does the interval provide convincing evidence that there is a difference in the mean drying times between Paint A and Paint B? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        If the company wanted a narrower confidence interval with the same confidence level, what change could they make to their study design? Explain how this change would affect the interval.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies a two-sample t-interval for a difference of means AND verifies conditions (two independent random samples; $n_A, n_B < 10\%$ of populations; large sample sizes $n_A \ge 30, n_B \ge 30$ ensure approximate normality) (1pt)</li>
+          
+          <li>Part b (2pts): Calculates degrees of freedom (e.g., $df \approx 62.7$) and finds critical value $t^* \approx 1.670$ (for $df=62$) (1pt); Calculates interval: $(\bar{x}_A - \bar{x}_B) \pm t^* \sqrt{\frac{s_A^2}{n_A} + \frac{s_B^2}{n_B}} = (2.5 - 2.8) \pm 1.670 \sqrt{\frac{0.4^2}{30} + \frac{0.5^2}{35}} \approx -0.3 \pm 1.670 \times 0.111 \approx (-0.485, -0.115)$ (1pt)</li>
+          
+          <li>Part c (2pts): Interprets the confidence interval: "We are 90% confident that the true mean drying time for Paint A is between 0.115 and 0.485 hours less than that for Paint B." (1pt); States there is convincing evidence of a difference AND justifies by noting that 0 is not included in the interval (1pt)</li>
+          
+          <li>Part d (1pt): Suggests increasing sample sizes for both paints AND explains that this would decrease the standard error, leading to a smaller margin of error and thus a narrower interval (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S9Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.F,VAR-7.G,VAR-7.H,VAR-7.1,DAT-3.G,DAT-3.H"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A health researcher wants to investigate if a new exercise program (Program X) is more effective at reducing systolic blood pressure than a standard exercise program (Program Y). Forty participants were randomly assigned to Program X, and an independent group of forty participants was randomly assigned to Program Y. After 12 weeks, the reduction in systolic blood pressure (in mmHg) was recorded for each participant. Program X: $n_X = 40$, $\bar{x}_X = 12.5$ mmHg, $s_X = 3.2$ mmHg. Program Y: $n_Y = 40$, $\bar{x}_Y = 10.0$ mmHg, $s_Y = 2.8$ mmHg. Assume that dot plots of the reductions for both groups show no strong skewness or outliers.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Define the parameters of interest and state the appropriate null and alternative hypotheses for this investigation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing a significance test for the difference of two population means.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the p-value in the context of the problem and state your conclusion at the $\alpha = 0.05$ significance level.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Defines $\mu_X$ as the true mean reduction in systolic blood pressure for Program X and $\mu_Y$ for Program Y, AND states $H_0: \mu_X = \mu_Y$ and $H_a: \mu_X > \mu_Y$ (1pt)</li>
+          
+          <li>Part b (1pt): Verifies conditions: two independent random samples/random assignment (given); $n_X, n_Y < 10\%$ of populations (assume large); large sample sizes ($n_X \ge 30, n_Y \ge 30$) ensure approximate normality (1pt)</li>
+          
+          <li>Part c (2pts): Calculates test statistic $t = \frac{(\bar{x}_X - \bar{x}_Y) - 0}{\sqrt{\frac{s_X^2}{n_X} + \frac{s_Y^2}{n_Y}}} = \frac{(12.5 - 10.0)}{\sqrt{\frac{3.2^2}{40} + \frac{2.8^2}{40}}} \approx 3.72$ (1pt); Finds p-value using $df \approx 77.8$ or conservative $df=39$, $P(t > 3.72) \approx 0.00018$ (1pt)</li>
+          
+          <li>Part d (2pts): Interprets p-value in context (1pt); States a correct conclusion in context, based on comparing the p-value to $\alpha=0.05$, clearly linking the decision to the p-value (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

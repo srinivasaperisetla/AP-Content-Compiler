@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 1: Exploring One-Variable Data (Set 13)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 1: Exploring One-Variable Data (Set 13)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U1S13Q1"
+      data-difficulty="easy"
+      data-skill-codes="2.B,2.A,2.D"
+      data-learning-objectives="UNC-1.A,UNC-1.C,UNC-1.D,UNC-1.E"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A local high school surveyed a random sample of 100 students to determine their preferred extracurricular club from a list of three options: Robotics, Debate, or Art Club. The results were: Robotics (35 students), Debate (45 students), Art Club (20 students).</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Construct a relative frequency table for the preferred extracurricular clubs. Be sure to include club name and relative frequency.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Create a bar chart to display the distribution of preferred extracurricular clubs. Label your axes clearly.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Suppose the school surveyed 100 students last year, and 50% preferred the Debate Club. Compare the club preferences between this year's survey and last year's survey for the Debate Club.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly constructs a relative frequency table with club names and relative frequencies (0.35, 0.45, 0.20)</li>
+          
+          <li>Part b (2pts): Creates a bar chart with correct club names on the x-axis, relative frequencies or counts on the y-axis, and appropriate scaling. (1pt for correct bars/heights, 1pt for labels/scale)</li>
+          
+          <li>Part c (1pt): Compares the two percentages (45% vs 50%) and states that this year's preference is slightly lower for the Debate Club.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U1S13Q2"
+      data-difficulty="medium"
+      data-skill-codes="2.A,2.B,2.C"
+      data-learning-objectives="UNC-1.F,UNC-1.H,UNC-1.I,UNC-1.J"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A fitness instructor recorded the number of push-ups completed by 15 participants in a 60-second period: 25, 30, 28, 32, 26, 40, 31, 29, 30, 27, 35, 28, 33, 29, 30.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Is the variable "number of push-ups" categorical or quantitative? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Construct a dot plot for the number of push-ups completed by the participants. Label your axes clearly.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe the shape, center, and spread of the distribution of push-ups.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Calculate the median and the interquartile range (IQR) for this data set.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies "number of push-ups" as quantitative and explains that it represents a measurable quantity with meaningful numerical values.</li>
+          
+          <li>Part b (2pts): Creates a dot plot with a correctly labeled number line showing all data points. (1pt for correct data points, 1pt for labeling/scale)</li>
+          
+          <li>Part c (1pt): Describes the shape (e.g., roughly symmetric, unimodal), center (e.g., around 30 push-ups), and spread (e.g., from 25 to 40 push-ups).</li>
+          
+          <li>Part d (2pts): Correctly calculates the median (30) and the IQR (Q3=32.5, Q1=28, IQR=4.5). (1pt for median, 1pt for IQR calculation)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U1S13Q3"
+      data-difficulty="hard"
+      data-skill-codes="2.D,3.A"
+      data-learning-objectives="VAR-2.B,VAR-2.C"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">The lifespan of a particular brand of battery is approximately normally distributed with a mean of $\mu = 55$ hours and a standard deviation of $\sigma = 4$ hours.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What proportion of these batteries are expected to last between 50 hours and 60 hours? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        A battery is considered "long-lasting" if its lifespan is in the top 15% of all batteries. What is the minimum lifespan (in hours) a battery must have to be considered long-lasting? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Suppose another brand of battery has a mean lifespan of 60 hours and a standard deviation of 5 hours. If a battery from the first brand lasts 58 hours and a battery from the second brand lasts 62 hours, which battery has a relatively longer lifespan compared to its own brand's batteries? Justify your answer using $z$-scores.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates $z$-scores for 50 and 60 hours ($\frac{50-55}{4}=-1.25$, $\frac{60-55}{4}=1.25$) and finds the proportion (approx. 0.7887 or 78.87%). (1pt for correct $z$-scores, 1pt for correct proportion)</li>
+          
+          <li>Part b (2pts): Finds the $z$-score corresponding to the 85th percentile (approx. 1.04) and calculates the minimum lifespan ($55 + 1.04 \times 4 = 59.16$ hours). (1pt for correct $z$-score, 1pt for correct lifespan)</li>
+          
+          <li>Part c (2pts): Calculates $z$-score for the first brand ($\frac{58-55}{4}=0.75$) and for the second brand ($\frac{62-60}{5}=0.40$). Compares $z$-scores and concludes that the first battery has a relatively longer lifespan because its $z$-score is higher. (1pt for correct $z$-scores, 1pt for correct comparison and justification)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U1S13Q4"
+      data-difficulty="medium"
+      data-skill-codes="2.B,2.A,2.C,4.B"
+      data-learning-objectives="UNC-1.G,UNC-1.H,UNC-1.I,UNC-1.K"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A city's emergency services department recorded the response times (in minutes) for 20 calls received during a particular shift: 5, 8, 7, 12, 6, 9, 10, 7, 15, 6, 8, 11, 7, 18, 9, 6, 10, 14, 8, 7.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Construct a stemplot of the response times. Be sure to include a key.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe the shape, center, and spread of the distribution of response times.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the mean and median response times.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your description in part (b) and calculations in part (c), which measure of center (mean or median) would be more appropriate for describing these response times? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Constructs a correct stemplot with appropriate stems and leaves, and includes a key. (1pt for correct stemplot, 1pt for key)</li>
+          
+          <li>Part b (1pt): Describes the shape (e.g., slightly right-skewed or roughly symmetric), center (e.g., around 8-9 minutes), and spread (e.g., from 5 to 18 minutes).</li>
+          
+          <li>Part c (2pts): Calculates the mean ($\bar{x} = 9.25$ minutes) and the median (8 minutes). (1pt for mean, 1pt for median)</li>
+          
+          <li>Part d (1pt): States that the median is more appropriate because the distribution appears slightly skewed to the right (or at least not perfectly symmetric), and the median is resistant to skew/outliers. (Award partial credit if they choose mean and justify it reasonably given a "roughly symmetric" description).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U1S13Q5"
+      data-difficulty="easy"
+      data-skill-codes="2.A,2.B,2.D"
+      data-learning-objectives="UNC-1.A,UNC-1.B,UNC-1.C,UNC-1.D,UNC-1.E"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A survey was conducted among 50 students asking their preferred learning method: visual, auditory, or kinesthetic. The results are summarized below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Method</th><th>Number of Students</th></tr></thead><tbody><tr><td>Visual</td><td>25</td></tr><tr><td>Auditory</td><td>15</td></tr><tr><td>Kinesthetic</td><td>10</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Construct a relative frequency table for the preferred learning methods.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Create a bar chart to display the distribution of preferred learning methods.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe the distribution of preferred learning methods based on the bar chart.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        If a similar survey was conducted among 50 teachers, and 20 preferred visual, 15 preferred auditory, and 15 preferred kinesthetic, compare the distribution of preferred learning methods between students and teachers.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correct relative frequency table with appropriate labels.</li>
+          
+          <li>Part b (1pt): Correctly drawn bar chart with labeled axes and title.</li>
+          
+          <li>Part c (1pt): Description including mode and general overview of preferences in context.</li>
+          
+          <li>Part d (1pt): A comparison noting similarities and/or differences in proportions or modes between students and teachers.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

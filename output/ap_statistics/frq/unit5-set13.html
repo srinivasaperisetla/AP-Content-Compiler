@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 13)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 13)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S13Q1"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.K,UNC-3.L,UNC-3.M"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A local newspaper claims that 60% of adults in the city read a daily newspaper. A researcher wants to test this claim and takes a random sample of 200 adults from the city.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample proportion of adults who read a daily newspaper, including its shape, mean, and standard deviation, assuming the newspaper's claim is true.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether it is appropriate to use a normal distribution to model the sampling distribution of the sample proportion in this context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that in a random sample of 200 adults, less than 55% read a daily newspaper, assuming the newspaper's claim is true.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies the shape as approximately normal if conditions are met (1pt); Calculates $\mu_{\hat{p}} = 0.60$ (0.5pt); Calculates $\sigma_{\hat{p}} = \sqrt{\frac{(0.60)(0.40)}{200}}$ (0.5pt)</li>
+          
+          <li>Part b (1pt): Verifies $np \ge 10$ and $n(1-p) \ge 10$ (1pt)</li>
+          
+          <li>Part c (1pt): Calculates the probability $P(\hat{p} < 0.55)$ using the normal distribution, showing standardized value and probability (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S13Q2"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.Q,UNC-3.R,UNC-3.S"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">The amount of coffee dispensed by a vending machine into a 12-ounce cup is a random variable with a mean of 11.5 ounces and a standard deviation of 0.8 ounces. A random sample of 40 cups is taken.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample mean amount of coffee dispensed in 40 cups, including its shape, mean, and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether it is appropriate to use a normal distribution to model the sampling distribution of the sample mean in this context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the mean amount of coffee dispensed in a random sample of 40 cups is less than 11.3 ounces.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies the shape as approximately normal due to CLT (1pt); Calculates $\mu_{\bar{x}} = 11.5$ ounces (0.5pt); Calculates $\sigma_{\bar{x}} = \frac{0.8}{\sqrt{40}}$ ounces (0.5pt)</li>
+          
+          <li>Part b (1pt): Justifies approximate normality based on $n \ge 30$ (Central Limit Theorem) (1pt)</li>
+          
+          <li>Part c (1pt): Calculates the probability $P(\bar{x} < 11.3)$ using the normal distribution, showing standardized value and probability (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S13Q3"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.N,UNC-3.O,UNC-3.P"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A pharmaceutical company claims that Drug A cures 60% of patients with a certain allergic reaction and Drug B cures 50%. Researchers take a random sample of 150 patients for Drug A and 120 patients for Drug B. Assume these samples are independent.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Determine the mean and standard deviation of the sampling distribution of the difference in sample proportions ($\hat{p}_A - \hat{p}_B$), assuming the company's claims are true.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether it is appropriate to use a normal distribution to model the sampling distribution of the difference in sample proportions.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the meaning of $P(\hat{p}_A - \hat{p}_B > 0.1)$ in the context of this study.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates $\mu_{\hat{p}_A - \hat{p}_B} = 0.10$ (1pt); Calculates $\sigma_{\hat{p}_A - \hat{p}_B} = \sqrt{\frac{(0.60)(0.40)}{150} + \frac{(0.50)(0.50)}{120}}$ (1pt)</li>
+          
+          <li>Part b (1pt): Verifies conditions for approximate normality ($n_A p_A \ge 10$, $n_A(1-p_A) \ge 10$, $n_B p_B \ge 10$, $n_B(1-p_B) \ge 10$) (1pt)</li>
+          
+          <li>Part c (1pt): Interprets the probability as the chance that, in repeated sampling, the sample proportion of relief for Drug A is at least 0.1 higher than for Drug B (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S13Q4"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.T,UNC-3.U,UNC-3.V"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A study compares the average growth of two types of plants, Type X and Type Y, after 30 days. For Type X, the growth is normally distributed with a mean of 15 cm and a standard deviation of 2 cm. For Type Y, the growth is normally distributed with a mean of 13 cm and a standard deviation of 1.5 cm. Researchers take a random sample of 35 Type X plants and 40 Type Y plants, independently.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Determine the mean and standard deviation of the sampling distribution of the difference in sample means ($\bar{x}_X - \bar{x}_Y$).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether it is appropriate to use a normal distribution to model the sampling distribution of the difference in sample means.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the mean growth of Type X plants in the sample is at least 3 cm greater than the mean growth of Type Y plants in the sample.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates $\mu_{\bar{x}_X - \bar{x}_Y} = 15 - 13 = 2$ cm (1pt); Calculates $\sigma_{\bar{x}_X - \bar{x}_Y} = \sqrt{\frac{2^2}{35} + \frac{1.5^2}{40}}$ cm (1pt)</li>
+          
+          <li>Part b (1pt): Justifies approximate normality because both population distributions are normal, OR because both sample sizes are large enough ($n_X \ge 30, n_Y \ge 30$) (1pt)</li>
+          
+          <li>Part c (2pts): Calculates the probability $P(\bar{x}_X - \bar{x}_Y \ge 3)$ using the normal distribution, showing standardized value and probability (2pts)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S13Q5"
+      data-difficulty="medium"
+      data-skill-codes="3.B,4.B,3.C"
+      data-learning-objectives="UNC-3.I,UNC-3.J,UNC-3.Q,VAR-6.C"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A population consists of 5 students whose scores on a recent exam are 70, 75, 80, 85, 90. A random sample of 2 students is to be selected without replacement from this population.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Consider the sample mean $\bar{x}$ as an estimator for the population mean $\mu$. Explain what it means for $\bar{x}$ to be an unbiased estimator in this context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        If the sample selected consists of scores 70 and 90, calculate the sample mean. Calculate the population mean. Explain how the sample mean serves as an estimate for the population mean, and discuss what the variation between the sample mean and population mean suggests about repeated sampling.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Suppose the population of exam scores was much larger, and a random sample of $n=10$ students was taken. Discuss whether it would be appropriate to use a normal distribution to model the sampling distribution of the sample mean, if the population distribution of scores is unknown and highly skewed.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Explains that an estimator is unbiased if the mean of its sampling distribution equals the true population parameter (1pt)</li>
+          
+          <li>Part b (2pts): Calculates sample mean $\bar{x} = 80$ (0.5pt); Calculates population mean $\mu = 80$ (0.5pt); Explains that $\bar{x}$ is a point estimate and discusses how its value varies from $\mu$ across different samples, highlighting sampling variability (1pt)</li>
+          
+          <li>Part c (1pt): Explains that a sample size of $n=10$ is likely too small to invoke the Central Limit Theorem for a highly skewed population, making normal approximation inappropriate (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

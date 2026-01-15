@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 6)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 6)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S6Q1"
+      data-difficulty="easy"
+      data-skill-codes="2.C,2.D"
+      data-learning-objectives="UNC-1.P,UNC-1.Q,UNC-1.R"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A study investigated the relationship between a student's preferred learning style (Visual, Auditory, Kinesthetic) and their performance on a standardized test (Pass, Fail). A random sample of 200 students was classified, and the results are summarized in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Learning Style</th><th>Pass</th><th>Fail</th><th>Total</th></tr></thead><tbody><tr><td>Visual</td><td>55</td><td>25</td><td>80</td></tr><tr><td>Auditory</td><td>45</td><td>15</td><td>60</td></tr><tr><td>Kinesthetic</td><td>30</td><td>30</td><td>60</td></tr><tr><td>Total</td><td>130</td><td>70</td><td>200</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the proportion of students who passed the standardized test for each learning style (Visual, Auditory, Kinesthetic).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Compare the proportions calculated in part (a). Based on these proportions, does there appear to be an association between preferred learning style and test performance? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correct calculation of proportions for all three learning styles ($\frac{55}{80} = 0.6875$, $\frac{45}{60} = 0.75$, $\frac{30}{60} = 0.50$)</li>
+          
+          <li>Part b (2pts): Correct comparison of the proportions (e.g., Auditory has the highest pass rate, Kinesthetic the lowest) AND a clear justification regarding association based on the comparison (e.g., since the proportions are different across learning styles, there appears to be an association).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S6Q2"
+      data-difficulty="medium"
+      data-skill-codes="2.C,4.B"
+      data-learning-objectives="DAT-1.B,DAT-1.C"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A meteorologist is studying the relationship between the daily high temperature (in degrees Fahrenheit) and the amount of electricity consumed (in megawatts) in a small town. Over 10 randomly selected days, she recorded the following data. Day 1: (70, 45), Day 2: (72, 47), Day 3: (75, 52), Day 4: (68, 42), Day 5: (80, 58), Day 6: (65, 38), Day 7: (78, 55), Day 8: (73, 49), Day 9: (82, 60), Day 10: (69, 43)</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the correlation coefficient for these data. Show your work or state the formula used and the relevant summary statistics if using a calculator.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Interpret the value of the correlation coefficient in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Suppose on day 11, the high temperature was $95^\circ F$ and the electricity consumed was $70$ megawatts. Explain how including this new data point might affect the correlation coefficient.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correct calculation of $r \approx 0.98$ (using technology) OR correct formula with relevant summary statistics (e.g., means, standard deviations, sum of products of z-scores) AND correct numerical answer.</li>
+          
+          <li>Part b (1pt): Correct interpretation of $r$ in context (e.g., There is a strong, positive linear relationship between the daily high temperature and the amount of electricity consumed).</li>
+          
+          <li>Part c (2pts): Correct explanation that the new data point $(95^\circ F, 70 \text{ MW})$ extends the range of both temperature and electricity consumption while maintaining the strong positive linear pattern observed in the original data. This would likely strengthen (increase) the correlation coefficient $r$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S6Q3"
+      data-difficulty="medium"
+      data-skill-codes="2.C,4.B"
+      data-learning-objectives="DAT-1.D,DAT-1.H"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A car manufacturer wants to model the relationship between the age of a car (in years) and its selling price (in thousands of dollars). Based on a sample of cars, the least-squares regression line relating selling price ($\hat{y}$) to age ($x$) is given by $\hat{y} = 28.5 - 2.1x$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Interpret the slope of the least-squares regression line in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Interpret the y-intercept of the least-squares regression line in the context of this problem. If it is not appropriate to interpret, explain why not.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Predict the selling price of a 5-year-old car using this model.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correct interpretation of the slope: For each additional year of a car's age, the predicted selling price decreases by $2.1$ thousand dollars.</li>
+          
+          <li>Part b (2pts): Correct interpretation of the y-intercept: A brand new car (0 years old) is predicted to sell for $28.5$ thousand dollars. AND a correct justification for its appropriateness (e.g., 0 years is within or close to the range of ages typically observed for cars, so it is a reasonable value to interpret).</li>
+          
+          <li>Part c (1pt): Correct calculation of the predicted selling price: $\hat{y} = 28.5 - 2.1(5) = 28.5 - 10.5 = 18$ thousand dollars.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S6Q4"
+      data-difficulty="medium"
+      data-skill-codes="2.B,2.A,2.C,4.B"
+      data-learning-objectives="UNC-1.S,DAT-1.A,DAT-1.B,DAT-1.C"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A researcher collected data on daily maximum temperature ($^\circ$C) and the number of ice cream units sold at a beachside stand. The data for 8 randomly selected days are shown below: \nTemperature ($^\circ$C): 14, 16, 18, 20, 22, 24, 26, 28 \nSales (units): 185, 210, 230, 260, 280, 305, 330, 350</div>
+
+      
+      <div class="diagram">
+         <svg width="350" height="250" style="background-color:white;"><line x1="50" y1="200" x2="300" y2="200" stroke="black" stroke-width="1"/><line x1="50" y1="200" x2="50" y2="50" stroke="black" stroke-width="1"/><text x="175" y="215" font-size="12" fill="black" text-anchor="middle">Temperature ($^\circ$C)</text><text x="25" y="125" font-size="12" fill="black" text-anchor="middle" transform="rotate(-90 25 125)">Sales (units)</text><circle cx="50" cy="190.9" r="3" fill="black"/><circle cx="85.7" cy="176.6" r="3" fill="black"/><circle cx="121.4" cy="164.4" r="3" fill="black"/><circle cx="157.1" cy="146.1" r="3" fill="black"/><circle cx="192.8" cy="134.0" r="3" fill="black"/><circle cx="228.5" cy="118.8" r="3" fill="black"/><circle cx="264.2" cy="103.6" r="3" fill="black"/><circle cx="300" cy="88.4" r="3" fill="black"/></svg> 
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Construct a scatterplot of the data, with temperature on the horizontal axis and sales on the vertical axis.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe the relationship between daily maximum temperature and ice cream sales shown in the scatterplot, including strength, direction, and form.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The correlation coefficient for this data is $r \approx 0.98$. Interpret this value in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly plots all 8 points with labeled axes (1pt for axes, 1pt for points).</li>
+          
+          <li>Part b (2pts): Describes the relationship as strong, positive, and linear (1pt for direction/strength, 1pt for form).</li>
+          
+          <li>Part c (1pt): Interprets $r=0.98$ as a strong positive linear association between temperature and ice cream sales.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S6Q5"
+      data-difficulty="medium"
+      data-skill-codes="2.C,4.B"
+      data-learning-objectives="DAT-1.D,DAT-1.H"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A school guidance counselor is investigating the relationship between the number of hours a student spends studying per week ($x$) and their score on a standardized exam ($y$). The least-squares regression line calculated from a sample of students is $\hat{y} = 2.5 + 12x$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the predicted exam score for a student who studied for 5 hours per week.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Interpret the slope of the least-squares regression line in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the $y$-intercept of the least-squares regression line in the context of this problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correct calculation $\hat{y} = 2.5 + 12(5) = 62.5$.</li>
+          
+          <li>Part b (2pts): For each additional hour studied per week, the predicted exam score increases by 12 points.</li>
+          
+          <li>Part c (1pt): A student who studies 0 hours per week is predicted to score 2.5 points on the exam. Acknowledges that this interpretation may not be reasonable in context.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

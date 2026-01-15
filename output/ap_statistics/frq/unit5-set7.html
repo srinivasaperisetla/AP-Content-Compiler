@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 7)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 7)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S7Q1"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.K,UNC-3.L,UNC-3.M"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A manufacturer claims that 15% of their new energy-efficient light bulbs are defective. A quality control manager plans to take a random sample of 200 light bulbs from a large production batch to test this claim.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample proportion of defective light bulbs, $\hat{p}$, for samples of size 200, assuming the manufacturer's claim is true. Be sure to calculate the mean and standard deviation of $\hat{p}$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether the sampling distribution of $\hat{p}$ can be approximated by a normal distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that in a random sample of 200 light bulbs, 18% or more will be defective.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your calculation in part (c), would you be surprised to find 18% or more defective light bulbs in the sample? Explain your reasoning.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly calculates the mean $\mu_{\hat{p}} = p = 0.15$ (1pt). Correctly calculates the standard deviation $\sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} = \sqrt{\frac{0.15(0.85)}{200}} \approx 0.0252$ (1pt).</li>
+          
+          <li>Part b (1pt): Checks large counts condition $np \ge 10$ ($200 \times 0.15 = 30 \ge 10$) and $n(1-p) \ge 10$ ($200 \times 0.85 = 170 \ge 10$) and states that the sampling distribution can be approximated by a normal distribution (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the correct z-score $z = \frac{0.18 - 0.15}{0.0252} \approx 1.19$ (1pt). Calculates the correct probability $P(\hat{p} \ge 0.18) = P(Z \ge 1.19) \approx 0.1170$ (1pt).</li>
+          
+          <li>Part d (1pt): States that it would not be surprised (0.5pt) and provides appropriate reasoning (e.g., the probability of 0.1170 is not exceptionally low) (0.5pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S7Q2"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.Q,UNC-3.R,UNC-3.S"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">The weights of adult male grizzly bears in a particular region are known to have a skewed distribution with a mean of $\mu = 350$ kg and a standard deviation of $\sigma = 60$ kg. Researchers plan to take a random sample of 50 adult male grizzly bears for a health study.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample mean weight, $\bar{x}$, for samples of size 50. Be sure to calculate the mean and standard deviation of $\bar{x}$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether the sampling distribution of $\bar{x}$ can be approximated by a normal distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the sample mean weight of 50 grizzly bears will be less than 340 kg.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly calculates the mean $\mu_{\bar{x}} = \mu = 350$ kg (1pt). Correctly calculates the standard deviation $\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}} = \frac{60}{\sqrt{50}} \approx 8.485$ kg (1pt).</li>
+          
+          <li>Part b (1pt): States that since the sample size $n=50$ is sufficiently large ($n \ge 30$), the Central Limit Theorem applies, allowing the sampling distribution of $\bar{x}$ to be approximated by a normal distribution, even if the population distribution is skewed (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the correct z-score $z = \frac{340 - 350}{8.485} \approx -1.18$ (1pt). Calculates the correct probability $P(\bar{x} < 340) = P(Z < -1.18) \approx 0.1190$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S7Q3"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.N,UNC-3.O,UNC-3.P"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A university is investigating the effectiveness of two different online learning platforms, Platform A and Platform B, for improving student engagement. A pilot study involved randomly assigning 150 students to Platform A and 120 students to Platform B. At the end of the semester, 75% of students on Platform A reported high engagement, while 65% of students on Platform B reported high engagement. Assume these proportions represent the true population proportions for each platform, $p_A = 0.75$ and $p_B = 0.65$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the difference in sample proportions, $\hat{p}_A - \hat{p}_B$. Calculate the mean and standard deviation of this sampling distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify that the conditions for using a normal distribution to approximate the sampling distribution of $\hat{p}_A - \hat{p}_B$ are met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the sample proportion of students reporting high engagement from Platform A is at least 0.05 greater than the sample proportion from Platform B.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly calculates the mean $\mu_{\hat{p}_A - \hat{p}_B} = p_A - p_B = 0.75 - 0.65 = 0.10$ (1pt). Correctly calculates the standard deviation $\sigma_{\hat{p}_A - \hat{p}_B} = \sqrt{\frac{p_A(1-p_A)}{n_A} + \frac{p_B(1-p_B)}{n_B}} = \sqrt{\frac{0.75(0.25)}{150} + \frac{0.65(0.35)}{120}} \approx 0.0561$ (1pt).</li>
+          
+          <li>Part b (2pts): Verifies all four large counts conditions: $n_A p_A = 112.5 \ge 10$, $n_A (1-p_A) = 37.5 \ge 10$, $n_B p_B = 78 \ge 10$, $n_B (1-p_B) = 42 \ge 10$ (1pt). States that because all conditions are met, the sampling distribution can be approximated by a normal distribution (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the correct z-score $z = \frac{0.05 - 0.10}{0.0561} \approx -0.89$ (1pt). Calculates the correct probability $P(\hat{p}_A - \hat{p}_B \ge 0.05) = P(Z \ge -0.89) \approx 0.8133$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S7Q4"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.T,UNC-3.U,UNC-3.V"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A nutritionist wants to compare the average daily calorie intake of adults in two different cities, City X and City Y. It is known that the calorie intake in City X has a mean of $\mu_X = 2200$ calories and a standard deviation of $\sigma_X = 300$ calories. In City Y, the calorie intake has a mean of $\mu_Y = 2100$ calories and a standard deviation of $\sigma_Y = 250$ calories. The distributions of calorie intake for both cities are approximately normal. The nutritionist takes a random sample of 40 adults from City X and a random sample of 35 adults from City Y.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the difference in sample means, $\bar{x}_X - \bar{x}_Y$. Calculate the mean and standard deviation of this sampling distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether the sampling distribution of $\bar{x}_X - \bar{x}_Y$ can be approximated by a normal distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the sample mean calorie intake from City X is at least 50 calories greater than the sample mean calorie intake from City Y.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly calculates the mean $\mu_{\bar{x}_X - \bar{x}_Y} = \mu_X - \mu_Y = 2200 - 2100 = 100$ calories (1pt). Correctly calculates the standard deviation $\sigma_{\bar{x}_X - \bar{x}_Y} = \sqrt{\frac{\sigma_X^2}{n_X} + \frac{\sigma_Y^2}{n_Y}} = \sqrt{\frac{300^2}{40} + \frac{250^2}{35}} \approx 63.527$ calories (1pt).</li>
+          
+          <li>Part b (1pt): States that since both population distributions are approximately normal, the sampling distribution of the difference in sample means will also be approximately normal, regardless of sample sizes (1pt). (Alternatively, could invoke CLT for $n_X=40, n_Y=35$ as both are $\ge 30$).</li>
+          
+          <li>Part c (2pts): Calculates the correct z-score $z = \frac{50 - 100}{63.527} \approx -0.79$ (1pt). Calculates the correct probability $P(\bar{x}_X - \bar{x}_Y \ge 50) = P(Z \ge -0.79) \approx 0.7852$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S7Q5"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.H,UNC-3.I,UNC-3.J"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A research team is studying the effect of a new fertilizer on plant growth. They know that without the fertilizer, the mean height of a particular plant species at maturity is $\mu = 25$ cm. The researchers are interested in the distribution of sample means for plant heights. A student conducts a simulation to create an approximate sampling distribution of the sample mean height for samples of size $n=25$, assuming the true mean height is $\mu = 25$ cm and the standard deviation is $\sigma = 3$ cm. The student recorded the sample mean height from 1000 simulated samples. A portion of the simulation results is shown in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Simulation Run</th><th>Sample Mean ($\bar{x}$) (cm)</th></tr></thead><tbody><tr><td>1</td><td>25.4</td></tr><tr><td>2</td><td>24.8</td></tr><tr><td>3</td><td>25.1</td></tr><tr><td>4</td><td>24.9</td></tr><tr><td>5</td><td>25.2</td></tr><tr><td>...</td><td>...</td></tr><tr><td>1000</td><td>25.0</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Explain what it means for the sample mean $\bar{x}$ to be an unbiased estimator of the population mean $\mu$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Based on the given population parameters and sample size, calculate the mean and standard deviation of the theoretical sampling distribution of $\bar{x}$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe how the student would construct a graphical display to visualize the estimated sampling distribution of $\bar{x}$ using these 1000 simulated sample means. What characteristics would you expect this distribution to have?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Using the table provided, calculate the mean of the first 5 simulated sample means. How does this value relate to the true population mean?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Explains that an unbiased estimator's expected value (mean of its sampling distribution) equals the true population parameter (1pt). Contextualizes by stating that the average of many sample means $\bar{x}$ from repeated samples would be equal to the true population mean $\mu=25$ cm (1pt).</li>
+          
+          <li>Part b (2pts): Correctly calculates the mean of the sampling distribution $\mu_{\bar{x}} = \mu = 25$ cm (1pt). Correctly calculates the standard deviation of the sampling distribution $\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}} = \frac{3}{\sqrt{25}} = 0.6$ cm (1pt).</li>
+          
+          <li>Part c (1pt): Describes constructing a histogram or dotplot of the 1000 simulated sample means (1pt). (The characteristics of the distribution are assumed to be part of the explanation/interpretation for higher-level LOs if asked, but for this LO, graphical construction is sufficient).</li>
+          
+          <li>Part d (1pt): Calculates the mean of the first 5 simulated sample means as $\frac{25.4+24.8+25.1+24.9+25.2}{5} = 25.08$ cm (0.5pt). Explains that this value is close to the true population mean, but unlikely to be exactly equal due to sampling variability, whereas the mean of many simulations would be closer (0.5pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

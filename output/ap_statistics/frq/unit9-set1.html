@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 1)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 1)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S1Q1"
+      data-difficulty="medium"
+      data-skill-codes="4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.AD,UNC-4.AF,UNC-4.AG"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A consumer research company is investigating the relationship between the price of a certain brand of coffee maker (in dollars) and the number of units sold per month (in hundreds). A random sample of 15 retailers provided the following regression output from a least-squares regression analysis:</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Predictor</th><th>Coef</th><th>SE Coef</th><th>T</th><th>P</th></tr></thead><tbody><tr><td>Constant</td><td>125.75</td><td>15.30</td><td>8.22</td><td>0.000</td></tr><tr><td>Price</td><td>-0.85</td><td>0.12</td><td>-7.08</td><td>0.000</td></tr><tr><td>S = 5.23</td><td>R-Sq = 79.7%</td><td>R-Sq(adj) = 78.0%</td><td></td><td></td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        For this data, assume that a scatterplot of the data shows a linear pattern, the residuals are roughly normally distributed, and a residual plot shows no obvious pattern of increasing or decreasing spread. State the remaining condition necessary for inference for the slope of the regression model and verify it, if possible, with the given information.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Construct a 95 percent confidence interval for the slope of the true linear relationship between the price and the number of units sold. Show your work. (Note: For $df=13$, the critical value $t^* \approx 2.160$ for a 95% CI).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval from part (b) in the context of this problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States independence condition (random sample, $10\%$ condition: $15 \times 10 = 150 < $ population of retailers, implying independence) and verifies it. Acknowledges other conditions are assumed.</li>
+          
+          <li>Part b (2pts): Shows calculation of interval using estimated slope $\pm t^* \times SE_{\text{Coef}}$ (e.g., $-0.85 \pm 2.160(0.12)$) and states correct interval $(-1.1092, -0.5908)$ or approximately $(-1.11, -0.59)$.</li>
+          
+          <li>Part c (1pt): Provides correct interpretation in context (e.g., "We are 95% confident that for every one dollar increase in price, the number of units sold per month decreases by between 0.5908 and 1.1092 hundred units").</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S1Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.K,VAR-7.M,DAT-3.M,DAT-3.N"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A pharmaceutical company is testing a new drug designed to lower blood pressure. A study involving 50 patients measured the patient's age (in years) and the reduction in systolic blood pressure (in mm Hg) after one month of treatment. The researchers want to determine if there is a positive linear association between a patient's age and the reduction in blood pressure. A regression analysis yielded a test statistic of $t = 2.80$ for the slope, with a standard error of the slope $SE_b = 0.55$. The estimated slope was $b = 1.54$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the $p$-value for the test. Show your work. (Note: Use $df = 48$).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the $p$-value in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the $p$-value and a significance level of $\alpha = 0.05$, what conclusion should the company make? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null hypothesis $H_0: \beta = 0$ (or no linear relationship) and alternative hypothesis $H_a: \beta > 0$ (or positive linear relationship).</li>
+          
+          <li>Part b (1pt): Calculates the correct $p$-value (e.g., $P(t > 2.80)$ for $df=48$ is approx $0.0035$).</li>
+          
+          <li>Part c (1pt): Provides a correct interpretation of the $p$-value in context (e.g., "Assuming there is no true linear relationship between age and blood pressure reduction, there is a 0.35% chance of observing an estimated slope as extreme as or more extreme than $1.54$ in a sample of 50 patients purely by random chance.").</li>
+          
+          <li>Part d (1pt): Makes a correct conclusion (reject $H_0$) with justification comparing $p$-value to $\alpha$ and relates it back to the context (e.g., "Since $p$-value ($0.0035$) $< \alpha (0.05)$, we reject $H_0$. There is sufficient evidence to conclude a positive linear association between a patient's age and the reduction in blood pressure.").</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S1Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.D,3.D,4.D"
+      data-learning-objectives="UNC-4.AC,UNC-4.AF,UNC-4.AH"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">Researchers at a university are studying the relationship between the number of hours students spend preparing for a standardized test and their score on the test. A random sample of 20 students was selected. The least-squares regression line for predicting test score from study hours was $\hat{y} = 250 + 5.5x$, where $x$ is study hours and $y$ is test score. The standard error of the slope was $SE_b = 0.85$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure to estimate the true slope of the regression line relating study hours and test scores.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Construct a 90 percent confidence interval for the true slope of the regression line. Show your work. (Note: For $df=18$, the critical value $t^* \approx 1.734$ for a 90% CI).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        A testing company claims that for every additional hour of study, a student's test score will increase by 6 points. Based on your confidence interval from part (b), does this claim seem plausible? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies the procedure as a t-interval for the slope of a regression model.</li>
+          
+          <li>Part b (2pts): Shows calculation of interval using estimated slope $\pm t^* \times SE_{\text{b}}$ (e.g., $5.5 \pm 1.734(0.85)$) and states correct interval $(4.0261, 6.9739)$ or approximately $(4.03, 6.97)$.</li>
+          
+          <li>Part c (1pt): Concludes the claim is plausible and justifies by noting that $6$ points falls within the calculated confidence interval.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S1Q4"
+      data-difficulty="hard"
+      data-skill-codes="1.F,4.C,3.E,4.E"
+      data-learning-objectives="VAR-7.K,VAR-7.L,VAR-7.M,DAT-3.N"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A manufacturing company wants to investigate if the average daily temperature (in degrees Celsius) affects the number of minor defects produced by a specific machine. They collected data for 25 randomly selected days. A least-squares regression analysis was performed, yielding the following results:</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Predictor</th><th>Coef</th><th>SE Coef</th><th>T</th><th>P</th></tr></thead><tbody><tr><td>Constant</td><td>18.23</td><td>2.50</td><td>7.29</td><td>0.000</td></tr><tr><td>Temperature</td><td>-0.35</td><td>0.10</td><td>-3.50</td><td>0.002</td></tr><tr><td>S = 3.82</td><td>R-Sq = 34.7%</td><td>R-Sq(adj) = 32.0%</td><td></td><td></td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses to test if there is a significant linear relationship between daily temperature and the number of minor defects.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions necessary for performing this significance test. Assume a residual plot shows no obvious pattern and a normal probability plot of residuals is roughly linear.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and determine the $p$-value for the test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the results of the test and using a significance level of $\alpha = 0.01$, what conclusion can be made about the relationship between daily temperature and the number of minor defects? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null hypothesis $H_0: \beta = 0$ (no linear relationship) and alternative hypothesis $H_a: \beta \ne 0$ (significant linear relationship).</li>
+          
+          <li>Part b (2pts): Verifies linearity (implied by "residual plot shows no obvious pattern"), independence (random sample, $10\%$ condition: $25 < 10\%$ of all possible days), normality of residuals ("normal probability plot of residuals is roughly linear"), and equal variance ("residual plot shows no obvious pattern"). (1pt for independence, 1pt for other three).</li>
+          
+          <li>Part c (1pt): Identifies test statistic $t = -3.50$ from output. States $df=23$. Identifies $p$-value from output as $0.002$.</li>
+          
+          <li>Part d (1pt): Makes a correct conclusion (reject $H_0$) with justification comparing $p$-value to $\alpha$ and relates it back to the context (e.g., "Since $p$-value ($0.002$) $< \alpha (0.01)$, we reject $H_0$. There is sufficient evidence of a significant linear relationship between daily temperature and the number of minor defects, with higher temperatures associated with fewer defects.").</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S1Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.AC,UNC-4.AD,UNC-4.AF,UNC-4.AG"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A real estate agent wants to investigate the relationship between the size of a house (in square feet) and its selling price (in thousands of dollars) in a particular neighborhood. A random sample of $n=25$ recently sold homes was selected. A linear regression analysis was performed, yielding the following results: $\hat{y} = 50 + 0.12x$, where $x$ is the size in square feet and $\hat{y}$ is the predicted selling price in thousands of dollars. The standard error of the slope coefficient is $SE_b = 0.008$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference method to estimate the true slope and state the conditions required for this procedure.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the slope of the true regression line.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the 95% confidence interval in the context of this problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a t-interval for the slope (1pt); States the 4 conditions for inference for the slope (Linearity, Independence, Normality of residuals, Equal variance of residuals) (1pt).</li>
+          
+          <li>Part b (2pts): Correctly calculates degrees of freedom ($df = n-2 = 23$) and critical t-value (approx. $t^* = 2.069$) (1pt); Correctly calculates interval $0.12 \pm 2.069(0.008) = (0.1034, 0.1366)$ (1pt).</li>
+          
+          <li>Part c (1pt): Correctly interprets the interval: "We are 95% confident that for every additional square foot in house size, the true selling price of a house in this neighborhood increases by an amount between $103.40 and $136.60 (or $0.1034 and $0.1366 thousand dollars)." (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

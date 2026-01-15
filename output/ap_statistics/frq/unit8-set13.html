@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 13)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 13)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S13Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.F,3.A,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.H,DAT-3.L"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A medical researcher wants to investigate if the proportion of people who experience a specific side effect differs among three different dosage levels of a new medication (Low, Medium, High). 300 volunteers were randomly assigned to one of the three dosage groups (100 per group). After one month, the number of people experiencing the side effect was recorded.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Side Effect</th><th>Low Dosage</th><th>Medium Dosage</th><th>High Dosage</th><th>Total</th></tr></thead><tbody><tr><td>Yes</td><td>15</td><td>25</td><td>30</td><td>70</td></tr><tr><td>No</td><td>85</td><td>75</td><td>70</td><td>230</td></tr><tr><td>Total</td><td>100</td><td>100</td><td>100</td><td>300</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected count of people experiencing the side effect in the Low dosage group.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The calculated $\chi^2$ test statistic is $8.25$ with a p-value of $0.016$. Based on these results, what conclusion can be drawn at the $\alpha = 0.05$ significance level? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null ($H_0$: There is no difference in the proportion of people experiencing the side effect across the three dosage levels) and alternative ($H_a$: There is a difference in the proportion of people experiencing the side effect across the three dosage levels) hypotheses.</li>
+          
+          <li>Part b (1pt): Calculates the expected count for Low Dosage/Yes side effect: $\frac{70 \times 100}{300} \approx 23.33$.</li>
+          
+          <li>Part c (2pts): Makes a correct conclusion (reject $H_0$) and provides justification (since $0.016 < 0.05$, there is convincing evidence that the proportion of people experiencing the side effect differs among the dosage levels).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S13Q2"
+      data-difficulty="hard"
+      data-skill-codes="1.F,4.C,3.E,4.B"
+      data-learning-objectives="VAR-8.I,VAR-8.K,VAR-8.L,DAT-3.K"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A researcher is studying the effectiveness of a new social media campaign for a non-profit organization. They randomly select 500 people and ask if they have seen the campaign and if they then donated to the organization.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th></th><th>Donated</th><th>Did Not Donate</th><th>Total</th></tr></thead><tbody><tr><td>Saw Campaign</td><td>120</td><td>180</td><td>300</td></tr><tr><td>Did Not See Campaign</td><td>30</td><td>170</td><td>200</td></tr><tr><td>Total</td><td>150</td><td>350</td><td>500</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for a chi-square test for independence in this context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        One of the conditions for performing a chi-square test is that all expected counts must be at least 5. Explain the rationale behind this condition.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the $\chi^2$ test statistic. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The p-value for this test is $0.0001$. Interpret this p-value in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null ($H_0$: Seeing the campaign and donating are independent) and alternative ($H_a$: Seeing the campaign and donating are not independent) hypotheses.</li>
+          
+          <li>Part b (1pt): Explains that the chi-square distribution is a good approximation for the sampling distribution of the test statistic only when expected counts are sufficiently large (typically $\ge 5$).</li>
+          
+          <li>Part c (2pts): Calculates all expected counts correctly (e.g., $E_{Saw,Donated} = \frac{300 \times 150}{500} = 90$) AND calculates the $\chi^2$ test statistic showing components: $\chi^2 = \frac{(120-90)^2}{90} + \frac{(180-210)^2}{210} + \frac{(30-60)^2}{60} + \frac{(170-140)^2}{140} \approx 35.71$.</li>
+          
+          <li>Part d (1pt): Correctly interprets the p-value (e.g., "If there were no association between seeing the campaign and donating, the probability of observing a chi-square statistic as large as 35.71 or larger by chance is $0.0001$.") in context.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S13Q3"
+      data-difficulty="easy"
+      data-skill-codes="1.F,3.A,4.C,3.E"
+      data-learning-objectives="VAR-8.B,VAR-8.D,VAR-8.E,VAR-8.F"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A company manufactures light bulbs and claims that $30\%$ are soft white, $50\%$ are bright white, and $20\%$ are daylight. A quality control manager takes a random sample of $200$ bulbs and finds $55$ soft white, $100$ bright white, and $45$ daylight bulbs. He wants to determine if the observed distribution differs significantly from the company's claim.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected number of bulbs for each type, assuming the company's claim is true.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify the conditions for performing a chi-square goodness-of-fit test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Calculate the chi-square test statistic.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states $H_0$ (proportions match claim) and $H_a$ (at least one proportion differs).</li>
+          
+          <li>Part b (1pt): Correctly calculates expected counts: Soft White $200 \times 0.30 = 60$; Bright White $200 \times 0.50 = 100$; Daylight $200 \times 0.20 = 40$.</li>
+          
+          <li>Part c (1pt): Verifies conditions: Random sample stated; all expected counts are $\ge 5$ (60, 100, 40 are all $\ge 5$); sample size $200$ is less than $10\%$ of all bulbs manufactured.</li>
+          
+          <li>Part d (1pt): Correctly calculates $\chi^2 = \frac{(55-60)^2}{60} + \frac{(100-100)^2}{100} + \frac{(45-40)^2}{40} = 0.4167 + 0 + 0.625 = 1.0417$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S13Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,3.A,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.C,VAR-8.B,VAR-8.D,VAR-8.F,DAT-3.I,DAT-3.J"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A market researcher is investigating customer preferences for four different flavors of a new snack: Apple, Berry, Cherry, and Date. She believes that customers prefer the flavors equally. A random sample of $120$ customers tasted the snacks, and their preferences were recorded as follows: Apple ($25$), Berry ($35$), Cherry ($30$), Date ($30$).</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference method and state the null and alternative hypotheses for this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected counts for each flavor if the null hypothesis is true.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The chi-square test statistic for this data is $2.5$ with $3$ degrees of freedom, and the p-value is approximately $0.475$. Interpret the p-value in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value and a significance level of $\alpha = 0.05$, what conclusion can be drawn? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Method: Chi-square goodness-of-fit test. $H_0$: The proportions of customers preferring each flavor are equal ($p_{Apple} = p_{Berry} = p_{Cherry} = p_{Date} = 0.25$). $H_a$: At least one proportion is different from $0.25$.</li>
+          
+          <li>Part b (1pt): Expected counts: For each flavor, $120 \times 0.25 = 30$.</li>
+          
+          <li>Part c (1pt): The p-value of $0.475$ means that if there is truly no difference in preference among the four flavors (i.e., they are equally preferred), there is a $47.5\%$ chance of observing sample results as extreme as, or more extreme than, those observed in this study by random chance.</li>
+          
+          <li>Part d (1pt): Since the p-value ($0.475$) is greater than $\alpha = 0.05$, we fail to reject the null hypothesis. There is not sufficient evidence to conclude that customer preferences for the four snack flavors are not equally distributed.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S13Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.F,3.A,4.C,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.H,VAR-8.K,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A school administrator wants to investigate if there is a difference in the distribution of academic achievement levels (High, Medium, Low) among students from two different funding models (Public, Private). A random sample of $150$ public school students and $100$ private school students yielded the following observed counts:</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Achievement Level</th><th>Public School</th><th>Private School</th><th>Total</th></tr></thead><tbody><tr><td>High</td><td>40</td><td>20</td><td>60</td></tr><tr><td>Medium</td><td>70</td><td>50</td><td>120</td></tr><tr><td>Low</td><td>40</td><td>30</td><td>70</td></tr><tr><td>Total</td><td>150</td><td>100</td><td>250</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for this investigation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected number of private school students with a "High" achievement level, assuming the null hypothesis is true.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify the conditions for performing a chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The chi-square test statistic is $4.8$ with $2$ degrees of freedom, and the p-value is approximately $0.091$. Based on these results, what conclusion can the administrator make at a significance level of $\alpha = 0.05$? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): $H_0$: There is no difference in the distribution of academic achievement levels between public and private school students (i.e., the distributions are homogeneous). $H_a$: There is a difference in the distribution of academic achievement levels between public and private school students (i.e., the distributions are not homogeneous).</li>
+          
+          <li>Part b (1pt): Total High students = $40 + 20 = 60$. Total students = $150 + 100 = 250$. Expected High Private = $\frac{60}{250} \times 100 = 24$.</li>
+          
+          <li>Part c (1pt): Conditions: Random samples stated. All expected counts must be $\ge 5$. (Expected counts are: High Public (36), Medium Public (72), Low Public (42), High Private (24), Medium Private (48), Low Private (28). All are $\ge 5$).</li>
+          
+          <li>Part d (1pt): Since the p-value ($0.091$) is greater than $\alpha = 0.05$, we fail to reject the null hypothesis. There is not sufficient evidence to conclude that there is a difference in the distribution of academic achievement levels between public and private school students.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

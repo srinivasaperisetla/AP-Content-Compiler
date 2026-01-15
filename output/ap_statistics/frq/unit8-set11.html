@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 11)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 11)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S11Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,3.A,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.B,VAR-8.C,VAR-8.D,VAR-8.E,VAR-8.F,VAR-8.G,DAT-3.I,DAT-3.J"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A company claims that its new line of colorful candies has a specific distribution of colors: 30% red, 20% blue, 20% green, 15% yellow, and 15% orange. A random sample of 200 candies is taken from a production batch, and the observed counts are recorded.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Color</th><th>Observed Count</th></tr></thead><tbody><tr><td>Red</td><td>52</td></tr><tr><td>Blue</td><td>38</td></tr><tr><td>Green</td><td>35</td></tr><tr><td>Yellow</td><td>30</td></tr><tr><td>Orange</td><td>45</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate test to determine if the observed distribution of colors differs significantly from the company's claimed distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for conducting this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected count for yellow candies and the chi-square test statistic. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the test statistic, what conclusion should the company make at the $\alpha = 0.05$ significance level? Justify your conclusion.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states $H_0: p_{red}=0.30, p_{blue}=0.20, p_{green}=0.20, p_{yellow}=0.15, p_{orange}=0.15$ and $H_a:$ At least one proportion differs from the claimed distribution.</li>
+          
+          <li>Part b (2pts): Verifies Random condition (random sample mentioned). Verifies Large Counts condition (all expected counts $\ge 5$).</li>
+          
+          <li>Part c (2pts): Correct calculation of expected count for yellow ($200 \times 0.15 = 30$). Correct calculation of chi-square test statistic (work shown: $\chi^2 = 9.2917$).</li>
+          
+          <li>Part d (2pts): States correct p-value ($\approx 0.0541$). States correct conclusion (Fail to reject $H_0$) in context. Justifies conclusion by comparing p-value to $\alpha$ and stating there is not convincing evidence that the color distribution differs.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S11Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,3.A,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.H,VAR-8.L,VAR-8.M,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A marketing firm wants to compare brand loyalty among consumers in three different geographic regions (North, South, West). They randomly sample 150 consumers from each region and ask them if they exclusively buy a particular brand of coffee (Brand X), sometimes buy it, or never buy it. The results are summarized in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Region</th><th>Exclusively Brand X</th><th>Sometimes Brand X</th><th>Never Brand X</th><th>Total</th></tr></thead><tbody><tr><td>North</td><td>65</td><td>40</td><td>45</td><td>150</td></tr><tr><td>South</td><td>50</td><td>55</td><td>45</td><td>150</td></tr><tr><td>West</td><td>40</td><td>60</td><td>50</td><td>150</td></tr><tr><td>Total</td><td>155</td><td>155</td><td>140</td><td>450</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a significance test to determine if the distribution of brand loyalty differs across the three regions.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Name the appropriate statistical test and verify the conditions for inference.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected count for consumers in the North region who "Never buy Brand X." Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The calculated chi-square test statistic is $\chi^2 = 12.35$ with 4 degrees of freedom. Calculate the p-value and interpret it in the context of the problem. What conclusion should be made at $\alpha = 0.05$? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states $H_0:$ The distribution of brand loyalty is the same across the three regions. And $H_a:$ The distribution of brand loyalty is not the same across the three regions.</li>
+          
+          <li>Part b (2pts): Correctly names "Chi-Square Test for Homogeneity." Verifies conditions: Random (independent random samples from each region). Large Counts (all expected counts $\ge 5$).</li>
+          
+          <li>Part c (1pt): Correct calculation of expected count for North/Never: $\frac{150 \times 140}{450} \approx 46.67$.</li>
+          
+          <li>Part d (2pts): Correct calculation of p-value using $\chi^2 = 12.35$ and $df=4$ ($P(\chi^2 > 12.35) \approx 0.015$). Correct interpretation of the p-value in context. States correct conclusion (Reject $H_0$) and justifies it by comparing p-value to $\alpha = 0.05$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S11Q3"
+      data-difficulty="hard"
+      data-skill-codes="1.F,1.E,4.C,3.A,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.H,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A study investigated whether there is an association between a person's preferred method of news consumption (online, TV, print) and their political affiliation (Democrat, Republican, Independent). A random sample of 500 adults was surveyed, and the results are shown in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th></th><th>Democrat</th><th>Republican</th><th>Independent</th><th>Total</th></tr></thead><tbody><tr><td>Online</td><td>120</td><td>80</td><td>50</td><td>250</td></tr><tr><td>TV</td><td>60</td><td>90</td><td>40</td><td>190</td></tr><tr><td>Print</td><td>10</td><td>20</td><td>30</td><td>60</td></tr><tr><td>Total</td><td>190</td><td>190</td><td>120</td><td>500</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a significance test to investigate if there is an association between news consumption method and political affiliation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the appropriate statistical test and explain why it is appropriate in this context, including checking conditions.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected count for "Online" news consumption and "Republican" affiliation. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The calculated chi-square test statistic is $8.75$. The p-value is $0.067$. Based on these results, what conclusion should be made at the $\alpha = 0.05$ significance level? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states $H_0:$ There is no association between news consumption method and political affiliation (or they are independent). And $H_a:$ There is an association between news consumption method and political affiliation (or they are not independent).</li>
+          
+          <li>Part b (2pts): Correctly names "Chi-Square Test for Independence." Explains why it is appropriate (one random sample, two categorical variables, purpose is to test for association). Verifies conditions: Random (random sample stated). Large Counts (all expected counts $\ge 5$, calculated for each cell using total column/row sums).</li>
+          
+          <li>Part c (1pt): Correct calculation of expected count for Online/Republican: $\frac{250 \times 190}{500} = 95$.</li>
+          
+          <li>Part d (2pts): States correct conclusion (Fail to reject $H_0$) in context. Justifies conclusion by comparing the p-value ($0.067$) to $\alpha = 0.05$ and stating there is not convincing evidence of an association between news consumption method and political affiliation.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S11Q4"
+      data-difficulty="medium"
+      data-skill-codes="4.C,4.B,4.E,1.A"
+      data-learning-objectives="VAR-8.E,DAT-3.I,DAT-3.J,VAR-1.J"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A school principal wants to know if student absences are equally distributed across the days of the week (Monday-Friday). They select a random sample of 100 absences from the past semester and record the day of the week for each absence. The observed counts are: Monday: 25, Tuesday: 18, Wednesday: 15, Thursday: 22, Friday: 20. The principal runs a chi-square goodness-of-fit test and finds a test statistic of $\chi^2 = 5.6$ with 4 degrees of freedom and a p-value of $0.23$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Based on the principal's findings, and using a significance level of $\alpha = 0.05$, what conclusion should the principal draw? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        A student questions whether the conditions for inference were met. Describe the conditions that must be checked for this test, and verify whether they are met in this specific scenario.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        After reviewing the data, the principal notices that Monday has the highest number of absences. Describe a question suggested by the variation between the observed and expected counts that further investigation could address.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States correct conclusion (Fail to reject $H_0$) in context. Justifies conclusion by comparing p-value ($0.23$) to $\alpha = 0.05$ and stating there is not convincing evidence that student absences are not equally distributed across the days of the week.</li>
+          
+          <li>Part b (2pts): Describes the Random condition (random sample of 100 absences is stated). Describes the Large Counts condition (all expected counts $\ge 5$). Verifies expected counts: Expected count for each day is $100/5 = 20$, which is $\ge 5$.</li>
+          
+          <li>Part c (1pt): Describes a relevant question suggested by the variation, e.g., "Why does Monday have the highest observed number of absences, despite the overall distribution not being significantly different from equal?" or "Are there specific factors contributing to higher Monday absences that might warrant further study?"</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S11Q5"
+      data-difficulty="easy"
+      data-skill-codes="1.E,1.F,3.C"
+      data-learning-objectives="VAR-8.A,VAR-8.B,VAR-8.C,VAR-8.I,VAR-8.J"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">Two different scenarios are described below. For each scenario, state the most appropriate chi-square test, its null and alternative hypotheses, and the degrees of freedom.\nScenario 1: A veterinarian wants to know if the distribution of weight categories (small, medium, large) is the same for three popular dog breeds: Golden Retrievers, Poodles, and Beagles. She randomly selects 100 dogs from each of these three breeds and records their weight category.\nScenario 2: A researcher hypothesizes that the proportion of students who prefer online learning, hybrid learning, or in-person learning is 40%, 30%, and 30% respectively at a large university. A random sample of 200 students is surveyed.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        For Scenario 1: Identify the appropriate chi-square test, state the null and alternative hypotheses, and calculate the degrees of freedom.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        For Scenario 2: Identify the appropriate chi-square test, state the null and alternative hypotheses, and calculate the degrees of freedom.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe two key characteristics of a chi-square distribution.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly identifies "Chi-Square Test for Homogeneity." Correctly states $H_0:$ The distribution of weight categories is the same for Golden Retrievers, Poodles, and Beagles. And $H_a:$ The distribution of weight categories is not the same for Golden Retrievers, Poodles, and Beagles. Correctly calculates $df = (3-1)(3-1) = 4$.</li>
+          
+          <li>Part b (2pts): Correctly identifies "Chi-Square Test for Goodness-of-Fit." Correctly states $H_0: p_{online}=0.40, p_{hybrid}=0.30, p_{in-person}=0.30$ and $H_a:$ At least one proportion differs from the hypothesized distribution. Correctly calculates $df = (3-1) = 2$.</li>
+          
+          <li>Part c (1pt): Describes two characteristics of a chi-square distribution (e.g., is skewed right; values are non-negative; shape is determined by degrees of freedom; approaches normal as df increases).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

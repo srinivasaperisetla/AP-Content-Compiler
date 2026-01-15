@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 20)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 20)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S20Q1"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.K,UNC-3.L,UNC-3.M"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A large electronics company claims that 80% of its newly manufactured smartphones pass a rigorous quality control test. A consumer advocacy group plans to take a random sample of 200 smartphones to verify this claim.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample proportion of smartphones that pass the quality control test, assuming the company's claim is true.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether the sampling distribution can be approximated by a normal distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that in a random sample of 200 smartphones, 75% or fewer pass the quality control test.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States that the sampling distribution is approximately normal, with mean $\mu_{\hat{p}} = 0.80$ and standard deviation $\sigma_{\hat{p}} = \sqrt{\frac{0.80(0.20)}{200}} \approx 0.02828$.</li>
+          
+          <li>Part b (1pt): Verifies the conditions $np \ge 10$ ($200 \times 0.80 = 160 \ge 10$) and $n(1-p) \ge 10$ ($200 \times 0.20 = 40 \ge 10$), concluding that the normal approximation is appropriate.</li>
+          
+          <li>Part c (2pts): Calculates the $Z$-score for $\hat{p} = 0.75$ as $Z = \frac{0.75 - 0.80}{0.02828} \approx -1.768$ and determines the probability $P(\hat{p} \le 0.75) \approx 0.0385$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S20Q2"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.Q,UNC-3.R,UNC-3.S"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">The weights of adult male lions in a national park are known to have a mean of 420 pounds and a standard deviation of 40 pounds. A research team randomly samples 36 adult male lions for a health study.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample mean weight for samples of 36 adult male lions.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What is the probability that the sample mean weight of 36 randomly selected lions is less than 410 pounds?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Explain why the Central Limit Theorem allows us to use a normal distribution for the sampling distribution in this context, even if the population distribution of lion weights is not known to be normal.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States that the sampling distribution of the sample mean is approximately normal, with mean $\mu_{\bar{x}} = 420$ pounds and standard deviation $\sigma_{\bar{x}} = \frac{40}{\sqrt{36}} \approx 6.667$ pounds.</li>
+          
+          <li>Part b (2pts): Calculates the $Z$-score for $\bar{x} = 410$ as $Z = \frac{410 - 420}{6.667} \approx -1.50$ and determines the probability $P(\bar{x} < 410) \approx 0.0668$.</li>
+          
+          <li>Part c (1pt): Explains that since the sample size $n=36$ is sufficiently large ($n \ge 30$), the Central Limit Theorem guarantees that the sampling distribution of the sample mean is approximately normal, regardless of the population distribution's shape.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S20Q3"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.I,UNC-3.J,UNC-3.H"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A small town has a population of 1000 residents. Researchers are interested in estimating the average number of hours residents spend volunteering per week. They consider two different sampling methods to select 50 residents: Method A: Simple Random Sample (SRS) of 50 residents. The sample mean $\bar{x}$ is calculated. Method B: Stratified Random Sample where residents are divided into age groups (under 18, 18-65, over 65) and a proportional random sample is taken from each group. The sample mean $\bar{x}_{strat}$ is calculated. To understand the properties of these estimators, a simulation was run 1000 times for each method, assuming the true population mean volunteering hours is 4.5 hours. The means of the 1000 sample means for each method were recorded.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Estimator</th><th>Mean of 1000 Sample Means</th></tr></thead><tbody><tr><td>$\bar{x}$ (SRS)</td><td>4.498</td></tr><tr><td>$\bar{x}_{strat}$ (Stratified)</td><td>4.503</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Based on the simulation results, explain which estimator, $\bar{x}$ or $\bar{x}_{strat}$, appears to be unbiased for the population mean volunteering hours.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        If one particular SRS of 50 residents yielded a sample mean of $\bar{x}=3.8$ hours, calculate this specific estimate for the population mean.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe how the simulation of 1000 samples helps to estimate the sampling distribution of the sample mean for each method.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States that both $\bar{x}$ (4.498) and $\bar{x}_{strat}$ (4.503) appear to be unbiased because their means from the simulation are very close to the true population mean of 4.5 hours.</li>
+          
+          <li>Part b (1pt): Calculates the specific estimate for the population mean as 3.8 hours.</li>
+          
+          <li>Part c (2pts): Explains that by repeatedly drawing many samples and calculating the statistic of interest (e.g., sample mean) for each, the distribution of these many statistics provides an empirical approximation of the true sampling distribution, revealing its shape, center, and spread.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S20Q4"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.N,UNC-3.O,UNC-3.P"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A university administrator believes that the proportion of female students who participate in intramural sports is different from the proportion of male students. Historically, 45% of female students and 50% of male students participate. A random sample of 120 female students and an independent random sample of 100 male students are taken. Let $\hat{p}_F$ be the sample proportion of female students participating and $\hat{p}_M$ be the sample proportion of male students participating.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Determine the mean and standard deviation of the sampling distribution of the difference in sample proportions ($\hat{p}_M - \hat{p}_F$).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether the sampling distribution of the difference in sample proportions can be approximated by a normal distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the proportion of female students participating in intramural sports is greater than the proportion of male students in these samples.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates the mean $\mu_{\hat{p}_M - \hat{p}_F} = 0.50 - 0.45 = 0.05$ and standard deviation $\sigma_{\hat{p}_M - \hat{p}_F} = \sqrt{\frac{0.50(0.50)}{100} + \frac{0.45(0.55)}{120}} \approx 0.0675$.</li>
+          
+          <li>Part b (2pts): Verifies the large counts condition for both groups ($n_F p_F = 54 \ge 10$, $n_F(1-p_F) = 66 \ge 10$; $n_M p_M = 50 \ge 10$, $n_M(1-p_M) = 50 \ge 10$), concluding the normal approximation is appropriate.</li>
+          
+          <li>Part c (2pts): Calculates $P(\hat{p}_F > \hat{p}_M)$, which is $P(\hat{p}_M - \hat{p}_F < 0)$, finding $Z = \frac{0 - 0.05}{0.0675} \approx -0.74$ and the probability $P(Z < -0.74) \approx 0.2296$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S20Q5"
+      data-difficulty="medium"
+      data-skill-codes="3.A,4.B"
+      data-learning-objectives="VAR-6.A,VAR-6.B,UNC-3.S"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">The weights of individual bags of potato chips produced by a certain manufacturer are normally distributed with a mean of 15.2 ounces and a standard deviation of 0.15 ounces. The manufacturer labels these bags as "15.0 ounces."</div>
+
+      
+      <div class="diagram">
+         <svg width="300" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="300" height="150" fill="white"/><line x1="0" y1="140" x2="300" y2="140" stroke="black" stroke-width="1"/><path d="M0 140 Q 50 100, 100 70 Q 150 20, 200 70 Q 250 100, 300 140" fill="none" stroke="black" stroke-width="2"/><line x1="150" y1="20" x2="150" y2="140" stroke="black" stroke-dasharray="2 2"/><text x="150" y="148" font-family="Arial" font-size="12" text-anchor="middle">15.2</text><line x1="90" y1="90" x2="90" y2="140" stroke="darkgray" stroke-dasharray="2 2"/><text x="90" y="148" font-family="Arial" font-size="12" text-anchor="middle">15.0</text><line x1="210" y1="90" x2="210" y2="140" stroke="darkgray" stroke-dasharray="2 2"/><text x="210" y="148" font-family="Arial" font-size="12" text-anchor="middle">15.4</text><text x="150" y="15" font-family="Arial" font-size="12" text-anchor="middle">Weights of Potato Chip Bags (oz)</text></svg> 
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the probability that a randomly selected bag of potato chips has a weight less than its labeled weight of 15.0 ounces.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What weight value corresponds to the 90th percentile of the distribution of potato chip bag weights?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        A quality control manager collects a random sample of 25 bags. The mean weight for these 25 bags is $\bar{x} = 15.1$ ounces. Explain how this sample mean relates to the parameter of the population distribution of bag weights.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates the $Z$-score for 15.0 ounces as $Z = \frac{15.0 - 15.2}{0.15} \approx -1.33$ and determines the probability $P(X < 15.0) \approx 0.0918$.</li>
+          
+          <li>Part b (2pts): Identifies the $Z$-score for the 90th percentile as approximately $1.28$ and calculates the corresponding weight as $X = 15.2 + 1.28(0.15) \approx 15.392$ ounces.</li>
+          
+          <li>Part c (1pt): Explains that the sample mean $\bar{x} = 15.1$ ounces is an estimate for the population mean $\mu = 15.2$ ounces, and it is subject to sampling variability, serving as an approximation of the true population parameter.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

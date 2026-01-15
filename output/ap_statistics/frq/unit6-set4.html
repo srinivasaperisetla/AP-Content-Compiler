@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 4)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 4)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S4Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.A,UNC-4.B,UNC-4.D,UNC-4.F,UNC-4.G"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A recent survey of 800 randomly selected U.S. adults found that 360 of them indicated they regularly use public transportation. Construct and interpret a 95 percent confidence interval for the proportion of all U.S. adults who regularly use public transportation.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure by name and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the 95 percent confidence interval for the population proportion of U.S. adults who regularly use public transportation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval in context. Based on this interval, can it be concluded that more than 40 percent of U.S. adults regularly use public transportation? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a one-sample z-interval for a proportion (1pt); Verifies conditions (Random, Normal, Independent) (1pt)</li>
+          
+          <li>Part b (1pt): Calculates the correct confidence interval (1pt)</li>
+          
+          <li>Part c (2pts): Interprets the interval in context (1pt); Justifies conclusion about 40% based on interval (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S4Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.D,VAR-6.E,VAR-6.F,VAR-6.G,DAT-3.A,DAT-3.B"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A company claims that 75% of its new product line passes a quality control test. A consumer advocacy group suspects the proportion is lower. They test a random sample of 200 products and find that 138 pass the test.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for this investigation. Identify the appropriate inference method and verify the conditions for performing this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on the p-value, what conclusion should the consumer advocacy group make at the $\alpha = 0.05$ significance level? Interpret the p-value in the context of this problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States $H_0: p = 0.75$ and $H_a: p < 0.75$ (1pt); Identifies one-sample z-test for proportion and verifies conditions (1pt)</li>
+          
+          <li>Part b (2pts): Calculates the correct test statistic $z$ (1pt); Calculates the correct p-value (1pt)</li>
+          
+          <li>Part c (2pts): Makes a correct conclusion based on the p-value and $\alpha$ (1pt); Interprets the p-value in context (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S4Q3"
+      data-difficulty="easy"
+      data-skill-codes="1.B,4.B,4.A"
+      data-learning-objectives="UNC-5.A,UNC-5.D,UNC-5.C"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A pharmaceutical company is testing a new drug designed to reduce blood pressure. They claim the drug is effective if it reduces blood pressure in more than 60% of patients. They conduct a hypothesis test where the null hypothesis is $H_0: p = 0.60$ and the alternative hypothesis is $H_a: p > 0.60$, where $p$ is the true proportion of patients for whom the drug reduces blood pressure.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe a Type I error in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe a Type II error in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Suppose the company decides to increase the sample size for their clinical trial. Explain how this change would affect the probability of making a Type II error, assuming the significance level $\alpha$ remains the same.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly describes Type I error in context (1pt)</li>
+          
+          <li>Part b (1pt): Correctly describes Type II error in context (1pt)</li>
+          
+          <li>Part c (1pt): Explains that increasing sample size decreases the probability of a Type II error (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S4Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.I,UNC-4.J,UNC-4.K,UNC-4.M,UNC-4.N"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A medical researcher wants to compare the effectiveness of two different treatments for a certain skin condition. Treatment A was administered to 120 randomly selected patients, and 96 showed improvement. Treatment B was administered to 100 randomly selected patients, and 70 showed improvement.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure and verify the conditions for its use to construct a confidence interval for the difference between the true proportions of patients who show improvement for Treatment A and Treatment B ($p_A - p_B$).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 90 percent confidence interval for the difference in the true proportions of patients who show improvement for Treatment A and Treatment B.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the 90 percent confidence interval in context. Does the interval provide convincing evidence that Treatment A is more effective than Treatment B? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a two-sample z-interval for proportions (1pt); Verifies conditions for both samples (Random, Normal, Independent) (1pt)</li>
+          
+          <li>Part b (1pt): Calculates the correct confidence interval (1pt)</li>
+          
+          <li>Part c (2pts): Interprets the interval in context (1pt); Justifies conclusion about effectiveness based on interval (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S4Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.A,UNC-4.B,UNC-4.D,UNC-4.F,UNC-4.G"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A company claims that 80% of its customers are satisfied with their new product. To verify this claim, an independent consumer group surveyed a random sample of 250 customers and found that 185 reported being satisfied.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure and verify the conditions for constructing a confidence interval for the true proportion of satisfied customers.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Construct a 90% confidence interval for the true proportion of satisfied customers.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval in context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on this confidence interval, does the company's claim of 80% customer satisfaction seem plausible? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies one-sample $z$-interval for proportion (1pt). Verifies conditions: Random sample (given), $n\hat{p} = 250(185/250) = 185 \ge 10$ and $n(1-\hat{p}) = 250(65/250) = 65 \ge 10$ (1pt).</li>
+          
+          <li>Part b (2pts): Calculates $\hat{p} = 185/250 = 0.74$. Calculates $SE = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = \sqrt{\frac{0.74(0.26)}{250}} \approx 0.0276$. Finds $z^* = 1.645$. Interval is $0.74 \pm 1.645(0.0276) = 0.74 \pm 0.0454$ which is $(0.6946, 0.7854)$ (2pts for correct interval).</li>
+          
+          <li>Part c (1pt): We are 90% confident that the true proportion of all satisfied customers is between $0.6946$ and $0.7854$. (1pt for correct interpretation in context).</li>
+          
+          <li>Part d (1pt): The claim of 80% (or $0.80$) does not seem plausible because $0.80$ is not contained within the 90% confidence interval $(0.6946, 0.7854)$. (1pt for correct justification).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 17)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 17)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S17Q1"
+      data-difficulty="medium"
+      data-skill-codes="3.A,4.B"
+      data-learning-objectives="VAR-4.A,VAR-4.D,VAR-4.B"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A company manufactures medical diagnostic tests for a rare disease. For a randomly selected person, the probability of having the disease is $0.005$. The test is $99\%$ accurate for people who have the disease (meaning it gives a positive result $99\%$ of the time). For people who do not have the disease, the test is $98\%$ accurate (meaning it gives a negative result $98\%$ of the time).</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What is the probability that a randomly selected person tests positive for the disease?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Given that a person tests positive for the disease, what is the probability that the person actually has the disease?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the probability calculated in part (b) in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates $P(\text{Positive}) = P(\text{Positive}</li>
+          
+          <li>\text{Disease})P(\text{Disease}) + P(\text{Positive}</li>
+          
+          <li>\text{No Disease})P(\text{No Disease})$ and shows work for $0.005 \times 0.99 + 0.995 \times 0.02 = 0.00495 + 0.0199 = 0.02485$. (1 pt for setup, 1 pt for correct calculation)</li>
+          
+          <li>Part b (2pts): Calculates $P(\text{Disease}</li>
+          
+          <li>\text{Positive}) = \frac{P(\text{Disease} \cap \text{Positive})}{P(\text{Positive})}$ using values from part (a) or similar setup. $\frac{0.00495}{0.02485} \approx 0.1992$. (1 pt for formula/setup, 1 pt for correct calculation)</li>
+          
+          <li>Part c (1pt): Provides a correct interpretation in context, stating that about $19.92\%$ of people who test positive actually have the disease.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S17Q2"
+      data-difficulty="medium"
+      data-skill-codes="2.B,3.B,4.B"
+      data-learning-objectives="VAR-5.A,VAR-5.C,VAR-5.D"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">An online retailer receives customer orders throughout the day. The number of specific items ordered, $X$, has the following probability distribution:</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Number of Items (x)</th><th>Probability P(X=x)</th></tr></thead><tbody><tr><td>0</td><td>0.15</td></tr><tr><td>1</td><td>0.30</td></tr><tr><td>2</td><td>0.25</td></tr><tr><td>3</td><td>0.20</td></tr><tr><td>4</td><td>0.10</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Verify that this is a valid probability distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the mean (expected value) of $X$. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the standard deviation of $X$. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the mean of $X$ in the context of this problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States that all probabilities are between 0 and 1, inclusive, and that the sum of the probabilities is $1$ (i.e., $0.15+0.30+0.25+0.20+0.10 = 1$).</li>
+          
+          <li>Part b (2pts): Shows calculation for $E(X) = \sum x \cdot P(X=x) = 0(0.15) + 1(0.30) + 2(0.25) + 3(0.20) + 4(0.10) = 0 + 0.30 + 0.50 + 0.60 + 0.40 = 1.8$. (1 pt for setup/formula, 1 pt for correct value)</li>
+          
+          <li>Part c (2pts): Shows calculation for $Var(X) = \sum (x - E(X))^2 \cdot P(X=x)$ or $\sum x^2 \cdot P(X=x) - (E(X))^2$. $Var(X) = (0-1.8)^2(0.15) + (1-1.8)^2(0.30) + (2-1.8)^2(0.25) + (3-1.8)^2(0.20) + (4-1.8)^2(0.10) = 0.486 + 0.192 + 0.01 + 0.288 + 0.484 = 1.46$. $\sigma_X = \sqrt{1.46} \approx 1.208$. (1 pt for setup/formula, 1 pt for correct value)</li>
+          
+          <li>Part d (1pt): States that, on average, the online retailer expects to receive $1.8$ items per order over many, many orders.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S17Q3"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.B,UNC-3.C,UNC-3.D"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A manufacturer claims that $90\%$ of its new smart light bulbs last at least 10,000 hours. A consumer advocacy group randomly selects 15 of these light bulbs for testing. Assume the manufacturer's claim is true.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Verify that this scenario meets the conditions for a binomial distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What is the probability that exactly 13 of the 15 selected light bulbs last at least 10,000 hours? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        What is the probability that fewer than 12 of the 15 selected light bulbs last at least 10,000 hours? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Calculate the expected number of light bulbs that last at least 10,000 hours in a sample of 15. Interpret this value in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies the four binomial conditions: (1) Fixed number of trials ($n=15$), (2) Two outcomes (success/failure - lasts/doesn't last), (3) Independent trials, (4) Probability of success ($p=0.90$) is constant for each trial.</li>
+          
+          <li>Part b (1pt): Uses binomial probability formula $P(X=k) = \binom{n}{k}p^k(1-p)^{n-k}$ or calculator notation with correct parameters: $P(X=13) = \binom{15}{13}(0.90)^{13}(0.10)^2 \approx 0.2669$. (1 pt for correct value with work/notation)</li>
+          
+          <li>Part c (2pts): Calculates $P(X < 12) = P(X \le 11)$. This is $1 - P(X \ge 12) = 1 - [P(X=12) + P(X=13) + P(X=14) + P(X=15)]$ or by summing individual probabilities $P(X=0)$ to $P(X=11)$. Using a calculator, $P(X \le 11) \approx 0.0126$. (1 pt for correct setup/approach, 1 pt for correct value)</li>
+          
+          <li>Part d (2pts): Calculates expected value using $E(X) = np = 15 \times 0.90 = 13.5$. (1 pt for calculation) Interprets this value: On average, if many samples of 15 light bulbs are taken, about $13.5$ of them would last at least 10,000 hours. (1 pt for correct interpretation in context).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S17Q4"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.E,UNC-3.F,UNC-3.G"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A quality control inspector tests components for defects. Historically, $8\%$ of the components produced by a certain machine are defective. The inspector selects components one by one at random until a defective component is found. Let $Y$ be the number of components inspected until the first defective one is found.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Explain why $Y$ follows a geometric distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What is the probability that the first defective component is found on the 5th component inspected? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        What is the probability that the inspector has to inspect more than 3 components to find the first defective one? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Calculate the expected number of components the inspector must inspect to find the first defective one. Interpret this value in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Explains that a geometric distribution models the number of trials until the first success (defective component), with independent trials and a constant probability of success ($p=0.08$) for each trial.</li>
+          
+          <li>Part b (1pt): Uses geometric probability formula $P(Y=k) = (1-p)^{k-1}p$ or calculator notation: $P(Y=5) = (0.92)^4(0.08) \approx 0.0573$. (1 pt for correct value with work/notation)</li>
+          
+          <li>Part c (2pts): Calculates $P(Y > 3) = (1-p)^3 = (0.92)^3 \approx 0.7787$. (1 pt for correct setup/approach, 1 pt for correct value)</li>
+          
+          <li>Part d (2pts): Calculates expected value using $E(Y) = \frac{1}{p} = \frac{1}{0.08} = 12.5$. (1 pt for calculation) Interprets this value: On average, the inspector expects to inspect $12.5$ components to find the first defective one. (1 pt for correct interpretation in context).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S17Q5"
+      data-difficulty="easy"
+      data-skill-codes="3.A"
+      data-learning-objectives="UNC-2.A"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A carnival game involves rolling a fair six-sided die. To win a prize, a player must roll a 1 or a 2 on the first roll AND an even number on the second roll. You want to estimate the probability of winning this game using a simulation.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe a method using a table of random digits to simulate one play of this game. Clearly define what each digit represents and what outcomes constitute a win.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Suppose you perform 20 trials of the simulation described in part (a). The results are shown below: \nTrial 1: (3, 4)  Trial 2: (1, 6)  Trial 3: (5, 1)  Trial 4: (2, 2)  Trial 5: (6, 5)\nTrial 6: (1, 3)  Trial 7: (4, 4)  Trial 8: (2, 6)  Trial 9: (3, 1)  Trial 10: (5, 2)\nTrial 11: (1, 4) Trial 12: (6, 3) Trial 13: (2, 5) Trial 14: (4, 6) Trial 15: (3, 2)\nTrial 16: (5, 4) Trial 17: (1, 1) Trial 18: (6, 2) Trial 19: (2, 3) Trial 20: (4, 5)\nBased on these 20 simulated trials, what is your estimate of the probability of winning the game?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe how you could improve the accuracy of your estimate from part (b).
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Assigns digits for the first roll (e.g., use single digits 1-6 for die face, ignore 0, 7-9) and for the second roll using independent digits (same assignment). (1 pt for correct assignment and handling of digits). Defines a win: first roll is 1 or 2 AND second roll is even (2, 4, 6). (1 pt for correctly defining win based on assignment).</li>
+          
+          <li>Part b (2pts): Identifies winning trials: Trial 2 (1,6), Trial 4 (2,2), Trial 8 (2,6), Trial 11 (1,4). This is 4 wins out of 20 trials. (1 pt for identifying correct number of wins, 1 pt for calculating probability estimate of $\frac{4}{20} = 0.20$).</li>
+          
+          <li>Part c (1pt): Explains that running a larger number of trials (more than 20) would improve the accuracy of the estimate.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

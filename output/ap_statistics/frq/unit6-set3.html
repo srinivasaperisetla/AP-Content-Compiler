@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 3)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 3)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S3Q1"
+      data-difficulty="easy"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.A,UNC-4.B,UNC-4.D,UNC-4.F,UNC-4.G"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A high school administration wants to estimate the proportion of students who feel safe in the school hallways. They take a simple random sample of $150$ students and find that $123$ of them report feeling safe.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure for estimating the true proportion of students who feel safe, and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a $95\%$ confidence interval for the true proportion of all students who feel safe in the school hallways.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the calculated confidence interval in context. Based on this interval, can the administration claim that more than $75\%$ of students feel safe? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a one-sample $z$-interval for a proportion (1 pt); Verifies conditions: Random sample (given), $150(123/150) = 123 \ge 10$ and $150(27/150) = 27 \ge 10$ (1 pt)</li>
+          
+          <li>Part b (1pt): Calculates the interval $\hat{p} \pm z^* \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = 0.82 \pm 1.96 \sqrt{\frac{0.82(0.18)}{150}}$ leading to $(0.760, 0.880)$ (1 pt)</li>
+          
+          <li>Part c (2pts): Interprets the interval as being $95\%$ confident the true proportion is between $0.760$ and $0.880$ (1 pt); Justifies that since $0.75$ is below the lower bound of the interval, it is plausible that more than $75\%$ feel safe (1 pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S3Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.D,VAR-6.E,VAR-6.F,VAR-6.G,DAT-3.A,DAT-3.B"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A company claims that at least $8\%$ of its light bulbs fail quality control. A consumer advocacy group suspects the proportion of bulbs failing quality control is lower. They take a random sample of $200$ light bulbs and find $10$ bulbs that fail quality control.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a significance test to investigate the consumer group's suspicion. Identify the appropriate inference method.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value calculated in part (c) and using a significance level of $\alpha = 0.05$, what conclusion should the consumer advocacy group make about the company's claim? Interpret the p-value in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States $H_0: p = 0.08$ and $H_a: p < 0.08$ (1 pt); Identifies a one-sample $z$-test for a proportion (1 pt)</li>
+          
+          <li>Part b (1pt): Verifies conditions: Random sample (given), $n p_0 = 200(0.08) = 16 \ge 10$ and $n(1-p_0) = 200(0.92) = 184 \ge 10$ (1 pt)</li>
+          
+          <li>Part c (1pt): Calculates $\hat{p} = 10/200 = 0.05$. Calculates test statistic $z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}} = \frac{0.05 - 0.08}{\sqrt{\frac{0.08(0.92)}{200}}} \approx \frac{-0.03}{0.0192} \approx -1.56$ and p-value $P(Z < -1.56) \approx 0.0594$ (1 pt)</li>
+          
+          <li>Part d (2pts): Interprets the p-value: The probability of observing a sample proportion of $0.05$ or less, assuming the true proportion of defective bulbs is $0.08$, is approximately $0.0594$ (1 pt). Since $p\text{-value} = 0.0594 > \alpha = 0.05$, the consumer group should fail to reject $H_0$. There is not sufficient evidence to conclude that the proportion of bulbs failing quality control is lower than $8\%$ (1 pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S3Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.I,UNC-4.J,UNC-4.K,UNC-4.M,UNC-4.N"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A marketing company wants to compare the effectiveness of two different social media ad campaigns (Campaign A and Campaign B) in encouraging online purchases. They randomly assign $300$ potential customers to view Campaign A and $320$ potential customers to view Campaign B. For Campaign A, $60$ customers made a purchase, and for Campaign B, $75$ customers made a purchase.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure for estimating the difference in the true proportions of purchases for the two campaigns, and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a $90\%$ confidence interval for the difference in the true proportions of customers making a purchase ($p_A - p_B$).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the calculated confidence interval in context. Based on this interval, does there appear to be a significant difference in the effectiveness of the two campaigns? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a two-sample $z$-interval for a difference in proportions (1 pt); Verifies conditions: Two independent random samples (given), and for Campaign A: $n_A\hat{p}_A = 60 \ge 10$, $n_A(1-\hat{p}_A) = 240 \ge 10$; for Campaign B: $n_B\hat{p}_B = 75 \ge 10$, $n_B(1-\hat{p}_B) = 245 \ge 10$ (1 pt)</li>
+          
+          <li>Part b (1pt): Calculates $\hat{p}_A = 60/300 = 0.20$ and $\hat{p}_B = 75/320 \approx 0.234375$. Calculates interval $(\hat{p}_A - \hat{p}_B) \pm z^* \sqrt{\frac{\hat{p}_A(1-\hat{p}_A)}{n_A} + \frac{\hat{p}_B(1-\hat{p}_B)}{n_B}} = (0.20 - 0.234375) \pm 1.645 \sqrt{\frac{0.20(0.80)}{300} + \frac{0.234375(0.765625)}{320}} \approx -0.034375 \pm 0.05436$ leading to $(-0.0887, 0.0200)$ (1 pt)</li>
+          
+          <li>Part c (2pts): Interprets the interval as being $90\%$ confident the true difference in proportions ($p_A - p_B$) is between $-0.0887$ and $0.0200$ (1 pt); Justifies that since $0$ is included in the interval, there is no statistically significant difference between the two campaigns at the $0.10$ level (1 pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S3Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.H,VAR-6.I,VAR-6.J,VAR-6.K,DAT-3.C,DAT-3.D"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A health organization wants to determine if there is a difference in the proportion of adults who regularly exercise between urban and rural areas. They conduct a nationwide survey, taking a simple random sample of $400$ adults from urban areas and $350$ adults from rural areas. In the urban sample, $180$ adults reported regular exercise, while in the rural sample, $140$ adults reported regular exercise.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses to test if there is a difference in the true proportions of adults who regularly exercise between urban and rural areas. Identify the appropriate inference method.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The p-value for this test is approximately $0.113$. Based on this p-value and a significance level of $\alpha = 0.10$, what conclusion should the health organization make? Interpret the p-value in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States $H_0: p_U - p_R = 0$ (or $p_U = p_R$) and $H_a: p_U - p_R \ne 0$ (or $p_U \ne p_R$) (1 pt); Identifies a two-sample $z$-test for a difference in proportions (1 pt)</li>
+          
+          <li>Part b (1pt): Verifies conditions: Two independent random samples (given), and for Urban: $n_U\hat{p}_U = 180 \ge 10$, $n_U(1-\hat{p}_U) = 220 \ge 10$; for Rural: $n_R\hat{p}_R = 140 \ge 10$, $n_R(1-\hat{p}_R) = 210 \ge 10$ (1 pt)</li>
+          
+          <li>Part c (2pts): Calculates $\hat{p}_U = 180/400 = 0.45$, $\hat{p}_R = 140/350 = 0.40$. Calculates pooled proportion $\hat{p}_c = \frac{180+140}{400+350} = \frac{320}{750} \approx 0.4267$. Calculates test statistic $z = \frac{(\hat{p}_U - \hat{p}_R) - 0}{\sqrt{\hat{p}_c(1-\hat{p}_c)(\frac{1}{n_U} + \frac{1}{n_R})}} \approx \frac{0.05}{0.0362} \approx 1.38$ (2 pts for calculation and correct value)</li>
+          
+          <li>Part d (2pts): Interprets the p-value: Assuming there is no difference in the true proportions of adults who regularly exercise between urban and rural areas, the probability of observing a sample difference as extreme as $0.05$ (or more extreme) is approximately $0.113$ (1 pt). Since $p\text{-value} = 0.113 > \alpha = 0.10$, the health organization should fail to reject $H_0$. There is not sufficient evidence to conclude that there is a difference in the proportion of adults who regularly exercise between urban and rural areas (1 pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S3Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.B,4.B,4.A"
+      data-learning-objectives="UNC-5.A,UNC-5.D,UNC-5.C"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A company manufactures computer chips and claims that no more than $2\%$ of its chips are defective. A consumer group plans to test this claim by taking a random sample of chips. The company's claim leads to the null hypothesis $H_0: p = 0.02$ and the consumer group's suspicion would lead to an alternative hypothesis $H_a: p > 0.02$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe a Type I error in the context of this situation. Explain a potential consequence of making this error.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe a Type II error in the context of this situation. Explain a potential consequence of making this error.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If the consumer group decides to increase the sample size for their test, how would this affect the probability of a Type II error, assuming all other factors remain constant? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): A Type I error occurs if the true proportion of defective chips is $2\%$ or less ($H_0$ is true), but the consumer group concludes that it is greater than $2\%$ (rejects $H_0$) (1 pt); Consequence: The company is falsely accused of having a higher defect rate, potentially harming its reputation or leading to unnecessary production adjustments (1 pt)</li>
+          
+          <li>Part b (2pts): A Type II error occurs if the true proportion of defective chips is greater than $2\%$ ($H_0$ is false), but the consumer group concludes that it is $2\%$ or less (fails to reject $H_0$) (1 pt); Consequence: Defective chips are allowed to reach consumers, leading to customer dissatisfaction, warranty claims, and potential loss of future sales for the company (1 pt)</li>
+          
+          <li>Part c (2pts): Increasing the sample size would decrease the probability of a Type II error (1 pt); Justification: A larger sample size provides more information, leading to a more precise estimate of the true proportion. This reduces the variability of the sampling distribution of $\hat{p}$, making it easier to detect a true difference from the null hypothesis, thus increasing the power of the test and decreasing the probability of a Type II error (1 pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

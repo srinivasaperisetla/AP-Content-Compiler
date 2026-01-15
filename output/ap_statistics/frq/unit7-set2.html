@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 2)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 2)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S2Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.R,UNC-4.S,UNC-4.Q"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A company manufactures a new type of battery for electric vehicles. They want to estimate the true mean lifespan of these batteries in miles. A random sample of 25 batteries is tested, and their lifespans are recorded. The sample mean lifespan is $\bar{x} = 210,000$ miles, and the sample standard deviation is $s = 15,000$ miles. Assume the distribution of battery lifespans is approximately normal.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure and verify the conditions for constructing a confidence interval for the true mean lifespan of these batteries.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the true mean lifespan of these batteries.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval calculated in part (b) in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly identifies a one-sample t-interval for a population mean (1/2 pt) and verifies random sample, $n < 10\%$ of population, and approximately normal population (or large sample) (1/2 pt).</li>
+          
+          <li>Part b (2pts): Shows correct calculation of degrees of freedom ($df = 24$), correct critical value ($t^* = 2.064$), and correct margin of error ($ME = 2.064 \times \frac{15000}{\sqrt{25}} = 6192$) (1 pt). Calculates the correct confidence interval ($210000 \pm 6192 = (203808, 216192)$) (1 pt).</li>
+          
+          <li>Part c (1pt): Correctly interprets the confidence interval, stating that "We are 95% confident that the true mean lifespan of the new type of battery is between 203,808 miles and 216,192 miles." (1 pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S2Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,4.C,3.E,4.E,4.B"
+      data-learning-objectives="VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A certain brand of cereal claims that each box contains, on average, 368 grams of cereal. A quality control manager is concerned that the true mean weight might be less than claimed. He randomly selects 20 boxes of cereal and weighs their contents. The sample mean weight is $\bar{x} = 365$ grams, with a sample standard deviation of $s = 8$ grams.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for this investigation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing a significance test for the population mean.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value, what conclusion should the quality control manager draw at the $\alpha = 0.05$ significance level? Justify your conclusion in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct hypotheses: $H_0: \mu = 368$ grams and $H_a: \mu < 368$ grams, where $\mu$ is the true mean weight of cereal in a box (1 pt).</li>
+          
+          <li>Part b (1pt): Verifies conditions: Random sample stated (1/2 pt). Assumes population of weights is approximately normal, or checks for approximate normality of sample data (e.g., no strong skew/outliers on a graph, or refers to the sample size not being too small given no severe skew) (1/2 pt).</li>
+          
+          <li>Part c (2pts): Calculates the correct test statistic $t = \frac{365 - 368}{8/\sqrt{20}} \approx -1.677$ (1 pt). Calculates the correct p-value (using $df=19$, $P(t < -1.677) \approx 0.054$) (1 pt).</li>
+          
+          <li>Part d (1pt): Compares p-value to $\alpha$ ($0.054 > 0.05$) and states fail to reject $H_0$ (1/2 pt). Justifies conclusion in context: "Since the p-value of $0.054$ is greater than the significance level of $\alpha = 0.05$, we fail to reject the null hypothesis. There is not sufficient evidence to conclude that the true mean weight of cereal in a box is less than 368 grams." (1/2 pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S2Q3"
+      data-difficulty="hard"
+      data-skill-codes="1.F,4.C,3.E,4.B"
+      data-learning-objectives="VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A company offers a new training program designed to improve employees' productivity scores. Ten randomly selected employees participated in the program. Their productivity scores were measured before and after the program. The differences (After - Before) were calculated for each employee. The summary statistics for these differences are: mean difference $\bar{d} = 5.2$ points and standard deviation of differences $s_d = 4.0$ points.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a test to determine if the training program is effective in increasing productivity scores.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing a significance test for the mean difference in productivity scores.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and determine the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value, interpret what it means in the context of this study.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct hypotheses: $H_0: \mu_d = 0$ and $H_a: \mu_d > 0$, where $\mu_d$ is the true mean difference in productivity scores (After - Before) (1 pt).</li>
+          
+          <li>Part b (1pt): Verifies conditions: Random sample of employees (1/2 pt). Assumes population of differences is approximately normal, or checks for approximate normality of sample data (e.g., no strong skew/outliers for $n=10$) (1/2 pt).</li>
+          
+          <li>Part c (2pts): Calculates the correct test statistic $t = \frac{5.2 - 0}{4.0/\sqrt{10}} \approx 4.11$ (1 pt). Calculates the correct p-value (using $df=9$, $P(t > 4.11) \approx 0.001$) (1 pt).</li>
+          
+          <li>Part d (1pt): Correctly interprets the p-value in context: "Assuming the training program has no effect on productivity ($\mu_d = 0$), there is approximately a 0.001 probability of observing a sample mean difference of 5.2 points or greater by chance alone. This very small p-value suggests strong evidence that the training program increases productivity." (1 pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S2Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.D,4.A,4.B"
+      data-learning-objectives="UNC-4.V,UNC-4.W,UNC-4.Y,UNC-4.Z,UNC-4.AA,UNC-4.AB"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">Researchers are studying the effectiveness of two different fertilizers, Fertilizer A and Fertilizer B, on crop yield. They randomly select 30 plots of land for Fertilizer A and 28 plots for Fertilizer B. The mean crop yield for Fertilizer A is $\bar{x}_A = 75$ bushels per acre with a standard deviation of $s_A = 8$ bushels. For Fertilizer B, the mean crop yield is $\bar{x}_B = 70$ bushels per acre with a standard deviation of $s_B = 9$ bushels. Assume all conditions for inference are met.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure and state the conditions that must be met for this procedure. (Do not verify, just state them).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 90% confidence interval for the true difference in mean crop yield ($\mu_A - \mu_B$).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on the confidence interval from part (b), is there convincing evidence of a difference in the mean crop yields between the two fertilizers? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies a two-sample t-interval for a difference of means (1/2 pt). States conditions: Random samples from two independent populations, and populations are approximately normal or sample sizes are large (1/2 pt).</li>
+          
+          <li>Part b (2pts): Calculates the point estimate $\bar{x}_A - \bar{x}_B = 75 - 70 = 5$ (1/2 pt). Calculates degrees of freedom (e.g., $df \approx 55.4$ or conservatively $df = 27$) and critical value ($t^* \approx 1.671$ for $df=55$) (1/2 pt). Calculates margin of error ($ME = 1.671 \times \sqrt{\frac{8^2}{30} + \frac{9^2}{28}} \approx 3.32$) (1/2 pt). Calculates the confidence interval ($5 \pm 3.32 = (1.68, 8.32)$) (1/2 pt).</li>
+          
+          <li>Part c (1pt): States that there is convincing evidence of a difference (1/2 pt). Justifies by noting that the entire interval $(1.68, 8.32)$ is above 0, indicating that $\mu_A$ is likely greater than $\mu_B$ (1/2 pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S2Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.F,VAR-7.G,VAR-7.H,VAR-7.1,DAT-3.G,DAT-3.H"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A marine biologist is investigating whether there is a difference in the average length of a certain species of fish found in two different coral reef systems, Reef A and Reef B. A random sample of fish from Reef A and an independent random sample from Reef B were collected. The summary statistics are provided in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Reef</th><th>Sample Size ($n$)</th><th>Sample Mean Length ($\bar{x}$ in cm)</th><th>Sample Standard Deviation ($s$ in cm)</th></tr></thead><tbody><tr><td>A</td><td>40</td><td>18.5</td><td>2.5</td></tr><tr><td>B</td><td>35</td><td>17.0</td><td>3.0</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses to test if there is a significant difference in the true mean lengths of this fish species between Reef A and Reef B.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain why a two-sample t-test is an appropriate inference procedure for this situation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your results from part (c), what conclusion can the marine biologist draw at the $\alpha = 0.01$ significance level? Justify your conclusion in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct hypotheses: $H_0: \mu_A = \mu_B$ (or $\mu_A - \mu_B = 0$) and $H_a: \mu_A \ne \mu_B$ (or $\mu_A - \mu_B \ne 0$), where $\mu_A$ and $\mu_B$ are the true mean lengths of fish in Reef A and Reef B, respectively (1 pt).</li>
+          
+          <li>Part b (1pt): Explains that two independent random samples are taken, the population standard deviations are unknown, and sample sizes are large enough (or populations are approximately normal) to use a t-distribution for inference about the difference of two means (1 pt).</li>
+          
+          <li>Part c (2pts): Calculates the correct test statistic $t = \frac{\bar{x}_A - \bar{x}_B}{\sqrt{\frac{s_A^2}{n_A} + \frac{s_B^2}{n_B}}} = \frac{18.5 - 17.0}{\sqrt{\frac{2.5^2}{40} + \frac{3.0^2}{35}}} \approx 2.336$ (1 pt). Calculates the correct p-value (using $df \approx 64.9$, $P(</li>
+          
+          <li>t</li>
+          
+          <li>> 2.336) \approx 2 \times 0.011 = 0.022$) (1 pt).</li>
+          
+          <li>Part d (1pt): Compares p-value to $\alpha$ ($0.022 > 0.01$) and states fail to reject $H_0$ (1/2 pt). Justifies conclusion in context: "Since the p-value of $0.022$ is greater than the significance level of $\alpha = 0.01$, we fail to reject the null hypothesis. There is not sufficient evidence to conclude that there is a significant difference in the true mean lengths of fish between Reef A and Reef B." (1/2 pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

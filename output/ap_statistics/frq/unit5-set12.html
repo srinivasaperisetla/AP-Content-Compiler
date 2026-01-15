@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 12)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 12)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S12Q1"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.K,UNC-3.L,UNC-3.M"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A large company claims that 65% of its employees are satisfied with their current work-life balance. To investigate this claim, an independent consulting firm plans to take a simple random sample (SRS) of 150 employees from the company's large workforce. Let $\hat{p}$ be the proportion of employees in the sample who are satisfied with their work-life balance.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of $\hat{p}$, including its shape, mean, and standard deviation. Be sure to verify any conditions required for your description.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What is the probability that a random sample of 150 employees will result in a sample proportion of satisfied employees less than 60%? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Suppose the consulting firm finds that only 58% of the sampled employees are satisfied. Interpret this probability in the context of the company's claim.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (3pts): Identifies shape as approximately normal (1pt)</li>
+          
+          <li>Calculates mean $\mu_{\hat{p}} = 0.65$ (1pt)</li>
+          
+          <li>Calculates standard deviation $\sigma_{\hat{p}} = \sqrt{\frac{0.65(0.35)}{150}} \approx 0.0387$ and verifies appropriate conditions for normality (e.g., $np = 97.5 \ge 10$, $n(1-p) = 52.5 \ge 10$, and population $\ge 10n$) (1pt)</li>
+          
+          <li>Part b (1pt): Calculates $P(\hat{p} < 0.60)$ using $z = \frac{0.60-0.65}{0.0387} \approx -1.29$ and finds probability $\approx 0.0985$ (1pt)</li>
+          
+          <li>Part c (1pt): Interprets the probability (e.g., "There is about a 9.85% chance of observing a sample proportion as low as 0.60 or lower if the company's claim is true. Since 0.0985 is not extremely small, this outcome does not provide strong evidence against the company's claim.") (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S12Q2"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.Q,UNC-3.R,UNC-3.S"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">The weight of adult male grizzly bears in a particular region is known to be approximately normally distributed with a mean of $\mu = 450$ kg and a standard deviation of $\sigma = 60$ kg. Researchers plan to capture and weigh a simple random sample (SRS) of 25 adult male grizzly bears from this region. Let $\bar{x}$ be the mean weight of the bears in the sample.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of $\bar{x}$, including its shape, mean, and standard deviation. Be sure to justify the shape.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What is the probability that a random sample of 25 adult male grizzly bears will have a mean weight greater than 475 kg? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Suppose the researchers observe a sample mean weight of 485 kg. Interpret the meaning of this sample mean in the context of the population mean.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies shape as normal because population is normal (1pt)</li>
+          
+          <li>Calculates mean $\mu_{\bar{x}} = 450$ kg and standard deviation $\sigma_{\bar{x}} = \frac{60}{\sqrt{25}} = 12$ kg (1pt)</li>
+          
+          <li>Part b (2pts): Calculates $P(\bar{x} > 475)$ using $z = \frac{475-450}{12} \approx 2.08$ (1pt) and finds probability $\approx 0.0188$ (1pt)</li>
+          
+          <li>Part c (1pt): Interprets the sample mean (e.g., "A sample mean of 485 kg is higher than the population mean of 450 kg. Observing a mean of 485 kg or higher would be quite rare ($P(\bar{x} > 485)$ is very small, $z = (485-450)/12 = 2.92$, $p \approx 0.0017$), suggesting that this sample might not be representative of the population or that the true mean weight might be higher than 450 kg.") (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S12Q3"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.N,UNC-3.O,UNC-3.P"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A company develops two new fertilizers, Fertilizer A and Fertilizer B, for corn crops. They claim that Fertilizer A is more effective. In a controlled experiment, 200 corn plants were randomly assigned to receive Fertilizer A, and 180 corn plants were randomly assigned to receive Fertilizer B. It is known that Fertilizer A has a success rate of 75% (produces a yield above a certain threshold) and Fertilizer B has a success rate of 70%. Let $\hat{p}_A$ and $\hat{p}_B$ be the sample proportions of successful corn plants for Fertilizer A and Fertilizer B, respectively.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the difference in sample proportions, $\hat{p}_A - \hat{p}_B$. Be sure to verify any conditions required for your description.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What are the mean and standard deviation of the sampling distribution of $\hat{p}_A - \hat{p}_B$? Show your calculations.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the sample proportion of successful plants for Fertilizer A is at least 10 percentage points higher than that for Fertilizer B.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies shape as approximately normal (1pt)</li>
+          
+          <li>Verifies normality conditions for both groups (e.g., $n_A p_A = 200(0.75)=150 \ge 10$, $n_A(1-p_A) = 200(0.25)=50 \ge 10$, $n_B p_B = 180(0.70)=126 \ge 10$, $n_B(1-p_B) = 180(0.30)=54 \ge 10$) and large population conditions (if applicable, assuming large enough populations) (1pt)</li>
+          
+          <li>Part b (2pts): Calculates mean $\mu_{\hat{p}_A - \hat{p}_B} = p_A - p_B = 0.75 - 0.70 = 0.05$ (1pt)</li>
+          
+          <li>Calculates standard deviation $\sigma_{\hat{p}_A - \hat{p}_B} = \sqrt{\frac{0.75(0.25)}{200} + \frac{0.70(0.30)}{180}} \approx \sqrt{0.0009375 + 0.0011667} \approx \sqrt{0.0021042} \approx 0.04587$ (1pt)</li>
+          
+          <li>Part c (2pts): Calculates $P(\hat{p}_A - \hat{p}_B \ge 0.10)$ using $z = \frac{0.10-0.05}{0.04587} \approx 1.09$ (1pt) and finds probability $\approx 0.1379$ (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S12Q4"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.T,UNC-3.U,UNC-3.V"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A health organization is studying the effects of two different exercise programs, Program X and Program Y, on reducing cholesterol levels. They know that for individuals following Program X, the reduction in cholesterol has a mean of $\mu_X = 18$ mg/dL with a standard deviation of $\sigma_X = 5$ mg/dL. For Program Y, the reduction has a mean of $\mu_Y = 15$ mg/dL with a standard deviation of $\sigma_Y = 6$ mg/dL. The distributions of cholesterol reduction for both programs are approximately normal. A simple random sample of 30 participants is selected for Program X, and another simple random sample of 35 participants is selected for Program Y. Let $\bar{x}_X$ and $\bar{x}_Y$ be the sample mean reductions for the two programs.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the difference in sample means, $\bar{x}_X - \bar{x}_Y$. Be sure to justify the shape.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the mean and standard deviation of the sampling distribution of $\bar{x}_X - \bar{x}_Y$. Show your calculations.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the meaning of a difference in sample means ($\bar{x}_X - \bar{x}_Y$) of 0 in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies shape as normal (1pt)</li>
+          
+          <li>Justifies shape because parent populations are normal (1pt)</li>
+          
+          <li>Part b (2pts): Calculates mean $\mu_{\bar{x}_X - \bar{x}_Y} = \mu_X - \mu_Y = 18 - 15 = 3$ mg/dL (1pt)</li>
+          
+          <li>Calculates standard deviation $\sigma_{\bar{x}_X - \bar{x}_Y} = \sqrt{\frac{\sigma_X^2}{n_X} + \frac{\sigma_Y^2}{n_Y}} = \sqrt{\frac{5^2}{30} + \frac{6^2}{35}} = \sqrt{\frac{25}{30} + \frac{36}{35}} \approx \sqrt{0.8333 + 1.0286} \approx \sqrt{1.8619} \approx 1.3645$ mg/dL (1pt)</li>
+          
+          <li>Part c (1pt): Interprets a difference of 0 (e.g., "A difference in sample means of 0 would mean that the average cholesterol reduction observed in the sample from Program X is exactly the same as the average reduction observed in the sample from Program Y. This would suggest no observed difference between the programs for these particular samples, even though the population means suggest Program X is better.") (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S12Q5"
+      data-difficulty="medium"
+      data-skill-codes="3.C,4.B,3.B"
+      data-learning-objectives="UNC-3.H,UNC-3.I,UNC-3.J"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A geneticist wants to estimate the proportion ($p$) of fruit flies in a large population that carry a specific recessive gene. The true proportion is unknown. The geneticist takes a simple random sample (SRS) of 50 fruit flies. Let $\hat{p}$ be the sample proportion of fruit flies carrying the gene.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe how to use a simulation to estimate the sampling distribution of $\hat{p}$ if the true population proportion was $p=0.20$. Include details on how to set up the simulation and what to record.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Consider two different estimators for the population proportion $p$: the sample proportion $\hat{p}$ and a new estimator $\tilde{p}$ which is always 0.25 (i.e., $\tilde{p} = 0.25$). Explain which of these two estimators, if any, is an unbiased estimator for $p$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Suppose a sample of 50 fruit flies yields 12 flies carrying the recessive gene. Calculate the estimate for the population proportion $p$ using the sample proportion $\hat{p}$.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Describes a simulation process (e.g., using a random number generator or physical model) to represent taking a sample of 50 fruit flies, where 20% represent the gene (1pt)</li>
+          
+          <li>Specifies what to record for each simulated sample (e.g., the proportion of flies with the gene, $\hat{p}$) and that this process should be repeated many times to form the sampling distribution (1pt)</li>
+          
+          <li>Part b (2pts): Identifies $\hat{p}$ as an unbiased estimator (1pt)</li>
+          
+          <li>Explains that $\hat{p}$ is unbiased because its expected value (mean of its sampling distribution) is equal to the true population parameter $p$, whereas $\tilde{p}=0.25$ is generally biased because its expected value is always 0.25, which is not necessarily equal to $p$ (1pt)</li>
+          
+          <li>Part c (1pt): Calculates the estimate $\hat{p} = \frac{12}{50} = 0.24$ (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

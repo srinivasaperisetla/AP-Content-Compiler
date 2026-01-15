@@ -204,7 +204,7 @@ def validate_tsv_row(cols: List[str]) -> Optional[str]:
 
 	if stim_type != "none" and not stim_payload.strip():
 		return "Missing stimulus_payload"
-	
+
 	if any(_looks_like_pipe_table(x) for x in [A, B, C, D]):
 		return "Answer choices must not contain tables; use stim_type=table + stim_payload"
 
@@ -393,7 +393,7 @@ def build_unit_context(
 				# Compress description (max 100 chars)
 				desc_short = desc[:100] + ("..." if len(desc) > 100 else "")
 				task_verb_lines.append(f"  {verb}: {desc_short}")
-	
+
 	# -----------------------
 	# Build final unit context (with section line breaks)
 	# -----------------------
@@ -477,6 +477,15 @@ async def process_single_set(
 	context_label = f"{course_id} | U{unit_index+1} | Set{set_index+1}"
 	unit_title = unit.get("name", "")
 	
+	# CHECK IF FILE EXISTS FIRST - EXIT EARLY TO SAVE API QUOTA
+	out_dir = OUTPUT_DIR / course_id / "mcq"
+	ensure_dir(out_dir)
+	output_path = out_dir / f"unit{unit_index + 1}-set{set_index + 1}.html"
+	
+	if output_path.exists():
+		log(f"[{context_label}] ✓ File already exists, skipping generation: {output_path}")
+		return output_path
+	
 	# Wait for permission from Semaphore (Rate Limit Guard)
 	async with sem:
 		log(f"[{context_label}] Starting generation...")
@@ -497,18 +506,18 @@ async def process_single_set(
 		prompt = prompt_template.render(
 			num_questions=QUESTIONS_PER_SET,
 			unit_context=unit_context,
-			course_name=course_name,
+		course_name=course_name,
 			priority_los=priority_los_str
-		)
-		
-		try:
+	)
+
+	try:
 			# ASYNC CALL
 			response = await client.aio.models.generate_content(
-				model=MODEL,
-				contents=prompt
-			)
+			model=MODEL,
+			contents=prompt
+		)
 			tsv = response.text or ""
-		except Exception as e:
+	except Exception as e:
 			log(f"[{context_label}] Initial API Error: {e}")
 			tsv = ""
 		
@@ -548,7 +557,7 @@ async def process_single_set(
 			
 			repair_prompt_text = repair_prompt_template.render(
 				num_questions=request_count,
-				unit_context=unit_context,
+		unit_context=unit_context,
 				course_name=course_name,
 				error_summary=error_summary,
 				allowed_skills_preview=allowed_skills_preview,
@@ -557,7 +566,7 @@ async def process_single_set(
 			
 			try:
 				repair_resp = await client.aio.models.generate_content(
-					model=MODEL,
+			model=MODEL,
 					contents=repair_prompt_text
 				)
 				repair_tsv = repair_resp.text or ""
@@ -571,7 +580,7 @@ async def process_single_set(
 				all_questions.extend(valid_repair)
 				all_invalid_reports.extend(invalid_repair)  # Accumulate for next repair
 			
-			except Exception as e:
+	except Exception as e:
 				log(f"[{context_label}] Repair API Error: {e}")
 				break
 		
@@ -598,7 +607,7 @@ async def process_single_set(
 				questions=all_questions,
 				context_label=context_label
 			)
-			
+
 			# Update coverage tracker
 			for question in all_questions:
 				for lo_id in question.get("aligned_lo_ids", []):
@@ -636,10 +645,6 @@ def render_html(html_template, course_name, course_id, unit_title, unit_index, s
 
 	path = out_dir / f"unit{unit_index + 1}-set{set_index + 1}.html"
 
-	if path.exists():
-		log(f"[{context_label}] Skipping existing file: {path}")
-		return path
-
 	path.write_text(html, encoding="utf-8")
 	log(f"[{context_label}] Wrote file: {path}")
 	return path
@@ -663,7 +668,7 @@ async def main_async():
 	prompt_template = Template(load_text(PROMPT_PATH))
 	repair_prompt_template = Template(load_text(REPAIR_PROMPT_PATH))
 	html_template = Template(load_text(HTML_TEMPLATE_PATH))
-	
+
 	# Semaphore: adjust as needed
 	sem = asyncio.Semaphore(60)
 	
@@ -673,19 +678,19 @@ async def main_async():
 		course_spec = load_json(CONTENT_DIR / f"{course_id}.json")
 		skill_lookup = build_skill_lookup(course_spec)
 		big_idea_lookup = build_big_idea_lookup(course_spec)
-		
+
 		for unit_index, unit in enumerate(course_spec.get("units", [])):
-			if unit_index != 6:
-				continue
+			# if unit_index != 6:
+			# 	continue
 			
 			# Initialize coverage tracker per unit
 			coverage_tracker = initialize_lo_coverage(unit)
-			
-			unit_context, constraints = build_unit_context(
-				course_spec,
-				unit,
-				unit_index,
-				skill_lookup,
+
+				unit_context, constraints = build_unit_context(
+					course_spec,
+					unit,
+					unit_index,
+					skill_lookup,
 				big_idea_lookup,
 				question_type="mcq"
 			)

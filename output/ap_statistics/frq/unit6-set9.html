@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 9)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 9)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S9Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.A,UNC-4.B,UNC-4.C,UNC-4.D,UNC-4.F,UNC-4.G"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A health organization is investigating the proportion of adults in a certain region who regularly consume a diet rich in fruits and vegetables. A random sample of 500 adults from this region was surveyed, and 180 reported regularly consuming a diet rich in fruits and vegetables.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure for constructing a confidence interval for the true proportion of adults in this region who regularly consume a diet rich in fruits and vegetables. Verify that the conditions for this procedure are met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Construct a 95% confidence interval for the true proportion of adults in this region who regularly consume a diet rich in fruits and vegetables. Show all work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the 95% confidence interval constructed in part (b) in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The organization claims that less than 40% of adults in this region regularly consume a diet rich in fruits and vegetables. Based on your confidence interval, does this claim appear plausible? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Suppose the organization wants to estimate the true proportion of adults who regularly consume a diet rich in fruits and vegetables with a margin of error of no more than 0.02 at a 95% confidence level. Calculate the minimum sample size required, using the sample proportion from the initial survey as a preliminary estimate.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a one-sample z-interval for a proportion (1pt). Verifies conditions: Random sample (given), $n\hat{p} = 500(0.36) = 180 \ge 10$, $n(1-\hat{p}) = 500(0.64) = 320 \ge 10$ (1pt).</li>
+          
+          <li>Part b (2pts): Calculates the sample proportion $\hat{p} = 180/500 = 0.36$ and standard error $\sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = \sqrt{\frac{0.36(0.64)}{500}} \approx 0.02149$ (1pt). Calculates the confidence interval using $0.36 \pm 1.96(0.02149)$, resulting in $(0.3179, 0.4021)$ (1pt).</li>
+          
+          <li>Part c (1pt): Correctly interprets the confidence interval: "We are 95% confident that the true proportion of adults in this region who regularly consume a diet rich in fruits and vegetables is between 0.3179 and 0.4021." (1pt).</li>
+          
+          <li>Part d (1pt): States that the claim is plausible because 0.40 (or 40%) is contained within or very close to the interval, implying values less than 40% are consistent with the interval (1pt).</li>
+          
+          <li>Part e (2pts): Sets up the margin of error formula: $0.02 = z^* \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$. Uses $z^*=1.96$ and $\hat{p}=0.36$: $0.02 = 1.96 \sqrt{\frac{0.36(0.64)}{n}}$ (1pt). Solves for $n$: $n = \frac{1.96^2 \times 0.36 \times 0.64}{0.02^2} \approx 2212.67$. Rounds up to $n = 2213$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S9Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.D,VAR-6.F,VAR-6.G,DAT-3.A,DAT-3.B"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A candy company claims that 20% of its individually wrapped candies are green. A quality control manager suspects this proportion is actually lower. To investigate, a random sample of 150 candies is selected, and 24 of them are found to be green.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a significance test to investigate the manager's suspicion. Define any parameters used.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify that the conditions for performing this significance test are met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test. Show all work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value calculated in part (c) and using a significance level of $\alpha = 0.05$, what conclusion should the manager make regarding the company's claim? Justify your answer in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): $H_0: p = 0.20$ (or $p = 0.2$) and $H_a: p < 0.20$ (or $p < 0.2$), where $p$ is the true proportion of green candies. (1pt for both hypotheses and definition).</li>
+          
+          <li>Part b (1pt): Verifies conditions: Random sample (given). $np_0 = 150(0.20) = 30 \ge 10$. $n(1-p_0) = 150(0.80) = 120 \ge 10$. (1pt for all conditions).</li>
+          
+          <li>Part c (2pts): Calculates $\hat{p} = 24/150 = 0.16$ (0.5pt). Calculates the test statistic $z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}} = \frac{0.16 - 0.20}{\sqrt{\frac{0.20(0.80)}{150}}} \approx -1.225$ (1pt). Calculates p-value $P(Z < -1.225) \approx 0.1103$ (0.5pt).</li>
+          
+          <li>Part d (2pts): Compares p-value to $\alpha$: $0.1103 > 0.05$ (1pt). Concludes fail to reject $H_0$ and states there is not convincing evidence that the true proportion of green candies is less than 20% (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S9Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.B,4.B,4.A"
+      data-learning-objectives="UNC-5.A,UNC-5.D,UNC-5.C"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A pharmaceutical company is testing a new drug designed to reduce the proportion of patients who experience a certain side effect. Historically, 30% of patients experience this side effect with the old drug. The company wants to determine if the new drug reduces this proportion. They plan to conduct a significance test with $H_0: p = 0.30$ and $H_a: p < 0.30$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe a Type I error and a Type II error in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        The company decides to use a significance level of $\alpha = 0.01$. What is the consequence of making a Type I error at this significance level?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe one way the company could decrease the probability of a Type II error, assuming the alternative hypothesis is true.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): A Type I error occurs if the company concludes the new drug reduces the side effect proportion when it actually doesn't (true $p=0.30$) (1pt). A Type II error occurs if the company fails to conclude the new drug reduces the side effect proportion when it actually does (true $p < 0.30$) (1pt).</li>
+          
+          <li>Part b (1pt): The consequence of a Type I error is that the company would market an ineffective drug as being better, potentially leading to financial losses or patient dissatisfaction, when the new drug is not actually better than the old one in reducing the side effect. (1pt).</li>
+          
+          <li>Part c (1pt): To decrease the probability of a Type II error, the company could increase the sample size, increase the significance level $\alpha$, or use a drug that has a larger true reduction in the side effect (larger difference between the true $p$ and $p_0$) (1pt for any one of these).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S9Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.I,UNC-4.J,UNC-4.K,UNC-4.M,UNC-4.N"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A researcher wants to compare the proportion of residents who support a new recycling initiative in two different cities, City A and City B. A random sample of 200 residents from City A found 120 supporters, and a random sample of 250 residents from City B found 130 supporters.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure for constructing a confidence interval for the difference in the true proportions of residents who support the initiative in City A and City B ($p_A - p_B$). Verify that the conditions for this procedure are met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Construct a 90% confidence interval for the difference in the true proportions of residents who support the initiative ($p_A - p_B$). Show all work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the 90% confidence interval constructed in part (b) in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your confidence interval, is there convincing evidence of a difference in support for the recycling initiative between City A and City B? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a two-sample z-interval for a difference in proportions (1pt). Verifies conditions: Independent random samples (given). For City A: $n_A\hat{p}_A = 120 \ge 10$, $n_A(1-\hat{p}_A) = 80 \ge 10$. For City B: $n_B\hat{p}_B = 130 \ge 10$, $n_B(1-\hat{p}_B) = 120 \ge 10$. (1pt for all conditions for both cities).</li>
+          
+          <li>Part b (2pts): Calculates $\hat{p}_A = 120/200 = 0.60$ and $\hat{p}_B = 130/250 = 0.52$. Calculates standard error $\sqrt{\frac{\hat{p}_A(1-\hat{p}_A)}{n_A} + \frac{\hat{p}_B(1-\hat{p}_B)}{n_B}} \approx 0.04689$ (1pt). Calculates confidence interval $(0.60 - 0.52) \pm 1.645(0.04689)$, resulting in $0.08 \pm 0.0771$, or $(0.0029, 0.1571)$ (1pt).</li>
+          
+          <li>Part c (1pt): Correctly interprets the confidence interval: "We are 90% confident that the true proportion of residents in City A who support the initiative is between 0.0029 and 0.1571 higher than in City B." (1pt).</li>
+          
+          <li>Part d (1pt): States there is convincing evidence of a difference. Justifies because the entire interval is above zero (or does not contain zero), indicating that $p_A$ is likely greater than $p_B$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S9Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.A,UNC-4.B,UNC-4.D,UNC-4.F"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A research organization wants to estimate the proportion of U.S. adults who believe that artificial intelligence will have a net positive impact on society in the next 10 years. They conducted a random sample of 1200 U.S. adults and found that 684 of them expressed a belief that AI will have a net positive impact.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure for constructing a confidence interval for the population proportion and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the proportion of all U.S. adults who believe AI will have a net positive impact.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a one-sample z-interval for a proportion (1pt) and verifies random sample, $n\hat{p} = 684 \ge 10$, and $n(1-\hat{p}) = 516 \ge 10$ (1pt).</li>
+          
+          <li>Part b (2pts): Calculates $\hat{p} = 684/1200 = 0.57$ and $SE = \sqrt{\frac{0.57(0.43)}{1200}} \approx 0.0142$. Correctly calculates the interval $0.57 \pm 1.96(0.0142) = (0.542, 0.598)$ (2pts). (Partial: Correct $\hat{p}$ and SE or margin of error calculation, 1pt).</li>
+          
+          <li>Part c (1pt): Correctly interprets the interval: "We are 95% confident that the true proportion of all U.S. adults who believe AI will have a net positive impact is between 0.542 and 0.598." (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

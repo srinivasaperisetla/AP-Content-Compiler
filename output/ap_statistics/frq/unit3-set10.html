@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 3: Collecting Data (Set 10)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 3: Collecting Data (Set 10)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U3S10Q1"
+      data-difficulty="easy"
+      data-skill-codes="1.C"
+      data-learning-objectives="DAT-2.C,DAT-2.D,DAT-2.E"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A large high school wants to survey its 2,000 students to gather opinions on a proposed change to the school's lunch menu. The school administration is considering two sampling methods: Method 1: Place a sign-up sheet in the cafeteria during lunch and survey the first 100 students who volunteer. Method 2: Obtain an alphabetical list of all students, assign each student a number from 1 to 2000, and use a random number generator to select 100 distinct student numbers to survey.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the type of sampling method described in Method 1 and describe a potential source of bias associated with this method.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the type of sampling method described in Method 2. Explain why this method is generally preferred over Method 1 for obtaining a representative sample.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe a potential source of bias that could still occur even if Method 2 is used to select the sample.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies Method 1 as voluntary response (1pt); Describes a relevant bias (e.g., strong opinions, not representative, over/under representation of certain groups) (1pt)</li>
+          
+          <li>Part b (2pts): Identifies Method 2 as simple random sampling (1pt); Explains why it's preferred (e.g., every student has an equal chance, reduces bias, more likely to be representative) (1pt)</li>
+          
+          <li>Part c (1pt): Describes a potential bias (e.g., non-response bias, response bias if question wording is leading, coverage bias if list is incomplete) (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U3S10Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.C,4.A"
+      data-learning-objectives="DAT-2.A,DAT-2.B,VAR-3.A"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">Researchers are interested in whether regular exercise reduces the risk of heart disease. They observed 500 adults for 10 years, recording their exercise habits and whether they developed heart disease. At the end of the study, they found that adults who exercised regularly had a significantly lower incidence of heart disease.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the type of study described. Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Based on this study, can the researchers conclude that regular exercise causes a reduction in heart disease risk? Explain why or why not.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe one significant limitation of this study design regarding establishing causation.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies as an observational study (1pt); Justifies by stating no treatment was imposed or participants were not randomly assigned (1pt)</li>
+          
+          <li>Part b (2pts): States they cannot conclude causation (1pt); Explains that observational studies cannot establish causation due to confounding variables (1pt)</li>
+          
+          <li>Part c (1pt): Describes a potential confounding variable (e.g., diet, genetics, socioeconomic status, other lifestyle choices) and how it affects the outcome (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U3S10Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.C,1.B"
+      data-learning-objectives="VAR-3.A,VAR-3.B,VAR-3.D"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A new pain relief cream is being developed. Researchers want to compare its effectiveness (measured by pain reduction score) against a placebo cream. They have 60 volunteers experiencing chronic knee pain. They know that pain levels can vary significantly between individuals and can also be affected by the volunteers' age.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the experimental units, the treatments, and the response variable in this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe a completely randomized design for this experiment.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Explain how blocking by age group (e.g., 18-40, 41-65, 66+) could improve the design of this experiment.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies experimental units (volunteers), treatments (new cream, placebo), and response variable (pain reduction score) (2/3 pts rounded to nearest whole number, e.g., 2/3 correct = 1pt, 3/3 correct = 2pts)</li>
+          
+          <li>Part b (2pts): Describes random assignment of volunteers to treatment groups (new cream vs. placebo) (1pt); Indicates equal group sizes or explanation of comparison (1pt)</li>
+          
+          <li>Part c (2pts): Explains that blocking helps account for variability due to age (1pt); States that it allows for clearer comparison of treatment effects within age blocks, reducing variability within treatment groups and increasing precision (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U3S10Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.C,1.B"
+      data-learning-objectives="DAT-2.E,VAR-1.E"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A local city council wants to gauge public support for building a new community center. They decide to survey 200 residents. Method A: Send an email survey to all residents who are registered to vote and have an email address on file with the city. Method B: Conduct a telephone survey by calling 200 randomly selected phone numbers from the city's phone directory. The survey question asks, "Do you support the much-needed new community center that will provide valuable services to our youth and seniors, or do you prefer to see current community programs suffer?"</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        For Method A, describe a potential source of sampling bias and explain how it might affect the results.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        For Method B, identify a potential source of bias related to the survey question. Explain how this bias might influence residents' responses.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe a simple random sampling method that the city council could use to select 200 residents for a survey to reduce sampling bias, assuming they have access to a complete list of all city residents.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies undercoverage (e.g., residents without email, unregistered voters) (1pt); Explains how it affects results (e.g., older/younger residents might be underrepresented, resulting in skewed opinions) (1pt)</li>
+          
+          <li>Part b (2pts): Identifies response bias due to leading/biased question wording (1pt); Explains how it influences responses (e.g., compels residents to agree with the new center, making support appear higher than actual) (1pt)</li>
+          
+          <li>Part c (1pt): Describes how to perform a simple random sample using a complete list (e.g., assign numbers to all residents, use random number generator to select 200 distinct numbers) (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U3S10Q5"
+      data-difficulty="medium"
+      data-skill-codes="4.B,1.C"
+      data-learning-objectives="VAR-3.E,VAR-3.D"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A university conducted an experiment to determine if a new online study tool improves student performance in a challenging statistics course. 100 students enrolled in the course were randomly assigned to one of two groups: Group A used the new online study tool, and Group B used traditional study methods. At the end of the semester, the mean final exam score for Group A was $82.5$ points with a standard deviation of $8.2$ points, while for Group B, the mean final exam score was $78.1$ points with a standard deviation of $9.5$ points.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Based on these results, can the university conclude that using the new online study tool causes an improvement in student performance in this statistics course? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe the scope of inference for these results.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If the researchers wanted to investigate if the effect of the study tool varies depending on students' prior mathematical ability, what improvement could they make to their experimental design?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States they can conclude causation (1pt); Justifies by citing random assignment, which balances confounding variables between groups (1pt)</li>
+          
+          <li>Part b (1pt): States that the results can be generalized to similar students in this specific statistics course, or students from the population from which the sample was drawn (1pt)</li>
+          
+          <li>Part c (2pts): Suggests blocking by prior mathematical ability (e.g., high/medium/low math scores) (1pt); Explains that blocking would allow for comparing treatment effects within similar ability groups and reduce variability within blocks (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

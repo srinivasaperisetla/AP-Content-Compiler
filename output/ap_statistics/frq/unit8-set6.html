@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 6)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 6)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S6Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.A,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.B,VAR-8.C,VAR-8.E,VAR-8.D,VAR-8.F,VAR-8.G,DAT-3.I,DAT-3.J"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A certain brand of cereal claims that $30\%$ of its boxes contain a prize for "Category A," $40\%$ for "Category B," $20\%$ for "Category C," and $10\%$ for "Category D." A consumer advocacy group suspects that the actual distribution of prizes is different. To investigate this, they randomly select $200$ boxes of cereal and find the following distribution of prizes.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Prize Category</th><th>Observed Count</th></tr></thead><tbody><tr><td>A</td><td>45</td></tr><tr><td>B</td><td>88</td></tr><tr><td>C</td><td>47</td></tr><tr><td>D</td><td>20</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate test to address the consumer group's suspicion.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected number of boxes for each prize category if the cereal brand's claim is true.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify the conditions for performing this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The calculated chi-square test statistic for these data is $\chi^2 = 12.5$. The p-value is approximately $0.0058$. Based on these results, what conclusion should the consumer group draw at the $\alpha = 0.05$ significance level? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states null and alternative hypotheses in context, identifying the appropriate population parameter (proportions for prize categories).</li>
+          
+          <li>Part b (1pt): Correctly calculates the expected counts for all four categories. (e.g., $E_A = 200 \times 0.30 = 60$, $E_B = 200 \times 0.40 = 80$, $E_C = 200 \times 0.20 = 40$, $E_D = 200 \times 0.10 = 20$).</li>
+          
+          <li>Part c (1pt): Verifies random sample, counts are from categories, and all expected counts are $\ge 5$.</li>
+          
+          <li>Part d (2pts): Compares p-value to $\alpha$ (0.0058 < 0.05) AND correctly states to reject $H_0$. Concludes in context that there is convincing evidence that the actual distribution of prizes is different from the claimed distribution.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S6Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.A,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.H,VAR-8.L,VAR-8.M,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A company is testing three different training programs for new employees (Program A, Program B, Program C). After completing their respective programs, a random sample of $100$ employees from each program is selected, and their performance is evaluated as "Excellent," "Good," or "Needs Improvement." The results are summarized in the table below. The company wants to determine if there is a difference in the distribution of performance ratings among the three training programs.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Performance Rating</th><th>Program A</th><th>Program B</th><th>Program C</th><th>Total</th></tr></thead><tbody><tr><td>Excellent</td><td>20</td><td>25</td><td>25</td><td>70</td></tr><tr><td>Good</td><td>55</td><td>50</td><td>45</td><td>150</td></tr><tr><td>Needs Improvement</td><td>25</td><td>25</td><td>30</td><td>80</td></tr><tr><td>Total</td><td>100</td><td>100</td><td>100</td><td>300</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate test to address the company's question.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected number of employees who performed "Excellent" in Program A, assuming the null hypothesis is true. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify the conditions for performing this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The calculated chi-square test statistic is $\chi^2 = 10.32$ with a p-value of $0.035$. Based on these results, what conclusion should the company draw at the $\alpha = 0.05$ significance level?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states null ($H_0$: The distribution of performance ratings is the same for all three training programs) and alternative hypotheses ($H_a$: The distribution of performance ratings is not the same for all three training programs) in context.</li>
+          
+          <li>Part b (1pt): Calculates the total for "Excellent" (70) and total for Program A (100) and overall total (300). Expected count for "Excellent" in Program A = $\frac{70 \times 100}{300} \approx 23.33$.</li>
+          
+          <li>Part c (1pt): Verifies random samples (explicitly stated in context), categories are nominal, and all expected counts are $\ge 5$. (Student is not required to calculate all expected counts, just state the condition).</li>
+          
+          <li>Part d (2pts): Compares p-value to $\alpha$ (0.035 < 0.05) AND correctly states to reject $H_0$. Concludes in context that there is convincing evidence of a difference in the distribution of performance ratings among the three training programs.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S6Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.A,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.H,VAR-8.L,VAR-8.M,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A sociologist is interested in whether there is an association between a person's highest level of education and their preferred news source. A random sample of $500$ adults was surveyed, and the results are summarized in the two-way table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Education Level</th><th>TV News</th><th>Online News</th><th>Print News</th><th>Total</th></tr></thead><tbody><tr><td>High School or Less</td><td>70</td><td>60</td><td>30</td><td>160</td></tr><tr><td>Some College</td><td>50</td><td>80</td><td>30</td><td>160</td></tr><tr><td>College Degree</td><td>30</td><td>60</td><td>90</td><td>180</td></tr><tr><td>Total</td><td>150</td><td>200</td><td>150</td><td>500</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate test to determine if there is an association between education level and preferred news source.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected count for adults with a "College Degree" who prefer "Online News," assuming there is no association between education level and preferred news source. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify the conditions for performing this chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The calculated chi-square test statistic is $\chi^2 = 18.75$ with $df=4$. The p-value for this test is approximately $0.0009$. Based on these results, what conclusion can be drawn about the association between education level and preferred news source at the $\alpha = 0.01$ significance level? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states null ($H_0$: There is no association between education level and preferred news source in the population of adults) and alternative hypotheses ($H_a$: There is an association between education level and preferred news source in the population of adults) in context.</li>
+          
+          <li>Part b (1pt): Calculates the total for "College Degree" (180) and total for "Online News" (200) and overall total (500). Expected count for "College Degree" and "Online News" = $\frac{180 \times 200}{500} = 72$.</li>
+          
+          <li>Part c (1pt): Verifies random sample (explicitly stated), categories are nominal, and all expected counts are $\ge 5$.</li>
+          
+          <li>Part d (2pts): Compares p-value to $\alpha$ (0.0009 < 0.01) AND correctly states to reject $H_0$. Concludes in context that there is convincing evidence of an association between education level and preferred news source.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S6Q4"
+      data-difficulty="easy"
+      data-skill-codes="3.C,4.C,4.B"
+      data-learning-objectives="VAR-8.A,VAR-8.E,VAR-1.J,DAT-3.I"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A statistics student is designing a study to investigate if the distribution of birth months in a local hospital's records differs significantly from a uniform distribution (where each month has an equal chance). The student plans to collect data from $120$ birth records, $10$ for each month.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the shape, center, and spread of a chi-square distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Before collecting data, the student estimates the expected counts for a goodness-of-fit test, assuming a uniform distribution. Explain why it is important that all expected counts are sufficiently large.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If the observed counts are very close to the expected counts, what would you expect the value of the chi-square test statistic to be?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        After collecting data, the student calculates a chi-square test statistic. If the student obtains a p-value of $0.15$ for their test, what does this p-value mean in the context of the study?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Describes chi-square distribution as skewed right, having a mean equal to its degrees of freedom, and its shape depending on the degrees of freedom.</li>
+          
+          <li>Part b (1pt): Explains that the chi-square test statistic is an approximation of a sampling distribution, and this approximation is valid only when expected counts are large enough (typically $\ge 5$) to ensure the shape of the sampling distribution is adequately approximated by the theoretical chi-square distribution.</li>
+          
+          <li>Part c (1pt): If observed counts are very close to expected counts, the chi-square test statistic would be small, close to 0.</li>
+          
+          <li>Part d (1pt): Interprets the p-value in context: Assuming the true distribution of birth months is uniform, there is a $15\%$ chance of observing a chi-square test statistic as extreme or more extreme than the one calculated from the sample data.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S6Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.E,1.F,4.C"
+      data-learning-objectives="VAR-8.C,VAR-8.J,VAR-8.K,VAR-8.B,VAR-8.I"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">Consider the following two scenarios: \n\n**Scenario 1:** A biologist wants to determine if the proportion of four different flower colors (red, blue, yellow, white) in a particular meadow matches the $2:3:1:4$ ratio expected by a genetic model. The biologist collects data from a random sample of $300$ flowers from the meadow.\n\n**Scenario 2:** A medical researcher wants to investigate if there is an association between exposure to a certain chemical (exposed, not exposed) and the development of a specific health condition (developed, did not develop) in a population. They take a random sample of $500$ individuals and record their exposure status and health outcome.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        For Scenario 1, identify the appropriate chi-square test to use. State the null and alternative hypotheses for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        For Scenario 2, identify the appropriate chi-square test to use. State the null and alternative hypotheses for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        For Scenario 1, verify the conditions that must be met to perform the identified test, assuming the genetic model is true.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Explain the primary difference in the hypotheses between the test identified in Scenario 1 and the test identified in Scenario 2.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1.5pts): Identifies Chi-Square Goodness-of-Fit test. States $H_0$: The proportions of flower colors in the meadow are $p_{red}=0.2, p_{blue}=0.3, p_{yellow}=0.1, p_{white}=0.4$. $H_a$: At least one of these proportions is different from the hypothesized values.</li>
+          
+          <li>Part b (1.5pts): Identifies Chi-Square Test for Independence (or Association). States $H_0$: There is no association between exposure to the chemical and the development of the health condition. $H_a$: There is an association between exposure to the chemical and the development of the health condition.</li>
+          
+          <li>Part c (1pt): Verifies random sample (stated). All expected counts (from $300$ flowers with the given ratios) are $\ge 5$ (e.g., $300 \times 0.2 = 60$, $300 \times 0.3 = 90$, $300 \times 0.1 = 30$, $300 \times 0.4 = 120$, all $\ge 5$).</li>
+          
+          <li>Part d (1pt): Explains that the Goodness-of-Fit test (Scenario 1) compares observed counts to a *single hypothesized distribution* for a *single categorical variable*, while the Test for Independence (Scenario 2) examines the relationship/association between *two categorical variables* within a *single sample*.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

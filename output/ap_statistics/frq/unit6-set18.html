@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 18)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 18)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S18Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.A,UNC-4.B,UNC-4.D,UNC-4.F"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A market research firm surveyed a random sample of $n=500$ adults in a large city to estimate the proportion who prefer to shop online. Out of the 500 adults surveyed, 320 reported that they prefer online shopping.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference method and verify the conditions for constructing a confidence interval for the true proportion of adults in the city who prefer online shopping.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the true proportion of adults in the city who prefer online shopping.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a one-sample $z$-interval for proportions (1pt). Verifies conditions: Random sample (given), $n\hat{p} = 500(0.64) = 320 \ge 10$ and $n(1-\hat{p}) = 500(0.36) = 180 \ge 10$ (large counts), sample size is less than 10% of population (1pt).</li>
+          
+          <li>Part b (2pts): Calculates $\hat{p} = 320/500 = 0.64$. Standard error $SE = \sqrt{\frac{0.64(0.36)}{500}} \approx 0.0214$. Margin of error $ME = 1.96(0.0214) \approx 0.0419$. Interval is $0.64 \pm 0.0419$, which is $(0.5981, 0.6819)$ (2pts for correct calculation and interval).</li>
+          
+          <li>Part c (1pt): Interprets the interval as: "We are 95% confident that the true proportion of adults in this city who prefer online shopping is between 0.5981 and 0.6819." (1pt for correct interpretation in context).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S18Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.D,VAR-6.F,VAR-6.G,DAT-3.A,DAT-3.B"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A local health department claims that the proportion of adults in their county who smoke is 18%. A public health researcher believes that this proportion has decreased. The researcher surveys a random sample of 400 adults in the county and finds that 60 of them smoke.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for a test of the researcher's belief.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing a significance test for a population proportion.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The calculated test statistic is $z = -1.02$. Calculate the p-value for this test and interpret it in context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value and a significance level of $\alpha = 0.05$, what conclusion should the researcher make? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): $H_0: p = 0.18$ and $H_a: p < 0.18$ (1pt).</li>
+          
+          <li>Part b (2pts): Random sample (given). Large Counts: $np_0 = 400(0.18) = 72 \ge 10$ and $n(1-p_0) = 400(0.82) = 328 \ge 10$ (1pt). 10% condition: $400$ adults is less than 10% of all adults in the county (1pt).</li>
+          
+          <li>Part c (2pts): $p$-value $= P(Z < -1.02) = 0.1539$ (1pt). Interpretation: If the true proportion of smokers is 18%, there is a 15.39% chance of observing a sample proportion as low as or lower than 0.15 (60/400) purely by random chance (1pt).</li>
+          
+          <li>Part d (1pt): Since the p-value ($0.1539$) is greater than $\alpha = 0.05$, we fail to reject the null hypothesis. There is not sufficient evidence to conclude that the proportion of adults in the county who smoke has decreased (1pt for correct conclusion and justification).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S18Q3"
+      data-difficulty="easy"
+      data-skill-codes="1.B,4.A,4.B"
+      data-learning-objectives="UNC-5.A,UNC-5.D,UNC-5.C"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A school administrator is testing if the proportion of students who attend the annual school dance is still 40% as it was last year, or if it has changed. She sets up a hypothesis test with $H_0: p = 0.40$ and $H_a: p \ne 0.40$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe a Type I error in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe a Type II error in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Explain how increasing the sample size, while keeping the significance level constant, would affect the probability of a Type II error.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): A Type I error would occur if the administrator concludes that the proportion of students attending the dance has changed, when in reality it is still 40% (1pt).</li>
+          
+          <li>Part b (1pt): A Type II error would occur if the administrator fails to conclude that the proportion of students attending the dance has changed, when in reality it has changed (1pt).</li>
+          
+          <li>Part c (1pt): Increasing the sample size would decrease the probability of a Type II error, because a larger sample size provides more information, increasing the power of the test to detect a true difference (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S18Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.I,UNC-4.J,UNC-4.K,UNC-4.M"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A study investigated the effectiveness of two different advertising campaigns (Campaign A and Campaign B) for a new product. Random samples of potential customers were shown one of the campaigns. The number of customers who reported liking the product was recorded.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Campaign</th><th>Sample Size</th><th>Number Liking Product</th></tr></thead><tbody><tr><td>A</td><td>200</td><td>140</td></tr><tr><td>B</td><td>180</td><td>108</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference method and verify the conditions for constructing a confidence interval for the difference in population proportions.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 90% confidence interval for the difference in the true proportions of customers who would like the product after viewing Campaign A versus Campaign B ($p_A - p_B$).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a two-sample $z$-interval for proportions (1pt). Verifies conditions: Random samples (given), Large Counts: For Campaign A, $140 \ge 10$ and $200-140=60 \ge 10$. For Campaign B, $108 \ge 10$ and $180-108=72 \ge 10$ (1pt). 10% condition: $n_A=200$ and $n_B=180$ are less than 10% of all potential customers (implied).</li>
+          
+          <li>Part b (2pts): Calculates $\hat{p}_A = 140/200 = 0.70$ and $\hat{p}_B = 108/180 = 0.60$. Standard error $SE = \sqrt{\frac{0.70(0.30)}{200} + \frac{0.60(0.40)}{180}} \approx 0.0450$. For 90% confidence, $z^* = 1.645$. Margin of error $ME = 1.645(0.0450) \approx 0.0740$. Point estimate $\hat{p}_A - \hat{p}_B = 0.70 - 0.60 = 0.10$. Interval is $0.10 \pm 0.0740$, which is $(0.026, 0.174)$ (2pts for correct calculation and interval).</li>
+          
+          <li>Part c (1pt): Interprets the interval as: "We are 90% confident that the true proportion of customers who would like the product after viewing Campaign A is between 0.026 and 0.174 higher than for Campaign B." (1pt for correct interpretation in context).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S18Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.H,VAR-6.I,VAR-6.J,VAR-6.K,DAT-3.C,DAT-3.D"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A medical researcher wants to compare the effectiveness of two different flu vaccines (Vaccine X and Vaccine Y) in preventing the flu. Random samples of patients were given one of the vaccines. Out of 300 patients given Vaccine X, 45 developed the flu. Out of 250 patients given Vaccine Y, 40 developed the flu.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for testing if there is a significant difference in the proportions of patients who get the flu after receiving Vaccine X versus Vaccine Y ($p_X - p_Y$).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing a significance test for the difference of two population proportions.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The calculated test statistic is $z = -0.36$. Calculate the p-value for this test and make a conclusion at a significance level of $\alpha = 0.05$. Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): $H_0: p_X - p_Y = 0$ (or $p_X = p_Y$) and $H_a: p_X - p_Y \ne 0$ (or $p_X \ne p_Y$) (1pt).</li>
+          
+          <li>Part b (2pts): Random samples (given). Large Counts: For Vaccine X, $45 \ge 10$ and $300-45=255 \ge 10$. For Vaccine Y, $40 \ge 10$ and $250-40=210 \ge 10$ (1pt). 10% condition: $n_X=300$ and $n_Y=250$ are less than 10% of all potential patients (implied) (1pt).</li>
+          
+          <li>Part c (2pts): $p$-value $= P(Z < -0.36 \text{ or } Z > 0.36) = 2 \times P(Z < -0.36) = 2 \times 0.3594 = 0.7188$ (1pt). Conclusion: Since the p-value ($0.7188$) is greater than $\alpha = 0.05$, we fail to reject the null hypothesis. There is not sufficient evidence to conclude that there is a significant difference in the proportions of patients who get the flu after receiving Vaccine X versus Vaccine Y (1pt for correct conclusion and justification).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 14)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 14)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S14Q1"
+      data-difficulty="easy"
+      data-skill-codes="2.B,3.B,4.B"
+      data-learning-objectives="VAR-5.A,VAR-5.C,VAR-5.D"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A small startup company produces smart sensors. Due to the complex manufacturing process, not all sensors pass the final quality check. The number of defective sensors in a randomly selected batch of 50 sensors is a discrete random variable, $X$. The probability distribution for $X$ is given in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Number of Defective Sensors ($x$)</th><th>Probability $P(X=x)$</th></tr></thead><tbody><tr><td>0</td><td>0.10</td></tr><tr><td>1</td><td>0.25</td></tr><tr><td>2</td><td>0.35</td></tr><tr><td>3</td><td>0.20</td></tr><tr><td>4</td><td>0.10</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Verify that the given table represents a valid probability distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected number of defective sensors in a batch.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the standard deviation of the number of defective sensors in a batch.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the expected value calculated in part (b) in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Shows that all probabilities are between 0 and 1, inclusive, and sum to 1 (1pt).</li>
+          
+          <li>Part b (1pt): Calculates $E(X) = \sum x_i P(X=x_i)$ (1pt).</li>
+          
+          <li>Part c (2pts): Calculates $Var(X) = \sum (x_i - \mu_X)^2 P(X=x_i)$ (1pt)</li>
+          
+          <li>Calculates $SD(X) = \sqrt{Var(X)}$ (1pt).</li>
+          
+          <li>Part d (1pt): Interprets $E(X)$ as the long-run average number of defective sensors per batch (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S14Q2"
+      data-difficulty="easy"
+      data-skill-codes="3.A,4.B"
+      data-learning-objectives="UNC-2.A,VAR-4.A,VAR-4.B"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A company produces chocolate eggs, and historically, 15% of these eggs contain a golden ticket. To simulate the production process, a student uses a random number generator. Numbers from 01 to 15 represent an egg with a golden ticket, and numbers from 16 to 99, along with 00, represent an egg without a golden ticket. The student runs 50 trials, each representing one egg, and finds that 9 of them contained a golden ticket.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Based on the student's simulation, what is the estimated probability that a randomly selected chocolate egg contains a golden ticket?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Based on the historical data, what is the theoretical probability that a randomly selected chocolate egg contains a golden ticket?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Explain why the estimated probability from the simulation might be different from the theoretical probability.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states the estimated probability as $9/50 = 0.18$.</li>
+          
+          <li>Part b (1pt): Correctly states the theoretical probability as $0.15$.</li>
+          
+          <li>Part c (2pts): Explains that simulation results are subject to sampling variability and will not always exactly match theoretical probabilities, especially with a small number of trials.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S14Q3"
+      data-difficulty="medium"
+      data-skill-codes="2.B,3.B,4.B"
+      data-learning-objectives="VAR-5.A,VAR-5.C,VAR-5.D"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A small bakery sells a special cake. The number of cakes sold per day, $X$, varies and has the probability distribution shown in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Number of Cakes Sold ($x$)</th><th>Probability $P(X=x)$</th></tr></thead><tbody><tr><td>0</td><td>0.10</td></tr><tr><td>1</td><td>0.25</td></tr><tr><td>2</td><td>0.35</td></tr><tr><td>3</td><td>?</td></tr><tr><td>4</td><td>0.05</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Determine the missing probability for $P(X=3)$ in the table. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected number of cakes sold per day, $E(X)$. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the expected value calculated in part (b) in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly calculates $P(X=3) = 1 - (0.10+0.25+0.35+0.05) = 1 - 0.75 = 0.25$.</li>
+          
+          <li>Part b (2pts): Correctly calculates $E(X) = (0 \times 0.10) + (1 \times 0.25) + (2 \times 0.35) + (3 \times 0.25) + (4 \times 0.05) = 0 + 0.25 + 0.70 + 0.75 + 0.20 = 1.9$ cakes. Shows calculation.</li>
+          
+          <li>Part c (1pt): Interprets $E(X)$ as the long-run average number of cakes sold per day if this process were repeated many times.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S14Q4"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.B,UNC-3.C,UNC-3.D"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A pharmaceutical company claims that a new drug is effective for 80% of patients. A researcher plans to administer the drug to a random sample of 12 patients.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Verify that the conditions for a binomial distribution are met for the number of effective treatments in this sample.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the probability that exactly 10 of the 12 patients experience an effective treatment. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected number of patients who will experience an effective treatment and the standard deviation for the number of effective treatments in this sample.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Verifies all four binomial conditions: (1) Fixed number of trials ($n=12$), (2) Two outcomes (effective/not effective), (3) Independent trials (random sample, one patient's outcome doesn't affect another's), (4) Constant probability of success ($p=0.80$).</li>
+          
+          <li>Part b (1pt): Calculates $P(X=10) = \binom{12}{10}(0.80)^{10}(0.20)^2 \approx 0.283$. Work shown for binomial probability formula or calculator notation (e.g., `binompdf(12, 0.80, 10)`).</li>
+          
+          <li>Part c (2pts): Calculates $E(X) = n p = 12 \times 0.80 = 9.6$ patients (1pt) and $\sigma_X = \sqrt{n p (1-p)} = \sqrt{12 \times 0.80 \times 0.20} = \sqrt{1.92} \approx 1.386$ patients (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S14Q5"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.E,UNC-3.F,UNC-3.G"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">An archer has a 70% chance of hitting the bullseye on any given shot. Each shot is independent. Let $Y$ be the number of shots until the archer hits the bullseye for the first time.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the probability that the archer hits the bullseye for the first time on the third shot. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected number of shots needed for the archer to hit the bullseye for the first time. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the expected value calculated in part (b) in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Calculates $P(Y=3) = (1-0.70)^2 \times 0.70 = (0.30)^2 \times 0.70 = 0.09 \times 0.70 = 0.063$. Work shown for geometric probability formula or calculator notation (e.g., `geometpdf(0.70, 3)`).</li>
+          
+          <li>Part b (1pt): Calculates $E(Y) = \frac{1}{p} = \frac{1}{0.70} \approx 1.4286$ shots. Shows calculation.</li>
+          
+          <li>Part c (1pt): Interprets $E(Y)$ as the long-run average number of shots required to hit the bullseye for the first time, if this process were repeated many times.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

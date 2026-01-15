@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 8)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 8)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S8Q1"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,3.A,4.B"
+      data-learning-objectives="UNC-3.K,UNC-3.L,UNC-3.M"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A company claims that 70% of its online customers are satisfied with their recent purchase. A consumer advocacy group suspects this claim is too high. To investigate, they plan to take a random sample of 150 online customers.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample proportion of satisfied customers, $\hat{p}$, assuming the company's claim is true. Be sure to calculate the mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether the sampling distribution of $\hat{p}$ can be approximated by a normal distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If the company's claim is true, calculate the probability that in a random sample of 150 customers, the sample proportion of satisfied customers is less than 0.65.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates mean of $\hat{p}$ as $p=0.70$ (1pt); Calculates standard deviation of $\hat{p}$ as $\sqrt{\frac{p(1-p)}{n}} = \sqrt{\frac{0.70(0.30)}{150}}$ (1pt).</li>
+          
+          <li>Part b (1pt): Checks $np \ge 10$ and $n(1-p) \ge 10$ conditions ($150 \times 0.70 = 105 \ge 10$ and $150 \times 0.30 = 45 \ge 10$) and concludes approximately normal (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the $z$-score correctly, $z = \frac{0.65 - 0.70}{\sqrt{\frac{0.70(0.30)}{150}}}$ (1pt); Calculates the correct probability $P(\hat{p} < 0.65) \approx 0.093$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S8Q2"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,3.A,4.B"
+      data-learning-objectives="UNC-3.Q,UNC-3.R,UNC-3.S"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">The weight of a certain type of fruit grown on a farm is known to have a mean of $\mu = 180$ grams and a standard deviation of $\sigma = 25$ grams. The distribution of individual fruit weights is unknown. A random sample of 40 fruits is selected for a grocery store.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample mean weight, $\bar{x}$, for random samples of 40 fruits. Be sure to calculate the mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain why it is appropriate to use a normal distribution to model the sampling distribution of $\bar{x}$, even though the population distribution of individual fruit weights is unknown.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the sample mean weight for a random sample of 40 fruits is greater than 190 grams.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies the mean of $\bar{x}$ as $\mu = 180$ grams (1pt); Calculates the standard deviation of $\bar{x}$ as $\frac{\sigma}{\sqrt{n}} = \frac{25}{\sqrt{40}}$ (1pt).</li>
+          
+          <li>Part b (1pt): States that because the sample size $n=40$ is large (typically $n \ge 30$), the Central Limit Theorem applies, making the sampling distribution of $\bar{x}$ approximately normal (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the $z$-score correctly, $z = \frac{190 - 180}{25/\sqrt{40}}$ (1pt); Calculates the correct probability $P(\bar{x} > 190) \approx 0.0057$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S8Q3"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C,3.A,4.B"
+      data-learning-objectives="UNC-3.N,UNC-3.O,UNC-3.P"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A pharmaceutical company is testing two different formulations of a new allergy medication, Formulation A and Formulation B, to see which is more effective at reducing symptoms. In a randomized controlled trial, 200 patients were given Formulation A and 180 patients were given Formulation B. It is known that Formulation A has a true success rate of $p_A = 0.80$ and Formulation B has a true success rate of $p_B = 0.75$. Assume the samples are independent.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the difference in sample proportions, $\hat{p}_A - \hat{p}_B$, including its mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether the sampling distribution of $\hat{p}_A - \hat{p}_B$ can be approximated by a normal distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the sample proportion for Formulation A is greater than the sample proportion for Formulation B, i.e., $P(\hat{p}_A > \hat{p}_B)$.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates the mean of $\hat{p}_A - \hat{p}_B$ as $p_A - p_B = 0.80 - 0.75 = 0.05$ (1pt); Calculates the standard deviation of $\hat{p}_A - \hat{p}_B$ as $\sqrt{\frac{p_A(1-p_A)}{n_A} + \frac{p_B(1-p_B)}{n_B}} = \sqrt{\frac{0.80(0.20)}{200} + \frac{0.75(0.25)}{180}}$ (1pt).</li>
+          
+          <li>Part b (1pt): Checks all four large counts conditions: $n_A p_A = 200(0.80) = 160 \ge 10$, $n_A(1-p_A) = 200(0.20) = 40 \ge 10$, $n_B p_B = 180(0.75) = 135 \ge 10$, $n_B(1-p_B) = 180(0.25) = 45 \ge 10$, and concludes approximately normal (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the $z$-score correctly for $P(\hat{p}_A - \hat{p}_B > 0)$, $z = \frac{0 - (0.80 - 0.75)}{\sqrt{\frac{0.80(0.20)}{200} + \frac{0.75(0.25)}{180}}}$ (1pt); Calculates the correct probability $P(\hat{p}_A - \hat{p}_B > 0) \approx 0.787$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S8Q4"
+      data-difficulty="medium"
+      data-skill-codes="3.B,4.B,3.C"
+      data-learning-objectives="UNC-3.J,UNC-3.I,UNC-3.H"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A manufacturer of light bulbs wants to estimate the true proportion of defective bulbs produced. They regularly test random samples of bulbs. Instead of using the sample proportion, $\hat{p}$, as an estimator, a new engineer proposes using $p^* = \frac{\text{number of defective bulbs} + 1}{\text{sample size} + 2}$ to account for very small sample sizes or zero defectives.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Suppose a random sample of 20 bulbs is taken, and 1 defective bulb is found. Calculate the point estimate for the proportion of defective bulbs using both $\hat{p}$ and $p^*$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain what it means for an estimator to be unbiased.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe how you could use a simulation to estimate the sampling distribution of $p^*$ for samples of size $n=20$, assuming the true proportion of defective bulbs is $p=0.05$.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Calculates $\hat{p} = \frac{1}{20} = 0.05$ and $p^* = \frac{1+1}{20+2} = \frac{2}{22} \approx 0.091$ (1pt).</li>
+          
+          <li>Part b (2pts): Explains that an estimator is unbiased if the mean (or expected value) of its sampling distribution is equal to the true value of the population parameter being estimated (1pt); provides context, e.g., "on average, the estimator neither overestimates nor underestimates the true parameter" (1pt).</li>
+          
+          <li>Part c (2pts): Describes simulating many random samples of size 20 (1pt); for each sample, calculates $p^*$ and records the value, then constructs a distribution from these recorded values (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S8Q5"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C,3.A,4.B"
+      data-learning-objectives="UNC-3.T,UNC-3.U,UNC-3.V"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A university is comparing the average GPA of students in two different colleges: the College of Arts & Sciences (A) and the College of Engineering (E). From past data, it is known that GPA in College A has a mean of $\mu_A = 3.20$ and a standard deviation of $\sigma_A = 0.35$. GPA in College E has a mean of $\mu_E = 3.05$ and a standard deviation of $\sigma_E = 0.40$. The GPAs are approximately normally distributed in both colleges. A random sample of $n_A = 50$ students is taken from College A and $n_E = 60$ students from College E. Assume the samples are independent.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the difference in sample means, $\bar{x}_A - \bar{x}_E$, including its mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify why the sampling distribution of $\bar{x}_A - \bar{x}_E$ can be approximated by a normal distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the sample mean GPA from College A is less than the sample mean GPA from College E, i.e., $P(\bar{x}_A < \bar{x}_E)$, and interpret this probability in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates the mean of $\bar{x}_A - \bar{x}_E$ as $\mu_A - \mu_E = 3.20 - 3.05 = 0.15$ (1pt); Calculates the standard deviation of $\bar{x}_A - \bar{x}_E$ as $\sqrt{\frac{\sigma_A^2}{n_A} + \frac{\sigma_E^2}{n_E}} = \sqrt{\frac{(0.35)^2}{50} + \frac{(0.40)^2}{60}}$ (1pt).</li>
+          
+          <li>Part b (1pt): States that since both population distributions are approximately normal, the sampling distribution of $\bar{x}_A - \bar{x}_E$ is approximately normal (1pt).</li>
+          
+          <li>Part c (3pts): Calculates the $z$-score correctly for $P(\bar{x}_A - \bar{x}_E < 0)$, $z = \frac{0 - (3.20 - 3.05)}{\sqrt{\frac{(0.35)^2}{50} + \frac{(0.40)^2}{60}}}$ (1pt); Calculates the correct probability $P(\bar{x}_A - \bar{x}_E < 0) \approx 0.009$ (1pt); Interprets the probability in context, e.g., "There is a very small probability (about 0.9%) that the sample mean GPA for College A students would be lower than that for College E students, assuming the true population means are 3.20 and 3.05, respectively" (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

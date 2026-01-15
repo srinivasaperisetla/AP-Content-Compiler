@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 10)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 10)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S10Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.F,3.A,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.B,VAR-8.D,VAR-8.E,VAR-8.F,DAT-3.I,DAT-3.J"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A company claims that the distribution of colors in their bags of plain M&M's is 24% blue, 20% orange, 16% green, 14% yellow, 13% red, and 13% brown. A student randomly samples a large bag of M&M's and counts the following distribution of colors.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Color</th><th>Observed Count</th></tr></thead><tbody><tr><td>Blue</td><td>30</td></tr><tr><td>Orange</td><td>25</td></tr><tr><td>Green</td><td>18</td></tr><tr><td>Yellow</td><td>21</td></tr><tr><td>Red</td><td>28</td></tr><tr><td>Brown</td><td>28</td></tr><tr><td>**Total**</td><td>**150**</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate significance test to determine if the student's sample data provides evidence that the color distribution is different from the company's claim.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected count for green M&M's in the student's sample.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify the conditions for performing this chi-square goodness-of-fit test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The calculated chi-square test statistic is $\chi^2 = 12.35$ and the p-value is 0.030. Interpret the p-value in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Based on the p-value from part (d) and a significance level of $\alpha = 0.05$, what conclusion should the student make? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses for a chi-square goodness-of-fit test regarding the distribution of M&M colors.</li>
+          
+          <li>Part b (1pt): Correctly calculates the expected count for green M&M's ($150 \times 0.16 = 24$).</li>
+          
+          <li>Part c (1pt): Verifies random sample, independence, and expected counts $\ge 5$ (showing all expected counts or minimum expected count).</li>
+          
+          <li>Part d (1pt): Interprets the p-value (0.030) as the probability of observing a chi-square statistic as extreme or more extreme than 12.35, assuming the true color distribution is as claimed, in the context of M&M colors.</li>
+          
+          <li>Part e (1pt): Compares p-value to $\alpha$ ($0.030 < 0.05$), rejects the null hypothesis, and concludes there is convincing evidence that the true distribution of M&M colors is different from the company's claim.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S10Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,3.A,4.C,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.H,VAR-8.K,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A school district wants to compare the effectiveness of two different teaching methods (Method A and Method B) on student success rates in a particular subject. They randomly assigned 200 students to Method A and 250 students to Method B. At the end of the semester, each student's success was categorized as "High Pass," "Pass," or "Fail." The results are summarized in the two-way table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Success Rate</th><th>Method A</th><th>Method B</th><th>Total</th></tr></thead><tbody><tr><td>High Pass</td><td>85</td><td>105</td><td>190</td></tr><tr><td>Pass</td><td>100</td><td>110</td><td>210</td></tr><tr><td>Fail</td><td>15</td><td>35</td><td>50</td></tr><tr><td>**Total**</td><td>**200**</td><td>**250**</td><td>**450**</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected number of students who would "Fail" using Method A, assuming there is no difference in success rates between the two methods.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify the conditions for performing this chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The chi-square test statistic for these data is $\chi^2 = 7.15$ with a p-value of 0.028. Interpret this p-value in the context of the study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Based on the p-value from part (d) and a significance level of $\alpha = 0.01$, what conclusion should the school district make? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null ($H_0$: There is no difference in the distribution of success rates for students taught using Method A and Method B) and alternative ($H_a$: There is a difference in the distribution of success rates for students taught using Method A and Method B) hypotheses.</li>
+          
+          <li>Part b (1pt): Calculates the expected count for "Fail" under Method A. Total Fail = $15+35=50$. Total Method A = $200$. Total = $450$. Expected count = $\frac{200 \times 50}{450} \approx 22.22$.</li>
+          
+          <li>Part c (1pt): Verifies random assignment, independence of observations, and all expected counts $\ge 5$.</li>
+          
+          <li>Part d (1pt): Interprets the p-value (0.028) as the probability of observing a chi-square statistic as extreme or more extreme than 7.15, assuming there is no difference in success rates between the teaching methods, in the context of student success.</li>
+          
+          <li>Part e (1pt): Compares p-value to $\alpha$ ($0.028 > 0.01$), fails to reject the null hypothesis, and concludes there is not convincing evidence of a difference in the distribution of success rates between the two teaching methods.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S10Q3"
+      data-difficulty="hard"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.L,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A researcher wants to investigate if there is an association between the amount of time high school students spend on social media per day and their average study time per day. A random sample of 300 high school students was surveyed, and their responses are summarized in the two-way table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Social Media Time</th><th>Study Time: < 1 hr</th><th>Study Time: 1-3 hrs</th><th>Study Time: > 3 hrs</th><th>Total</th></tr></thead><tbody><tr><td>< 1 hr</td><td>30</td><td>60</td><td>30</td><td>120</td></tr><tr><td>1-3 hrs</td><td>40</td><td>50</td><td>20</td><td>110</td></tr><tr><td>> 3 hrs</td><td>25</td><td>30</td><td>15</td><td>70</td></tr><tr><td>**Total**</td><td>**95**</td><td>**140**</td><td>**65**</td><td>**300**</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate significance test to investigate the researcher's question.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the specific chi-square test that should be performed in this situation, and justify your choice.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify the conditions for performing this test, including calculating the degrees of freedom.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The calculated chi-square test statistic for these data is $\chi^2 = 18.72$. Explain what a large value for the chi-square statistic indicates in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        At a significance level of $\alpha = 0.05$, the p-value for this test is 0.0003. Justify whether the researcher can conclude there is an association between social media time and study time among high school students.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null ($H_0$: There is no association between social media time and study time among high school students) and alternative ($H_a$: There is an association between social media time and study time among high school students) hypotheses.</li>
+          
+          <li>Part b (1pt): Identifies a chi-square test for independence and justifies that it is appropriate because the data involves two categorical variables from a single sample to check for an association.</li>
+          
+          <li>Part c (1.5pts): Verifies random sample, independence of observations, and all expected counts $\ge 5$ (needs to mention how expected counts would be calculated or reference that all are met). Calculates degrees of freedom: $(3-1)(3-1) = 4$.</li>
+          
+          <li>Part d (1pt): Explains that a large chi-square statistic indicates that the observed counts deviate significantly from the expected counts, suggesting a strong association between social media time and study time.</li>
+          
+          <li>Part e (1.5pts): Compares p-value to $\alpha$ ($0.0003 < 0.05$), rejects the null hypothesis, and justifies that there is convincing evidence to conclude that there is an association between the amount of time high school students spend on social media and their average study time.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S10Q4"
+      data-difficulty="easy"
+      data-skill-codes="3.C,4.B"
+      data-learning-objectives="VAR-8.A,VAR-1.J,DAT-3.I"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A researcher is conducting a chi-square test for goodness of fit with 4 categories and a sample size of 100. They want to understand the properties of the chi-square distribution and the interpretation of the p-value.</div>
+
+      
+      <div class="diagram">
+         <svg width="400" height="300" style="background-color:white;"><rect x="0" y="0" width="400" height="300" fill="white" stroke="none"/><line x1="50" y1="250" x2="350" y2="250" stroke="black" stroke-width="1"/><line x1="50" y1="250" x2="50" y2="50" stroke="black" stroke-width="1"/><text x="180" y="270" font-size="12" fill="black">Chi-Square Statistic ($\chi^2$)</text><text x="20" y="150" font-size="12" fill="black" transform="rotate(-90 20 150)">Density</text><path d="M50 250 Q100 200 150 150 Q200 120 250 100 Q300 85 340 70" stroke="blue" stroke-width="2" fill="none"/><text x="200" y="120" font-size="12" fill="blue">df = 3</text><path d="M50 250 Q100 230 150 200 Q200 170 250 140 Q300 115 340 90" stroke="green" stroke-width="2" fill="none"/><text x="250" y="170" font-size="12" fill="green">df = 8</text><circle cx="50" cy="250" r="2" fill="black"/></svg> 
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the general shape of a chi-square distribution, specifically mentioning how it changes with increasing degrees of freedom.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        For the researcher's test with 4 categories, how many degrees of freedom are there?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Suppose the researcher calculates a chi-square test statistic and obtains a p-value of 0.15. Explain what this p-value means in the context of the study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        If the researcher had observed counts that were very different from the expected counts, what would that suggest about the chi-square test statistic and the resulting p-value?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Describes the chi-square distribution as skewed right, becoming less skewed and more symmetric as the degrees of freedom increase.</li>
+          
+          <li>Part b (0.5pt): States the degrees of freedom are $4-1=3$.</li>
+          
+          <li>Part c (1pt): Explains that a p-value of 0.15 means there is a 15% probability of observing a chi-square test statistic as extreme or more extreme than the one calculated, assuming the null hypothesis (that the observed distribution fits the hypothesized distribution) is true.</li>
+          
+          <li>Part d (1pt): Suggests that very different observed from expected counts would lead to a large chi-square test statistic and a small p-value.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S10Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.E,1.F,4.C,4.B,4.E"
+      data-learning-objectives="VAR-8.C,VAR-8.J,VAR-8.K,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A company manufactures three types of light bulbs: LED, CFL, and Incandescent. They want to determine if the proportion of defective bulbs is the same across all three types. A random sample of 200 bulbs of each type was inspected for defects. The data are summarized below, along with partial computer output for a chi-square test.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Bulb Type</th><th>Defective</th><th>Not Defective</th><th>Total</th></tr></thead><tbody><tr><td>LED</td><td>18</td><td>182</td><td>200</td></tr><tr><td>CFL</td><td>8</td><td>192</td><td>200</td></tr><tr><td>Incandescent</td><td>4</td><td>196</td><td>200</td></tr><tr><td>**Total**</td><td>**30**</td><td>**570**</td><td>**600**</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate chi-square test to address the company's question. State the null and alternative hypotheses for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions necessary for performing this chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The partial computer output shows a chi-square statistic of 9.87 with 2 degrees of freedom, and a p-value of 0.0072. Interpret the p-value in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value from part (c) and a significance level of $\alpha = 0.05$, what conclusion should the company make regarding the proportion of defective bulbs across the three types? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies a chi-square test for homogeneity. States correct null ($H_0$: The proportion of defective bulbs is the same across LED, CFL, and Incandescent types) and alternative ($H_a$: The proportion of defective bulbs is not the same across LED, CFL, and Incandescent types) hypotheses.</li>
+          
+          <li>Part b (1.5pts): Verifies that random samples were taken for each bulb type (implies independence within and between groups) and that all expected counts are $\ge 5$. (Expected counts for defectives: $\frac{600 \times 30}{600} = 30$. Expected counts for non-defectives: $\frac{600 \times 570}{600} = 570$. All are $\ge 5$).</li>
+          
+          <li>Part c (1pt): Interprets the p-value (0.0072) as the probability of observing a chi-square statistic as extreme or more extreme than 9.87, assuming the true proportion of defective bulbs is the same across all three types, in the context of bulb defects.</li>
+          
+          <li>Part d (1.5pts): Compares p-value to $\alpha$ ($0.0072 < 0.05$), rejects the null hypothesis, and justifies that there is convincing evidence that the proportion of defective bulbs is not the same across the LED, CFL, and Incandescent types.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

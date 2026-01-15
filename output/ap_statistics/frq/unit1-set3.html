@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 1: Exploring One-Variable Data (Set 3)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 1: Exploring One-Variable Data (Set 3)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U1S3Q1"
+      data-difficulty="easy"
+      data-skill-codes="2.A,2.B,2.D"
+      data-learning-objectives="UNC-1.A,UNC-1.B,UNC-1.C,UNC-1.D,UNC-1.E"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A survey asked 150 high school students about their favorite type of pet. The results are summarized below by gender.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Pet Type</th><th>Male Students</th><th>Female Students</th></tr></thead><tbody><tr><td>Dog</td><td>45</td><td>30</td></tr><tr><td>Cat</td><td>20</td><td>35</td></tr><tr><td>Fish</td><td>15</td><td>10</td></tr><tr><td>Bird</td><td>5</td><td>10</td></tr><tr><td>Other</td><td>10</td><td>10</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Construct a relative frequency table for the pet preference distribution for all students combined.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Create a comparative bar chart to display the distribution of pet preferences for male and female students.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on your bar chart, describe one key difference in pet preferences between male and female students.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Explain why a pie chart would not be appropriate for comparing pet preferences between male and female students.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly calculates relative frequencies for all categories and presents them in a table.</li>
+          
+          <li>Part b (2pts): Correctly constructs a comparative bar chart with properly labeled axes and categories, showing separate bars for males and females or stacked bars per pet type.</li>
+          
+          <li>Part c (1pt): Identifies a clear difference in preferences (e.g., males prefer dogs more than females, females prefer cats more than males) based on the graph.</li>
+          
+          <li>Part d (1pt): Explains that a pie chart shows parts of a whole for a single group, and cannot effectively compare distributions of two different groups (males and females).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U1S3Q2"
+      data-difficulty="medium"
+      data-skill-codes="2.A,2.C,4.B"
+      data-learning-objectives="UNC-1.H,UNC-1.I,UNC-1.J,UNC-1.K"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A small business owner tracked the daily number of customers visiting her store for 15 days. The number of customers each day was: $28, 32, 25, 30, 35, 29, 31, 26, 33, 27, 34, 30, 29, 32, 28$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the mean and median number of customers.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the interquartile range (IQR) and the standard deviation of the number of customers.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe the shape, center, and spread of the distribution of daily customer visits.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Explain which measures of center and spread would be more appropriate for describing this distribution, and justify your choice.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly calculates the mean ($\bar{x} = 30$) and median (30).</li>
+          
+          <li>Part b (2pts): Correctly calculates IQR ($Q_3-Q_1 = 32.5-28 = 4.5$) and standard deviation ($s \approx 2.92$).</li>
+          
+          <li>Part c (1pt): Describes the shape as roughly symmetric, center around 30, and spread using IQR or standard deviation.</li>
+          
+          <li>Part d (1pt): Explains that mean and standard deviation are more appropriate because the distribution appears symmetric with no apparent outliers.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U1S3Q3"
+      data-difficulty="medium"
+      data-skill-codes="2.A,2.B,2.D"
+      data-learning-objectives="UNC-1.G,UNC-1.N,UNC-1.L"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A researcher is comparing the number of hours spent exercising per week by two groups of adults: Group A (ages 20-30) and Group B (ages 50-60). The data for random samples from each group are provided below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Group</th><th>Data (Hours)</th></tr></thead><tbody><tr><td>A</td><td>5, 7, 8, 9, 10, 11, 12, 12, 13, 15, 20</td></tr><tr><td>B</td><td>3, 4, 5, 6, 7, 8, 8, 9, 10, 11, 12</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Construct parallel boxplots for the number of hours spent exercising per week for Group A and Group B.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Based on your boxplots, compare the distributions of exercise hours for Group A and Group B, focusing on shape, center, and spread.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Identify if there are any potential outliers in Group A's data, showing your work using the $1.5 \times IQR$ rule.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly constructs two parallel boxplots on the same scale, with appropriate labels for axes and groups.</li>
+          
+          <li>Part b (2pts): Compares shape (e.g., symmetry/skewness), center (median), and spread (IQR) for both groups in context.</li>
+          
+          <li>Part c (1pt): Calculates IQR for Group A and applies the $1.5 \times IQR$ rule to correctly identify any outliers (e.g., $Q_1 - 1.5 \times IQR$ and $Q_3 + 1.5 \times IQR$).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U1S3Q4"
+      data-difficulty="medium"
+      data-skill-codes="2.D,3.A"
+      data-learning-objectives="VAR-2.A,VAR-2.B,VAR-2.C"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">The weights of adult male grizzly bears in a certain region are approximately normally distributed with a mean of $\mu = 380$ kg and a standard deviation of $\sigma = 50$ kg.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the z-score for an adult male grizzly bear weighing 450 kg.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Determine the proportion of adult male grizzly bears in this region that weigh more than 450 kg.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        A wildlife biologist finds a bear weighing 300 kg. Compare the relative position of this bear's weight to a bear weighing 450 kg within the distribution of weights.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Explain why the normal distribution is often a suitable model for natural phenomena like animal weights.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly calculates the z-score as $z = \frac{450 - 380}{50} = 1.4$.</li>
+          
+          <li>Part b (2pts): Correctly determines the proportion (e.g., using a z-table or calculator, $P(Z > 1.4) \approx 0.0808$).</li>
+          
+          <li>Part c (1pt): Calculates the z-score for 300 kg ($z = \frac{300 - 380}{50} = -1.6$) and compares relative positions (e.g., 300 kg is further below the mean than 450 kg is above it, indicating 300 kg is relatively lighter/more unusual).</li>
+          
+          <li>Part d (1pt): Explains that natural phenomena often result from many small, independent random factors, which tend to average out to a bell-shaped, symmetric distribution.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U1S3Q5"
+      data-difficulty="hard"
+      data-skill-codes="2.A,2.B,2.C,2.D,4.B"
+      data-learning-objectives="UNC-1.H,UNC-1.G,UNC-1.I,UNC-1.K,UNC-1.N,VAR-1.B,VAR-1.C"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A school conducted a survey of its 200 students to gather data on their daily commute to school. For each student, they recorded their primary mode of transportation (e.g., walk, bus, car, bike) and their commute time in minutes.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the types of variables collected in this survey (e.g., categorical or quantitative).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        The commute times (in minutes) for a random sample of 25 students who walk to school are: $5, 7, 8, 8, 9, 10, 10, 10, 11, 12, 12, 13, 14, 15, 15, 16, 17, 18, 18, 19, 20, 22, 25, 28, 30$. Construct a stem-and-leaf plot for this data.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the median and range for the commute times of the walking students. Based on the stem-and-leaf plot, describe the shape of this distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Suppose the school wants to compare the distribution of commute times for students who take the bus versus those who ride in a car. Describe an appropriate graphical display for this comparison and explain what specific features you would look for in the display to draw a conclusion.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        A local transit authority claims that "the typical student commute time in this area is about 15 minutes, with most commutes falling between 10 and 20 minutes." Using the information from part (c) for walking students, evaluate whether this claim appears reasonable for *this specific group* of students.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly identifies "mode of transportation" as categorical and "commute time" as quantitative.</li>
+          
+          <li>Part b (2pts): Constructs a correct stem-and-leaf plot with a key and appropriate stems and leaves.</li>
+          
+          <li>Part c (1pt): Calculates the median (14 minutes) and range (30-5=25 minutes) and describes the shape (e.g., slightly skewed right or roughly symmetric with a slight tail to the right).</li>
+          
+          <li>Part d (1pt): Describes using parallel boxplots or comparative dot plots/histograms and explains looking for differences in center (median/mean), spread (IQR/range), and shape (skewness, outliers).</li>
+          
+          <li>Part e (1pt): Evaluates the claim by comparing the walking students' median and typical range (e.g., IQR) to the claim's values. For walking students, a median of 14 minutes is close to 15, and an IQR from say 10 to 19 minutes is consistent with "most commutes falling between 10 and 20 minutes". So, the claim appears reasonable for walking students.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

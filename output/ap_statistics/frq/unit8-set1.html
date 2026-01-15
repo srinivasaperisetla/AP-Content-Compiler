@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 1)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 1)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S1Q1"
+      data-difficulty="easy"
+      data-skill-codes="1.E,1.F,3.A,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.B,VAR-8.C,VAR-8.D,VAR-8.E,VAR-8.F,VAR-8.G,DAT-3.I,DAT-3.J"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A large candy company claims that its bags of multi-colored candies contain 13% brown, 13% red, 14% yellow, 24% blue, 20% green, and 16% orange candies. A statistics student suspects the distribution is different and takes a random sample of 600 candies, finding the following counts: Brown: 80, Red: 65, Yellow: 85, Blue: 150, Green: 130, Orange: 90.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate significance test to investigate the student's suspicion.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected count for brown candies and yellow candies in this sample, assuming the company's claim is true.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify the conditions for conducting this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The test statistic calculated from the observed data is $\chi^2 = 8.42$ with 5 degrees of freedom, and the corresponding p-value is 0.1347. Interpret this p-value in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Based on the p-value, what conclusion should the student make at the $\alpha = 0.05$ significance level? Justify your conclusion.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses in context.</li>
+          
+          <li>Part b (1pt): Calculates correct expected counts for brown ($600 \times 0.13 = 78$) and yellow ($600 \times 0.14 = 84$) candies, showing work.</li>
+          
+          <li>Part c (1pt): Verifies all conditions: Random sample (stated), Large counts (all expected counts $\ge 5$), Independence (sample size less than 10% of population).</li>
+          
+          <li>Part d (1pt): Correctly interprets the p-value: If the true proportion of candy colors is as claimed, there is a 0.1347 probability of observing a sample distribution as or more different from the claimed distribution than the one observed, purely by chance.</li>
+          
+          <li>Part e (1pt): Compares p-value to $\alpha$ and states correct conclusion: Since $p$-value ($0.1347$) $> \alpha$ ($0.05$), fail to reject $H_0$. There is not sufficient evidence to conclude that the distribution of candy colors is different from the company's claim.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S1Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,3.A,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.H,VAR-8.L,VAR-8.M,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">Researchers are studying the effectiveness of three different new fertilizer types (A, B, C) on plant growth, categorized as "poor", "average", or "excellent". They randomly assign 100 plants to each fertilizer type. After a growing season, the results are summarized in the following two-way table of observed counts.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Growth Category</th><th>Fertilizer A</th><th>Fertilizer B</th><th>Fertilizer C</th><th>Total</th></tr></thead><tbody><tr><td>Poor</td><td>25</td><td>15</td><td>10</td><td>50</td></tr><tr><td>Average</td><td>40</td><td>60</td><td>50</td><td>150</td></tr><tr><td>Excellent</td><td>35</td><td>25</td><td>40</td><td>100</td></tr><tr><td>Total</td><td>100</td><td>100</td><td>100</td><td>300</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate significance test to determine if there is a difference in the distribution of plant growth categories among the three fertilizer types.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected count for plants treated with Fertilizer B showing "poor" growth, assuming the null hypothesis is true. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify the conditions for conducting this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The chi-square test statistic for these data is $\chi^2 = 9.87$ with 4 degrees of freedom, and the corresponding p-value is 0.0426. Based on these results, what conclusion should the researchers make at the $\alpha = 0.05$ significance level? Justify your conclusion.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null ($H_0$: There is no difference in the distribution of plant growth categories among the three fertilizer types) and alternative hypotheses ($H_a$: There is a difference in the distribution of plant growth categories among the three fertilizer types) in context.</li>
+          
+          <li>Part b (1pt): Calculates the expected count for Fertilizer B, "poor" growth: Row total for poor = $50$. Column total for Fertilizer B = $100$. Grand total = $300$. Expected count = $\frac{50 \times 100}{300} \approx 16.67$.</li>
+          
+          <li>Part c (1pt): Verifies conditions: Random assignment (stated), Large counts (all expected counts $\ge 5$), Independence (plants are independent and sample size is less than 10% of all possible plants).</li>
+          
+          <li>Part d (2pts): Compares p-value to $\alpha$ and states correct conclusion with justification: Since $p$-value ($0.0426$) $< \alpha$ ($0.05$), reject $H_0$. There is sufficient evidence to conclude that there is a difference in the distribution of plant growth categories among the three fertilizer types.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S1Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,3.A,4.C"
+      data-learning-objectives="VAR-8.C,VAR-8.D,VAR-8.E,VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.H"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A company manufactures light bulbs and claims that 80% are "long-lasting," 15% are "standard," and 5% are "short-lasting." A quality control manager takes a random sample of 200 light bulbs from a recent production run to check if the distribution of bulb types matches the company's claim.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate chi-square test for this scenario and state the null and alternative hypotheses.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions required to perform this chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected number of "short-lasting" bulbs in the sample if the company's claim is true.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Suppose the quality control manager had instead randomly selected 50 light bulbs from each of three different manufacturing plants (Plant 1, Plant 2, Plant 3) and recorded the type of bulb (long-lasting, standard, short-lasting). What type of chi-square test would be appropriate in this *different* scenario?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies Chi-Square Goodness-of-Fit test. States null ($H_0$: The distribution of light bulb types matches the company's claim) and alternative hypotheses ($H_a$: The distribution of light bulb types does not match the company's claim) in context.</li>
+          
+          <li>Part b (2pts): Verifies conditions: Random sample (given). Large counts (Expected counts: Long-lasting: $200 \times 0.80 = 160$; Standard: $200 \times 0.15 = 30$; Short-lasting: $200 \times 0.05 = 10$. All are $\ge 5$). Independence (The 200 bulbs are less than 10% of the total production).</li>
+          
+          <li>Part c (1pt): Calculates expected number of "short-lasting" bulbs: $200 \times 0.05 = 10$.</li>
+          
+          <li>Part d (1pt): Identifies Chi-Square Test for Homogeneity.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S1Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.A,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.B,VAR-8.C,VAR-8.E,VAR-8.D,VAR-8.F,VAR-8.G,DAT-3.I,DAT-3.J"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A regional coffee shop chain wants to determine if customer preferences for coffee types (Latte, Cappuccino, Americano, Mocha, Other) align with national averages. The national averages are 30% Latte, 25% Cappuccino, 20% Americano, 15% Mocha, and 10% Other. A random sample of 200 customers from the regional chain was surveyed, and their preferred coffee types were recorded.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the specific chi-square test that should be used and verify the conditions for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected counts for each coffee type, assuming the national distribution is true for this regional chain.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The calculated chi-square test statistic is $X^2 = 12.5$. Determine the $p$-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Based on the $p$-value, interpret the results in context and justify a conclusion at the $\alpha = 0.05$ significance level.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states $H_0$ that the distribution of coffee preferences in the regional chain is the same as the national distribution and $H_a$ that it is not.</li>
+          
+          <li>Part b (2pts): Identifies chi-square goodness-of-fit test (1pt). Verifies random sample, expected counts $\ge 5$ (showing calculation for at least one expected count, e.g., $200 \times 0.10 = 20 \ge 5$), and independent observations (1pt).</li>
+          
+          <li>Part c (1pt): Correctly calculates all expected counts (e.g., Latte: $200 \times 0.30 = 60$; Cappuccino: $200 \times 0.25 = 50$; Americano: $200 \times 0.20 = 40$; Mocha: $200 \times 0.15 = 30$; Other: $200 \times 0.10 = 20$).</li>
+          
+          <li>Part d (1pt): Correctly determines degrees of freedom $df = 5-1=4$ and finds $p$-value using $X^2 = 12.5$ with $df=4$ (using technology or table, $p$-value $\approx 0.0138$).</li>
+          
+          <li>Part e (1pt): Correctly interprets $p$-value in context (e.g., if the regional chain's preferences truly matched national, there's a 1.38% chance of observing a test statistic as extreme as 12.5 or more) and justifies a conclusion (e.g., Since $p$-value $0.0138 < \alpha=0.05$, reject $H_0$. There is convincing evidence that the distribution of coffee preferences at this regional chain is different from the national averages).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S1Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.A,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.H,VAR-8.L,VAR-8.M,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A large school district wants to compare the distribution of student enrollment across three high schools (School A, School B, School C) for different grade levels (9th, 10th, 11th, 12th). A random sample of 500 students was taken, with observations collected from each school. The observed counts are given in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Grade Level</th><th>School A</th><th>School B</th><th>School C</th><th>Total</th></tr></thead><tbody><tr><td>9th</td><td>45</td><td>55</td><td>50</td><td>150</td></tr><tr><td>10th</td><td>70</td><td>85</td><td>65</td><td>220</td></tr><tr><td>11th</td><td>30</td><td>25</td><td>30</td><td>85</td></tr><tr><td>12th</td><td>15</td><td>15</td><td>15</td><td>45</td></tr><tr><td>Total</td><td>160</td><td>180</td><td>160</td><td>500</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the specific chi-square test that should be used and verify the conditions for making statistical inferences.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected number of 10th-grade students at School B, assuming there is no difference in the distribution of grade levels across the schools.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The calculated chi-square test statistic is $X^2 = 10.2$ with $df=6$. Interpret the $p$-value for this test in context, given that it is approximately $0.115$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Based on the $p$-value from part d, justify a claim about the populations of students at these high schools at the $\alpha = 0.05$ significance level.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states $H_0$: The distribution of grade levels is the same for all three high schools. $H_a$: The distribution of grade levels is not the same for all three high schools.</li>
+          
+          <li>Part b (2pts): Identifies chi-square test for homogeneity (1pt). Verifies random samples from each school, expected counts $\ge 5$ (by calculating one or stating all were met, e.g., smallest expected count would be for 12th grade in any school, which is $(45/500) \times (\text{school total}) \ge 5$), and observations within and between samples are independent (1pt).</li>
+          
+          <li>Part c (1pt): Calculates the expected count for 10th grade at School B. Total 10th graders: $70+85+65=220$. Total students: $160+180+160=500$. Expected for School B, 10th grade: $(180/500) \times 220 = 79.2$.</li>
+          
+          <li>Part d (1pt): Interprets the $p$-value ($0.115$) in context: Assuming there is no difference in the distribution of grade levels across the three high schools, there is an 11.5% chance of observing a sample distribution of grade levels as different from the hypothesized identical distributions as the one observed, or more different, purely by random chance.</li>
+          
+          <li>Part e (1pt): Justifies a claim: Since $p$-value $0.115 > \alpha=0.05$, fail to reject $H_0$. There is not convincing evidence of a difference in the distribution of grade levels across the three high schools.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

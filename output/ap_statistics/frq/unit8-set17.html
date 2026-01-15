@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 17)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 17)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S17Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,3.A,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.H,VAR-8.K,VAR-8.L,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A research team investigated whether there is an association between a person's primary mode of transportation to work and their job satisfaction level (Satisfied, Neutral, Dissatisfied). A random sample of 300 employed adults provided the following observed counts:</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Mode of Transport</th><th>Satisfied</th><th>Neutral</th><th>Dissatisfied</th><th>Total</th></tr></thead><tbody><tr><td>Car</td><td>120</td><td>30</td><td>30</td><td>180</td></tr><tr><td>Public Transit</td><td>40</td><td>20</td><td>10</td><td>70</td></tr><tr><td>Bike/Walk</td><td>30</td><td>10</td><td>10</td><td>50</td></tr><tr><td>Total</td><td>190</td><td>60</td><td>50</td><td>300</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected count for individuals who commute by "Car" and are "Neutral" about their job satisfaction. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify the conditions for performing this test. If the chi-square test statistic is $14.28$ and the p-value is $0.0064$, what conclusion should be drawn at the $\alpha = 0.01$ significance level? Justify your answer in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Hypotheses correctly stated for independence test.</li>
+          
+          <li>Part b (1pt): Correct calculation of expected count ($ \frac{\text{Row Total} \times \text{Column Total}}{\text{Grand Total}} $). Example: $ \frac{180 \times 60}{300} = 36 $.</li>
+          
+          <li>Part c (3pts): Random sample condition verified. Expected count condition verified (all expected counts $\ge 5$). Correct conclusion (reject $H_0$) with justification comparing p-value to $\alpha$ AND interpreted in context.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S17Q2"
+      data-difficulty="easy"
+      data-skill-codes="1.F,3.A,4.C"
+      data-learning-objectives="VAR-8.B,VAR-8.D,VAR-8.E"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A company claims that the distribution of customer types (new, returning, loyal) for their online store is 20% new, 30% returning, and 50% loyal. A random sample of 200 recent customers showed 50 new, 65 returning, and 85 loyal customers. The company wants to determine if the observed distribution differs significantly from their claimed distribution.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a chi-square goodness-of-fit test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected number of customers for each category (new, returning, loyal) if the company's claim is true.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify the conditions for conducting a chi-square goodness-of-fit test in this context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States $H_0: p_{new}=0.20, p_{returning}=0.30, p_{loyal}=0.50$ and $H_a:$ At least one proportion is different from the hypothesized value.</li>
+          
+          <li>Part b (1pt): Calculates expected counts: New $= 200 \times 0.20 = 40$, Returning $= 200 \times 0.30 = 60$, Loyal $= 200 \times 0.50 = 100$.</li>
+          
+          <li>Part c (2pts): Verifies Random Condition (random sample given), Large Sample Size Condition (all expected counts $40, 60, 100 \ge 5$), and Independence Condition ($200 < 10\%$ of all customers).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S17Q3"
+      data-difficulty="medium"
+      data-skill-codes="3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.F,VAR-8.G,DAT-3.I,DAT-3.J"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A bag of M&M's candies is supposed to contain 24% blue, 20% orange, 16% green, 14% yellow, 13% red, and 13% brown candies. A large bag was opened, and the observed counts were: 110 blue, 95 orange, 80 green, 70 yellow, 65 red, and 60 brown. The total number of candies was 480. A chi-square goodness-of-fit test was performed to determine if the distribution of colors differs from what is claimed. The calculated expected counts are 115.2 blue, 96 orange, 76.8 green, 67.2 yellow, 62.4 red, and 62.4 brown.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the chi-square test statistic for this goodness-of-fit test. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Determine the degrees of freedom for this test and find the p-value.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the p-value in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on a significance level of $\alpha = 0.05$, what conclusion can be made? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correct calculation of $\chi^2 = \sum \frac{(Observed - Expected)^2}{Expected} = \frac{(110-115.2)^2}{115.2} + \frac{(95-96)^2}{96} + \frac{(80-76.8)^2}{76.8} + \frac{(70-67.2)^2}{67.2} + \frac{(65-62.4)^2}{62.4} + \frac{(60-62.4)^2}{62.4} \approx 1.83$.</li>
+          
+          <li>Part b (1pt): Correct degrees of freedom $df = 6-1=5$. P-value $P(\chi^2 > 1.83)$ with $df=5$ is approximately $0.871$.</li>
+          
+          <li>Part c (1pt): If the true distribution of M&M's colors is as claimed, there is an 87.1% chance of observing a sample distribution as or more extreme than the one collected, due to random sampling variation.</li>
+          
+          <li>Part d (1pt): Since the p-value ($0.871$) is greater than $\alpha = 0.05$, we fail to reject the null hypothesis. There is not sufficient evidence to conclude that the distribution of M&M's colors differs from the claimed proportions.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S17Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,3.A,4.C"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.H,VAR-8.K"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A car manufacturer wants to compare the distribution of car body styles (sedan, SUV, truck) preferred by customers in two different geographic regions (East Coast vs. West Coast). They randomly sampled 300 recent car buyers from each region and recorded their preferred body style. The results are summarized in a two-way table.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate null and alternative hypotheses for a chi-square test to investigate this question.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the appropriate inference method to address this research question.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If 150 sedans were sold on the East Coast and 180 sedans were sold overall, calculate the expected number of sedan sales on the East Coast under the assumption of no difference between regions.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Verify the conditions for conducting this inference procedure.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): $H_0:$ There is no difference in the distribution of car body styles preferred by customers between the East Coast and West Coast regions. $H_a:$ There is a difference in the distribution of car body styles preferred by customers between the East Coast and West Coast regions.</li>
+          
+          <li>Part b (1pt): A chi-square test for homogeneity.</li>
+          
+          <li>Part c (1pt): Expected count for East Coast Sedan $= \frac{(\text{Row Total for East Coast}) \times (\text{Column Total for Sedan})}{\text{Grand Total}}$. Assuming 300 customers from each region and 180 total sedans out of 600 total customers, Expected count $= \frac{300 \times 180}{600} = 90$.</li>
+          
+          <li>Part d (2pts): Verifies Random Condition (random samples from each region given), Large Sample Size Condition (all expected counts $\ge 5$), and Independence Condition (samples from each region are independent and $300 < 10\%$ of all buyers in each region).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S17Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.F,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.L,VAR-8.M,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A researcher wants to investigate if there is an association between a person's preferred pet (cat, dog, neither) and their living situation (apartment, house). A random sample of 250 adults was surveyed, and the results are presented in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Living Situation</th><th>Cat</th><th>Dog</th><th>Neither</th><th>Total</th></tr></thead><tbody><tr><td>Apartment</td><td>45</td><td>40</td><td>15</td><td>100</td></tr><tr><td>House</td><td>45</td><td>70</td><td>35</td><td>150</td></tr><tr><td>Total</td><td>90</td><td>110</td><td>50</td><td>250</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a chi-square test to determine if there is an association between preferred pet and living situation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the chi-square test statistic. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Determine the degrees of freedom and find the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on a significance level of $\alpha = 0.01$, what conclusion can be made? Justify your answer in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): $H_0:$ There is no association between preferred pet and living situation (preferred pet and living situation are independent). $H_a:$ There is an association between preferred pet and living situation (preferred pet and living situation are not independent).</li>
+          
+          <li>Part b (2pts): Calculates expected counts (e.g., Expected(Cat, Apt) $= \frac{90 \times 100}{250} = 36$). Correct calculation of $\chi^2 = \sum \frac{(Observed - Expected)^2}{Expected} = \frac{(45-36)^2}{36} + \frac{(40-44)^2}{44} + \frac{(15-20)^2}{20} + \frac{(45-54)^2}{54} + \frac{(70-66)^2}{66} + \frac{(35-30)^2}{30} \approx 8.89$.</li>
+          
+          <li>Part c (1pt): Degrees of freedom $df = (\text{rows}-1)(\text{columns}-1) = (2-1)(3-1) = 1 \times 2 = 2$. P-value: $P(\chi^2 > 8.89)$ with $df=2$ is approximately $0.0117$.</li>
+          
+          <li>Part d (2pts): Since the p-value ($0.0117$) is greater than $\alpha = 0.01$, we fail to reject the null hypothesis. There is not sufficient evidence to conclude that there is an association between preferred pet and living situation.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

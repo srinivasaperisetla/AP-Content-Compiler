@@ -523,6 +523,15 @@ async def process_single_set(
 	context_label = f"{course_id} | U{unit_index+1} | Set{set_index+1}"
 	unit_title = unit.get("name", "")
 	
+	# CHECK IF FILE EXISTS FIRST - EXIT EARLY TO SAVE API QUOTA
+	out_dir = OUTPUT_DIR / course_id / "frq"
+	ensure_dir(out_dir)
+	output_path = out_dir / f"unit{unit_index + 1}-set{set_index + 1}.html"
+	
+	if output_path.exists():
+		log(f"[{context_label}] ✓ File already exists, skipping generation: {output_path}")
+		return output_path
+	
 	# Wait for permission from Semaphore (Rate Limit Guard)
 	async with sem:
 		log(f"[{context_label}] Starting FRQ generation...")
@@ -694,10 +703,6 @@ def render_html(
 	
 	path = out_dir / f"unit{unit_index + 1}-set{set_index + 1}.html"
 	
-	if path.exists():
-		log(f"[{context_label}] Skipping existing file: {path}")
-		return path
-	
 	path.write_text(html, encoding="utf-8")
 	log(f"[{context_label}] Wrote file: {path}")
 	return path
@@ -736,7 +741,7 @@ async def main_async():
 		
 		for unit_index, unit in enumerate(course_spec.get("units", [])):
 
-			if unit_index != 6:
+			if unit_index != 5:
 				continue
 
 			# Initialize coverage tracker per unit
@@ -753,6 +758,8 @@ async def main_async():
 			)
 			
 			for set_index in range(NUM_SETS_PER_UNIT):
+				if set_index != 8:
+					continue
 				tasks.append(
 					process_single_set(
 						sem,

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 5)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 5)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S5Q1"
+      data-difficulty="easy"
+      data-skill-codes="2.C,2.D"
+      data-learning-objectives="UNC-1.Q,UNC-1.R"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A survey was conducted to investigate the relationship between a person's preferred method of watching movies and their age group. The results from 500 randomly selected individuals are summarized in the following table.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Preferred Method \ Age Group</th><th>18-35</th><th>36-54</th><th>55+</th><th>Total</th></tr></thead><tbody><tr><td>Streaming</td><td>90</td><td>120</td><td>30</td><td>240</td></tr><tr><td>DVD/Blu-ray</td><td>40</td><td>50</td><td>60</td><td>150</td></tr><tr><td>Movie Theater</td><td>70</td><td>30</td><td>10</td><td>110</td></tr><tr><td>Total</td><td>200</td><td>200</td><td>100</td><td>500</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the proportion of individuals who prefer streaming movies among those in the 18-35 age group.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Compare the preferred movie-watching methods for individuals in the 18-35 age group versus the 55+ age group.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on these data, does there appear to be an association between age group and preferred movie-watching method? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correct calculation of the conditional proportion ($90/200 = 0.45$).</li>
+          
+          <li>Part b (2pts): Calculates relevant conditional proportions for at least two methods for both age groups and makes a comparison in context (e.g., streaming is more preferred by 18-35 than 55+; movie theater is more preferred by 55+ than 18-35).</li>
+          
+          <li>Part c (1pt): States that there appears to be an association and provides justification based on the differences in conditional distributions found in part b.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S5Q2"
+      data-difficulty="medium"
+      data-skill-codes="2.A,2.B"
+      data-learning-objectives="DAT-1.A,UNC-1.S"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A researcher is studying the relationship between the number of hours a student spends studying for a statistics exam and their score on the exam. Data for 8 students are collected.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Study Hours (x)</th><th>Exam Score (y)</th></tr></thead><tbody><tr><td>2</td><td>65</td></tr><tr><td>3</td><td>70</td></tr><tr><td>4</td><td>75</td></tr><tr><td>5</td><td>80</td></tr><tr><td>6</td><td>82</td></tr><tr><td>7</td><td>85</td></tr><tr><td>8</td><td>88</td></tr><tr><td>9</td><td>90</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Construct a scatterplot to display the relationship between study hours and exam scores.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe the relationship between study hours and exam scores based on the scatterplot, considering direction, form, and strength.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Does this relationship appear to be linear? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly plots all 8 points with labeled axes including units and appropriate scales (1pt for axes/labels/scale, 1pt for points).</li>
+          
+          <li>Part b (2pts): Describes the relationship by addressing direction (positive), form (linear), and strength (moderately strong to strong) in context.</li>
+          
+          <li>Part c (1pt): States whether the relationship appears linear and justifies it based on the visual pattern in the scatterplot (e.g., points generally follow a straight line with no obvious curve).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S5Q3"
+      data-difficulty="easy"
+      data-skill-codes="2.C,4.B"
+      data-learning-objectives="DAT-1.B,DAT-1.C"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A study investigated the relationship between the average daily temperature (in degrees Fahrenheit) and the number of ice cream cones sold at a local shop. For a sample of 10 days, the following summary statistics were calculated: $\bar{x} = 75^\circ F$, $s_x = 8^\circ F$, $\bar{y} = 150$ cones, $s_y = 30$ cones. The sum of the products of the standardized values is $\sum z_x z_y = 7.2$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the correlation coefficient, $r$, between the average daily temperature and the number of ice cream cones sold.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Interpret the meaning of this correlation coefficient in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Would it be appropriate to use the correlation coefficient to describe the relationship if a scatterplot revealed a strong curved pattern? Explain why or why not.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly calculates $r = \frac{\sum z_x z_y}{n-1} = \frac{7.2}{10-1} = \frac{7.2}{9} = 0.8$.</li>
+          
+          <li>Part b (2pts): Interprets $r=0.8$ as a strong, positive linear association between average daily temperature and the number of ice cream cones sold.</li>
+          
+          <li>Part c (1pt): States that it would not be appropriate, and explains that correlation only measures the strength and direction of *linear* relationships, and would not accurately describe a curved pattern.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S5Q4"
+      data-difficulty="medium"
+      data-skill-codes="2.C,4.B"
+      data-learning-objectives="DAT-1.D,DAT-1.H,DAT-1.G"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A marine biologist is studying the relationship between the length (in cm) and weight (in grams) of a certain species of fish. For a sample of 12 fish with lengths ranging from 40 cm to 70 cm, the least-squares regression line was determined to be $\hat{y} = -240 + 5.5x$, where $x$ is the length in cm and $\hat{y}$ is the predicted weight in grams. The correlation coefficient was found to be $r = 0.92$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Interpret the slope of the least-squares regression line in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Predict the weight of a fish that is 60 cm long using the given regression line.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Is it appropriate to use this regression model to predict the weight of a fish that is 10 cm long? Explain your reasoning.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Interprets the slope ($5.5$) as: for every 1 cm increase in fish length, the predicted weight increases by $5.5$ grams, on average.</li>
+          
+          <li>Part b (1pt): Calculates the predicted weight: $\hat{y} = -240 + 5.5(60) = -240 + 330 = 90$ grams.</li>
+          
+          <li>Part c (2pts): States that it is not appropriate (or likely not appropriate) because 10 cm is outside the range of observed lengths used to build the model (extrapolation), which might lead to unreliable or inaccurate predictions.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S5Q5"
+      data-difficulty="hard"
+      data-skill-codes="2.A,2.C"
+      data-learning-objectives="DAT-1.E,DAT-1.F,DAT-1.I"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A company analyzed the relationship between the amount of money spent on advertising (in thousands of dollars) and the resulting sales (in millions of dollars) for their new product over 10 months. The least-squares regression line was calculated as $\hat{S} = 0.5 + 2.0A$, where $A$ is advertising spending and $S$ is sales.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        For one month, the company spent $A = \$3$ thousand on advertising and had actual sales of $S = \$7.2$ million. Calculate the residual for this month.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        A residual plot for the 10 months showed a distinct U-shaped pattern. What does this pattern suggest about the appropriateness of a linear model for these data?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If a specific month's data point ($A=8, S=25$) was found to significantly increase the slope of the regression line and reduce the $R^2$ value when included in the analysis, how would you classify this point? Justify your classification.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Calculates the predicted sales $\hat{S} = 0.5 + 2.0(3) = 6.5$ million dollars. Then calculates the residual $e = S - \hat{S} = 7.2 - 6.5 = 0.7$ million dollars.</li>
+          
+          <li>Part b (2pts): Explains that a U-shaped pattern in the residual plot indicates that a linear model is not appropriate, as there is a non-linear pattern remaining in the residuals, suggesting a curved relationship between advertising and sales.</li>
+          
+          <li>Part c (2pts): Classifies the point as an influential point. Justifies by explaining that its inclusion significantly changes the slope of the regression line and affects the overall fit ($R^2$), which are characteristics of influential points.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

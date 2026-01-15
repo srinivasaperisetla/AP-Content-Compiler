@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 11)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 11)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S11Q1"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.K,UNC-3.L,UNC-3.M"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A recent study claims that $30\%$ of adult Americans regularly consume organic foods. A large grocery chain plans to conduct a survey of 200 randomly selected adult Americans to verify this claim.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample proportion of adult Americans who regularly consume organic foods, assuming the claim is true. Be sure to address its shape, center, and spread.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What is the probability that the survey will result in a sample proportion of less than $25\%$ if the claim is true? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on your calculation in part (b), would a sample proportion of $25\%$ provide convincing evidence that the true proportion of adult Americans who regularly consume organic foods is actually less than $30\%$? Explain your reasoning.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Shape is approximately normal (condition $n\hat{p} \ge 10$ and $n(1-\hat{p}) \ge 10$ shown/stated), center is $\mu_{\hat{p}} = p = 0.30$, spread is $\sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} = \sqrt{\frac{0.30(0.70)}{200}} \approx 0.0324$.</li>
+          
+          <li>Part b (2pts): Calculates $Z$-score for $\hat{p}=0.25$ and finds the correct probability (showing work). $Z = \frac{0.25 - 0.30}{0.0324} \approx -1.54$, $P(\hat{p} < 0.25) \approx 0.0618$.</li>
+          
+          <li>Part c (1pt): Compares the probability to a common significance level (e.g., $0.05$) and concludes whether it provides convincing evidence, relating to context.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S11Q2"
+      data-difficulty="easy"
+      data-skill-codes="3.B,4.B"
+      data-learning-objectives="UNC-3.I,UNC-3.J,UNC-3.Q"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A manufacturer produces bags of pretzels. The label on each bag states that the net weight is 10 ounces. The quality control department regularly selects a random sample of bags and weighs their contents.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Let $X_1, X_2, \dots, X_n$ represent the net weights of $n$ randomly selected bags. Is the sample mean, $\bar{X}$, an unbiased estimator for the true mean net weight, $\mu$? Explain your reasoning.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Let $S^2$ be the sample variance. Is $S^2$ an unbiased estimator for the population variance, $\sigma^2$? Explain your reasoning.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If the true mean net weight is $\mu = 10$ ounces with a standard deviation of $\sigma = 0.5$ ounces, what are the mean and standard deviation of the sampling distribution of the sample mean for samples of size $n=25$?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States "Yes" and explains that the expected value of the sample mean is equal to the population mean ($\text{E}[\bar{X}] = \mu$).</li>
+          
+          <li>Part b (1pt): States "Yes" and explains that the expected value of the sample variance is equal to the population variance ($\text{E}[S^2] = \sigma^2$).</li>
+          
+          <li>Part c (2pts): Correctly calculates the mean of the sampling distribution of the sample mean as $\mu_{\bar{X}} = \mu = 10$ ounces and the standard deviation as $\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}} = \frac{0.5}{\sqrt{25}} = 0.1$ ounces.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S11Q3"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.N,UNC-3.O,UNC-3.P"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A researcher is comparing the effectiveness of two different educational apps, App A and App B, designed to improve math skills. A random sample of 150 students used App A, and a separate random sample of 120 students used App B. After a month, $70\%$ of students using App A showed significant improvement, while $60\%$ of students using App B showed significant improvement.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Let $p_A$ be the true proportion of students who show significant improvement using App A, and $p_B$ be the true proportion for App B. Assuming $p_A = 0.70$ and $p_B = 0.60$, determine the mean and standard deviation of the sampling distribution of the difference in sample proportions ($\hat{p}_A - \hat{p}_B$).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether the sampling distribution of ($\hat{p}_A - \hat{p}_B$) can be approximated by a normal distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the observed difference ($\hat{p}_A - \hat{p}_B$) would be $0.10$ or greater, assuming the true proportions are $p_A = 0.65$ and $p_B = 0.65$ (i.e., there is no true difference in effectiveness). Show your work.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates $\mu_{\hat{p}_A - \hat{p}_B} = p_A - p_B = 0.70 - 0.60 = 0.10$ and $\sigma_{\hat{p}_A - \hat{p}_B} = \sqrt{\frac{p_A(1-p_A)}{n_A} + \frac{p_B(1-p_B)}{n_B}} = \sqrt{\frac{0.70(0.30)}{150} + \frac{0.60(0.40)}{120}} \approx 0.0542$.</li>
+          
+          <li>Part b (1pt): Verifies conditions for normality: $n_A p_A \ge 10$, $n_A (1-p_A) \ge 10$, $n_B p_B \ge 10$, $n_B (1-p_B) \ge 10$. ($150 \times 0.7 = 105$, $150 \times 0.3 = 45$, $120 \times 0.6 = 72$, $120 \times 0.4 = 48$; all are $\ge 10$).</li>
+          
+          <li>Part c (2pts): Calculates $\mu_{\hat{p}_A - \hat{p}_B} = 0.65 - 0.65 = 0$. Calculates $\sigma_{\hat{p}_A - \hat{p}_B} = \sqrt{\frac{0.65(0.35)}{150} + \frac{0.65(0.35)}{120}} \approx 0.0617$. Calculates $Z = \frac{0.10 - 0}{0.0617} \approx 1.62$. Finds $P(\hat{p}_A - \hat{p}_B \ge 0.10) \approx 0.0526$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S11Q4"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.Q,UNC-3.R,UNC-3.S"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">The average wait time at a popular restaurant follows a right-skewed distribution with a mean of $\mu = 25$ minutes and a standard deviation of $\sigma = 12$ minutes. A random sample of 40 customers is observed.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the shape, center, and spread of the sampling distribution of the sample mean wait time for samples of size 40.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What is the probability that the average wait time for a random sample of 40 customers is less than 22 minutes? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If a random sample of only 5 customers were taken, would the sampling distribution of the sample mean wait time be approximately normal? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Shape is approximately normal due to the Central Limit Theorem ($n \ge 30$). Center is $\mu_{\bar{X}} = \mu = 25$ minutes. Spread is $\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}} = \frac{12}{\sqrt{40}} \approx 1.897$ minutes.</li>
+          
+          <li>Part b (2pts): Calculates $Z$-score for $\bar{x}=22$ and finds the correct probability (showing work). $Z = \frac{22 - 25}{1.897} \approx -1.58$. $P(\bar{X} < 22) \approx 0.057$.</li>
+          
+          <li>Part c (1pt): States "No" because the population distribution is skewed and the sample size ($n=5$) is not large enough for the Central Limit Theorem to apply.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S11Q5"
+      data-difficulty="medium"
+      data-skill-codes="3.C,4.B"
+      data-learning-objectives="UNC-3.H,UNC-3.M"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A company claims that $80\%$ of its new smartwatches pass a rigorous waterproof test. A skeptical consumer advocate wants to investigate this claim by simulating the sampling distribution of the sample proportion of watches that pass the test. They plan to take samples of size 50.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Sample Proportion</th><th>Frequency</th></tr></thead><tbody><tr><td>0.60 - 0.64</td><td>5</td></tr><tr><td>0.65 - 0.69</td><td>35</td></tr><tr><td>0.70 - 0.74</td><td>150</td></tr><tr><td>0.75 - 0.79</td><td>310</td></tr><tr><td>0.80 - 0.84</td><td>300</td></tr><tr><td>0.85 - 0.89</td><td>160</td></tr><tr><td>0.90 - 0.94</td><td>40</td></tr><tr><td>Total</td><td>1000</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe how you would set up and carry out one trial of a simulation to estimate the proportion of watches that pass the waterproof test in a sample of 50, assuming the company's claim is true.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        The consumer advocate performs 1000 trials of this simulation. The results are summarized in the following table:\n
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Sample Proportion
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Frequency
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        \n
+      </div>
+      
+      <div class="part">
+        <span class="part-label">f.</span>
+        ---
+      </div>
+      
+      <div class="part">
+        <span class="part-label">g.</span>
+        ---
+      </div>
+      
+      <div class="part">
+        <span class="part-label">h.</span>
+        \n
+      </div>
+      
+      <div class="part">
+        <span class="part-label">i.</span>
+        0.60 - 0.64
+      </div>
+      
+      <div class="part">
+        <span class="part-label">j.</span>
+        5
+      </div>
+      
+      <div class="part">
+        <span class="part-label">k.</span>
+        \n
+      </div>
+      
+      <div class="part">
+        <span class="part-label">l.</span>
+        0.65 - 0.69
+      </div>
+      
+      <div class="part">
+        <span class="part-label">m.</span>
+        35
+      </div>
+      
+      <div class="part">
+        <span class="part-label">n.</span>
+        \n
+      </div>
+      
+      <div class="part">
+        <span class="part-label">o.</span>
+        0.70 - 0.74
+      </div>
+      
+      <div class="part">
+        <span class="part-label">p.</span>
+        150
+      </div>
+      
+      <div class="part">
+        <span class="part-label">q.</span>
+        \n
+      </div>
+      
+      <div class="part">
+        <span class="part-label">r.</span>
+        0.75 - 0.79
+      </div>
+      
+      <div class="part">
+        <span class="part-label">s.</span>
+        310
+      </div>
+      
+      <div class="part">
+        <span class="part-label">t.</span>
+        \n
+      </div>
+      
+      <div class="part">
+        <span class="part-label">u.</span>
+        0.80 - 0.84
+      </div>
+      
+      <div class="part">
+        <span class="part-label">v.</span>
+        300
+      </div>
+      
+      <div class="part">
+        <span class="part-label">w.</span>
+        \n
+      </div>
+      
+      <div class="part">
+        <span class="part-label">x.</span>
+        0.85 - 0.89
+      </div>
+      
+      <div class="part">
+        <span class="part-label">y.</span>
+        160
+      </div>
+      
+      <div class="part">
+        <span class="part-label">z.</span>
+        \n
+      </div>
+      
+      <div class="part">
+        <span class="part-label">{.</span>
+        0.90 - 0.94
+      </div>
+      
+      <div class="part">
+        <span class="part-label">|.</span>
+        40
+      </div>
+      
+      <div class="part">
+        <span class="part-label">}.</span>
+        \n
+      </div>
+      
+      <div class="part">
+        <span class="part-label">~.</span>
+        Total
+      </div>
+      
+      <div class="part">
+        <span class="part-label">.</span>
+        1000
+      </div>
+      
+      <div class="part">
+        <span class="part-label">.</span>
+        \nUse the results from the simulation to estimate the probability that a sample of 50 watches would result in a sample proportion of $74\%$ or less passing the test, assuming the true proportion is $80\%$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on the simulation results, if a real sample of 50 watches showed only $74\%$ passing the test, would this provide convincing evidence against the company's claim that $80\%$ pass? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Describes assigning random numbers (e.g., 01-80 represent passing, 81-00 represent failing), generating 50 random numbers, and counting the number of "passes" to calculate the sample proportion for one trial.</li>
+          
+          <li>Part b (1pt): Calculates the cumulative frequency for $\hat{p} \le 0.74$ as $5+35+150=190$, then calculates the probability as $\frac{190}{1000} = 0.19$.</li>
+          
+          <li>Part c (2pts): States "No" (or "Not strong evidence") because the estimated probability of $0.19$ (from part b) is not low enough (e.g., typically compared to a significance level like $0.05$) to suggest the true proportion is less than $80\%$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

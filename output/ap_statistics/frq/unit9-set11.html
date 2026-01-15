@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 11)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 11)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S11Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.F,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.K,VAR-7.M,DAT-3.M,DAT-3.N"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">An environmental scientist is studying the relationship between the age of a certain type of tree (in years, $x$) and its height (in meters, $y$). A random sample of 25 trees yielded a least-squares regression line $\hat{y} = 1.2 + 0.5x$ with a standard error of the slope $\text{SE}_b = 0.15$. The sample size is $n=25$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses to test if there is a positive linear relationship between tree age and height.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the test statistic and the p-value for the hypotheses stated in part (a). Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the p-value calculated in part (b) in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your results from part (b) and using a significance level of $\alpha = 0.05$, what conclusion should the scientist draw? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states $H_0: \beta = 0$ and $H_a: \beta > 0$.</li>
+          
+          <li>Part b (2pts): Correctly calculates the test statistic $t = \frac{0.5 - 0}{0.15} \approx 3.33$ and finds the correct p-value for $df=23$ (approx. 0.0013).</li>
+          
+          <li>Part c (1pt): Correctly interprets the p-value as the probability of observing a sample slope as extreme or more extreme than $0.5$ if there is no true positive linear relationship.</li>
+          
+          <li>Part d (1pt): Correctly compares the p-value to $\alpha$ and draws a conclusion (reject $H_0$) in context, justifying with the p-value.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S11Q2"
+      data-difficulty="easy"
+      data-skill-codes="1.E,1.F,3.D"
+      data-learning-objectives="VAR-7.J,VAR-7.K,UNC-4.AE"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A health researcher is studying the relationship between the number of hours of exercise per week ($x$) and the resting heart rate (beats per minute, $y$) for adults. They suspect that more exercise leads to a lower heart rate. A linear regression analysis was performed on a sample of adults. The 90 percent confidence interval for the slope of the regression line was calculated to be $(-1.5, -0.7)$ beats per minute per hour of exercise.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference method and state the null and alternative hypotheses the researcher would use to investigate their suspicion.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain what the value $R^2 = 0.45$ would mean in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Using the provided confidence interval, determine the margin of error for the slope.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a significance test for the slope of a regression model (1pt) AND correctly states $H_0: \beta = 0$ and $H_a: \beta < 0$ (1pt).</li>
+          
+          <li>Part b (1pt): Explains that 45% of the variation in resting heart rate can be explained by the linear relationship with hours of exercise.</li>
+          
+          <li>Part c (1pt): Correctly calculates the margin of error as $\frac{\text{Upper Bound} - \text{Lower Bound}}{2} = \frac{-0.7 - (-1.5)}{2} = 0.4$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S11Q3"
+      data-difficulty="medium"
+      data-skill-codes="4.C,1.A"
+      data-learning-objectives="UNC-4.AD,VAR-1.K"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A company collects data on the number of hours an employee spends in training ($x$) and their quarterly sales performance ($y$, in thousands of dollars). A random sample of 25 employees was taken. A scatterplot of the data and a residual plot from a linear regression model are shown below.</div>
+
+      
+      <div class="diagram">
+         <svg width="400" height="300" style="background-color:white;">\n  <g transform="translate(50,160)">\n    <line x1="0" y1="0" x2="140" y2="0" stroke="black" stroke-width="1" />\n    <line x1="0" y1="0" x2="0" y2="-100" stroke="black" stroke-width="1" />\n    <text x="70" y="15" style="font-size:12px; text-anchor:middle;">Training Hours (x)</text>\n    <text x="-35" y="-50" style="font-size:12px; transform: rotate(-90deg); text-anchor:middle;">Sales ($y$)</text>\n    <text x="70" y="-110" style="font-size:14px; text-anchor:middle;">Scatterplot</text>\n    <circle cx="10" cy="-80" r="2" fill="black"/>\n    <circle cx="30" cy="-65" r="2" fill="black"/>\n    <circle cx="50" cy="-50" r="2" fill="black"/>\n    <circle cx="70" cy="-35" r="2" fill="black"/>\n    <circle cx="90" cy="-20" r="2" fill="black"/>\n    <circle cx="110" cy="-5" r="2" fill="black"/>\n    <circle cx="130" cy="10" r="2" fill="black"/>\n  </g>\n  <g transform="translate(250,160)">\n    <line x1="0" y1="0" x2="140" y2="0" stroke="black" stroke-width="1" />\n    <line x1="0" y1="0" x2="0" y2="-100" stroke="black" stroke-width="1" />\n    <text x="70" y="15" style="font-size:12px; text-anchor:middle;">Fitted Values ($\hat{y}$)</text>\n    <text x="-35" y="-50" style="font-size:12px; transform: rotate(-90deg); text-anchor:middle;">Residuals</text>\n    <text x="70" y="-110" style="font-size:14px; text-anchor:middle;">Residual Plot</text>\n    <circle cx="10" cy="10" r="2" fill="black"/>\n    <circle cx="30" cy="-5" r="2" fill="black"/>\n    <circle cx="50" cy="15" r="2" fill="black"/>\n    <circle cx="70" cy="-10" r="2" fill="black"/>\n    <circle cx="90" cy="5" r="2" fill="black"/>\n    <circle cx="110" cy="-15" r="2" fill="black"/>\n    <circle cx="130" cy="0" r="2" fill="black"/>\n  </g>\n</svg> 
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Verify the conditions for performing inference for the slope of the regression line relating training hours to sales performance.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Based on the scatterplot, what question might be suggested by the variation in the data points?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (3pts): Verifies linearity (scatterplot shows linear trend, residual plot shows no pattern), independence (random sample stated), and equal variance (residual plot shows consistent spread). (1pt for each condition correctly verified based on the plots and context).</li>
+          
+          <li>Part b (1pt): Identifies a question such as "Are there any influential points or outliers?" or "How strong is the linear relationship between training hours and sales performance?"</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S11Q4"
+      data-difficulty="easy"
+      data-skill-codes="1.E,1.F,3.E"
+      data-learning-objectives="VAR-7.J,VAR-7.K,VAR-7.M"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A health researcher is investigating if there is a linear relationship between a person's daily sodium intake (in mg) and their systolic blood pressure (in mmHg). A random sample of 30 adults was taken. The estimated slope from the regression analysis is $b_1 = 0.025$, and the standard error of the slope is $SE_{b_1} = 0.008$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference method to test the research question.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        State the null and alternative hypotheses for a test to determine if there is a significant linear relationship between daily sodium intake and systolic blood pressure.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic for the slope. Show your work.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies a t-test for the slope of the regression line.</li>
+          
+          <li>Part b (1pt): States $H_0: \beta = 0$ and $H_a: \beta \ne 0$, where $\beta$ is the true slope of the population regression line relating sodium intake to systolic blood pressure.</li>
+          
+          <li>Part c (1pt): Calculates the test statistic $t = \frac{b_1 - \beta_0}{SE_{b_1}} = \frac{0.025 - 0}{0.008} = 3.125$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S11Q5"
+      data-difficulty="medium"
+      data-skill-codes="4.B,4.E"
+      data-learning-objectives="DAT-3.M,DAT-3.N"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">An agricultural scientist conducted a study to determine if the amount of a new fertilizer applied (in grams) linearly affects the yield of a certain crop (in kilograms). A significance test for the slope of the regression line yielded a $p$-value of $0.018$. The alternative hypothesis was that the slope is not equal to zero.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Interpret the $p$-value of $0.018$ in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Based on this $p$-value, and using a significance level of $\alpha=0.05$, what conclusion should the scientist make about the fertilizer and crop yield? Justify your claim.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Interprets the p-value: Assuming there is no linear relationship between fertilizer amount and crop yield (i.e., the true slope is 0), there is a 0.018 probability of observing a sample slope as extreme as or more extreme than the one observed, by random chance.</li>
+          
+          <li>Part b (2pts): Concludes that there is sufficient evidence to suggest a significant linear relationship (1pt). Justifies this by comparing $p=0.018$ to $\alpha=0.05$ and noting that $p < \alpha$, leading to the rejection of the null hypothesis (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

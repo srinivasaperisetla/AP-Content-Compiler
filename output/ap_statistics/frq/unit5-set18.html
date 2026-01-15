@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 18)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 18)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S18Q1"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.K,UNC-3.L,UNC-3.M"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A large company claims that 65% of its employees are satisfied with their current health benefits. A random sample of 200 employees is selected to verify this claim. Let $\hat{p}$ be the proportion of employees in the sample who are satisfied with their health benefits.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of $\hat{p}$ by determining its mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify that the conditions for using a normal distribution to model the sampling distribution of $\hat{p}$ are met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that in a random sample of 200 employees, less than 60% are satisfied with their health benefits.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates the mean of $\hat{p}$ as $p=0.65$ (1pt) and calculates the standard deviation of $\hat{p}$ as $\sqrt{\frac{p(1-p)}{n}} = \sqrt{\frac{0.65(0.35)}{200}} \approx 0.0337$ (1pt).</li>
+          
+          <li>Part b (2pts): Checks the Random condition (stated as random sample) (0.5pt), checks the $10\%$ condition ($N \ge 10n$, $N \ge 10(200) = 2000$) (0.5pt), and checks the Large Counts condition ($np \ge 10 \implies 200(0.65) = 130 \ge 10$ and $n(1-p) \ge 10 \implies 200(0.35) = 70 \ge 10$) (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the $z$-score for $\hat{p}=0.60$ as $z = \frac{0.60 - 0.65}{0.0337} \approx -1.48$ (1pt) and calculates the probability $P(\hat{p} < 0.60) \approx P(Z < -1.48) \approx 0.0694$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S18Q2"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,3.A,4.B"
+      data-learning-objectives="UNC-3.Q,UNC-3.R,UNC-3.S"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">The amount of soda dispensed by a machine is normally distributed with a mean of $\mu = 12$ ounces and a standard deviation of $\sigma = 0.2$ ounces. A quality control manager takes a random sample of 16 cups of soda dispensed by the machine.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample mean amount of soda, $\bar{x}$, by determining its mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain why it is appropriate to use a normal distribution to model the sampling distribution of $\bar{x}$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the mean amount of soda in the sample of 16 cups is less than 11.95 ounces.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States the mean of $\bar{x}$ is $\mu = 12$ ounces (1pt) and calculates the standard deviation of $\bar{x}$ as $\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}} = \frac{0.2}{\sqrt{16}} = \frac{0.2}{4} = 0.05$ ounces (1pt).</li>
+          
+          <li>Part b (1pt): Explains that since the population distribution of the amount of soda dispensed is normally distributed, the sampling distribution of $\bar{x}$ will also be normally distributed, regardless of sample size (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the $z$-score for $\bar{x}=11.95$ as $z = \frac{11.95 - 12}{0.05} = -1.0$ (1pt) and calculates the probability $P(\bar{x} < 11.95) = P(Z < -1.0) \approx 0.1587$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S18Q3"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C,3.A,4.B"
+      data-learning-objectives="UNC-3.N,UNC-3.O,UNC-3.P"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A company has two factories, A and B, that produce light bulbs. Factory A claims that 92% of its bulbs are defect-free, while Factory B claims 95% of its bulbs are defect-free. A random sample of 250 bulbs is taken from Factory A, and a random sample of 300 bulbs is taken from Factory B. Let $\hat{p}_A$ and $\hat{p}_B$ be the sample proportions of defect-free bulbs from Factory A and Factory B, respectively.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the difference in sample proportions, $\hat{p}_B - \hat{p}_A$, by determining its mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify that the conditions for using a normal distribution to model the sampling distribution of $\hat{p}_B - \hat{p}_A$ are met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the sample proportion of defect-free bulbs from Factory A ($\hat{p}_A$) is greater than the sample proportion of defect-free bulbs from Factory B ($\hat{p}_B$).
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States the mean of $\hat{p}_B - \hat{p}_A$ is $p_B - p_A = 0.95 - 0.92 = 0.03$ (1pt) and calculates the standard deviation of $\hat{p}_B - \hat{p}_A$ as $\sqrt{\frac{p_A(1-p_A)}{n_A} + \frac{p_B(1-p_B)}{n_B}} = \sqrt{\frac{0.92(0.08)}{250} + \frac{0.95(0.05)}{300}} \approx \sqrt{0.0002944 + 0.0001583} \approx \sqrt{0.0004527} \approx 0.02128$ (1pt).</li>
+          
+          <li>Part b (2pts): Checks the Random condition (stated as random samples) (0.5pt), checks the $10\%$ condition for both samples ($N_A \ge 10n_A = 2500$ and $N_B \ge 10n_B = 3000$) (0.5pt), and checks the Large Counts condition for both samples ($n_A p_A = 250(0.92)=230 \ge 10$, $n_A(1-p_A) = 250(0.08)=20 \ge 10$, $n_B p_B = 300(0.95)=285 \ge 10$, $n_B(1-p_B) = 300(0.05)=15 \ge 10$) (1pt).</li>
+          
+          <li>Part c (2pts): Recognizes that $P(\hat{p}_A > \hat{p}_B)$ is equivalent to $P(\hat{p}_B - \hat{p}_A < 0)$ (0.5pt). Calculates the $z$-score for $0$ as $z = \frac{0 - 0.03}{0.02128} \approx -1.41$ (1pt) and calculates the probability $P(\hat{p}_B - \hat{p}_A < 0) \approx P(Z < -1.41) \approx 0.0793$ (0.5pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S18Q4"
+      data-difficulty="easy"
+      data-skill-codes="3.A,3.C"
+      data-learning-objectives="VAR-6.A,VAR-6.C,UNC-3.R"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A brand of light bulbs has a lifetime that is normally distributed with a mean of 1500 hours and a standard deviation of 150 hours.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the probability that a randomly selected light bulb from this brand will last between 1400 and 1600 hours.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        The company is considering a new manufacturing process. If the lifetime of bulbs from the new process were unknown, but a random sample of 5 bulbs showed a mean lifetime of 1650 hours, would it be appropriate to assume the sampling distribution of the sample mean is approximately normal? Explain.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculates the $z$-scores for 1400 hours ($z_{1400} = \frac{1400-1500}{150} \approx -0.67$) and 1600 hours ($z_{1600} = \frac{1600-1500}{150} \approx 0.67$) (1pt). Calculates the probability $P(1400 < X < 1600) \approx P(-0.67 < Z < 0.67) \approx 0.4902$ (1pt).</li>
+          
+          <li>Part b (2pts): States that it would NOT be appropriate to assume the sampling distribution of the sample mean is approximately normal (1pt). Explains that the sample size ($n=5$) is small, and without knowing that the population distribution is normal, the Central Limit Theorem does not apply for such a small sample size to ensure normality of the sampling distribution (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S18Q5"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.K,UNC-3.L,UNC-3.M"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A large company claims that 60% of its employees are satisfied with their current work-life balance. A human resources department plans to take a random sample of 200 employees to investigate this claim. Let $\hat{p}$ be the sample proportion of employees satisfied with their work-life balance.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of $\hat{p}$ by calculating its mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether the sampling distribution of $\hat{p}$ can be approximated by a normal distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the sample proportion $\hat{p}$ is less than 0.55. Interpret this probability in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correct calculation of mean $\mu_{\hat{p}} = p = 0.60$ and standard deviation $\sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} = \sqrt{\frac{0.60(0.40)}{200}} \approx 0.0346$.</li>
+          
+          <li>Part b (1pt): Verify conditions: $np = 200(0.60) = 120 \ge 10$ and $n(1-p) = 200(0.40) = 80 \ge 10$. Since both are $\ge 10$, the sampling distribution is approximately normal.</li>
+          
+          <li>Part c (2pts): Correct calculation $P(\hat{p} < 0.55) = P(Z < \frac{0.55 - 0.60}{0.0346}) = P(Z < -1.44) \approx 0.0749$. Interpretation: There is approximately a 7.49% chance that a random sample of 200 employees will result in a sample proportion of satisfied employees less than 0.55.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

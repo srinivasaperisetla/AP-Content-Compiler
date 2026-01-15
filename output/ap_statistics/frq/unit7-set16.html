@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 16)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 16)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S16Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.R,UNC-4.S"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A cereal manufacturer wants to estimate the mean fill weight of its "Crunchy Oats" boxes. A random sample of $n=25$ boxes is taken, and the fill weights (in ounces) are recorded. The sample mean is $\bar{x} = 16.03$ ounces, and the sample standard deviation is $s = 0.15$ ounces. Assume the distribution of fill weights is approximately normal.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the true mean fill weight of "Crunchy Oats" boxes.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the calculated confidence interval in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a one-sample t-interval for a population mean. Verifies Random sample, Normal population (given), and Independence ($25 < 10\%$ of all boxes).</li>
+          
+          <li>Part b (2pts): Calculates degrees of freedom ($df=24$), finds critical t-value (e.g., $t^* \approx 2.064$), calculates standard error ($SE = 0.15/\sqrt{25} = 0.03$), and computes the interval ($16.03 \pm 2.064 \times 0.03 = (15.968, 16.092)$).</li>
+          
+          <li>Part c (1pt): Correctly interprets the interval: "We are 95% confident that the true mean fill weight of Crunchy Oats boxes is between 15.968 and 16.092 ounces."</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S16Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A company claims that its new energy-efficient light bulbs have a mean lifespan of more than 10,000 hours. To test this claim, a consumer advocacy group randomly samples $n=30$ bulbs. The sample mean lifespan is $\bar{x} = 10,150$ hours, with a sample standard deviation of $s = 400$ hours. Assume that the lifespans of these bulbs are approximately normally distributed.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for a test to investigate the company's claim.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the p-value in the context of this study and state your conclusion at the $\alpha = 0.05$ significance level.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): $H_0: \mu = 10000$ hours, $H_a: \mu > 10000$ hours, where $\mu$ is the true mean lifespan of the new light bulbs.</li>
+          
+          <li>Part b (2pts): Verifies Random sample, Normal population (given), and Independence ($30 < 10\%$ of all bulbs).</li>
+          
+          <li>Part c (2pts): Calculates test statistic $t = \frac{10150 - 10000}{400/\sqrt{30}} \approx 2.054$ with $df=29$. Finds p-value (e.g., using calculator/table, $P(t > 2.054) \approx 0.024$).</li>
+          
+          <li>Part d (2pts): Correctly interprets p-value: Assuming the true mean lifespan is 10,000 hours, there is a 0.024 probability of observing a sample mean lifespan of 10,150 hours or more in a sample of 30 bulbs. Concludes: Since $0.024 < 0.05$, reject $H_0$. There is convincing evidence that the true mean lifespan of the new light bulbs is greater than 10,000 hours.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S16Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.R,UNC-4.S,UNC-4.T"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A consumer research firm wants to evaluate the effectiveness of a new fuel additive. They recruit $n=15$ identical cars and measure their fuel efficiency (miles per gallon, MPG) on a controlled track both before and after adding the additive. The differences in MPG (After - Before) are calculated for each car. The mean difference is $\bar{d} = 1.8$ MPG, and the standard deviation of the differences is $s_d = 0.75$ MPG. Assume the distribution of differences is approximately normal.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 90% confidence interval for the true mean difference in fuel efficiency.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the calculated confidence interval in context and use it to justify whether the additive is effective.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a one-sample t-interval for a population mean difference (paired t-interval). Verifies Random sample of cars/paired data, Normal distribution of differences (given), and Independence ($15 < 10\%$ of all identical cars).</li>
+          
+          <li>Part b (2pts): Calculates degrees of freedom ($df=14$), finds critical t-value (e.g., $t^* \approx 1.761$), calculates standard error ($SE = 0.75/\sqrt{15} \approx 0.1936$), and computes the interval ($1.8 \pm 1.761 \times 0.1936 = (1.459, 2.141)$).</li>
+          
+          <li>Part c (2pts): Interprets interval: "We are 90% confident that the true mean increase in fuel efficiency due to the additive is between 1.459 and 2.141 MPG." Justifies claim: Since the entire interval (1.459, 2.141) is above 0, there is convincing evidence that the fuel additive significantly increases fuel efficiency.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S16Q4"
+      data-difficulty="hard"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.V,UNC-4.W,UNC-4.Y,UNC-4.Z,UNC-4.AA"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A researcher wants to compare the mean reaction times (in milliseconds) of individuals playing a new video game using two different types of controllers, A and B. A random sample of $n_A = 40$ participants uses controller A, resulting in a mean reaction time of $\bar{x}_A = 220$ ms with a standard deviation of $s_A = 25$ ms. Another random sample of $n_B = 35$ participants uses controller B, resulting in a mean reaction time of $\bar{x}_B = 235$ ms with a standard deviation of $s_B = 20$ ms. Assume the distributions of reaction times for both controllers are approximately normal.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 99% confidence interval for the true difference in mean reaction times ($\mu_A - \mu_B$).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the calculated confidence interval in context and explain whether it suggests a significant difference in mean reaction times between the two controllers.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a two-sample t-interval for a difference of two population means. Verifies two independent random samples, Normal populations (given), and Independence ($40 < 10\%$ of all A users, $35 < 10\%$ of all B users).</li>
+          
+          <li>Part b (2pts): Calculates standard error $SE = \sqrt{\frac{s_A^2}{n_A} + \frac{s_B^2}{n_B}} = \sqrt{\frac{25^2}{40} + \frac{20^2}{35}} \approx \sqrt{15.625 + 11.4286} \approx \sqrt{27.0536} \approx 5.201$. Calculates $\bar{x}_A - \bar{x}_B = 220 - 235 = -15$. Determines degrees of freedom (e.g., using conservative $df = \min(n_A-1, n_B-1) = 34$, or calculator $df \approx 72.8$). Finds critical t-value (e.g., for $df=34$, $t^* \approx 2.730$; for $df=72$, $t^* \approx 2.640$). Computes the interval (e.g., $-15 \pm 2.640 \times 5.201 = (-28.73, -1.27)$).</li>
+          
+          <li>Part c (2pts): Interprets interval: "We are 99% confident that the true difference in mean reaction times (Controller A - Controller B) is between -28.73 and -1.27 milliseconds." Explains significance: Since the entire interval is below 0, there is convincing evidence that the mean reaction time for Controller A is significantly lower than for Controller B.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S16Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.F,VAR-7.G,VAR-7.H,VAR-7.1,DAT-3.G,DAT-3.H"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A farmer is comparing the effectiveness of two different fertilizers, A and B, on corn yield. He randomly assigns 50 plots to fertilizer A and 45 plots to fertilizer B. The corn yield (in bushels per acre) is measured for each plot. For fertilizer A, the mean yield is $\bar{x}_A = 120$ bushels/acre with a standard deviation of $s_A = 10$ bushels/acre. For fertilizer B, the mean yield is $\bar{x}_B = 115$ bushels/acre with a standard deviation of $s_B = 9$ bushels/acre. The farmer wants to determine if fertilizer A leads to a higher mean corn yield than fertilizer B.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the p-value in the context of this study and state your conclusion at the $\alpha = 0.01$ significance level.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): $H_0: \mu_A - \mu_B = 0$ or $\mu_A = \mu_B$, $H_a: \mu_A - \mu_B > 0$ or $\mu_A > \mu_B$, where $\mu_A$ and $\mu_B$ are the true mean corn yields for fertilizers A and B, respectively.</li>
+          
+          <li>Part b (2pts): Verifies two independent random samples (or random assignment to treatments), Large sample sizes ($n_A=50 \ge 30, n_B=45 \ge 30$, so Normal approximation for sample means is appropriate), and Independence (50 plots < 10% of all possible plots for A, 45 plots < 10% of all possible plots for B).</li>
+          
+          <li>Part c (2pts): Calculates test statistic $t = \frac{(\bar{x}_A - \bar{x}_B) - 0}{\sqrt{\frac{s_A^2}{n_A} + \frac{s_B^2}{n_B}}} = \frac{120 - 115}{\sqrt{\frac{10^2}{50} + \frac{9^2}{45}}} = \frac{5}{\sqrt{2 + 1.8}} = \frac{5}{\sqrt{3.8}} \approx \frac{5}{1.949} \approx 2.565$. Determines degrees of freedom (e.g., conservative $df=\min(49,44)=44$, or calculator $df \approx 92.4$). Finds p-value (e.g., for $df=44$, $P(t > 2.565) \approx 0.0068$; for $df=92$, $P(t > 2.565) \approx 0.0059$).</li>
+          
+          <li>Part d (2pts): Interprets p-value: Assuming there is no difference in true mean corn yields between the two fertilizers, there is approximately a 0.0068 probability of observing a sample mean difference of 5 bushels/acre or more by chance. Concludes: Since $0.0068 < 0.01$, reject $H_0$. There is convincing evidence that fertilizer A leads to a higher mean corn yield than fertilizer B.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

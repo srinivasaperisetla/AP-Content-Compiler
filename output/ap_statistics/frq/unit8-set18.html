@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 18)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 18)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S18Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,3.A,4.C,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.H,VAR-8.K,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A large chain coffee shop is considering introducing a new loyalty program. They want to know if customer interest in the program is similar across different age groups. They survey a random sample of 500 customers, categorized by age group and their level of interest (interested, neutral, not interested). The results are shown in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Age Group</th><th>Interested</th><th>Neutral</th><th>Not Interested</th><th>Total</th></tr></thead><tbody><tr><td>18-30 years old</td><td>75</td><td>40</td><td>35</td><td>150</td></tr><tr><td>31-50 years old</td><td>80</td><td>60</td><td>60</td><td>200</td></tr><tr><td>51+ years old</td><td>55</td><td>45</td><td>50</td><td>150</td></tr><tr><td>Total</td><td>210</td><td>145</td><td>145</td><td>500</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate chi-square test to investigate whether customer interest is similar across the age groups. Also, identify the specific chi-square test you would perform.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected count for "18-30 years old" who are "Interested." Verify the conditions for performing this chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The calculated test statistic is $\chi^2 = 14.28$ with a p-value of 0.014. Interpret the p-value in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value from part (c) and a significance level of $\alpha = 0.05$, what conclusion should the coffee shop make? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly states null and alternative hypotheses in context (1pt) and correctly identifies the chi-square test for homogeneity (1pt).</li>
+          
+          <li>Part b (2pts): Calculates correct expected count (1pt) and correctly verifies all conditions (1pt).</li>
+          
+          <li>Part c (1pt): Correctly interprets the p-value in context.</li>
+          
+          <li>Part d (2pts): Correctly states the conclusion (1pt) and provides a justification based on the p-value and $\alpha$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S18Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,3.A,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.B,VAR-8.C,VAR-8.D,VAR-8.E,VAR-8.F,VAR-8.G,DAT-3.I,DAT-3.J"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A candy company claims that its bags of fruit-flavored candies contain 30% cherry, 20% orange, 20% lemon, 15% grape, and 15% lime. A student suspects this distribution is incorrect and takes a random sample of 100 candies. The sample yielded 35 cherry, 18 orange, 15 lemon, 17 grape, and 15 lime candies.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate test to investigate the student's suspicion.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected counts for each flavor if the company's claim is true.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The test statistic for these data is $\chi^2 = 4.58$. Calculate the p-value for this test and interpret it in context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Based on the p-value from part (d), what conclusion should the student make at the $\alpha = 0.05$ significance level? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correct null ($H_0: p_{cherry}=0.30, p_{orange}=0.20, \dots$) and alternative ($H_a:$ at least one proportion is different) hypotheses stated in terms of population proportions.</li>
+          
+          <li>Part b (1pt): Correct calculation of all five expected counts (Cherry: 30, Orange: 20, Lemon: 20, Grape: 15, Lime: 15).</li>
+          
+          <li>Part c (1pt): Verification of all conditions: random sample (stated) and all expected counts $\ge 5$.</li>
+          
+          <li>Part d (1pt): Correct p-value calculation ($\text{df}=4, p \approx 0.333$). Correct interpretation: Assuming the candy company's claim is true, there is a 33.3% chance of observing a sample distribution as or more extreme than the one collected by chance alone.</li>
+          
+          <li>Part e (1pt): Correct conclusion (Fail to reject $H_0$) and justification (Since $p=0.333 > \alpha=0.05$, we fail to reject the null hypothesis. There is no convincing evidence to suggest that the candy company's claimed distribution of flavors is incorrect).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S18Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,3.A,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.H,VAR-8.L,VAR-8.M,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A researcher wants to determine if the distribution of preferred news sources (TV, Internet, Newspaper) is different for two distinct age groups: 18-35 year olds and 36-60 year olds. A random sample of 200 people from each age group was surveyed, and their preferred news sources were recorded. The results are shown in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>News Source</th><th>18-35 Years</th><th>36-60 Years</th><th>Total</th></tr></thead><tbody><tr><td>TV</td><td>40</td><td>60</td><td>100</td></tr><tr><td>Internet</td><td>100</td><td>70</td><td>170</td></tr><tr><td>Newspaper</td><td>60</td><td>70</td><td>130</td></tr><tr><td>Total</td><td>200</td><td>200</td><td>400</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate test to investigate if the distribution of preferred news sources is different for the two age groups.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the appropriate inference method for this situation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected count for 18-35 year olds who prefer TV as their news source.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        The test statistic for these data is $\chi^2 = 12.35$. Determine the p-value for this test and make a conclusion at the $\alpha = 0.01$ significance level. Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correct null ($H_0:$ The distribution of preferred news sources is the same for both age groups) and alternative ($H_a:$ The distribution of preferred news sources is different for the two age groups) hypotheses for homogeneity stated.</li>
+          
+          <li>Part b (1pt): Correctly identifies Chi-Square test for homogeneity.</li>
+          
+          <li>Part c (1pt): Correct calculation of expected count for TV preference in 18-35 age group: $(100/400) \times 200 = 50$ or $(200 \times 100)/400 = 50$.</li>
+          
+          <li>Part d (1pt): Verification of all conditions: two independent random samples (stated) and all expected counts $\ge 5$. (Expected counts are 50, 85, 65 for 18-35; 50, 85, 65 for 36-60; all $\ge 5$).</li>
+          
+          <li>Part e (1pt): Correct p-value determination ($\text{df}=2, 0.001 < p < 0.002$, specifically $p \approx 0.0016$). Correct conclusion (Reject $H_0$) and justification (Since $p < \alpha=0.01$, we reject the null hypothesis. There is convincing evidence that the distribution of preferred news sources differs between the two age groups.).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S18Q4"
+      data-difficulty="hard"
+      data-skill-codes="1.F,1.E,3.A,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.H,VAR-8.L,VAR-8.M,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A health researcher wants to investigate whether there is an association between regular exercise habits and the incidence of common colds. A random sample of 500 adults was surveyed, and data were collected on their exercise habits (regular exerciser, occasional exerciser, no exercise) and the number of colds they experienced in the past year (0, 1, 2+). The observed counts are provided in the table.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Colds</th><th>Regular Exerciser</th><th>Occasional Exerciser</th><th>No Exercise</th><th>Total</th></tr></thead><tbody><tr><td>0</td><td>95</td><td>70</td><td>35</td><td>200</td></tr><tr><td>1</td><td>70</td><td>60</td><td>50</td><td>180</td></tr><tr><td>2+</td><td>35</td><td>20</td><td>65</td><td>120</td></tr><tr><td>Total</td><td>200</td><td>150</td><td>150</td><td>500</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate test to investigate if there is an association between exercise habits and the incidence of common colds.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain why a chi-square test for independence is appropriate for this study design.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected count for individuals who are regular exercisers and experienced 0 colds. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The calculated chi-square test statistic is $\chi^2 = 18.21$ with 4 degrees of freedom. Determine the p-value for this test. What is the approximate critical value for $\alpha = 0.05$?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Based on the results, what conclusion should the researcher make at the $\alpha = 0.05$ significance level? Justify your answer, and then interpret the meaning of your conclusion in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correct null ($H_0:$ Exercise habits and the incidence of common colds are independent) and alternative ($H_a:$ Exercise habits and the incidence of common colds are not independent/are associated) hypotheses for independence stated.</li>
+          
+          <li>Part b (1pt): Explanation that a single random sample (500 adults) was taken and two categorical variables (exercise habits and incidence of colds) are being tested for association, indicating an independence test.</li>
+          
+          <li>Part c (1pt): Correct calculation of expected count for regular exercisers and 0 colds: $(200 \times 200)/500 = 80$. Show full calculation steps.</li>
+          
+          <li>Part d (1pt): Correct p-value determination ($\text{df}=4, p < 0.001$, specifically $p \approx 0.0011$). Critical value from chi-square table is 9.488 for $\text{df}=4, \alpha=0.05$.</li>
+          
+          <li>Part e (1pt): Correct conclusion (Reject $H_0$) with justification (Since $p < \alpha=0.05$, we reject the null hypothesis). Correct interpretation: There is convincing evidence of an association between exercise habits and the incidence of common colds among adults.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S18Q5"
+      data-difficulty="easy"
+      data-skill-codes="3.C,4.C,1.A"
+      data-learning-objectives="VAR-8.A,VAR-8.E,VAR-1.J"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A local library wants to assess if the observed number of books checked out by genre significantly differs from their expected distribution based on historical data: 40% fiction, 30% non-fiction, 20% children's, and 10% young adult. They collected data from a random sample of 200 recent checkouts.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe two characteristics of a chi-square distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        The library observes 70 fiction, 60 non-fiction, 40 children's, and 30 young adult books checked out. Based on the historical distribution, calculate the expected number of young adult books checked out in this sample.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Before performing a chi-square goodness-of-fit test, what conditions must be verified? Verify these conditions for this scenario.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        If the observed and expected counts were very similar, what would that suggest about the variation between them?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Describes two characteristics (e.g., skewed right, non-negative, shape determined by degrees of freedom, approaches normal as df increases).</li>
+          
+          <li>Part b (1pt): Correct calculation of expected young adult books: $200 \times 0.10 = 20$.</li>
+          
+          <li>Part c (1pt): States random sample and all expected counts $\ge 5$. Verifies: random sample is stated, and expected counts (Fiction: 80, Non-fiction: 60, Children's: 40, Young Adult: 20) are all $\ge 5$.</li>
+          
+          <li>Part d (1pt): Suggests that the observed variation from the expected distribution is likely due to random chance, and there is no significant difference from the historical distribution.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

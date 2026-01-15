@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 13)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 13)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S13Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.A,UNC-4.B,UNC-4.D,UNC-4.F,UNC-4.G"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A market research firm wants to estimate the proportion of adult internet users in a certain city who stream music online. A random sample of 250 adult internet users from the city was surveyed, and 165 reported streaming music online.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure by name and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95 percent confidence interval for the true proportion of adult internet users in this city who stream music online.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the 95 percent confidence interval in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The firm claims that more than 60 percent of adult internet users in the city stream music online. Justify whether this claim is supported by the confidence interval calculated in part (b).
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies one-sample z-interval for a proportion AND verifies conditions (Random sample, $n\hat{p} \ge 10$, $n(1-\hat{p}) \ge 10$, 10% condition).</li>
+          
+          <li>Part b (1pt): Calculates the correct 95% confidence interval using appropriate formula or calculator output, showing correct values for $\hat{p}$, $z^*$, and SE.</li>
+          
+          <li>Part c (1pt): Interprets the confidence interval in context, stating the confidence level, parameter, and interval.</li>
+          
+          <li>Part d (1pt): Justifies the claim based on whether the entire interval is above 0.60, relating it to the true proportion.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S13Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.E"
+      data-learning-objectives="VAR-6.D,VAR-6.E,VAR-6.F,VAR-6.G,DAT-3.B"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A university claims that 85 percent of its graduating seniors secured full-time employment within three months of graduation. To investigate this claim, a career services office surveyed a random sample of 120 recent graduates. Of these, 92 reported securing full-time employment within three months.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses to test the university's claim. Identify the appropriate inference method by name.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value calculated in part (c) and a significance level of $\alpha = 0.05$, what conclusion can be drawn about the university's claim? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States $H_0: p = 0.85$ and $H_a: p \ne 0.85$ AND identifies one-sample z-test for a proportion.</li>
+          
+          <li>Part b (1pt): Verifies conditions (Random sample, $np_0 \ge 10$, $n(1-p_0) \ge 10$, 10% condition).</li>
+          
+          <li>Part c (2pts): Calculates the correct test statistic $z = \frac{\hat{p}-p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}}$ AND calculates the correct p-value.</li>
+          
+          <li>Part d (1pt): Compares p-value to $\alpha$, states whether to reject or fail to reject $H_0$, and makes a conclusion in context about the university's claim.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S13Q3"
+      data-difficulty="easy"
+      data-skill-codes="1.B,4.A,4.B"
+      data-learning-objectives="UNC-5.A,UNC-5.C,UNC-5.D"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A pharmaceutical company is testing a new drug for a rare disease. The company believes the drug is effective if the proportion of patients who show improvement is greater than 0.40. They conduct a hypothesis test with $H_0: p = 0.40$ and $H_a: p > 0.40$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe a Type I error in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe a Type II error in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        If the drug is actually effective, but the company fails to detect it, which type of error occurred? Explain a potential consequence of this error for patients.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Describes Type I error as rejecting $H_0$ when $H_0$ is true, in context (concluding drug is effective when it is not).</li>
+          
+          <li>Part b (1pt): Describes Type II error as failing to reject $H_0$ when $H_a$ is true, in context (concluding drug is not effective when it is).</li>
+          
+          <li>Part c (2pts): Identifies Type II error AND explains a consequence for patients (e.g., effective drug not approved, patients miss out on treatment).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S13Q4"
+      data-difficulty="hard"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.I,UNC-4.J,UNC-4.K,UNC-4.M,UNC-4.N"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A fitness tracker company developed two new models, A and B. They conducted a study to compare the proportion of users who report a significant improvement in sleep quality after one month of use for each model. A random sample of 200 users for Model A found 130 reported improved sleep. For Model B, a random sample of 180 users found 100 reported improved sleep.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure by name and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Construct a 90 percent confidence interval for the difference in the true proportions of users who report significant improvement in sleep quality (Model A minus Model B).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval from part (b) in context. Based on this interval, is there convincing evidence that one model leads to a significantly higher proportion of users reporting improved sleep quality? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies two-sample z-interval for a difference of proportions AND verifies conditions for both groups (Random samples, $n_A\hat{p}_A \ge 10$, $n_A(1-\hat{p}_A) \ge 10$, $n_B\hat{p}_B \ge 10$, $n_B(1-\hat{p}_B) \ge 10$, 10% condition for both samples, independent samples).</li>
+          
+          <li>Part b (2pts): Calculates the correct 90% confidence interval for $p_A - p_B$ using appropriate formula or calculator output, showing correct values for $\hat{p}_A$, $\hat{p}_B$, $z^*$, and SE.</li>
+          
+          <li>Part c (2pts): Interprets the confidence interval for the difference in proportions in context AND justifies conclusion about which model, if any, leads to a significantly higher proportion based on whether the interval contains 0 or is entirely positive/negative.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S13Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.H,VAR-6.I,VAR-6.J,VAR-6.K,DAT-3.C,DAT-3.D,DAT-3.A"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A company manufactures two types of light bulbs, LED and CFL. They want to determine if there is a significant difference in the proportion of defective bulbs produced by the two types. A random sample of 300 LED bulbs contained 15 defectives. A separate random sample of 250 CFL bulbs contained 20 defectives.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses to test if there is a significant difference in the proportions of defective bulbs between LED and CFL. Identify the appropriate inference method by name.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value calculated in part (c) and a significance level of $\alpha = 0.01$, what conclusion can be drawn? Interpret the p-value in the context of this problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States $H_0: p_{LED} = p_{CFL}$ and $H_a: p_{LED} \ne p_{CFL}$ AND identifies two-sample z-test for a difference of proportions.</li>
+          
+          <li>Part b (1pt): Verifies conditions for both groups (Random samples, $n_1\hat{p}_c \ge 10$, $n_1(1-\hat{p}_c) \ge 10$, $n_2\hat{p}_c \ge 10$, $n_2(1-\hat{p}_c) \ge 10$, 10% condition for both samples, independent samples, using pooled proportion for counts).</li>
+          
+          <li>Part c (2pts): Calculates the pooled proportion $\hat{p}_c = \frac{X_1+X_2}{n_1+n_2}$, the correct test statistic $z = \frac{(\hat{p}_{LED}-\hat{p}_{CFL}) - 0}{\sqrt{\hat{p}_c(1-\hat{p}_c)(\frac{1}{n_{LED}}+\frac{1}{n_{CFL}})}}$ AND calculates the correct p-value.</li>
+          
+          <li>Part d (2pts): Compares p-value to $\alpha$, states whether to reject or fail to reject $H_0$, and makes a conclusion in context about the difference in proportions of defective bulbs. AND interprets the p-value in context as the probability of observing a difference as extreme or more extreme if the true proportions were equal.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

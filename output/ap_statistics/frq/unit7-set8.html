@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 8)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 8)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S8Q1"
+      data-difficulty="easy"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.Q,UNC-4.R,UNC-4.S,UNC-4.T"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A coffee shop owner wants to estimate the average amount of coffee, in ounces, dispensed by their automatic machine. A random sample of 15 cups of coffee is selected, and the amount dispensed in each cup is measured. The sample mean is $\bar{x} = 11.8$ ounces, and the sample standard deviation is $s = 0.5$ ounces.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure for estimating the true mean amount of coffee dispensed, and verify the conditions for this procedure.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the true mean amount of coffee dispensed. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval calculated in part (b) in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The coffee shop owner wants the machine to dispense an average of 12 ounces per cup. Based on the confidence interval, does this sample provide convincing evidence that the true average amount of coffee dispensed is different from 12 ounces? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a one-sample t-interval for means (1pt); Verifies random sample, approximate normality (n=15, no strong skew/outliers given, so assume reasonable), and independence (10% condition, $15 < 10\%$ of all cups) (1pt).</li>
+          
+          <li>Part b (2pts): Calculates the correct standard error ($s/\sqrt{n} = 0.5/\sqrt{15} \approx 0.129$) and degrees of freedom ($n-1 = 14$) (1pt); Calculates the correct confidence interval (e.g., $11.8 \pm 2.145 \times (0.5/\sqrt{15})$, resulting in $(11.523, 12.077)$) (1pt).</li>
+          
+          <li>Part c (1pt): Provides a correct interpretation of the confidence interval in context (e.g., "We are 95% confident that the true mean amount of coffee dispensed by the machine is between 11.523 and 12.077 ounces") (1pt).</li>
+          
+          <li>Part d (1pt): Compares the hypothesized mean of 12 ounces to the interval and states whether there is convincing evidence (e.g., "Since 12 ounces is contained within the 95% confidence interval, there is no convincing evidence that the true average amount of coffee dispensed is different from 12 ounces.") (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S8Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A manufacturer claims that the average lifespan of its new line of LED light bulbs is 10,000 hours. A consumer advocacy group suspects that the true average lifespan is less than 10,000 hours. They randomly select 12 light bulbs and record their lifespans (in hours).</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for this investigation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing a significance test for the population mean. Assume that a histogram of the sample data is roughly symmetric with no outliers.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The test statistic calculated from the sample data is $t = -2.45$, and the p-value is 0.016. Interpret the p-value in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value and a significance level of $\alpha = 0.05$, what conclusion should the consumer advocacy group make? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses, $H_0: \mu = 10000$ and $H_a: \mu < 10000$, defining $\mu$ as the true mean lifespan of the new line of LED light bulbs (1pt).</li>
+          
+          <li>Part b (1pt): Verifies random sample, approximate normality (sample size $n=12 < 30$ but stated "roughly symmetric with no outliers"), and independence (10% condition, $12 < 10\%$ of all light bulbs) (1pt).</li>
+          
+          <li>Part c (1pt): Provides a correct interpretation of the p-value (e.g., "Assuming the true mean lifespan of the LED light bulbs is 10,000 hours, there is a 0.016 probability of observing a sample mean lifespan as extreme as or more extreme than what was observed (e.g., $t=-2.45$ or less), purely by chance.") (1pt).</li>
+          
+          <li>Part d (2pts): States a correct conclusion (e.g., "Reject $H_0$") (1pt); Provides a correct justification based on comparing the p-value to $\alpha$ and linking it to convincing evidence (e.g., "Since $0.016 < 0.05$, we reject the null hypothesis. There is convincing evidence that the true average lifespan of the LED light bulbs is less than 10,000 hours.") (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S8Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B"
+      data-learning-objectives="UNC-4.0,UNC-4.P,VAR-7.C,VAR-7.D,DAT-3.F"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A company is testing a new training program designed to improve employee productivity. Ten employees were randomly selected, and their productivity scores were measured before and after completing the program. The scores are shown in the table below. A higher score indicates higher productivity.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Employee</th><th>Before</th><th>After</th></tr></thead><tbody><tr><td>1</td><td>60</td><td>65</td></tr><tr><td>2</td><td>75</td><td>80</td></tr><tr><td>3</td><td>55</td><td>60</td></tr><tr><td>4</td><td>70</td><td>72</td></tr><tr><td>5</td><td>80</td><td>88</td></tr><tr><td>6</td><td>65</td><td>70</td></tr><tr><td>7</td><td>50</td><td>58</td></tr><tr><td>8</td><td>90</td><td>91</td></tr><tr><td>9</td><td>70</td><td>78</td></tr><tr><td>10</td><td>60</td><td>68</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference method to determine if the training program is effective, and state the null and alternative hypotheses.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for the inference method identified in part (a).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The mean difference (After - Before) is $\bar{x}_d = 5.2$ with a standard deviation of $s_d = 4.0$. Calculate the test statistic for this paired data.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Using a significance level of $\alpha = 0.01$, what conclusion can be drawn about the effectiveness of the training program? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a paired t-test for a mean difference (1pt); States correct null and alternative hypotheses, $H_0: \mu_d = 0$ and $H_a: \mu_d > 0$, where $\mu_d$ is the true mean difference in productivity scores (After - Before) (1pt).</li>
+          
+          <li>Part b (1pt): Verifies random sample of employees, independence (10% condition, $10 < 10\%$ of all employees), and approximate normality of differences (since $n=10$, assume the population of differences is approximately normal or the sample distribution of differences shows no strong skewness or outliers) (1pt).</li>
+          
+          <li>Part c (1pt): Calculates the correct test statistic using $t = \frac{\bar{x}_d - \mu_d}{s_d/\sqrt{n}} = \frac{5.2 - 0}{4.0/\sqrt{10}} \approx 4.11$ (1pt).</li>
+          
+          <li>Part d (2pts): Determines the p-value (df=9, for $t=4.11$, $p \approx 0.0012$) and compares it to $\alpha$ (1pt); States a correct conclusion in context, justifying based on the p-value (e.g., "Since the p-value ($0.0012$) is less than $0.01$, we reject $H_0$. There is convincing evidence that the training program is effective in increasing employee productivity.") (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S8Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.V,UNC-4.W,UNC-4.X,UNC-4.Y,UNC-4.Z,UNC-4.AA"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A researcher wants to compare the average reaction times of two different groups of participants, Group A and Group B, to a visual stimulus. A random sample of 30 participants from Group A yielded a mean reaction time of $\bar{x}_A = 220$ milliseconds and a standard deviation of $s_A = 25$ milliseconds. A random sample of 25 participants from Group B yielded a mean reaction time of $\bar{x}_B = 235$ milliseconds and a standard deviation of $s_B = 30$ milliseconds.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure for estimating the true difference in mean reaction times ($\mu_A - \mu_B$), and verify the necessary conditions.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 90% confidence interval for the true difference in mean reaction times ($\mu_A - \mu_B$). Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval calculated in part (b) in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on this confidence interval, does there appear to be a significant difference in the average reaction times between Group A and Group B? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a two-sample t-interval for a difference of means (1pt); Verifies two independent random samples, approximate normality for both groups (both $n_A \ge 30$ and $n_B \ge 30$ are generally sufficient for CLT to apply to sample means), and independence (10% condition for both groups) (1pt).</li>
+          
+          <li>Part b (2pts): Calculates the correct standard error for the difference (e.g., $\sqrt{\frac{s_A^2}{n_A} + \frac{s_B^2}{n_B}} = \sqrt{\frac{25^2}{30} + \frac{30^2}{25}} \approx \sqrt{20.833 + 36} = \sqrt{56.833} \approx 7.539$) and an appropriate number of degrees of freedom (e.g., $df = \min(n_A-1, n_B-1) = 24$ or calculator output $\approx 47.1$) (1pt); Calculates the correct confidence interval (e.g., $(\bar{x}_A - \bar{x}_B) \pm t^* \times SE = (220-235) \pm 1.671 \times 7.539$ for $df=24$, resulting in $(-15 \pm 12.59)$, or $(-27.59, -2.41)$) (1pt).</li>
+          
+          <li>Part c (1pt): Provides a correct interpretation of the confidence interval in context (e.g., "We are 90% confident that the true difference in mean reaction times ($\mu_A - \mu_B$) is between -27.59 and -2.41 milliseconds.") (1pt).</li>
+          
+          <li>Part d (1pt): States whether there is a significant difference based on whether 0 is included in the interval, and justifies the answer (e.g., "Since the 90% confidence interval for $\mu_A - \mu_B$ (e.g., $(-27.59, -2.41)$) does not contain 0, there is convincing evidence of a significant difference in average reaction times between Group A and Group B. Specifically, it suggests Group A has a faster reaction time.") (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S8Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.G,VAR-7.H,VAR-7.1,DAT-3.G,DAT-3.H"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A company is comparing the effectiveness of two different fertilizers, Fertilizer X and Fertilizer Y, on crop yield. They randomly select 40 plots of land for Fertilizer X and 35 plots for Fertilizer Y. The average crop yield for Fertilizer X plots was $\bar{x}_X = 75$ bushels per acre with a standard deviation of $s_X = 8$ bushels per acre. For Fertilizer Y, the average crop yield was $\bar{x}_Y = 70$ bushels per acre with a standard deviation of $s_Y = 10$ bushels per acre.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses to test if Fertilizer X leads to a higher average crop yield than Fertilizer Y.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing a significance test for the difference of two population means.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic for this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The p-value for this test is 0.009. Interpret this p-value in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Based on the p-value and a significance level of $\alpha = 0.05$, what conclusion should the company make about the effectiveness of Fertilizer X compared to Fertilizer Y? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses, $H_0: \mu_X - \mu_Y = 0$ (or $\mu_X = \mu_Y$) and $H_a: \mu_X - \mu_Y > 0$ (or $\mu_X > \mu_Y$), defining $\mu_X$ and $\mu_Y$ as the true mean crop yields for Fertilizer X and Fertilizer Y, respectively (1pt).</li>
+          
+          <li>Part b (1pt): Verifies two independent random samples, approximate normality for both groups (both $n_X = 40 \ge 30$ and $n_Y = 35 \ge 30$, so CLT applies), and independence (10% condition for both groups) (1pt).</li>
+          
+          <li>Part c (1pt): Calculates the correct test statistic $t = \frac{(\bar{x}_X - \bar{x}_Y) - (\mu_X - \mu_Y)}{\sqrt{\frac{s_X^2}{n_X} + \frac{s_Y^2}{n_Y}}} = \frac{(75-70) - 0}{\sqrt{\frac{8^2}{40} + \frac{10^2}{35}}} \approx \frac{5}{\sqrt{1.6 + 2.8571}} \approx \frac{5}{\sqrt{4.4571}} \approx 2.368$ (1pt).</li>
+          
+          <li>Part d (1pt): Provides a correct interpretation of the p-value (e.g., "Assuming there is no difference in the true mean crop yields between Fertilizer X and Fertilizer Y, there is a 0.009 probability of observing a sample difference in means as extreme as or more extreme than what was observed (e.g., 5 bushels per acre), purely by chance.") (1pt).</li>
+          
+          <li>Part e (1pt): States a correct conclusion (e.g., "Reject $H_0$") and provides a correct justification based on comparing the p-value to $\alpha$ and linking it to convincing evidence (e.g., "Since the p-value ($0.009$) is less than $0.05$, we reject the null hypothesis. There is convincing evidence that Fertilizer X leads to a higher average crop yield than Fertilizer Y.") (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

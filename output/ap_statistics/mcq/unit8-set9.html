@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AP Statistics — Unit 8: Inference for Categorical Data: Chi-Square MCQ Set</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-size: 0.95rem;
+      }
+
+      .data-table th,
+      .data-table td {
+        border: 1px solid #ccc;
+        padding: 0.5rem 0.75rem;
+        text-align: center;
+      }
+
+      .data-table th {
+        background-color: #f2f2f2;
+        font-weight: 600;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+        color: #333;
+      }
+
+      h1 {
+        border-bottom: 2px solid #333;
+        padding-bottom: 0.5rem;
+      }
+
+      .question-card {
+        border: 1px solid #ddd;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        border-radius: 8px;
+        background-color: #fafafa;
+        break-inside: avoid;
+      }
+
+      .question-header {
+        margin-bottom: 0.75rem;
+        font-size: 0.95rem;
+        color: #666;
+      }
+
+      .question-text {
+        font-weight: 600;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+      }
+
+      .diagram {
+        margin: 1rem 0;
+        text-align: center;
+        border: 1px solid #eee;
+        background: white;
+        padding: 10px;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+        max-height: 400px;
+        display: inline-block;
+      }
+
+      .choices {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .choices li {
+        margin-bottom: 0.5rem;
+      }
+
+      .key-section {
+        margin-top: 4rem;
+        border-top: 4px solid #333;
+        padding-top: 2rem;
+      }
+
+      .key-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 1rem;
+      }
+
+      @media print {
+        .question-card {
+          border: none;
+          padding: 0;
+          margin-bottom: 3rem;
+        }
+        .diagram {
+          border: 1px solid #ccc;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics — Unit 8: Inference for Categorical Data: Chi-Square</h1>
+
+    <hr />
+
+    <div class="mcq-container">
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U8S9Q1"
+        data-difficulty="easy"
+        data-skill-codes="3.C"
+        data-learning-objectives="VAR-8.A"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q1.</strong> (ID: ap_statistics_MCQ_U8S9Q1)
+        </div>
+
+        
+
+        <div class="question-text">Which of the following statements is true regarding a chi-square distribution?</div>
+
+        <ul class="choices">
+          
+          <li>A. It is symmetric.</li>
+          
+          <li>B. It can take on negative values.</li>
+          
+          <li>C. Its shape is determined by the degrees of freedom.</li>
+          
+          <li>D. The mean is always 1.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U8S9Q2"
+        data-difficulty="medium"
+        data-skill-codes="3.C"
+        data-learning-objectives="VAR-8.A"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q2.</strong> (ID: ap_statistics_MCQ_U8S9Q2)
+        </div>
+
+        
+
+        <div class="question-text">As the degrees of freedom increase, how does the shape of the chi-square distribution change?</div>
+
+        <ul class="choices">
+          
+          <li>A. It becomes more skewed to the right.</li>
+          
+          <li>B. It becomes more skewed to the left.</li>
+          
+          <li>C. It becomes more symmetric.</li>
+          
+          <li>D. It approaches a uniform distribution.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U8S9Q3"
+        data-difficulty="easy"
+        data-skill-codes="1.F"
+        data-learning-objectives="VAR-8.B"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q3.</strong> (ID: ap_statistics_MCQ_U8S9Q3)
+        </div>
+
+        
+
+        <div class="question-text">A company wants to test if the proportion of customer complaints for four different product lines (A, B, C, D) is equal. Which of the following are the correct null and alternative hypotheses?</div>
+
+        <ul class="choices">
+          
+          <li>A. $H_0: p_A = p_B = p_C = p_D = 0.25$ vs $H_a:$ At least one proportion is different from 0.25.</li>
+          
+          <li>B. $H_0: p_A = p_B = p_C = p_D$ vs $H_a:$ At least one proportion is different.</li>
+          
+          <li>C. $H_0: \mu_A = \mu_B = \mu_C = \mu_D$ vs $H_a:$ At least one mean is different.</li>
+          
+          <li>D. $H_0: p_A = p_B = p_C = p_D = 0.25$ vs $H_a: p_A < 0.25$.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U8S9Q4"
+        data-difficulty="easy"
+        data-skill-codes="1.E"
+        data-learning-objectives="VAR-8.C"
+        data-correct-index="3"
+      >
+        <div class="question-header">
+          <strong>Q4.</strong> (ID: ap_statistics_MCQ_U8S9Q4)
+        </div>
+
+        
+
+        <div class="question-text">A teacher wants to determine if the distribution of grades (A, B, C, D, F) in her class matches the historical distribution of grades in the department. What is the most appropriate inference method?</div>
+
+        <ul class="choices">
+          
+          <li>A. A two-sample $t$-test for means.</li>
+          
+          <li>B. A chi-square test for independence.</li>
+          
+          <li>C. A chi-square test for homogeneity.</li>
+          
+          <li>D. A chi-square test for goodness of fit.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U8S9Q5"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="VAR-8.D"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q5.</strong> (ID: ap_statistics_MCQ_U8S9Q5)
+        </div>
+
+        
+        <div class="diagram">
+           <table class='data-table'><thead><tr><th>Category</th><th>Proportion</th><th>Sample Count</th></tr></thead><tbody><tr><td>Fiction</td><td>0.30</td><td>?</td></tr><tr><td>Non-fiction</td><td>0.40</td><td>?</td></tr><tr><td>Young Adult</td><td>0.20</td><td>?</td></tr><tr><td>Children's</td><td>0.10</td><td>?</td></tr><tr><td>Total</td><td>1.00</td><td>200</td></tr></tbody></table>
+          
+        </div>
+        
+
+        <div class="question-text">A local library claims that its collection is composed of 30% fiction, 40% non-fiction, 20% young adult, and 10% children's books. A random sample of 200 books is taken to test this claim. What is the expected count for young adult books?</div>
+
+        <ul class="choices">
+          
+          <li>A. 20</li>
+          
+          <li>B. 40</li>
+          
+          <li>C. 60</li>
+          
+          <li>D. 80</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U8S9Q6"
+        data-difficulty="medium"
+        data-skill-codes="4.C"
+        data-learning-objectives="VAR-8.E"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q6.</strong> (ID: ap_statistics_MCQ_U8S9Q6)
+        </div>
+
+        
+
+        <div class="question-text">A researcher conducts a chi-square goodness-of-fit test to determine if the distribution of colors for M&M's candies matches the proportions stated by the manufacturer. Which of the following conditions must be met for this test to be valid?\nI. The data must come from a simple random sample.\nII. All expected counts must be at least 5.\nIII. The population distribution must be approximately normal.</div>
+
+        <ul class="choices">
+          
+          <li>A. I only</li>
+          
+          <li>B. II only</li>
+          
+          <li>C. I and II only</li>
+          
+          <li>D. I, II, and III</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U8S9Q7"
+        data-difficulty="hard"
+        data-skill-codes="3.E"
+        data-learning-objectives="VAR-8.F"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q7.</strong> (ID: ap_statistics_MCQ_U8S9Q7)
+        </div>
+
+        
+        <div class="diagram">
+           <table class='data-table'><thead><tr><th>Face</th><th>Observed Count</th></tr></thead><tbody><tr><td>1</td><td>8</td></tr><tr><td>2</td><td>12</td></tr><tr><td>3</td><td>9</td></tr><tr><td>4</td><td>11</td></tr><tr><td>5</td><td>13</td></tr><tr><td>6</td><td>7</td></tr><tr><td>Total</td><td>60</td></tr></tbody></table>
+          
+        </div>
+        
+
+        <div class="question-text">A die is rolled 60 times. The observed counts for each face are shown in the table. What is the value of the chi-square test statistic for goodness of fit to test if the die is fair?</div>
+
+        <ul class="choices">
+          
+          <li>A. $2.00$</li>
+          
+          <li>B. $2.80$</li>
+          
+          <li>C. $3.20$</li>
+          
+          <li>D. $3.60$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U8S9Q8"
+        data-difficulty="medium"
+        data-skill-codes="3.E"
+        data-learning-objectives="VAR-8.G"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q8.</strong> (ID: ap_statistics_MCQ_U8S9Q8)
+        </div>
+
+        
+
+        <div class="question-text">A chi-square goodness-of-fit test resulted in a test statistic of $\chi^2 = 8.0$ with 3 degrees of freedom. Which of the following is the correct $p$-value for this test?</div>
+
+        <ul class="choices">
+          
+          <li>A. $p < 0.01$</li>
+          
+          <li>B. $0.01 < p < 0.025$</li>
+          
+          <li>C. $0.025 < p < 0.05$</li>
+          
+          <li>D. $0.05 < p < 0.10$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U8S9Q9"
+        data-difficulty="medium"
+        data-skill-codes="4.B"
+        data-learning-objectives="DAT-3.I"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q9.</strong> (ID: ap_statistics_MCQ_U8S9Q9)
+        </div>
+
+        
+
+        <div class="question-text">A chi-square goodness-of-fit test yielded a $p$-value of $0.03$. What is the correct interpretation of this $p$-value?</div>
+
+        <ul class="choices">
+          
+          <li>A. There is a 3% chance that the null hypothesis is true.</li>
+          
+          <li>B. There is a 3% chance of observing data as extreme as or more extreme than what was observed, assuming the null hypothesis is true.</li>
+          
+          <li>C. There is a 3% chance that the alternative hypothesis is true.</li>
+          
+          <li>D. There is a 3% chance that the sample distribution is different from the hypothesized distribution.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U8S9Q10"
+        data-difficulty="medium"
+        data-skill-codes="4.E"
+        data-learning-objectives="DAT-3.J"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q10.</strong> (ID: ap_statistics_MCQ_U8S9Q10)
+        </div>
+
+        
+
+        <div class="question-text">A chi-square goodness-of-fit test was conducted to see if the distribution of colors of gumballs in a machine matches the manufacturer's stated proportions. The $p$-value was $0.008$. Using a significance level of $\alpha=0.05$, what conclusion can be drawn?</div>
+
+        <ul class="choices">
+          
+          <li>A. Fail to reject the null hypothesis, there is no evidence that the color distribution is different.</li>
+          
+          <li>B. Reject the null hypothesis, there is convincing evidence that the color distribution is different from the manufacturer's stated proportions.</li>
+          
+          <li>C. Fail to reject the null hypothesis, there is convincing evidence that the color distribution is different.</li>
+          
+          <li>D. Reject the null hypothesis, there is not enough evidence to conclude the color distribution is different.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U8S9Q11"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="VAR-8.H"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q11.</strong> (ID: ap_statistics_MCQ_U8S9Q11)
+        </div>
+
+        
+        <div class="diagram">
+           <table class='data-table'><thead><tr><th></th><th>Under 30</th><th>30-60</th><th>Over 60</th><th>Total</th></tr></thead><tbody><tr><td>TV</td><td>25</td><td>45</td><td>30</td><td>100</td></tr><tr><td>Online</td><td>40</td><td>30</td><td>10</td><td>80</td></tr><tr><td>Print</td><td>5</td><td>10</td><td>5</td><td>20</td></tr><tr><td>Total</td><td>70</td><td>85</td><td>45</td><td>200</td></tr></tbody></table>
+          
+        </div>
+        
+
+        <div class="question-text">A survey asked 200 randomly selected adults about their preferred method of news consumption (TV, Online, Print) and their age group (Under 30, 30-60, Over 60). The results are summarized in the two-way table. If age group and news consumption method are independent, what is the expected count for adults aged "Under 30" who prefer "Online" news?</div>
+
+        <ul class="choices">
+          
+          <li>A. 28.0</li>
+          
+          <li>B. 32.0</li>
+          
+          <li>C. 35.0</li>
+          
+          <li>D. 40.0</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U8S9Q12"
+        data-difficulty="medium"
+        data-skill-codes="1.F"
+        data-learning-objectives="VAR-8.I"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q12.</strong> (ID: ap_statistics_MCQ_U8S9Q12)
+        </div>
+
+        
+
+        <div class="question-text">A study compares the job satisfaction levels (satisfied, neutral, dissatisfied) among employees from three different departments (Sales, Marketing, HR) in a large company. Which of the following are the correct null and alternative hypotheses for a chi-square test?</div>
+
+        <ul class="choices">
+          
+          <li>A. $H_0:$ The proportion of job satisfaction levels is the same across the three departments. $H_a:$ The proportion of job satisfaction levels is different for at least one department.</li>
+          
+          <li>B. $H_0:$ Job satisfaction level is independent of department. $H_a:$ Job satisfaction level is dependent on department.</li>
+          
+          <li>C. $H_0: \mu_{Sales} = \mu_{Marketing} = \mu_{HR}$ vs $H_a:$ At least one mean is different.</li>
+          
+          <li>D. $H_0:$ The distribution of job satisfaction is the same for all employees. $H_a:$ The distribution of job satisfaction is different for all employees.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U8S9Q13"
+        data-difficulty="easy"
+        data-skill-codes="1.E"
+        data-learning-objectives="VAR-8.J"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q13.</strong> (ID: ap_statistics_MCQ_U8S9Q13)
+        </div>
+
+        
+
+        <div class="question-text">A medical researcher wants to investigate if there is an association between smoking status (smoker, non-smoker) and the incidence of a certain respiratory disease (present, absent). Which is the most appropriate statistical inference procedure?</div>
+
+        <ul class="choices">
+          
+          <li>A. A two-sample $z$-test for proportions.</li>
+          
+          <li>B. A chi-square test for independence.</li>
+          
+          <li>C. A chi-square test for homogeneity.</li>
+          
+          <li>D. A paired $t$-test.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U8S9Q14"
+        data-difficulty="medium"
+        data-skill-codes="4.C"
+        data-learning-objectives="VAR-8.K"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q14.</strong> (ID: ap_statistics_MCQ_U8S9Q14)
+        </div>
+
+        
+
+        <div class="question-text">A study is conducted to compare the effectiveness of three different pain medications (A, B, C) based on patient reported relief (yes/no). For a chi-square test to be valid, which of the following conditions must be met?\nI. The data must come from independent random samples.\nII. All observed counts must be at least 5.\nIII. All expected counts must be at least 5.</div>
+
+        <ul class="choices">
+          
+          <li>A. I and II only</li>
+          
+          <li>B. I and III only</li>
+          
+          <li>C. II and III only</li>
+          
+          <li>D. I, II, and III</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U8S9Q15"
+        data-difficulty="hard"
+        data-skill-codes="3.E"
+        data-learning-objectives="VAR-8.L"
+        data-correct-index="3"
+      >
+        <div class="question-header">
+          <strong>Q15.</strong> (ID: ap_statistics_MCQ_U8S9Q15)
+        </div>
+
+        
+        <div class="diagram">
+           <table class='data-table'><thead><tr><th></th><th>Red</th><th>Blue</th><th>Total</th></tr></thead><tbody><tr><td>Male</td><td>30</td><td>20</td><td>50</td></tr><tr><td>Female</td><td>20</td><td>30</td><td>50</td></tr><tr><td>Total</td><td>50</td><td>50</td><td>100</td></tr></tbody></table>
+          
+        </div>
+        
+
+        <div class="question-text">A survey investigates whether car color preference (Red, Blue) differs by gender (Male, Female). The observed counts are given in the table. What is the value of the chi-square test statistic?</div>
+
+        <ul class="choices">
+          
+          <li>A. $1.000$</li>
+          
+          <li>B. $2.000$</li>
+          
+          <li>C. $3.000$</li>
+          
+          <li>D. $4.000$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U8S9Q16"
+        data-difficulty="medium"
+        data-skill-codes="3.E"
+        data-learning-objectives="VAR-8.M"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q16.</strong> (ID: ap_statistics_MCQ_U8S9Q16)
+        </div>
+
+        
+
+        <div class="question-text">A chi-square test for independence was conducted with 4 degrees of freedom, resulting in a test statistic of $\chi^2 = 10.5$. Which of the following is the correct $p$-value for this test?</div>
+
+        <ul class="choices">
+          
+          <li>A. $p < 0.01$</li>
+          
+          <li>B. $0.01 < p < 0.025$</li>
+          
+          <li>C. $0.025 < p < 0.05$</li>
+          
+          <li>D. $0.05 < p < 0.10$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U8S9Q17"
+        data-difficulty="medium"
+        data-skill-codes="4.B"
+        data-learning-objectives="DAT-3.K"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q17.</strong> (ID: ap_statistics_MCQ_U8S9Q17)
+        </div>
+
+        
+
+        <div class="question-text">A chi-square test for homogeneity compared the distribution of political affiliations across three different regions and yielded a $p$-value of $0.062$. Which of the following is the correct interpretation of this $p$-value?</div>
+
+        <ul class="choices">
+          
+          <li>A. There is a 6.2% chance that political affiliation is independent of region.</li>
+          
+          <li>B. Assuming the political affiliation distributions are the same across regions, there is a 6.2% chance of observing differences as large or larger than those observed in the sample.</li>
+          
+          <li>C. There is a 6.2% chance that the distributions of political affiliation are truly different across the regions.</li>
+          
+          <li>D. There is a 6.2% chance that the null hypothesis is true.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U8S9Q18"
+        data-difficulty="medium"
+        data-skill-codes="4.E"
+        data-learning-objectives="DAT-3.L"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q18.</strong> (ID: ap_statistics_MCQ_U8S9Q18)
+        </div>
+
+        
+
+        <div class="question-text">A chi-square test for independence investigated the relationship between a person's favorite sport and their highest level of education. The $p$-value was $0.041$. At a significance level of $\alpha = 0.05$, what conclusion can be made?</div>
+
+        <ul class="choices">
+          
+          <li>A. Fail to reject $H_0$. There is insufficient evidence to conclude an association between favorite sport and education level.</li>
+          
+          <li>B. Reject $H_0$. There is convincing evidence of an association between favorite sport and education level.</li>
+          
+          <li>C. Fail to reject $H_0$. There is convincing evidence of an association between favorite sport and education level.</li>
+          
+          <li>D. Reject $H_0$. There is insufficient evidence to conclude an association between favorite sport and education level.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U8S9Q19"
+        data-difficulty="easy"
+        data-skill-codes="1.A"
+        data-learning-objectives="VAR-1.J"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q19.</strong> (ID: ap_statistics_MCQ_U8S9Q19)
+        </div>
+
+        
+        <div class="diagram">
+           <table class='data-table'><thead><tr><th></th><th>Daily</th><th>Weekly</th><th>Rarely</th><th>Total</th></tr></thead><tbody><tr><td>Men</td><td>40</td><td>35</td><td>25</td><td>100</td></tr><tr><td>Women</td><td>55</td><td>30</td><td>15</td><td>100</td></tr><tr><td>Total</td><td>95</td><td>65</td><td>40</td><td>200</td></tr></tbody></table>
+          
+        </div>
+        
+
+        <div class="question-text">A nutritionist wants to know if the distribution of fruit consumption (daily, weekly, rarely) is different between men and women. A survey of 100 men and 100 women yielded the observed counts in the table. What question might be suggested by the observed data?</div>
+
+        <ul class="choices">
+          
+          <li>A. Is the overall proportion of people who eat fruit daily less than 0.5?</li>
+          
+          <li>B. Is there a significant difference in the mean age of men and women?</li>
+          
+          <li>C. Do men and women have different distributions of fruit consumption?</li>
+          
+          <li>D. Is the sample size large enough for a two-sample $z$-test?</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U8S9Q20"
+        data-difficulty="medium"
+        data-skill-codes="1.F"
+        data-learning-objectives="VAR-8.B"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q20.</strong> (ID: ap_statistics_MCQ_U8S9Q20)
+        </div>
+
+        
+
+        <div class="question-text">A geneticist believes that the proportion of pea plants with red, white, and pink flowers should be 25%, 25%, and 50% respectively, based on a genetic cross. A random sample of 100 plants is observed. What are the appropriate hypotheses to test this belief?</div>
+
+        <ul class="choices">
+          
+          <li>A. $H_0: p_{red} = p_{white} = p_{pink}$ vs $H_a:$ The proportions are not all equal.</li>
+          
+          <li>B. $H_0: p_{red} = 0.25, p_{white} = 0.25, p_{pink} = 0.50$ vs $H_a:$ At least one proportion is different from its hypothesized value.</li>
+          
+          <li>C. $H_0: \mu_{red} = \mu_{white} = \mu_{pink}$ vs $H_a:$ At least one mean is different.</li>
+          
+          <li>D. $H_0: p_{red} \ne 0.25$ vs $H_a: p_{red} = 0.25$.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U8S9Q21"
+        data-difficulty="medium"
+        data-skill-codes="3.A"
+        data-learning-objectives="VAR-8.D"
+        data-correct-index="3"
+      >
+        <div class="question-header">
+          <strong>Q21.</strong> (ID: ap_statistics_MCQ_U8S9Q21)
+        </div>
+
+        
+
+        <div class="question-text">A company states that its cereal boxes contain prizes in the following proportions: 50% "toy car," 30% "sticker," and 20% "temporary tattoo." In a sample of 300 boxes, what is the expected count for "sticker"?</div>
+
+        <ul class="choices">
+          
+          <li>A. 20</li>
+          
+          <li>B. 30</li>
+          
+          <li>C. 60</li>
+          
+          <li>D. 90</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U8S9Q22"
+        data-difficulty="hard"
+        data-skill-codes="4.C"
+        data-learning-objectives="VAR-8.E"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q22.</strong> (ID: ap_statistics_MCQ_U8S9Q22)
+        </div>
+
+        
+        <div class="diagram">
+           <table class='data-table'><thead><tr><th>Response</th><th>Observed Count</th></tr></thead><tbody><tr><td>Positive</td><td>5</td></tr><tr><td>Neutral</td><td>6</td></tr><tr><td>Negative</td><td>1</td></tr><tr><td>Total</td><td>12</td></tr></tbody></table>
+          
+        </div>
+        
+
+        <div class="question-text">A marketing company wants to determine if customer responses to a new advertisement (positive, neutral, negative) follow a uniform distribution. A random sample of 12 customers provided the data in the table. Which condition for a chi-square goodness-of-fit test is NOT met?</div>
+
+        <ul class="choices">
+          
+          <li>A. Random sample</li>
+          
+          <li>B. Independence</li>
+          
+          <li>C. All expected counts are at least 5</li>
+          
+          <li>D. The sum of observed counts equals the sum of expected counts</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U8S9Q23"
+        data-difficulty="hard"
+        data-skill-codes="4.C"
+        data-learning-objectives="VAR-8.K"
+        data-correct-index="3"
+      >
+        <div class="question-header">
+          <strong>Q23.</strong> (ID: ap_statistics_MCQ_U8S9Q23)
+        </div>
+
+        
+
+        <div class="question-text">A researcher is planning a study to compare opinions on a new city policy (Approve, Disapprove, Neutral) among residents from three different districts. They plan to survey 20 residents from each district. Which of the following conditions for a chi-square test for homogeneity might be of concern given the study design, and need to be checked?</div>
+
+        <ul class="choices">
+          
+          <li>A. The assumption that the population distribution for each district is normal.</li>
+          
+          <li>B. That the groups (districts) are independent samples.</li>
+          
+          <li>C. That the sample size from each district ($n=20$) is small enough to avoid Type I error.</li>
+          
+          <li>D. That all expected cell counts in the contingency table are at least 5.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U8S9Q24"
+        data-difficulty="medium"
+        data-skill-codes="3.E"
+        data-learning-objectives="VAR-8.F"
+        data-correct-index="3"
+      >
+        <div class="question-header">
+          <strong>Q24.</strong> (ID: ap_statistics_MCQ_U8S9Q24)
+        </div>
+
+        
+
+        <div class="question-text">A manager records the number of times customers use each of two self-checkout kiosks (K1, K2) over an hour. The observed counts are K1: 35, K2: 15. If the kiosks are equally popular, what is the contribution of K1 to the chi-square test statistic?</div>
+
+        <ul class="choices">
+          
+          <li>A. $1$</li>
+          
+          <li>B. $2$</li>
+          
+          <li>C. $3$</li>
+          
+          <li>D. $4$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U8S9Q25"
+        data-difficulty="hard"
+        data-skill-codes="4.E"
+        data-learning-objectives="DAT-3.L"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q25.</strong> (ID: ap_statistics_MCQ_U8S9Q25)
+        </div>
+
+        
+
+        <div class="question-text">A high school principal wants to know if the distribution of student enrollment across four academic tracks (STEM, Humanities, Arts, Vocational) is the same for freshmen and seniors. After collecting data, a chi-square test for homogeneity yields a $p$-value of $0.002$. Which of the following is a statistically appropriate conclusion at $\alpha=0.05$?</div>
+
+        <ul class="choices">
+          
+          <li>A. There is no statistically significant difference in enrollment distributions between freshmen and seniors.</li>
+          
+          <li>B. The observed differences in enrollment distributions between freshmen and seniors are likely due to chance.</li>
+          
+          <li>C. There is convincing evidence that the distribution of enrollment across academic tracks is different for freshmen and seniors.</li>
+          
+          <li>D. The principal should change the enrollment policy because the distributions are not equal.</li>
+          
+        </ul>
+      </div>
+      
+    </div>
+
+    <div class="key-section">
+      <h2>Answer Key</h2>
+
+      <div class="key-grid">
+        
+        <div>
+          <strong>1.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>2.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>3.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>4.</strong>
+          D
+        </div>
+        
+        <div>
+          <strong>5.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>6.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>7.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>8.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>9.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>10.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>11.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>12.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>13.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>14.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>15.</strong>
+          D
+        </div>
+        
+        <div>
+          <strong>16.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>17.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>18.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>19.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>20.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>21.</strong>
+          D
+        </div>
+        
+        <div>
+          <strong>22.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>23.</strong>
+          D
+        </div>
+        
+        <div>
+          <strong>24.</strong>
+          D
+        </div>
+        
+        <div>
+          <strong>25.</strong>
+          C
+        </div>
+        
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

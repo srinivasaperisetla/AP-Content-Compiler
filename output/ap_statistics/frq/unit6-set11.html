@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 11)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 11)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S11Q1"
+      data-difficulty="easy"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.A,UNC-4.B,UNC-4.D,UNC-4.F"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A health organization wants to estimate the proportion of adults in a certain city who exercise regularly (at least three times per week). They conduct a random sample of 500 adults from the city and find that 210 of them exercise regularly.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure to construct a confidence interval for the true proportion of adults in the city who exercise regularly. Name the interval.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for constructing this confidence interval.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate a 95 percent confidence interval for the true proportion of adults in the city who exercise regularly.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the 95 percent confidence interval calculated in part (c) in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly identifies a one-sample z-interval for a population proportion.</li>
+          
+          <li>Part b (1pt): Verifies all three conditions (Random, 10% rule, Large Counts) with appropriate calculations/justifications. Random: Stated random sample. 10% rule: $500 < 10\%$ of all adults in the city. Large Counts: $n\hat{p} = 500(0.42) = 210 \ge 10$ and $n(1-\hat{p}) = 500(0.58) = 290 \ge 10$.</li>
+          
+          <li>Part c (2pts): Shows correct calculation of $\hat{p}$, standard error, critical value ($z^*$), and the confidence interval. $\hat{p} = 210/500 = 0.42$. $SE_{\hat{p}} = \sqrt{\frac{0.42(0.58)}{500}} \approx 0.0219$. For 95% CI, $z^* \approx 1.96$. CI = $0.42 \pm 1.96(0.0219) = 0.42 \pm 0.0429 \Rightarrow (0.3771, 0.4629)$.</li>
+          
+          <li>Part d (1pt): Correctly interprets the confidence interval. We are 95% confident that the true proportion of adults in this city who exercise regularly is between 0.3771 and 0.4629.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S11Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.D,VAR-6.F,VAR-6.G,DAT-3.A,DAT-3.B"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A company claims that 75 percent of their new eco-friendly light bulbs last longer than 10,000 hours. A consumer advocacy group wants to investigate this claim, believing the actual proportion is lower. They test a random sample of 200 new light bulbs and find that 140 of them last longer than 10,000 hours.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify that the conditions for conducting this significance test are met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the p-value in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Based on the p-value and a significance level of $\alpha = 0.05$, what conclusion should the consumer advocacy group reach? Justify your conclusion.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct hypotheses: $H_0: p = 0.75$ versus $H_a: p < 0.75$, where $p$ is the true proportion of light bulbs that last longer than 10,000 hours.</li>
+          
+          <li>Part b (1pt): Verifies all three conditions (Random, 10% rule, Large Counts) with appropriate calculations/justifications. Random: Stated random sample. 10% rule: $200 < 10\%$ of all new eco-friendly light bulbs. Large Counts: $np_0 = 200(0.75) = 150 \ge 10$ and $n(1-p_0) = 200(0.25) = 50 \ge 10$.</li>
+          
+          <li>Part c (2pts): Calculates the test statistic and p-value. $\hat{p} = 140/200 = 0.70$. Test statistic $z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}} = \frac{0.70 - 0.75}{\sqrt{\frac{0.75(0.25)}{200}}} \approx -1.634$. P-value = $P(Z < -1.634) \approx 0.0511$.</li>
+          
+          <li>Part d (1pt): Interprets the p-value. Assuming the true proportion of light bulbs lasting over 10,000 hours is 0.75, there is approximately a 0.0511 probability of observing a sample proportion of 0.70 or less in a random sample of 200 light bulbs.</li>
+          
+          <li>Part e (1pt): States correct conclusion and justification. Since the p-value ($0.0511$) is greater than $\alpha = 0.05$, we fail to reject the null hypothesis. There is not sufficient evidence to conclude that the true proportion of light bulbs lasting longer than 10,000 hours is less than 0.75.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S11Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.I,UNC-4.J,UNC-4.K,UNC-4.M,UNC-4.N"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A medical researcher wants to compare the effectiveness of two different medications, Medication A and Medication B, in treating a certain allergic reaction. In a randomized controlled trial, 300 patients were given Medication A, and 240 experienced relief. Another 350 patients were given Medication B, and 260 experienced relief.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure to construct a confidence interval for the difference in the true proportions of patients who experience relief between Medication A and Medication B. Name the interval.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for constructing this confidence interval.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate a 90 percent confidence interval for the difference in the true proportions ($p_A - p_B$) of patients who experience relief.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the confidence interval, is there convincing evidence of a difference in the effectiveness of the two medications? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly identifies a two-sample z-interval for a difference between population proportions.</li>
+          
+          <li>Part b (1pt): Verifies all conditions for a two-sample proportion interval. Random: Stated randomized controlled trial. Independence within groups: Patients within each group are independent. Independence between groups: Medication A and B groups are independent. 10% rule: $300 < 10\%$ of all potential patients for Med A; $350 < 10\%$ of all potential patients for Med B. Large Counts: For Med A: $n_A\hat{p}_A = 240 \ge 10$ and $n_A(1-\hat{p}_A) = 300-240 = 60 \ge 10$. For Med B: $n_B\hat{p}_B = 260 \ge 10$ and $n_B(1-\hat{p}_B) = 350-260 = 90 \ge 10$.</li>
+          
+          <li>Part c (2pts): Calculates $\hat{p}_A = 240/300 = 0.80$, $\hat{p}_B = 260/350 \approx 0.74286$. The difference $\hat{p}_A - \hat{p}_B \approx 0.05714$. Standard error $SE = \sqrt{\frac{\hat{p}_A(1-\hat{p}_A)}{n_A} + \frac{\hat{p}_B(1-\hat{p}_B)}{n_B}} \approx 0.03287$. For 90% CI, $z^* \approx 1.645$. CI = $0.05714 \pm 1.645(0.03287) = 0.05714 \pm 0.05406 \Rightarrow (0.00308, 0.11120)$.</li>
+          
+          <li>Part d (1pt): Justifies conclusion. Since the entire 90% confidence interval $(0.00308, 0.11120)$ is above zero, there is convincing evidence that Medication A is more effective than Medication B in treating the allergic reaction.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S11Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.H,VAR-6.J,VAR-6.K,DAT-3.C,DAT-3.D"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A school district implemented a new reading program for elementary students. They want to determine if the proportion of students reading at or above grade level has increased after one year compared to a previous year. Before the program, a random sample of 250 students showed 175 reading at or above grade level. After one year with the program, a random sample of 300 students (different students from the first sample) showed 234 reading at or above grade level.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate significance test to determine if the new program increased the proportion of students reading at or above grade level. Define any parameters you use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for conducting this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the p-value in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Based on the p-value and a significance level of $\alpha = 0.01$, what conclusion should the school district reach? Justify your conclusion.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct hypotheses and defines parameters. Let $p_1$ be the true proportion of students reading at or above grade level before the program, and $p_2$ be the true proportion after the program. $H_0: p_1 = p_2$ versus $H_a: p_1 < p_2$.</li>
+          
+          <li>Part b (1pt): Verifies all conditions for a two-sample proportion z-test. Random: Stated random samples. Independence within groups: Students within each sample are independent. Independence between groups: Samples are of different students. 10% rule: $250 < 10\%$ of all students before; $300 < 10\%$ of all students after. Large Counts: Before: $n_1\hat{p}_1 = 175 \ge 10$, $n_1(1-\hat{p}_1) = 75 \ge 10$. After: $n_2\hat{p}_2 = 234 \ge 10$, $n_2(1-\hat{p}_2) = 66 \ge 10$.</li>
+          
+          <li>Part c (2pts): Calculates test statistic and p-value. $\hat{p}_1 = 175/250 = 0.70$. $\hat{p}_2 = 234/300 = 0.78$. Pooled proportion $\hat{p}_c = \frac{175+234}{250+300} = \frac{409}{550} \approx 0.7436$. Test statistic $z = \frac{(\hat{p}_2 - \hat{p}_1) - 0}{\sqrt{\hat{p}_c(1-\hat{p}_c)(\frac{1}{n_1} + \frac{1}{n_2})}} \approx 2.140$. P-value = $P(Z > 2.140) \approx 0.0162$.</li>
+          
+          <li>Part d (1pt): Interprets the p-value. Assuming there is no difference in the true proportion of students reading at or above grade level before and after the program, there is approximately a 0.0162 probability of observing a difference in sample proportions as large as or larger than 0.08 in favor of the new program due to random chance.</li>
+          
+          <li>Part e (1pt): States correct conclusion and justification. Since the p-value ($0.0162$) is greater than $\alpha = 0.01$, we fail to reject the null hypothesis. There is not sufficient evidence to conclude that the new reading program increased the proportion of students reading at or above grade level.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S11Q5"
+      data-difficulty="hard"
+      data-skill-codes="3.D,4.A,1.B,4.B"
+      data-learning-objectives="UNC-4.C,UNC-4.H,UNC-5.A,UNC-5.D"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A national survey aims to estimate the proportion of U.S. adults who support a new environmental policy. They want to construct a 99 percent confidence interval with a margin of error of no more than 3 percentage points. A pilot study suggests the true proportion is around 55 percent.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the minimum sample size required for this survey.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain how increasing the confidence level from 90 percent to 99 percent would affect the width of a confidence interval, assuming the sample size and sample proportion remain the same. (Do not calculate.)
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Suppose a significance test was conducted where the null hypothesis was $H_0: p = 0.50$ (no majority support) and the alternative was $H_a: p > 0.50$ (majority support). Describe a Type I error in this context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the consequence of a Type I error in the context of this environmental policy.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly calculates minimum sample size. $ME = z^*\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$. For 99% CI, $z^* \approx 2.576$. $0.03 = 2.576\sqrt{\frac{0.55(0.45)}{n}}$. Solving for $n$, $n \approx 1825.22$. Round up to $1826$.</li>
+          
+          <li>Part b (1pt): Explains the effect on width. Increasing the confidence level from 90 percent to 99 percent would increase the width of the confidence interval. This is because a higher confidence level requires a larger critical value ($z^*$), which in turn increases the margin of error and thus the width of the interval, to capture the true parameter with greater certainty.</li>
+          
+          <li>Part c (1pt): Describes a Type I error in context. A Type I error would occur if the survey concludes that a majority of U.S. adults support the new environmental policy ($H_a: p > 0.50$), when in reality, the true proportion of support is 50% or less ($H_0: p = 0.50$).</li>
+          
+          <li>Part d (1pt): Interprets the consequence of a Type I error in the context of this environmental policy. The consequence of a Type I error here would be that resources might be allocated to promote a policy based on the mistaken belief that it has majority public support, potentially leading to misallocation of efforts or public backlash if actual support is lower.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 19)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 4: Probability, Random Variables, and Probability Distributions (Set 19)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S19Q1"
+      data-difficulty="easy"
+      data-skill-codes="3.A"
+      data-learning-objectives="UNC-2.A"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A local coffee shop offers a loyalty program where customers receive a free coffee after accumulating 5 stamps. Each purchase earns one stamp. The probability that a customer makes a purchase on any given day is $0.6$. The shop wants to estimate the probability that a customer will earn a free coffee within 8 purchases.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe a simulation using a random number generator that could be used to estimate the probability that a customer earns a free coffee within 8 purchases. Clearly state what constitutes one trial, what outcomes are recorded, and how the random numbers would be assigned.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Conduct three trials of your simulation using the following list of random digits: $29317\ 95076\ 12399\ 54310\ 07354\ 81961$. Record the number of purchases needed to earn a free coffee for each trial and whether a free coffee was earned within 8 purchases.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on your three trials, estimate the probability that a customer earns a free coffee within 8 purchases.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a random process for one purchase (e.g., digits 0-5 for purchase, 6-9 for no purchase)</li>
+          
+          <li>Describes how to count purchases and stamps for one trial, and determine if 5 stamps are earned within 8 purchases</li>
+          
+          <li>Part b (2pts): Correctly performs three trials according to description</li>
+          
+          <li>Correctly records outcome for each trial (e.g., number of purchases, yes/no free coffee within 8 purchases)</li>
+          
+          <li>Part c (1pt): Calculates the estimated probability as the number of successful trials divided by 3</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S19Q2"
+      data-difficulty="medium"
+      data-skill-codes="3.A,4.B"
+      data-learning-objectives="VAR-4.A,VAR-4.D,VAR-4.C"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">In a large high school, $40\%$ of students participate in sports, and $25\%$ of students are involved in music programs. Of those students who participate in sports, $10\%$ are also involved in music programs.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        What is the probability that a randomly selected student participates in both sports and music programs? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What is the probability that a randomly selected student participates in music programs, given that they do NOT participate in sports? Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Are the events "participates in sports" and "is involved in music programs" mutually exclusive? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly calculates $P(\text{Sports AND Music}) = P(\text{Music }</li>
+          
+          <li>\text{ Sports}) \times P(\text{Sports}) = 0.10 \times 0.40 = 0.04$.</li>
+          
+          <li>Part b (2pts): Correctly calculates $P(\text{Not Sports}) = 1 - P(\text{Sports}) = 1 - 0.40 = 0.60$.</li>
+          
+          <li>Correctly calculates $P(\text{Music AND Not Sports}) = P(\text{Music}) - P(\text{Music AND Sports}) = 0.25 - 0.04 = 0.21$.</li>
+          
+          <li>Correctly calculates $P(\text{Music }</li>
+          
+          <li>\text{ Not Sports}) = \frac{P(\text{Music AND Not Sports})}{P(\text{Not Sports})} = \frac{0.21}{0.60} = 0.35$.</li>
+          
+          <li>Part c (1pt): States that the events are NOT mutually exclusive.</li>
+          
+          <li>Provides correct justification, e.g., $P(\text{Sports AND Music}) = 0.04 \ne 0$ or by showing overlap.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S19Q3"
+      data-difficulty="medium"
+      data-skill-codes="2.B,3.B,4.B"
+      data-learning-objectives="VAR-5.A,VAR-5.C,VAR-5.D"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A company sells a subscription box, and the number of defective items in a box, $X$, follows the probability distribution shown in the table.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Number of Defective Items ($x$)</th><th>Probability $P(X=x)$</th></tr></thead><tbody><tr><td>0</td><td>0.15</td></tr><tr><td>1</td><td>0.30</td></tr><tr><td>2</td><td>0.40</td></tr><tr><td>3</td><td>0.10</td></tr><tr><td>4</td><td>0.05</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Show that this is a legitimate probability distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected number of defective items per box, $E(X)$. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the value calculated in part (b) in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Shows that all probabilities are between 0 and 1, inclusive, AND sum to 1 ($0.15+0.30+0.40+0.10+0.05=1$).</li>
+          
+          <li>Part b (2pts): Shows correct calculation for $E(X) = \sum x \cdot P(X=x) = (0 \cdot 0.15) + (1 \cdot 0.30) + (2 \cdot 0.40) + (3 \cdot 0.10) + (4 \cdot 0.05) = 0 + 0.30 + 0.80 + 0.30 + 0.20 = 1.6$.</li>
+          
+          <li>Part c (1pt): Interprets $E(X)=1.6$ as the long-run average number of defective items per box in repeated sampling or many boxes.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S19Q4"
+      data-difficulty="medium"
+      data-skill-codes="3.A,3.B,4.B"
+      data-learning-objectives="UNC-3.B,UNC-3.C,UNC-3.D"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A factory manufactures light bulbs, and $5\%$ of the bulbs produced are defective. A quality control inspector randomly selects 15 bulbs for inspection.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Verify that the conditions for a binomial distribution are met for the number of defective bulbs in the sample.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the probability that exactly 2 of the 15 selected bulbs are defective. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected number of defective bulbs in a sample of 15. Interpret this value in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States fixed number of trials ($n=15$), independent trials (random selection), two outcomes (defective/not defective), and constant probability of success ($p=0.05$).</li>
+          
+          <li>Part b (1pt): Uses binomial probability formula $P(X=k) = \binom{n}{k} p^k (1-p)^{n-k}$ or binomial PDF function with $n=15, k=2, p=0.05$ to get $P(X=2) = \binom{15}{2} (0.05)^2 (0.95)^{13} \approx 0.1348$.</li>
+          
+          <li>Part c (2pts): Calculates $E(X) = n \cdot p = 15 \cdot 0.05 = 0.75$.</li>
+          
+          <li>Interprets $0.75$ as the average number of defective bulbs in many samples of 15 bulbs.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U4S19Q5"
+      data-difficulty="hard"
+      data-skill-codes="3.A,3.B,3.C"
+      data-learning-objectives="UNC-3.E,VAR-5.E,VAR-5.F"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A game involves rolling a fair six-sided die until a '6' appears. Let $X$ be the number of rolls required to get the first '6'. Each roll costs $1, and if a '6' is rolled, the player wins $5.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the probability that it takes exactly 3 rolls to get the first '6'. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Let $C$ be the cost of playing the game and $W$ be the winnings from the game. The net gain for a player is $G = W - C$. Express $C$ and $W$ in terms of $X$, and then calculate the expected net gain $E(G)$. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Suppose the cost per roll doubles, so each roll now costs $2. Describe the effect of this linear transformation on the mean and standard deviation of the net gain $G$.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly uses geometric probability $P(X=k) = (1-p)^{k-1}p$ with $p=1/6$ and $k=3$ to get $P(X=3) = (5/6)^2 (1/6) = 25/216 \approx 0.1157$.</li>
+          
+          <li>Part b (3pts): Expresses $C=X$ and $W=5$.</li>
+          
+          <li>Derives $G=5-X$.</li>
+          
+          <li>Calculates $E(X) = 1/p = 1/(1/6) = 6$.</li>
+          
+          <li>Calculates $E(G) = E(5-X) = E(5) - E(X) = 5 - 6 = -1$.</li>
+          
+          <li>Part c (2pts): States that the new cost is $C_{new} = 2X$, so $G_{new} = 5 - 2X$.</li>
+          
+          <li>States that $E(G_{new}) = E(5 - 2X) = 5 - 2E(X) = 5 - 2(6) = -7$.</li>
+          
+          <li>States that $SD(G_{new}) = SD(5 - 2X) =</li>
+          
+          <li>-2</li>
+          
+          <li>SD(X) = 2SD(X)$.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

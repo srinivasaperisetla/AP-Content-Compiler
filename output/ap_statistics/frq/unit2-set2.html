@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 2)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 2)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S2Q1"
+      data-difficulty="medium"
+      data-skill-codes="2.A,4.B"
+      data-learning-objectives="DAT-1.A,DAT-1.C"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A researcher is investigating the relationship between the number of hours a student spends studying for a statistics exam and the score they achieve on the exam. Data was collected from 20 students, and a scatterplot of the hours studied versus exam score is shown below.</div>
+
+      
+      <div class="diagram">
+         <svg width="350" height="250" viewBox="0 0 350 250" style="background-color:white;"><rect x="30" y="30" width="280" height="190" style="fill:none;stroke:black;stroke-width:1"/><line x1="30" y1="220" x2="310" y2="220" stroke="black" stroke-width="1"/><line x1="30" y1="220" x2="30" y2="30" stroke="black" stroke-width="1"/><text x="170" y="240" font-family="Arial" font-size="12" text-anchor="middle">Hours Studied</text><text x="10" y="125" font-family="Arial" font-size="12" text-anchor="middle" transform="rotate(-90 10 125)">Exam Score</text><circle cx="45" cy="200" r="2" fill="black"/><circle cx="55" cy="190" r="2" fill="black"/><circle cx="65" cy="185" r="2" fill="black"/><circle cx="75" cy="170" r="2" fill="black"/><circle cx="85" cy="175" r="2" fill="black"/><circle cx="95" cy="160" r="2" fill="black"/><circle cx="105" cy="150" r="2" fill="black"/><circle cx="115" cy="145" r="2" fill="black"/><circle cx="125" cy="130" r="2" fill="black"/><circle cx="135" cy="135" r="2" fill="black"/><circle cx="145" cy="120" r="2" fill="black"/><circle cx="155" cy="110" r="2" fill="black"/><circle cx="165" cy="105" r="2" fill="black"/><circle cx="175" cy="90" r="2" fill="black"/><circle cx="185" cy="95" r="2" fill="black"/><circle cx="195" cy="80" r="2" fill="black"/><circle cx="205" cy="70" r="2" fill="black"/><circle cx="215" cy="65" r="2" fill="black"/><circle cx="225" cy="50" r="2" fill="black"/><circle cx="235" cy="55" r="2" fill="black"/></svg> 
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the overall pattern of the relationship between hours studied and exam score shown in the scatterplot, including its direction, form, and strength.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain what the correlation coefficient $r = 0.85$ indicates about the relationship between hours studied and exam score in this context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Does a high positive correlation (like $r=0.85$) necessarily mean that increased study time causes higher exam scores? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly describes direction (positive), form (linear), and strength (strong). Mentions context for each aspect.</li>
+          
+          <li>Part b (1pt): States that there is a strong, positive linear association between hours studied and exam scores. Mentions context.</li>
+          
+          <li>Part c (1pt): States that correlation does not imply causation. Justifies by mentioning lurking variables or experimental design.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S2Q2"
+      data-difficulty="medium"
+      data-skill-codes="2.C,4.B"
+      data-learning-objectives="DAT-1.D,DAT-1.H"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A real estate agent wants to predict the selling price of a house based on its size (in square feet). A random sample of houses sold in a particular neighborhood yielded the least-squares regression line $\hat{y} = 50,000 + 75x$, where $x$ is the size of the house in square feet and $\hat{y}$ is the predicted selling price in dollars. The coefficient of determination is $r^2 = 0.81$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Interpret the slope of the least-squares regression line in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Interpret the $y$-intercept of the least-squares regression line in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Predict the selling price of a house that is 2,200 square feet.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The actual selling price of the 2,200 square foot house was $\$210,000$. Calculate the residual for this house.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly interprets the slope (for every additional square foot, the predicted selling price increases by $\$75$) in context.</li>
+          
+          <li>Part b (1pt): Correctly interprets the $y$-intercept (a house with 0 square feet is predicted to sell for $\$50,000$) and comments on its practical meaning/lack thereof.</li>
+          
+          <li>Part c (1pt): Shows calculation $\hat{y} = 50,000 + 75(2200) = 215,000$ and states the predicted price is $\$215,000$.</li>
+          
+          <li>Part d (1pt): Shows calculation Residual = Actual - Predicted = $\$210,000 - \$215,000 = -\$5,000$ and states the residual.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S2Q3"
+      data-difficulty="medium"
+      data-skill-codes="2.A,2.B,2.C"
+      data-learning-objectives="DAT-1.E,DAT-1.F,UNC-1.S"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A biologist is studying the relationship between the age of a certain type of tree (in years) and its height (in meters). A sample of 10 trees was taken, and the data, along with the least-squares regression line $\hat{\text{height}} = 0.5 + 1.2(\text{age})$, are given below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Age (years)</th><th>Height (meters)</th></tr></thead><tbody><tr><td>2</td><td>2.8</td></tr><tr><td>4</td><td>5.0</td></tr><tr><td>5</td><td>6.5</td></tr><tr><td>7</td><td>8.5</td></tr><tr><td>8</td><td>10.0</td></tr><tr><td>10</td><td>12.0</td></tr><tr><td>11</td><td>13.5</td></tr><tr><td>13</td><td>15.0</td></tr><tr><td>14</td><td>16.2</td></tr><tr><td>16</td><td>19.0</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the residual for a tree that is 7 years old and has a height of 8.5 meters.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Sketch a residual plot that would indicate that a linear model is appropriate for these data.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Explain what characteristics of the residual plot from part (b) indicate that a linear model is appropriate.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Calculates predicted height $\hat{\text{height}} = 0.5 + 1.2(7) = 8.9$ meters. Calculates residual $8.5 - 8.9 = -0.4$ meters.</li>
+          
+          <li>Part b (2pts): Draws a residual plot with age on the x-axis and residuals on the y-axis, showing a scattered pattern with no clear pattern, roughly centered around 0. Labels axes appropriately.</li>
+          
+          <li>Part c (1pt): Explains that a linear model is appropriate if the residual plot shows no discernible pattern (random scatter) and no systematic curve, and the points are spread relatively evenly around the residual = 0 line.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S2Q4"
+      data-difficulty="hard"
+      data-skill-codes="2.A,4.B"
+      data-learning-objectives="DAT-1.A,DAT-1.I"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A company investigates the relationship between its advertising expenditure (in thousands of dollars) and its monthly sales (in thousands of dollars). Data for 11 months are collected and plotted in a scatterplot. One month had an exceptionally high advertising expenditure and high sales compared to the other months.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        On a scatterplot, describe the characteristics of a point that would be considered an influential point.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Suppose the point representing the month with exceptionally high advertising expenditure and high sales is $(50, 400)$ while most other points are clustered between advertising expenditure of $5$ to $15$ and sales of $100$ to $150$. If this influential point were removed, describe the expected changes in the least-squares regression line's slope and the correlation coefficient $r$. Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Distinguish between an outlier in the $y$-direction (a residual outlier) and an influential point, explaining how each impacts the least-squares regression line differently.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Describes an influential point as one that, if removed, would significantly change the slope and/or $y$-intercept of the least-squares regression line. Often has a large $x$-value (high leverage).</li>
+          
+          <li>Part b (2pts): States that removing the point $(50, 400)$ would likely decrease the slope and increase the correlation coefficient. Justifies that the point pulls the line towards itself, making the slope steeper, and its removal would make the remaining points show a stronger linear relationship since it's far out in $x$ and aligned with the trend.</li>
+          
+          <li>Part c (2pts): Explains that an outlier in the $y$-direction (large residual) has a large vertical distance from the line but may not significantly change the slope if its $x$-value is near the mean. An influential point has an extreme $x$-value (high leverage) and may or may not have a large residual, but its removal significantly changes the line's slope and/or intercept.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S2Q5"
+      data-difficulty="medium"
+      data-skill-codes="2.A,2.C"
+      data-learning-objectives="DAT-1.A,DAT-1.J"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A researcher is studying the decay of a radioactive substance. The initial amount of the substance is 100 grams. The amount remaining (in grams) is measured at various times (in hours). A scatterplot of the amount remaining versus time shows a curved, decreasing pattern, indicating a nonlinear relationship. To linearize the relationship, the natural logarithm of the amount remaining was taken. The least-squares regression line for $\ln(\text{amount})$ versus time is $\widehat{\ln(\text{amount})} = 4.60 - 0.15(\text{time})$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Explain why a linear model using the original variables (amount remaining versus time) would not be appropriate for these data based on the description.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        If a scatterplot of $\ln(\text{amount})$ versus time showed a strong, linear, decreasing pattern with no obvious curvature in its residual plot, explain how this indicates that the transformation was successful.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Use the given regression equation for the transformed data to predict the amount of the radioactive substance remaining after 10 hours. Show your work.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States that a linear model is not appropriate because the original scatterplot shows a curved, decreasing pattern, violating the linearity assumption for linear regression.</li>
+          
+          <li>Part b (1pt): Explains that a linear relationship in the transformed data, combined with random scatter in the residual plot, indicates that the original relationship can be modeled by an exponential function, which is linearized by the log transformation.</li>
+          
+          <li>Part c (2pts): Calculates $\widehat{\ln(\text{amount})} = 4.60 - 0.15(10) = 4.60 - 1.50 = 3.10$. Then exponentiates to find the predicted amount: $\text{amount} = e^{3.10} \approx 22.198$ grams. Shows both steps.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

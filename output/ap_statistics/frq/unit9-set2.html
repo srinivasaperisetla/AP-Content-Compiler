@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 2)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 9: Inference for Quantitative Data: Slopes (Set 2)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S2Q1"
+      data-difficulty="medium"
+      data-skill-codes="4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.AD,UNC-4.AF,UNC-4.AG"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A researcher is studying the relationship between the number of hours students spend studying per week ($x$) and their final exam scores ($y$) in a large introductory statistics course. A random sample of 30 students was selected, and the following regression output was obtained: Sample size: $n = 30$, Estimated slope: $b = 4.5$, Standard error of the slope: $SE_b = 1.2$, Degrees of freedom: $df = 28$. A scatterplot showed a linear pattern, and a residual plot showed no obvious pattern with roughly constant variability and approximately normal residuals.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the conditions for inference for the slope of a regression model and verify if they are met in this context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the true slope of the regression line relating study hours to final exam scores. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the 95% confidence interval calculated in part (b) in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies the four main conditions (Linearity, Independent observations, Normal residuals, Equal variance of residuals) (1pt)</li>
+          
+          <li>Verifies each condition using the given information (1pt)</li>
+          
+          <li>Part b (2pts): States the correct formula for the confidence interval ($b \pm t^* SE_b$) and identifies the correct $t^*$ for $df=28$ and 95% confidence (1pt)</li>
+          
+          <li>Calculates the correct confidence interval (e.g., $(2.03, 6.97)$) (1pt)</li>
+          
+          <li>Part c (1pt): Provides a correct interpretation of the confidence interval in context, referencing the true slope (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S2Q2"
+      data-difficulty="hard"
+      data-skill-codes="1.F,4.C,3.E,4.E"
+      data-learning-objectives="VAR-7.K,VAR-7.L,VAR-7.M,DAT-3.N"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A company claims that its new fertilizer significantly increases crop yield, specifically that the true average increase in crop yield is greater than $0.5$ kg for each additional gram of fertilizer applied. To test this claim, a botanist applies different amounts of fertilizer (in grams, $x$) to 50 identical plants and measures the crop yield (in kilograms, $y$). A linear regression analysis was performed, yielding the following results: Estimated slope: $b = 0.65$, Standard error of the slope: $SE_b = 0.08$, Degrees of freedom: $df = 48$. A scatterplot showed a reasonably linear relationship, residuals were approximately normal, and variability was constant.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for a test to investigate the company's claim. Define any parameters you use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for a significance test for the slope of a regression model.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test. Assume a t-distribution and use a table or calculator output if exact value is not possible.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value from part (c) and a significance level of $\alpha = 0.05$, what conclusion can be drawn about the company's claim? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null ($H_0: \beta = 0.5$) and alternative ($H_a: \beta > 0.5$) hypotheses, and defines $\beta$ as the true slope of the linear relationship between fertilizer applied and crop yield (1pt)</li>
+          
+          <li>Part b (1pt): Verifies the conditions (Linearity, Independent, Normal residuals, Equal variance) based on the given information (1pt)</li>
+          
+          <li>Part c (2pts): Calculates the correct test statistic ($t = \frac{b - \beta_0}{SE_b} = \frac{0.65 - 0.5}{0.08} = 1.875$) (1pt)</li>
+          
+          <li>Calculates or correctly approximates the p-value using $df=48$ (e.g., $0.033 < p < 0.035$) (1pt)</li>
+          
+          <li>Part d (2pts): Makes a correct conclusion about the null hypothesis (reject $H_0$) based on p-value and $\alpha$ (1pt)</li>
+          
+          <li>Justifies the conclusion in context of the company's claim (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S2Q3"
+      data-difficulty="easy"
+      data-skill-codes="1.A,1.D,1.E,1.F"
+      data-learning-objectives="VAR-1.K,UNC-4.AC,VAR-7.J,VAR-7.K"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A nutritionist is interested in understanding the relationship between daily sugar intake (in grams) and body mass index (BMI) for adults. They collected data from a random sample of individuals and created a scatterplot of daily sugar intake versus BMI, which showed a moderate positive linear association.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Based on the scatterplot and the nutritionist's interest, identify a statistical question that could be answered using regression analysis.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the most appropriate inference method (confidence interval for slope or significance test for slope) if the nutritionist wants to estimate the average change in BMI for each additional gram of sugar intake.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Identify the most appropriate inference method if the nutritionist wants to determine if there is a significant positive linear relationship between daily sugar intake and BMI for adults.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        For the scenario in part (c), state the null and alternative hypotheses in symbols and words.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States a relevant statistical question that can be answered by regression (e.g., "Is there a linear relationship between daily sugar intake and BMI for adults?" or "What is the average increase in BMI for each additional gram of sugar intake?") (1pt)</li>
+          
+          <li>Part b (1pt): Identifies "Confidence interval for the slope of a regression model" (1pt)</li>
+          
+          <li>Part c (1pt): Identifies "Significance test for the slope of a regression model" (1pt)</li>
+          
+          <li>Part d (1pt): States correct null ($H_0: \beta = 0$) and alternative ($H_a: \beta > 0$ or $H_a: \beta \ne 0$) hypotheses, and defines $\beta$ in context (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S2Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.AC,UNC-4.AD,UNC-4.AF,UNC-4.AG"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A researcher investigates the relationship between the number of hours a student spends studying for a statistics exam ($x$) and their score on the exam ($y$). A random sample of 20 students was taken. The linear regression model for predicting exam score from study hours was calculated. The least-squares regression line is $\hat{y} = 65 + 2.5x$. The standard error of the slope coefficient $SE_b = 0.45$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure for the slope of the regression model.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for constructing a confidence interval for the slope.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate a 95% confidence interval for the true slope of the regression line.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the calculated confidence interval in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly identifies a $t$-interval for the slope (or a linear regression $t$-interval for $\beta$).</li>
+          
+          <li>Part b (2pts): Verifies conditions: Random sample (given); Linearity (assumed from problem context/model); Independence (sample size $\le 10\%$ of population, $20 \le 0.1N$); Normality of residuals (checked by residual plot/histogram of residuals); Equal variance of residuals (checked by residual plot). (1pt for identifying 2-3 conditions, 2pts for identifying and briefly explaining 4-5 conditions).</li>
+          
+          <li>Part c (2pts): Calculates $df = n-2 = 18$. Finds critical $t$-value for $df=18$ and 95% CI ($t^* \approx 2.101$). Calculates interval $2.5 \pm 2.101(0.45) = 2.5 \pm 0.94545 = (1.55455, 3.44545)$. (1pt for correct formula/degrees of freedom, 1pt for correct interval).</li>
+          
+          <li>Part d (1pt): Interprets interval: "We are 95% confident that for each additional hour a student studies, their exam score increases by between 1.55 and 3.45 points, on average." (1pt for correct interpretation in context, mentioning average change).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U9S2Q5"
+      data-difficulty="easy"
+      data-skill-codes="1.E,1.F,4.C"
+      data-learning-objectives="VAR-7.J,VAR-7.K,VAR-7.L"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">An ecologist is studying the relationship between the average daily temperature (in degrees Celsius, $x$) and the number of chirps per minute ($y$) of a certain insect species. Data were collected for 15 days. The ecologist wants to determine if there is a significant positive linear relationship between temperature and chirps per minute.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate significance test for the slope of the regression model.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        State the null and alternative hypotheses for this test. Define any parameters used.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe one condition that must be verified before performing this significance test, and explain how you would check it.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly identifies a $t$-test for the slope (or linear regression $t$-test for $\beta$).</li>
+          
+          <li>Part b (2pts): $H_0: \beta = 0$ (no linear relationship) and $H_a: \beta > 0$ (positive linear relationship). (1pt for correct hypotheses, 1pt for defining $\beta$ as the true slope of the linear relationship between temperature and chirps per minute).</li>
+          
+          <li>Part c (1pt): Describes one of the conditions (Linearity, Independence, Normality of residuals, Equal variance of residuals) and explains how to check it (e.g., "Linearity: Check a scatterplot of chirps vs. temperature for a linear pattern and a residual plot for no pattern."). (1pt for condition and check).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

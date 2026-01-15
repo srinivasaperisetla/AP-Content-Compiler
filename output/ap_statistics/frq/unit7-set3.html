@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 3)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 3)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S3Q1"
+      data-difficulty="easy"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.Q,UNC-4.R,UNC-4.S"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A cereal company claims that its new cereal, "FiberBoost," contains an average of $30$ grams of fiber per serving. A consumer advocacy group is skeptical of this claim and decides to test it. They randomly select $15$ boxes of FiberBoost cereal and measure the fiber content (in grams) in one serving from each box. The sample mean is $28.5$ grams and the sample standard deviation is $3.2$ grams.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure for this situation. Verify the conditions necessary for constructing this confidence interval.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a $95\%$ confidence interval for the true mean fiber content per serving of FiberBoost cereal. Show all your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval calculated in part (b) in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a one-sample t-interval for a mean (1pt); Verifies conditions: Random sample, $n=15 < 30$ so approximately normal population OR no strong skew/outliers (assume met or state limitation) (1pt).</li>
+          
+          <li>Part b (2pts): Calculates the correct t-statistic critical value and margin of error (1pt); States the correct confidence interval (1pt). Calculation: $\bar{x} \pm t^* \frac{s}{\sqrt{n}}$ with $df = n-1 = 14$. $t^*_{0.025,14} \approx 2.145$. Interval: $28.5 \pm 2.145 \frac{3.2}{\sqrt{15}} = 28.5 \pm 1.77 = (26.73, 30.27)$.</li>
+          
+          <li>Part c (1pt): Provides a correct interpretation of the confidence interval in context (1pt). Interpretation: We are $95\%$ confident that the true mean fiber content per serving of FiberBoost cereal is between $26.73$ grams and $30.27$ grams.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S3Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A medical researcher is investigating a new drug designed to lower cholesterol levels. The drug manufacturer claims that the new drug will reduce cholesterol levels by an average of more than $15$ mg/dL in patients after one month of treatment. A random sample of $20$ patients with high cholesterol are given the drug for one month, and their cholesterol reduction is measured. The sample mean reduction is $17.2$ mg/dL with a standard deviation of $4.8$ mg/dL. Assume that a histogram of the sample data shows no strong skewness or outliers.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for this investigation. Define any parameters you use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify that the conditions for conducting a t-test for a population mean are met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test. Show all your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your results from part (c), what conclusion should the researcher make at the $\alpha = 0.05$ significance level? Justify your conclusion in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses and defines $\mu$ (1pt). $H_0: \mu = 15$ mg/dL, $H_a: \mu > 15$ mg/dL, where $\mu$ is the true mean cholesterol reduction for patients taking the drug.</li>
+          
+          <li>Part b (1pt): Verifies conditions: Random sample (stated), $n=20 < 30$ but assume population is approximately normal as sample has no strong skew or outliers (stated). (1pt)</li>
+          
+          <li>Part c (2pts): Calculates the correct test statistic (1pt); Calculates the correct p-value (1pt). Test statistic: $t = \frac{\bar{x} - \mu_0}{s/\sqrt{n}} = \frac{17.2 - 15}{4.8/\sqrt{20}} = \frac{2.2}{1.073} \approx 2.050$. Degrees of freedom $df = 19$. P-value: $P(t > 2.050) \approx 0.027$.</li>
+          
+          <li>Part d (2pts): Makes the correct decision regarding $H_0$ (1pt); States the correct conclusion in context with justification (1pt). Since p-value $0.027 < \alpha = 0.05$, we reject the null hypothesis. There is sufficient evidence to conclude that the new drug reduces cholesterol levels by an average of more than $15$ mg/dL.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S3Q3"
+      data-difficulty="hard"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="UNC-4.0,UNC-4.P,VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A company developing a new ergonomic keyboard wants to determine if it significantly improves typing speed compared to a standard keyboard. They recruit $12$ professional typists and have each typist type a standard passage on both the new ergonomic keyboard and their usual standard keyboard. The order in which the keyboards are used is randomized for each typist. The typing speeds (words per minute) are recorded for each typist on each keyboard. The differences in typing speed (New Keyboard - Standard Keyboard) are calculated for each typist. The sample mean difference is $5.3$ words per minute, and the sample standard deviation of the differences is $3.8$ words per minute. A dot plot of the differences shows no strong skewness or outliers.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Explain why a matched-pairs t-procedure is appropriate for this study design.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        State the null and alternative hypotheses for a test to determine if the new ergonomic keyboard significantly improves typing speed. Define any parameters you use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify that the conditions for this significance test are met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Calculate the test statistic and the p-value for this test. Based on your results and using a significance level of $\alpha = 0.01$, what conclusion should the company make? Justify your conclusion in context. Show all your work.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Explains that a matched-pairs design is used because each typist serves as their own control, reducing variability and allowing comparison of the two keyboards for the same individual (1pt).</li>
+          
+          <li>Part b (1pt): States correct null and alternative hypotheses and defines $\mu_d$ (1pt). $H_0: \mu_d = 0$, $H_a: \mu_d > 0$, where $\mu_d$ is the true mean difference in typing speed (New - Standard) for professional typists.</li>
+          
+          <li>Part c (1pt): Verifies conditions: Random assignment of keyboard order for each typist ensures independence of differences (or random sample of typists); Differences are from a normal population or sample size is large enough (stated no strong skewness/outliers for $n=12$, which is reasonable for t-procedures). (1pt)</li>
+          
+          <li>Part d (3pts): Calculates the correct test statistic (1pt); Calculates the correct p-value (1pt); States the correct conclusion in context with justification (1pt). Test statistic: $t = \frac{\bar{d} - 0}{s_d/\sqrt{n}} = \frac{5.3 - 0}{3.8/\sqrt{12}} = \frac{5.3}{1.0969} \approx 4.832$. Degrees of freedom $df = 11$. P-value: $P(t > 4.832) < 0.001$. Conclusion: Since p-value ($< 0.001$) is less than $\alpha = 0.01$, we reject the null hypothesis. There is strong evidence that the new ergonomic keyboard significantly improves typing speed for professional typists.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S3Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.V,UNC-4.W,UNC-4.Y,UNC-4.Z,UNC-4.AA"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A nutritionist wants to compare the effectiveness of two different diet plans, Plan A and Plan B, on weight loss. A random sample of $25$ individuals follows Plan A for three months, and another independent random sample of $28$ individuals follows Plan B for three months. The weight loss (in pounds) for each individual is recorded. For Plan A: $\bar{x}_A = 12.8$ pounds, $s_A = 3.5$ pounds. For Plan B: $\bar{x}_B = 10.1$ pounds, $s_B = 4.2$ pounds. Assume that histograms of the sample data for both plans show no strong skewness or outliers.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure to estimate the difference in mean weight loss between Plan A and Plan B. Verify the conditions for constructing this confidence interval.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a $90\%$ confidence interval for the true difference in mean weight loss ($\mu_A - \mu_B$). Show all your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval calculated in part (b) in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your interval from part (b), does there appear to be a significant difference in the mean weight loss between the two diet plans at the $0.10$ significance level? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a two-sample t-interval for a difference of means (1pt); Verifies conditions: Two independent random samples (stated), $n_A=25, n_B=28$ (assume populations are approximately normal as sample data show no strong skew or outliers) (1pt).</li>
+          
+          <li>Part b (2pts): Calculates the correct t-statistic critical value and margin of error (1pt); States the correct confidence interval (1pt). Calculation: $(\bar{x}_A - \bar{x}_B) \pm t^* \sqrt{\frac{s_A^2}{n_A} + \frac{s_B^2}{n_B}}$. $df \approx \min(n_A-1, n_B-1) = 24$. For $90\%$ CI, $t^*_{0.05,24} \approx 1.711$. Diff: $12.8 - 10.1 = 2.7$. SE: $\sqrt{\frac{3.5^2}{25} + \frac{4.2^2}{28}} = \sqrt{0.49 + 0.63} = \sqrt{1.12} \approx 1.058$. Interval: $2.7 \pm 1.711(1.058) = 2.7 \pm 1.810 = (0.890, 4.510)$.</li>
+          
+          <li>Part c (1pt): Provides a correct interpretation of the confidence interval in context (1pt). Interpretation: We are $90\%$ confident that the true mean difference in weight loss between Plan A and Plan B ($\mu_A - \mu_B$) is between $0.890$ pounds and $4.510$ pounds.</li>
+          
+          <li>Part d (1pt): Makes a correct conclusion and justification (1pt). Since the $90\%$ confidence interval $(0.890, 4.510)$ does not contain $0$, there is convincing evidence of a significant difference in mean weight loss between the two diet plans at the $0.10$ significance level. Specifically, Plan A appears to result in greater weight loss on average.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S3Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E,4.A"
+      data-learning-objectives="VAR-7.F,VAR-7.G,VAR-7.H,VAR-7.1,DAT-3.G,DAT-3.H,UNC-4.AB"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A university claims that its graduates earn a higher average starting salary than graduates from a rival university. To investigate this claim, a random sample of $30$ recent graduates from University X reports an average starting salary of $\$58,000$ with a standard deviation of $\$7,500$. An independent random sample of $35$ recent graduates from University Y reports an average starting salary of $\$55,000$ with a standard deviation of $\$6,000$. Assume that distributions of starting salaries for both universities are approximately normal.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses to test the university's claim. Define any parameters you use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions necessary for conducting a two-sample t-test for the difference between two population means.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test. Based on your results and using a significance level of $\alpha = 0.05$, what conclusion should the university make regarding its claim? Justify your conclusion in context. Show all your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        If a $95\%$ confidence interval for the true difference in mean starting salaries ($\mu_X - \mu_Y$) were constructed using these samples, and then the sample sizes were increased to $n_X=60$ and $n_Y=70$ (while keeping $\bar{x}$ and $s$ the same), how would this affect the width of the confidence interval?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses and defines $\mu_X$ and $\mu_Y$ (1pt). $H_0: \mu_X - \mu_Y = 0$ (or $\mu_X = \mu_Y$), $H_a: \mu_X - \mu_Y > 0$ (or $\mu_X > \mu_Y$), where $\mu_X$ is the true mean starting salary for graduates of University X and $\mu_Y$ is the true mean starting salary for graduates of University Y.</li>
+          
+          <li>Part b (1pt): Verifies conditions: Two independent random samples (stated), $n_X=30, n_Y=35$ (both $\ge 30$, so approximately normal population is reasonable, or stated as approximately normal). (1pt)</li>
+          
+          <li>Part c (3pts): Calculates the correct test statistic (1pt); Calculates the correct p-value (1pt); States the correct conclusion in context with justification (1pt). Test statistic: $t = \frac{(\bar{x}_X - \bar{x}_Y) - 0}{\sqrt{\frac{s_X^2}{n_X} + \frac{s_Y^2}{n_Y}}} = \frac{(58000 - 55000) - 0}{\sqrt{\frac{7500^2}{30} + \frac{6000^2}{35}}} = \frac{3000}{\sqrt{1875000 + 1028571.43}} = \frac{3000}{\sqrt{2903571.43}} = \frac{3000}{1704.045} \approx 1.760$. Degrees of freedom $df \approx \min(30-1, 35-1) = 29$. P-value: $P(t > 1.760) \approx 0.044$. Conclusion: Since p-value $0.044 < \alpha = 0.05$, we reject the null hypothesis. There is sufficient evidence to support the university's claim that its graduates earn a higher average starting salary than graduates from the rival university.</li>
+          
+          <li>Part d (1pt): Correctly describes the effect of increasing sample sizes on the width of the confidence interval (1pt). Description: Increasing both sample sizes would decrease the standard error for the difference of means, which would decrease the margin of error and thus make the $95\%$ confidence interval narrower.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

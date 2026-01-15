@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AP Statistics — Unit 6: Inference for Categorical Data: Proportions MCQ Set</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-size: 0.95rem;
+      }
+
+      .data-table th,
+      .data-table td {
+        border: 1px solid #ccc;
+        padding: 0.5rem 0.75rem;
+        text-align: center;
+      }
+
+      .data-table th {
+        background-color: #f2f2f2;
+        font-weight: 600;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+        color: #333;
+      }
+
+      h1 {
+        border-bottom: 2px solid #333;
+        padding-bottom: 0.5rem;
+      }
+
+      .question-card {
+        border: 1px solid #ddd;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        border-radius: 8px;
+        background-color: #fafafa;
+        break-inside: avoid;
+      }
+
+      .question-header {
+        margin-bottom: 0.75rem;
+        font-size: 0.95rem;
+        color: #666;
+      }
+
+      .question-text {
+        font-weight: 600;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+      }
+
+      .diagram {
+        margin: 1rem 0;
+        text-align: center;
+        border: 1px solid #eee;
+        background: white;
+        padding: 10px;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+        max-height: 400px;
+        display: inline-block;
+      }
+
+      .choices {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .choices li {
+        margin-bottom: 0.5rem;
+      }
+
+      .key-section {
+        margin-top: 4rem;
+        border-top: 4px solid #333;
+        padding-top: 2rem;
+      }
+
+      .key-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 1rem;
+      }
+
+      @media print {
+        .question-card {
+          border: none;
+          padding: 0;
+          margin-bottom: 3rem;
+        }
+        .diagram {
+          border: 1px solid #ccc;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics — Unit 6: Inference for Categorical Data: Proportions</h1>
+
+    <hr />
+
+    <div class="mcq-container">
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U6S20Q1"
+        data-difficulty="easy"
+        data-skill-codes="4.B"
+        data-learning-objectives="DAT-3.A"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q1.</strong> (ID: ap_statistics_MCQ_U6S20Q1)
+        </div>
+
+        
+
+        <div class="question-text">A marketing company wants to determine if more than 30% of adults prefer a new brand of coffee. They conduct a hypothesis test and obtain a p-value of $0.015$. Which of the following is the correct interpretation of this p-value?</div>
+
+        <ul class="choices">
+          
+          <li>A. The probability that more than 30% of adults prefer the new coffee brand is $0.015$.</li>
+          
+          <li>B. If the true proportion of adults who prefer the new coffee brand is 30%, there is a $0.015$ probability of observing a sample proportion as extreme as, or more extreme than, the one observed.</li>
+          
+          <li>C. There is a $1.5\%$ chance that the marketing company's conclusion is incorrect.</li>
+          
+          <li>D. The probability that the marketing company's sample is wrong is $0.015$.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U6S20Q2"
+        data-difficulty="medium"
+        data-skill-codes="4.E"
+        data-learning-objectives="DAT-3.B"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q2.</strong> (ID: ap_statistics_MCQ_U6S20Q2)
+        </div>
+
+        
+
+        <div class="question-text">A quality control manager claims that less than 5% of a company's products are defective. A random sample of 200 products finds 6 defective items. A significance test for $H_0: p = 0.05$ versus $H_a: p < 0.05$ yields a p-value of $0.18$. What conclusion should the manager draw at the $\alpha = 0.05$ significance level?</div>
+
+        <ul class="choices">
+          
+          <li>A. Reject $H_0$ because the p-value is greater than $\alpha$, providing convincing evidence that less than 5% of products are defective.</li>
+          
+          <li>B. Fail to reject $H_0$ because the p-value is greater than $\alpha$, failing to provide convincing evidence that less than 5% of products are defective.</li>
+          
+          <li>C. Reject $H_0$ because the sample proportion $\hat{p} = 0.03$ is less than $0.05$, providing convincing evidence that less than 5% of products are defective.</li>
+          
+          <li>D. Fail to reject $H_0$ because the p-value is less than $\alpha$, failing to provide convincing evidence that less than 5% of products are defective.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U6S20Q3"
+        data-difficulty="medium"
+        data-skill-codes="4.B"
+        data-learning-objectives="DAT-3.C"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q3.</strong> (ID: ap_statistics_MCQ_U6S20Q3)
+        </div>
+
+        
+
+        <div class="question-text">Researchers conducted an experiment to compare the effectiveness of two different fertilizers, A and B, on fruit production. They randomly assigned 100 plants to fertilizer A and 120 plants to fertilizer B. The proportion of plants producing fruit was recorded for each group. A test of $H_0: p_A = p_B$ versus $H_a: p_A \ne p_B$ resulted in a p-value of $0.038$. Which of the following is the correct interpretation of this p-value?</div>
+
+        <ul class="choices">
+          
+          <li>A. There is a $3.8\%$ chance that fertilizers A and B have different effects on fruit production.</li>
+          
+          <li>B. Assuming there is no difference in the true proportion of plants producing fruit for fertilizers A and B, there is a $0.038$ probability of observing a difference in sample proportions as extreme as, or more extreme than, the one observed.</li>
+          
+          <li>C. If fertilizer A is truly better than fertilizer B, the probability of observing these results is $0.038$.</li>
+          
+          <li>D. There is a $0.038$ probability that the null hypothesis is true.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U6S20Q4"
+        data-difficulty="medium"
+        data-skill-codes="4.E"
+        data-learning-objectives="DAT-3.D"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q4.</strong> (ID: ap_statistics_MCQ_U6S20Q4)
+        </div>
+
+        
+
+        <div class="question-text">A study compared the proportion of students who passed a statistics exam after using two different study methods. Of 80 students using Method 1, 64 passed. Of 90 students using Method 2, 63 passed. A test of $H_0: p_1 = p_2$ versus $H_a: p_1 > p_2$ resulted in a p-value of $0.041$. At a significance level of $\alpha = 0.05$, what conclusion should be made?</div>
+
+        <ul class="choices">
+          
+          <li>A. Reject $H_0$. There is convincing evidence that Method 1 results in a higher proportion of students passing the exam than Method 2.</li>
+          
+          <li>B. Fail to reject $H_0$. There is not convincing evidence that Method 1 results in a higher proportion of students passing the exam than Method 2.</li>
+          
+          <li>C. Reject $H_0$. There is convincing evidence that Method 2 results in a higher proportion of students passing the exam than Method 1.</li>
+          
+          <li>D. Fail to reject $H_0$. There is convincing evidence that the proportions of students passing are different for the two methods.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U6S20Q5"
+        data-difficulty="easy"
+        data-skill-codes="1.D"
+        data-learning-objectives="UNC-4.A"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q5.</strong> (ID: ap_statistics_MCQ_U6S20Q5)
+        </div>
+
+        
+
+        <div class="question-text">A researcher wants to estimate the true proportion of high school students in a large city who own a smartphone. A random sample of 150 high school students is selected, and 120 of them own a smartphone. Which of the following is the most appropriate procedure to construct a confidence interval for the true proportion?</div>
+
+        <ul class="choices">
+          
+          <li>A. One-sample z-interval for a proportion.</li>
+          
+          <li>B. One-sample t-interval for a mean.</li>
+          
+          <li>C. Two-sample z-interval for a difference in proportions.</li>
+          
+          <li>D. Two-sample t-interval for a difference in means.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U6S20Q6"
+        data-difficulty="medium"
+        data-skill-codes="4.C"
+        data-learning-objectives="UNC-4.B"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q6.</strong> (ID: ap_statistics_MCQ_U6S20Q6)
+        </div>
+
+        
+
+        <div class="question-text">A political pollster wants to estimate the proportion of voters in a state who approve of the governor's performance. They survey a random sample of 500 registered voters. Which of the following conditions is NOT required to construct a valid confidence interval for a population proportion?</div>
+
+        <ul class="choices">
+          
+          <li>A. The sample size must be less than 10% of the population size.</li>
+          
+          <li>B. The number of successes and failures in the sample must both be at least 10.</li>
+          
+          <li>C. The population distribution must be approximately normal.</li>
+          
+          <li>D. The sample must be a random sample from the population of interest.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U6S20Q7"
+        data-difficulty="hard"
+        data-skill-codes="3.D"
+        data-learning-objectives="UNC-4.C"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q7.</strong> (ID: ap_statistics_MCQ_U6S20Q7)
+        </div>
+
+        
+
+        <div class="question-text">A sociologist wants to estimate the proportion of single-parent households in a certain county with a 95% confidence interval and a margin of error of no more than $\pm 0.03$. What is the minimum sample size required if no prior estimate of the proportion is available?</div>
+
+        <ul class="choices">
+          
+          <li>A. 784</li>
+          
+          <li>B. 1068</li>
+          
+          <li>C. 1112</li>
+          
+          <li>D. 2135</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U6S20Q8"
+        data-difficulty="medium"
+        data-skill-codes="3.D"
+        data-learning-objectives="UNC-4.D"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q8.</strong> (ID: ap_statistics_MCQ_U6S20Q8)
+        </div>
+
+        
+
+        <div class="question-text">In a random sample of 250 high school seniors, 180 reported that they plan to attend a 4-year college. Calculate a 90% confidence interval for the true proportion of all high school seniors who plan to attend a 4-year college.</div>
+
+        <ul class="choices">
+          
+          <li>A. $(0.673, 0.767)$</li>
+          
+          <li>B. $(0.686, 0.754)$</li>
+          
+          <li>C. $(0.692, 0.748)$</li>
+          
+          <li>D. $(0.701, 0.739)$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U6S20Q9"
+        data-difficulty="easy"
+        data-skill-codes="3.D"
+        data-learning-objectives="UNC-4.E"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q9.</strong> (ID: ap_statistics_MCQ_U6S20Q9)
+        </div>
+
+        
+
+        <div class="question-text">A 99% confidence interval for the proportion of customers who are satisfied with a store's service is found to be $(0.78, 0.86)$. Based on this interval, what is the point estimate for the true proportion of satisfied customers and the margin of error?</div>
+
+        <ul class="choices">
+          
+          <li>A. Point estimate: $0.82$; Margin of error: $0.04$</li>
+          
+          <li>B. Point estimate: $0.82$; Margin of error: $0.08$</li>
+          
+          <li>C. Point estimate: $0.78$; Margin of error: $0.04$</li>
+          
+          <li>D. Point estimate: $0.86$; Margin of error: $0.08$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U6S20Q10"
+        data-difficulty="medium"
+        data-skill-codes="4.B"
+        data-learning-objectives="UNC-4.F"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q10.</strong> (ID: ap_statistics_MCQ_U6S20Q10)
+        </div>
+
+        
+        <div class="diagram">
+           <svg width="300" height="100" viewBox="0 0 300 100">\n  <rect x="0" y="0" width="300" height="100" fill="white"/>\n  <line x1="50" y1="50" x2="250" y2="50" stroke="black" stroke-width="1"/>\n  <line x1="50" y1="50" x2="50" y2="45" stroke="black" stroke-width="1"/>\n  <line x1="250" y1="50" x2="250" y2="45" stroke="black" stroke-width="1"/>\n  <text x="45" y="65" font-family="Arial" font-size="12" fill="black">0.5</text>\n  <text x="245" y="65" font-family="Arial" font-size="12" fill="black">0.7</text>\n  <line x1="130" y1="40" x2="190" y2="40" stroke="darkgray" stroke-width="4"/>\n  <line x1="130" y1="40" x2="130" y2="45" stroke="darkgray" stroke-width="1"/>\n  <line x1="190" y1="40" x2="190" y2="45" stroke="darkgray" stroke-width="1"/>\n  <text x="120" y="35" font-family="Arial" font-size="12" fill="darkgray">0.58</text>\n  <text x="180" y="35" font-family="Arial" font-size="12" fill="darkgray">0.64</text>\n</svg> 
+        </div>
+        
+
+        <div class="question-text">A 95% confidence interval for the proportion of residents in a city who support a new public park is calculated to be $(0.58, 0.64)$. The interval is shown below on a number line. Which of the following is the correct interpretation of this interval?</div>
+
+        <ul class="choices">
+          
+          <li>A. We are 95% confident that the true proportion of residents who support the new park is between 58% and 64%.</li>
+          
+          <li>B. There is a 95% probability that the true proportion of residents who support the new park is between 58% and 64%.</li>
+          
+          <li>C. 95% of residents in the sample support the new park.</li>
+          
+          <li>D. If this procedure were repeated many times, 95% of the resulting confidence intervals would contain the sample proportion of 0.61.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U6S20Q11"
+        data-difficulty="medium"
+        data-skill-codes="4.D"
+        data-learning-objectives="UNC-4.G"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q11.</strong> (ID: ap_statistics_MCQ_U6S20Q11)
+        </div>
+
+        
+
+        <div class="question-text">A company claims that 70% of its customers are satisfied with its product. A recent survey resulted in a 95% confidence interval for the true proportion of satisfied customers as $(0.63, 0.69)$. Based on this interval, what can be concluded about the company's claim?</div>
+
+        <ul class="choices">
+          
+          <li>A. The claim is supported because 70% is outside the interval, suggesting the true proportion is likely higher.</li>
+          
+          <li>B. The claim is supported because the interval is narrow, indicating high precision.</li>
+          
+          <li>C. The claim is not supported because 70% is outside the interval, suggesting the true proportion is likely lower than claimed.</li>
+          
+          <li>D. The claim is not supported because the interval is completely below 0.70, suggesting the true proportion is likely higher than claimed.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U6S20Q12"
+        data-difficulty="medium"
+        data-skill-codes="4.A"
+        data-learning-objectives="UNC-4.H"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q12.</strong> (ID: ap_statistics_MCQ_U6S20Q12)
+        </div>
+
+        
+
+        <div class="question-text">Which of the following would result in a *smaller* margin of error for a confidence interval for a population proportion, assuming all other factors remain constant?</div>
+
+        <ul class="choices">
+          
+          <li>A. Decreasing the sample size.</li>
+          
+          <li>B. Increasing the confidence level.</li>
+          
+          <li>C. Increasing the sample size.</li>
+          
+          <li>D. Using a lower value for $\hat{p}$ when $\hat{p}$ is far from $0.5$.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U6S20Q13"
+        data-difficulty="easy"
+        data-skill-codes="1.F"
+        data-learning-objectives="VAR-6.D"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q13.</strong> (ID: ap_statistics_MCQ_U6S20Q13)
+        </div>
+
+        
+
+        <div class="question-text">A newspaper claims that 60% of city residents read their daily paper. A concerned citizen believes this proportion is lower. Which of the following are the appropriate null and alternative hypotheses to test the citizen's belief?</div>
+
+        <ul class="choices">
+          
+          <li>A. $H_0: p = 0.60, H_a: p \ne 0.60$</li>
+          
+          <li>B. $H_0: p = 0.60, H_a: p < 0.60$</li>
+          
+          <li>C. $H_0: \hat{p} = 0.60, H_a: \hat{p} < 0.60$</li>
+          
+          <li>D. $H_0: p < 0.60, H_a: p \ge 0.60$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U6S20Q14"
+        data-difficulty="easy"
+        data-skill-codes="1.E"
+        data-learning-objectives="VAR-6.E"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q14.</strong> (ID: ap_statistics_MCQ_U6S20Q14)
+        </div>
+
+        
+
+        <div class="question-text">A company wants to determine if the proportion of defective items produced on a new assembly line is greater than 2%. They collect a random sample of 300 items and find 9 defective. Which of the following is the most appropriate inference procedure to test this claim?</div>
+
+        <ul class="choices">
+          
+          <li>A. One-sample z-test for a population proportion.</li>
+          
+          <li>B. One-sample t-test for a population mean.</li>
+          
+          <li>C. Two-sample z-test for a difference in population proportions.</li>
+          
+          <li>D. Chi-square test for independence.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U6S20Q15"
+        data-difficulty="medium"
+        data-skill-codes="4.C"
+        data-learning-objectives="VAR-6.F"
+        data-correct-index="3"
+      >
+        <div class="question-header">
+          <strong>Q15.</strong> (ID: ap_statistics_MCQ_U6S20Q15)
+        </div>
+
+        
+
+        <div class="question-text">A researcher plans to conduct a hypothesis test to determine if the proportion of voters who support a new policy is different from 0.50. A random sample of 120 voters is selected, and 75 support the policy. Which of the following conditions for a one-sample z-test for proportions has NOT been met?</div>
+
+        <ul class="choices">
+          
+          <li>A. The data come from a random sample.</li>
+          
+          <li>B. The sample size is less than 10% of the population.</li>
+          
+          <li>C. The number of expected successes and failures are both at least 10.</li>
+          
+          <li>D. All conditions have been met.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U6S20Q16"
+        data-difficulty="medium"
+        data-skill-codes="3.E"
+        data-learning-objectives="VAR-6.G"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q16.</strong> (ID: ap_statistics_MCQ_U6S20Q16)
+        </div>
+
+        
+
+        <div class="question-text">A medical professional claims that 15% of children have a certain allergy. A random sample of 200 children is tested, and 22 are found to have the allergy. Calculate the test statistic for a hypothesis test to determine if the true proportion of children with the allergy is different from 15%.</div>
+
+        <ul class="choices">
+          
+          <li>A. $z = \frac{0.11 - 0.15}{\sqrt{\frac{0.15(0.85)}{200}}}$</li>
+          
+          <li>B. $z = \frac{0.11 - 0.15}{\sqrt{\frac{0.11(0.89)}{200}}}$</li>
+          
+          <li>C. $z = \frac{0.15 - 0.11}{\sqrt{\frac{0.15(0.85)}{200}}}$</li>
+          
+          <li>D. $z = \frac{0.15 - 0.11}{\sqrt{\frac{0.11(0.89)}{200}}}$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U6S20Q17"
+        data-difficulty="medium"
+        data-skill-codes="1.B"
+        data-learning-objectives="UNC-5.A"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q17.</strong> (ID: ap_statistics_MCQ_U6S20Q17)
+        </div>
+
+        
+
+        <div class="question-text">A researcher conducts a hypothesis test to determine if a new drug is effective in preventing a certain disease. The null hypothesis is that the drug is not effective ($p_{new} = p_{old}$), and the alternative hypothesis is that the drug is effective ($p_{new} < p_{old}$). What would be a Type I error in this context?</div>
+
+        <ul class="choices">
+          
+          <li>A. Concluding the drug is effective when it is actually not effective.</li>
+          
+          <li>B. Concluding the drug is not effective when it actually is effective.</li>
+          
+          <li>C. Concluding the drug is effective when it is actually effective.</li>
+          
+          <li>D. Concluding the drug is not effective when it is actually not effective.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U6S20Q18"
+        data-difficulty="easy"
+        data-skill-codes="3.A"
+        data-learning-objectives="UNC-5.B"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q18.</strong> (ID: ap_statistics_MCQ_U6S20Q18)
+        </div>
+
+        
+
+        <div class="question-text">A hypothesis test is conducted at a significance level of $\alpha = 0.05$. What is the probability of making a Type I error?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.05$</li>
+          
+          <li>B. $0.95$</li>
+          
+          <li>C. $0.10$</li>
+          
+          <li>D. It cannot be determined without knowing the true population proportion.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U6S20Q19"
+        data-difficulty="hard"
+        data-skill-codes="4.A"
+        data-learning-objectives="UNC-5.C"
+        data-correct-index="2"
+      >
+        <div class="question-header">
+          <strong>Q19.</strong> (ID: ap_statistics_MCQ_U6S20Q19)
+        </div>
+
+        
+
+        <div class="question-text">Which of the following actions would *decrease* the probability of a Type II error, assuming the significance level $\alpha$ remains constant?</div>
+
+        <ul class="choices">
+          
+          <li>A. Decreasing the sample size.</li>
+          
+          <li>B. Decreasing the true difference between the hypothesized parameter and the actual parameter.</li>
+          
+          <li>C. Increasing the power of the test.</li>
+          
+          <li>D. Changing a two-sided test to a one-sided test, moving the critical value further from the null parameter.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U6S20Q20"
+        data-difficulty="medium"
+        data-skill-codes="4.B"
+        data-learning-objectives="UNC-5.D"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q20.</strong> (ID: ap_statistics_MCQ_U6S20Q20)
+        </div>
+
+        
+
+        <div class="question-text">A medical device company tests new pacemakers. The null hypothesis is that the proportion of defective pacemakers is $0.01$. The alternative is that the proportion is greater than $0.01$. A Type II error would occur if the company:</div>
+
+        <ul class="choices">
+          
+          <li>A. Concludes the proportion of defective pacemakers is greater than $0.01$ when it is actually $0.01$.</li>
+          
+          <li>B. Concludes the proportion of defective pacemakers is $0.01$ when it is actually greater than $0.01$.</li>
+          
+          <li>C. Concludes the proportion of defective pacemakers is $0.01$ when it is actually $0.01$.</li>
+          
+          <li>D. Concludes the proportion of defective pacemakers is greater than $0.01$ when it is actually greater than $0.01$.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U6S20Q21"
+        data-difficulty="easy"
+        data-skill-codes="1.D"
+        data-learning-objectives="UNC-4.I"
+        data-correct-index="1"
+      >
+        <div class="question-header">
+          <strong>Q21.</strong> (ID: ap_statistics_MCQ_U6S20Q21)
+        </div>
+
+        
+
+        <div class="question-text">Researchers want to estimate the difference in the proportion of voters who support a new bond measure between two different electoral districts. They take a random sample of 200 voters from District A and 250 voters from District B. Which of the following is the most appropriate procedure to construct a confidence interval for the difference in population proportions?</div>
+
+        <ul class="choices">
+          
+          <li>A. One-sample z-interval for a proportion.</li>
+          
+          <li>B. Two-sample z-interval for a difference in proportions.</li>
+          
+          <li>C. Paired t-interval for a mean difference.</li>
+          
+          <li>D. Chi-square test for homogeneity.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U6S20Q22"
+        data-difficulty="medium"
+        data-skill-codes="4.C"
+        data-learning-objectives="UNC-4.J"
+        data-correct-index="3"
+      >
+        <div class="question-header">
+          <strong>Q22.</strong> (ID: ap_statistics_MCQ_U6S20Q22)
+        </div>
+
+        
+
+        <div class="question-text">A study is designed to compare the proportion of high school students who smoke in two different states. A random sample of 300 students from State 1 found 30 smokers, while a random sample of 250 students from State 2 found 20 smokers. Which condition for constructing a two-sample z-interval for a difference in proportions is NOT met?</div>
+
+        <ul class="choices">
+          
+          <li>A. The samples are independent random samples.</li>
+          
+          <li>B. Both sample sizes are less than 10% of their respective populations.</li>
+          
+          <li>C. The number of successes and failures in each sample are all at least 10.</li>
+          
+          <li>D. All conditions are met.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U6S20Q23"
+        data-difficulty="medium"
+        data-skill-codes="3.D"
+        data-learning-objectives="UNC-4.K"
+        data-correct-index="3"
+      >
+        <div class="question-header">
+          <strong>Q23.</strong> (ID: ap_statistics_MCQ_U6S20Q23)
+        </div>
+
+        
+        <div class="diagram">
+           <table class='data-table'><thead><tr><th>Strategy</th><th>Customers Preferred</th><th>Total Customers</th></tr></thead><tbody><tr><td>A</td><td>160</td><td>200</td></tr><tr><td>B</td><td>120</td><td>200</td></tr></tbody></table>
+          
+        </div>
+        
+
+        <div class="question-text">In a study comparing two marketing strategies, 160 out of 200 customers preferred Strategy A, while 120 out of 200 customers preferred Strategy B. What is a 95% confidence interval for the difference in the true proportion of customers who prefer Strategy A versus Strategy B ($p_A - p_B$)?</div>
+
+        <ul class="choices">
+          
+          <li>A. $(0.083, 0.317)$</li>
+          
+          <li>B. $(0.091, 0.309)$</li>
+          
+          <li>C. $(0.101, 0.299)$</li>
+          
+          <li>D. $(0.115, 0.285)$</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U6S20Q24"
+        data-difficulty="easy"
+        data-skill-codes="3.D"
+        data-learning-objectives="UNC-4.L"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q24.</strong> (ID: ap_statistics_MCQ_U6S20Q24)
+        </div>
+
+        
+
+        <div class="question-text">A 95% confidence interval for the difference in the proportion of males and females who own a specific type of car ($p_M - p_F$) is calculated as $(0.03, 0.09)$. Based on this interval, what is the best point estimate for the difference in true proportions?</div>
+
+        <ul class="choices">
+          
+          <li>A. $0.06$</li>
+          
+          <li>B. $0.03$</li>
+          
+          <li>C. $0.09$</li>
+          
+          <li>D. It cannot be determined from the interval.</li>
+          
+        </ul>
+      </div>
+      
+      <div
+        class="question-card"
+        id="ap_statistics_MCQ_U6S20Q25"
+        data-difficulty="medium"
+        data-skill-codes="4.B"
+        data-learning-objectives="UNC-4.M"
+        data-correct-index="0"
+      >
+        <div class="question-header">
+          <strong>Q25.</strong> (ID: ap_statistics_MCQ_U6S20Q25)
+        </div>
+
+        
+
+        <div class="question-text">A 90% confidence interval for the difference in the proportion of males and females who support a candidate ($p_M - p_F$) is calculated as $(0.02, 0.10)$. Which of the following is the correct interpretation of this interval?</div>
+
+        <ul class="choices">
+          
+          <li>A. We are 90% confident that the proportion of males supporting the candidate is between 2% and 10% higher than the proportion of females.</li>
+          
+          <li>B. We are 90% confident that the proportion of males supporting the candidate is between 2% and 10%.</li>
+          
+          <li>C. There is a 90% chance that the candidate will receive between 2% and 10% more votes from males than females.</li>
+          
+          <li>D. 90% of all random samples would show a difference in proportions between 0.02 and 0.10.</li>
+          
+        </ul>
+      </div>
+      
+    </div>
+
+    <div class="key-section">
+      <h2>Answer Key</h2>
+
+      <div class="key-grid">
+        
+        <div>
+          <strong>1.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>2.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>3.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>4.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>5.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>6.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>7.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>8.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>9.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>10.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>11.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>12.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>13.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>14.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>15.</strong>
+          D
+        </div>
+        
+        <div>
+          <strong>16.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>17.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>18.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>19.</strong>
+          C
+        </div>
+        
+        <div>
+          <strong>20.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>21.</strong>
+          B
+        </div>
+        
+        <div>
+          <strong>22.</strong>
+          D
+        </div>
+        
+        <div>
+          <strong>23.</strong>
+          D
+        </div>
+        
+        <div>
+          <strong>24.</strong>
+          A
+        </div>
+        
+        <div>
+          <strong>25.</strong>
+          A
+        </div>
+        
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 6)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 6)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S6Q1"
+      data-difficulty="easy"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.Q,UNC-4.R,UNC-4.S,UNC-4.T"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A company manufactures light bulbs and claims that the average lifespan of their new LED bulb is 15,000 hours. A consumer advocacy group suspects this claim is too high and takes a random sample of 30 bulbs. They find a sample mean lifespan of $\bar{x} = 14,750$ hours with a standard deviation of $s = 500$ hours.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure by name and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the true mean lifespan of the LED bulbs.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on this confidence interval, does the consumer group have evidence to dispute the company's claim that the average lifespan is 15,000 hours? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly identifies a one-sample t-interval for a population mean (1pt); Verifies conditions (random sample, $n \ge 30$ for approximate normality of sample mean or checks for skewness/outliers if $n < 30$) (1pt)</li>
+          
+          <li>Part b (1pt): Correctly calculates the 95% confidence interval (e.g., $14750 \pm t^* \frac{500}{\sqrt{30}}$, resulting in approx $(14560.8, 14939.2)$) (1pt)</li>
+          
+          <li>Part c (1pt): Correctly interprets the confidence interval in context (e.g., "We are 95% confident that the true mean lifespan of the LED bulbs is between 14560.8 and 14939.2 hours.") (1pt)</li>
+          
+          <li>Part d (1pt): Compares the claimed value to the interval and justifies the conclusion (e.g., "Since 15,000 hours is not contained within the 95% confidence interval, the consumer group has statistically significant evidence to dispute the company's claim.") (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S6Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A university claims that the average GPA of its graduating students is 3.0. A concerned alumni group believes the average GPA might have decreased. They take a random sample of 40 graduating students and find their average GPA is $\bar{x} = 2.92$ with a standard deviation of $s = 0.35$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for this study and identify the appropriate inference procedure by name.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for conducting this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the p-value in context and state a conclusion at the $\alpha = 0.05$ significance level.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States $H_0: \mu = 3.0$ and $H_a: \mu < 3.0$ (1pt); Identifies a one-sample t-test for a population mean (1pt)</li>
+          
+          <li>Part b (1pt): Verifies conditions (random sample, $n=40 \ge 30$ for approximate normality of sample mean) (1pt)</li>
+          
+          <li>Part c (1pt): Calculates test statistic $t = \frac{2.92 - 3.0}{0.35/\sqrt{40}} \approx -1.447$ (0.5pt); Finds p-value (e.g., using $df=39$, $P(t < -1.447) \approx 0.0776$) (0.5pt)</li>
+          
+          <li>Part d (2pts): Interprets the p-value (e.g., "Assuming the true mean GPA is 3.0, there is a 0.0776 probability of observing a sample mean GPA of 2.92 or less by random chance.") (1pt); States conclusion (e.g., "Since the p-value of 0.0776 is greater than $\alpha = 0.05$, we fail to reject the null hypothesis. There is not sufficient evidence to conclude that the average GPA of graduating students has decreased.") (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S6Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D,4.A"
+      data-learning-objectives="UNC-4.V,UNC-4.W,UNC-4.X,UNC-4.Y,UNC-4.Z,UNC-4.AA,UNC-4.AB"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A horticultural researcher wants to compare the effectiveness of two different fertilizers, Fertilizer A and Fertilizer B, on the growth of tomato plants. They prepare 25 identical pots and randomly assign Fertilizer A to 12 pots and Fertilizer B to the remaining 13 pots. After a growing season, the total yield (in kg) from each plant is measured. The results are summarized below:</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Fertilizer</th><th>Sample Size ($n$)</th><th>Mean Yield ($\bar{x}$ in kg)</th><th>Standard Deviation ($s$ in kg)</th></tr></thead><tbody><tr><td>Fertilizer A</td><td>12</td><td>18.5</td><td>2.1</td></tr><tr><td>Fertilizer B</td><td>13</td><td>17.0</td><td>1.8</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure by name and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 90% confidence interval for the difference in mean tomato yield (Fertilizer A - Fertilizer B).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on this confidence interval, what can the researcher conclude about the effectiveness of the two fertilizers? Suppose the researcher wanted a narrower confidence interval. Identify two ways the researcher could achieve this, other than changing the confidence level.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly identifies a two-sample t-interval for a difference of means (1pt); Verifies conditions (two independent random samples, check for approximate normality by inspecting summary stats or original data if available) (1pt)</li>
+          
+          <li>Part b (1pt): Correctly calculates the 90% confidence interval for $\mu_A - \mu_B$ (e.g., using $t^*$ and $\bar{x}_A - \bar{x}_B \pm t^* \sqrt{\frac{s_A^2}{n_A} + \frac{s_B^2}{n_B}}$, resulting in approx $(0.09, 2.91)$) (1pt)</li>
+          
+          <li>Part c (1pt): Correctly interprets the confidence interval in context (e.g., "We are 90% confident that the true difference in mean tomato yield between Fertilizer A and Fertilizer B is between 0.09 kg and 2.91 kg.") (1pt)</li>
+          
+          <li>Part d (2pts): Justifies a conclusion based on the interval (e.g., "Since the entire interval is positive, there is statistically significant evidence that Fertilizer A leads to a higher mean yield than Fertilizer B.") (1pt); Identifies two ways to narrow the interval (e.g., "Increase sample size, decrease standard deviation (by improving experimental control).") (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S6Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.F,VAR-7.G,VAR-7.H,VAR-7.1,DAT-3.G,DAT-3.H"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A pharmaceutical company is testing two new pain relievers, Drug X and Drug Y, to determine if there is a difference in the mean time it takes for them to alleviate headache pain. They conduct a double-blind experiment where 30 patients are randomly assigned to receive Drug X, and 30 different patients are randomly assigned to receive Drug Y. The time (in minutes) until pain relief is measured for each patient. The summary statistics are provided below:</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Drug</th><th>Sample Size ($n$)</th><th>Mean Relief Time ($\bar{x}$ in min)</th><th>Standard Deviation ($s$ in min)</th></tr></thead><tbody><tr><td>Drug X</td><td>30</td><td>25.8</td><td>6.2</td></tr><tr><td>Drug Y</td><td>30</td><td>29.5</td><td>5.5</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for this study and identify the appropriate inference procedure by name.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for conducting this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the p-value in context and state a conclusion at the $\alpha = 0.01$ significance level.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States $H_0: \mu_X = \mu_Y$ (or $\mu_X - \mu_Y = 0$) and $H_a: \mu_X \ne \mu_Y$ (or $\mu_X - \mu_Y \ne 0$) (1pt); Identifies a two-sample t-test for a difference of means (1pt)</li>
+          
+          <li>Part b (1pt): Verifies conditions (two independent random samples/random assignment, $n_X=30, n_Y=30 \ge 30$ for approximate normality of sample means) (1pt)</li>
+          
+          <li>Part c (1pt): Calculates test statistic $t = \frac{25.8 - 29.5}{\sqrt{\frac{6.2^2}{30} + \frac{5.5^2}{30}}} \approx -2.445$ (0.5pt); Finds p-value (e.g., for $df \approx 57$, $p\text{-value} \approx 0.017)$ (0.5pt)</li>
+          
+          <li>Part d (2pts): Interprets the p-value (e.g., "Assuming there is no difference in mean relief times, there is a 0.017 probability of observing a difference in sample means as extreme or more extreme than what was observed by random chance.") (1pt); States conclusion (e.g., "Since the p-value of 0.017 is greater than $\alpha = 0.01$, we fail to reject $H_0$. There is not sufficient evidence to conclude that there is a difference in mean relief times between Drug X and Drug Y.") (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S6Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.D,1.E,1.F,4.C,3.D,4.B,4.E"
+      data-learning-objectives="UNC-4.0,UNC-4.P,VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F,UNC-4.R,UNC-4.S"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A physical education teacher wants to investigate if a new warm-up routine improves students' performance in the long jump. The teacher randomly selects 15 students. Each student performs the long jump twice: once after their standard warm-up routine and once after the new warm-up routine. The order of warm-up routines is randomized for each student. The difference in long jump distance (New Routine - Standard Routine, in cm) is recorded for each student. The mean difference was $\bar{x}_d = 5.2$ cm with a standard deviation of $s_d = 8.5$ cm. A dot plot of the differences showed no strong skewness or outliers.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Explain why a matched-pairs procedure is appropriate for this study design.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        State the appropriate null and alternative hypotheses for a test to determine if the new warm-up routine improves long jump performance.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify the conditions for performing an appropriate significance test for the mean difference.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Calculate and interpret a 95% confidence interval for the mean difference in long jump performance.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Explains that matched pairs are appropriate because each student serves as their own control, reducing variability and accounting for individual differences in jumping ability. (1pt)</li>
+          
+          <li>Part b (1pt): States $H_0: \mu_d = 0$ and $H_a: \mu_d > 0$, where $\mu_d$ is the true mean difference (New - Standard). (1pt)</li>
+          
+          <li>Part c (1pt): Verifies conditions (random sample of students, paired data, dot plot shows no strong skewness or outliers for differences, so normality condition is met) (1pt)</li>
+          
+          <li>Part d (3pts): Calculates the 95% confidence interval for $\mu_d$ using $\bar{x}_d \pm t^* \frac{s_d}{\sqrt{n}}$ (1pt for calculation, e.g., $5.2 \pm 2.145 \frac{8.5}{\sqrt{15}}$); Correctly provides the interval (approx $(0.49, 9.91)$) (1pt); Interprets the interval in context (e.g., "We are 95% confident that the true mean improvement in long jump performance with the new routine is between 0.49 cm and 9.91 cm.") (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

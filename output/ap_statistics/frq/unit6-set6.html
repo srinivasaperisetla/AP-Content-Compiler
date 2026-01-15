@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 6)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 6)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S6Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.A,UNC-4.B,UNC-4.D,UNC-4.F"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A nationwide poll conducted by a research firm aimed to estimate the proportion of adult Americans who believe that climate change is a serious threat. In a random sample of $1200$ adult Americans, $756$ indicated that they believe climate change is a serious threat.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure for constructing a confidence interval for the true proportion of adult Americans who believe climate change is a serious threat. Then, verify the conditions required for this procedure.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Construct a $95\%$ confidence interval for the true proportion of adult Americans who believe climate change is a serious threat. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval constructed in part (b) in the context of this problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a one-sample z-interval for proportions (1pt); Verifies random sampling, independence ($10\%$ condition: $1200 < 10\%$ of all adult Americans), and large counts ($n\hat{p} = 756 \ge 10$ and $n(1-\hat{p}) = 444 \ge 10$) (1pt)</li>
+          
+          <li>Part b (2pts): Calculates the sample proportion $\hat{p}$ and correctly substitutes values into the confidence interval formula $\hat{p} \pm z^*\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$ (1pt); Calculates the confidence interval correctly (1pt)</li>
+          
+          <li>Part c (1pt): Interprets the confidence interval in context (e.g., "We are $95\%$ confident that the true proportion of all adult Americans who believe climate change is a serious threat is between X and Y") (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S6Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.D,VAR-6.E,VAR-6.F,VAR-6.G,DAT-3.A,DAT-3.B"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A local school district claims that $80\%$ of its high school seniors plan to attend a two- or four-year college after graduation. A local newspaper believes this claim is too high and conducts a survey. They randomly sample $150$ high school seniors from the district and find that $111$ plan to attend college.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a significance test to investigate the newspaper's belief. Define any parameters you use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the appropriate inference method and verify the conditions for performing this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your results in part (c), what conclusion should the newspaper draw at the $\alpha = 0.05$ significance level? Justify your conclusion in context, including an interpretation of the p-value.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses $H_0: p = 0.80$ and $H_a: p < 0.80$, where $p$ is the true proportion of high school seniors planning to attend college (1pt)</li>
+          
+          <li>Part b (1pt): Identifies a one-sample z-test for proportions (0.5pt); Verifies random sampling, independence ($150 < 10\%$ of all high school seniors in the district), and large counts ($np_0 = 150(0.80) = 120 \ge 10$ and $n(1-p_0) = 150(0.20) = 30 \ge 10$) (0.5pt)</li>
+          
+          <li>Part c (2pts): Calculates the sample proportion $\hat{p}$ and the test statistic $z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}}$ (1pt); Calculates the p-value (1pt)</li>
+          
+          <li>Part d (2pts): Compares p-value to $\alpha$ and states correct decision (reject/fail to reject $H_0$) (1pt); Justifies decision and interprets the p-value in context of the newspaper's belief (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S6Q3"
+      data-difficulty="hard"
+      data-skill-codes="1.B,3.A,4.A,4.B"
+      data-learning-objectives="UNC-5.A,UNC-5.B,UNC-5.C,UNC-5.D"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A new manufacturing process is designed to reduce the proportion of defective items produced. The old process had a defect rate of $5\%$. The company wants to test if the new process has a defect rate less than $5\%$. They will sample $200$ items and decide to reject the null hypothesis if the sample proportion of defectives is less than $0.03$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for this test. Describe what a Type I error would be in this context and what a Type II error would be in this context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain the consequences of a Type I error for the company in this scenario. Explain the consequences of a Type II error for the company in this scenario.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Suppose the true proportion of defective items for the new process is actually $0.02$. Describe how increasing the sample size would affect the probability of a Type II error, assuming the significance level remains constant.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (3pts): States $H_0: p = 0.05$ and $H_a: p < 0.05$ (1pt); Describes Type I error as incorrectly concluding the new process is better (defect rate $< 0.05$) when the true defect rate is still $0.05$ (1pt); Describes Type II error as failing to conclude the new process is better (defect rate $< 0.05$) when the true defect rate is actually less than $0.05$ (1pt)</li>
+          
+          <li>Part b (2pts): Explains a plausible consequence of a Type I error for the company (e.g., unnecessary investment in a non-improved process) (1pt); Explains a plausible consequence of a Type II error for the company (e.g., missed opportunity to implement a truly better process, continuing with higher defect rate) (1pt)</li>
+          
+          <li>Part c (1pt): States that increasing the sample size would decrease the probability of a Type II error (0.5pt); Explains why (e.g., larger samples provide more precise estimates and make it easier to detect a true difference/effect if one exists) (0.5pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S6Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.I,UNC-4.J,UNC-4.K,UNC-4.M,UNC-4.N"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A marketing firm wants to compare the effectiveness of two different ad campaigns (Campaign A and Campaign B) for a new smartphone app. They randomly assign $400$ potential users to see Campaign A and $350$ potential users to see Campaign B. After a week, $180$ people from Campaign A's group downloaded the app, and $147$ people from Campaign B's group downloaded the app.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure and verify the conditions for constructing a confidence interval for the difference in the true proportions of app downloads between Campaign A and Campaign B.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Construct a $90\%$ confidence interval for the difference in the true proportions of app downloads ($p_A - p_B$). Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on your confidence interval in part (b), does there appear to be a significant difference in the effectiveness of the two campaigns? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a two-sample z-interval for a difference in proportions (1pt); Verifies random assignment, independence of groups, independence within groups ($400 < 10\%$ of potential users, $350 < 10\%$ of potential users), and large counts for both groups ($n_A\hat{p}_A, n_A(1-\hat{p}_A), n_B\hat{p}_B, n_B(1-\hat{p}_B)$ are all $\ge 10$) (1pt)</li>
+          
+          <li>Part b (2pts): Calculates the sample proportions $\hat{p}_A$ and $\hat{p}_B$ and correctly substitutes values into the confidence interval formula $(\hat{p}_A - \hat{p}_B) \pm z^*\sqrt{\frac{\hat{p}_A(1-\hat{p}_A)}{n_A} + \frac{\hat{p}_B(1-\hat{p}_B)}{n_B}}$ (1pt); Calculates the confidence interval correctly (1pt)</li>
+          
+          <li>Part c (2pts): States whether there is a significant difference based on whether the interval contains $0$ (1pt); Justifies the claim in context, explaining what the interval implies about the difference between $p_A$ and $p_B$ (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S6Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.I,UNC-4.J,UNC-4.K,UNC-4.M,UNC-4.N"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A medical researcher wants to compare the effectiveness of two different medications for treating a certain skin condition. Patients with the condition were randomly assigned to one of two groups. Group A received Medication A, and Group B received Medication B. After one month, the researchers recorded whether each patient showed significant improvement.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Group</th><th>Number of Patients</th><th>Number with Significant Improvement</th></tr></thead><tbody><tr><td>Medication A</td><td>120</td><td>88</td></tr><tr><td>Medication B</td><td>130</td><td>85</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a $90\%$ confidence interval for the difference in the true proportions of patients who show significant improvement (Medication A - Medication B).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval in context. Based on this interval, is there convincing evidence of a difference in effectiveness between Medication A and Medication B? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly identifies a two-sample $z$-interval for a difference in proportions. Verifies conditions: Random assignment given. For Group A: $n_A\hat{p}_A = 88 \ge 10$ and $n_A(1-\hat{p}_A) = 32 \ge 10$. For Group B: $n_B\hat{p}_B = 85 \ge 10$ and $n_B(1-\hat{p}_B) = 45 \ge 10$. Assume sample sizes are less than $10\%$ of all possible patients (or large populations).</li>
+          
+          <li>Part b (3pts): Calculates $\hat{p}_A = \frac{88}{120} \approx 0.7333$, $\hat{p}_B = \frac{85}{130} \approx 0.6538$. $SE_{\hat{p}_A - \hat{p}_B} = \sqrt{\frac{0.7333(0.2667)}{120} + \frac{0.6538(0.3462)}{130}} \approx 0.05806$. For $90\%$ CI, $z^* = 1.645$. Interval: $(\hat{p}_A - \hat{p}_B) \pm z^* SE = (0.7333 - 0.6538) \pm 1.645(0.05806) = 0.0795 \pm 0.0955 = (-0.016, 0.175)$.</li>
+          
+          <li>Part c (2pts): Interprets the interval: "We are $90\%$ confident that the true difference in the proportions of patients showing significant improvement (Medication A - Medication B) is between $-0.016$ and $0.175$." States there is NOT convincing evidence of a difference in effectiveness because the interval contains $0$, meaning it is plausible there is no difference between the two medications.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

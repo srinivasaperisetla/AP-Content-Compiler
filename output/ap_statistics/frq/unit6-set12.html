@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 12)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 12)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S12Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.A,UNC-4.B,UNC-4.D,UNC-4.F,UNC-4.G"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A polling organization conducted a random sample of 1,000 likely voters and found that 580 supported Candidate A. The organization wants to estimate the true proportion of all likely voters who support Candidate A.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure and verify the conditions for constructing a confidence interval for the true proportion of likely voters who support Candidate A.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95 percent confidence interval for the true proportion of likely voters who support Candidate A.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the 95 percent confidence interval calculated in part (b) in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The organization claims that Candidate A has the support of a majority of likely voters. Based on the confidence interval, is there convincing statistical evidence to support this claim? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies a one-sample z-interval for a proportion and verifies conditions (random sample, $n\hat{p} \ge 10$, $n(1-\hat{p}) \ge 10$).</li>
+          
+          <li>Part b (2pts): Calculates the confidence interval correctly, showing work for $\hat{p} = 0.58$ and $0.58 \pm 1.96 \sqrt{\frac{0.58(0.42)}{1000}}$, and provides the interval $(0.5496, 0.6104)$.</li>
+          
+          <li>Part c (1pt): Interprets the confidence interval as "We are 95% confident that the true proportion of all likely voters who support Candidate A is between 0.5496 and 0.6104."</li>
+          
+          <li>Part d (1pt): States there is convincing evidence because the entire interval (0.5496, 0.6104) is above 0.50, and justifies based on the interval.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S12Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.D,VAR-6.E,VAR-6.F,VAR-6.G,DAT-3.A,DAT-3.B"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A company claims that 70 percent of its customers are satisfied with its new online service. A consumer advocacy group believes that the satisfaction rate is lower than the company claims. The group randomly surveys 200 customers and finds that 128 are satisfied with the service.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a test to investigate the consumer advocacy group's belief.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the appropriate inference procedure and verify the conditions for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value from part (c), what conclusion should the consumer advocacy group make? Use a significance level of $\alpha = 0.05$. Justify your conclusion in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States $H_0: p = 0.70$ and $H_a: p < 0.70$, where $p$ is the true proportion of satisfied customers.</li>
+          
+          <li>Part b (1pt): Identifies a one-sample z-test for a proportion and verifies conditions (random sample, $n p_0 \ge 10$, $n(1-p_0) \ge 10$).</li>
+          
+          <li>Part c (2pts): Calculates $\hat{p} = 128/200 = 0.64$. Calculates test statistic $z = \frac{0.64 - 0.70}{\sqrt{\frac{0.70(0.30)}{200}}} \approx -1.85$. Calculates p-value $P(Z < -1.85) \approx 0.0322$.</li>
+          
+          <li>Part d (1pt): Concludes that since $0.0322 < 0.05$, reject $H_0$. There is convincing evidence that the true proportion of satisfied customers is lower than 70 percent.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S12Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.I,UNC-4.J,UNC-4.K,UNC-4.M,UNC-4.N"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">Researchers are studying the effectiveness of two different fertilizers, Fertilizer A and Fertilizer B, on crop yield. They randomly select 150 plants for Fertilizer A and 120 plants for Fertilizer B. For Fertilizer A, 115 plants showed improved yield. For Fertilizer B, 85 plants showed improved yield. The researchers want to estimate the difference in the true proportions of plants that show improved yield for the two fertilizers.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure and verify the conditions for constructing a confidence interval for the difference between the true proportions of plants with improved yield.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 90 percent confidence interval for the difference in the true proportions of plants that show improved yield (proportion for A minus proportion for B).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the 90 percent confidence interval calculated in part (b) in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the confidence interval, is there convincing statistical evidence that Fertilizer A leads to a higher proportion of improved yield than Fertilizer B? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies a two-sample z-interval for a difference of proportions and verifies conditions for both samples (random samples, independent groups, $n_1\hat{p}_1 \ge 10$, $n_1(1-\hat{p}_1) \ge 10$, $n_2\hat{p}_2 \ge 10$, $n_2(1-\hat{p}_2) \ge 10$).</li>
+          
+          <li>Part b (2pts): Calculates $\hat{p}_A = 115/150 \approx 0.7667$ and $\hat{p}_B = 85/120 \approx 0.7083$. Shows work for standard error $\sqrt{\frac{0.7667(0.2333)}{150} + \frac{0.7083(0.2917)}{120}} \approx 0.054$. Calculates interval $(0.7667 - 0.7083) \pm 1.645(0.054) \approx 0.0584 \pm 0.0888$, which is $(-0.0304, 0.1472)$.</li>
+          
+          <li>Part c (1pt): Interprets the confidence interval as "We are 90% confident that the true difference in the proportion of plants with improved yield (Fertilizer A minus Fertilizer B) is between -0.0304 and 0.1472."</li>
+          
+          <li>Part d (1pt): States there is NOT convincing evidence because the interval includes 0 and negative values, indicating that it is plausible that Fertilizer B is equal to or even better than Fertilizer A.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S12Q4"
+      data-difficulty="hard"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.E,1.B,4.B"
+      data-learning-objectives="VAR-6.H,VAR-6.I,VAR-6.J,VAR-6.K,DAT-3.D,UNC-5.A,UNC-5.D"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">In a study comparing the effectiveness of two different weight-loss programs, Program X and Program Y, researchers recruited a random sample of 200 participants for Program X and 180 participants for Program Y. After six months, 105 participants in Program X and 80 participants in Program Y had achieved their target weight loss. The researchers want to determine if there is a significant difference in the proportions of participants achieving their target weight loss between the two programs.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a test to investigate the researchers' question.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the appropriate inference procedure and verify the conditions for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic for this test. You do not need to calculate the p-value.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Suppose the p-value for this test is $0.085$. Based on this p-value and a significance level of $\alpha = 0.05$, what conclusion should the researchers make? Justify your answer in context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Describe a Type I error and a Type II error in the context of this study.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States $H_0: p_X = p_Y$ or $H_0: p_X - p_Y = 0$ and $H_a: p_X \ne p_Y$ or $H_a: p_X - p_Y \ne 0$, where $p_X$ and $p_Y$ are the true proportions for Programs X and Y.</li>
+          
+          <li>Part b (1pt): Identifies a two-sample z-test for a difference of proportions and verifies conditions for both samples and pooled proportion (random samples, independent groups, $n_1\hat{p}_c \ge 10$, $n_1(1-\hat{p}_c) \ge 10$, $n_2\hat{p}_c \ge 10$, $n_2(1-\hat{p}_c) \ge 10$).</li>
+          
+          <li>Part c (2pts): Calculates $\hat{p}_X = 105/200 = 0.525$, $\hat{p}_Y = 80/180 \approx 0.444$. Calculates pooled proportion $\hat{p}_c = (105+80)/(200+180) = 185/380 \approx 0.4868$. Calculates test statistic $z = \frac{0.525 - 0.444}{\sqrt{0.4868(0.5132)(\frac{1}{200} + \frac{1}{180})}} \approx 1.574$.</li>
+          
+          <li>Part d (1pt): Concludes that since $0.085 > 0.05$, fail to reject $H_0$. There is not convincing evidence of a significant difference in the proportions of participants achieving target weight loss between the two programs.</li>
+          
+          <li>Part e (1pt): Type I error: Concluding there is a difference in effectiveness between programs when there actually isn't one. Type II error: Failing to conclude there is a difference in effectiveness when there actually is one.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S12Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.A"
+      data-learning-objectives="UNC-4.A,UNC-4.B,UNC-4.D,UNC-4.F,UNC-4.H"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A national survey of 1500 randomly selected adults found that 1170 of them reported having access to the internet at home. Researchers want to estimate the true proportion of all adults in the country who have internet access at home.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure and verify the conditions for constructing a confidence interval for the true proportion of adults with internet access at home.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Construct a 95% confidence interval for the true proportion of adults with internet access at home.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the calculated confidence interval in context. Based on this interval, is it plausible that 75% of adults have internet access? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies one-sample $z$-interval for proportions (1pt). Verifies random sample, $n\hat{p} \ge 10$ ($1500 \times 0.78 = 1170 \ge 10$) and $n(1-\hat{p}) \ge 10$ ($1500 \times 0.22 = 330 \ge 10$) (1pt).</li>
+          
+          <li>Part b (2pts): Correctly calculates $\hat{p} = 1170/1500 = 0.78$ and standard error $SE = \sqrt{\frac{0.78(0.22)}{1500}} \approx 0.0107$ (1pt). Calculates the correct interval $0.78 \pm 1.96(0.0107) \approx (0.759, 0.801)$ showing work (1pt).</li>
+          
+          <li>Part c (2pts): Correctly interprets the interval in context (e.g., "We are 95% confident that the true proportion of all adults in the country who have internet access at home is between 75.9% and 80.1%") (1pt). Correctly states that 75% is not plausible because it falls outside the confidence interval, and justifies (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 11)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 11)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S11Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.R,UNC-4.S,UNC-4.T"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A health organization wants to estimate the mean cholesterol level of adult males in a particular city. They randomly select 30 adult males from the city and measure their cholesterol levels. The sample mean is $\bar{x} = 210$ mg/dL and the sample standard deviation is $s = 25$ mg/dL.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure and verify the conditions for constructing a confidence interval for the mean cholesterol level.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the true mean cholesterol level of adult males in this city.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval from part (b) in context and explain what a 95% confidence level means.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a one-sample t-interval for means (1pt); Verifies random sample, independence ($10n < N$), and nearly normal condition ($n=30$ large enough for Central Limit Theorem) (1pt).</li>
+          
+          <li>Part b (2pts): Calculates the correct standard error and degrees of freedom (1pt); Computes the correct confidence interval (e.g., $(200.41, 219.59)$ mg/dL) (1pt).</li>
+          
+          <li>Part c (2pts): Interprets the confidence interval in context (1pt); Explains the meaning of 95% confidence level (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S11Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A company manufactures light bulbs, and the average lifespan is advertised as 1000 hours. A consumer advocacy group suspects that the true average lifespan is less than 1000 hours. They randomly select 15 light bulbs, and their observed lifespans (in hours) are: 980, 1010, 975, 990, 1005, 960, 995, 1020, 985, 970, 1000, 990, 975, 980, 995. The sample mean is $\bar{x} = 988.67$ hours and the sample standard deviation is $s = 18.07$ hours.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for this investigation and identify the appropriate inference procedure.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for conducting this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your results, what conclusion should the consumer advocacy group make at the $\alpha = 0.05$ significance level? Justify your conclusion in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States $H_0: \mu = 1000$ and $H_a: \mu < 1000$ (where $\mu$ is the true mean lifespan of light bulbs) and identifies a one-sample t-test for means (1pt).</li>
+          
+          <li>Part b (2pts): Verifies random sample and independence ($10n < N$ assumption) (1pt); Discusses the nearly normal condition (e.g., by creating a graphical display of the data to assess for strong skewness or outliers) (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the test statistic $t = \frac{988.67 - 1000}{18.07/\sqrt{15}} \approx -2.435$ with $df = 14$ (1pt); Finds the correct p-value (e.g., $P(t < -2.435) \approx 0.0142$) (1pt).</li>
+          
+          <li>Part d (1pt): Compares p-value to $\alpha$ ($0.0142 < 0.05$) and states to reject $H_0$. Concludes there is convincing evidence that the true mean lifespan of light bulbs is less than 1000 hours (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S11Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.R,UNC-4.S"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A researcher wants to study the effectiveness of a new exercise program on reducing cholesterol levels. Ten participants have their cholesterol measured before starting the program and again after completing the program. The results (in mg/dL) are shown in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Participant</th><th>Before</th><th>After</th></tr></thead><tbody><tr><td>1</td><td>210</td><td>195</td></tr><tr><td>2</td><td>225</td><td>210</td></tr><tr><td>3</td><td>200</td><td>190</td></tr><tr><td>4</td><td>230</td><td>225</td></tr><tr><td>5</td><td>190</td><td>185</td></tr><tr><td>6</td><td>215</td><td>200</td></tr><tr><td>7</td><td>205</td><td>195</td></tr><tr><td>8</td><td>240</td><td>230</td></tr><tr><td>9</td><td>200</td><td>190</td></tr><tr><td>10</td><td>210</td><td>205</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Explain why a matched-pairs t-procedure is an appropriate inference method for this study design.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 90% confidence interval for the true mean reduction in cholesterol level for participants in this program. Show all steps, including verifying conditions.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval from part (b) in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Explains that the same individuals are measured twice (before and after), making the measurements dependent and suitable for a paired analysis of the differences (1pt).</li>
+          
+          <li>Part b (3pts): Calculates the differences (e.g., After - Before) (1pt for correct differences, e.g., $\bar{x}_d = -10$, $s_d = 7.071$); Verifies conditions for paired t-interval (random assignment of program, independence ($10n < N$), and nearly normal condition for differences, e.g., by plotting differences) (1pt); Calculates the confidence interval (e.g., $t^*$ for $df=9$ is 1.833, CI: $-10 \pm 1.833 \times \frac{7.071}{\sqrt{10}} = (-14.09, -5.91)$) (1pt).</li>
+          
+          <li>Part c (1pt): Interprets the interval in context, stating that we are 90% confident that the true mean reduction in cholesterol is between 5.91 mg/dL and 14.09 mg/dL (assuming differences are calculated as Before - After) or that the mean cholesterol level decreases by 5.91 to 14.09 mg/dL (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S11Q4"
+      data-difficulty="hard"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D,4.A"
+      data-learning-objectives="UNC-4.V,UNC-4.W,UNC-4.X,UNC-4.Y,UNC-4.Z,UNC-4.AA,UNC-4.AB"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A pharmaceutical company wants to compare the effectiveness of two different pain relievers, Drug A and Drug B. They randomly assign 40 patients with similar chronic pain conditions to receive Drug A and another 45 patients to receive Drug B. After one month, they measure the pain reduction score (on a scale of 0 to 100, higher scores indicate more reduction). Summary statistics are: Drug A: $n_A = 40$, $\bar{x}_A = 65$, $s_A = 12$. Drug B: $n_B = 45$, $\bar{x}_B = 60$, $s_B = 10$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure and verify the conditions for constructing a confidence interval for the difference in mean pain reduction scores between Drug A and Drug B.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 99% confidence interval for the true difference in mean pain reduction scores ($\mu_A - \mu_B$).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval from part (b) in context. Based on this interval, can the company claim that Drug A is significantly more effective than Drug B? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Suppose the sample sizes for both drugs were increased, while the sample means and standard deviations remained approximately the same. Describe the effect this would have on the width of the confidence interval in part (b).
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a two-sample t-interval for the difference of means (1pt); Verifies conditions: two independent random samples, independence ($10n < N$ for both groups), and large sample sizes ($n_A \ge 30, n_B \ge 30$) for approximate normality (1pt).</li>
+          
+          <li>Part b (2pts): Calculates the standard error for the difference of means (1pt); Computes the correct 99% confidence interval (e.g., using software $df \approx 78$, $t^* \approx 2.64$; CI: $(5 - 2.64 \times \sqrt{\frac{12^2}{40} + \frac{10^2}{45}}, 5 + 2.64 \times \sqrt{\frac{12^2}{40} + \frac{10^2}{45}}) = (-0.91, 10.91)$) (1pt).</li>
+          
+          <li>Part c (2pts): Interprets the confidence interval in context (1pt); Justifies that the company cannot claim Drug A is significantly more effective because the interval contains 0 (and negative values), meaning that $\mu_A$ could be less than or equal to $\mu_B$ (1pt).</li>
+          
+          <li>Part d (1pt): Explains that increasing sample sizes would decrease the standard error, leading to a narrower confidence interval, assuming the confidence level remains the same (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S11Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.F,VAR-7.G,VAR-7.H,VAR-7.1,DAT-3.G,DAT-3.H"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A university researcher wants to determine if there is a significant difference in the average starting salaries of graduates with a degree in Computer Science (CS) compared to those with a degree in Electrical Engineering (EE). A random sample of 35 recent CS graduates had a mean starting salary of $\$72,000$ with a standard deviation of $\$8,000$. A random sample of 30 recent EE graduates had a mean starting salary of $\$70,500$ with a standard deviation of $\$7,500$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for this investigation and identify the appropriate inference procedure.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for conducting this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your results, what conclusion should the researcher make at the $\alpha = 0.10$ significance level? Justify your conclusion in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States $H_0: \mu_{CS} = \mu_{EE}$ (or $\mu_{CS} - \mu_{EE} = 0$) and $H_a: \mu_{CS} \ne \mu_{EE}$ (or $\mu_{CS} - \mu_{EE} \ne 0$), where $\mu_{CS}$ and $\mu_{EE}$ are the true mean starting salaries. Identifies a two-sample t-test for the difference of means (1pt).</li>
+          
+          <li>Part b (2pts): Verifies conditions: two independent random samples, independence ($10n < N$ for both populations assumed large enough) and large sample sizes ($n_{CS} \ge 30, n_{EE} \ge 30$) for approximate normality (1pt for random samples, 1pt for other conditions).</li>
+          
+          <li>Part c (2pts): Calculates the test statistic $t = \frac{(72000 - 70500)}{\sqrt{\frac{8000^2}{35} + \frac{7500^2}{30}}} \approx 0.779$ (1pt); Finds the correct p-value (e.g., using software $df \approx 62$, $P(</li>
+          
+          <li>t</li>
+          
+          <li>> 0.779) \approx 0.44$) (1pt).</li>
+          
+          <li>Part d (1pt): Compares p-value to $\alpha$ ($0.44 > 0.10$) and states to fail to reject $H_0$. Concludes there is no convincing evidence of a significant difference in the true mean starting salaries between Computer Science and Electrical Engineering graduates (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

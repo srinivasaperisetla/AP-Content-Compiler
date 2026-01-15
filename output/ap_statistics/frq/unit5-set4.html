@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 4)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 4)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S4Q1"
+      data-difficulty="easy"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.K,UNC-3.L,UNC-3.M"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A large company claims that 60% of its employees are satisfied with their current benefits package. An independent consulting firm plans to take a random sample of 150 employees to test this claim.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample proportion of employees who are satisfied with their benefits package, assuming the company's claim is true. Be sure to include its mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether it is appropriate to use a normal distribution to model the sampling distribution described in part (a).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that in a random sample of 150 employees, 50% or fewer are satisfied with their benefits package, assuming the company's claim is true.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States the mean of the sampling distribution is $\mu_{\hat{p}} = p = 0.60$ AND the standard deviation is $\sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} = \sqrt{\frac{(0.60)(0.40)}{150}} \approx 0.04$ (1pt).</li>
+          
+          <li>Part b (1pt): Checks conditions for normality: $np = 150(0.60) = 90 \ge 10$ AND $n(1-p) = 150(0.40) = 60 \ge 10$, concluding that a normal distribution is appropriate (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the correct $z$-score for $\hat{p}=0.50$, $z = \frac{0.50 - 0.60}{0.04} = -2.5$ (1pt). Calculates the correct probability $P(\hat{p} \le 0.50) = P(Z \le -2.5) \approx 0.0062$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S4Q2"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.Q,UNC-3.R,UNC-3.S"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">The weights of a certain variety of apples are known to be normally distributed with a mean of $\mu = 180$ grams and a standard deviation of $\sigma = 15$ grams. A random sample of 25 apples is picked from an orchard.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample mean weight for samples of 25 apples. Be sure to include its shape, mean, and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What is the probability that a single randomly selected apple weighs less than 170 grams?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        What is the probability that the mean weight of a random sample of 25 apples is less than 170 grams?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies the shape as normal (since the population is normal) (1pt). States the mean of the sampling distribution is $\mu_{\bar{x}} = \mu = 180$ grams AND the standard deviation is $\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}} = \frac{15}{\sqrt{25}} = 3$ grams (1pt for both).</li>
+          
+          <li>Part b (1pt): Calculates the correct $z$-score for $X=170$, $z = \frac{170-180}{15} \approx -0.67$ AND finds the correct probability $P(X < 170) = P(Z < -0.67) \approx 0.2514$ (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the correct $z$-score for $\bar{x}=170$, $z = \frac{170-180}{15/\sqrt{25}} = \frac{-10}{3} \approx -3.33$ (1pt). Calculates the correct probability $P(\bar{x} < 170) = P(Z < -3.33) \approx 0.0004$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S4Q3"
+      data-difficulty="hard"
+      data-skill-codes="3.A,3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.H,UNC-3.I,UNC-3.J"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A school principal wants to estimate the true mean number of hours per week students spend on homework. She randomly selects 50 students and asks them to report their homework hours. She finds the sample mean to be $\bar{x} = 12.5$ hours.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Explain what it means for an estimator to be unbiased in the context of estimating the true mean number of hours students spend on homework.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        The principal considers two different estimators for the population mean: $\hat{\mu}_1 = \bar{x}$ (the sample mean) and $\hat{\mu}_2 = \bar{x} - 2$ (the sample mean minus 2). Which of these estimators is unbiased? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe how you would set up a simulation to estimate the sampling distribution of the sample mean number of hours students spend on homework, assuming the true mean is 12 hours and the standard deviation is 4 hours. You do not need to perform the simulation.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Explains that an unbiased estimator means that the mean of its sampling distribution is equal to the true population parameter (the true mean number of hours spent on homework) (1pt).</li>
+          
+          <li>Part b (2pts): Identifies $\hat{\mu}_1 = \bar{x}$ as the unbiased estimator (1pt). Justifies by explaining that $E[\bar{x}] = \mu$, whereas $E[\bar{x}-2] = E[\bar{x}] - 2 = \mu - 2$, showing $\hat{\mu}_2$ is biased (1pt).</li>
+          
+          <li>Part c (2pts): Describes repeatedly taking random samples of size 50 from a population with $\mu=12, \sigma=4$ (or using a normal distribution with these parameters) (1pt). Explains calculating the sample mean for each sample and then plotting a histogram of these sample means to approximate the sampling distribution (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S4Q4"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.N,UNC-3.O,UNC-3.P"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A large metropolitan area has two high schools, Northwood High and Southside High. A survey is conducted to compare the proportion of students who plan to attend a 4-year college. Assume the true proportion of students planning to attend a 4-year college is $p_N = 0.65$ for Northwood High and $p_S = 0.50$ for Southside High. A random sample of $n_N=200$ students is taken from Northwood High and $n_S=180$ students from Southside High.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the difference in sample proportions ($\hat{p}_N - \hat{p}_S$). Be sure to include its mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether it is appropriate to use a normal distribution to model the sampling distribution described in part (a).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the sample proportion from Northwood High is greater than the sample proportion from Southside High (i.e., $\hat{p}_N - \hat{p}_S > 0$) in a randomly selected pair of samples, assuming the true proportions are as given.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States the mean of the sampling distribution is $\mu_{\hat{p}_N - \hat{p}_S} = p_N - p_S = 0.65 - 0.50 = 0.15$ AND the standard deviation is $\sigma_{\hat{p}_N - \hat{p}_S} = \sqrt{\frac{(0.65)(0.35)}{200} + \frac{(0.50)(0.50)}{180}} \approx 0.05026$ (1pt).</li>
+          
+          <li>Part b (1pt): Checks conditions for both samples: $n_N p_N = 200(0.65) = 130 \ge 10$, $n_N (1-p_N) = 200(0.35) = 70 \ge 10$; AND $n_S p_S = 180(0.50) = 90 \ge 10$, $n_S (1-p_S) = 180(0.50) = 90 \ge 10$, concluding normal is appropriate (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the correct $z$-score for a difference of 0, $z = \frac{0 - 0.15}{0.05026} \approx -2.98$ (1pt). Calculates the correct probability $P(\hat{p}_N - \hat{p}_S > 0) = P(Z > -2.98) \approx 0.9986$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S4Q5"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.T,UNC-3.U,UNC-3.V"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A researcher is comparing the effectiveness of two different fertilizers, Fertilizer A and Fertilizer B, on corn yield. They apply Fertilizer A to a random sample of $n_A = 36$ plots and Fertilizer B to another random sample of $n_B = 49$ plots. From past research, it's known that corn yield with Fertilizer A has a mean of $\mu_A = 150$ bushels per acre with a standard deviation of $\sigma_A = 12$ bushels. Corn yield with Fertilizer B has a mean of $\mu_B = 145$ bushels per acre with a standard deviation of $\sigma_B = 10$ bushels. Assume both populations are approximately normally distributed.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the difference in sample means ($\bar{x}_A - \bar{x}_B$). Include its shape, mean, and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        What is the probability that the average corn yield for the sample treated with Fertilizer A is at least 10 bushels higher than the average corn yield for the sample treated with Fertilizer B? (i.e., $P(\bar{x}_A - \bar{x}_B \ge 10)$)
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the meaning of the probability calculated in part (b) in the context of this study.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States the mean of the sampling distribution is $\mu_{\bar{x}_A - \bar{x}_B} = \mu_A - \mu_B = 150 - 145 = 5$ bushels (1pt). States the standard deviation is $\sigma_{\bar{x}_A - \bar{x}_B} = \sqrt{\frac{\sigma_A^2}{n_A} + \frac{\sigma_B^2}{n_B}} = \sqrt{\frac{12^2}{36} + \frac{10^2}{49}} \approx 2.4578$ bushels AND identifies the shape as normal (since populations are normally distributed) (1pt).</li>
+          
+          <li>Part b (2pts): Calculates the correct $z$-score for a difference of 10, $z = \frac{10 - 5}{2.4578} \approx 2.03$ (1pt). Calculates the correct probability $P(\bar{x}_A - \bar{x}_B \ge 10) = P(Z \ge 2.03) \approx 0.0212$ (1pt).</li>
+          
+          <li>Part c (1pt): Interprets the probability in context (e.g., "There is approximately a 2.12% chance that the average corn yield for the sample treated with Fertilizer A will be at least 10 bushels per acre higher than that for Fertilizer B, assuming the true mean difference is 5 bushels per acre") (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

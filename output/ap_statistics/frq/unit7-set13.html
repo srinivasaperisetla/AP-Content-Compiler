@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 13)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 13)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S13Q1"
+      data-difficulty="easy"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.R,UNC-4.S,UNC-4.Q"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A coffee shop manager wants to estimate the true mean amount of coffee dispensed by their automated machine. A random sample of 25 cups is taken, and the amount of coffee in each cup (in ounces) is measured. The sample mean is $11.8$ ounces, and the sample standard deviation is $0.5$ ounces. Assume the amounts dispensed follow an approximately normal distribution.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure and verify the conditions for constructing a confidence interval for the true mean amount of coffee dispensed by the machine.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the true mean amount of coffee dispensed. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval you calculated in part (b) in the context of this problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a one-sample $t$-interval for a mean (1pt). Verifies conditions: random sample, approximately normal population (given), and sample size $n=25 < 30$ but population is normal (1pt).</li>
+          
+          <li>Part b (2pts): Correctly calculates degrees of freedom ($df=24$) and critical $t$-value (or uses calculator) (1pt). Calculates the confidence interval using the formula $\bar{x} \pm t^* \frac{s}{\sqrt{n}}$ (1pt).</li>
+          
+          <li>Part c (1pt): Interprets the interval in context, stating that we are 95% confident that the true mean amount of coffee dispensed is between the lower and upper bounds (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S13Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A researcher claims that the average resting heart rate of adults in a certain city is $72$ beats per minute (bpm). To test this claim, a random sample of $36$ adults from the city is selected. The sample mean resting heart rate is $70.5$ bpm with a sample standard deviation of $8$ bpm.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses to test the researcher's claim.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify that the conditions for performing a $t$-test for a population mean are met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the $p$-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the $p$-value in the context of this study and state a conclusion using a significance level of $\alpha = 0.05$.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States $H_0: \mu = 72$ bpm and $H_a: \mu \ne 72$ bpm (1pt).</li>
+          
+          <li>Part b (1pt): Verifies conditions: random sample (given), $n=36 \ge 30$ (Central Limit Theorem applies, sampling distribution of $\bar{x}$ is approximately normal) (1pt).</li>
+          
+          <li>Part c (2pts): Calculates the test statistic $t = \frac{\bar{x} - \mu_0}{s/\sqrt{n}} = \frac{70.5 - 72}{8/\sqrt{36}} = -1.125$ (1pt). Calculates the $p$-value (using $df=35$) which is approximately $2 \times P(t < -1.125) \approx 0.267$ (1pt).</li>
+          
+          <li>Part d (2pts): Interprets the $p$-value: If the true mean heart rate is 72 bpm, there is a 26.7% chance of observing a sample mean as extreme as 70.5 bpm or more extreme in a sample of 36 adults (1pt). States a conclusion: Since $p$-value ($0.267$) $> \alpha$ ($0.05$), we fail to reject the null hypothesis. There is no convincing evidence that the average resting heart rate in the city is different from 72 bpm (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S13Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.D,1.F,4.E"
+      data-learning-objectives="UNC-4.0,VAR-7.C,DAT-3.F"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A local farm is experimenting with a new organic pesticide to control aphids. To determine if the new pesticide is more effective than their current conventional pesticide, they select 12 plots of land. Each plot is divided into two equal sections. One section is treated with the new organic pesticide, and the other section is treated with the current conventional pesticide. The number of aphids remaining after one week is recorded for each section.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Explain why a matched-pairs $t$-procedure is the appropriate inference method for analyzing these data.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        State the null and alternative hypotheses for a significance test to determine if the new organic pesticide is more effective (i.e., results in a lower mean number of aphids) than the current conventional pesticide. Define any parameters you use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The mean difference (Conventional - Organic) in the number of aphids for the 12 plots was $4.5$ aphids with a standard deviation of $3.0$ aphids. A $t$-test yielded a $p$-value of $0.0003$. Based on this $p$-value, what conclusion can be drawn at a significance level of $\alpha = 0.01$? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Explains that a matched-pairs design is appropriate because measurements are taken on the same plots (or related units), reducing variability and allowing for a focus on the difference within each pair (1pt).</li>
+          
+          <li>Part b (2pts): Defines $\mu_d$ as the true mean difference in the number of aphids (Conventional - Organic) (1pt). States $H_0: \mu_d = 0$ and $H_a: \mu_d > 0$ (1pt).</li>
+          
+          <li>Part c (2pts): Compares $p$-value ($0.0003$) to $\alpha$ ($0.01$). Since $p$-value $<\alpha$, reject $H_0$ (1pt). Concludes there is convincing evidence that the new organic pesticide results in a significantly lower mean number of aphids compared to the conventional pesticide (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S13Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,4.B,4.D,4.A"
+      data-learning-objectives="UNC-4.V,UNC-4.W,UNC-4.Z,UNC-4.AA,UNC-4.AB"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A study compared the effectiveness of two different tutoring programs, Program A and Program B, for improving math scores. A random sample of 50 students participated in Program A, and a separate random sample of 55 students participated in Program B. After the program, their scores on a standardized math test were recorded. The mean score for Program A was $82.5$ with a standard deviation of $7.2$. The mean score for Program B was $78.9$ with a standard deviation of $8.5$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure and verify conditions for constructing a confidence interval for the difference in true mean math scores ($\mu_A - \mu_B$).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        A 95% confidence interval for the difference in true mean math scores ($\mu_A - \mu_B$) is calculated as $(0.74, 6.46)$. Interpret this interval in context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on the confidence interval in part (b), is there convincing evidence of a significant difference in the true mean math scores between the two programs at the $\alpha = 0.05$ significance level? Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Suppose the researchers wanted to reduce the width of the confidence interval without changing the confidence level. Describe one way they could achieve this and explain why it works.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies a two-sample $t$-interval for the difference of means (1pt). Verifies conditions: two independent random samples (given), $n_A=50 \ge 30$ and $n_B=55 \ge 30$ (CLT applies for both) (1pt).</li>
+          
+          <li>Part b (1pt): Interprets the interval: We are 95% confident that the true mean math score for Program A is between 0.74 and 6.46 points higher than the true mean math score for Program B (1pt).</li>
+          
+          <li>Part c (1pt): Justifies that since the entire interval $(0.74, 6.46)$ is above zero (it does not contain 0), there is convincing evidence of a significant difference in mean math scores at $\alpha = 0.05$ (1pt).</li>
+          
+          <li>Part d (1pt): Suggests increasing both sample sizes ($n_A$ and $n_B$) (1/2pt). Explains that increasing sample size reduces the standard error of the sampling distribution of $\bar{x}_A - \bar{x}_B$, which in turn reduces the margin of error and thus the width of the interval (1/2pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S13Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.F,VAR-7.G,VAR-7.H,VAR-7.1,DAT-3.G,DAT-3.H"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A pharmaceutical company is testing two different formulations of a pain relief medication, Formula X and Formula Y, for their mean absorption time into the bloodstream. They randomly assign 40 healthy volunteers to receive Formula X and another 45 healthy volunteers to receive Formula Y. The absorption time (in minutes) is measured for each volunteer.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses to test if there is a difference in the true mean absorption times between the two formulations. Define any parameters you use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing a two-sample $t$-test for the difference of two population means.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The test produced a test statistic of $t = -2.58$ with $df = 82$. Calculate the $p$-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Interpret the $p$-value in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Based on the $p$-value and a significance level of $\alpha = 0.01$, what conclusion should the company draw? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Defines $\mu_X$ as the true mean absorption time for Formula X and $\mu_Y$ as for Formula Y (1pt). States $H_0: \mu_X = \mu_Y$ (or $\mu_X - \mu_Y = 0$) and $H_a: \mu_X \ne \mu_Y$ (or $\mu_X - \mu_Y \ne 0$) (1pt).</li>
+          
+          <li>Part b (1pt): Verifies conditions: two independent random samples (given), $n_X=40 \ge 30$ and $n_Y=45 \ge 30$ (CLT applies for both) (1pt).</li>
+          
+          <li>Part c (1pt): Calculates the $p$-value. Using $t=-2.58$ and $df=82$, the $p$-value is $2 \times P(t < -2.58) \approx 0.0116$ (1pt).</li>
+          
+          <li>Part d (1pt): Interprets the p-value: If there is no difference in the true mean absorption times between the two formulations, there is approximately a 1.16% chance of observing a sample mean difference as extreme as or more extreme than what was observed in this study (1pt).</li>
+          
+          <li>Part e (1pt): Compares $p$-value ($0.0116$) to $\alpha$ ($0.01$). Since $p$-value ($0.0116$) $> \alpha$ ($0.01$), fail to reject $H_0$ (1/2pt). Concludes there is no convincing evidence of a significant difference in the true mean absorption times between Formula X and Formula Y (1/2pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

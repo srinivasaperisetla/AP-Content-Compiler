@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 1)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 6: Inference for Categorical Data: Proportions (Set 1)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S1Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.A,UNC-4.B,UNC-4.D,UNC-4.F,UNC-4.G"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A national survey found that 62% of adult internet users use social networking sites. A random sample of 150 adults from a certain city was surveyed to see if the proportion of internet users in that city who use social networking sites is different from the national proportion. In the sample, 87 reported using social networking sites.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the proportion of adult internet users in this city who use social networking sites.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the 95% confidence interval in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on this confidence interval, does the city's proportion appear to be different from the national proportion of 62%? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies a one-sample z-interval for proportions and verifies random sampling, independence ($150 \times 10 <$ city population), and large counts ($n\hat{p} = 87 \ge 10$ and $n(1-\hat{p}) = 63 \ge 10$).</li>
+          
+          <li>Part b (2pts): Calculates $\hat{p} = 87/150 = 0.58$, margin of error $z^* \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = 1.96 \sqrt{\frac{0.58(0.42)}{150}} \approx 0.078$, and the interval $(0.502, 0.658)$.</li>
+          
+          <li>Part c (1pt): States "We are 95% confident that the true proportion of adult internet users in this city who use social networking sites is between 0.502 and 0.658."</li>
+          
+          <li>Part d (1pt): Compares the interval to 0.62. Since 0.62 is contained within the interval, there is no convincing statistical evidence that the city's proportion is different from the national proportion.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S1Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.D,VAR-6.E,VAR-6.F,VAR-6.G,DAT-3.A,DAT-3.B"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A company claims that at least 80% of its customers are satisfied with their service. A consumer advocacy group suspects this claim is too high. They survey a random sample of 200 customers and find that 148 are satisfied.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a test of the company's claim. Identify the appropriate inference method.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value, what conclusion should the consumer advocacy group make at the $\alpha = 0.05$ significance level? Interpret the p-value in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): $H_0: p = 0.80$, $H_a: p < 0.80$. Identifies a one-sample z-test for a population proportion.</li>
+          
+          <li>Part b (1pt): Verifies random sampling, independence ($200 \times 10 <$ all customers), and large counts ($np_0 = 200(0.80) = 160 \ge 10$ and $n(1-p_0) = 200(0.20) = 40 \ge 10$).</li>
+          
+          <li>Part c (2pts): Calculates $\hat{p} = 148/200 = 0.74$. Test statistic $z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}} = \frac{0.74 - 0.80}{\sqrt{\frac{0.80(0.20)}{200}}} \approx -2.12$. P-value $P(Z < -2.12) \approx 0.017$.</li>
+          
+          <li>Part d (2pts): Since the p-value ($0.017$) is less than $\alpha = 0.05$, reject $H_0$. Concludes there is convincing evidence that the true proportion of satisfied customers is less than 0.80. Interprets p-value: If the true proportion of satisfied customers is 0.80, there is a 0.017 probability of observing a sample proportion as low as 0.74 or lower due to random chance.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S1Q3"
+      data-difficulty="easy"
+      data-skill-codes="1.B,4.A,4.B"
+      data-learning-objectives="UNC-5.A,UNC-5.C,UNC-5.D"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A pharmaceutical company is testing a new drug for a common ailment. They claim the drug causes a certain side effect in only 5% of patients. A new batch of the drug is suspected to have a higher rate of this side effect. Researchers plan to test $H_0: p = 0.05$ versus $H_a: p > 0.05$ at a significance level of $\alpha = 0.01$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe a Type I error in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe a Type II error in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The researchers decide to change the significance level to $\alpha = 0.05$. Explain how this change would affect the probability of a Type I error and the probability of a Type II error, assuming all other factors remain constant.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): A Type I error would occur if the researchers conclude that the new batch of drug causes the side effect in more than 5% of patients (reject $H_0$), when in reality, the true proportion is still 5% or less ($H_0$ is true).</li>
+          
+          <li>Part b (1pt): A Type II error would occur if the researchers conclude that the new batch of drug does not cause the side effect in more than 5% of patients (fail to reject $H_0$), when in reality, the true proportion is actually greater than 5% ($H_a$ is true).</li>
+          
+          <li>Part c (2pts): Changing $\alpha$ from 0.01 to 0.05 would increase the probability of a Type I error (it is now 0.05 instead of 0.01). This would decrease the probability of a Type II error, as it would be easier to reject the null hypothesis.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S1Q4"
+      data-difficulty="hard"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.I,UNC-4.J,UNC-4.K,UNC-4.M,UNC-4.N"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A large online retailer wants to compare the proportion of customers who make a purchase after visiting their website through two different advertising campaigns: Campaign A and Campaign B. They randomly select 300 visitors exposed to Campaign A, and 69 of them make a purchase. They also randomly select 250 visitors exposed to Campaign B, and 45 of them make a purchase.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure and verify the conditions for its use to estimate the difference in proportions of customers making a purchase.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 90% confidence interval for the difference in the true proportions of customers who make a purchase ($p_A - p_B$) after being exposed to Campaign A versus Campaign B.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the 90% confidence interval in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on this confidence interval, is there convincing evidence that the purchase proportion for Campaign A is different from that for Campaign B? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies a two-sample z-interval for a difference in proportions. Verifies random sampling for both groups, independence within and between groups ($300 \times 10 <$ visitors for Campaign A, $250 \times 10 <$ visitors for Campaign B), and large counts for all four categories ($n_A\hat{p}_A=69 \ge 10$, $n_A(1-\hat{p}_A)=231 \ge 10$, $n_B\hat{p}_B=45 \ge 10$, $n_B(1-\hat{p}_B)=205 \ge 10$).</li>
+          
+          <li>Part b (2pts): Calculates $\hat{p}_A = 69/300 = 0.23$ and $\hat{p}_B = 45/250 = 0.18$. Calculates difference $\hat{p}_A - \hat{p}_B = 0.05$. Calculates standard error $\sqrt{\frac{\hat{p}_A(1-\hat{p}_A)}{n_A} + \frac{\hat{p}_B(1-\hat{p}_B)}{n_B}} \approx 0.03438$. Calculates margin of error $z^* \times \text{SE} = 1.645 \times 0.03438 \approx 0.0565$. Calculates interval $(0.05 - 0.0565, 0.05 + 0.0565) = (-0.0065, 0.1065)$.</li>
+          
+          <li>Part c (1pt): States "We are 90% confident that the true difference in the proportion of customers making a purchase between Campaign A and Campaign B ($p_A - p_B$) is between -0.0065 and 0.1065."</li>
+          
+          <li>Part d (1pt): Since the interval contains 0, there is no convincing statistical evidence at the 90% confidence level that the true purchase proportion for Campaign A is different from that for Campaign B.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U6S1Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.F,1.E,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-6.H,VAR-6.I,VAR-6.J,VAR-6.K,DAT-3.C,DAT-3.D"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A medical research team wants to investigate if a new vaccine is more effective than an older vaccine in preventing a specific illness. They randomly assign 400 volunteers to receive the new vaccine and 350 volunteers to receive the old vaccine. After six months, 36 of those who received the new vaccine contracted the illness, while 49 of those who received the old vaccine contracted the illness.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a test of whether the new vaccine is more effective (i.e., results in a lower proportion of illness). Identify the appropriate inference method.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value, what conclusion should the research team make at the $\alpha = 0.01$ significance level? Justify your answer and interpret the p-value in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Let $p_N$ be the true proportion of people who contract the illness with the new vaccine, and $p_O$ be for the old vaccine. $H_0: p_N = p_O$ (or $p_N - p_O = 0$), $H_a: p_N < p_O$ (or $p_N - p_O < 0$). Identifies a two-sample z-test for a difference in proportions.</li>
+          
+          <li>Part b (1pt): Verifies random assignment, independence ($400 \times 10 <$ population, $350 \times 10 <$ population), and large counts for all four categories based on pooled proportion ($\hat{p}_c = (36+49)/(400+350) = 85/750 \approx 0.1133$). $n_N \hat{p}_c = 400(0.1133) = 45.32 \ge 10$, $n_N(1-\hat{p}_c) = 400(0.8867) = 354.68 \ge 10$. $n_O \hat{p}_c = 350(0.1133) = 39.655 \ge 10$, $n_O(1-\hat{p}_c) = 350(0.8867) = 310.345 \ge 10$.</li>
+          
+          <li>Part c (2pts): Calculates $\hat{p}_N = 36/400 = 0.09$ and $\hat{p}_O = 49/350 = 0.14$. Pooled proportion $\hat{p}_c \approx 0.1133$. Test statistic $z = \frac{(\hat{p}_N - \hat{p}_O) - 0}{\sqrt{\hat{p}_c(1-\hat{p}_c)(\frac{1}{n_N} + \frac{1}{n_O})}} \approx -2.16$. P-value $P(Z < -2.16) \approx 0.0154$.</li>
+          
+          <li>Part d (2pts): Since the p-value ($0.0154$) is greater than $\alpha = 0.01$, fail to reject $H_0$. Concludes there is not convincing evidence that the new vaccine is more effective than the old vaccine in preventing the illness at the $\alpha = 0.01$ level. Interprets p-value: If the new and old vaccines are equally effective, there is a 0.0154 probability of observing a difference in sample proportions as extreme as or more extreme than what was observed due to random chance.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

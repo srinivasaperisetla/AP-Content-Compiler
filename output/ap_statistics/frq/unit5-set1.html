@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 1)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 1)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S1Q1"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.K,UNC-3.L,UNC-3.M"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A large city council is considering a new recycling initiative. A recent survey found that 70% of residents support the initiative. A random sample of 100 residents is selected.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample proportion of residents who support the initiative, $\hat{p}$. Be sure to include its shape, mean, and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether the sampling distribution of $\hat{p}$ can be approximated by a normal distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the sample proportion from a random sample of 100 residents would be less than 0.65.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Shape is approximately normal (1pt), Mean is $p = 0.70$ (0.5pt), Standard deviation is $\sqrt{\frac{p(1-p)}{n}} = \sqrt{\frac{0.70(0.30)}{100}} \approx 0.0458$ (0.5pt)</li>
+          
+          <li>Part b (1pt): Verify conditions $n p \ge 10$ and $n(1-p) \ge 10$. ($100(0.70) = 70 \ge 10$ and $100(0.30) = 30 \ge 10$) (1pt)</li>
+          
+          <li>Part c (2pts): Calculate Z-score for $\hat{p} = 0.65$ using correct mean and SD ($Z = \frac{0.65 - 0.70}{0.0458} \approx -1.09$) (1pt); Calculate probability $P(\hat{p} < 0.65) \approx 0.1379$ (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S1Q2"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.Q,UNC-3.R,UNC-3.S"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A brand of light bulbs has a mean lifetime of $\mu = 800$ hours and a standard deviation of $\sigma = 60$ hours. A quality control inspector takes a random sample of 40 light bulbs.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the sample mean lifetime, $\bar{x}$, for samples of 40 light bulbs. Be sure to include its shape, mean, and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether the sampling distribution of $\bar{x}$ can be described as approximately normal.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the mean lifetime of a random sample of 40 light bulbs is between 785 and 810 hours.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Shape is approximately normal (1pt), Mean is $\mu_{\bar{x}} = 800$ hours (0.5pt), Standard deviation is $\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}} = \frac{60}{\sqrt{40}} \approx 9.4868$ hours (0.5pt)</li>
+          
+          <li>Part b (1pt): Justify using Central Limit Theorem because the sample size $n=40$ is large enough (i.e., $n \ge 30$) (1pt)</li>
+          
+          <li>Part c (2pts): Calculate Z-scores for 785 and 810 using correct mean and SD ($Z_{785} = \frac{785 - 800}{9.4868} \approx -1.58$, $Z_{810} = \frac{810 - 800}{9.4868} \approx 1.05$) (1pt); Calculate probability $P(785 < \bar{x} < 810) \approx P(-1.58 < Z < 1.05) \approx 0.8531 - 0.0571 = 0.7960$ (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S1Q3"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.N,UNC-3.O,UNC-3.P"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A pharmaceutical company is testing two different allergy medications, A and B, for their effectiveness in reducing symptoms. In a large-scale study, Medication A was effective for 65% of patients, while Medication B was effective for 50% of patients. Researchers plan to take a random sample of 100 patients for Medication A and an independent random sample of 120 patients for Medication B.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of the difference in sample proportions ($\hat{p}_A - \hat{p}_B$). Be sure to include its shape, mean, and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Justify whether the sampling distribution of $\hat{p}_A - \hat{p}_B$ can be approximated by a normal distribution.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the sample proportion for Medication A is greater than the sample proportion for Medication B by at least 0.20 (i.e., $\hat{p}_A - \hat{p}_B \ge 0.20$).
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Shape is approximately normal (1pt), Mean is $p_A - p_B = 0.65 - 0.50 = 0.15$ (0.5pt), Standard deviation is $\sqrt{\frac{p_A(1-p_A)}{n_A} + \frac{p_B(1-p_B)}{n_B}} = \sqrt{\frac{0.65(0.35)}{100} + \frac{0.50(0.50)}{120}} \approx \sqrt{0.002275 + 0.002083} \approx \sqrt{0.004358} \approx 0.0660$ (0.5pt)</li>
+          
+          <li>Part b (1pt): Verify conditions for both samples: $n_A p_A = 100(0.65) = 65 \ge 10$, $n_A(1-p_A) = 100(0.35) = 35 \ge 10$; $n_B p_B = 120(0.50) = 60 \ge 10$, $n_B(1-p_B) = 120(0.50) = 60 \ge 10$. (1pt)</li>
+          
+          <li>Part c (2pts): Calculate Z-score for $0.20$ using correct mean and SD ($Z = \frac{0.20 - 0.15}{0.0660} \approx 0.76$) (1pt); Calculate probability $P(\hat{p}_A - \hat{p}_B \ge 0.20) \approx P(Z \ge 0.76) \approx 1 - 0.7764 = 0.2236$ (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S1Q4"
+      data-difficulty="medium"
+      data-skill-codes="4.B,3.B,3.C"
+      data-learning-objectives="UNC-3.I,UNC-3.J,UNC-3.H"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A researcher wants to estimate the average height of adult trees in a large forest. They take a random sample of 5 trees and measure their heights in meters. The true average height of all trees in the forest is $\mu = 25$ meters. To understand the variability of different estimators, the researcher simulated taking 200 random samples of size 5 from this population and calculated three different estimators for each sample: 1. The sample mean: $\bar{x}$ 2. The sample median: $M$ 3. A custom estimator: $E = \text{Min} + \text{Max} - \frac{\text{Sum of middle 3}}{3}$ (where Min, Max are min/max heights in the sample) The means of the 200 calculated values for each estimator were: $\text{Mean}(\bar{x}) = 25.1$, $\text{Mean}(M) = 24.8$, $\text{Mean}(E) = 26.5$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Based on the simulation results, which of the three estimators ($\bar{x}$, $M$, or $E$) appears to be the most unbiased for estimating the true average height of trees? Explain your reasoning.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        A new random sample of 5 trees yields heights (in meters) of 22, 28, 24, 26, 30. Calculate the value of the sample mean ($\bar{x}$) for this sample, and the value of the custom estimator ($E$) for this sample.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe what the simulation process helped the researcher understand about the sampling distributions of these estimators, beyond just their bias.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identify $\bar{x}$ as the most unbiased (1pt); Explain that its simulated mean ($25.1$) is closest to the true population parameter ($\mu = 25$) (1pt).</li>
+          
+          <li>Part b (2pts): Calculate $\bar{x} = \frac{22+28+24+26+30}{5} = 26$ meters (1pt); Calculate $E = 22 + 30 - \frac{28+24+26}{3} = 52 - \frac{78}{3} = 52 - 26 = 26$ meters (1pt).</li>
+          
+          <li>Part c (1pt): Describe that the simulation helps estimate the shape, spread (standard error), and variability of the sampling distributions for each estimator (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S1Q5"
+      data-difficulty="easy"
+      data-skill-codes="3.A,3.C,1.A"
+      data-learning-objectives="VAR-6.A,VAR-6.C,VAR-1.G"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">The amount of soda dispensed by a machine into a 12-ounce cup is normally distributed with a mean of 11.8 ounces and a standard deviation of 0.4 ounces.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the probability that a randomly selected cup will contain less than 11.5 ounces of soda.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        A technician wants to ensure that the machine is dispensing correctly. They take a random sample of 4 cups and calculate the mean amount dispensed. Without further calculations, explain why it would be appropriate to use a normal distribution to model the sampling distribution of the sample mean, $\bar{x}$, for this sample size.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on the scenario, identify one statistical question that could be investigated using samples from this soda machine to understand variation.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Calculate Z-score for $11.5$ using correct mean and SD ($Z = \frac{11.5 - 11.8}{0.4} = -0.75$) (1pt); Calculate probability $P(X < 11.5) \approx 0.2266$ (1pt).</li>
+          
+          <li>Part b (1pt): Explain that since the population distribution of the amount of soda dispensed is stated to be normally distributed, the sampling distribution of the sample mean will also be normal for any sample size $n$ (1pt).</li>
+          
+          <li>Part c (1pt): Identify a question such as: "Does the mean amount of soda dispensed by the machine consistently differ from the target 12 ounces?" or "Is the variability in dispensed soda consistent over time?" or "How much does the sample mean amount dispensed vary from sample to sample?" (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

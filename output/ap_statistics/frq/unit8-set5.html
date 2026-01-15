@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 5)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 5)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S5Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,3.A,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.B,VAR-8.C,VAR-8.D,VAR-8.E,VAR-8.F,DAT-3.J"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A popular candy company states that the color distribution for its candies is 30% red, 20% blue, 20% green, 15% yellow, and 15% orange. A concerned consumer group believes the actual distribution is different. They randomly sample 200 candies and record the observed counts in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Color</th><th>Observed Count</th></tr></thead><tbody><tr><td>Red</td><td>70</td></tr><tr><td>Blue</td><td>35</td></tr><tr><td>Green</td><td>45</td></tr><tr><td>Yellow</td><td>25</td></tr><tr><td>Orange</td><td>25</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a test to determine if the company's stated color distribution is accurate.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected count for green candies if the company's claim is true. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify the conditions for conducting a chi-square goodness-of-fit test using these data.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The test statistic for these data is $\chi^2 = 14.167$ with $df = 4$. The corresponding P-value is 0.0067. Based on these results, what conclusion should the consumer group make at the $\alpha = 0.05$ significance level? Justify your conclusion in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses in context.</li>
+          
+          <li>Part b (1pt): Calculates the correct expected count for green candies ($200 \times 0.20 = 40$) and shows work.</li>
+          
+          <li>Part c (1pt): Verifies random sampling, independence (or 10% condition), and the large expected counts condition (all expected counts $\ge 5$).</li>
+          
+          <li>Part d (2pts): Compares the P-value to $\alpha$ and makes a correct decision (reject $H_0$). Justifies the decision and states a correct conclusion in context (there is significant evidence that the color distribution is different from the company's claim).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S5Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,3.A,4.C,3.E,4.B,4.E,3.C"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.H,VAR-8.L,DAT-3.K,DAT-3.L,VAR-8.A"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A researcher is investigating whether the distribution of preferred commuting methods (drive alone, carpool, public transport, bicycle/walk) is the same for employees at two different company locations (Downtown vs. Suburban). A random sample of 150 employees was taken from the Downtown location and 120 from the Suburban location. The observed counts are summarized in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Commuting Method</th><th>Downtown Location</th><th>Suburban Location</th></tr></thead><tbody><tr><td>Drive Alone</td><td>60</td><td>65</td></tr><tr><td>Carpool</td><td>35</td><td>30</td></tr><tr><td>Public Transport</td><td>25</td><td>15</td></tr><tr><td>Bicycle/Walk</td><td>30</td><td>10</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected count of Suburban employees who prefer public transport, assuming there is no difference in commuting methods between locations. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe the characteristics of a chi-square distribution, including how its shape is determined.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The calculated $\chi^2$ test statistic for these data is $6.85$ and the P-value is $0.0769$. What conclusion can be drawn from these results at the $\alpha = 0.05$ significance level? Justify your answer in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses, identifying it as a test for homogeneity.</li>
+          
+          <li>Part b (1pt): Calculates the correct expected count for Suburban public transport employees (Total public transport = $25+15=40$. Total Suburban = $120$. Grand Total = $270$. Expected = $(40/270) \times 120 \approx 17.78$) and shows work.</li>
+          
+          <li>Part c (1pt): Describes the chi-square distribution as skewed right and states that its shape depends on the degrees of freedom ($df$).</li>
+          
+          <li>Part d (2pts): Compares P-value to $\alpha$ and makes correct decision (fail to reject $H_0$). Justifies decision and states correct conclusion in context (no significant evidence of a difference in commuting method distributions between locations).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S5Q3"
+      data-difficulty="hard"
+      data-skill-codes="1.F,1.E,3.A,4.C,3.E,4.B,4.E,1.A"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.K,VAR-8.H,VAR-8.L,DAT-3.K,DAT-3.L,VAR-1.J"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A health organization wants to determine if there is an association between exercise frequency (sedentary, moderate, active) and cholesterol levels (normal, elevated) in adults. A random sample of 400 adults was surveyed, and the results are summarized in the two-way table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th></th><th>Normal Cholesterol</th><th>Elevated Cholesterol</th><th>Total</th></tr></thead><tbody><tr><td>Sedentary</td><td>90</td><td>50</td><td>140</td></tr><tr><td>Moderate</td><td>120</td><td>20</td><td>140</td></tr><tr><td>Active</td><td>90</td><td>30</td><td>120</td></tr><tr><td>Total</td><td>300</td><td>100</td><td>400</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for a test to investigate the association between exercise frequency and cholesterol levels.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing a chi-square test for independence with these data. For the "Large Expected Counts" condition, you do not need to calculate all expected counts, but state how you would verify it.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected count for adults who are 'active' and have 'elevated' cholesterol. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The calculated $\chi^2$ test statistic is $10.15$ with $df = 2$. The P-value for this test is $0.006$. Based on these results, what conclusion can be drawn at the $\alpha = 0.01$ significance level? Justify your answer in context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Identify one question suggested by the variation between observed and expected counts that might be of interest to the health organization, based on these results.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses, identifying it as a test for independence.</li>
+          
+          <li>Part b (1pt): Verifies random sampling, independence (or 10% condition), and states that all expected counts must be $\ge 5$.</li>
+          
+          <li>Part c (1pt): Calculates the correct expected count for 'active' and 'elevated' cholesterol (Row total for 'Active' = $120$. Column total for 'Elevated' = $100$. Grand total = $400$. Expected = $(120 \times 100) / 400 = 30$) and shows work.</li>
+          
+          <li>Part d (1pt): Compares P-value to $\alpha$ and makes correct decision (reject $H_0$). Justifies decision and states correct conclusion in context (there is a significant association between exercise frequency and cholesterol levels).</li>
+          
+          <li>Part e (1pt): Identifies a relevant question suggested by the data, e.g., "Which specific exercise frequency groups have significantly higher or lower rates of elevated cholesterol than expected?" or "Does being active significantly reduce the likelihood of elevated cholesterol?".</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S5Q4"
+      data-difficulty="easy"
+      data-skill-codes="3.C,1.F,1.E,3.A,4.C,4.B"
+      data-learning-objectives="VAR-8.A,VAR-8.B,VAR-8.C,VAR-8.D,VAR-8.E,DAT-3.I"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A casino wants to check if a particular die is fair. A fair die should show each number (1 through 6) with equal probability. They roll the die 120 times and record the frequency of each outcome. The observed counts are: 1 (18 times), 2 (23 times), 3 (17 times), 4 (22 times), 5 (20 times), 6 (20 times).</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe a chi-square distribution for a goodness-of-fit test involving a six-sided die, specifically mentioning degrees of freedom.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        State the null and alternative hypotheses to test if the die is fair.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected count for each outcome if the die is fair. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Verify the conditions necessary for performing a chi-square goodness-of-fit test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        The P-value for this test is 0.81. Interpret this P-value in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Describes the chi-square distribution as skewed right and states the degrees of freedom would be $6 - 1 = 5$.</li>
+          
+          <li>Part b (1pt): States correct null hypothesis ($H_0$: The die is fair; proportions are $1/6$ for each face) and alternative hypothesis ($H_a$: The die is not fair; proportions are not all $1/6$).</li>
+          
+          <li>Part c (1pt): Calculates correct expected count for each outcome ($120 \times (1/6) = 20$) and shows work.</li>
+          
+          <li>Part d (1pt): Verifies random sampling, independence (or 10% condition), and the large expected counts condition (all expected counts are $20 \ge 5$).</li>
+          
+          <li>Part e (1pt): Interprets the P-value as the probability of observing test results as extreme or more extreme than what was observed, *assuming the die is fair*, if the test were repeated many times.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S5Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.E,1.F,4.C,3.A,4.E,4.B"
+      data-learning-objectives="VAR-8.J,VAR-8.I,VAR-8.K,VAR-8.H,DAT-3.L"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">An educational researcher wants to determine if there is a difference in the distribution of students' preferred primary learning environment (in-person, online, hybrid) across three different school districts (District A, District B, District C). Random samples of 100 students were selected from each district. The observed counts are shown in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Learning Environment</th><th>District A</th><th>District B</th><th>District C</th><th>Total</th></tr></thead><tbody><tr><td>In-person</td><td>60</td><td>70</td><td>40</td><td>170</td></tr><tr><td>Online</td><td>20</td><td>10</td><td>60</td><td>90</td></tr><tr><td>Hybrid</td><td>20</td><td>20</td><td>0</td><td>40</td></tr><tr><td>Total</td><td>100</td><td>100</td><td>100</td><td>300</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference method to address the researcher's question and state the null and alternative hypotheses.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this inference method. For the "Large Expected Counts" condition, calculate one expected count for an arbitrary cell and explain how you would verify the rest.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Based on the provided summary data, calculate the $\chi^2$ test statistic. Show your work or the formula used.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The P-value for the test is $0.0001$. Based on this P-value, what conclusion can be drawn at the $\alpha = 0.05$ significance level? Justify your claim in context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        If the conclusion in part (d) leads to rejecting the null hypothesis, briefly describe one specific difference in learning environment preferences you observe from the data table that contributes to this significant finding.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies Chi-square test for homogeneity. States correct null ($H_0$: The distribution of preferred learning environments is the same across the three districts) and alternative hypotheses ($H_a$: The distribution of preferred learning environments is not the same across the three districts).</li>
+          
+          <li>Part b (1pt): Verifies random samples from each district, independence (or 10% condition for each district population), and states that all expected counts must be $\ge 5$. Calculates one arbitrary expected count (e.g., Expected for District A, in-person = $(100 \times 170) / 300 = 56.67$).</li>
+          
+          <li>Part c (1pt): Shows formula for $\chi^2 = \sum \frac{(Observed - Expected)^2}{Expected}$ and calculates the correct test statistic (e.g., from software: $\chi^2 \approx 36.43$).</li>
+          
+          <li>Part d (1pt): Compares P-value to $\alpha$ and makes correct decision (reject $H_0$). Justifies decision and states correct conclusion in context (there is significant evidence that the distribution of preferred learning environments differs across the three districts).</li>
+          
+          <li>Part e (1pt): Describes a specific difference, e.g., "District C has a much higher proportion of online learners (60%) compared to District A (20%) and District B (10%), which contributes to the significant difference."</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

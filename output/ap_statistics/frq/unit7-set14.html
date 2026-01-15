@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 14)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 14)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S14Q1"
+      data-difficulty="easy"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.R,UNC-4.S"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A consumer advocacy group wants to estimate the average battery life (in hours) of a new smartphone model. They randomly select 30 phones and test them under identical conditions. The sample mean battery life is $\bar{x} = 26.5$ hours with a sample standard deviation of $s = 3.2$ hours.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure and verify the conditions for constructing a confidence interval for the true mean battery life of this smartphone model.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Construct a 95% confidence interval for the true mean battery life of this smartphone model.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the 95% confidence interval in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies one-sample t-interval (1pt) and verifies conditions (1pt for Random sample, Normal/Large sample, Independent).</li>
+          
+          <li>Part b (2pts): Correctly calculates the t-interval using $\bar{x} \pm t^* \frac{s}{\sqrt{n}}$ (1pt for correct values, 1pt for correct interval).</li>
+          
+          <li>Part c (1pt): Provides a correct interpretation of the confidence interval in context.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S14Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A company claims that its new energy-efficient light bulbs have an average lifespan of more than 10,000 hours. A consumer watchdog organization wants to test this claim. They obtain a random sample of 25 bulbs and find their average lifespan to be $\bar{x} = 10,250$ hours with a standard deviation of $s = 500$ hours. Assume the organization wants to test this claim at the $\alpha = 0.05$ significance level.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        State the conclusion of the test in context, based on the p-value and the significance level.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states $H_0: \mu = 10000$ and $H_a: \mu > 10000$.</li>
+          
+          <li>Part b (1pt): Verifies conditions: Random sample, $n < 30$ but assume normal (or state need to check normality from sample data, given sample size is 25, population assumed normal or sample nearly normal), Independence ($N \ge 10n$).</li>
+          
+          <li>Part c (2pts): Correctly calculates $t = \frac{\bar{x} - \mu_0}{s/\sqrt{n}}$ (1pt) and finds the correct p-value (1pt).</li>
+          
+          <li>Part d (1pt): Compares p-value to $\alpha$ and states a correct conclusion in context (e.g., "Since p-value > $\alpha$, we fail to reject $H_0$. There is not sufficient evidence...").</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S14Q3"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.E"
+      data-learning-objectives="VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.F"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A pharmaceutical company is testing a new drug designed to lower cholesterol. They recruit 12 patients and measure their cholesterol levels before and after taking the drug for one month. The differences in cholesterol levels (Before - After) for the 12 patients are summarized as follows: mean difference $\bar{d} = 15$ mg/dL, and standard deviation of differences $s_d = 8$ mg/dL. The company wants to determine if the drug significantly reduces cholesterol levels.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for a test to determine if the drug significantly reduces cholesterol levels.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this matched-pairs t-test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value, what is your conclusion regarding the drug's effectiveness in reducing cholesterol levels? Use a significance level of $\alpha = 0.05$.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states $H_0: \mu_d = 0$ and $H_a: \mu_d > 0$, where $\mu_d$ is the true mean difference (Before - After).</li>
+          
+          <li>Part b (1pt): Verifies conditions: Random assignment/sampling for patients, Normal/Large sample (given $n=12$, state need to check normality of differences), Independence ($N \ge 10n$).</li>
+          
+          <li>Part c (2pts): Correctly calculates $t = \frac{\bar{d} - 0}{s_d/\sqrt{n}}$ (1pt) and finds the correct p-value (1pt).</li>
+          
+          <li>Part d (1pt): Compares p-value to $\alpha$ and states a correct conclusion in context (e.g., "Since p-value < $\alpha$, we reject $H_0$. There is sufficient evidence...").</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S14Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B"
+      data-learning-objectives="UNC-4.V,UNC-4.W,UNC-4.Y,UNC-4.Z"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A researcher wants to compare the average weekly study hours of students at two different universities, University A and University B. A random sample of 35 students from University A reported a mean of $\bar{x}_A = 22.5$ hours with a standard deviation of $s_A = 5.8$ hours. A random sample of 40 students from University B reported a mean of $\bar{x}_B = 20.0$ hours with a standard deviation of $s_B = 6.3$ hours.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate inference procedure and verify the conditions for constructing a confidence interval for the difference in the true mean weekly study hours between students at University A and University B.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Construct a 90% confidence interval for the difference in true mean weekly study hours $(\mu_A - \mu_B)$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the 90% confidence interval in the context of the problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Identifies two-sample t-interval (1pt) and verifies conditions (1pt for two independent random samples, Large samples (both $n \ge 30$), Independence within populations).</li>
+          
+          <li>Part b (2pts): Correctly calculates the two-sample t-interval using $(\bar{x}_A - \bar{x}_B) \pm t^* \sqrt{\frac{s_A^2}{n_A} + \frac{s_B^2}{n_B}}$ (1pt for correct values, 1pt for correct interval).</li>
+          
+          <li>Part c (1pt): Provides a correct interpretation of the confidence interval in context.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S14Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.F,VAR-7.G,VAR-7.H,VAR-7.1,DAT-3.G,DAT-3.H"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A school district implements a new curriculum (Method X) in one high school and continues with the traditional curriculum (Method Y) in another comparable high school. At the end of the year, a random sample of 50 students from Method X school had an average math test score of $\bar{x}_X = 82$ with a standard deviation of $s_X = 7$. A random sample of 45 students from Method Y school had an average math test score of $\bar{x}_Y = 78$ with a standard deviation of $s_Y = 9$. The district wants to determine if Method X significantly improves math test scores compared to Method Y. Use a significance level of $\alpha = 0.01$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for this investigation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing a significance test for the difference in mean test scores.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value and the significance level, what conclusion can be made regarding the new curriculum's effectiveness?
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states $H_0: \mu_X - \mu_Y = 0$ (or $\mu_X = \mu_Y$) and $H_a: \mu_X - \mu_Y > 0$ (or $\mu_X > \mu_Y$).</li>
+          
+          <li>Part b (1pt): Verifies conditions: Two independent random samples, Large samples (both $n \ge 30$), Independence within populations ($N \ge 10n$).</li>
+          
+          <li>Part c (2pts): Correctly calculates $t = \frac{(\bar{x}_X - \bar{x}_Y) - 0}{\sqrt{\frac{s_X^2}{n_X} + \frac{s_Y^2}{n_Y}}}$ (1pt) and finds the correct p-value (1pt).</li>
+          
+          <li>Part d (1pt): Compares p-value to $\alpha$ and states a correct conclusion in context (e.g., "Since p-value < $\alpha$, we reject $H_0$. There is sufficient evidence...").</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

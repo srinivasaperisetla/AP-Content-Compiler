@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 2)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 5: Sampling Distributions (Set 2)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S2Q1"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.K,UNC-3.L,UNC-3.M"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A telecommunications company claims that 80% of its customer service calls are resolved on the first attempt. A quality control manager takes a random sample of 150 calls. Let $\hat{p}$ be the proportion of calls in the sample that are resolved on the first attempt.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the mean and standard deviation of the sampling distribution of $\hat{p}$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe whether the sampling distribution of $\hat{p}$ can be approximated by a normal distribution. Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Using a normal approximation, calculate the probability that the sample proportion $\hat{p}$ is less than 0.75.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Mean calculated correctly as $\mu_{\hat{p}}=p=0.80$ (1pt); Standard deviation calculated correctly as $\sigma_{\hat{p}}=\sqrt{\frac{p(1-p)}{n}} = \sqrt{\frac{0.80(0.20)}{150}} \approx 0.03266$ (1pt).</li>
+          
+          <li>Part b (1pt): States conditions $np \ge 10$ and $n(1-p) \ge 10$ are met ($150 \times 0.80 = 120 \ge 10$ and $150 \times 0.20 = 30 \ge 10$) and justifies that the sampling distribution is approximately normal (1pt).</li>
+          
+          <li>Part c (2pts): Correctly calculates the $z$-score $z = \frac{0.75 - 0.80}{0.03266} \approx -1.53$ (1pt); Correctly calculates $P(\hat{p} < 0.75) \approx P(Z < -1.53) \approx 0.0630$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S2Q2"
+      data-difficulty="medium"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.Q,UNC-3.R,UNC-3.S"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">The weight of adult male grizzly bears in a certain region is known to have a mean of $\mu = 500$ pounds and a standard deviation of $\sigma = 50$ pounds. A wildlife biologist takes a random sample of 40 adult male grizzly bears from this region. Let $\bar{x}$ be the mean weight of the bears in the sample.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the mean and standard deviation of the sampling distribution of $\bar{x}$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Determine whether the sampling distribution of $\bar{x}$ can be described as approximately normal. Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the sample mean weight $\bar{x}$ is greater than 515 pounds.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Mean calculated correctly as $\mu_{\bar{x}} = \mu = 500$ pounds (1pt); Standard deviation calculated correctly as $\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}} = \frac{50}{\sqrt{40}} \approx 7.9057$ pounds (1pt).</li>
+          
+          <li>Part b (1pt): States that since the sample size $n=40$ is large ($n \ge 30$), the Central Limit Theorem applies, and thus the sampling distribution of $\bar{x}$ is approximately normal (1pt).</li>
+          
+          <li>Part c (2pts): Correctly calculates the $z$-score $z = \frac{515 - 500}{7.9057} \approx 1.90$ (1pt); Correctly calculates $P(\bar{x} > 515) \approx P(Z > 1.90) \approx 0.0287$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S2Q3"
+      data-difficulty="easy"
+      data-skill-codes="3.B,4.B"
+      data-learning-objectives="UNC-3.I,UNC-3.J"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">An educational researcher wants to estimate the true mean score on a standardized test for all high school students in a large district. She considers two different methods: Method A uses the average score from a simple random sample of 50 students. Method B uses the average score from a convenience sample of 50 students from one particular high school. Assume the true mean score for the district is $\mu$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate an estimate for the population mean score $\mu$ if the sample mean from Method A was 75 and the sample mean from Method B was 72.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain which of the two estimators (sample mean from Method A or sample mean from Method B) is an unbiased estimator of the true mean score for the district. Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Describe a potential source of bias in the estimator that is not unbiased.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States that the estimate for $\mu$ from Method A is $\bar{x}_A = 75$ (1pt). (Accept also if both are stated as estimates.)</li>
+          
+          <li>Part b (2pts): Identifies the sample mean from Method A as an unbiased estimator (1pt); Justifies that it is unbiased because a simple random sample ensures that the center of the sampling distribution of $\bar{x}$ is equal to the true population mean $\mu$ (1pt).</li>
+          
+          <li>Part c (1pt): Describes that Method B, using a convenience sample from one school, could lead to selection bias, where students at that school might not be representative of all students in the district (e.g., higher or lower performing on average), causing the sample mean to consistently overestimate or underestimate $\mu$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S2Q4"
+      data-difficulty="hard"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.N,UNC-3.O,UNC-3.P"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A medical researcher is comparing the effectiveness of two different flu vaccines, Vaccine A and Vaccine B. In a large randomized controlled trial, 400 people received Vaccine A, and 350 people received Vaccine B. Among those who received Vaccine A, 60 people contracted the flu. Among those who received Vaccine B, 70 people contracted the flu. Let $p_A$ be the true proportion of people who contract the flu after receiving Vaccine A, and $p_B$ be the true proportion for Vaccine B. We are interested in the difference $\hat{p}_A - \hat{p}_B$. Assume $p_A = 0.15$ and $p_B = 0.20$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Calculate the mean and standard deviation of the sampling distribution of $\hat{p}_A - \hat{p}_B$.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Determine whether the sampling distribution of $\hat{p}_A - \hat{p}_B$ can be described as approximately normal. Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the sample proportion of people contracting the flu for Vaccine A is less than that for Vaccine B (i.e., $\hat{p}_A - \hat{p}_B < 0$).
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Mean calculated correctly as $\mu_{\hat{p}_A - \hat{p}_B} = p_A - p_B = 0.15 - 0.20 = -0.05$ (1pt); Standard deviation calculated correctly as $\sigma_{\hat{p}_A - \hat{p}_B} = \sqrt{\frac{p_A(1-p_A)}{n_A} + \frac{p_B(1-p_B)}{n_B}} = \sqrt{\frac{0.15(0.85)}{400} + \frac{0.20(0.80)}{350}} \approx \sqrt{0.00031875 + 0.00045714} \approx \sqrt{0.00077589} \approx 0.02785$ (1pt).</li>
+          
+          <li>Part b (1pt): States that all four conditions $n_A p_A \ge 10$, $n_A(1-p_A) \ge 10$, $n_B p_B \ge 10$, $n_B(1-p_B) \ge 10$ are met ($400 \times 0.15 = 60$, $400 \times 0.85 = 340$, $350 \times 0.20 = 70$, $350 \times 0.80 = 280$, all $\ge 10$) and justifies that the sampling distribution is approximately normal (1pt).</li>
+          
+          <li>Part c (2pts): Correctly calculates the $z$-score for a difference of 0: $z = \frac{0 - (-0.05)}{0.02785} \approx 1.80$ (1pt); Correctly calculates $P(\hat{p}_A - \hat{p}_B < 0) \approx P(Z < 1.80) \approx 0.9641$ (1pt).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U5S2Q5"
+      data-difficulty="easy"
+      data-skill-codes="3.B,3.C,4.B"
+      data-learning-objectives="UNC-3.K,UNC-3.L,UNC-3.M"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A large company claims that 80% of its employees are satisfied with their job. To verify this claim, an independent research firm plans to take a random sample of 150 employees and calculate the sample proportion of satisfied employees, $\hat{p}$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the sampling distribution of $\hat{p}$ by determining its mean and standard deviation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify that the conditions for using a normal distribution to approximate the sampling distribution of $\hat{p}$ are met.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the probability that the sample proportion of satisfied employees in a sample of 150 would be less than 75% if the company's claim is true.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your calculation in part (c), would a sample proportion of 75% or less be unusual? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly states $\mu_{\hat{p}} = p = 0.80$ (1pt) and $\sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} = \sqrt{\frac{0.80(0.20)}{150}} \approx 0.03266$ (1pt).</li>
+          
+          <li>Part b (2pts): Checks $n \cdot p = 150 \cdot 0.80 = 120 \ge 10$ (1pt) and $n \cdot (1-p) = 150 \cdot 0.20 = 30 \ge 10$ (1pt). States that because conditions are met, the sampling distribution is approximately normal.</li>
+          
+          <li>Part c (1pt): Calculates $Z = \frac{0.75 - 0.80}{0.03266} \approx -1.53$ and finds $P(\hat{p} < 0.75) \approx P(Z < -1.53) \approx 0.063$.</li>
+          
+          <li>Part d (1pt): States that $0.063$ is not particularly unusual (e.g., greater than 0.05 or 0.10) and provides justification.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

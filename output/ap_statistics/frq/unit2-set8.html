@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 8)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 2: Exploring Two-Variable Data (Set 8)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S8Q1"
+      data-difficulty="easy"
+      data-skill-codes="2.B,2.A"
+      data-learning-objectives="UNC-1.S,DAT-1.A"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A researcher is studying the relationship between the number of hours a student studies for a statistics exam and their score on the exam. Data was collected from 10 randomly selected students.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Study Hours (x)</th><th>Exam Score (y)</th></tr></thead><tbody><tr><td>2</td><td>65</td></tr><tr><td>3</td><td>70</td></tr><tr><td>4</td><td>75</td></tr><tr><td>5</td><td>82</td></tr><tr><td>5</td><td>78</td></tr><tr><td>6</td><td>85</td></tr><tr><td>7</td><td>90</td></tr><tr><td>7</td><td>88</td></tr><tr><td>8</td><td>93</td></tr><tr><td>9</td><td>95</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Construct a scatterplot to display the relationship between study hours and exam score.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Describe the relationship shown in your scatterplot, including its direction, form, and strength.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Correctly labels axes with variable names and units (1pt); Correctly plots all 10 points (1pt)</li>
+          
+          <li>Part b (2pts): Identifies the direction as positive (1pt); Describes the form as roughly linear and comments on the strength (e.g., moderate to strong) (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S8Q2"
+      data-difficulty="medium"
+      data-skill-codes="2.C,4.B"
+      data-learning-objectives="DAT-1.B,DAT-1.C"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A nutritionist is investigating the relationship between the amount of sugar (in grams) in a breakfast cereal and the number of calories per serving. They collect data from a sample of 15 different cereals. A scatterplot shows a positive, roughly linear association. The nutritionist calculates the correlation coefficient to be $r = 0.78$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Interpret the value of the correlation coefficient in the context of this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        If the amount of sugar was measured in teaspoons instead of grams (1 gram $\approx$ 0.25 teaspoons), how would the correlation coefficient change? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Explains that there is a strong, positive linear association between the amount of sugar and the number of calories per serving (1pt); States that larger values of sugar tend to be associated with larger values of calories (1pt)</li>
+          
+          <li>Part b (2pts): States that the correlation coefficient would not change (1pt); Justifies that correlation is a standardized measure and is not affected by changes in the units of measurement for the variables (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S8Q3"
+      data-difficulty="medium"
+      data-skill-codes="2.C,4.B"
+      data-learning-objectives="DAT-1.D,DAT-1.G,DAT-1.H"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A company investigates the relationship between the number of hours an employee spends in training ($x$) and their weekly sales ($y$, in thousands of dollars). The least squares regression line based on data from 50 employees is given by $\hat{y} = 2.5 + 0.75x$. The coefficient of determination is $r^2 = 0.64$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Interpret the slope of the least-squares regression line in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Predict the weekly sales for an employee who spent 10 hours in training.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the value of $r^2$ in the context of this problem.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Explains that for each additional hour of training, the predicted weekly sales increase by $\$0.75$ thousand (or $\$750$) (1pt); References both variables and context (1pt)</li>
+          
+          <li>Part b (1pt): Shows calculation $\hat{y} = 2.5 + 0.75(10) = 10$ and states the predicted sales are $\$10$ thousand (1pt)</li>
+          
+          <li>Part c (2pts): Explains that $64\%$ of the variation in weekly sales can be explained by the linear relationship with training hours (1pt); Mentions context of variables (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S8Q4"
+      data-difficulty="medium"
+      data-skill-codes="2.A,2.B"
+      data-learning-objectives="DAT-1.E,DAT-1.F"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A school administrator collected data on the number of hours students spent studying for a final exam and their scores on the exam. The scatterplot below shows the relationship, and a linear model was fit to the data. The residual plot is also shown below.</div>
+
+      
+      <div class="diagram">
+         <svg width="400" height="300" viewBox="0 0 400 300" style="background-color:white; font-family:sans-serif; font-size:12px;"><!-- Scatterplot --><rect x="40" y="20" width="340" height="120" stroke="black" fill="none"/><line x1="40" y1="140" x2="380" y2="140" stroke="black"/><line x1="40" y1="20" x2="40" y2="140" stroke="black"/><text x="180" y="155" text-anchor="middle">Study Hours</text><text x="10" y="80" text-anchor="middle" transform="rotate(-90 10 80)">Exam Score</text><!-- Scatterplot points (roughly linear, increasing) --><circle cx="60" cy="130" r="2" fill="black"/><circle cx="90" cy="120" r="2" fill="black"/><circle cx="120" cy="110" r="2" fill="black"/><circle cx="150" cy="100" r="2" fill="black"/><circle cx="180" cy="90" r="2" fill="black"/><circle cx="210" cy="85" r="2" fill="black"/><circle cx="240" cy="80" r="2" fill="black"/><circle cx="270" cy="75" r="2" fill="black"/><circle cx="300" cy="70" r="2" fill="black"/><circle cx="330" cy="65" r="2" fill="black"/><!-- Residual Plot --><rect x="40" y="160" width="340" height="120" stroke="black" fill="none"/><line x1="40" y1="220" x2="380" y2="220" stroke="black" stroke-dasharray="2 2"/><!-- Residual = 0 line --><line x1="40" y1="160" x2="40" y2="280" stroke="black"/><text x="180" y="295" text-anchor="middle">Study Hours</text><text x="10" y="220" text-anchor="middle" transform="rotate(-90 10 220)">Residuals</text><!-- Residual plot points (U-shaped pattern) --><circle cx="60" cy="270" r="2" fill="black"/><circle cx="90" cy="250" r="2" fill="black"/><circle cx="120" cy="230" r="2" fill="black"/><circle cx="150" cy="210" r="2" fill="black"/><circle cx="180" cy="190" r="2" fill="black"/><circle cx="210" cy="190" r="2" fill="black"/><circle cx="240" cy="210" r="2" fill="black"/><circle cx="270" cy="230" r="2" fill="black"/><circle cx="300" cy="250" r="2" fill="black"/><circle cx="330" cy="270" r="2" fill="black"/></svg> 
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Using the residual plot, determine if a linear model is appropriate for these data. Justify your answer.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        One student studied for 6 hours and scored 80 on the exam. The predicted score for a student who studied 6 hours was 75. Calculate the residual for this student and interpret its meaning in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): States that a linear model is not appropriate (1pt); Justifies by explaining that there is a clear pattern (e.g., curved pattern, U-shape) in the residual plot, indicating that a linear model is not the best fit (1pt)</li>
+          
+          <li>Part b (2pts): Calculates residual as $80 - 75 = 5$ (1pt); Interprets that this student's actual score was 5 points higher than what the linear model predicted (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U2S8Q5"
+      data-difficulty="hard"
+      data-skill-codes="2.A,2.C"
+      data-learning-objectives="DAT-1.I,DAT-1.J"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A marine biologist is studying the relationship between the length ($L$, in cm) and mass ($M$, in grams) of a certain species of fish. A scatterplot of $M$ versus $L$ shows a strong positive, non-linear relationship. To achieve linearity, the biologist performs a transformation, analyzing $\log(M)$ versus $\log(L)$. The least-squares regression line for the transformed data is $\widehat{\log(M)} = 0.52 + 2.8 \log(L)$.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the characteristics of an influential point in a scatterplot.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain why the biologist chose to transform both variables using a logarithm in this context.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Predict the mass (in grams) of a fish with a length of $10$ cm using the transformed model. Show your work.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (2pts): Explains that an influential point is a data point that, if removed, would significantly change the slope and/or y-intercept of the least-squares regression line (1pt); May also mention it is often an outlier in the x-direction (1pt)</li>
+          
+          <li>Part b (2pts): Explains that transforming both variables (e.g., $\log(y)$ vs. $\log(x)$) is often used when the original relationship is non-linear and exhibits increasing variation as $x$ increases, or to linearize a power relationship (1pt); Notes that using logarithms helps to linearize relationships that are multiplicative or exponential (1pt)</li>
+          
+          <li>Part c (2pts): Substitutes $L=10$ into the transformed equation: $\widehat{\log(M)} = 0.52 + 2.8 \log(10) = 0.52 + 2.8(1) = 3.32$ (1pt); Transforms back to original scale: $M = 10^{3.32} \approx 2089.29$ grams (1pt)</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

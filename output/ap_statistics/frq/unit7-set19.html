@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 19)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 7: Inference for Quantitative Data: Means (Set 19)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S19Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D"
+      data-learning-objectives="UNC-4.0,UNC-4.P,UNC-4.R,UNC-4.S,UNC-4.T"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A company manufactures snack bags and claims that the net weight of their "Jumbo Crunch" snack bags is, on average, 10 ounces. A consumer advocacy group suspects the bags are underfilled and takes a random sample of 35 bags. The sample mean net weight is $\bar{x} = 9.85$ ounces, and the sample standard deviation is $s = 0.3$ ounces.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 95% confidence interval for the true mean net weight of "Jumbo Crunch" snack bags.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval in the context of the problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on your interval from part (b), what conclusion can the consumer advocacy group make about the company's claim that the true mean net weight is 10 ounces? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies one-sample t-interval for a mean (UNC-4.0) AND verifies conditions (Random sample stated; $n=35 \ge 30$, so CLT applies for sampling distribution of $\bar{x}$) (UNC-4.P).</li>
+          
+          <li>Part b (2pts): Calculates the correct 95% t-interval (degrees of freedom $df=34$, $t^* \approx 2.032$. Interval: $9.85 \pm 2.032 \frac{0.3}{\sqrt{35}} \Rightarrow (9.747, 9.953)$) (UNC-4.R, UNC-4.Q).</li>
+          
+          <li>Part c (1pt): Correctly interprets the interval in context (UNC-4.S).</li>
+          
+          <li>Part d (1pt): Makes a correct conclusion (e.g., since 10 is not in the interval, there is convincing evidence the true mean is not 10 ounces) AND justifies it based on the interval (UNC-4.T).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S19Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A light bulb manufacturer claims that their new LED bulbs have an average lifespan of 25,000 hours. A consumer testing agency wants to investigate this claim and believes the true average lifespan might be less. They randomly select 40 bulbs and test them. The sample mean lifespan is $\bar{x} = 24,500$ hours with a sample standard deviation of $s = 1200$ hours.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for this investigation. Identify the appropriate inference method.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for conducting this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value from part (c), interpret its meaning and state your conclusion at the $\alpha = 0.05$ significance level. Justify your conclusion in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses $H_0: \mu = 25000$ and $H_a: \mu < 25000$ (VAR-7.C) AND identifies one-sample t-test for a mean (VAR-7.B).</li>
+          
+          <li>Part b (1pt): Verifies conditions: Random sample (stated); $n = 40 \ge 30$, so CLT applies (sampling distribution of $\bar{x}$ is approximately normal) (VAR-7.D).</li>
+          
+          <li>Part c (2pts): Calculates the test statistic $t = \frac{24500 - 25000}{1200/\sqrt{40}} \approx -2.635$ (VAR-7.E) AND finds the correct p-value (using $df = 39$, p-value $\approx 0.0058$) (VAR-7.E).</li>
+          
+          <li>Part d (2pts): Interprets the p-value correctly in context (DAT-3.E) AND makes a correct conclusion comparing p-value to $\alpha$ with justification in context (DAT-3.F).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S19Q3"
+      data-difficulty="hard"
+      data-skill-codes="1.D,4.C,3.D,4.B,4.D,4.A"
+      data-learning-objectives="UNC-4.V,UNC-4.W,UNC-4.Y,UNC-4.Z,UNC-4.AA,UNC-4.AB"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">Researchers are investigating the effectiveness of two different fertilizers, Fertilizer A and Fertilizer B, on the yield of a particular crop. They randomly assign 30 plots of land to Fertilizer A and 35 plots of land to Fertilizer B. After the growing season, the crop yields (in bushels per acre) are measured for each plot. The summary statistics are provided in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Fertilizer</th><th>Sample Size</th><th>Mean Yield ($\bar{x}$)</th><th>Standard Deviation ($s$)</th></tr></thead><tbody><tr><td>A</td><td>30</td><td>45.2 bushels/acre</td><td>1.5 bushels/acre</td></tr><tr><td>B</td><td>35</td><td>42.7 bushels/acre</td><td>1.8 bushels/acre</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Identify the appropriate confidence interval procedure and verify the conditions for its use.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate a 90% confidence interval for the true difference in mean crop yield (Fertilizer A - Fertilizer B).
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Interpret the confidence interval in the context of the problem and use it to justify a claim about whether there is a significant difference in mean crop yields between the two fertilizers.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        If the researchers wanted to achieve a narrower confidence interval while maintaining the same confidence level, describe one way they could achieve this and explain why it would work.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Identifies two-sample t-interval for a difference of means (UNC-4.V) AND verifies conditions (Random assignment/samples for both groups, $n_A=30 \ge 30$ and $n_B=35 \ge 30$, so CLT applies for both means; independent samples) (UNC-4.W).</li>
+          
+          <li>Part b (2pts): Calculates the correct 90% t-interval (degrees of freedom $df \approx 62.9$. $t^* \approx 1.671$. Interval: $(45.2 - 42.7) \pm 1.671 \times \sqrt{\frac{1.5^2}{30} + \frac{1.8^2}{35}} \Rightarrow 2.5 \pm 0.68 \Rightarrow (1.82, 3.18)$ bushels/acre) (UNC-4.Y).</li>
+          
+          <li>Part c (2pts): Correctly interprets the interval in context (UNC-4.Z) AND justifies a claim about the difference in means (e.g., since 0 is not included in the interval, there is convincing evidence of a significant difference) (UNC-4.AA).</li>
+          
+          <li>Part d (1pt): Identifies a method to narrow the interval (e.g., increase sample sizes, decrease confidence level) AND explains why it works (UNC-4.AB).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S19Q4"
+      data-difficulty="medium"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.F,VAR-7.G,VAR-7.H,VAR-7.1,DAT-3.G,DAT-3.H"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">A company is comparing the average fuel efficiency of two car models, Model X and Model Y. They select a random sample of 30 cars of Model X and 32 cars of Model Y. The fuel efficiency (miles per gallon, mpg) data are collected. The sample mean for Model X is $\bar{x}_X = 32.5$ mpg with a standard deviation of $s_X = 2.1$ mpg. The sample mean for Model Y is $\bar{x}_Y = 30.8$ mpg with a standard deviation of $s_Y = 1.9$ mpg. The company wants to determine if Model X has a higher average fuel efficiency than Model Y.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the appropriate null and alternative hypotheses for this investigation. Identify the appropriate inference method.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for conducting this significance test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the test statistic and the p-value for this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value from part (c), interpret its meaning and state your conclusion at the $\alpha = 0.01$ significance level. Justify your conclusion in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses $H_0: \mu_X = \mu_Y$ (or $\mu_X - \mu_Y = 0$) and $H_a: \mu_X > \mu_Y$ (or $\mu_X - \mu_Y > 0$) (VAR-7.G) AND identifies two-sample t-test for a difference of means (VAR-7.F).</li>
+          
+          <li>Part b (1pt): Verifies conditions: Random samples for both models (stated); $n_X=30 \ge 30$ and $n_Y=32 \ge 30$, so CLT applies for both means; independent samples (VAR-7.H).</li>
+          
+          <li>Part c (2pts): Calculates the test statistic $t = \frac{(32.5 - 30.8) - 0}{\sqrt{\frac{2.1^2}{30} + \frac{1.9^2}{32}}} \approx \frac{1.7}{\sqrt{0.147+0.113}} \approx 3.334$ (VAR-7.1) AND finds the correct p-value (using $df \approx 57.1$, p-value $\approx 0.0008$) (VAR-7.1).</li>
+          
+          <li>Part d (2pts): Interprets the p-value correctly in context (DAT-3.G) AND makes a correct conclusion comparing p-value to $\alpha$ with justification in context (DAT-3.H).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U7S19Q5"
+      data-difficulty="hard"
+      data-skill-codes="1.E,1.F,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-7.B,VAR-7.C,VAR-7.D,VAR-7.E,DAT-3.E,DAT-3.F"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A sports scientist wants to determine if a new training regimen significantly improves a runner's 5K race time. Twelve randomly selected runners participate in the study. Each runner completes a 5K race before starting the regimen (Pre-regimen) and again after completing the regimen (Post-regimen). The differences in race times (Pre-regimen time - Post-regimen time) are calculated for each runner. A positive difference indicates an improvement. The summary statistics for these differences are given below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Statistic</th><th>Value</th></tr></thead><tbody><tr><td>Sample size of differences ($n_d$)</td><td>12</td></tr><tr><td>Sample mean difference ($\bar{x}_d$)</td><td>45 seconds</td></tr><tr><td>Sample standard deviation of differences ($s_d$)</td><td>25 seconds</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Explain why a matched-pairs t-test is the appropriate inference procedure for this study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        State the appropriate null and alternative hypotheses for this investigation.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify the conditions for conducting this significance test AND calculate the test statistic.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Calculate the p-value, interpret its meaning, and state your conclusion at the $\alpha = 0.05$ significance level about the effectiveness of the training regimen. Justify your conclusion in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Explains that a matched-pairs design is used because the same runners are measured twice (before and after), making the observations dependent, thus analysis focuses on the differences (VAR-7.B implicitly).</li>
+          
+          <li>Part b (1pt): States correct null and alternative hypotheses $H_0: \mu_d = 0$ and $H_a: \mu_d > 0$ where $\mu_d$ is the true mean difference (Pre - Post) (VAR-7.C).</li>
+          
+          <li>Part c (2pts): Verifies conditions: Random selection of runners (stated); population distribution of differences is approximately normal (since $n_d = 12 < 30$, this assumption is necessary) (VAR-7.D) AND calculates the test statistic $t = \frac{\bar{x}_d - 0}{s_d/\sqrt{n_d}} = \frac{45 - 0}{25/\sqrt{12}} \approx 6.235$ (VAR-7.E).</li>
+          
+          <li>Part d (2pts): Calculates the p-value (using $df = 11$, p-value $\approx 0.00003$) (VAR-7.E), interprets the p-value correctly in context (DAT-3.E) AND makes a correct conclusion comparing p-value to $\alpha$ with justification in context (DAT-3.F).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>

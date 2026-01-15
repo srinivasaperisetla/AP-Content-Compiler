@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 16)</title>
+
+    <!-- KaTeX for math rendering -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .frq {
+        margin-bottom: 60px;
+        page-break-inside: avoid;
+      }
+
+      .frq h2 {
+        font-family: Arial, sans-serif;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      .prompt {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .part {
+        margin-top: 10px;
+      }
+
+      .part-label {
+        font-weight: bold;
+      }
+
+      .diagram {
+        text-align: center;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+
+      .diagram svg {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .guidelines {
+        background: #f0f7ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        border-left: 5px solid #4a90e2;
+      }
+
+      .guidelines h3 {
+        margin-top: 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        color: #004488;
+      }
+
+      .guidelines ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      .guidelines li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 60px 0;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        .guidelines {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>AP Statistics FRQs — Unit 8: Inference for Categorical Data: Chi-Square (Set 16)</h1>
+
+    
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S16Q1"
+      data-difficulty="medium"
+      data-skill-codes="1.F,4.C,3.A,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.B,VAR-8.E,VAR-8.D,VAR-8.F,VAR-8.G,DAT-3.I,DAT-3.J"
+    >
+      <h2>FRQ 1</h2>
+
+      <div class="prompt">A candy company claims that its plain M&M's candies are distributed with specific percentages for each color: 24% blue, 20% orange, 16% green, 14% yellow, 13% red, and 13% brown. A student randomly selected a large bag of plain M&M's and counted the number of candies of each color. The observed counts are provided in the table.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Color</th><th>Blue</th><th>Orange</th><th>Green</th><th>Yellow</th><th>Red</th><th>Brown</th><th>Total</th></tr></thead><tbody><tr><td>Observed Count</td><td>38</td><td>45</td><td>30</td><td>25</td><td>32</td><td>30</td><td>200</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate chi-square test to investigate the company's claim.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Verify the conditions for performing this chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected count for yellow M&M's in this sample.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The chi-square test statistic was calculated to be $\chi^2 = 8.65$ with a p-value of $0.123$. Interpret the p-value in the context of this problem.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Based on the p-value provided in part (d) and a significance level of $\alpha = 0.05$, what conclusion should the student make about the company's claim? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses for goodness-of-fit test, including population parameter or distribution of proportions.</li>
+          
+          <li>Part b (1pt): Verifies all three conditions (random sample, large sample/expected counts $\ge 5$, independence) in context.</li>
+          
+          <li>Part c (1pt): Shows correct calculation for the expected count for yellow M&M's ($200 \times 0.14 = 28$).</li>
+          
+          <li>Part d (1pt): Correctly interprets the p-value in context as the probability of observing sample data as or more extreme than what was observed, assuming the null hypothesis is true.</li>
+          
+          <li>Part e (1pt): States correct conclusion (fail to reject $H_0$) with justification based on comparing p-value to $\alpha$ and linking back to the context of the company's claim.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S16Q2"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,3.A,4.C,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.J,VAR-8.H,VAR-8.K,DAT-3.L"
+    >
+      <h2>FRQ 2</h2>
+
+      <div class="prompt">A pharmaceutical company is testing a new drug designed to alleviate allergy symptoms. They conducted a randomized experiment with 300 volunteers, assigning them to one of three dosage groups: low, medium, or high. After a week, they recorded whether each participant experienced significant symptom relief. The results are summarized in the two-way table.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th></th><th>Relief</th><th>No Relief</th><th>Total</th></tr></thead><tbody><tr><td>Low Dosage</td><td>70</td><td>30</td><td>100</td></tr><tr><td>Medium Dosage</td><td>85</td><td>15</td><td>100</td></tr><tr><td>High Dosage</td><td>65</td><td>35</td><td>100</td></tr><tr><td>Total</td><td>220</td><td>80</td><td>300</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Identify the specific type of chi-square test that should be performed. Justify your choice.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Calculate the expected count of participants in the 'High Dosage' group who experienced 'No Relief'. Show your work.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Verify the conditions for performing this chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        The test produced a chi-square statistic of $\chi^2 = 7.15$ and a p-value of $0.028$. Based on these results, with a significance level of $\alpha = 0.05$, what conclusion can be drawn about the drug's effectiveness across different dosages? Justify your answer.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses comparing the distributions of symptom relief across dosage groups.</li>
+          
+          <li>Part b (1pt): Identifies the test as a chi-square test for homogeneity and justifies it by explaining that it compares the distribution of a categorical variable (relief) across different populations/groups (dosage levels) from independent samples.</li>
+          
+          <li>Part c (1pt): Shows correct calculation for expected count: $\frac{100 \times 80}{300} \approx 26.67$.</li>
+          
+          <li>Part d (1pt): Verifies all three conditions (random assignment, large sample/expected counts $\ge 5$, independence/10% rule if applicable for sampling).</li>
+          
+          <li>Part e (1pt): States correct conclusion (reject $H_0$) with justification based on comparing p-value to $\alpha$ and linking back to the context of the drug's effectiveness and dosage.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S16Q3"
+      data-difficulty="hard"
+      data-skill-codes="1.F,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.I,VAR-8.L,VAR-8.M,DAT-3.K,DAT-3.L"
+    >
+      <h2>FRQ 3</h2>
+
+      <div class="prompt">A national automotive research firm wants to investigate if there is an association between preferred car color and geographic region in the United States. They surveyed 500 randomly selected car owners, asking for their preferred car color and their geographic region (Northeast, South, Midwest, West). The observed counts are displayed in the two-way table.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Preferred Color</th><th>Northeast</th><th>South</th><th>Midwest</th><th>West</th><th>Total</th></tr></thead><tbody><tr><td>Silver</td><td>20</td><td>35</td><td>40</td><td>25</td><td>120</td></tr><tr><td>Black</td><td>30</td><td>40</td><td>30</td><td>20</td><td>120</td></tr><tr><td>White</td><td>25</td><td>30</td><td>25</td><td>30</td><td>110</td></tr><tr><td>Blue</td><td>25</td><td>15</td><td>15</td><td>25</td><td>80</td></tr><tr><td>Red</td><td>10</td><td>10</td><td>10</td><td>40</td><td>70</td></tr><tr><td>Total</td><td>110</td><td>130</td><td>120</td><td>140</td><td>500</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate chi-square test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the chi-square test statistic for this study. You do not need to show all intermediate expected count calculations, but clearly show the setup for at least one cell and the final $\chi^2$ value.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        The p-value for this test is $0.003$. Interpret this p-value in the context of the study.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        Based on the p-value from part (c) and a significance level of $\alpha = 0.01$, what conclusion should the researchers draw? Justify your conclusion.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Explain why a chi-square test for homogeneity would not be appropriate for this study, assuming the 500 car owners were selected as one simple random sample from the entire U.S.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): States correct null and alternative hypotheses for a test of independence, clearly defining the variables and population.</li>
+          
+          <li>Part b (2pts): Calculates at least one correct expected count (e.g., for Silver in Northeast: $\frac{120 \times 110}{500} = 26.4$) and shows the formula for a chi-square component (e.g., $\frac{(20-26.4)^2}{26.4}$). Correctly calculates the overall chi-square test statistic (expected $\chi^2 \approx 20.37$).</li>
+          
+          <li>Part c (1pt): Correctly interprets the p-value in context as the probability of observing a sample association as or more extreme than what was observed, assuming there is no association between car color preference and region in the U.S.</li>
+          
+          <li>Part d (1pt): States correct conclusion (reject $H_0$) with justification based on comparing p-value to $\alpha$ and linking back to the context of an association between car color preference and geographic region.</li>
+          
+          <li>Part e (1pt): Explains that a homogeneity test requires multiple independent random samples drawn from distinct populations, whereas this study used a single random sample from a single population (all U.S. car owners).</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S16Q4"
+      data-difficulty="easy"
+      data-skill-codes="3.C,4.C"
+      data-learning-objectives="VAR-8.A,VAR-8.E"
+    >
+      <h2>FRQ 4</h2>
+
+      <div class="prompt">When conducting a chi-square test for goodness-of-fit or for homogeneity/independence, it is crucial to understand the properties of the chi-square distribution and the conditions under which the test is valid.</div>
+
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        Describe the shape of a chi-square distribution. Include how the shape changes as the degrees of freedom increase.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Explain the 'large sample size' condition for performing a chi-square test. Why is this condition important?
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        A researcher conducts a chi-square test for independence, but discovers that one of the expected counts is $2.3$. Explain how this might affect the validity of the test results.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Describes the chi-square distribution as skewed right and states that it becomes more symmetric (less skewed) as the degrees of freedom increase.</li>
+          
+          <li>Part b (1pt): Explains that the condition requires all expected counts to be at least 5 (or sometimes 10) and justifies its importance by noting that the chi-square distribution approximates the sampling distribution of the test statistic only when expected counts are sufficiently large.</li>
+          
+          <li>Part c (1pt): Explains that an expected count of $2.3$ violates the large sample size condition (expected counts $\ge 5$), which means the chi-square approximation for the sampling distribution may not be accurate, leading to an unreliable p-value and potentially an incorrect conclusion.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+    
+    <hr />
+     
+    <div
+      class="frq"
+      id="ap_statistics_FRQ_U8S16Q5"
+      data-difficulty="medium"
+      data-skill-codes="1.F,1.E,3.A,4.C,3.E,4.B,4.E"
+      data-learning-objectives="VAR-8.B,VAR-8.C,VAR-8.D,VAR-8.E,VAR-8.F,VAR-8.G,DAT-3.I,DAT-3.J"
+    >
+      <h2>FRQ 5</h2>
+
+      <div class="prompt">A candy company claims that its bags of mixed candies contain 30% red, 20% orange, 20% yellow, 10% green, and 20% brown candies. A statistics student believes the distribution is different and takes a random sample of 200 candies from a large production batch. The observed counts are given in the table below.</div>
+
+      
+      <div class="diagram">
+         <table class='data-table'><thead><tr><th>Color</th><th>Observed Count</th></tr></thead><tbody><tr><td>Red</td><td>70</td></tr><tr><td>Orange</td><td>35</td></tr><tr><td>Yellow</td><td>45</td></tr><tr><td>Green</td><td>20</td></tr><tr><td>Brown</td><td>30</td></tr></tbody></table>
+        
+      </div>
+       
+      <div class="part">
+        <span class="part-label">a.</span>
+        State the null and alternative hypotheses for an appropriate significance test to investigate the student's belief.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">b.</span>
+        Calculate the expected count for yellow candies in this sample.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">c.</span>
+        Verify the conditions for conducting this test.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">d.</span>
+        The test statistic for this sample is $\chi^2 = 7.5$. Calculate the p-value for this test. Show your work or describe how you would find it.
+      </div>
+      
+      <div class="part">
+        <span class="part-label">e.</span>
+        Based on the p-value from part (d) and a significance level of $\alpha = 0.05$, what conclusion should the student make? Justify your answer in context.
+      </div>
+       
+      <div class="guidelines">
+        <h3>Scoring Guidelines</h3>
+        <ul>
+          
+          <li>Part a (1pt): Correctly states $H_0$ (specific proportions for each color) and $H_a$ (at least one proportion is different) in context.</li>
+          
+          <li>Part b (1pt): Shows calculation for expected yellow candies: $200 \times 0.20 = 40$.</li>
+          
+          <li>Part c (1pt): Verifies random sample, counts are from a categorical variable, and all expected counts are $\ge 5$.</li>
+          
+          <li>Part d (1pt): Identifies degrees of freedom ($df=4$) and uses $\chi^2cdf(7.5, 10^9, 4)$ to find p-value (approximately $0.111$).</li>
+          
+          <li>Part e (1pt): Compares p-value to $\alpha$, states "fail to reject $H_0$", and concludes there is no convincing evidence that the distribution of candy colors is different from the company's claim.</li>
+          
+        </ul>
+      </div>
+       
+    </div>
+
+     
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+  </body>
+</html>
