@@ -464,7 +464,8 @@ def build_unit_context(
 
 # Gemini call to process a single set. 
 async def process_single_set(
-	sem: asyncio.Semaphore,
+	text_sem: asyncio.Semaphore,
+	image_sem: asyncio.Semaphore,
 	client: genai.Client,
 	course_name: str,
 	course_id: str,
@@ -481,8 +482,8 @@ async def process_single_set(
 	context_label = f"{course_id} | U{unit_index+1} | Set{set_index+1}"
 	unit_title = unit.get("name", "")
 	
-	# Wait for permission from Semaphore (Rate Limit Guard)
-	async with sem:
+	# Wait for permission from Text Semaphore (Rate Limit Guard)
+	async with text_sem:
 		log(f"[{context_label}] Starting generation...")
 		all_questions = []
 		
@@ -626,8 +627,14 @@ async def process_single_set(
 						question_index=q_idx
 					)
 					
-					# Generate and save image
-					image_path = OUTPUT_DIR / course_name / f"unit_{unit['id']}" / "images" / filename
+				# Generate and save image (with image semaphore for rate limiting)
+				image_path = OUTPUT_DIR / course_name / f"unit_{unit['id']}" / "images" / filename
+				
+				# Use IMAGE semaphore with rate limiting
+				async with image_sem:
+					# Enforce 3-second spacing between image requests
+					await asyncio.sleep(3)
+					
 					success, base64_data = await generate_image_from_prompt(
 						prompt=enhanced_prompt,
 						output_path=image_path,
@@ -739,8 +746,9 @@ async def main_async():
 	repair_prompt_template = Template(load_text(REPAIR_PROMPT_PATH))
 	html_template = Template(load_text(HTML_TEMPLATE_PATH))
 	
-	# Semaphore: adjust as needed
-	sem = asyncio.Semaphore(60)
+	# TWO semaphores for different rate limits
+	text_sem = asyncio.Semaphore(60)  # High parallelism for text generation
+	image_sem = asyncio.Semaphore(1)  # Strict serialization for image generation
 	
 	tasks = []
 	
@@ -768,7 +776,8 @@ async def main_async():
 			for set_index in range(NUM_SETS_PER_UNIT):
 				tasks.append(
 					process_single_set(
-						sem,
+						text_sem,
+						image_sem,
 						client,
 						course_name,
 						course_id,
