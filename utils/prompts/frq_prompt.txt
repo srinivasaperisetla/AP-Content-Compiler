@@ -48,7 +48,8 @@ scoring_guidelines:
 - Clear expectations for earning points
 
 stim_type:
-- none | svg | table
+- none | image
+- If visual content is needed (chart, table, diagram, molecular structure, circuit, experimental setup, etc.), use "image"
 
 ====================
 MATHEMATICAL NOTATION
@@ -72,54 +73,48 @@ MATHEMATICAL NOTATION
 - Tables should use LaTeX for any math in cells
 
 ====================
-TABLE FORMAT (STRICT)
+IMAGE PROMPT FORMAT (STRICT)
 ====================
 
-| Col1 | Col2 | Col3 |
-| --- | --- | --- |
-| A | 1 | 0.25 |
-| B | 2 | 0.50 |
+If stim_type = image, provide a detailed prompt describing the image to generate in stim_payload.
 
-RULES:
-- Every row MUST start with "|" and end with "|"
-- Header row REQUIRED
-- Separator row REQUIRED using "---"
-- ALL rows must have the SAME number of columns
-- Use literal "\n" between rows
-- ONE LINE ONLY in TSV
-- NO captions, NO notes, NO extra text
+FORMAT: IMAGE_PROMPT: [detailed description]
 
-====================
-SVG FORMAT (STRICT)
-====================
+CRITICAL IMAGE RULES (AP EXAM STANDARDS):
+✗ DO NOT describe images that include question text
+✗ DO NOT describe images that include answer choices (A/B/C/D)
+✗ DO NOT describe images with question-related titles/captions
+✓ DO describe standalone visual stimuli: diagrams, charts, graphs, data tables, scenarios
+✓ DO include only labels that identify parts of the diagram/data (e.g., axis labels, force vectors, chemical structures)
+✓ The image should be something students look at TO ANSWER a question, not something that CONTAINS the question
 
-RULES:
-- width ≤ 400, height ≤ 300
-- White background
-- Font size ≥ 12
-- Use ONLY: <svg>, <rect>, <line>, <circle>, <path>, <text>, <polyline>
-- Maximum 8 <text> elements
-- No overlapping labels
-- Black or dark gray strokes/text only
-- No scripts, no external references, no gradients
-- Must be valid self-contained SVG
+Write prompts like a creative director: be highly detailed and visually striking.
+Be specific about: layout, labels, values, colors, style, atmosphere, composition, specific visual elements.
+Include descriptive language about the scene, atmosphere, and desired aesthetic.
 
-EXAMPLES OF APPROPRIATE SVG:
-- Scatterplots with labeled axes
-- Histograms or bar charts
-- Boxplots
-- Normal distribution curves
-- Simple geometric diagrams
+GOOD IMAGE PROMPT EXAMPLES:
+• "IMAGE_PROMPT: Create a highly detailed scatterplot showing the relationship between study hours (x-axis, 0-10 hours) and test scores (y-axis, 0-100). Plot 15 points showing a positive linear trend with some scatter. Include clear axis labels and gridlines. Use professional academic styling with good contrast and readability. NO title, NO question text, NO explanatory captions - just the pure data visualization."
+
+• "IMAGE_PROMPT: Create a professional data table with clear formatting suitable for academic presentation. Table has 4 columns with headers: Treatment Group, Sample Size, Mean Response, Standard Deviation. Include 3 data rows: Control with n=30, mean=72.5, SD=8.2; Treatment A with n=28, mean=78.3, SD=7.9; Treatment B with n=32, mean=81.7, SD=6.5. Use clean lines, professional fonts, and ensure all text is clearly readable. This is raw data for students to analyze - NO titles, NO question references, NO interpretive text."
+
+• "IMAGE_PROMPT: Create a detailed experimental setup diagram showing a randomized block design. Display 3 blocks (Block 1, Block 2, Block 3) with 4 treatment groups (A, B, C, D) in each block. Use boxes to represent experimental units, with clear labels for each treatment within each block. Include arrows showing random assignment within blocks. The diagram should be clean, educational, suitable for an AP exam. NO question text, NO explanatory paragraph."
+
+• "IMAGE_PROMPT: Create a clear boxplot comparison showing distributions for three groups side-by-side. Label x-axis with Group 1, Group 2, Group 3. Y-axis ranges from 0 to 100 labeled 'Test Score'. Show five-number summaries with boxes, whiskers, and median lines clearly visible. Group 1: min=45, Q1=60, median=70, Q3=80, max=95. Group 2: min=50, Q1=65, median=75, Q3=85, max=98. Group 3: min=40, Q1=58, median=68, Q3=78, max=92. Use professional colors and clear labels. NO title, NO question text."
+
+IMPORTANT:
+- For tables in images, describe all data clearly in natural language with exact values
+- For mathematical content in images, write out formulas and symbols in natural language (e.g., "mu equals 50" or "p-hat" rather than using LaTeX)
+- For complex diagrams (molecular, circuit, free body), be extremely detailed about every element
+- Be comprehensive - the image generator needs all details to create accurate educational content
 
 ====================
 stim_payload rules
 ====================
 
 - If stim_type = none → MUST be empty
-- If stim_type = table → pipe table ONLY
-- If stim_type = svg → inline <svg>...</svg>
+- If stim_type = image → must start with "IMAGE_PROMPT: " followed by detailed description
 - ONE LINE ONLY
-- No scripts or external references
+- Must be self-contained and complete
 
 STIMULUS REQUIREMENT
 - Include stimulus ONLY if necessary for answering the question

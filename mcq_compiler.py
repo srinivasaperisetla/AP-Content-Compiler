@@ -34,17 +34,20 @@ from utility_functions import (
 	normalize_whitespace,
 	build_skill_lookup,
 	build_big_idea_lookup,
-	is_valid_svg,
-	is_strict_pipe_table,
-	pipe_table_to_html,
-	_looks_like_pipe_table,
 	summarize_invalid_reports,
 	compress_lo_description,
 	initialize_lo_coverage,
 	get_priority_los,
 )
 
+from utils.image_generator import (
+	generate_image_from_prompt,
+	create_image_filename,
+	enhance_prompt_for_image_generation
+)
+
 #Environment and Variables
+load_dotenv()  # Load environment variables from .env file
 os.environ["SSL_CERT_FILE"] = certifi.where()
 
 MODEL = "gemini-2.5-flash"
@@ -54,7 +57,10 @@ QUESTIONS_PER_SET = 25
 MAX_RETRIES_PER_SET = 4
 
 AP_COURSES = {
-	"AP Statistics": "ap_statistics",
+	# "AP Statistics": "ap_statistics",
+	"AP Physics 1": "ap_physics_1",
+	"AP Chemistry": "ap_chemistry",
+	"AP Environmental Science": "ap_environmental_science",
 }
 
 CONTENT_DIR = Path("utils/content")
@@ -121,49 +127,42 @@ def validate_rows_individually(
 				log(f"[{context_label}] Row {row_i} rejected: Invalid LOs {invalid_los}")
 			continue
 
-		if stim_type == "svg" and not is_valid_svg(stim_payload):
-			invalid_reports.append({
-				"row_index": row_i,
-				"reason": "svg_invalid",
-				"detail": ""
-			})
-			if DEBUG:
-				log(f"[{context_label}] Row {row_i} rejected: Invalid SVG")
-			continue
-
-		if stim_type == "table":
-			if "<table" not in pipe_table_to_html(stim_payload):
+		if stim_type == "image":
+			# Validation for image prompt format
+			if not stim_payload.startswith("IMAGE_PROMPT:"):
 				invalid_reports.append({
 					"row_index": row_i,
-					"reason": "table_invalid",
-					"detail": ""
+					"reason": "image_prompt_missing",
+					"detail": "Image stimulus must start with 'IMAGE_PROMPT:'"
 				})
 				if DEBUG:
-					log(f"[{context_label}] Row {row_i} rejected: Invalid table format")
+					log(f"[{context_label}] Row {row_i} rejected: Missing IMAGE_PROMPT: prefix")
 				continue
-
-		stimulus = None
-		if stim_type == "table":
-			html_table = pipe_table_to_html(stim_payload)
-			if "<table" not in html_table:
+			
+			# Extract and validate prompt length
+			prompt = stim_payload.replace("IMAGE_PROMPT:", "").strip()
+			if len(prompt) < 20:
+				invalid_reports.append({
+					"row_index": row_i,
+					"reason": "image_prompt_too_short",
+					"detail": "Image prompt must be detailed (min 20 chars)"
+				})
+				if DEBUG:
+					log(f"[{context_label}] Row {row_i} rejected: Image prompt too short")
 				continue
-			stimulus = {"type": "table", "content": html_table}
-
-		elif stim_type == "svg":
-			if not is_valid_svg(stim_payload):
-				continue
-			stimulus = {"type": "svg", "content": stim_payload}
 
 		valid_questions.append({
-			"id": None,
-			"difficulty": diff,
-			"skill_codes": skill_codes,
-			"aligned_lo_ids": lo_ids,
-			"correct_choice_index": int(idx),
-			"question": qtext,
-			"choices": [A, B, C, D],
-			"stimulus": stimulus
-		})
+		"id": None,
+		"difficulty": diff,
+		"skill_codes": skill_codes,
+		"aligned_lo_ids": lo_ids,
+		"correct_choice_index": int(idx),
+		"question": qtext,
+		"choices": [A, B, C, D],
+		"stimulus_type": stim_type,
+		"stimulus_content": stim_payload,
+		"stimulus": None  # Will be populated during image generation
+	})
 
 
 	return valid_questions, invalid_reports
@@ -189,7 +188,7 @@ def validate_tsv_row(cols: List[str]) -> Optional[str]:
 	if not all([A.strip(), B.strip(), C.strip(), D.strip()]):
 		return "Empty choice"
 
-	if stim_type not in {"none", "svg", "table"}:
+	if stim_type not in {"none", "image"}:
 		return "Invalid stimulus_type"
 
 	try:
@@ -205,8 +204,13 @@ def validate_tsv_row(cols: List[str]) -> Optional[str]:
 	if stim_type != "none" and not stim_payload.strip():
 		return "Missing stimulus_payload"
 	
-	if any(_looks_like_pipe_table(x) for x in [A, B, C, D]):
-		return "Answer choices must not contain tables; use stim_type=table + stim_payload"
+	if stim_type == "image" and not stim_payload.startswith("IMAGE_PROMPT:"):
+		return "Image stimulus must start with 'IMAGE_PROMPT:'"
+	
+	if stim_type == "image":
+		prompt = stim_payload.replace("IMAGE_PROMPT:", "").strip()
+		if len(prompt) < 20:
+			return "Image prompt must be detailed (min 20 chars)"
 
 	return None
 
@@ -575,39 +579,110 @@ async def process_single_set(
 				log(f"[{context_label}] Repair API Error: {e}")
 				break
 		
+	# ----------------------------------------
+	# 3. Final Check & Save
+	# ----------------------------------------
+	if len(all_questions) >= QUESTIONS_PER_SET:
+		all_questions = all_questions[:QUESTIONS_PER_SET]
+		
 		# ----------------------------------------
-		# 3. Final Check & Save
+		# 4. Generate Images for Stimuli
 		# ----------------------------------------
-		if len(all_questions) >= QUESTIONS_PER_SET:
-			all_questions = all_questions[:QUESTIONS_PER_SET]
-			
-			assign_question_ids(
-				all_questions,
-				course_id,
-				unit_index,
-				set_index
-			)
-			
-			render_html(
-				html_template=html_template,
-				course_name=course_name,
-				course_id=course_id,
-				unit_title=unit_title,
-				unit_index=unit_index,
-				set_index=set_index,
-				questions=all_questions,
-				context_label=context_label
-			)
-			
-			# Update coverage tracker
-			for question in all_questions:
-				for lo_id in question.get("aligned_lo_ids", []):
-					if lo_id in coverage_tracker:
-						coverage_tracker[lo_id] += 1
-			
-			log(f"[{context_label}] ✅ SUCCESS: Saved {len(all_questions)} questions")
-		else:
-			log(f"[{context_label}] ❌ FAILED: Only got {len(all_questions)}/{QUESTIONS_PER_SET}")
+		log(f"[{context_label}] Starting image generation for questions with stimulus_type='image'...")
+		images_generated = 0
+		images_failed = 0
+		
+		for q_idx, question in enumerate(all_questions):
+			if question.get("stimulus_type") == "image":
+				content = question.get("stimulus_content", "")
+				
+				if content.startswith("IMAGE_PROMPT:"):
+					raw_prompt = content.replace("IMAGE_PROMPT:", "").strip()
+					
+					# Enhance prompt for better image generation with full context
+					question_stem = question.get("question", "")
+					# Build answer choices string for context
+					choices = question.get("choices", ["", "", "", ""])
+					answer_choices = "\n".join([
+						f"A. {choices[0]}",
+						f"B. {choices[1]}",
+						f"C. {choices[2]}",
+						f"D. {choices[3]}"
+					])
+					enhanced_prompt = enhance_prompt_for_image_generation(
+						raw_prompt=raw_prompt,
+						question_stem=question_stem,
+						question_type="MCQ",
+						course_name=course_name,
+						answer_choices=answer_choices
+					)
+					
+					# Create filename
+					filename = create_image_filename(
+						course_name=course_name,
+						question_type="mcq",
+						unit_id=unit["id"],
+						set_index=set_index,
+						question_index=q_idx
+					)
+					
+					# Generate and save image
+					image_path = OUTPUT_DIR / course_name / f"unit_{unit['id']}" / "images" / filename
+					success, base64_data = await generate_image_from_prompt(
+						prompt=enhanced_prompt,
+						output_path=image_path,
+						api_key=os.getenv("GOOGLE_API_KEY"),
+						aspect_ratio="1:1"  # Can adjust based on stimulus type if needed
+					)
+					
+					if success:
+						# Update question with image data
+						question["stimulus"] = {
+							"type": "image",
+							"file_path": str(image_path),
+							"base64": base64_data,
+							"alt_text": raw_prompt  # Use original prompt as alt text
+						}
+						images_generated += 1
+						log(f"[{context_label}] Generated image: {filename}")
+					else:
+						images_failed += 1
+						log(f"[{context_label}] WARNING: Failed to generate image for Q{q_idx+1}")
+						# Keep question but mark stimulus as failed
+						question["stimulus"] = {
+							"type": "none",
+							"error": "Image generation failed"
+						}
+		
+		log(f"[{context_label}] Image generation complete: {images_generated} success, {images_failed} failed")
+		
+		assign_question_ids(
+			all_questions,
+			course_id,
+			unit_index,
+			set_index
+		)
+		
+		render_html(
+			html_template=html_template,
+			course_name=course_name,
+			course_id=course_id,
+			unit_title=unit_title,
+			unit_index=unit_index,
+			set_index=set_index,
+			questions=all_questions,
+			context_label=context_label
+		)
+		
+		# Update coverage tracker
+		for question in all_questions:
+			for lo_id in question.get("aligned_lo_ids", []):
+				if lo_id in coverage_tracker:
+					coverage_tracker[lo_id] += 1
+		
+		log(f"[{context_label}] ✅ SUCCESS: Saved {len(all_questions)} questions")
+	else:
+		log(f"[{context_label}] ❌ FAILED: Only got {len(all_questions)}/{QUESTIONS_PER_SET}")
 
 # TSV parsing
 def parse_tsv(tsv_text: str, context_label: str) -> List[List[str]]:
@@ -675,8 +750,8 @@ async def main_async():
 		big_idea_lookup = build_big_idea_lookup(course_spec)
 		
 		for unit_index, unit in enumerate(course_spec.get("units", [])):
-			if unit_index != 6:
-				continue
+			# if unit_index != 0:
+			# 	continue
 			
 			# Initialize coverage tracker per unit
 			coverage_tracker = initialize_lo_coverage(unit)

@@ -1,30 +1,3900 @@
 {
   "name": "Ap Environmental Science",
-  "skills": [],
-  "big_ideas": [],
+  "skills": [
+    {
+      "skill_name": "Concept Explanation",
+      "skill_description": "",
+      "subskills": [
+        {
+          "subskill_name": "1.A",
+          "subskill_description": "Describe environmental concepts and processes."
+        },
+        {
+          "subskill_name": "1.B",
+          "subskill_description": "Explain environmental concepts and processes."
+        },
+        {
+          "subskill_name": "1.C",
+          "subskill_description": "Explain environmental concepts, processes, or models in applied contexts."
+        }
+      ]
+    },
+    {
+      "skill_name": "Visual Representations",
+      "skill_description": "",
+      "subskills": [
+        {
+          "subskill_name": "2.A",
+          "subskill_description": "Describe characteristics of an environmental concept, process, or model represented visually."
+        },
+        {
+          "subskill_name": "2.B",
+          "subskill_description": "Explain relationships between different characteristics of environmental concepts, processes, or models represented visually: ■ In theoretical contexts ■ In applied contexts"
+        },
+        {
+          "subskill_name": "2.C",
+          "subskill_description": "Explain how environmental concepts and processes represented visually relate to broader environmental issues."
+        }
+      ]
+    },
+    {
+      "skill_name": "Text Analysis",
+      "skill_description": "",
+      "subskills": [
+        {
+          "subskill_name": "3.A",
+          "subskill_description": "Identify the author's claim."
+        },
+        {
+          "subskill_name": "3.B",
+          "subskill_description": "Describe the author's perspective and assumptions."
+        },
+        {
+          "subskill_name": "3.C",
+          "subskill_description": "Describe the author's reasoning (use of evidence to support a claim)."
+        },
+        {
+          "subskill_name": "3.D",
+          "subskill_description": "Evaluate the credibility of a source (not assessed): ■ Recognize bias ■ Scientific accuracy"
+        },
+        {
+          "subskill_name": "3.E",
+          "subskill_description": "Evaluate the validity of conclusions of a source or research study (not assessed)."
+        }
+      ]
+    },
+    {
+      "skill_name": "Scientific Experiments",
+      "skill_description": "",
+      "subskills": [
+        {
+          "subskill_name": "4.A",
+          "subskill_description": "Identify a testable hypothesis or scientific question for an investigation."
+        },
+        {
+          "subskill_name": "4.B",
+          "subskill_description": "Identify a research method, design, and/or measure used."
+        },
+        {
+          "subskill_name": "4.C",
+          "subskill_description": "Describe an aspect of a research method, design, and/or measure used."
+        },
+        {
+          "subskill_name": "4.D",
+          "subskill_description": "Make observations or collect data from laboratory setups (not assessed)."
+        },
+        {
+          "subskill_name": "4.E",
+          "subskill_description": "Explain modifications to an experimental procedure that will alter results."
+        }
+      ]
+    },
+    {
+      "skill_name": "Data Analysis",
+      "skill_description": "",
+      "subskills": [
+        {
+          "subskill_name": "5.A",
+          "subskill_description": "Describe patterns or trends in data."
+        },
+        {
+          "subskill_name": "5.B",
+          "subskill_description": "Describe relationships among variables in data represented."
+        },
+        {
+          "subskill_name": "5.C",
+          "subskill_description": "Explain patterns and trends in data to draw conclusions."
+        },
+        {
+          "subskill_name": "5.D",
+          "subskill_description": "Interpret experimental data and results in relation to a given hypothesis."
+        },
+        {
+          "subskill_name": "5.E",
+          "subskill_description": "Explain what the data implies or illustrates about environmental issues."
+        }
+      ]
+    },
+    {
+      "skill_name": "Mathematical Routines",
+      "skill_description": "",
+      "subskills": [
+        {
+          "subskill_name": "6.A",
+          "subskill_description": "Determine an approach or method aligned with the problem to be solved."
+        },
+        {
+          "subskill_name": "6.B",
+          "subskill_description": "Apply appropriate mathematical relationships to solve a problem, with work shown (e.g., dimensional analysis)."
+        },
+        {
+          "subskill_name": "6.C",
+          "subskill_description": "Calculate an accurate numeric answer with appropriate units."
+        }
+      ]
+    },
+    {
+      "skill_name": "Environmental Solutions",
+      "skill_description": "",
+      "subskills": [
+        {
+          "subskill_name": "7.A",
+          "subskill_description": "Describe environmental problems."
+        },
+        {
+          "subskill_name": "7.B",
+          "subskill_description": "Describe potential responses or approaches to environmental problems."
+        },
+        {
+          "subskill_name": "7.C",
+          "subskill_description": "Describe disadvantages, advantages, or unintended consequences for potential solutions."
+        },
+        {
+          "subskill_name": "7.D",
+          "subskill_description": "Use data and evidence to support a potential solution."
+        },
+        {
+          "subskill_name": "7.E",
+          "subskill_description": "Make a claim that proposes a solution to an environmental problem in an applied context."
+        },
+        {
+          "subskill_name": "7.F",
+          "subskill_description": "Justify a proposed solution, by explaining potential advantages."
+        }
+      ]
+    }
+  ],
+  "big_ideas": [
+    {
+      "id": "ENG",
+      "name": "ENERGY TRANSFER",
+      "description": "Energy conversions underlie all ecological processes. Energy cannot be created; it must come from somewhere. As energy flows through systems, at each step, more of it becomes unusable."
+    },
+    {
+      "id": "ERT",
+      "name": "INTERACTIONS BETWEEN EARTH SYSTEMS",
+      "description": "The Earth is one interconnected system. Natural systems change over time and space. Biogeochemical systems vary in ability to recover from disturbances."
+    },
+    {
+      "id": "EIN",
+      "name": "INTERACTIONS BETWEEN DIFFERENT SPECIES AND THE ENVIRONMENT",
+      "description": "Humans alter natural systems and have had an impact on the environment for millions of years. Technology and population growth have enabled humans to increase both the rate and scale of their impact on the environment."
+    },
+    {
+      "id": "STB",
+      "name": "SUSTAINABILITY",
+      "description": "Human survival depends on developing practices that will achieve sustainable systems. A suitable combination of conservation and development is required. The management of resources is essential. Understanding the role of cultural, social, and economic factors is vital to the development of solutions."
+    }
+  ],
   "units": [
     {
-      "name": "Unit title",
-      "developing_understanding": "What conceptual understanding students should develop in this unit",
-      "building_practices": "Science practices and/or Course skills emphasized in this unit",
-      "preparing_for_exam": "How this unit prepares students for AP-style exam questions",
+      "id": "1",
+      "name": "The Living World: Ecosystems",
+      "developing_understanding": "The first unit sets the foundation for the course by examining the Earth as a system with interdependent components, processes, and relationships. Students will examine the distribution of resources in ecosystems and its influences on species interactions. There is a global distribution of terrestrial and aquatic biomes—regional ecosystems—that each have specific environmental features based on their shared climate. This distribution is dynamic, and it has changed due to global climate change. Each ecosystem relies on biogeochemical cycles for survival. These cycles facilitate the acquisition and transfer of energy into usable forms, and they can be altered by human activities. In subsequent units, students will apply their understanding of ecosystems to the living world and examine the importance of biodiversity.",
+      "building_practices": "The ability to describe environmental processes and relationships within an environment is central to this unit. Students can practice this skill with visual representations and models, particularly those of biogeochemical cycles, food chains, food webs, and trophic diagrams. By the end of this unit, students should be able to use visual representations to describe the individual steps of the hydrologic, carbon, nitrogen, and phosphorus cycles and then explain how each chemical is either stored or transferred throughout its cycle. Students should also be able to predict the effects of a change in one or more parts of a given cycle, including impacts to humans and the ecosystem at large. In this unit, students should also develop a foundational understanding of biomes and describe how relationships between organisms are affected by environmental conditions. They should develop the quantitative skills to calculate the decrease of energy as it passes through ecosystems and then explain the transfer of energy through ecosystems.",
+      "preparing_for_exam": "On the AP Exam, students must be able to apply environmental concepts and processes in real-world situations. This starts with the ability to identify and describe the biogeochemical cycles and then predict the effects of a change within a cycle. For example, while students can identify the biogeochemical cycle, they often struggle to describe each of the steps. Students also struggle to identify the reservoir portion of the cycle, which is the step that takes the longest to complete. To combat these challenges, providing visual representations of biogeochemical cycles can help students organize information. Students can also write step-by-step descriptions of the cycles, including characteristics and attributes.",
       "topics": [
         {
-          "name": "Topic title",
+          "id": "1.1",
+          "name": "Introduction to Ecosystems",
+          "suggested_subskill_codes": [
+            "1.A"
+          ],
           "big_ideas": [
             {
-              "id": "description found in the text"
+              "id": "ERT-1",
+              "description": "Ecosystems are the result of biotic and abiotic interactions."
             }
-          ],
-          "suggested_subskill_codes": [
-            "Relevant science practice / Course skills subskills"
           ],
           "learning_objectives": [
             {
-              "id": "Learning objective identifier",
-              "description": "What students should be able to do after instruction",
+              "id": "ERT-1.A",
+              "description": "Explain how the availability of resources influences species interactions.",
               "essential_knowledge": [
-                "Key content knowledge students must understand for this objective"
+                {
+                  "id": "ERT-1.A.1",
+                  "description": "In a predator-prey relationship, the predator is an organism that eats another organism (the prey)."
+                },
+                {
+                  "id": "ERT-1.A.2",
+                  "description": "Symbiosis is a close and long-term interaction between two species in an ecosystem. Types of symbiosis include mutualism, commensalism, and parasitism."
+                },
+                {
+                  "id": "ERT-1.A.3",
+                  "description": "Competition can occur within or between species in an ecosystem where there are limited resources. Resource partitioning— using the resources in different ways, places, or at different times—can reduce the negative impact of competition on survival."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.2",
+          "name": "Terrestrial Biomes",
+          "suggested_subskill_codes": [
+            "1.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "ERT-1",
+              "description": "Ecosystems are the result of biotic and abiotic interactions."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ERT-1.B",
+              "description": "Describe the global distribution and principal environmental aspects of terrestrial biomes.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-1.B.1",
+                  "description": "A biome contains characteristic communities of plants and animals that result from, and are adapted to, its climate."
+                },
+                {
+                  "id": "ERT-1.B.2",
+                  "description": "Major terrestrial biomes include taiga, temperate rainforests, temperate seasonal forests, tropical rainforests, shrubland, temperate grassland, savanna, desert, and tundra."
+                },
+                {
+                  "id": "ERT-1.B.3",
+                  "description": "The global distribution of nonmineral terrestrial natural resources, such as water and trees for lumber, varies because of some combination of climate, geography, latitude and altitude, nutrient availability, and soil."
+                },
+                {
+                  "id": "ERT-1.B.4",
+                  "description": "The worldwide distribution of biomes is dynamic; the distribution has changed in the past and may again shift as a result of global climate changes."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.3",
+          "name": "Aquatic Biomes",
+          "suggested_subskill_codes": [
+            "1.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "ERT-1",
+              "description": "Ecosystems are the result of biotic and abiotic interactions."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ERT-1.C",
+              "description": "Describe the global distribution and principal environmental aspects of aquatic biomes.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-1.C.1",
+                  "description": "Freshwater biomes include streams, rivers, ponds, and lakes. These freshwater biomes are a vital resource for drinking water."
+                },
+                {
+                  "id": "ERT-1.C.2",
+                  "description": "Marine biomes include oceans, coral reefs, marshland, and estuaries. Algae in marine biomes supply a large portion of the Earth’s oxygen, and also take in carbon dioxide from the atmosphere."
+                },
+                {
+                  "id": "ERT-1.C.3",
+                  "description": "The global distribution of nonmineral marine natural resources, such as different types of fish, varies because of some combination of salinity, depth, turbidity, nutrient availability, and temperature."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.4",
+          "name": "The Carbon Cycle",
+          "suggested_subskill_codes": [
+            "2.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "ERT-1",
+              "description": "Ecosystems are the result of biotic and abiotic interactions."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ERT-1.D",
+              "description": "Explain the steps and reservoir interactions in the carbon cycle.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-1.D.1",
+                  "description": "The carbon cycle is the movement of atoms and molecules containing the element carbon between sources and sinks."
+                },
+                {
+                  "id": "ERT-1.D.2",
+                  "description": "Some of the reservoirs in which carbon compounds occur in the carbon cycle hold those compounds for long periods of time, while some hold them for relatively short periods of time."
+                },
+                {
+                  "id": "ERT-1.D.3",
+                  "description": "Carbon cycles between photosynthesis and cellular respiration in living things."
+                },
+                {
+                  "id": "ERT-1.D.4",
+                  "description": "Plant and animal decomposition have led to the storage of carbon over millions of years. The burning of fossil fuels quickly moves that stored carbon into atmospheric carbon, in the form of carbon dioxide."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.5",
+          "name": "The Nitrogen Cycle",
+          "suggested_subskill_codes": [
+            "2.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "ERT-1",
+              "description": "Ecosystems are the result of biotic and abiotic interactions."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ERT-1.E",
+              "description": "Explain the steps and reservoir interactions in the nitrogen cycle.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-1.E.1",
+                  "description": "The nitrogen cycle is the movement of atoms and molecules containing the element nitrogen between sources and sinks."
+                },
+                {
+                  "id": "ERT-1.E.2",
+                  "description": "Most of the reservoirs in which nitrogen compounds occur in the nitrogen cycle hold those compounds for relatively short periods of time."
+                },
+                {
+                  "id": "ERT-1.E.3",
+                  "description": "Nitrogen fixation is the process in which atmospheric nitrogen is converted into a form of nitrogen (primarily ammonia) that is available for uptake by plants and that can be synthesized into plant tissue."
+                },
+                {
+                  "id": "ERT-1.E.4",
+                  "description": "The atmosphere is the major reservoir of nitrogen."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.6",
+          "name": "The Phosphorus Cycle",
+          "suggested_subskill_codes": [
+            "2.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "ERT-1",
+              "description": "Ecosystems are the result of biotic and abiotic interactions."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ERT-1.F",
+              "description": "Explain the steps and reservoir interactions in the phosphorus cycle.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-1.F.1",
+                  "description": "The phosphorus cycle is the movement of atoms and molecules containing the element phosphorus between sources and sinks."
+                },
+                {
+                  "id": "ERT-1.F.2",
+                  "description": "The major reservoirs of phosphorus in the phosphorus cycle are rock and sediments that contain phosphorus-bearing minerals."
+                },
+                {
+                  "id": "ERT-1.F.3",
+                  "description": "There is no atmospheric component in the phosphorus cycle, and the limitations this imposes on the return of phosphorus from the ocean to land make phosphorus naturally scarce in aquatic and many terrestrial ecosystems. In undisturbed ecosystems, phosphorus is the limiting factor in biological systems."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.7",
+          "name": "The Hydrologic (Water) Cycle",
+          "suggested_subskill_codes": [
+            "2.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "ERT-1",
+              "description": "Ecosystems are the result of biotic and abiotic interactions."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ERT-1.G",
+              "description": "Explain the steps and reservoir interactions in the hydrologic cycle.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-1.G.1",
+                  "description": "The hydrologic cycle, which is powered by the sun, is the movement of water in its various solid, liquid, and gaseous phases between sources and sinks."
+                },
+                {
+                  "id": "ERT-1.G.2",
+                  "description": "The oceans are the primary reservoir of water at the Earth’s surface, with ice caps and groundwater acting as much smaller reservoirs."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.8",
+          "name": "Primary Productivity",
+          "suggested_subskill_codes": [
+            "1.A"
+          ],
+          "big_ideas": [
+            {
+              "id": "ENG-1",
+              "description": "Energy can be converted from one form to another."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ENG-1.A",
+              "description": "Explain how solar energy is acquired and transferred by living organisms.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-1.A.1",
+                  "description": "Primary productivity is the rate at which solar energy (sunlight) is converted into organic compounds via photosynthesis over a unit of time."
+                },
+                {
+                  "id": "ENG-1.A.2",
+                  "description": "Gross primary productivity is the total rate of photosynthesis in a given area."
+                },
+                {
+                  "id": "ENG-1.A.3",
+                  "description": "Net primary productivity is the rate of energy storage by photosynthesizers in a given area, after subtracting the energy lost to respiration."
+                },
+                {
+                  "id": "ENG-1.A.4",
+                  "description": "Productivity is measured in units of energy per unit area per unit time (e.g., kcal/m²/yr)."
+                },
+                {
+                  "id": "ENG-1.A.5",
+                  "description": "Most red light is absorbed in the upper 1m of water, and blue light only penetrates deeper than 100m in the clearest water. This affects photosynthesis in aquatic ecosystems, whose photosynthesizers have adapted mechanisms to address the lack of visible light."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.9",
+          "name": "Trophic Levels",
+          "suggested_subskill_codes": [
+            "1.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "ENG-1",
+              "description": "Energy can be converted from one form to another."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ENG-1.B",
+              "description": "Explain how energy flows and matter cycles through trophic levels.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-1.B.1",
+                  "description": "All ecosystems depend on a continuous inflow of high-quality energy in order to maintain their structure and function of transferring matter between the environment and organisms via biogeochemical cycles."
+                },
+                {
+                  "id": "ENG-1.B.2",
+                  "description": "Biogeochemical cycles are essential for life and each cycle demonstrates the conservation of matter."
+                },
+                {
+                  "id": "ENG-1.B.3",
+                  "description": "In terrestrial and near-surface marine communities, energy flows from the sun to producers in the lowest trophic levels and then upward to higher trophic levels."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.10",
+          "name": "Energy Flow and the 10% Rule",
+          "suggested_subskill_codes": [
+            "6.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "ENG-1",
+              "description": "Energy can be converted from one form to another."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ENG-1.C",
+              "description": "Determine how the energy decreases as it flows through ecosystems.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-1.C.1",
+                  "description": "The 10% rule approximates that in the transfer of energy from one trophic level to the next, only about 10% of the energy is passed on."
+                },
+                {
+                  "id": "ENG-1.C.2",
+                  "description": "The loss of energy that occurs when energy moves from lower to higher trophic levels can be explained through the laws of thermodynamics."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.11",
+          "name": "Food Chains and Food Webs",
+          "suggested_subskill_codes": [
+            "2.A"
+          ],
+          "big_ideas": [
+            {
+              "id": "ENG-1",
+              "description": "Energy can be converted from one form to another."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ENG-1.D",
+              "description": "Describe food chains and food webs, and their constituent members by trophic level.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-1.D.1",
+                  "description": "A food web is a model of an interlocking pattern of food chains that depicts the flow of energy and nutrients in two or more food chains."
+                },
+                {
+                  "id": "ENG-1.D.2",
+                  "description": "Positive and negative feedback loops can each play a role in food webs. When one species is removed from or added to a specific food web, the rest of the food web can be affected."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "The Living World: Biodiversity",
+      "developing_understanding": "Biodiversity, which includes genetic, species, and habitat diversity, is critically important to ecosystems. Biodiversity in ecosystems is a key component to sustaining life within the living world. Natural and human disruptions have short- and long-term impacts on ecosystems. Ecological succession can occur in terrestrial and aquatic ecosystems in both developed and developing areas. Organisms within ecosystems must adapt to the changes created by these disruptions. In subsequent units, students will examine in greater detail how populations change over time.",
+      "building_practices": "Data analysis is an important skill to begin developing at this point in the course. Quantitative information about changes in populations or the environment due to human activities is often represented in tables and graphs. Students should understand that tables and graphs are important tools of communication used to identify patterns and trends that indicate environmental problems. Students will then learn to describe the characteristics of data in tables or graphs and identify patterns or trends. In this unit, students should also be able to describe and explain the environmental concepts and processes of biodiversity. It is important that they understand the differences between similar concepts and clearly articulate those differences in their written and verbal explanations. For example, they should be able to articulate the differences among species, genetic, and habitat diversity; between keystone and indicator species; and between ecosystem services and ecological services.",
+      "preparing_for_exam": "On the AP Exam, students must be able to explain environmental science concepts that are represented using tables, charts, and graphs. They must also be able to explain patterns and trends related to data. Additionally, they must be able to give several examples of ecosystems and ecological services. Students often confuse environmental science terminology, like ecological service and ecological function of an ecosystem, and biodiversity and genetic diversity. To combat this, students can explain environmental concepts in context, rather than memorizing textbook definitions without a full understanding of the context. Students can benefit from practice providing ecological services for different ecosystems. They should be able to indicate the direction of change to a species as a result of disruptions to the ecosystem based on data. Students should also be able to describe whether or not a species can adapt to an environmental change.",
+      "topics": [
+        {
+          "id": "2.1",
+          "name": "Introduction to Biodiversity",
+          "suggested_subskill_codes": [
+            "1.A"
+          ],
+          "big_ideas": [
+            {
+              "id": "ERT-2",
+              "description": "Ecosystems have structure and diversity that change over time."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ERT-2.A",
+              "description": "Explain levels of biodiversity and their importance to ecosystems.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-2.A.1",
+                  "description": "Biodiversity in an ecosystem includes genetic, species, and habitat diversity."
+                },
+                {
+                  "id": "ERT-2.A.2",
+                  "description": "The more genetically diverse a population is, the better it can respond to environmental stressors. Additionally, a population bottleneck can lead to a loss of genetic diversity."
+                },
+                {
+                  "id": "ERT-2.A.3",
+                  "description": "Ecosystems that have a larger number of species are more likely to recover from disruptions."
+                },
+                {
+                  "id": "ERT-2.A.4",
+                  "description": "Loss of habitat leads to a loss of specialist species, followed by a loss of generalist species. It also leads to reduced numbers of species that have large territorial requirements."
+                },
+                {
+                  "id": "ERT-2.A.5",
+                  "description": "Species richness refers to the number of different species found in an ecosystem."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2.2",
+          "name": "Ecosystem Services",
+          "suggested_subskill_codes": [
+            "1.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "ERT-2",
+              "description": "Ecosystems have structure and diversity that change over time."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ERT-2.B",
+              "description": "Describe ecosystem services.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-2.B.1",
+                  "description": "There are four categories of ecosystem services: provisioning, regulating, cultural, and supporting."
+                }
+              ]
+            },
+            {
+              "id": "ERT-2.C",
+              "description": "Describe the results of human disruptions to ecosystem services.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-2.C.1",
+                  "description": "Anthropogenic activities can disrupt ecosystem services, potentially resulting in economic and ecological consequences."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2.3",
+          "name": "Island Biogeography",
+          "suggested_subskill_codes": [
+            "1.A"
+          ],
+          "big_ideas": [
+            {
+              "id": "ERT-2",
+              "description": "Ecosystems have structure and diversity that change over time."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ERT-2.D",
+              "description": "Describe island biogeography.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-2.D.1",
+                  "description": "Island biogeography is the study of the ecological relationships and distribution of organisms on islands, and of these organisms' community structures."
+                },
+                {
+                  "id": "ERT-2.D.2",
+                  "description": "Islands have been colonized in the past by new species arriving from elsewhere."
+                }
+              ]
+            },
+            {
+              "id": "ERT-2.E",
+              "description": "Describe the role of island biogeography in evolution.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-2.E.1",
+                  "description": "Many island species have evolved to be specialists versus generalists because of the limited resources, such as food and territory, on most islands. The long-term survival of specialists may be jeopardized if and when invasive species, typically generalists, are introduced and outcompete the specialists."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2.4",
+          "name": "Ecological Tolerance",
+          "suggested_subskill_codes": [
+            "3.A"
+          ],
+          "big_ideas": [
+            {
+              "id": "ERT-2",
+              "description": "Ecosystems have structure and diversity that change over time."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ERT-2.F",
+              "description": "Describe ecological tolerance.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-2.F.1",
+                  "description": "Ecological tolerance refers to the range of conditions, such as temperature, salinity, flow rate, and sunlight that an organism can endure before injury or death results."
+                },
+                {
+                  "id": "ERT-2.F.2",
+                  "description": "Ecological tolerance can apply to individuals and to species."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2.5",
+          "name": "Natural Disruptions to Ecosystems",
+          "suggested_subskill_codes": [
+            "5.A"
+          ],
+          "big_ideas": [
+            {
+              "id": "ERT-2",
+              "description": "Ecosystems have structure and diversity that change over time."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ERT-2.G",
+              "description": "Explain how natural disruptions, both short- and long-term, impact an ecosystem.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-2.G.1",
+                  "description": "Natural disruptions to ecosystems have environmental consequences that may, for a given occurrence, be as great as, or greater than, many human-made disruptions."
+                },
+                {
+                  "id": "ERT-2.G.2",
+                  "description": "Earth system processes operate on a range of scales in terms of time. Processes can be periodic, episodic, or random."
+                },
+                {
+                  "id": "ERT-2.G.3",
+                  "description": "Earth's climate has changed over geological time for many reasons."
+                },
+                {
+                  "id": "ERT-2.G.4",
+                  "description": "Sea level has varied significantly as a result of changes in the amount of glacial ice on Earth over geological time."
+                },
+                {
+                  "id": "ERT-2.G.5",
+                  "description": "Major environmental change or upheaval commonly results in large swathes of habitat changes."
+                },
+                {
+                  "id": "ERT-2.G.6",
+                  "description": "Wildlife engages in both short- and long-term migration for a variety of reasons, including natural disruptions."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2.6",
+          "name": "Adaptations",
+          "suggested_subskill_codes": [
+            "5.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "ERT-2",
+              "description": "Ecosystems have structure and diversity that change over time."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ERT-2.H",
+              "description": "Describe how organisms adapt to their environment.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-2.H.1",
+                  "description": "Organisms adapt to their environment over time, both in short- and long-term scales, via incremental changes at the genetic level."
+                },
+                {
+                  "id": "ERT-2.H.2",
+                  "description": "Environmental changes, either sudden or gradual, may threaten a species' survival, requiring individuals to alter behaviors, move, or perish."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2.7",
+          "name": "Ecological Succession",
+          "suggested_subskill_codes": [
+            "5.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "ERT-2",
+              "description": "Ecosystems have structure and diversity that change over time."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ERT-2.I",
+              "description": "Describe ecological succession.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-2.I.1",
+                  "description": "There are two main types of ecological succession: primary and secondary succession."
+                },
+                {
+                  "id": "ERT-2.I.2",
+                  "description": "A keystone species in an ecosystem is a species whose activities have a particularly significant role in determining community structure."
+                },
+                {
+                  "id": "ERT-2.I.3",
+                  "description": "An indicator species is a plant or animal that, by its presence, abundance, scarcity, or chemical composition, demonstrates that some distinctive aspect of the character or quality of an ecosystem is present."
+                }
+              ]
+            },
+            {
+              "id": "ERT-2.J",
+              "description": "Describe the effect of ecological succession on ecosystems.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-2.J.1",
+                  "description": "Pioneer members of an early successional species commonly move into unoccupied habitat and over time adapt to its particular conditions, which may result in the origin of new species."
+                },
+                {
+                  "id": "ERT-2.J.2",
+                  "description": "Succession in a disturbed ecosystem will affect the total biomass, species richness, and net productivity over time."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Populations",
+      "developing_understanding": "Populations within ecosystems change over time in response to a variety of factors. This unit examines the relationship between the type of species and the changes in a habitat over time. Specialist species are advantaged by habitats that remain constant, while generalist species tend to be advantaged by habitats that are changing. Different reproductive patterns, including those exhibited by K- and r-selected species, also impact changes to population. Population growth is limited by environmental factors, especially by the availability of resources and space. In subsequent units, students will explore how increases in populations affect earth systems and resources, land and water use, and energy resources.",
+      "building_practices": "Comparing trends and patterns in data helps students interpret experimental data in order to explain environmental changes that occur over time. These skills can help predict short- and long-term changes in an environment. As students build their skills in data analysis, they will learn how the data illustrate environmental concepts. It is also important that they learn to predict patterns and trends based on information provided in graphs and tables. Analyzing population growth, age structure diagrams, and survivorship curves can help students develop these skills. While calculator use is permitted on the AP Exam, students still have to show their work, including the numbered steps they used to obtain an answer, with appropriate units. Without the appropriate units, a calculation is meaningless, even with correct computation. In this unit, students may benefit from having multiple opportunities to practice calculations such as population growth and the application of the rule of 70. Students can also practice selecting the appropriate calculation that is required in the analysis of a data set.",
+      "preparing_for_exam": "On the AP Exam, students must be able to explain trends in population data for organisms. To practice this, students can look at a variety of human population graphs from various countries and then explain the trends in the data to draw conclusions about changes in the populations. This is also an opportunity for students to explain population density and population growth. Students can also practice interpreting population growth curves for other species. When explaining the survival of a species, students should consider population size and emphasize problems associated with reduced genetic diversity. It is helpful for students to connect data represented by tables, charts, and graphs to real-life examples of population changes.",
+      "topics": [
+        {
+          "id": "3",
+          "name": "",
+          "suggested_subskill_codes": [],
+          "big_ideas": [
+            {
+              "id": "ERT",
+              "description": "■ How do changes in habitats influence changes in species over time?"
+            },
+            {
+              "id": "EIN",
+              "description": "How is educational opportunity for women connected to human population changes?"
+            }
+          ],
+          "learning_objectives": []
+        },
+        {
+          "id": "3.1",
+          "name": "Generalist and Specialist Species",
+          "suggested_subskill_codes": [
+            "1.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "ERT-3",
+              "description": "Populations change over time in reaction to a variety of factors."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ERT-3.A",
+              "description": "Identify differences between generalist and specialist species.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-3.A.1",
+                  "description": "Specialist species tend to be advantaged in habitats that remain constant, while generalist species tend to be advantaged in habitats that are changing."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3.2",
+          "name": "K-Selected r-Selected Species",
+          "suggested_subskill_codes": [
+            "5.A"
+          ],
+          "big_ideas": [
+            {
+              "id": "ERT-3",
+              "description": "Populations change over time in reaction to a variety of factors."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ERT-3.B",
+              "description": "Identify differences between K- and r-selected species.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-3.B.1",
+                  "description": "K-selected species tend to be large, have few offspring per reproduction event, live in stable environments, expend significant energy for each offspring, mature after many years of extended youth and parental care, have long life spans/life expectancy, and reproduce more than once in their lifetime. Competition for resources in K-selected species' habitats is usually relatively high."
+                },
+                {
+                  "id": "ERT-3.B.2",
+                  "description": "r-selected species tend to be small, have many offspring, expend or invest minimal energy for each offspring, mature early, have short life spans, and may reproduce only once in their lifetime. Competition for resources in r-selected species' habitats is typically relatively low."
+                },
+                {
+                  "id": "ERT-3.B.3",
+                  "description": "Biotic potential refers to the maximum reproductive rate of a population in ideal conditions."
+                },
+                {
+                  "id": "ERT-3.B.4",
+                  "description": "Many species have reproductive strategies that are not uniquely r-selected or K-selected, or they change in different conditions at different times."
+                },
+                {
+                  "id": "ERT-3.B.5",
+                  "description": "K-selected species are typically more adversely affected by invasive species than r-selected species, which are minimally affected by invasive species. Most invasive species are r-selected species."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3.3",
+          "name": "Survivorship Curves",
+          "suggested_subskill_codes": [
+            "5.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "ERT-3",
+              "description": "Populations change over time in reaction to a variety of factors."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ERT-3.C",
+              "description": "Explain survivorship curves.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-3.C.1",
+                  "description": "A survivorship curve is a line that displays the relative survival rates of a cohort-a group of individuals of the same age-in a population, from birth to the maximum age reached by any one cohort member. There are Type I, Type II, and Type III curves."
+                },
+                {
+                  "id": "ERT-3.C.2",
+                  "description": "Survivorship curves differ for K-selected and r-selected species, with K-selected species typically following a Type I or Type II curve and r-selected species following a Type III curve."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3.4",
+          "name": "Carrying Capacity",
+          "suggested_subskill_codes": [
+            "5.E"
+          ],
+          "big_ideas": [
+            {
+              "id": "ERT-3",
+              "description": "Populations change over time in reaction to a variety of factors."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ERT-3.D",
+              "description": "Describe carrying capacity.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-3.D.1",
+                  "description": "When a population exceeds its carrying capacity (carrying capacity can be denoted as K), overshoot occurs. There are environmental impacts of population overshoot, including resource depletion."
+                }
+              ]
+            },
+            {
+              "id": "ERT-3.E",
+              "description": "Describe the impact of carrying capacity on ecosystems.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-3.E.1",
+                  "description": "A major ecological effect of population overshoot is dieback of the population (often severe to catastrophic) because the lack of available resources leads to famine, disease, and/or conflict."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3.5",
+          "name": "Population Growth and Resource Availability",
+          "suggested_subskill_codes": [
+            "6.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "ERT-3",
+              "description": "Populations change over time in reaction to a variety of factors."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ERT-3.F",
+              "description": "Explain how resource availability affects population growth.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-3.F.1",
+                  "description": "Population growth is limited by environmental factors, especially by the available resources and space."
+                },
+                {
+                  "id": "ERT-3.F.2",
+                  "description": "Resource availability and the total resource base are limited and finite over all scales of time."
+                },
+                {
+                  "id": "ERT-3.F.3",
+                  "description": "When the resources needed by a population for growth are abundant, population growth usually accelerates."
+                },
+                {
+                  "id": "ERT-3.F.4",
+                  "description": "When the resource base of a population shrinks, the increased potential for unequal distribution of resources will ultimately result in increased mortality, decreased fecundity, or both, resulting in population growth declining to, or below, carrying capacity."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3.6",
+          "name": "Age Structure Diagrams",
+          "suggested_subskill_codes": [
+            "5.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "EIN-1",
+              "description": "Human populations change in reaction to a variety of factors, including social and cultural factors."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ΕΙΝ-1.A",
+              "description": "Explain age structure diagrams.",
+              "essential_knowledge": [
+                {
+                  "id": "ΕΙΝ-1.Α.1",
+                  "description": "Population growth rates can be interpreted from age structure diagrams by the shape of the structure."
+                },
+                {
+                  "id": "ΕΙΝ-1.Α.2",
+                  "description": "A rapidly growing population will, as a rule, have a higher proportion of younger people compared to stable or declining populations."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3.7",
+          "name": "Total Fertility Rate",
+          "suggested_subskill_codes": [
+            "5.A"
+          ],
+          "big_ideas": [
+            {
+              "id": "EIN-1",
+              "description": "Human populations change in reaction to a variety of factors, including social and cultural factors."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ΕΙΝ-1.Β",
+              "description": "Explain factors that affect total fertility rate in human populations.",
+              "essential_knowledge": [
+                {
+                  "id": "ΕΙΝ-1.Β.1",
+                  "description": "Total fertility rate (TFR) is affected by the age at which females have their first child, educational opportunities for females, access to family planning, and government acts and policies."
+                },
+                {
+                  "id": "ΕΙΝ-1.Β.2",
+                  "description": "If fertility rate is at replacement levels, a population is considered relatively stable."
+                },
+                {
+                  "id": "ΕΙΝ-1.Β.3",
+                  "description": "Factors associated with infant mortality rates include whether mothers have access to good healthcare and nutrition. Changes in these factors can lead to changes in infant mortality rates over time."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3.8",
+          "name": "Human Population Dynamics",
+          "suggested_subskill_codes": [
+            "7.A"
+          ],
+          "big_ideas": [
+            {
+              "id": "EIN-1",
+              "description": "Human populations change in reaction to a variety of factors, including social and cultural factors."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "EIN-1.C.1",
+              "description": "Explain how human populations experience growth and decline.",
+              "essential_knowledge": [
+                {
+                  "id": "EIN-1.C.1",
+                  "description": "Birth rates, infant mortality rates, and overall death rates, access to family planning, access to good nutrition, access to education, and postponement of marriage all affect whether a human population is growing or declining."
+                },
+                {
+                  "id": "EIN-1.C.2",
+                  "description": "Factors limiting global human population include the Earth's carrying capacity and the basic factors that limit human population growth as set forth by Malthusian theory."
+                },
+                {
+                  "id": "EIN-1.C.3",
+                  "description": "Population growth can be affected by both density-independent factors, such as major storms, fires, heat waves, or droughts, and density-dependent factors, such as access to clean water and air, food availability, disease transmission, or territory size."
+                },
+                {
+                  "id": "EIN-1.C.4",
+                  "description": "The rule of 70 states that dividing the number 70 by the percentage population growth rate approximates the population's doubling time."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3.9",
+          "name": "Demographic Transition",
+          "suggested_subskill_codes": [
+            "1.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "EIN-1",
+              "description": "Human populations change in reaction to a variety of factors, including social and cultural factors."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "EIN-1.D",
+              "description": "Define the demographic transition.",
+              "essential_knowledge": [
+                {
+                  "id": "EIN-1.D.1",
+                  "description": "The demographic transition refers to the transition from high to lower birth and death rates in a country or region as development occurs and that country moves from a pre- industrial to an industrialized economic system. This transition is typically demonstrated through a four-stage demographic transition model (DTM)."
+                },
+                {
+                  "id": "EIN-1.D.2",
+                  "description": "Characteristics of developing countries include higher infant mortality rates and more children in the workforce than developed countries."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Earth Systems and Resources",
+      "developing_understanding": "This unit explores earth systems and its resources that support life. Geological changes that occur to earth systems at convergent and divergent boundaries can result in the creation of mountains, island arcs, earthquakes, volcanoes, and seafloor spreading. Soils are a resource, formed when parent material is weathered, transported, and deposited. The atmosphere is another resource, composed of certain percentages of major gases. Climate is influenced by the sun's energy, Earth's geography, and the movement of air and water. In subsequent units, students will examine how humans use natural resources and the impact on the environment.",
+      "building_practices": "In this unit, students can practice analyzing and interpreting qualitative models and representations of environmental issues. The ability to describe global maps and maps of plate boundaries is key to explaining the global changes that occur at plate boundaries. Climatograms may also be introduced in this unit. To develop an understanding of the relationship between the geography of the earth and climate, students may benefit from describing the impact of El Niño on marine food chains, and other specific examples. Students should be able to identify and describe environmental processes displayed visually. They can also practice explaining the meaning of a diagram or infographic, ultimately building to the ability to explain the consequences of a change in an environmental process (i.e., \"What would happen if ...\") in later units. To help students build understanding in this area, it may be useful for them to perform a soil/water capacity lab.",
+      "preparing_for_exam": "On the AP Exam, students must be able to explain representations of convergent, divergent, and transform boundaries present on a global map. To practice this, students can examine global maps to identify the distribution of global plate boundaries. Students should also practice analyzing characteristics of soil. They can perform guided inquiry labs related to soil analysis and formation. Data show a strong correlation between the strength of students' conceptual understanding and their experience performing hands-on labs. Students can also practice identifying how climate factors influence the rate of soil formation. They should indicate if that factor speeds up or slows down the rate of formation. Students may benefit from connecting visual representations with explanations of the Earth's atmosphere/ geography, climate, global wind patterns, solar radiation, and the Earth's seasons.",
+      "topics": [
+        {
+          "id": "4.1",
+          "name": "Plate Tectonics",
+          "suggested_subskill_codes": [
+            "2.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "ERT-4",
+              "description": "Earth's systems interact, resulting in a state of balance over time."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ERT-4.A",
+              "description": "Describe the geological changes and events that occur at convergent, divergent, and transform plate boundaries.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-4.A.1",
+                  "description": "Convergent boundaries can result in the creation of mountains, island arcs, earthquakes, and volcanoes."
+                },
+                {
+                  "id": "ERT-4.A.2",
+                  "description": "Divergent boundaries can result in seafloor spreading, rift valleys, volcanoes, and earthquakes."
+                },
+                {
+                  "id": "ERT-4.A.3",
+                  "description": "Transform boundaries can result in earthquakes."
+                },
+                {
+                  "id": "ERT-4.A.4",
+                  "description": "Maps that show the global distribution of plate boundaries can be used to determine the location of volcanoes, island arcs, earthquakes, hot spots, and faults."
+                },
+                {
+                  "id": "ERT-4.A.5",
+                  "description": "An earthquake occurs when stress overcomes a locked fault, releasing stored energy."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4.2",
+          "name": "Soil Formation and Erosion",
+          "suggested_subskill_codes": [
+            "4.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "ERT-4",
+              "description": "Earth's systems interact, resulting in a state of balance over time."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ERT-4.B",
+              "description": "Describe the characteristics and formation of soil.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-4.B.1",
+                  "description": "Soils are formed when parent material is weathered, transported, and deposited."
+                },
+                {
+                  "id": "ERT-4.B.2",
+                  "description": "Soils are generally categorized by horizons based on their composition and organic material."
+                },
+                {
+                  "id": "ERT-4.B.3",
+                  "description": "Soils can be eroded by winds or water. Protecting soils can protect water quality as soils effectively filter and clean water that moves through them."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4.3",
+          "name": "Soil Composition and Properties",
+          "suggested_subskill_codes": [
+            "4.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "ERT-4",
+              "description": "Earth's systems interact, resulting in a state of balance over time."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ERT-4.C",
+              "description": "Describe similarities and differences between properties of different soil types.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-4.C.1",
+                  "description": "Water holding capacity—the total amount of water soil can hold—varies with different soil types. Water retention contributes to land productivity and fertility of soils."
+                },
+                {
+                  "id": "ERT-4.C.2",
+                  "description": "The particle size and composition of each soil horizon can affect the porosity, permeability, and fertility of the soil."
+                },
+                {
+                  "id": "ERT-4.C.3",
+                  "description": "There are a variety of methods to test the chemical, physical, and biological properties of soil that can aid in a variety of decisions, such as irrigation and fertilizer requirements."
+                },
+                {
+                  "id": "ERT-4.C.4",
+                  "description": "A soil texture triangle is a diagram that allows for the identification and comparison of soil types based on their percentage of clay, silt, and sand."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4.4",
+          "name": "Earth's Atmosphere",
+          "suggested_subskill_codes": [
+            "2.A"
+          ],
+          "big_ideas": [
+            {
+              "id": "ERT-4",
+              "description": "Earth's systems interact, resulting in a state of balance over time."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ERT-4.D",
+              "description": "Describe the structure and composition of the Earth's atmosphere.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-4.D.1",
+                  "description": "The atmosphere is made up of major gases, each with its own relative abundance."
+                },
+                {
+                  "id": "ERT-4.D.2",
+                  "description": "The layers of the atmosphere are based on temperature gradients and include the troposphere, stratosphere, mesosphere, thermosphere, and exosphere."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4.5",
+          "name": "Global Wind Patterns",
+          "suggested_subskill_codes": [
+            "2.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "ERT-4",
+              "description": "Earth's systems interact, resulting in a state of balance over time."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ERT-4.E",
+              "description": "Explain how environmental factors can result in atmospheric circulation.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-4.E.1",
+                  "description": "Global wind patterns primarily result from the most intense solar radiation arriving at the equator, resulting in density differences and the Coriolis effect."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4.6",
+          "name": "Watersheds",
+          "suggested_subskill_codes": [
+            "1.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "ERT-4",
+              "description": "Earth's systems interact, resulting in a state of balance over time."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ERT-4.F",
+              "description": "Describe the characteristics of a watershed.",
+              "essential_knowledge": [
+                {
+                  "id": "ERT-4.F.1",
+                  "description": "Characteristics of a given watershed include its area, length, slope, soil, vegetation types, and divides with adjoining watersheds."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4.7",
+          "name": "Solar Radiation and Earth's Seasons",
+          "suggested_subskill_codes": [
+            "2.A"
+          ],
+          "big_ideas": [
+            {
+              "id": "ENG-2",
+              "description": "Most of the Earth's atmospheric processes are driven by input of energy from the sun."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ENG-2.A",
+              "description": "Explain how the sun's energy affects the Earth's surface.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-2.A.1",
+                  "description": "Incoming solar radiation (insolation) is the Earth's main source of energy and is dependent on season and latitude."
+                },
+                {
+                  "id": "ENG-2.A.2",
+                  "description": "The angle of the sun's rays determines the intensity of the solar radiation. Due to the shape of the Earth, the latitude that is directly horizontal to the solar radiation receives the most intensity."
+                },
+                {
+                  "id": "ENG-2.A.3",
+                  "description": "The highest solar radiation per unit area is received at the equator and decreases toward the poles."
+                },
+                {
+                  "id": "ENG-2.A.4",
+                  "description": "The solar radiation received at a location on the Earth's surface varies seasonally, with the most radiation received during the location's longest summer day and the least on the shortest winter day."
+                },
+                {
+                  "id": "ENG-2.A.5",
+                  "description": "The tilt of Earth's axis of rotation causes the Earth's seasons and the number of hours of daylight in a particular location on the Earth's surface."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4.8",
+          "name": "Earth's Geography and Climate",
+          "suggested_subskill_codes": [
+            "2.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "ENG-2",
+              "description": "Most of the Earth's atmospheric processes are driven by input of energy from the sun."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ENG-2.B",
+              "description": "Describe how the Earth's geography affects weather and climate.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-2.B.1",
+                  "description": "Weather and climate are affected not only by the sun's energy but by geologic and geographic factors, such as mountains and ocean temperature."
+                },
+                {
+                  "id": "ENG-2.B.2",
+                  "description": "A rain shadow is a region of land that has become drier because a higher elevation area blocks precipitation from reaching the land."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4.9",
+          "name": "El Niño and La Niña",
+          "suggested_subskill_codes": [
+            "7.A"
+          ],
+          "big_ideas": [
+            {
+              "id": "ENG-2",
+              "description": "Most of the Earth's atmospheric processes are driven by input of energy from the sun."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ENG-2.C",
+              "description": "Describe the environmental changes and effects that result from El Niño or La Niña events (El Niño-Southern Oscillation).",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-2.C.1",
+                  "description": "El Niño and La Niña are phenomena associated with changing ocean surface temperatures in the Pacific Ocean. These phenomena can cause global changes to rainfall, wind, and ocean circulation patterns."
+                },
+                {
+                  "id": "ENG-2.C.2",
+                  "description": "El Niño and La Niña are influenced by geological and geographic factors and can affect different locations in different ways."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Land and Water Use",
+      "developing_understanding": "This unit explores human activities that disrupt ecosystems both positively and negatively and the methods employed to reduce impact. It examines human use of natural resources through many means, including mining and clearcutting, and the impacts on the environment. Agricultural practices in particular can cause environmental disruption. For example, one of the largest uses of freshwater is for irrigation. Every irrigation method employed for agriculture has its own benefits and drawbacks. In subsequent units, students will examine different types of energy resources, the consumption of these resources, and the impact on the environment.",
+      "building_practices": "In this unit, students can practice identifying environmental problems (e.g., pollution, depletion of the ozone layer, global climate change). They can also practice thinking critically about the problem, and when evaluating a given solution, articulating its benefits and drawbacks. The ability to describe and propose viable solutions for environmental problems is critical for this unit. Students will benefit from opportunities to practice describing the development process for legislation enacted to mitigate environmental problems and the effects of the legislation on the various stakeholders. Most importantly, students should have many opportunities to evaluate a proposed solution to an environmental problem and/ or the legislation that addresses it and then describe benefits and drawbacks to the solution.",
+      "preparing_for_exam": "On the AP Exam, students must be able to describe and explain concepts related to the tragedy of the commons, clearcutting, agricultural practices, and mining. To practice this, case studies that represent real-world examples of human activities can be helpful, focusing on understanding concepts within applied contexts. Case studies can also be used to help students practice proposing solutions to environmental problems and describing the benefits or disadvantages of those solutions. Students may benefit from opportunities to analyze text-based resources about environmental issues and the impact of human activities on the environment. Teachers can guide students in identifying the author's claim, perspective, and/or assumptions. It may be especially helpful to utilize sources of information that have quantitative data so that students can provide explanations that both describe the data and connect the data to an environmental issue.",
+      "topics": [
+        {
+          "id": "5.1",
+          "name": "The Tragedy of the Commons",
+          "suggested_subskill_codes": [
+            "1.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "EIN-2",
+              "description": "When humans use natural resources, they alter natural systems."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "EIN-2.A",
+              "description": "Explain the concept of the tragedy of the commons.",
+              "essential_knowledge": [
+                {
+                  "id": "EIN-2.A.1",
+                  "description": "The tragedy of the commons suggests that individuals will use shared resources in their own self-interest rather than in keeping with the common good, thereby depleting the resources."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.2",
+          "name": "Clearcutting",
+          "suggested_subskill_codes": [
+            "1.A"
+          ],
+          "big_ideas": [
+            {
+              "id": "EIN-2",
+              "description": "When humans use natural resources, they alter natural systems."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "EIN-2.B",
+              "description": "Describe the effect of clearcutting on forests.",
+              "essential_knowledge": [
+                {
+                  "id": "EIN-2.B.1",
+                  "description": "Clearcutting can be economically advantageous but leads to soil erosion, increased soil and stream temperatures, and flooding."
+                },
+                {
+                  "id": "EIN-2.B.2",
+                  "description": "Forests contain trees that absorb pollutants and store carbon dioxide. The cutting and burning of trees releases carbon dioxide and contributes to climate change."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.3",
+          "name": "The Green Revolution",
+          "suggested_subskill_codes": [
+            "3.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "EIN-2",
+              "description": "When humans use natural resources, they alter natural systems."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "EIN-2.C",
+              "description": "Describe changes in agricultural practices.",
+              "essential_knowledge": [
+                {
+                  "id": "EIN-2.C.1",
+                  "description": "The Green Revolution started a shift to new agricultural strategies and practices in order to increase food production, with both positive and negative results. Some of these strategies and methods are mechanization, genetically modified organisms (GMOs), fertilization, irrigation, and the use of pesticides."
+                },
+                {
+                  "id": "EIN-2.C.2",
+                  "description": "Mechanization of farming can increase profits and efficiency for farms. It can also increase reliance on fossil fuels."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.4",
+          "name": "Impact of Agricultural Practices",
+          "suggested_subskill_codes": [
+            "1.A"
+          ],
+          "big_ideas": [
+            {
+              "id": "EIN-2",
+              "description": "When humans use natural resources, they alter natural systems."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "EIN-2.D",
+              "description": "Describe agricultural practices that cause environmental damage.",
+              "essential_knowledge": [
+                {
+                  "id": "EIN-2.D.1",
+                  "description": "Agricultural practices that can cause environmental damage include tilling, slash- and-burn farming, and the use of fertilizers."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.5",
+          "name": "Irrigation Methods",
+          "suggested_subskill_codes": [
+            "7.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "EIN-2",
+              "description": "When humans use natural resources, they alter natural systems."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "EIN-2.E",
+              "description": "Describe different methods of irrigation.",
+              "essential_knowledge": [
+                {
+                  "id": "EIN-2.E.1",
+                  "description": "The largest human use of freshwater is for irrigation (70%)."
+                },
+                {
+                  "id": "EIN-2.E.2",
+                  "description": "Types of irrigation include drip irrigation, flood irrigation, furrow irrigation, drip irrigation, and spray irrigation."
+                }
+              ]
+            },
+            {
+              "id": "EIN-2.F",
+              "description": "Describe the benefits and drawbacks of different methods of irrigation.",
+              "essential_knowledge": [
+                {
+                  "id": "EIN-2.F.1",
+                  "description": "Waterlogging occurs when too much water is left to sit in the soil, which raises the water table of groundwater and inhibits plants' ability to absorb oxygen through their roots."
+                },
+                {
+                  "id": "EIN-2.F.2",
+                  "description": "Furrow irrigation involves cutting furrows between crop rows and filling them with water. This system is inexpensive, but about 1/3 of the water is lost to evaporation and runoff."
+                },
+                {
+                  "id": "EIN-2.F.3",
+                  "description": "Flood irrigation involves flooding an agricultural field with water. This system sees about 20% of the water lost to evaporation and runoff. This can also lead to waterlogging of the soil."
+                },
+                {
+                  "id": "EIN-2.F.4",
+                  "description": "Spray irrigation involves pumping ground water into spray nozzles across an agricultural field. This system is more efficient than flood and furrow irrigation, with only 1/4 or less of the water lost to evaporation or runoff. However, spray systems are more expensive than flood and furrow irrigation, and also requires energy to run."
+                },
+                {
+                  "id": "EIN-2.F.5",
+                  "description": "Drip irrigation uses perforated hoses to release small amounts of water to plant roots. This system is the most efficient, with only about 5% of water lost to evaporation and runoff. However, this system is expensive and so is not often used."
+                },
+                {
+                  "id": "EIN-2.F.6",
+                  "description": "Salinization occurs when the salts in groundwater remain in the soil after the water evaporates. Over time, salinization can make soil toxic to plants."
+                },
+                {
+                  "id": "EIN-2.F.7",
+                  "description": "Aquifers can be severely depleted if overused for agricultural irrigation, as has happened to the Ogallala Aquifer in the central United States."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.6",
+          "name": "Pest Control Methods",
+          "suggested_subskill_codes": [
+            "7.E"
+          ],
+          "big_ideas": [
+            {
+              "id": "EIN-2",
+              "description": "When humans use natural resources, they alter natural systems."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "EIN-2.G",
+              "description": "Describe the benefits and drawbacks of different methods of pest control.",
+              "essential_knowledge": [
+                {
+                  "id": "EIN-2.G.1",
+                  "description": "One consequence of using common pest-control methods such as pesticides, herbicides, fungicides, rodenticides, and insecticides is that organisms can become resistant to them through artificial selection. Pest control decreases crop damage by pest and increases crop yields."
+                },
+                {
+                  "id": "EIN-2.G.2",
+                  "description": "Crops can be genetically engineered to increase their resistance to pests and diseases. However, using genetically engineered crops in planting or other ways can lead to loss of genetic diversity of that particular crop."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.7",
+          "name": "Meat Production Methods",
+          "suggested_subskill_codes": [
+            "5.E"
+          ],
+          "big_ideas": [
+            {
+              "id": "EIN-2",
+              "description": "When humans use natural resources, they alter natural systems."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "EIN-2.H",
+              "description": "Identify different methods of meat production.",
+              "essential_knowledge": [
+                {
+                  "id": "EIN-2.H.1",
+                  "description": "Methods of meat production include concentrated animal feeding operations (CAFOS), also called feedlots, and free-range grazing."
+                }
+              ]
+            },
+            {
+              "id": "EIN-2.1",
+              "description": "Describe the benefits and drawbacks of different methods of meat production.",
+              "essential_knowledge": [
+                {
+                  "id": "EIN-2.1.1",
+                  "description": "Meat production is less efficient than agriculture; it takes approximately 20 times more land to produce the same amount of calories from meat as from plants."
+                },
+                {
+                  "id": "EIN-2.1.2",
+                  "description": "Concentrated animal feeding operation (CAFOS) are used as a way to quickly get livestock ready for slaughter. They tend to be crowded, and animals are fed grains or feed that are not as suitable as grass. Additionally, feedlots generate a large amount of organic waste, which can contaminate ground and surface water. The use of feedlots are less expensive than other methods, which can keep costs to consumers down."
+                },
+                {
+                  "id": "EIN-2.1.3",
+                  "description": "Free range grazing allows animals to graze on grass during their entire lifecycle. Meat from free range animals tends to be free from antibiotics and other chemicals used in feedlots. Organic waste from these animals acts as fertilizer. Free range grazing requires large areas of land and the meat produced is more expensive for consumers."
+                },
+                {
+                  "id": "EIN-2.1.4",
+                  "description": "Overgrazing occurs when too many animals feed on a particular area of land. Overgrazing causes loss of vegetation, which leads to soil erosion."
+                },
+                {
+                  "id": "EIN-2.1.5",
+                  "description": "Overgrazing can cause desertification. Desertification is the degradation of low precipitation regions toward being increasingly arid until they become deserts."
+                },
+                {
+                  "id": "EIN-2.1.6",
+                  "description": "Less consumption of meat could reduce CO₂, methane, and N₂O emissions; conserve water; reduce the use of antibiotics and growth hormones; and improve topsoil."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.8",
+          "name": "Impacts of Overfishing",
+          "suggested_subskill_codes": [
+            "7.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "EIN-2",
+              "description": "When humans use natural resources, they alter natural systems."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "EIN-2.J",
+              "description": "Describe causes of and problems related to overfishing.",
+              "essential_knowledge": [
+                {
+                  "id": "EIN-2.J.1",
+                  "description": "Overfishing has led to the extreme scarcity of some fish species, which can lessen biodiversity in aquatic systems and harm people who depend on fishing for food and commerce."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.9",
+          "name": "Impacts of Mining",
+          "suggested_subskill_codes": [
+            "7.E"
+          ],
+          "big_ideas": [
+            {
+              "id": "EIN-2",
+              "description": "When humans use natural resources, they alter natural systems."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "EIN-2.K",
+              "description": "Describe natural resource extraction through mining.",
+              "essential_knowledge": [
+                {
+                  "id": "EIN-2.K.1",
+                  "description": "As the more accessible ores are mined to depletion, mining operations are forced to access lower grade ores. Accessing these ores requires increased use of resources that can cause increased waste and pollution."
+                },
+                {
+                  "id": "EIN-2.K.2",
+                  "description": "Surface mining is the removal of large portions of soil and rock, called overburden, in order to access the ore underneath. An example is strip mining, which removes the vegetation from an area, making the area more susceptible to erosion."
+                }
+              ]
+            },
+            {
+              "id": "EIN-2.L",
+              "description": "Describe ecological and economic impacts of natural resource extraction through mining.",
+              "essential_knowledge": [
+                {
+                  "id": "EIN-2.L.1",
+                  "description": "Mining wastes include the soil and rocks that are moved to gain access to the ore and the waste, called slag and tailings that remain when the minerals have been removed from the ore. Mining helps to provide low cost energy and material necessary to make products. The mining of coal can destroy habitats, contaminate ground water, and release dust particles and methane."
+                },
+                {
+                  "id": "EIN-2.L.2",
+                  "description": "As coal reserves get smaller, due to a lack of easily accessible reserves, it becomes necessary to access coal through subsurface mining, which is very expensive."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.10",
+          "name": "Impacts of Urbanization",
+          "suggested_subskill_codes": [
+            "7.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "EIN-2",
+              "description": "When humans use natural resources, they alter natural systems."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "EIN-2.M",
+              "description": "Describe the effects of urbanization on the environment.",
+              "essential_knowledge": [
+                {
+                  "id": "EIN-2.M.1",
+                  "description": "Urbanization can lead to depletion of resources and saltwater intrusion in the hydrologic cycle."
+                },
+                {
+                  "id": "EIN-2.M.2",
+                  "description": "Urbanization, through the burning of fossil fuels and landfills, affects the carbon cycle by increasing the amount of carbon dioxide in the atmosphere."
+                },
+                {
+                  "id": "EIN-2.M.3",
+                  "description": "Impervious surfaces are human-made structures-such as roads, buildings, sidewalks, and parking lots that do not allow water to reach the soil, leading to flooding."
+                },
+                {
+                  "id": "EIN-2.M.4",
+                  "description": "Urban sprawl is the change in population distribution from high population density areas to low density suburbs that spread into rural lands, leading to potential environmental problems."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.11",
+          "name": "Ecological Footprints",
+          "suggested_subskill_codes": [
+            "5.E"
+          ],
+          "big_ideas": [
+            {
+              "id": "EIN-2",
+              "description": "When humans use natural resources, they alter natural systems."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "EIN-2.N",
+              "description": "Explain the variables measured in an ecological footprint.",
+              "essential_knowledge": [
+                {
+                  "id": "EIN-2.N.1",
+                  "description": "Ecological footprints compare resource demands and waste production required for an individual or a society."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.12",
+          "name": "Introduction to Sustainability",
+          "suggested_subskill_codes": [
+            "5.E"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-1",
+              "description": "Humans can mitigate their impact on land and water resources through sustainable use."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-1.A",
+              "description": "Explain the concept of sustainability.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-1.A.1",
+                  "description": "Sustainability refers to humans living on Earth and their use of resources without depletion of the resources for future generations. Environmental indicators that can guide humans to sustainability include biological diversity, food production, average global surface temperatures and CO₂ concentrations, human population, and resource depletion."
+                },
+                {
+                  "id": "STB-1.A.2",
+                  "description": "Sustainable yield is the amount of a renewable resource that can be taken without reducing the available supply."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.13",
+          "name": "Methods to Reduce Urban Runoff",
+          "suggested_subskill_codes": [
+            "4.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-1",
+              "description": "Humans can mitigate their impact on land and water resources through sustainable use."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-1.B",
+              "description": "Describe methods for mitigating problems related to urban runoff.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-1.B.1",
+                  "description": "Methods to increase water infiltration include replacing traditional pavement with permeable pavement, planting trees, increased use of public transportation, and building up, not out."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.14",
+          "name": "Integrated Pest Management",
+          "suggested_subskill_codes": [
+            "7.D"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-1",
+              "description": "Humans can mitigate their impact on land and water resources through sustainable use."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-1.C",
+              "description": "Describe integrated pest management.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-1.C.1",
+                  "description": "Integrated pest management (IPM) is a combination of methods used to effectively control pest species while minimizing the disruption to the environment. These methods include biological, physical, and limited chemical methods such as biocontrol, intercropping, crop rotation, and natural predators of the pests."
+                }
+              ]
+            },
+            {
+              "id": "STB-1.D",
+              "description": "Describe the benefits and drawbacks of integrated pest management (IPM).",
+              "essential_knowledge": [
+                {
+                  "id": "STB-1.D.1",
+                  "description": "The use of integrated pest management (IPM) reduces the risk that pesticides pose to wildlife, water supplies, and human health."
+                },
+                {
+                  "id": "STB-1.D.2",
+                  "description": "Integrated pest management (IPM) minimizes disruptions to the environment and threats to human health but can be complex and expensive."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.15",
+          "name": "Sustainable Agriculture",
+          "suggested_subskill_codes": [
+            "7.E"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-1",
+              "description": "Humans can mitigate their impact on land and water resources through sustainable use."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-1.E",
+              "description": "Describe sustainable agricultural and food production practices.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-1.E.1",
+                  "description": "The goal of soil conservation is to prevent soil erosion. Different methods of soil conservation include contour plowing, windbreaks, perennial crops, terracing, no-till agriculture, and strip cropping."
+                },
+                {
+                  "id": "STB-1.E.2",
+                  "description": "Strategies to improve soil fertility include crop rotation and the addition of green manure and limestone."
+                },
+                {
+                  "id": "STB-1.E.3",
+                  "description": "Rotational grazing is the regular rotation of livestock between different pastures in order to avoid overgrazing in a particular area."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.16",
+          "name": "Aquaculture",
+          "suggested_subskill_codes": [
+            "7.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-1",
+              "description": "Humans can mitigate their impact on land and water resources through sustainable use."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-1.F",
+              "description": "Describe the benefits and drawbacks of aquaculture.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-1.F.1",
+                  "description": "Aquaculture has expanded because it is highly efficient, requires only small areas of water, and requires little fuel."
+                },
+                {
+                  "id": "STB-1.F.2",
+                  "description": "Aquaculture can contaminate wastewater, and fish that escape may compete or breed with wild fish. The density of fish in aquaculture can lead to increases in disease incidences, which can be transmitted to wild fish."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.17",
+          "name": "Sustainable Forestry",
+          "suggested_subskill_codes": [
+            "7.F"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-1",
+              "description": "Humans can mitigate their impact on land and water resources through sustainable use."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-1.G",
+              "description": "Describe methods for mitigating human impact on forests.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-1.G.1",
+                  "description": "Some of the methods for mitigating deforestation include reforestation, using and buying wood harvested by ecologically sustainable forestry techniques, and reusing wood."
+                },
+                {
+                  "id": "STB-1.G.2",
+                  "description": "Methods to protect forests from pathogens and insects include integrated pest management (IPM) and the removal of affected trees."
+                },
+                {
+                  "id": "STB-1.G.3",
+                  "description": "Prescribed burn is a method by which forests are set on fire under controlled conditions in order to reduce the occurrence of natural fires."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Energy Resources and Consumption",
+      "developing_understanding": "This unit examines human use of renewable and nonrenewable sources of energy and its impact on the environment. Energy consumption differs throughout the world and the availability of natural energy resources depends on the region's geologic history. Subsequent units will examine the impact of human activity on the atmosphere, land, and water.",
+      "building_practices": "Building the Science Practices",
+      "preparing_for_exam": "",
+      "topics": [
+        {
+          "id": "6.1",
+          "name": "Renewable and Nonrenewable Resources",
+          "suggested_subskill_codes": [
+            "1.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "ENG-3",
+              "description": "Humans use energy from a variety of sources, resulting in positive and negative consequences."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ENG-3.A",
+              "description": "Identify differences between nonrenewable and renewable energy sources.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-3.A.1",
+                  "description": "Nonrenewable energy sources are those that exist in a fixed amount and involve energy transformation that cannot be easily replaced."
+                },
+                {
+                  "id": "ENG-3.A.2",
+                  "description": "Renewable energy sources are those that can be replenished naturally, at or near the rate of consumption, and reused."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6.2",
+          "name": "Global Energy Consumption",
+          "suggested_subskill_codes": [
+            "6.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "ENG-3",
+              "description": "Humans use energy from a variety of sources, resulting in positive and negative consequences."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ENG-3.B",
+              "description": "Describe trends in energy consumption.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-3.B.1",
+                  "description": "The use of energy resources is not evenly distributed between developed and developing countries."
+                },
+                {
+                  "id": "ENG-3.B.2",
+                  "description": "The most widely used sources of energy globally are fossil fuels."
+                },
+                {
+                  "id": "ENG-3.B.3",
+                  "description": "As developing countries become more developed, their reliance on fossil fuels for energy increases."
+                },
+                {
+                  "id": "ENG-3.B.4",
+                  "description": "As the world becomes more industrialized, the demand for energy increases."
+                },
+                {
+                  "id": "ENG-3.B.5",
+                  "description": "Availability, price, and governmental regulations influence which energy sources people use and how they use them."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6.3",
+          "name": "Fuel Types and Uses",
+          "suggested_subskill_codes": [
+            "1.A"
+          ],
+          "big_ideas": [
+            {
+              "id": "ENG-3",
+              "description": "Humans use energy from a variety of sources, resulting in positive and negative consequences."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ENG-3.C",
+              "description": "Identify types of fuels and their uses.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-3.C.1",
+                  "description": "Wood is commonly used as fuel in the forms of firewood and charcoal. It is often used in developing countries because it is easily accessible."
+                },
+                {
+                  "id": "ENG-3.C.2",
+                  "description": "Peat is partially decomposed organic material that can be burned for fuel."
+                },
+                {
+                  "id": "ENG-3.C.3",
+                  "description": "Three types of coal used for fuel are lignite, bituminous, and anthracite. Heat, pressure, and depth of burial contribute to the development of various coal types and their qualities."
+                },
+                {
+                  "id": "ENG-3.C.4",
+                  "description": "Natural gas, the cleanest of the fossil fuels, is mostly methane."
+                },
+                {
+                  "id": "ENG-3.C.5",
+                  "description": "Crude oil can be recovered from tar sands, which are a combination of clay, sand, water, and bitumen."
+                },
+                {
+                  "id": "ENG-3.C.6",
+                  "description": "Fossil fuels can be made into specific fuel types for specialized uses (e.g., in motor vehicles)."
+                },
+                {
+                  "id": "ENG-3.C.7",
+                  "description": "Cogeneration occurs when a fuel source is used to generate both useful heat and electricity."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6.4",
+          "name": "Distribution of Natural Energy Resources",
+          "suggested_subskill_codes": [
+            "2.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "ENG-3",
+              "description": "Humans use energy from a variety of sources, resulting in positive and negative consequences."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ENG-3.D",
+              "description": "Identify where natural energy resources occur.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-3.D.1",
+                  "description": "The global distribution of natural energy resources, such as ores, coal, crude oil, and gas, is not uniform and depends on regions' geologic history."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6.5",
+          "name": "Fossil Fuels",
+          "suggested_subskill_codes": [
+            "7.A"
+          ],
+          "big_ideas": [
+            {
+              "id": "ENG-3",
+              "description": "Humans use energy from a variety of sources, resulting in positive and negative consequences."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ENG-3.E",
+              "description": "Describe the use and methods of fossil fuels in power generation.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-3.E.1",
+                  "description": "The combustion of fossil fuels is a chemical reaction between the fuel and oxygen that yields carbon dioxide and water and releases energy."
+                },
+                {
+                  "id": "ENG-3.E.2",
+                  "description": "Energy from fossil fuels is produced by burning those fuels to generate heat, which then turns water into steam. That steam turns a turbine, which spins a generator, producing electricity."
+                },
+                {
+                  "id": "ENG-3.E.3",
+                  "description": "Humans use a variety of methods to extract fossil fuels from the earth for energy generation."
+                }
+              ]
+            },
+            {
+              "id": "ENG-3.F",
+              "description": "Describe the effects of fossil fuels on the environment.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-3.F.1",
+                  "description": "Hydrologic fracturing (fracking) can cause groundwater contamination and the release of volatile organic compounds."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6.6",
+          "name": "Nuclear Power",
+          "suggested_subskill_codes": [
+            "2.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "ENG-3",
+              "description": "Humans use energy from a variety of sources, resulting in positive and negative consequences."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ENG-3.G",
+              "description": "Describe the use of nuclear energy in power generation.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-3.G.1",
+                  "description": "Nuclear power is generated through fission, where atoms of Uranium-235, which are stored in fuel rods, are split into smaller parts after being struck by a neutron. Nuclear fission releases a large amount of heat, which is used to generate steam, which powers a turbine and generates electricity."
+                },
+                {
+                  "id": "ENG-3.G.2",
+                  "description": "Radioactivity occurs when the nucleus of a radioactive isotope loses energy by emitting radiation."
+                },
+                {
+                  "id": "ENG-3.G.3",
+                  "description": "Uranium-235 remains radioactive for a long time, which leads to the problems associated with the disposal of nuclear waste."
+                },
+                {
+                  "id": "ENG-3.G.4",
+                  "description": "Nuclear power generation is a nonrenewable energy source. Nuclear power is considered a cleaner energy source because it does not produce air pollutants, but it does release thermal pollution and hazardous solid waste."
+                }
+              ]
+            },
+            {
+              "id": "ENG-3.H",
+              "description": "Describe the effects of the use of nuclear energy on the environment.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-3.H.1",
+                  "description": "Three Mile Island, Chernobyl, and Fukushima are three cases where accidents or natural disasters led to the release of radiation. These releases have had short- and long-term impacts on the environment."
+                },
+                {
+                  "id": "ENG-3.H.2",
+                  "description": "A radioactive element's half-life can be used to calculate a variety of things, including the rate of decay and the radioactivity level at specific points in time."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6.7",
+          "name": "Energy from Biomass",
+          "suggested_subskill_codes": [
+            "7.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "ENG-3",
+              "description": "Humans use energy from a variety of sources, resulting in positive and negative consequences."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ENG-3.I",
+              "description": "Describe the effects of the use of biomass in power generation on the environment.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-3.I.1",
+                  "description": "Burning of biomass produces heat for energy at a relatively low cost, but it also produces carbon dioxide, carbon monoxide, nitrogen oxides, particulates, and volatile organic compounds. The overharvesting of trees for fuel also causes deforestation."
+                },
+                {
+                  "id": "ENG-3.I.2",
+                  "description": "Ethanol can be used as a substitute for gasoline. Burning ethanol does not introduce additional carbon into the atmosphere via combustion, but the energy return on energy investment for ethanol is low."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6.8",
+          "name": "Solar Energy",
+          "suggested_subskill_codes": [
+            "5.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "ENG-3",
+              "description": "Humans use energy from a variety of sources, resulting in positive and negative consequences."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ENG-3.J",
+              "description": "Describe the use of solar energy in power generation.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-3.J.1",
+                  "description": "Photovoltaic solar cells capture light energy from the sun and transform it directly into electrical energy. Their use is limited by the availability of sunlight."
+                },
+                {
+                  "id": "ENG-3.J.2",
+                  "description": "Active solar energy systems use solar energy to heat a liquid through mechanical and electric equipment to collect and store the energy captured from the sun."
+                },
+                {
+                  "id": "ENG-3.J.3",
+                  "description": "Passive solar energy systems absorb heat directly from the sun without the use of mechanical and electric equipment, and energy cannot be collected or stored."
+                }
+              ]
+            },
+            {
+              "id": "ENG-3.K",
+              "description": "Describe the effects of the use of solar energy in power generation on the environment.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-3.K.1",
+                  "description": "Solar energy systems have low environmental impact and produce clean energy, but they can be expensive. Large solar energy farms may negatively impact desert ecosystems."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6.9",
+          "name": "Hydroelectric Power",
+          "suggested_subskill_codes": [
+            "7.F"
+          ],
+          "big_ideas": [
+            {
+              "id": "ENG-3",
+              "description": "Humans use energy from a variety of sources, resulting in positive and negative consequences."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ENG-3.L",
+              "description": "Describe the use of hydroelectricity in power generation.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-3.L.1",
+                  "description": "Hydroelectric power can be generated in several ways. Dams built across rivers collect water in reservoirs. The moving water can be used to spin a turbine. Turbines can also be placed in small rivers, where the flowing water spins the turbine."
+                },
+                {
+                  "id": "ENG-3.L.2",
+                  "description": "Tidal energy uses the energy produced by tidal flows to turn a turbine."
+                }
+              ]
+            },
+            {
+              "id": "ENG-3.M",
+              "description": "Describe the effects of the use of hydroelectricity in power generation on the environment.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-3.M.1",
+                  "description": "Hydroelectric power does not generate air pollution or waste, but construction of the power plants can be expensive, and there may be a loss of or change in habitats following the construction of dams."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6.10",
+          "name": "Geothermal Energy",
+          "suggested_subskill_codes": [
+            "1.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "ENG-3",
+              "description": "Humans use energy from a variety of sources, resulting in positive and negative consequences."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ENG-3.N",
+              "description": "Describe the use of geothermal energy in power generation.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-3.N.1",
+                  "description": "Geothermal energy is obtained by using the heat stored in the Earth's interior to heat up water, which is brought back to the surface as steam. The steam is used to drive an electric generator."
+                }
+              ]
+            },
+            {
+              "id": "ENG-3.O",
+              "description": "Describe the effects of the use of geothermal energy in power generation on the environment.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-3.O.1",
+                  "description": "The cost of accessing geothermal energy can be prohibitively expensive, as is not easily accessible in many parts of the world. In addition, it can cause the release of hydrogen sulfide."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6.11",
+          "name": "Hydrogen Fuel Cell",
+          "suggested_subskill_codes": [
+            "1.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "ENG-3",
+              "description": "Humans use energy from a variety of sources, resulting in positive and negative consequences."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ENG-3.P",
+              "description": "Describe the use of hydrogen fuel cells in power generation.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-3.P.1",
+                  "description": "Hydrogen fuel cells are an alternate to non-renewable fuel sources. They use hydrogen as fuel, combining the hydrogen and oxygen in the air to form water and release energy (electricity) in the process. Water is the product (emission) of a fuel cell."
+                }
+              ]
+            },
+            {
+              "id": "ENG-3.Q",
+              "description": "Describe the effects of the use of hydrogen fuel cells in power generation on the environment.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-3.Q.1",
+                  "description": "Hydrogen fuel cells have low environmental impact and produce no carbon dioxide when the hydrogen is produced from water. However, the technology is expensive and energy is still needed to create the hydrogen gas used in the fuel cell."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6.12",
+          "name": "Wind Energy",
+          "suggested_subskill_codes": [
+            "7.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "ENG-3",
+              "description": "Humans use energy from a variety of sources, resulting in positive and negative consequences."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ENG-3.R",
+              "description": "Describe the use of wind energy in power generation.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-3.R.1",
+                  "description": "Wind turbines use the kinetic energy of moving air to spin a turbine, which spins a generator, producing electricity."
+                }
+              ]
+            },
+            {
+              "id": "ENG-3.S",
+              "description": "Describe the effects of the use of wind energy in power generation on the environment.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-3.S.1",
+                  "description": "Wind energy is a renewable, clean source of energy. However, birds and bats may be killed if they fly into the spinning turbine blades."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6.13",
+          "name": "Energy Conservation",
+          "suggested_subskill_codes": [
+            "6.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "ENG-3",
+              "description": "Humans use energy from a variety of sources, resulting in positive and negative consequences."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "ENG-3.T",
+              "description": "Describe methods for conserving energy.",
+              "essential_knowledge": [
+                {
+                  "id": "ENG-3.T.1",
+                  "description": "Some of the methods for conserving energy around a home include adjusting the thermostat to reduce the use of heat and air conditioning, conserving water, use of energy-efficient appliances, and conservation landscaping."
+                },
+                {
+                  "id": "ENG-3.T.2",
+                  "description": "Methods for conserving energy on a large scale include improving fuel economy for vehicles, using BEVs (battery electric vehicles) and hybrid vehicles, using public transportation, and implementing green building design features."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Atmospheric Pollution",
+      "developing_understanding": "Air pollution has many sources and effects, both indoors and outdoors. Air is a natural resource that covers the Earth and crosses many system boundaries. Human activities affect the quality of the air both indoors and outdoors. Through legislation, the Clean Air Act regulates the emission of air pollutants that affect human health. The gases and particulates in the atmosphere come from both natural and human sources; once air pollution sources are identified, methods can be used to reduce it. Subsequent units will focus on pollution's impacts to land and water.",
+      "building_practices": "In this unit, students can practice comparing and predicting patterns and/or trends in a graph or table to explain how the data or representation illustrates environmental concepts. They can also practice drawing conclusions about an environmental concept based on a comparison of the patterns and trends in a graph or table. Students can also practice proposing solutions to combat the effects of air pollution on human health and, most importantly, using data or evidence to support their solutions. In order to understand the implications of environmental legislation, it is important to know how environmental policies are applied and what the outcomes are in a variety of contexts. With that knowledge, students can then explain why those outcomes occurred and how the policy affected the outcomes.",
+      "preparing_for_exam": "On the AP Exam, students must be able to describe or identify a research method used to understand air pollution. They will also have to explain the patterns and trends in data related to air pollution and describe the relationship among variables of data represented graphically. Students may benefit from time in class devoted to hands-on laboratory activities related to air pollution. Teachers can also provide students practice in identifying information from graphs, diagrams, or infographics related to air pollution. Students often struggle to identify specific air pollutants and related illnesses. To combat this, teacher can provide opportunities for students to identify air pollutants and their impacts on human health.",
+      "topics": [
+        {
+          "id": "7",
+          "name": "",
+          "suggested_subskill_codes": [],
+          "big_ideas": [
+            {
+              "id": "BIG IDEA 4 Sustainability STB",
+              "description": "Where does air pollution go once it is airborne?"
+            }
+          ],
+          "learning_objectives": []
+        },
+        {
+          "id": "7.1",
+          "name": "Introduction to Air Pollution",
+          "suggested_subskill_codes": [
+            "4.E"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-2",
+              "description": "Human activities have physical, chemical, and biological consequences for the atmosphere."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-2.A",
+              "description": "Identify the sources and effects of air pollutants.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-2.A.1",
+                  "description": "Coal combustion releases air pollutants including carbon dioxide, sulfur dioxide, toxic metals, and particulates."
+                },
+                {
+                  "id": "STB-2.A.2",
+                  "description": "The combustion of fossil fuels releases nitrogen oxides into the atmosphere. They lead to the production of ozone, formation of photochemical smog, and convert to nitric acid in the atmosphere, causing acid rain. Other pollutants produced by fossil fuel combustion include carbon monoxide, hydrocarbons, and particulate matter."
+                },
+                {
+                  "id": "STB-2.A.3",
+                  "description": "Air quality can be affected through the release of sulfur dioxide during the burning of fossil fuels, mainly diesel fuels."
+                },
+                {
+                  "id": "STB-2.A.4",
+                  "description": "Through the Clean Air Act, the Environmental Protection Agency (EPA) regulated the use of lead, particularly in fuels, which dramatically decreased the amount of lead in the atmosphere."
+                },
+                {
+                  "id": "STB-2.A.5",
+                  "description": "Air pollutants can be primary or secondary pollutants."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7.2",
+          "name": "Photochemical Smog",
+          "suggested_subskill_codes": [
+            "5.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-2",
+              "description": "Human activities have physical, chemical, and biological consequences for the atmosphere."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-2.B",
+              "description": "Explain the causes and effects of photochemical smog and methods to reduce it.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-2.B.1",
+                  "description": "Photochemical smog is formed when nitrogen oxides and volatile organic hydrocarbons react with heat and sunlight to produce a variety of pollutants."
+                },
+                {
+                  "id": "STB-2.B.2",
+                  "description": "Many environmental factors affect the formation of photochemical smog."
+                },
+                {
+                  "id": "STB-2.B.3",
+                  "description": "Nitrogen oxide is produced early in the day. Ozone concentrations peak in the afternoon and are higher in the summer because ozone is produced by chemical reactions between oxygen and sunlight."
+                },
+                {
+                  "id": "STB-2.B.4",
+                  "description": "Volatile Organic Compounds (VOCs), such as formaldehyde and gasoline, evaporate or sublimate at room temperature. Trees are a natural source of VOCs."
+                },
+                {
+                  "id": "STB-2.B.5",
+                  "description": "Photochemical smog often forms in urban areas because of the large number of motor vehicles there."
+                },
+                {
+                  "id": "STB-2.B.6",
+                  "description": "Photochemical smog can be reduced through the reduction of nitrogen oxide and VOCs."
+                },
+                {
+                  "id": "STB-2.B.7",
+                  "description": "Photochemical smog can harm human health in several ways, including causing respiratory problems and eye irritation."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7.3",
+          "name": "Thermal Inversion",
+          "suggested_subskill_codes": [
+            "2.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-2",
+              "description": "Human activities have physical, chemical, and biological consequences for the atmosphere."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-2.C",
+              "description": "Describe thermal inversion and its relationship with pollution.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-2.C.1",
+                  "description": "During a thermal inversion, the normal temperature gradient in the atmosphere is altered as the air temperature at the Earth's surface is cooler than the air at higher altitudes."
+                },
+                {
+                  "id": "STB-2.C.2",
+                  "description": "Thermal inversion traps pollution close to the ground, especially smog and particulates."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7.4",
+          "name": "Atmospheric CO₂ and Particulates",
+          "suggested_subskill_codes": [
+            "4.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-2",
+              "description": "Human activities have physical, chemical, and biological consequences for the atmosphere."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-2.D",
+              "description": "Describe natural sources of CO, and particulates.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-2.D.1",
+                  "description": "CO₂ appears naturally in the atmosphere from sources such as respiration, decomposition, and volcanic eruptions."
+                },
+                {
+                  "id": "STB-2.D.2",
+                  "description": "There are a variety of natural sources of particulate matter."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7.5",
+          "name": "Indoor Air Pollutants",
+          "suggested_subskill_codes": [
+            "5.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-2",
+              "description": "Human activities have physical, chemical, and biological consequences for the atmosphere."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-2.E",
+              "description": "Identify indoor air pollutants.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-2.E.1",
+                  "description": "Carbon monoxide is an indoor air pollutant that is classified as an asphyxiant."
+                },
+                {
+                  "id": "STB-2.E.2",
+                  "description": "Indoor air pollutants that are classified as particulates include asbestos, dust, and smoke."
+                },
+                {
+                  "id": "STB-2.E.3",
+                  "description": "Indoor air pollutants can come from natural sources, human-made sources, and combustion."
+                },
+                {
+                  "id": "STB-2.E.4",
+                  "description": "Common natural source indoor air pollutants include radon, mold, and dust."
+                },
+                {
+                  "id": "STB-2.E.5",
+                  "description": "Common human-made indoor air pollutants include insulation, Volatile Organic Compounds (VOCs) from furniture, paneling and carpets; formaldehyde from building materials, furniture, upholstery, and carpeting; and lead from paints."
+                },
+                {
+                  "id": "STB-2.E.6",
+                  "description": "Common combustion air pollutants include carbon monoxide, nitrogen oxides, sulfur dioxide, particulates, and tobacco smoke."
+                },
+                {
+                  "id": "STB-2.E.7",
+                  "description": "Radon-222 is a naturally occurring radioactive gas that is produced by the decay of uranium found in some rocks and soils."
+                }
+              ]
+            },
+            {
+              "id": "STB-2.F",
+              "description": "Describe the effects of indoor air pollutants.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-2.F.1",
+                  "description": "Radon gas can infiltrate homes as it moves up through the soil and enters homes via the basement or cracks in the walls or foundation. It is also dissolved in groundwater that enters homes through a well."
+                },
+                {
+                  "id": "STB-2.F.2",
+                  "description": "Exposure to radon gas can lead to radon-induced lung cancer, which is the second leading cause of lung cancer in America."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7.6",
+          "name": "Reduction of Air Pollutants",
+          "suggested_subskill_codes": [
+            "7.D"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-2",
+              "description": "Human activities have physical, chemical, and biological consequences for the atmosphere."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-2.G",
+              "description": "Explain how air pollutants can be reduced at the source.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-2.G.1",
+                  "description": "Methods to reduce air pollutants include regulatory practices, conservation practices, and alternative fuels."
+                },
+                {
+                  "id": "STB-2.G.2",
+                  "description": "A vapor recovery nozzle is an air pollution control device on a gasoline pump that prevents fumes from escaping into the atmosphere when fueling a motor vehicle."
+                },
+                {
+                  "id": "STB-2.G.3",
+                  "description": "A catalytic converter is an air pollution control device for internal combustion engines that converts pollutants (CO, NOx, and hydrocarbons) in exhaust into less harmful molecules (CO₂, N₂, O₂, and H₂O)."
+                },
+                {
+                  "id": "STB-2.G.4",
+                  "description": "Wet and dry scrubbers are air pollution control devices that remove particulates and/or gases from industrial exhaust streams."
+                },
+                {
+                  "id": "STB-2.G.5",
+                  "description": "Methods to reduce air pollution from coal-burning power plants include scrubbers and electrostatic precipitators."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7.7",
+          "name": "Acid Rain",
+          "suggested_subskill_codes": [
+            "4.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-2",
+              "description": "Human activities have physical, chemical, and biological consequences for the atmosphere."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-2.H",
+              "description": "Describe acid deposition.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-2.H.1",
+                  "description": "Acid rain and deposition is due to nitrogen oxides and sulfur oxides from anthropogenic and natural sources in the atmosphere."
+                },
+                {
+                  "id": "STB-2.H.2",
+                  "description": "Nitric oxides that cause acid deposition come from motor vehicles and coal-burning power plants. Sulfur dioxides that cause acid deposition come from coal-burning power plants."
+                }
+              ]
+            },
+            {
+              "id": "STB-2.I",
+              "description": "Describe the effects of acid deposition on the environment.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-2.1.1",
+                  "description": "Acid deposition mainly affects communities that are downwind from coal-burning power plants."
+                },
+                {
+                  "id": "STB-2.1.2",
+                  "description": "Acid rain and deposition can lead to the acidification of soils and bodies of water and corrosion of human-made structures."
+                },
+                {
+                  "id": "STB-2.1.3",
+                  "description": "Regional differences in soils and bedrock affect the impact that acid deposition has on the region—such as limestone bedrock's ability to neutralize the effect of acid rain on lakes and ponds."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7.8",
+          "name": "Noise Pollution",
+          "suggested_subskill_codes": [
+            "3.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-2",
+              "description": "Human activities have physical, chemical, and biological consequences for the atmosphere."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-2.J",
+              "description": "Describe human activities that result in noise pollution and its effects.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-2.J.1",
+                  "description": "Noise pollution is sound at levels high enough to cause physiological stress and hearing loss."
+                },
+                {
+                  "id": "STB-2.J.2",
+                  "description": "Sources of noise pollution in urban areas include transportation, construction, and domestic and industrial activity."
+                },
+                {
+                  "id": "STB-2.J.3",
+                  "description": "Some effects of noise pollution on animals in ecological systems include stress, the masking of sounds used to communicate or hunt, damaged hearing, and causing changes to migratory routes."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Aquatic and Terrestrial Pollution",
+      "developing_understanding": "Pollution created by human activities directly impacts ecosystems in the air, on land, and in water. The source of pollution can sometimes be easy to identify, but other times the source is diffused. There are many human health issues that can be linked to pollution. Legislation has been created to reduce discharges of pollution in water and regulate drinking water. Increases in waste cause global concerns for organisms that live on land and in water. In the final unit, students will explore how local and regional human activities can have a global impact.",
+      "building_practices": "Students should be able to think critically about an environmental problem and evaluate a given solution, articulating the benefits and drawbacks. Students should also be able to propose their own solutions to environmental problems. In order to understand the implications of environmental legislation, students need to see how policies are applied in different contexts. They also need to see the outcomes of those policies in context to fully address an environmental problem. Students should then be able to explain why those outcomes occurred and how the policy affected the outcomes. Quantitative skills are also important in this unit and can be addressed by having students perform water quality or dissolved oxygen labs. This will give them the opportunity to perform calculations with their data. These lab experiences will also provide students contexts to evaluate environmental problems.",
+      "preparing_for_exam": "On the AP Exam, students must be able to explain concepts related to the different types of pollution that impact land and water. Students often struggle with evaluating data related to pollution. To combat this, teachers can practice through hands-on laboratory activities related to pollution. Students can then discuss their observations and data. They may also benefit from multiple opportunities to analyze data by describing the relationships among the variables. They can explain the meaning of the data and the implications the data illustrate about pollution. Students often struggle if problems on the AP Exam require multiple steps to obtain an answer. Teachers can provide students with practice solving problems related to pollution using appropriate methods to calculate numerical answers, with appropriate units. As students practice calculations, it is often helpful to emphasize a logical step-by-step method that shows how their problem solving ends with a numerical answer and appropriate units.",
+      "topics": [
+        {
+          "id": "8",
+          "name": "",
+          "suggested_subskill_codes": [],
+          "big_ideas": [
+            {
+              "id": "EIN",
+              "description": "BIG IDEA 3 Interactions Between Different Species and the Environment ■ How does pollution impact your health?"
+            },
+            {
+              "id": "STB",
+              "description": "BIG IDEA 4 Sustainability ■ How can you decrease your waste?"
+            }
+          ],
+          "learning_objectives": []
+        },
+        {
+          "id": "8.1",
+          "name": "Sources of Pollution",
+          "suggested_subskill_codes": [
+            "1.A"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-3",
+              "description": "Human activities, including the use of resources, have physical, chemical, and biological consequences for ecosystems."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-3.A",
+              "description": "Identify differences between point and nonpoint sources of pollution.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-3.A.1",
+                  "description": "A point source refers to a single, identifiable source of a pollutant, such as a smokestack or waste discharge pipe."
+                },
+                {
+                  "id": "STB-3.A.2",
+                  "description": "Nonpoint sources of pollution are diffused and can therefore be difficult to identify, such as pesticide spraying or urban runoff."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8.2",
+          "name": "Human Impacts on Ecosystems",
+          "suggested_subskill_codes": [
+            "6.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-3",
+              "description": "Human activities, including the use of resources, have physical, chemical, and biological consequences for ecosystems."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-3.B",
+              "description": "Describe the impacts of human activities on aquatic ecosystems.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-3.B.1",
+                  "description": "Organisms have a range of tolerance for various pollutants. Organisms have an optimum range for each factor where they can maintain homeostasis. Outside of this range, organisms may experience physiological stress, limited growth, reduced reproduction, and in extreme cases, death."
+                },
+                {
+                  "id": "STB-3.B.2",
+                  "description": "Coral reefs have been suffering damage due to a variety of factors, including increasing ocean temperature, sediment runoff, and destructive fishing practices."
+                },
+                {
+                  "id": "STB-3.B.3",
+                  "description": "Oil spills in marine waters cause organisms to die from the hydrocarbons in oil. Oil that floats on the surface of water can coat the feathers of birds and fur of marine mammals. Some components of oil sink to the ocean floor, killing some bottom-dwelling organisms."
+                },
+                {
+                  "id": "STB-3.B.4",
+                  "description": "Oil that washes up on the beach can have economic consequences on the fishing and tourism industries."
+                },
+                {
+                  "id": "STB-3.B.5",
+                  "description": "Oceanic dead zones are areas of low oxygen in the world's oceans caused by increased nutrient pollution."
+                },
+                {
+                  "id": "STB-3.B.6",
+                  "description": "An oxygen sag curve is a plot of dissolved oxygen levels versus the distance from a source of pollution, usually excess nutrients and biological refuse."
+                },
+                {
+                  "id": "STB-3.B.7",
+                  "description": "Heavy metals used for industry, especially mining and burning of fossil fuels, can reach the groundwater, impacting the drinking water supply."
+                },
+                {
+                  "id": "STB-3.B.8",
+                  "description": "Litter that reaches aquatic ecosystems, besides being unsightly, can create intestinal blockage and choking hazards for wildlife and introduce toxic substances to the food chain."
+                },
+                {
+                  "id": "STB-3.B.9",
+                  "description": "Increased sediment in waterways can reduce light infiltration, which can affect primary producers and visual predators. Sediment can also settle, disrupting habitats."
+                },
+                {
+                  "id": "STB-3.B.10",
+                  "description": "When elemental sources of mercury enter aquatic environments, bacteria in the water convert it to highly toxic methylmercury."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8.3",
+          "name": "Endocrine Disruptors",
+          "suggested_subskill_codes": [
+            "1.A"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-3",
+              "description": "Human activities, including the use of resources, have physical, chemical, and biological consequences for ecosystems."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-3.C",
+              "description": "Describe endocrine disruptors.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-3.C.1",
+                  "description": "Endocrine disruptors are chemicals that can interfere with the endocrine system of animals."
+                }
+              ]
+            },
+            {
+              "id": "STB-3.D",
+              "description": "Describe the effects of endocrine disruptors on ecosystems.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-3.D.1",
+                  "description": "Endocrine disruptors can lead to birth defects, developmental disorders, and gender imbalances in fish and other species."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8.4",
+          "name": "Human Impacts on Wetlands and Mangroves",
+          "suggested_subskill_codes": [
+            "7.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-3",
+              "description": "Human activities, including the use of resources, have physical, chemical, and biological consequences for ecosystems."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-3.E",
+              "description": "Describe the impacts of human activity on wetlands and mangroves.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-3.E.1",
+                  "description": "Wetlands are areas where water covers the soil, either part or all of the time."
+                },
+                {
+                  "id": "STB-3.E.2",
+                  "description": "Wetlands provide a variety of ecological services, including water purification, flood protection, water filtration, and habitat."
+                },
+                {
+                  "id": "STB-3.E.3",
+                  "description": "Threats to wetlands and mangroves include commercial development, dam construction, overfishing, and pollutants from agriculture and industrial waste."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8.5",
+          "name": "Eutrophication",
+          "suggested_subskill_codes": [
+            "2.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-3",
+              "description": "Human activities, including the use of resources, have physical, chemical, and biological consequences for ecosystems."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-3.F",
+              "description": "Explain the environmental effects of excessive use of fertilizers and detergents on aquatic ecosystems.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-3.F.1",
+                  "description": "Eutrophication occurs when a body of water is enriched in nutrients."
+                },
+                {
+                  "id": "STB-3.F.2",
+                  "description": "The increase in nutrients in eutrophic aquatic environments causes an algal bloom. When the algal bloom dies, microbes digest the algae, along with the oxygen in the water, leading to a decrease in the dissolved oxygen levels in the water. The lack of dissolved oxygen can result in large die-offs of fish and other aquatic organisms."
+                },
+                {
+                  "id": "STB-3.F.3",
+                  "description": "Hypoxic waterways are those bodies of water that are low in dissolved oxygen."
+                },
+                {
+                  "id": "STB-3.F.4",
+                  "description": "Compared to eutrophic waterways, oligotrophic waterways have very low amounts of nutrients, stable algae populations, and high dissolved oxygen."
+                },
+                {
+                  "id": "STB-3.F.5",
+                  "description": "Anthropogenic causes of eutrophication are agricultural runoff and wastewater release."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8.6",
+          "name": "Thermal Pollution",
+          "suggested_subskill_codes": [
+            "1.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-3",
+              "description": "Human activities, including the use of resources, have physical, chemical, and biological consequences for ecosystems."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-3.G",
+              "description": "Describe the effects of thermal pollution on aquatic ecosystems.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-3.G.1",
+                  "description": "Thermal pollution occurs when heat released into the water produces negative effects to the organisms in that ecosystem."
+                },
+                {
+                  "id": "STB-3.G.2",
+                  "description": "Variations in water temperature affect the concentration of dissolved oxygen because warm water does not contain as much oxygen as cold water."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8.7",
+          "name": "Persistent Organic Pollutants (POPs)",
+          "suggested_subskill_codes": [
+            "1.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-3",
+              "description": "Human activities, including the use of resources, have physical, chemical, and biological consequences for ecosystems."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-3.H",
+              "description": "Describe the effect of persistent organic pollutants (POPs) on ecosystems.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-3.H.1",
+                  "description": "Persistent organic pollutants (POPs) do not easily break down in the environment because they are synthetic, carbon-based molecules (such as DDT and PCBs)."
+                },
+                {
+                  "id": "STB-3.H.2",
+                  "description": "Persistent organic pollutants (POPs) can be toxic to organisms because they are soluble in fat, which allows them to accumulate in organisms' fatty tissues."
+                },
+                {
+                  "id": "STB-3.H.3",
+                  "description": "Persistent organic pollutants (POPs) can travel over long distances via wind and water before being redeposited."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8.8",
+          "name": "Bioaccumulation and Biomagnification",
+          "suggested_subskill_codes": [
+            "4.A"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-3",
+              "description": "Human activities, including the use of resources, have physical, chemical, and biological consequences for ecosystems."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-3.I",
+              "description": "Describe bioaccumulation and biomagnification.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-3.I.1",
+                  "description": "Bioaccumulation is the selective absorption and concentration of elements or compounds by cells in a living organism, most commonly fat-soluble compounds."
+                },
+                {
+                  "id": "STB-3.I.2",
+                  "description": "Biomagnification is the increase in concentration of substances per unit of body tissue that occurs in successively higher trophic levels of a food chain or in a food web."
+                }
+              ]
+            },
+            {
+              "id": "STB-3.J",
+              "description": "Describe the effects of bioaccumulation and biomagnification.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-3.J.1",
+                  "description": "Some effects that can occur in an ecosystem when a persistent substance is biomagnified in a food chain include eggshell thinning and developmental deformities in top carnivores of the higher trophic levels."
+                },
+                {
+                  "id": "STB-3.J.2",
+                  "description": "Humans also experience harmful effects from biomagnification, including issues with the reproductive, nervous, and circulatory systems."
+                },
+                {
+                  "id": "STB-3.J.3",
+                  "description": "DDT, mercury, and PCBs are substances that bioaccumulate and have significant environmental impacts."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8.9",
+          "name": "Solid Waste Disposal",
+          "suggested_subskill_codes": [
+            "7.D"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-3",
+              "description": "Human activities, including the use of resources, have physical, chemical, and biological consequences for ecosystems."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-3.K",
+              "description": "Describe solid waste disposal methods.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-3.K.1",
+                  "description": "Solid waste is any discarded material that is not a liquid or gas. It is generated in domestic, industrial, business, and agricultural sectors."
+                },
+                {
+                  "id": "STB-3.K.2",
+                  "description": "Solid waste is most often disposed of in landfills. Landfills can contaminate groundwater and release harmful gases."
+                },
+                {
+                  "id": "STB-3.K.3",
+                  "description": "Electronic waste, or e-waste, is composed of discarded electronic devices including televisions, cell phones, and computers."
+                },
+                {
+                  "id": "STB-3.K.4",
+                  "description": "A sanitary municipal landfill consists of a bottom liner (plastic or clay), a storm water collection system, a leachate collection system, a cap, and a methane collection system."
+                }
+              ]
+            },
+            {
+              "id": "STB-3.L",
+              "description": "Describe the effects of solid waste disposal methods.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-3.L.1",
+                  "description": "Factors in landfill decomposition include the composition of the trash and conditions needed for microbial decomposition of the waste."
+                },
+                {
+                  "id": "STB-3.L.2",
+                  "description": "Solid waste can also be disposed of through incineration, where waste is burned at high temperatures. This method significantly reduces the volume of solid waste but releases air pollutants."
+                },
+                {
+                  "id": "STB-3.L.3",
+                  "description": "Some items are not accepted in sanitary landfills and may be disposed of illegally, leading to environmental problems. One example is used rubber tires, which when left in piles can become breeding grounds for mosquitoes that can spread disease."
+                },
+                {
+                  "id": "STB-3.L.4",
+                  "description": "Some countries dispose of their waste by dumping it in the ocean. This practice, along with other sources of plastic, has led to large floating islands of trash in the oceans. Additionally, wildlife can become entangled in the waste, as well as ingest it."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8.10",
+          "name": "Waste Reduction Methods",
+          "suggested_subskill_codes": [
+            "6.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-3",
+              "description": "Human activities, including the use of resources, have physical, chemical, and biological consequences for ecosystems."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-3.M",
+              "description": "Describe changes to current practices that could reduce the amount of generated waste and their associated benefits and drawbacks.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-3.M.1",
+                  "description": "Recycling is a process by which certain solid waste materials are processed and converted into new products."
+                },
+                {
+                  "id": "STB-3.M.2",
+                  "description": "Recycling is one way to reduce the current global demand on minerals, but this process is energy-intensive and can be costly."
+                },
+                {
+                  "id": "STB-3.M.3",
+                  "description": "Composting is the process of organic matter such as food scraps, paper, and yard waste decomposing. The product of this decomposition can be used as fertilizer. Drawbacks to composting include odor and rodents."
+                },
+                {
+                  "id": "STB-3.M.4",
+                  "description": "E-waste can be reduced by recycling and reuse. E-wastes may contain hazardous chemicals, including heavy metals such as lead and mercury, which can leach from landfills into groundwater if they are not disposed of properly."
+                },
+                {
+                  "id": "STB-3.M.5",
+                  "description": "Landfill mitigation strategies range from burning waste for energy to restoring habitat on former landfills for use as parks."
+                },
+                {
+                  "id": "STB-3.M.6",
+                  "description": "The combustion of gases produced from decomposition of organic material in landfills can be used to turn turbines and generate electricity. This process reduces landfill volume."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8.11",
+          "name": "Sewage Treatment",
+          "suggested_subskill_codes": [
+            "2.A"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-3",
+              "description": "Human activities, including the use of resources, have physical, chemical, and biological consequences for ecosystems."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-3.N",
+              "description": "Describe best practices in sewage treatment.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-3.N.1",
+                  "description": "Primary treatment of sewage is the physical removal of large objects, often through the use of screens and grates, followed by the settling of solid waste in the bottom of a tank."
+                },
+                {
+                  "id": "STB-3.N.2",
+                  "description": "Secondary treatment is a biological process in which bacteria break down organic matter into carbon dioxide and inorganic sludge, which settles in the bottom of a tank. The tank is aerated to increase the rate at which the bacteria break down the organic matter."
+                },
+                {
+                  "id": "STB-3.N.3",
+                  "description": "Tertiary treatment is the use of ecological or chemical processes to remove any pollutants left in the water after primary and secondary treatment."
+                },
+                {
+                  "id": "STB-3.N.4",
+                  "description": "Prior to discharge, the treated water is exposed to one or more disinfectants (usually, chlorine, ozone, or UV light) to kill bacteria."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8.12",
+          "name": "Lethal Dose 50% (LD50)",
+          "suggested_subskill_codes": [
+            "6.A"
+          ],
+          "big_ideas": [
+            {
+              "id": "EIN-3",
+              "description": "Pollutants can have both direct and indirect impacts on the health of organisms, including humans."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "EIN-3.A",
+              "description": "Define lethal dose 50% (LD50).",
+              "essential_knowledge": [
+                {
+                  "id": "EIN-3.A.1",
+                  "description": "Lethal dose 50% (LD50) is the dose of a chemical that is lethal to 50% of the population of a particular species."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8.13",
+          "name": "Dose Response Curve",
+          "suggested_subskill_codes": [
+            "5.E"
+          ],
+          "big_ideas": [
+            {
+              "id": "EIN-3",
+              "description": "Pollutants can have both direct and indirect impacts on the health of organisms, including humans."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "EIN-3.B",
+              "description": "Evaluate dose response curves.",
+              "essential_knowledge": [
+                {
+                  "id": "EIN-3.B.1",
+                  "description": "A dose response curve describes the effect on an organism or mortality rate in a population based on the dose of a particular toxin or drug."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8.14",
+          "name": "Pollution and Human Health",
+          "suggested_subskill_codes": [
+            "4.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "EIN-3",
+              "description": "Pollutants can have both direct and indirect impacts on the health of organisms, including humans."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "EIN-3.C",
+              "description": "Identify sources of human health issues that are linked to pollution.",
+              "essential_knowledge": [
+                {
+                  "id": "EIN-3.C.1",
+                  "description": "It can be difficult to establish a cause and effect between pollutants and human health issues because humans experience exposure to a variety of chemicals and pollutants."
+                },
+                {
+                  "id": "EIN-3.C.2",
+                  "description": "Dysentery is caused by untreated sewage in streams and rivers."
+                },
+                {
+                  "id": "EIN-3.C.3",
+                  "description": "Mesothelioma is a type of cancer caused mainly by exposure to asbestos."
+                },
+                {
+                  "id": "EIN-3.C.4",
+                  "description": "Respiratory problems and overall lung function can be impacted by elevated levels of tropospheric ozone."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8.15",
+          "name": "Pathogens and Infectious Diseases",
+          "suggested_subskill_codes": [
+            "2.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "EIN-3",
+              "description": "Pollutants can have both direct and indirect impacts on the health of organisms, including humans."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "EIN-3.D",
+              "description": "Explain human pathogens and their cycling through the environment.",
+              "essential_knowledge": [
+                {
+                  "id": "EIN-3.D.1",
+                  "description": "Pathogens adapt to take advantage of new opportunities to infect and spread through human populations."
+                },
+                {
+                  "id": "EIN-3.D.2",
+                  "description": "Specific pathogens can occur in many environments regardless of the appearance of sanitary conditions."
+                },
+                {
+                  "id": "EIN-3.D.3",
+                  "description": "As equatorial-type climate zones spread north and south in to what are currently subtropical and temperate climate zones, pathogens, infectious diseases, and any associated vectors are spreading into these areas where the disease has not previously been known to occur."
+                },
+                {
+                  "id": "EIN-3.D.4",
+                  "description": "Poverty-stricken, low-income areas often lack sanitary waste disposal and have contaminated drinking water supplies, leading to havens and opportunities for the spread of infectious diseases."
+                },
+                {
+                  "id": "EIN-3.D.5",
+                  "description": "Plague is a disease carried by organisms infected with the plague bacteria. It is transferred to humans via the bite of an infected organism or through contact with contaminated fluids or tissues."
+                },
+                {
+                  "id": "EIN-3.D.6",
+                  "description": "Tuberculosis is a bacterial infection that typically attacks the lungs. It is spread by breathing in the bacteria from the bodily fluids of an infected person."
+                },
+                {
+                  "id": "EIN-3.D.7",
+                  "description": "Malaria is a parasitic disease caused by bites from infected mosquitoes. It is most often found in sub-Saharan Africa."
+                },
+                {
+                  "id": "EIN-3.D.8",
+                  "description": "West Nile virus is transmitted to humans via bites from infected mosquitoes."
+                },
+                {
+                  "id": "EIN-3.D.9",
+                  "description": "Severe acute respiratory syndrome (SARS) is a form of pneumonia. It is transferred by inhaling or touching infected fluids."
+                },
+                {
+                  "id": "EIN-3.D.10",
+                  "description": "Middle East Respiratory Syndrome (MERS) is a viral respiratory illness that is transferred from animals to humans."
+                },
+                {
+                  "id": "EIN-3.D.11",
+                  "description": "Zika is a virus caused by bites from infected mosquitoes. It can be transmitted through sexual contact."
+                },
+                {
+                  "id": "EIN-3.D.12",
+                  "description": "Cholera is a bacterial disease that is contracted from infected water."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Global Change",
+      "developing_understanding": "A central aspect of environmental science is to understand the global impact of local and regional human activities. Humans can mitigate their impact through sustainable use of resources. Human activities can cause ozone depletion in the stratosphere and increases in the greenhouse gases in the atmosphere. Increases in greenhouse gases can cause human health and environmental problems. These environmental problems include global climate change, ocean warming, and endangered species. Overall, this course provides an opportunity to examine the interrelationships among the natural world and challenges students to evaluate and propose solutions to a variety of environmental problems.",
+      "building_practices": "In this final unit, the goal is for students to describe and explain global changes in the environment, the causes of these changes, and their consequences. Students can build on their skills from previous units, where they described and evaluated solutions, to propose their own solutions as they learn about problems caused by global changes in the environment. They can practice using data as evidence to support their proposed solution or legislation. Students can also explain how the solution or legislation solves the problem in question.",
+      "preparing_for_exam": "On the AP Exam, students often struggle with discussing strategies that would prevent extinction. Students are able to identify a strategy, but they are not able to explain how the strategy could be implemented to prevent extinction. Students incorrectly imply that small populations are threatened populations. To combat this, teachers can provide opportunities for students to read multiple sources that allow them to propose realistic solutions that would prevent the extinction of certain species. Students may benefit from opportunities to explain the advantages, disadvantages, or unintended consequences of efforts to prevent extinction. Students also confuse the terms global climate change and ozone depletion. Teachers can provide multiple opportunities to practice using scientific vocabulary in the proper context in verbal and written explanations of environmental concepts. Diagrams and models that illustrate global climate change can also be helpful. Emphasis can be placed on the effects of global climate change with visual representations of changes over time. Students can then explain how the visual representation illustrates an environmental science concept or process.",
+      "topics": [
+        {
+          "id": "9.1",
+          "name": "Stratospheric Ozone Depletion",
+          "suggested_subskill_codes": [
+            "1.A"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-4",
+              "description": "Local and regional human activities can have impacts at the global level."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-4.A",
+              "description": "Explain the importance of stratospheric ozone to life on Earth.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-4.A.1",
+                  "description": "The stratospheric ozone layer is important to the evolution of life on Earth and the continued health and survival of life on Earth."
+                },
+                {
+                  "id": "STB-4.A.2",
+                  "description": "Stratospheric ozone depletion is caused by anthropogenic factors, such as chlorofluorocarbons (CFCs), and natural factors, such as the melting of ice crystals in the atmosphere at the beginning of the Antarctic spring."
+                },
+                {
+                  "id": "STB-4.A.3",
+                  "description": "A decrease in stratospheric ozone increases the UV rays that reach the Earth's surface. Exposure to UV rays can lead to skin cancer and cataracts in humans."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "9.2",
+          "name": "Reducing Ozone Depletion",
+          "suggested_subskill_codes": [
+            "7.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-4",
+              "description": "Local and regional human activities can have impacts at the global level."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-4.B",
+              "description": "Describe chemicals used to substitute for chlorofluorocarbons (CFCs).",
+              "essential_knowledge": [
+                {
+                  "id": "STB-4.B.1",
+                  "description": "Ozone depletion can be mitigated by replacing ozone-depleting chemicals with substitutes that do not deplete the ozone layer. Hydrofluorocarbons (HFCs) are one such replacement, but some are strong greenhouse gases."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "9.3",
+          "name": "The Greenhouse Effect",
+          "suggested_subskill_codes": [
+            "1.B"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-4",
+              "description": "Local and regional human activities can have impacts at the global level."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-4.C",
+              "description": "Identify the greenhouse gases.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-4.C.1",
+                  "description": "The principal greenhouse gases are carbon dioxide, methane, water vapor, nitrous oxide, and chlorofluorocarbons (CFCs)."
+                },
+                {
+                  "id": "STB-4.C.2",
+                  "description": "While water vapor is a greenhouse gas, it doesn't contribute significantly to global climate change because it has a short residence time in the atmosphere."
+                },
+                {
+                  "id": "STB-4.C.3",
+                  "description": "The greenhouse effect results in the surface temperature necessary for life on Earth to exist."
+                }
+              ]
+            },
+            {
+              "id": "STB-4.D",
+              "description": "Identify the sources and potency of the greenhouse gases.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-4.D.1",
+                  "description": "Carbon dioxide, which has a global warming potential (GWP) of 1, is used as a reference point for the comparison of different greenhouse gases and their impacts on global climate change. Chlorofluorocarbons (CFCs) have the highest GWP, followed by nitrous oxide, then methane."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "9.4",
+          "name": "Increases in the Greenhouse Gases",
+          "suggested_subskill_codes": [
+            "2.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-4",
+              "description": "Local and regional human activities can have impacts at the global level."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-4.E",
+              "description": "Identify the threats to human health and the environment posed by an increase in greenhouse gases.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-4.E.1",
+                  "description": "Global climate change, caused by excess greenhouse gases in the atmosphere, can lead to a variety of environmental problems including rising sea levels resulting from melting ice sheets and ocean water expansion, and disease vectors spreading from the tropics toward the poles. These problems can lead to changes in population dynamics and population movements in response."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "9.5",
+          "name": "Global Climate Change",
+          "suggested_subskill_codes": [
+            "5.D"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-4",
+              "description": "Local and regional human activities can have impacts at the global level."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-4.F",
+              "description": "Explain how changes in climate, both short- and long-term, impact ecosystems.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-4.F.1",
+                  "description": "The Earth has undergone climate change throughout geologic time, with major shifts in global temperatures causing periods of warming and cooling as recorded with CO₂ data and ice cores."
+                },
+                {
+                  "id": "STB-4.F.2",
+                  "description": "Effects of climate change include rising temperatures, melting permafrost and sea ice, rising sea levels, and displacement of coastal populations."
+                },
+                {
+                  "id": "STB-4.F.3",
+                  "description": "Marine ecosystems are affected by changes in sea level, some positively, such as in newly created habitats on now-flooded continental shelves, and some negatively, such as deeper communities that may no longer be in the photic zone of seawater."
+                },
+                {
+                  "id": "STB-4.F.4",
+                  "description": "Winds generated by atmospheric circulation help transport heat throughout the Earth. Climate change may change circulation patterns, as temperature changes may impact Hadley cells and the jet stream."
+                },
+                {
+                  "id": "STB-4.F.5",
+                  "description": "Oceanic currents, or the ocean conveyor belt, carry heat throughout the world. When these currents change, it can have a big impact on global climate, especially in coastal regions."
+                },
+                {
+                  "id": "STB-4.F.6",
+                  "description": "Climate change can affect soil through changes in temperature and rainfall, which can impact soil's viability and potentially increase erosion."
+                },
+                {
+                  "id": "STB-4.F.7",
+                  "description": "Earth's polar regions are showing faster response times to global climate change because ice and snow in these regions reflect the most energy back out to space, leading to a positive feedback loop."
+                },
+                {
+                  "id": "STB-4.F.8",
+                  "description": "As the Earth warms, this ice and snow melts, meaning less solar energy is radiated back into space and instead is absorbed by the Earth's surface. This in turn causes more warming of the polar regions."
+                },
+                {
+                  "id": "STB-4.F.9",
+                  "description": "Global climate change response time in the Arctic is due to positive feedback loops involving melting sea ice and thawing tundra, and the subsequent release of greenhouse gases like methane."
+                },
+                {
+                  "id": "STB-4.F.10",
+                  "description": "One consequence of the loss of ice and snow in polar regions is the effect on species that depend on the ice for habitat and food."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "9.6",
+          "name": "Ocean Warming",
+          "suggested_subskill_codes": [
+            "7.A"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-4",
+              "description": "Local and regional human activities can have impacts at the global level."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-4.G",
+              "description": "Explain the causes and effects of ocean warming.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-4.G.1",
+                  "description": "Ocean warming is caused by the increase in greenhouse gases in the atmosphere."
+                },
+                {
+                  "id": "STB-4.G.2",
+                  "description": "Ocean warming can affect marine species in a variety of ways, including loss of habitat, and metabolic and reproductive changes."
+                },
+                {
+                  "id": "STB-4.G.3",
+                  "description": "Ocean warming is causing coral bleaching, which occurs when the loss of algae within corals cause the corals to bleach white. Some corals recover and some die."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "9.7",
+          "name": "Ocean Acidification",
+          "suggested_subskill_codes": [
+            "1.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "STB-4",
+              "description": "Local and regional human activities can have impacts at the global level."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "STB-4.H",
+              "description": "Explain the causes and effects of ocean acidification.",
+              "essential_knowledge": [
+                {
+                  "id": "STB-4.H.1",
+                  "description": "Ocean acidification is the decrease in pH of the oceans, primarily due to increased CO₂ concentrations in the atmosphere, and can be expressed as chemical equations."
+                },
+                {
+                  "id": "STB-4.H.2",
+                  "description": "As more CO₂ is released into the atmosphere, the oceans, which absorb a large part of that CO₂, become more acidic."
+                },
+                {
+                  "id": "STB-4.H.3",
+                  "description": "Anthropogenic activities that contribute to ocean acidification are those that lead to increased CO₂ concentrations in the atmosphere: burning of fossil fuels, vehicle emissions, and deforestation."
+                },
+                {
+                  "id": "STB-4.H.4",
+                  "description": "Ocean acidification damages coral because acidification makes it difficult for them to form shells, due to the loss of calcium carbonate."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "9.8",
+          "name": "Invasive Species",
+          "suggested_subskill_codes": [
+            "7.E"
+          ],
+          "big_ideas": [
+            {
+              "id": "EIN-4",
+              "description": "The health of a species is closely tied to its ecosystem, and minor environmental changes can have a large impact."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "EIN-4.A",
+              "description": "Explain the environmental problems associated with invasive species and strategies to control them.",
+              "essential_knowledge": [
+                {
+                  "id": "EIN-4.A.1",
+                  "description": "Invasive species are species that can live, and sometimes thrive, outside of their normal habitat. Invasive species can sometimes be beneficial, but they are considered invasive when they threaten native species."
+                },
+                {
+                  "id": "EIN-4.A.2",
+                  "description": "Invasive species are often generalist, r-selected species and therefore may outcompete native species for resources."
+                },
+                {
+                  "id": "EIN-4.A.3",
+                  "description": "Invasive species can be controlled through a variety of human interventions."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "9.9",
+          "name": "Endangered Species",
+          "suggested_subskill_codes": [
+            "7.D"
+          ],
+          "big_ideas": [
+            {
+              "id": "EIN-4",
+              "description": "The health of a species is closely tied to its ecosystem, and minor environmental changes can have a large impact."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "EIN-4.B",
+              "description": "Explain how species become endangered and strategies to combat the problem.",
+              "essential_knowledge": [
+                {
+                  "id": "EIN-4.B.1",
+                  "description": "A variety of factors can lead to a species becoming threatened with extinction, such as being extensively hunted, having limited diet, being outcompeted by invasive species, or having specific and limited habitat requirements."
+                },
+                {
+                  "id": "EIN-4.B.2",
+                  "description": "Not all species will be in danger of extinction when exposed to the same changes in their ecosystem. Species that are able to adapt to changes in their environment or that are able to move to a new environment are less likely to face extinction."
+                },
+                {
+                  "id": "EIN-4.B.3",
+                  "description": "Selective pressures are any factors that change the behaviors and fitness of organisms within an environment."
+                },
+                {
+                  "id": "EIN-4.B.4",
+                  "description": "Species in a given ecosystem compete for resources like territory, food, mates, and habitat, and this competition may lead to endangerment or extinction."
+                },
+                {
+                  "id": "EIN-4.B.5",
+                  "description": "Strategies to protect animal populations include criminalizing poaching, protecting animal habitats, and legislation."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "9.10",
+          "name": "Human Impacts on Biodiversity",
+          "suggested_subskill_codes": [
+            "7.C"
+          ],
+          "big_ideas": [
+            {
+              "id": "EIN-4",
+              "description": "The health of a species is closely tied to its ecosystem, and minor environmental changes can have a large impact."
+            }
+          ],
+          "learning_objectives": [
+            {
+              "id": "EIN-4.C",
+              "description": "Explain how human activities affect biodiversity and strategies to combat the problem.",
+              "essential_knowledge": [
+                {
+                  "id": "EIN-4.C.1",
+                  "description": "HIPPCO (habitat destruction, invasive species, population growth, pollution, climate change, and over exploitation) describes the main factors leading to a decrease in biodiversity."
+                },
+                {
+                  "id": "EIN-4.C.2",
+                  "description": "Habitat fragmentation occurs when large habitats are broken into smaller, isolated areas. Causes of habitat fragmentation include the construction of roads and pipelines, clearing for agriculture or development, and logging."
+                },
+                {
+                  "id": "EIN-4.C.3",
+                  "description": "The scale of habitat fragmentation that has an adverse effect on the inhabitants of a given ecosystem will vary from species to species within that ecosystem."
+                },
+                {
+                  "id": "EIN-4.C.4",
+                  "description": "Global climate change can cause habitat loss via changes in temperature, precipitation, and sea level rise."
+                },
+                {
+                  "id": "EIN-4.C.5",
+                  "description": "Some organisms have been somewhat or completely domesticated and are now managed for economic returns, such as honeybee colonies and domestic livestock. This domestication can have a negative impact on the biodiversity of that organism."
+                },
+                {
+                  "id": "EIN-4.C.6",
+                  "description": "Some ways humans can mitigate the impact of loss of biodiversity include creating protected areas, use of habitat corridors, promoting sustainable land use practices, and restoring lost habitats."
+                }
               ]
             }
           ]
@@ -32,6 +3902,61 @@
       ]
     }
   ],
-  "exam_sections": [],
-  "task_verbs": []
+  "exam_sections": [
+    {
+      "section": "I",
+      "question_type": "Multiple Choice",
+      "Number of Questions": "80",
+      "exam_weighting": "60%",
+      "timing": "90 minutes",
+      "descriptions": []
+    },
+    {
+      "section": "II",
+      "question_type": "Free Response",
+      "Number of Questions": "3",
+      "exam_weighting": "40%",
+      "timing": "70 minutes",
+      "descriptions": [
+        "Question 1: Design an investigation (10 points)",
+        "Question 2: Analyze an environmental problem and propose a solution (10 points)",
+        "Question 3: Analyze an environmental problem and propose a solution doing calculations (10 points)",
+        "The exams assess content from the four big ideas of the course.",
+        "Big Idea 1: Energy Transfer",
+        "Big Idea 2: Interactions between Earth systems",
+        "Big Idea 3: Interactions between different species and the environment",
+        "Big Idea 4: Sustainability"
+      ]
+    }
+  ],
+  "task_verbs": [
+    {
+      "verb": "Calculate:",
+      "description": "Perform mathematical steps to arrive at a final answer, including algebraic expressions, properly substituted numbers, and correct labeling of units. Showing work is required."
+    },
+    {
+      "verb": "Describe:",
+      "description": "Provide the relevant characteristics of a specified topic."
+    },
+    {
+      "verb": "Explain:",
+      "description": "Provide information about how or why a relationship, process, pattern, position, situation, or outcome occurs, using evidence and/or reasoning to support or qualify a claim. Explain \"how\" typically requires analyzing the relationship, process, pattern, position, situation, or outcome; whereas, explain \"why\" typically requires analysis of motivations or reasons for the relationship, process, pattern, position, situation, or outcome. Also phrased as \"give one reason.\""
+    },
+    {
+      "verb": "Identify:",
+      "description": "Indicate or provide information about a specified topic, without elaboration or explanation."
+    },
+    {
+      "verb": "Justify:",
+      "description": "Provide evidence to support, qualify, or defend a claim and/or provide reasoning to explain how that evidence supports or qualifies the claim."
+    },
+    {
+      "verb": "Make a claim:",
+      "description": "Make an assertion that is based on evidence or knowledge."
+    },
+    {
+      "verb": "Propose a solution:",
+      "description": "Provide a proposed solution to a problem based on evidence or knowledge."
+    }
+  ]
 }

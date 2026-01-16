@@ -112,6 +112,25 @@
         gap: 1rem;
       }
 
+      .generated-image {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: block;
+        margin: 0 auto;
+      }
+
+      .stimulus-error {
+        margin: 15px 0;
+        padding: 10px;
+        background-color: #fff3cd;
+        border: 1px solid #ffc107;
+        border-radius: 4px;
+        font-style: italic;
+      }
+
       @media print {
         .question-card {
           border: none;
@@ -146,16 +165,27 @@
 
         {% if q.stimulus %}
         <div class="diagram">
-          {% if q.stimulus.type == "svg" %} {{ q.stimulus.content | safe }} {%
-          elif q.stimulus.type == "image" %}
+          {% if q.stimulus.type == "image" %}
+          {% if q.stimulus.base64 %}
           <img
-            src="{{ q.stimulus.content }}"
-            alt="{{ q.stimulus.alt or 'Related diagram' }}"
-            style="max-width: 100%; height: auto"
+            src="data:image/jpeg;base64,{{ q.stimulus.base64 }}"
+            alt="{{ q.stimulus.alt_text }}"
+            class="generated-image"
           />
-
-          {% elif q.stimulus.type == "table" %} {{ q.stimulus.content | safe }}
+          {% elif q.stimulus.file_path %}
+          <img
+            src="{{ q.stimulus.file_path }}"
+            alt="{{ q.stimulus.alt_text }}"
+            class="generated-image"
+          />
           {% endif %}
+          {% endif %}
+        </div>
+        {% endif %}
+        
+        {% if q.stimulus and q.stimulus.error %}
+        <div class="stimulus-error">
+          <p><em>Visual stimulus unavailable: {{ q.stimulus.error }}</em></p>
         </div>
         {% endif %}
 

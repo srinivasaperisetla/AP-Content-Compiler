@@ -1,0 +1,2757 @@
+{
+  "name": "Ap Chemistry",
+  "skills": [
+    {
+      "skill_name": "Models and Representations",
+      "skill_description": "Describe models and representations, including across scales.",
+      "subskills": [
+        {
+          "subskill_name": "1.A",
+          "subskill_description": "Describe the components of and quantitative information from models and representations that illustrate particulate-level properties only."
+        },
+        {
+          "subskill_name": "1.B",
+          "subskill_description": "Describe the components of and quantitative information from models and representations that illustrate both particulate-level and macroscopic-level properties."
+        }
+      ]
+    },
+    {
+      "skill_name": "Question and Method",
+      "skill_description": "Determine scientific questions and methods.",
+      "subskills": [
+        {
+          "subskill_name": "2.A",
+          "subskill_description": "Identify a testable scientific question based on an observation, data, or a model."
+        },
+        {
+          "subskill_name": "2.B",
+          "subskill_description": "Formulate a hypothesis or predict the results of an experiment."
+        },
+        {
+          "subskill_name": "2.0",
+          "subskill_description": "Identify experimental procedures that are aligned to a scientific question (which may include a sketch of a lab setup)."
+        },
+        {
+          "subskill_name": "2.D",
+          "subskill_description": "Make observations or collect data from representations of laboratory setups or results, while attending to precision where appropriate."
+        },
+        {
+          "subskill_name": "2.",
+          "subskill_description": "Identify or describe potential sources of experimental error."
+        },
+        {
+          "subskill_name": "2.F",
+          "subskill_description": "Explain how modifications to an experimental procedure will alter results."
+        }
+      ]
+    },
+    {
+      "skill_name": "Representing Data and Phenoтепа",
+      "skill_description": "Create representations or models of chemical phenomena.",
+      "subskills": [
+        {
+          "subskill_name": "3.A",
+          "subskill_description": "Represent chemical phenomena using appropriate graphing techniques, including correct scale and units."
+        },
+        {
+          "subskill_name": "3.B",
+          "subskill_description": "Represent chemical substances or phenomena with appropriate diagrams or models (e.g., electron configuration)."
+        },
+        {
+          "subskill_name": "3.C",
+          "subskill_description": "Represent visually the relationship between the structures and interactions across multiple levels or scales (e.g., particulate to macroscopic)."
+        }
+      ]
+    },
+    {
+      "skill_name": "Model Analysis",
+      "skill_description": "Analyze and interpret models and representations on a single scale or across multiple scales.",
+      "subskills": [
+        {
+          "subskill_name": "4.A",
+          "subskill_description": "Predict and/or explain chemical properties or phenomena (e.g., of atoms or molecules) using given chemical theories, models, and representations."
+        },
+        {
+          "subskill_name": "4.B",
+          "subskill_description": "Explain whether a model is consistent with chemical theories."
+        },
+        {
+          "subskill_name": "4.C",
+          "subskill_description": "Explain the connection between particulate-level and macroscopic properties of a substance using models and representations."
+        },
+        {
+          "subskill_name": "4.D",
+          "subskill_description": "Explain the degree to which a model or representation describes the connection between particulate-level properties and macroscopic properties."
+        }
+      ]
+    },
+    {
+      "skill_name": "Mathematical Routines",
+      "skill_description": "Solve problems using mathematical relationships.",
+      "subskills": [
+        {
+          "subskill_name": "5.A",
+          "subskill_description": "Identify quantities needed to solve a problem from given information (e.g., text, mathematical expressions, graphs, or tables)."
+        },
+        {
+          "subskill_name": "5.B",
+          "subskill_description": "Identify an appropriate theory, definition, or mathematical relationship to solve a problem."
+        },
+        {
+          "subskill_name": "5.C",
+          "subskill_description": "Explain the relationship between variables within an equation when one variable changes."
+        },
+        {
+          "subskill_name": "5.D",
+          "subskill_description": "Identify information presented graphically to solve a problem."
+        },
+        {
+          "subskill_name": "5.E",
+          "subskill_description": "Determine a balanced chemical equation for a given chemical phenomenon."
+        },
+        {
+          "subskill_name": "5.F",
+          "subskill_description": "Calculate, estimate, or predict an unknown quantity from known quantities by selecting and following a logical computational pathway and attending to precision (e.g., performing dimensional analysis and attending to significant figures)."
+        }
+      ]
+    },
+    {
+      "skill_name": "Argumentation",
+      "skill_description": "Develop an explanation or scientific argument.",
+      "subskills": [
+        {
+          "subskill_name": "6.A",
+          "subskill_description": "Make a scientific claim."
+        },
+        {
+          "subskill_name": "6.B",
+          "subskill_description": "Support a claim with evidence from experimental data."
+        },
+        {
+          "subskill_name": "6.C",
+          "subskill_description": "Support a claim with evidence from representations or models at the particulate level, such as the structure of atoms and/or molecules."
+        },
+        {
+          "subskill_name": "6.D",
+          "subskill_description": "Provide reasoning to justify a claim using chemical principles or laws, or using mathematical justification."
+        },
+        {
+          "subskill_name": "6.E",
+          "subskill_description": "Provide reasoning to justify a claim using connections between particulate and macroscopic scales or levels."
+        },
+        {
+          "subskill_name": "6.F",
+          "subskill_description": "Explain the connection between experimental results and chemical concepts, processes, or theories."
+        },
+        {
+          "subskill_name": "6.G",
+          "subskill_description": "Explain how potential sources of experimental error may affect the experimental results."
+        }
+      ]
+    }
+  ],
+  "big_ideas": [],
+  "units": [
+    {
+      "id": "1",
+      "name": "Atomic Structure and Properties",
+      "developing_understanding": "This first unit sets the foundation for the course by examining the atomic theory of matter, the fundamental premise of chemistry. Although atoms represent the foundational level of chemistry, observations of chemical properties are made on collections of atoms. Macroscopic systems involve such large numbers of particles that they require the units of moles to translate between this and the particulate scale. The organization of the periodic table reflects the periodicity of element properties as a function of atomic number. The electronic structure of an atom can be described by an electron configuration that provides a method for describing the distribution of electrons in an atom or ion. In subsequent units, students will apply their understanding of atomic structure to models and representations of chemical phenomena to explain changes and interactions of chemical substances.",
+      "building_practices": "In Unit 1, students will practice identifying components of commonly used models and representations to illustrate chemical phenomena. They will construct models and representations and explain whether they are consistent with chemical theories. Students will also practice translating between data and various representations (e.g., photoelectron spectroscopy data and electron configurations). Students should then be able to use representations (e.g., PES graphs, electron configurations, periodic table, drawings) to explain atomic structure, which is the foundation for all subsequent units. Many of the most useful concepts in chemistry relate to patterns in the behavior of chemical systems, such as periodic trends in atomic and molecular properties. In this unit and all subsequent units, students should learn to analyze data presented graphically to identify patterns and relationships. Once a pattern is identified, students should be able to examine evidence to determine if it supports the pattern or hypothesis pertaining to a testable question.",
+      "preparing_for_exam": "On the AP Exam, students must be able to justify claims with evidence. This starts when students can identify the evidence needed to solve a problem or support a claim and then connect that evidence to known chemical theories. However, many students consistently demonstrate difficulty with this skill. For example, while students can memorize periodic trends, they struggle to explain the electrostatic interactions within an atom that produces period trends as well as exceptions to these trends. Further, students often have difficulty connecting periodic trends to the shell model, Coulomb's law, and elements of quantum theory. To combat these challenges, teachers can ensure that students have a strong foundation in identifying mathematical relationships or patterns from graphical or tabular information and that they can explain how those patterns are consistent with chemical theories and models.",
+      "topics": [
+        {
+          "id": "1.1",
+          "name": "Moles and Molar Mass",
+          "suggested_subskill_codes": [
+            "5.B"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "1.1.A",
+              "description": "Calculate quantities of a substance or its relative number of particles using dimensional analysis and the mole concept.",
+              "essential_knowledge": [
+                {
+                  "id": "1.1.A.1",
+                  "description": "One cannot count particles directly while performing laboratory work. Thus, there must be a connection between the masses of substances reacting and the actual number of particles undergoing chemical changes."
+                },
+                {
+                  "id": "1.1.A.2",
+                  "description": "Avogadro's number (N_A = 6.022 × 10²³ mol⁻¹) provides the connection between the number of moles in a pure sample of a substance and the number of constituent particles (or formula units) of that substance."
+                },
+                {
+                  "id": "1.1.A.3",
+                  "description": "Expressing the mass of an individual atom or molecule in atomic mass units (amu) is useful because the average mass in amu of one particle (atom or molecule) or formula unit of a substance will always be numerically equal to the molar mass of that substance in grams. Thus, there is a quantitative connection between the mass of a substance and the number of particles that the substance contains. EQN: n = m/M"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.2",
+          "name": "Mass Spectra of Elements",
+          "suggested_subskill_codes": [
+            "5.D"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "1.2.A",
+              "description": "Explain the quantitative relationship between the mass spectrum of an element and the masses of the element's isotopes.",
+              "essential_knowledge": [
+                {
+                  "id": "1.2.A.1",
+                  "description": "The mass spectrum of a sample containing a single element can be used to determine the identity of the isotopes of that element and the relative abundance of each isotope in nature."
+                },
+                {
+                  "id": "1.2.A.2",
+                  "description": "The average atomic mass of an element can be estimated from the weighted average of the isotopic masses using the mass of each isotope and its relative abundance. Exclusion Statement: Interpreting mass spectra of samples containing multiple elements or peaks arising from species other than singly charged monatomic ions will not be assessed on the AP Exam."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.3",
+          "name": "Elemental Composition of Pure Substances",
+          "suggested_subskill_codes": [
+            "2.A"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "1.3.A",
+              "description": "Explain the quantitative relationship between the elemental composition by mass and the empirical formula of a pure substance.",
+              "essential_knowledge": [
+                {
+                  "id": "1.3.A.1",
+                  "description": "Some pure substances are composed of individual molecules, while others consist of atoms or ions held together in fixed proportions as described by a formula unit."
+                },
+                {
+                  "id": "1.3.A.2",
+                  "description": "According to the law of definite proportions, the ratio of the masses of the constituent elements in any pure sample of that compound is always the same."
+                },
+                {
+                  "id": "1.3.A.3",
+                  "description": "The chemical formula that lists the lowest whole number ratio of atoms of the elements in a compound is the empirical formula."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.4",
+          "name": "Composition of Mixtures",
+          "suggested_subskill_codes": [
+            "5.A"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "1.4.A",
+              "description": "Explain the quantitative relationship between the elemental composition by mass and the composition of substances in a mixture.",
+              "essential_knowledge": [
+                {
+                  "id": "1.4.A.1",
+                  "description": "Pure substances contain atoms, molecules, or formula units of a single type. Mixtures contain atoms, molecules, or formula units of two or more types, whose relative proportions can vary."
+                },
+                {
+                  "id": "1.4.A.2",
+                  "description": "Elemental analysis can be used to determine the relative numbers of atoms in a substance and to determine its purity."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.5",
+          "name": "Atomic Structure and Electron Configuration",
+          "suggested_subskill_codes": [
+            "1.A"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "1.5.A",
+              "description": "Represent the ground-state electron configuration of an atom of an element or its ions using the Aufbau principle.",
+              "essential_knowledge": [
+                {
+                  "id": "1.5.A.1",
+                  "description": "The atom is composed of negatively charged electrons and a positively charged nucleus that is made of protons and neutrons."
+                },
+                {
+                  "id": "1.5.A.2",
+                  "description": "Coulomb's law is used to calculate the force between two charged particles. EQN: F_coulombic ∝ q1q2/r^2"
+                },
+                {
+                  "id": "1.5.A.3",
+                  "description": "In atoms and ions, the electrons can be thought of as being in \"shells (energy levels)\" and \"subshells (sublevels),\" as described by the ground-state electron configuration. Inner electrons are called core electrons, and outer electrons are called valence electrons. The electron configuration is explained by quantum mechanics, as delineated in the Aufbau principle and exemplified in the periodic table of the elements. Exclusion Statement: The assignment of quantum numbers to electrons in subshells of an atom will not be assessed on the AP Exam."
+                },
+                {
+                  "id": "1.5.A.4",
+                  "description": "The relative energy required to remove an electron from different subshells of an atom or ion or from the same subshell in different atoms or ions (ionization energy) can be estimated through a qualitative application of Coulomb's law. This energy is related to the distance from the nucleus and the effective (shield) charge of the nucleus."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.6",
+          "name": "Photoelectron Spectroscopy",
+          "suggested_subskill_codes": [
+            "4.B"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "1.6.A",
+              "description": "Explain the relationship between the photoelectron spectrum of an atom or ion and: i. The ground-state electron configuration of the species. ii. The interactions between the electrons and the nucleus.",
+              "essential_knowledge": [
+                {
+                  "id": "1.6.A.1",
+                  "description": "The energies of the electrons in a given shell can be measured experimentally with photoelectron spectroscopy (PES). The position of each peak in the PES spectrum is related to the energy required to remove an electron from the corresponding subshell, and the relative height of each peak is (ideally) proportional to the number of electrons in that subshell."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.7",
+          "name": "Periodic Trends",
+          "suggested_subskill_codes": [
+            "4.A"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "1.7.A",
+              "description": "Explain the relationship between trends in atomic properties of elements and electronic structure and periodicity.",
+              "essential_knowledge": [
+                {
+                  "id": "1.7.A.1",
+                  "description": "The organization of the periodic table is based on patterns of recurring properties of the elements, which are explained by patterns of ground-state electron configurations and the presence of completely or partially filled shells (and subshells) of electrons in atoms. Exclusion Statement: Writing the electron configuration of elements that are exceptions to the aufbau principle will not be assessed on the AP Exam."
+                },
+                {
+                  "id": "1.7.A.2",
+                  "description": "Trends in atomic properties within the periodic table (periodicity) can be predicted by the position of the element on the periodic table and qualitatively understood using Coulomb's law, the shell model, and the concepts of shielding and effective nuclear charge. These properties include: i. Ionization energy ii. Atomic and ionic radii iii. Electron affinity iv. Electronegativity."
+                },
+                {
+                  "id": "1.7.A.3",
+                  "description": "The periodicity (in 1.7.A.2) is useful to predict/ estimate values of properties in the absence of data."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1.8",
+          "name": "Valence Electrons and Ionic Compounds",
+          "suggested_subskill_codes": [
+            "4.C"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "1.8.A",
+              "description": "Explain the relationship between trends in the reactivity of elements and periodicity.",
+              "essential_knowledge": [
+                {
+                  "id": "1.8.A.1",
+                  "description": "The likelihood that two elements will form a chemical bond is determined by the interactions between the valence electrons and nuclei of elements."
+                },
+                {
+                  "id": "1.8.A.2",
+                  "description": "Elements in the same column of the periodic table tend to form analogous compounds."
+                },
+                {
+                  "id": "1.8.A.3",
+                  "description": "Typical charges of atoms in ionic compounds are governed by the number of valence electrons and predicted by their location on the periodic table."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Compound Structure and Properties",
+      "developing_understanding": "In Unit 2, students apply their knowledge of atomic structure at the particulate level and connect it to the macroscopic properties of a substance. Both the chemical and physical properties of materials can be explained by the structure and arrangement of atoms, ions, or molecules and the forces between them. These forces, called chemical bonds, are distinct from typical intermolecular interactions. Electronegativity can be used to make predictions about the type of bonding present between two atoms. In subsequent units, students will use the periodic table and the atomic properties to predict the type of bonding present between two atoms based on position.",
+      "building_practices": "In this unit, students will learn how to interpret simple graphical representations of changes in potential energy as two atoms approach each other to explain optimal bond length as well as why bonds may or may not occur. Students should also practice constructing representations and models for chemical phenomena (e.g., ionic and metallic solids) and using representations to make claims or predictions. For example, students can use VSEPR theory to draw Lewis structures of molecules and predict their three-dimensional geometry and polarity. Instead of simply connecting chemical theories to phenomena occurring at the atomic level, it is important to provide explanations across scales. For example, teachers can ask students to explain the connection between electronegativity and ionization energy with the type of bond formed and the macroscopic properties of a particular substance. Students should also work with several chemical concepts (Coulomb's law, formal charge, and resonance) to evaluate the accuracy of a model in representing both the particulate-level structure and macroscopic observations. In future units, students will use the practice of constructing and understanding molecular representations to make predictions and claims about interparticle interactions, intermolecular forces, and their connections to macroscopic observations.",
+      "preparing_for_exam": "On the AP Exam, students must be able to construct Lewis structures and make predictions or claims based on them. However, students often struggle to predict the correct molecular shape or bond angle based on VSEPR and the use of formal charge. Mistakes include: using the incorrect number of valence electrons, violating the octet rule, or confusing molecular geometry with bond angles. Teachers can provide students with multiple opportunities to practice drawing Lewis electron-dot diagrams, including resonance structures. Students should also practice predicting and describing molecular shapes, bond angles, and polarities from Lewis structures, and calculating and connecting formal charges in Lewis structures to the predicted structure of a molecule.",
+      "topics": [
+        {
+          "id": "2.1",
+          "name": "Types of Chemical Bonds",
+          "suggested_subskill_codes": [
+            "6.A"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "2.1.A",
+              "description": "Explain the relationship between the type of bonding and the properties of the elements participating in the bond.",
+              "essential_knowledge": [
+                {
+                  "id": "2.1.A.1",
+                  "description": "Electronegativity values for the representative elements increase going from left to right across a period and decrease going down a group. These trends can be understood qualitatively through the electronic structure of the atoms, the shell model, and Coulomb's law."
+                },
+                {
+                  "id": "2.1.A.2",
+                  "description": "Valence electrons shared between atoms of similar electronegativity constitute a nonpolar covalent bond. For example, bonds between carbon and hydrogen are effectively nonpolar even though carbon is slightly more electronegative than hydrogen."
+                },
+                {
+                  "id": "2.1.A.3",
+                  "description": "Valence electrons shared between atoms of unequal electronegativity constitute a polar covalent bond.\\ni. The atom with a higher electronegativity will develop a partial negative charge relative to the other atom in the bond.\\nii. In single bonds, greater differences in electronegativity lead to greater bond dipoles.\\niii. All polar bonds have some ionic character, and the difference between ionic and covalent bonding is not distinct but rather a continuum."
+                },
+                {
+                  "id": "2.1.A.4",
+                  "description": "The difference in electronegativity is not the only factor in determining if a bond should be designated as ionic or covalent. Generally, bonds between a metal and nonmetal are ionic, and bonds between two nonmetals are covalent. Examination of the properties of a compound is the best way to characterize the type of bonding."
+                },
+                {
+                  "id": "2.1.A.5",
+                  "description": "In a metallic solid, the valence electrons from the metal atoms are considered to be delocalized and not associated with any individual atom."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2.2",
+          "name": "Intramolecular Force and Potential Energy",
+          "suggested_subskill_codes": [
+            "3.A"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "2.2.A",
+              "description": "Represent the relationship between potential energy and distance between atoms, based on factors that influence the interaction strength.",
+              "essential_knowledge": [
+                {
+                  "id": "2.2.A.1",
+                  "description": "A graph of potential energy versus the distance between atoms (internuclear distance) is a useful representation for describing the interactions between atoms. Such graphs illustrate both the equilibrium bond length (the separation between atoms at which the potential energy is lowest) and the bond energy (the energy required to separate the atoms)."
+                },
+                {
+                  "id": "2.2.A.2",
+                  "description": "In a covalent bond, the bond length is influenced by both the size of the atom's core and the bond order (i.e., single, double, triple). Bonds with a higher order are shorter and have larger bond energies."
+                },
+                {
+                  "id": "2.2.A.3",
+                  "description": "Coulomb's law can be used to understand the strength of interactions between cations and anions.\\ni. Because the interaction strength is proportional to the charge on each ion, larger charges lead to stronger interactions.\\nii. Because the interaction strength increases as the distance between the centers of the ions (nuclei) decreases, smaller ions lead to stronger interactions."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2.3",
+          "name": "Structure of Ionic Solids",
+          "suggested_subskill_codes": [
+            "4.C"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "2.3.A",
+              "description": "Represent an ionic solid with a particulate model that is consistent with Coulomb's law and the properties of the constituent ions.",
+              "essential_knowledge": [
+                {
+                  "id": "2.3.A.1",
+                  "description": "The cations and anions in an ionic crystal are arranged in a systematic, periodic 3-D array that maximizes the attractive forces among cations and anions while minimizing the repulsive forces.\\n\\nExclusion Statement: Knowledge of specific crystal structures is not essential to an understanding of the learning objective and will not be assessed on the AP Exam."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2.4",
+          "name": "Structure of Metals and Alloys",
+          "suggested_subskill_codes": [
+            "4.C"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "2.4.A",
+              "description": "Represent a metallic solid and/or alloy using a model to show essential characteristics of the structure and interactions present in the substance.",
+              "essential_knowledge": [
+                {
+                  "id": "2.4.A.1",
+                  "description": "Metallic bonding can be represented as an array of positive metal ions surrounded by delocalized valence electrons (i.e., a \"sea of electrons\")."
+                },
+                {
+                  "id": "2.4.A.2",
+                  "description": "Interstitial alloys form between atoms of significantly different radii, where the smaller atoms fill the interstitial spaces between the larger atoms (e.g., with steel in which carbon occupies the interstices in iron)."
+                },
+                {
+                  "id": "2.4.A.3",
+                  "description": "Substitutional alloys form between atoms of comparable radius, where one atom substitutes for the other in the lattice. (e.g., in certain brass alloys, other elements, usually zinc, substitute for copper.)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2.5",
+          "name": "Lewis Diagrams",
+          "suggested_subskill_codes": [
+            "3.B"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "2.5.A",
+              "description": "Represent a molecule with a Lewis diagram.",
+              "essential_knowledge": [
+                {
+                  "id": "2.5.Α.1",
+                  "description": "Lewis diagrams can be constructed according to an established set of principles."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2.6",
+          "name": "Resonance and Formal Charge",
+          "suggested_subskill_codes": [
+            "6.C"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "2.6.A",
+              "description": "Represent a molecule with a Lewis diagram that accounts for resonance between equivalent structures or that uses formal charge to select between nonequivalent structures.",
+              "essential_knowledge": [
+                {
+                  "id": "2.6.A.1",
+                  "description": "In cases where more than one equivalent Lewis structure can be constructed, resonance must be included as a refinement to the Lewis structure. In many such cases, this refinement is needed to provide qualitatively accurate predictions of molecular structure and properties."
+                },
+                {
+                  "id": "2.6.A.2",
+                  "description": "The octet rule and formal charge can be used as criteria for determining which of several possible valid Lewis diagrams provides the best model for predicting molecular structure and properties."
+                },
+                {
+                  "id": "2.6.A.3",
+                  "description": "As with any model, there are limitations to the use of the Lewis structure model, particularly in cases with an odd number of valence electrons."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2.7",
+          "name": "VSEPR and Hybridization",
+          "suggested_subskill_codes": [
+            "6.C"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "2.7.A",
+              "description": "Based on the relationship between Lewis diagrams, VSEPR theory, bond orders, and bond polarities:\\ni. Explain structural properties of molecules.\\nii. Explain electron properties of molecules.",
+              "essential_knowledge": [
+                {
+                  "id": "2.7.A.1",
+                  "description": "VSEPR theory uses the Coulombic repulsion between electrons as a basis for predicting the arrangement of electron pairs around a central atom."
+                },
+                {
+                  "id": "2.7.A.2",
+                  "description": "Both Lewis diagrams and VSEPR theory must be used for predicting electronic and structural properties of many covalently bonded molecules and polyatomic ions, including the following:\\ni. Molecular geometry (linear, trigonal planar, tetrahedral, trigonal pyramidal, bent, trigonal bipyramidal, seesaw, T-shaped, octahedral, square pyramidal, square planar)\\nii. Bond angles\\niii. Relative bond energies based on bond order\\niv. Relative bond lengths (multiple bonds, effects of atomic radius)\\nv. Presence of a dipole moment\\nvi. Hybridization of valence orbitals for atoms within a molecule or polyatomic ion"
+                },
+                {
+                  "id": "2.7.A.3",
+                  "description": "The terms \"hybridization\" and \"hybrid atomic orbital\" are used to describe the arrangement of electrons around a central atom. When the central atom is sp hybridized, its ideal bond angles are 180°; for sp² hybridized atoms the bond angles are 120°; and for sp³ hybridized atoms the bond angles are 109.5°."
+                },
+                {
+                  "id": "",
+                  "description": "Exclusion Statement: An understanding of the derivation and depiction of hybrid orbitals will not be assessed on the AP Exam. The course includes the distinction between sigma and pi bonding, the use of VSEPR to explain the shapes of molecules, and the sp, sp², and sp³ nomenclature."
+                },
+                {
+                  "id": "",
+                  "description": "Exclusion Statement: Hybridization involving d orbitals will not be assessed on the AP Exam. When an atom has more than four pairs of electrons surrounding the central atom, students are only responsible for the shape of the resulting molecule."
+                },
+                {
+                  "id": "2.7.A.4",
+                  "description": "Bond formation is associated with overlap between atomic orbitals. In multiple bonds, such overlap leads to the formation of both sigma and pi bonds. The overlap is stronger in sigma than pi bonds, which is reflected in sigma bonds having greater bond energy than pi bonds. The presence of a pi bond also prevents the rotation of the bond and leads to geometric isomers.\\n\\nExclusion Statement: Molecular orbital theory is recommended as a way to provide deeper insight into bonding. However, the AP Exam will neither explicitly assess molecular orbital diagrams, filling of molecular orbitals, nor the distinction between bonding, nonbonding, and antibonding orbitals."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Properties of Substances and Mixtures",
+      "developing_understanding": "Transformations of matter can be observed in ways that are generally categorized as either a chemical or physical change. The shapes of the particles involved and the space between them are key factors in determining the nature of physical changes. The properties of solids, liquids, and gases reflect the relative orderliness of the arrangement of particles in those states, their relative freedom of motion, and the nature and strength of the interactions between them. There is a relationship between the macroscopic properties of solids, liquids, and gases, as well as the structure of the constituent particles of those materials on the molecular and atomic scale. In subsequent units, students will explore chemical transformations of matter.",
+      "building_practices": "This unit requires students to draw upon claims made in Unit 2 about molecular geometry and polarity to support claims about intermolecular forces between molecules. Further, students will practice illustrating such claims by constructing particle representations of pure solids, liquids, gases, and solutions. This unit also requires students to build proficiency with mathematical reasoning skills, essential for success in the remainder of the course. Students should be able to explain relationships between variables in an equation (e.g., the ideal gas law) and then estimate the approximate value of one variable within an equation when the value of another variable changes. Students will practice these skills when choosing and implementing experimental procedures, making observations, and/or collecting data to address a question. Students can then determine the accuracy and precision of the data as well as manipulate it with known mathematical equations to support their claims (e.g., concentration of a substance, properties of substances in a mixture).",
+      "preparing_for_exam": "On the AP Exam (in both the multiple-choice and the free-response section), students are required to compare the physical properties of substances and relate them to the attractive forces between particles. Students often struggle with questions that require them to determine the forces of attraction that are present between molecules. Moreover, it can be challenging for them to determine which forces are most important in explaining the differences in physical properties, such as melting points, boiling points, and vapor pressures of molecules in the solid and/or liquid state. Students also confuse the terms intramolecular and intermolecular forces. Another common mistake students make is to simplify their explanations about governing intermolecular forces in a substance by using terms such as \"strong\" and \"weak.\" Teachers can ensure that students can identify an actual intermolecular force and explain its strength in relation to other forces at play.",
+      "topics": [
+        {
+          "id": "3.1",
+          "name": "Intermolecular and Interparticle Forces",
+          "suggested_subskill_codes": [
+            "4.D"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "3.1.A",
+              "description": "Explain the relationship between the chemical structures of molecules and the relative strength of their intermolecular forces when: i. The molecules are of the same chemical species. ii. The molecules are of two different chemical species.",
+              "essential_knowledge": [
+                {
+                  "id": "3.1.A.1",
+                  "description": "London dispersion forces are a result of the Coulombic interactions between temporary, fluctuating dipoles. London dispersion forces are often the strongest net intermolecular force between large molecules. i. Dispersion forces increase with increasing contact area between molecules and with increasing polarizability of the molecules. ii. The polarizability of a molecule increases with an increasing number of electrons in the molecule and the size of the electron cloud. It is enhanced by the presence of pi bonding. iii. The term \"London dispersion forces\" should not be used synonymously with the term \"van der Waals forces.\""
+                },
+                {
+                  "id": "3.1.A.2",
+                  "description": "The dipole moment of a polar molecule leads to additional interactions with other chemical species. i. Dipole-induced dipole interactions are present between a polar and nonpolar molecule. These forces are always attractive. The strength of these forces increases with the magnitude of the dipole of the polar molecule and with the polarizability of the nonpolar molecule. ii. Dipole-dipole interactions are present between polar molecules. The interaction strength depends on the magnitudes of the dipoles and their relative orientation. Interactions between polar molecules are typically greater than those between nonpolar molecules of comparable size because these interactions act in addition to London dispersion forces. iii. Ion-dipole forces of attraction are present between ions and polar molecules. These tend to be stronger than dipole-dipole forces."
+                },
+                {
+                  "id": "3.1.A.3",
+                  "description": "The relative strength and orientation dependence of dipole-dipole and ion-dipole forces can be understood qualitatively by considering the sign of the partial charges responsible for the molecular dipole moment, and how these partial charges interact with an ion or with an adjacent dipole."
+                },
+                {
+                  "id": "3.1.A.4",
+                  "description": "Hydrogen bonding is a strong type of intermolecular interaction that exists when hydrogen atoms covalently bonded to the highly electronegative atoms (N, O, and F) are attracted to the negative end of a dipole formed by the electronegative atom (N, O, and F) in a different molecule, or a different part of the same molecule."
+                },
+                {
+                  "id": "3.1.A.5",
+                  "description": "In large biomolecules, noncovalent interactions may occur between different molecules or between different regions of the same large biomolecule."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3.2",
+          "name": "Properties of Solids",
+          "suggested_subskill_codes": [
+            "4.C"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "3.2.A",
+              "description": "Explain the relationship among the macroscopic properties of a substance, the particulate-level structure of the substance, and the interactions between these particles.",
+              "essential_knowledge": [
+                {
+                  "id": "3.2.A.1",
+                  "description": "Many properties of liquids and solids are determined by the strengths and types of intermolecular forces present. Because intermolecular interactions are overcome completely when a substance vaporizes, the vapor pressure and boiling point are directly related to the strength of those interactions. Melting points also tend to correlate with interaction strength, but because the interactions are only rearranged, in melting, the relations can be more subtle."
+                },
+                {
+                  "id": "3.2.A.2",
+                  "description": "Particulate-level representations, showing multiple interacting chemical species, are a useful means to communicate or understand how intermolecular interactions help to establish macroscopic properties."
+                },
+                {
+                  "id": "3.2.A.3",
+                  "description": "Due to strong interactions between ions, ionic solids tend to have low vapor pressures, high melting points, and high boiling points. They tend to be brittle due to the repulsion of like charges caused when one layer slides across another layer. They conduct electricity only when the ions are mobile, as when the ionic solid is melted (i.e., in a molten state) or dissolved in water or another solvent."
+                },
+                {
+                  "id": "3.2.A.4",
+                  "description": "In covalent network solids, the atoms are covalently bonded together into a three-dimensional network (e.g., diamond) or layers of two-dimensional networks (e.g., graphite). These are only formed from nonmetals and metalloids: elemental (e.g., diamond, graphite) or binary compounds (e.g., silicon dioxide and silicon carbide). Due to the strong covalent interactions, covalent solids have high melting points. Three-dimensional network solids are also rigid and hard, because the covalent bond angles are fixed. However, graphite is soft because adjacent layers can slide past each other relatively easily."
+                },
+                {
+                  "id": "3.2.A.5",
+                  "description": "Molecular solids are composed of distinct, individual units of covalently-bonded molecules attracted to each other through relatively weak intermolecular forces. Molecular solids generally have a low melting point because of the relatively weak intermolecular forces present between the molecules. They do not conduct electricity because their valence electrons are tightly held within the covalent bonds and the lone pairs of each constituent molecule. Molecular solids are sometimes composed of very large molecules or polymers."
+                },
+                {
+                  "id": "3.2.A.6",
+                  "description": "Metallic solids are good conductors of electricity and heat, due to the presence of free valence electrons. They also tend to be malleable and ductile, due to the ease with which the metal cores can rearrange their structure. In an interstitial alloy, interstitial atoms tend to make the lattice more rigid, decreasing malleability and ductility. Alloys typically retain a sea of mobile electrons and so remain conducting."
+                },
+                {
+                  "id": "3.2.A.7",
+                  "description": "In large biomolecules or polymers, noncovalent interactions may occur between different molecules or between different regions of the same large biomolecule. The functionality and properties of such molecules depend strongly on the shape of the molecule, which is largely dictated by noncovalent interactions."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3.3",
+          "name": "Solids, Liquids, and Gases",
+          "suggested_subskill_codes": [
+            "3.C"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "3.3.A",
+              "description": "Represent the differences between solid, liquid, and gas phases using a particulate-level model.",
+              "essential_knowledge": [
+                {
+                  "id": "3.3.A.1",
+                  "description": "Solids can be crystalline, where the particles are arranged in a regular three-dimensional structure, or they can be amorphous, where the particles do not have a regular, orderly arrangement. In both cases, the motion of the individual particles is limited, and the particles do not undergo overall translation with respect to each other. The structure of the solid is influenced by interparticle interactions and the ability of the particles to pack together."
+                },
+                {
+                  "id": "3.3.A.2",
+                  "description": "The constituent particles in liquids are in close contact with each other, and they are continually moving and colliding. The arrangement and movement of particles are influenced by the nature and strength of the forces (e.g., polarity, hydrogen bonding, and temperature) between the particles."
+                },
+                {
+                  "id": "3.3.A.3",
+                  "description": "The solid and liquid phases for a particular substance typically have similar molar volume because, in both phases, the constituent particles are in close contact at all times."
+                },
+                {
+                  "id": "3.3.A.4",
+                  "description": "In the gas phase, the particles are in constant motion. Their frequencies of collision and the average spacing between them are dependent on temperature, pressure, and volume. Because of this constant motion, and minimal effects of forces between particles, a gas has neither a definite volume nor a definite shape. Exclusion Statement: Understanding/interpreting phase diagrams will not be assessed on the AP Exam."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3.4",
+          "name": "Ideal Gas Law",
+          "suggested_subskill_codes": [
+            "5.C"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "3.4.A",
+              "description": "Explain the relationship between the macroscopic properties of a sample of gas or mixture of gases using the ideal gas law.",
+              "essential_knowledge": [
+                {
+                  "id": "3.4.A.1",
+                  "description": "The macroscopic properties of ideal gases are related through the ideal gas law: EQN: PV = nRT."
+                },
+                {
+                  "id": "3.4.A.2",
+                  "description": "In a sample containing a mixture of ideal gases, the pressure exerted by each component (the partial pressure) is independent of the other components. Therefore, the partial pressure of a gas within the mixture is proportional to its mole fraction (XA), and the total pressure of the sample is the sum of the partial pressures. EQN: PA = Ptotal × XA where XA = moles A/total moles; EQN: Ptotal = PA + PB + PC + ..."
+                },
+                {
+                  "id": "3.4.A.3",
+                  "description": "Graphical representations of the relationships between P, V, T, and n are useful to describe gas behavior."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3.5",
+          "name": "Kinetic Molecular Theory",
+          "suggested_subskill_codes": [
+            "4.A"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "3.5.A",
+              "description": "Explain the relationship between the motion of particles and the macroscopic properties of gases with: i. The kinetic molecular theory (KMT). ii. A particulate model. iii. A graphical representation.",
+              "essential_knowledge": [
+                {
+                  "id": "3.5.A.1",
+                  "description": "The kinetic molecular theory (KMT) relates the macroscopic properties of gases to motions of the particles in the gas. The Maxwell-Boltzmann distribution describes the distribution of the kinetic energies of particles at a given temperature."
+                },
+                {
+                  "id": "3.5.A.2",
+                  "description": "All the particles in a sample of matter are in continuous, random motion. The average kinetic energy of a particle is related to its average velocity by the equation: EQN: KE = ½ mv²."
+                },
+                {
+                  "id": "3.5.A.3",
+                  "description": "The Kelvin temperature of a sample of matter is proportional to the average kinetic energy of the particles in the sample."
+                },
+                {
+                  "id": "3.5.A.4",
+                  "description": "The Maxwell-Boltzmann distribution provides a graphical representation of the energies/velocities of particles at a given temperature."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3.6",
+          "name": "Deviation from Ideal Gas Law",
+          "suggested_subskill_codes": [
+            "6.E"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "3.6.A",
+              "description": "Explain the relationship among non-ideal behaviors of gases, interparticle forces, and/or volumes.",
+              "essential_knowledge": [
+                {
+                  "id": "3.6.A.1",
+                  "description": "The ideal gas law does not explain the actual behavior of real gases. Deviations from the ideal gas law may result from interparticle attractions among gas molecules, particularly at conditions that are close to those resulting in condensation. Deviations may also arise from particle volumes, particularly at extremely high pressures."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3.7",
+          "name": "Solutions and Mixtures",
+          "suggested_subskill_codes": [
+            "5.F"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "3.7.A",
+              "description": "Calculate the number of solute particles, volume, or molarity of solutions.",
+              "essential_knowledge": [
+                {
+                  "id": "3.7.A.1",
+                  "description": "Solutions, also sometimes called homogeneous mixtures, can be solids, liquids, or gases. In a solution, the macroscopic properties do not vary throughout the sample. In a heterogeneous mixture, the macroscopic properties depend on location in the mixture."
+                },
+                {
+                  "id": "3.7.A.2",
+                  "description": "Solution composition can be expressed in a variety of ways; molarity is the most common method used in the laboratory. EQN: M = nsolute/Lsolution"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3.8",
+          "name": "Representations of Solutions",
+          "suggested_subskill_codes": [
+            "3.C"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "3.8.A",
+              "description": "Using particulate models for mixtures: i. Represent interactions between components. ii. Represent concentrations of components.",
+              "essential_knowledge": [
+                {
+                  "id": "3.8.A.1",
+                  "description": "Particulate representations of solutions communicate the structure and properties of solutions, by illustration of the relative concentrations of the components in the solution and/or drawings that show interactions among the components. Exclusion Statement: Colligative properties will not be assessed on the AP Exam. Exclusion Statement: Calculations of molality, percent by mass, and percent by volume for solutions will not be assessed on the AP Exam."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3.9",
+          "name": "Separation of Solutions and Mixtures",
+          "suggested_subskill_codes": [
+            "2.C"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "3.9.A",
+              "description": "Explain the results of a separation experiment based on intermolecular interactions.",
+              "essential_knowledge": [
+                {
+                  "id": "3.9.A.1",
+                  "description": "The components of a liquid solution cannot be separated by filtration. They can, however, be separated using processes that take advantage of differences in the intermolecular interactions of the components. i. Chromatography (paper, thin-layer, and column) separates chemical species by taking advantage of the differential strength of intermolecular interactions between and among the components of the solution (the mobile phase) and with the surface components of the stationary phase. The resulting chromatogram can be used to infer the relative polarities of components in a mixture. ii. Distillation separates chemical species by taking advantage of the differential strength of intermolecular interactions between and among the components and the effects these interactions have on the vapor pressures of the components in the mixture."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3.10",
+          "name": "Solubility",
+          "suggested_subskill_codes": [
+            "4.D"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "3.10.A",
+              "description": "Explain the relationship between the solubility of ionic and molecular compounds in aqueous and nonaqueous solvents, and the intermolecular interactions between particles.",
+              "essential_knowledge": [
+                {
+                  "id": "3.10.A.1",
+                  "description": "Substances with similar intermolecular interactions tend to be miscible or soluble in one another."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3.11",
+          "name": "Spectroscopy and the Electromagnetic Spectrum",
+          "suggested_subskill_codes": [
+            "4.A"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "3.11.A",
+              "description": "Explain the relationship between a region of the electromagnetic spectrum and the types of molecular or electronic transitions associated with that region.",
+              "essential_knowledge": [
+                {
+                  "id": "3.11.A.1",
+                  "description": "Differences in absorption or emission of photons in different spectral regions are related to the different types of molecular motion or electronic transition: i. Microwave radiation is associated with transitions in molecular rotational levels. ii. Infrared radiation is associated with transitions in molecular vibrational levels. iii. Ultraviolet/visible radiation is associated with transitions in electronic energy levels."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3.12",
+          "name": "Properties of Photons",
+          "suggested_subskill_codes": [
+            "5.F"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "3.12.A",
+              "description": "Explain the properties of an absorbed or emitted photon in relationship to an electronic transition in an atom or molecule.",
+              "essential_knowledge": [
+                {
+                  "id": "3.12.A.1",
+                  "description": "When a photon is absorbed (or emitted) by an atom or molecule, the energy of the species is increased (or decreased) by an amount equal to the energy of the photon."
+                },
+                {
+                  "id": "3.12.A.2",
+                  "description": "The wavelength of the electromagnetic wave is related to its frequency and the speed of light by the equation: EQN: c = λν. The energy of a photon is related to the frequency of the electromagnetic wave through Planck's equation: EQN: E = hv."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3.13",
+          "name": "Beer-Lambert Law",
+          "suggested_subskill_codes": [
+            "2.E"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "3.13.A",
+              "description": "Explain the amount of light absorbed by a solution of molecules or ions in relationship to the concentration, path length, and molar absorptivity.",
+              "essential_knowledge": [
+                {
+                  "id": "3.13.A.1",
+                  "description": "The Beer-Lambert law relates the absorption of light by a solution to three variables according to the equation: EQN: A = εbc. The molar absorptivity, ε, describes how intensely a chemical species absorbs light of a specific wavelength. The path length, b, and concentration, c, are proportional to the number of light-absorbing particles in the light path."
+                },
+                {
+                  "id": "3.13.A.2",
+                  "description": "In most experiments the path length and wavelength of light are held constant. In such cases, the absorbance is proportional only to the concentration of absorbing molecules or ions. The spectrophotometer is typically set to the wavelength of maximum absorbance (optimum wavelength) for the species being analyzed to ensure the maximum sensitivity of measurement."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Chemical Reactions",
+      "developing_understanding": "This unit explores chemical transformations of matter by building on the physical transformations studied in Unit 3. Chemical changes involve the making and breaking of chemical bonds. Many properties of a chemical system can be understood using the concepts of varying strengths of chemical bonds and weaker intermolecular interactions. When chemical changes occur, the new substances formed have properties that are distinguishable from the initial substance or substances. Chemical reactions are the primary means by which transformations in matter occur. Chemical equations are a representation of the rearrangement of atoms that occur during a chemical reaction. In subsequent units, students will explore rates at which chemical changes occur.",
+      "building_practices": "In Unit 3, students constructed particulate-level representations of compounds and molecules and explained the forces that come into play when particles interact. In Unit 4, students will describe and construct equations of chemical systems and learn to balance those equations. Students should be able to identify and effectively represent types of reactions (e.g., acid-base, redox, precipitation) and then use that knowledge to make hypotheses or predictions about the outcome of a reaction. Additionally, students should be able to support their claims about the identity and amount of product yield through evidence gained with both experimentation and the principles of stoichiometry. Further, students should be able to determine the output of a reaction when the number of moles of reactants change or are in limited/excess supply. This practice of effectively representing balanced chemical equations and using stoichiometry to calculate outcomes of such reactions is critical to student success in the remainder of the course.",
+      "preparing_for_exam": "On the AP Exam, students must be able to demonstrate proficiency in writing and balancing chemical equations (molecular, complete, net ionic) and calculating quantities in multiple contexts using more than just 1:1 stoichiometric ratios. Students often struggle with questions that require them to justify their identification of a particular type of reaction using an equation. They also encounter difficulty with determining the limiting reactant using stoichiometry. For example, with stoichiometric calculations, students often make the mistake of comparing mass to mass instead of mole to mole when determining the limiting reactant. Teacher can ensure that students practice writing balanced equations (for net ionic and molecular) and that they develop a strong understanding of the mole concept and gain proficiency with dimensional analysis. This will help them correctly calculate required quantities using stoichiometric ratios.",
+      "topics": [
+        {
+          "id": "4.1",
+          "name": "Introduction for Reactions",
+          "suggested_subskill_codes": [
+            "2.B"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "4.1.A",
+              "description": "Identify evidence of chemical and physical changes in matter.",
+              "essential_knowledge": [
+                {
+                  "id": "4.1.A.1",
+                  "description": "A physical change occurs when a substance undergoes a change in properties but not a change in composition. Changes in the phase of a substance (solid, liquid, gas) or formation/ separation of mixtures of substances are common physical changes."
+                },
+                {
+                  "id": "4.1.A.2",
+                  "description": "A chemical change occurs when substances are transformed into new substances, typically with different compositions. Production of heat or light, formation of a gas, formation of a precipitate, and/or color change provide possible evidence that a chemical change has occurred."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4.2",
+          "name": "Net Ionic Equations",
+          "suggested_subskill_codes": [
+            "5.E"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "4.2.A",
+              "description": "Represent changes in matter with a balanced chemical or net ionic equation: i. For physical changes. ii. For given information about the identity of the reactants and/or product. iii. For ions in a given chemical reaction.",
+              "essential_knowledge": [
+                {
+                  "id": "4.2.A.1",
+                  "description": "All physical and chemical processes can be represented symbolically by balanced equations."
+                },
+                {
+                  "id": "4.2.A.2",
+                  "description": "Chemical equations represent chemical changes. These changes are the result of a rearrangement of atoms into new combinations; thus, any representation of a chemical change must contain equal numbers of atoms of every element before and after the change occurred. Equations thus demonstrate that mass and charge are conserved in chemical reactions."
+                },
+                {
+                  "id": "4.2.A.3",
+                  "description": "Balanced molecular, complete ionic, and net ionic equations are differing symbolic forms used to represent a chemical reaction. The form used to represent the reaction depends on the context in which it is to be used."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4.3",
+          "name": "Representations of Reactions",
+          "suggested_subskill_codes": [
+            "3.B"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "4.3.A",
+              "description": "Represent a given chemical reaction or physical process with a consistent particulate model.",
+              "essential_knowledge": [
+                {
+                  "id": "4.3.A.1",
+                  "description": "Balanced chemical equations in their various forms can be translated into symbolic particulate representations."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4.4",
+          "name": "Physical and Chemical Changes",
+          "suggested_subskill_codes": [
+            "6.B"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "4.4.A",
+              "description": "Explain the relationship between macroscopic characteristics and bond interactions for: i. Chemical processes. ii. Physical processes.",
+              "essential_knowledge": [
+                {
+                  "id": "4.4.A.1",
+                  "description": "Processes that involve the breaking and/or formation of chemical bonds are typically classified as chemical processes. Processes that involve only changes in intermolecular interactions, such as phase changes, are typically classified as physical processes."
+                },
+                {
+                  "id": "4.4.A.2",
+                  "description": "Sometimes physical processes involve the breaking of chemical bonds. For example, plausible arguments could be made for the dissolution of a salt in water, as either a physical or chemical process, involves breaking of ionic bonds, and the formation of ion-dipole interactions between ions and solvent."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4.5",
+          "name": "Stoichiometry",
+          "suggested_subskill_codes": [
+            "5.C"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "4.5.A",
+              "description": "Explain changes in the amounts of reactants and products based on the balanced reaction equation for a chemical process.",
+              "essential_knowledge": [
+                {
+                  "id": "4.5.A.1",
+                  "description": "Because atoms must be conserved during a chemical process, it is possible to calculate product amounts by using known reactant amounts, or to calculate reactant amounts given known product amounts."
+                },
+                {
+                  "id": "4.5.A.2",
+                  "description": "Coefficients of balanced chemical equations contain information regarding the proportionality of the amounts of substances involved in the reaction. These values can be used in chemical calculations involving the mole concept."
+                },
+                {
+                  "id": "4.5.A.3",
+                  "description": "Stoichiometric calculations can be combined with the ideal gas law and calculations involving molarity to quantitatively study gases and solutions."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4.6",
+          "name": "Introduction to Titration",
+          "suggested_subskill_codes": [
+            "3.A"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "4.6.A",
+              "description": "Identify the equivalence point in a titration based on the amounts of the titrant and analyte, assuming the titration reaction goes to completion.",
+              "essential_knowledge": [
+                {
+                  "id": "4.6.A.1",
+                  "description": "Titrations may be used to determine the amount of an analyte in solution. The titrant has a known concentration of a species that reacts specifically and quantitatively with the analyte. The equivalence point of the titration occurs when the analyte is totally consumed by the reacting species in the titrant. The equivalence point is often indicated by a change in a property (such as color) that occurs when the equivalence point is reached. This observable event is called the endpoint of the titration."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4.7",
+          "name": "Types of Chemical Reactions",
+          "suggested_subskill_codes": [
+            "1.B"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "4.7.A",
+              "description": "Identify a reaction as acid-base, oxidation-reduction, or precipitation.",
+              "essential_knowledge": [
+                {
+                  "id": "4.7.A.1",
+                  "description": "Acid-base reactions involve transfer of one or more protons (H+ ions) between chemical species."
+                },
+                {
+                  "id": "4.7.A.2",
+                  "description": "Oxidation-reduction (redox) reactions involve transfer of one or more electrons between chemical species, as indicated by changes in oxidation numbers of the involved species. Combustion is an important subclass of oxidation-reduction reactions, in which a species reacts with oxygen gas. In the case of hydrocarbons, carbon dioxide and water are products of complete combustion."
+                },
+                {
+                  "id": "4.7.A.3",
+                  "description": "In a redox reaction, electrons are transferred from the species that is oxidized to the species that is reduced. Exclusion Statement: The meaning of the terms \"reducing agent\" and \"oxidizing agent\" will not be assessed on the AP Exam."
+                },
+                {
+                  "id": "4.7.A.4",
+                  "description": "Oxidation numbers may be assigned to each of the atoms in the reactants and products; this is often an effective way to identify the oxidized and reduced species in a redox reaction."
+                },
+                {
+                  "id": "4.7.A.5",
+                  "description": "Precipitation reactions frequently involve mixing ions in aqueous solution to produce an insoluble or sparingly soluble ionic compound. All sodium, potassium, ammonium, and nitrate salts are soluble in water. Exclusion Statement: Rote memorization of \"solubility rules\" other than those implied in 4.7.A.5 will not be assessed on the AP Exam."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4.8",
+          "name": "Introduction to Acid-Base Reactions",
+          "suggested_subskill_codes": [
+            "1.B"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "4.8.A",
+              "description": "Identify species as Brønsted-Lowry acids, bases, and/or conjugate acid-base pairs, based on proton-transfer involving those species.",
+              "essential_knowledge": [
+                {
+                  "id": "4.8.A.1",
+                  "description": "By definition, a Brønsted-Lowry acid is a proton donor and a Brønsted-Lowry base is a proton acceptor."
+                },
+                {
+                  "id": "4.8.A.2",
+                  "description": "Only in aqueous solutions, water plays an important role in many acid-base reactions, as its molecular structure allows it to accept protons from and donate protons to dissolved species."
+                },
+                {
+                  "id": "4.8.A.3",
+                  "description": "When an acid or base ionizes in water, the conjugate acid-base pairs can be identified and their relative strengths compared. Exclusion Statement: Lewis acid-base concepts will not be assessed on the AP Exam. The emphasis in AP Chemistry is on reactions in aqueous solution."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4.9",
+          "name": "Oxidation-Reduction (Redox) Reactions",
+          "suggested_subskill_codes": [
+            "5.E"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "4.9.A",
+              "description": "Represent a balanced redox reaction equation using half-reactions.",
+              "essential_knowledge": [
+                {
+                  "id": "4.9.A.1",
+                  "description": "Balanced chemical equations for redox reactions can be constructed from half-reactions."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Kinetics",
+      "developing_understanding": "Unit 4 focused on chemical changes; in Unit 5 students will develop an understanding of the rates at which chemical changes occur and the factors that influence the rates. Those factors include the concentration of reactants, temperature, catalysts, and other environmental factors. Chemical changes are represented by chemical reactions, and the rates of chemical reactions are determined by the details of the molecular collisions. Rates of change in chemical reactions are observable and measurable. When measuring rates of change, students are measuring the concentration of reactant or product species as a function of time. These chemical processes may be observed in a variety of ways and often involve changes in energy as well. In subsequent units, students will describe the role of energy in changes in matter.",
+      "building_practices": "In prior units, students developed their ability to describe symbolic and quantitative information from representations (e.g., Lewis structures, chemical reactions) that illustrate both the particulate and macroscopic level of a chemical phenomenon. In Unit 5, students will build on these explanations and representations by constructing and describing rate laws consistent with experimental evidence. To that end, students will collect data by spectrophotometry and choose an appropriate mathematical routine to determine how concentration varies with time during the course of a reaction. In addition, students will examine proposed reaction mechanisms to determine if there is a match between observed experimental data and constructed rate law expressions. Students will learn to identify any intermediates or catalysts that are included in the reaction mechanism, as well as the rate-determining step, and be able to justify their claims. To do so, students must learn to construct and analyze energy profiles for chemical reactions and identify how such profiles may change with the addition of a catalyst.",
+      "preparing_for_exam": "On the AP Exam, students must be able to navigate between experimental data (tabular or graphed), a given or constructed rate law, and a proposed mechanism. Students generally struggle with reading a graph of reactant concentration versus time and drawing appropriate conclusions (i.e., order and rate constant) from the graphed data. Specifically, students confuse the units of the graphs with the units represented in the chemical equation. Teachers can ensure that students have multiple opportunities to graph concentration versus time or concentration versus rate data (using appropriate increments and units for the axes). Once students learn how to graph this data, teachers can help them analyze the graphs to determine the order of a reaction.",
+      "topics": [
+        {
+          "id": "5.1",
+          "name": "Reaction Rates",
+          "suggested_subskill_codes": [
+            "6.E"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "5.1.A",
+              "description": "Explain the relationship between the rate of a chemical reaction and experimental parameters.",
+              "essential_knowledge": [
+                {
+                  "id": "5.1.A.1",
+                  "description": "The kinetics of a chemical reaction is defined as the rate at which an amount of reactants is converted to products per unit of time."
+                },
+                {
+                  "id": "5.1.A.2",
+                  "description": "The rates of change of reactant and product concentrations are determined by the stoichiometry in the balanced chemical equation."
+                },
+                {
+                  "id": "5.1.A.3",
+                  "description": "The rate of a reaction is influenced by reactant concentrations, temperature, surface area, catalysts, and other environmental factors."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.2",
+          "name": "Introduction to Rate Law",
+          "suggested_subskill_codes": [
+            "5.C"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "5.2.A",
+              "description": "Represent experimental data with a consistent rate law expression.",
+              "essential_knowledge": [
+                {
+                  "id": "5.2.A.1",
+                  "description": "Experimental methods can be used to monitor the amounts of reactants and/or products of a reaction over time and to determine the rate of the reaction."
+                },
+                {
+                  "id": "5.2.A.2",
+                  "description": "The rate law expresses the rate of a reaction as proportional to the concentration of each reactant raised to a power."
+                },
+                {
+                  "id": "5.2.A.3",
+                  "description": "The power of each reactant in the rate law is the order of the reaction with respect to that reactant. The sum of the powers of the reactant concentrations in the rate law is the overall order of the reaction."
+                },
+                {
+                  "id": "5.2.A.4",
+                  "description": "The proportionality constant in the rate law is called the rate constant. The value of this constant is temperature dependent and the units reflect the overall reaction order."
+                },
+                {
+                  "id": "5.2.A.5",
+                  "description": "Comparing initial rates of a reaction is a method to determine the order with respect to each reactant."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.3",
+          "name": "Concentration Changes Over Time",
+          "suggested_subskill_codes": [
+            "5.B"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "5.3.A",
+              "description": "Identify the rate law expression of a chemical reaction using data that show how the concentrations of reaction species change over time.",
+              "essential_knowledge": [
+                {
+                  "id": "5.3.A.1",
+                  "description": "The order of a reaction can be inferred from a graph of concentration of reactant versus time."
+                },
+                {
+                  "id": "5.3.A.2",
+                  "description": "If a reaction is first order with respect to a reactant being monitored, a plot of the natural log (In) of the reactant concentration as a function of time will be linear."
+                },
+                {
+                  "id": "5.3.A.3",
+                  "description": "If a reaction is second order with respect to a reactant being monitored, a plot of the reciprocal of the concentration of that reactant versus time will be linear."
+                },
+                {
+                  "id": "5.3.A.4",
+                  "description": "The slopes of the concentration versus time data for zeroth, first, and second order reactions can be used to determine the rate constant for the reaction.\\nZeroth order:\\nEQN: [A]t - [A]₀ = -kt\\nFirst order:\\nEQN: ln[A]t - ln[A]₀ = -kt\\nSecond order:\\nEQN: 1/[A]t – 1/[A]₀ = kt"
+                },
+                {
+                  "id": "5.3.A.5",
+                  "description": "Half-life is a critical parameter for first order reactions because the half-life is constant and related to the rate constant for the reaction by the equation:\\nEQN: t₁/₂ = 0.693/k."
+                },
+                {
+                  "id": "5.3.A.6",
+                  "description": "Radioactive decay processes provide an important illustration of first order kinetics."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.4",
+          "name": "Elementary Reactions",
+          "suggested_subskill_codes": [
+            "5.E"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "5.4.A",
+              "description": "Represent an elementary reaction as a rate law expression using stoichiometry.",
+              "essential_knowledge": [
+                {
+                  "id": "5.4.A.1",
+                  "description": "The rate law of an elementary reaction can be inferred from the stoichiometry of the particles participating in a collision."
+                },
+                {
+                  "id": "5.4.A.2",
+                  "description": "Elementary reactions involving the simultaneous collision of three or more particles are rare."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.5",
+          "name": "Collision Model",
+          "suggested_subskill_codes": [
+            "6.E"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "5.5.A",
+              "description": "Explain the relationship between the rate of an elementary reaction and the frequency, energy, and orientation of particle collisions.",
+              "essential_knowledge": [
+                {
+                  "id": "5.5.A.1",
+                  "description": "For an elementary reaction to successfully produce products, reactants must successfully collide to initiate bond-breaking and bond-making events."
+                },
+                {
+                  "id": "5.5.A.2",
+                  "description": "In most reactions, only a small fraction of the collisions leads to a reaction. Successful collisions have both sufficient energy to overcome the activation energy requirements and orientations that allow the bonds to rearrange in the required manner."
+                },
+                {
+                  "id": "5.5.A.3",
+                  "description": "The Maxwell-Boltzmann distribution curve describes the distribution of particle energies; this distribution can be used to gain a qualitative estimate of the fraction of collisions with sufficient energy to lead to a reaction, and also how that fraction depends on temperature."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.6",
+          "name": "Reaction Energy Profile",
+          "suggested_subskill_codes": [
+            "3.B"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "5.6.A",
+              "description": "Represent the activation energy and overall energy change in an elementary reaction using a reaction energy profile.",
+              "essential_knowledge": [
+                {
+                  "id": "5.6.A.1",
+                  "description": "Elementary reactions typically involve the breaking of some bonds and the forming of new ones."
+                },
+                {
+                  "id": "5.6.A.2",
+                  "description": "The reaction coordinate is the axis along which the complex set of motions involved in rearranging reactants to form products can be plotted."
+                },
+                {
+                  "id": "5.6.A.3",
+                  "description": "The energy profile gives the energy along the reaction coordinate, which typically proceeds from reactants, through a transition state, to products. The energy difference between the reactants and the transition state is the activation energy for the forward reaction."
+                },
+                {
+                  "id": "5.6.A.4",
+                  "description": "The rate of an elementary reaction is temperature dependent because the proportion of particle collisions that are energetic enough to reach the transition state varies with temperature. The Arrhenius equation relates the temperature dependence of the rate of an elementary reaction to the activation energy needed by molecular collisions to reach the transition state.\\nExclusion Statement: Calculations involving the Arrhenius equation will not be assessed on the AP Exam."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.7",
+          "name": "Introduction to Reaction Mechanisms",
+          "suggested_subskill_codes": [
+            "1.B"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "5.7.A",
+              "description": "Identify the components of a reaction mechanism.",
+              "essential_knowledge": [
+                {
+                  "id": "5.7.A.1",
+                  "description": "A reaction mechanism consists of a series of elementary reactions, or steps, that occur in sequence. The components may include reactants, intermediates, products, and catalysts."
+                },
+                {
+                  "id": "5.7.A.2",
+                  "description": "The elementary steps when combined should align with the overall balanced equation of a chemical reaction."
+                },
+                {
+                  "id": "5.7.A.3",
+                  "description": "A reaction intermediate is produced by some elementary steps and consumed by others, such that it is present only while a reaction is occurring."
+                },
+                {
+                  "id": "5.7.A.4",
+                  "description": "Experimental detection of a reaction intermediate is a common way to build evidence in support of one reaction mechanism over an alternative mechanism.\\nExclusion Statement: Collection of data pertaining to detection of a reaction intermediate will not be assessed on the AP Exam."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.8",
+          "name": "Reaction Mechanism and Rate Law",
+          "suggested_subskill_codes": [
+            "5.B"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "5.8.A",
+              "description": "Identify the rate law for a reaction from a mechanism in which the first step is rate limiting.",
+              "essential_knowledge": [
+                {
+                  "id": "5.8.A.1",
+                  "description": "For reaction mechanisms in which each elementary step is irreversible, or in which the first step is rate limiting, the rate law of the reaction is set by the molecularity of the slowest elementary step (i.e., the rate-limiting step).\\nExclusion Statement: Collection of data pertaining to detection of a reaction intermediate will not be assessed on the AP Exam."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.9",
+          "name": "Pre-Equilibrium Approximation",
+          "suggested_subskill_codes": [
+            "5.B"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "5.9.A",
+              "description": "Identify the rate law for a reaction from a mechanism in which the first step is not rate limiting.",
+              "essential_knowledge": [
+                {
+                  "id": "5.9.A.1",
+                  "description": "If the first elementary reaction is not rate limiting, approximations (such as pre-equilibrium) must be made to determine a rate law expression."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.10",
+          "name": "Multistep Reaction Energy Profile",
+          "suggested_subskill_codes": [
+            "3.B"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "5.10.A",
+              "description": "Represent the activation energy and overall energy change in a multistep reaction with a reaction energy profile.",
+              "essential_knowledge": [
+                {
+                  "id": "5.10.A.1",
+                  "description": "Knowledge of the energetics of each elementary reaction in a mechanism allows for the construction of an energy profile for a multistep reaction."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5.11",
+          "name": "Catalysis",
+          "suggested_subskill_codes": [
+            "6.E"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "5.11.A",
+              "description": "Explain the relationship between the effect of a catalyst on a reaction and changes in the reaction mechanism.",
+              "essential_knowledge": [
+                {
+                  "id": "5.11.A.1",
+                  "description": "In order for a catalyst to increase the rate of a reaction, the addition of the catalyst must increase the number of effective collisions and/ or provide a reaction path with a lower activation energy relative to the original reaction coordinate."
+                },
+                {
+                  "id": "5.11.A.2",
+                  "description": "In a reaction mechanism containing a catalyst, the net concentration of the catalyst is constant. However, the catalyst will frequently be consumed in the rate-determining step of the reaction, only to be regenerated in a subsequent step in the mechanism."
+                },
+                {
+                  "id": "5.11.A.3",
+                  "description": "Some catalysts accelerate a reaction by binding to the reactant(s). The reactants are either oriented more favorably or react with lower activation energy. There is often a new reaction intermediate in which the catalyst is bound to the reactant(s). Many enzymes function in this manner."
+                },
+                {
+                  "id": "5.11.A.4",
+                  "description": "Some catalysts involve covalent bonding between the catalyst and the reactant(s). An example is acid-base catalysis, in which a reactant or intermediate either gains or loses a proton. This introduces a new reaction intermediate and new elementary reactions involving that intermediate."
+                },
+                {
+                  "id": "5.11.A.5",
+                  "description": "In surface catalysis, a reactant or intermediate binds to, or forms a covalent bond with, the surface. This introduces elementary reactions involving these new bound reaction intermediate(s)."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Thermochemistry",
+      "developing_understanding": "The laws of thermodynamics describe the essential role of energy and explain and predict the direction of changes in matter. The availability or disposition of energy plays a role in virtually all observed chemical processes. Thermochemistry provides tools for understanding this key role, particularly the conservation of energy, including energy transfer in the forms of heat and work. Chemical bonding is central to chemistry. A key concept to know is that the breaking of a chemical bond inherently requires an energy input, and because bond formation is the reverse process, it will release energy. In subsequent units, the application of thermodynamics will determine the favorability of a reaction occurring.",
+      "building_practices": "The ability to link atomic- and particulate-level phenomena and models to macroscopic phenomena is central to the study of chemistry. In previous units, students used representations, equations, and reasoning to demonstrate this ability. In Unit 6, students will develop justifications for claims made about the direction of thermal energy transfer of a system in relation to its surroundings when a temperature change, physical change, or a chemical reaction occurs. Students will construct representations of energy using appropriate diagrams with arrows showing the direction of energy transfer between the system and the surroundings. They will continue to develop their explanations of chemical phenomena by explaining how the change in energy of a system is balanced by transfer of energy by either heat or work into or out of the system.",
+      "preparing_for_exam": "On the AP Exam, students must be able to translate between a balanced chemical reaction and a calculation involving the energies of bonds broken and bonds formed within the reaction. In addition, students will be required to analyze calorimetry data and apply mathematical routines to calculate or estimate the heat transferred and the overall enthalpy of a reaction. In a question that asks students to apply mathematical routines to estimate or calculate the overall enthalpy of a reaction, students often struggle to determine the number of bonds that were broken and made in the reaction. Teachers can ensure that students are able to identify the bonds broken and formed in the reaction and use the enthalpies for such to determine the overall enthalpy for the reaction, in addition to their ability to represent a chemical reaction with its associated equation.",
+      "topics": [
+        {
+          "id": "6.1",
+          "name": "Endothermic and Exothermic Processes",
+          "suggested_subskill_codes": [
+            "6.D"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "6.1.A",
+              "description": "Explain the relationship between experimental observations and energy changes associated with a chemical or physical transformation.",
+              "essential_knowledge": [
+                {
+                  "id": "6.1.Α.1",
+                  "description": "Temperature changes in a system indicate energy changes."
+                },
+                {
+                  "id": "6.1.A.2",
+                  "description": "Energy changes in a system can be described as endothermic and exothermic processes such as the heating or cooling of a substance, phase changes, or chemical transformations."
+                },
+                {
+                  "id": "6.1.A.3",
+                  "description": "When a chemical reaction occurs, the energy of the system either decreases (exothermic reaction), increases (endothermic reaction), or remains the same. For exothermic reactions, the energy lost by the reacting species (system) is gained by the surroundings, as heat transfer from or work done by the system. Likewise, for endothermic reactions, the system gains energy from the surroundings by heat transfer to or work done on the system."
+                },
+                {
+                  "id": "6.1.A.4",
+                  "description": "The formation of a solution may be an exothermic or endothermic process, depending on the relative strengths of intermolecular/interparticle interactions before and after the dissolution process."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6.2",
+          "name": "Energy Diagrams",
+          "suggested_subskill_codes": [
+            "3.A"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "6.2.A",
+              "description": "Represent a chemical or physical transformation with an energy diagram.",
+              "essential_knowledge": [
+                {
+                  "id": "6.2.A.1",
+                  "description": "A physical or chemical process can be described with an energy diagram that shows the endothermic or exothermic nature of that process."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6.3",
+          "name": "Heat Transfer and Thermal Equilibrium",
+          "suggested_subskill_codes": [
+            "6.E"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "6.3.A",
+              "description": "Explain the relationship between the transfer of thermal energy and molecular collisions.",
+              "essential_knowledge": [
+                {
+                  "id": "6.3.A.1",
+                  "description": "The particles in a warmer body have a greater average kinetic energy than those in a cooler body."
+                },
+                {
+                  "id": "6.3.A.2",
+                  "description": "Collisions between particles in thermal contact can result in the transfer of energy. This process is called \"heat transfer,\" \"heat exchange,\" or \"transfer of energy as heat.\""
+                },
+                {
+                  "id": "6.3.A.3",
+                  "description": "Eventually, thermal equilibrium is reached as the particles continue to collide. At thermal equilibrium, the average kinetic energy of both bodies is the same, and hence, their temperatures are the same."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6.4",
+          "name": "Heat Capacity and Calorimetry",
+          "suggested_subskill_codes": [
+            "2.D"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "6.4.A",
+              "description": "Calculate the heat q absorbed or released by a system undergoing heating/ cooling based on the amount of the substance, the heat capacity, and the change in temperature.",
+              "essential_knowledge": [
+                {
+                  "id": "6.4.A.1",
+                  "description": "The heating of a cool body by a warmer body is an important form of energy transfer between two systems. The amount of heat transferred between two bodies may be quantified by the heat transfer equation: EQN: q = mcAT. Calorimetry experiments are used to measure the transfer of heat."
+                },
+                {
+                  "id": "6.4.A.2",
+                  "description": "The first law of thermodynamics states that energy is conserved in chemical and physical processes."
+                },
+                {
+                  "id": "6.4.A.3",
+                  "description": "The transfer of a given amount of thermal energy will not produce the same temperature change in equal masses of matter with differing specific heat capacities."
+                },
+                {
+                  "id": "6.4.A.4",
+                  "description": "Heating a system increases the energy of the system, while cooling a system decreases the energy of the system."
+                },
+                {
+                  "id": "6.4.A.5",
+                  "description": "The specific heat capacity of a substance and the molar heat capacity are both used in energy calculations."
+                },
+                {
+                  "id": "6.4.A.6",
+                  "description": "Chemical systems change their energy through three main processes: heating/cooling, phase transitions, and chemical reactions."
+                },
+                {
+                  "id": "6.4.A.7",
+                  "description": "In calorimetry experiments involving dissolution, temperature changes of the mixture within the calorimeter can be used to determine the direction of energy flow. If the temperature of the mixture increases, thermal energy is released by the dissolution process (exothermic). If the temperature of the mixture decreases, thermal energy is absorbed by the dissolution process (endothermic)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6.5",
+          "name": "Energy of Phase Changes",
+          "suggested_subskill_codes": [
+            "1.B"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "6.5.A",
+              "description": "Explain changes in the heat q absorbed or released by a system undergoing a phase transition based on the amount of the substance in moles and the molar enthalpy of the phase transition.",
+              "essential_knowledge": [
+                {
+                  "id": "6.5.Α.1",
+                  "description": "Energy must be transferred to a system to cause a substance to melt (or boil). The energy of the system therefore increases as the system undergoes a solid-to-liquid (or liquid-to-gas) phase transition. Likewise, a system releases energy when it freezes (or condenses). The energy of the system decreases as the system undergoes a liquid-to-solid (or gas-to-liquid) phase transition. The temperature of a pure substance remains constant during a phase change."
+                },
+                {
+                  "id": "6.5.A.2",
+                  "description": "The energy absorbed during a phase change is equal to the energy released during a complementary phase change in the opposite direction. For example, the molar enthalpy of condensation of a substance is equal to the negative of its molar enthalpy of vaporization. Similarly, the molar enthalpy of fusion can be used to calculate the energy absorbed when melting a substance and the energy released when freezing a substance."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6.6",
+          "name": "Introduction to Enthalpy of Reaction",
+          "suggested_subskill_codes": [
+            "5.F"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "6.6.A",
+              "description": "Calculate the heat q absorbed or released by a system undergoing a chemical reaction in relationship to the amount of the reacting substance in moles and the molar enthalpy of reaction.",
+              "essential_knowledge": [
+                {
+                  "id": "6.6.A.1",
+                  "description": "The enthalpy change of a reaction gives the amount of heat energy released (for negative values) or absorbed (for positive values) by a chemical reaction at constant pressure."
+                },
+                {
+                  "id": "6.6.A.2",
+                  "description": "When the products of a reaction are at a different temperature than their surroundings, they exchange energy with the surroundings to reach thermal equilibrium. Thermal energy is transferred to the surroundings as the reactants convert to products in an exothermic reaction. Thermal energy is transferred from the surroundings as the reactants convert to products in an endothermic reaction."
+                },
+                {
+                  "id": "6.6.A.3",
+                  "description": "The chemical potential energy of the products of a reaction is different from that of the reactants because of the breaking and forming of bonds. The energy difference results in a change in the kinetic energy of the particles, which manifests as a temperature change. Exclusion Statement: The technical distinctions between enthalpy and internal energy will not be assessed on the AP Exam. Most reactions studied at the AP level are carried out at constant pressure, where the enthalpy change of the process is equal to the heat (and by extension, the energy) of reaction."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6.7",
+          "name": "Bond Enthalpies",
+          "suggested_subskill_codes": [
+            "5.F"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "6.7.A",
+              "description": "Calculate the enthalpy change of a reaction based on the average bond energies of bonds broken and formed in the reaction.",
+              "essential_knowledge": [
+                {
+                  "id": "6.7.A.1",
+                  "description": "During a chemical reaction, bonds are broken and/or formed, and these events change the potential energy of the system."
+                },
+                {
+                  "id": "6.7.A.2",
+                  "description": "The average energy required to break all of the bonds in the reactant molecules can be estimated by adding up the average bond energies of all the bonds in the reactant molecules. Likewise, the average energy released in forming the bonds in the product molecules can be estimated. If the energy released is greater than the energy required, the reaction is exothermic. If the energy required is greater than the energy released, the reaction is endothermic."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6.8",
+          "name": "Enthalpy of Formation",
+          "suggested_subskill_codes": [
+            "5.F"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "6.8.A",
+              "description": "Calculate the enthalpy change for a chemical or physical process based on the standard enthalpies of formation.",
+              "essential_knowledge": [
+                {
+                  "id": "6.8.A.1",
+                  "description": "Tables of standard enthalpies of formation can be used to calculate the standard enthalpies of reactions. EQN: ΔΗ reaction = ΣΔΗ f products - ΣΔΗf reactants"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6.9",
+          "name": "Hess's Law",
+          "suggested_subskill_codes": [
+            "5.A"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "6.9.A",
+              "description": "Represent a chemical or physical process as a sequence of steps.",
+              "essential_knowledge": [
+                {
+                  "id": "6.9.A.1",
+                  "description": "Many processes can be broken down into a series of steps. Each step in the series has its own energy change."
+                }
+              ]
+            },
+            {
+              "id": "6.9.B",
+              "description": "Explain the relationship between the enthalpy of a chemical or physical process and the sum of the enthalpies of the individual steps.",
+              "essential_knowledge": [
+                {
+                  "id": "6.9.Β.1",
+                  "description": "Because total energy is conserved (first law of thermodynamics), and each individual reaction in a sequence transfers thermal energy to or from the surroundings, the net thermal energy transferred in the sequence will be equal to the sum of the thermal energy transfers in each of the steps. These thermal energy transfers are the result of potential energy changes among the species in the reaction sequence; thus, at constant pressure, the enthalpy change of the overall process is equal to the sum of the enthalpy changes of the individual steps."
+                },
+                {
+                  "id": "6.9.8.2",
+                  "description": "The following are essential principles of Hess's law: i. When a reaction is reversed, the enthalpy change stays constant in magnitude but becomes reversed in mathematical sign. ii. When a reaction is multiplied by a factor c, the enthalpy change is multiplied by the same factor c. iii. When two (or more) reactions are added to obtain an overall reaction, the individual enthalpy changes of each reaction are added to obtain the net enthalpy change of the overall reaction. Exclusion Statement: The concept of state functions will not be assessed on the AP Exam."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Equilibrium",
+      "developing_understanding": "Chemical equilibrium is a dynamic state in which opposing processes occur at the same rate. In this unit, students learn that any bond or intermolecular attraction that can be formed can be broken. These two processes are in a dynamic competition, sensitive to initial conditions and external perturbations. A change in conditions, such as addition of a chemical species, change in temperature, or change in volume, can cause the rate of the forward and reverse reactions to fall out of balance. Le Châtelier's principle provides a means to reason qualitatively about the direction of the shift in an equilibrium system resulting from various possible stresses. The expression for the equilibrium constant, K, is a mathematical expression that describes the equilibrium state associated with a chemical change. An analogous expression for the reaction quotient, Q, describes a chemical reaction at any point, enabling a comparison to the equilibrium state. The dissolution of a solid in a solvent can also be understood by applying the principles of chemical equilibrium because it is a reversible reaction. The relationships between salt solubility, pH, and free energy will be encountered in subsequent units. Subsequent units will also explore equilibrium constants that arise from acid-base chemistry.",
+      "building_practices": "Building on practices from earlier units where students translated between representations of chemical systems, they will now construct equilibrium expressions from reaction equations. Students should also illustrate the dynamic nature of the chemical reaction through particulate-level representations, portraying both the forward and reverse rates of the reaction equations. They will construct and describe graphs that represent a chemical system in equilibrium and connect them to their particulate-level representations and equilibrium expressions. In conjunction with their constructed equilibrium expressions, students will practice using experimental data to calculate the reaction quotient (Q) and equilibrium constant (K) for a reaction. Using Le Châtelier's principle, they will also support claims made about the dominant direction of a reaction once stresses like changes in concentration, pressure, volume, or temperature are introduced.",
+      "preparing_for_exam": "On the AP Exam, students must be able to connect what is happening at the molecular level to a model for a system at equilibrium. For example, when students are asked to connect the value of the equilibrium constant (K) from the equilibrium expression to the dominant direction of the reaction, they struggle to connect the value of a large K to a reaction proceeding essentially to completion. This lack of connection leads students to use ineffective mathematical routines and then incorrectly calculate the concentration of the product in solution. To help students avoid this type of misunderstanding, teachers can ensure that students connect the value of the equilibrium constant to the experimental data or observations provided. Additionally, teachers can help students visualize the effects of a large or small equilibrium constant on the concentrations of all species in equilibrium.",
+      "topics": [
+        {
+          "id": "7.1",
+          "name": "Introduction to Equilibrium",
+          "suggested_subskill_codes": [
+            "6.D"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "7.1.A",
+              "description": "Explain the relationship between the occurrence of a reversible chemical or physical process, and the establishment of equilibrium, to experimental observations.",
+              "essential_knowledge": [
+                {
+                  "id": "7.1.A.1",
+                  "description": "Many observable processes are reversible. Examples include evaporation and condensation of water, absorption and desorption of a gas, or dissolution and precipitation of a salt. Some important reversible chemical processes include the transfer of protons in acid-base reactions and the transfer of electrons in redox reactions."
+                },
+                {
+                  "id": "7.1.A.2",
+                  "description": "When equilibrium is reached, no observable changes occur in the system. Reactants and products are simultaneously present, and the concentrations or partial pressures of all species remain constant."
+                },
+                {
+                  "id": "7.1.A.3",
+                  "description": "The equilibrium state is dynamic. The forward and reverse processes continue to occur at equal rates, resulting in no net observable change."
+                },
+                {
+                  "id": "7.1.A.4",
+                  "description": "Graphs of concentration, partial pressure, or rate of reaction versus time for simple chemical reactions can be used to understand the establishment of chemical equilibrium."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7.2",
+          "name": "Direction of Reversible Reactions",
+          "suggested_subskill_codes": [
+            "4.D"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "7.2.A",
+              "description": "Explain the relationship between the direction in which a reversible reaction proceeds and the relative rates of the forward and reverse reactions.",
+              "essential_knowledge": [
+                {
+                  "id": "7.2.A.1",
+                  "description": "If the rate of the forward reaction is greater than the reverse reaction, then there is a net conversion of reactants to products. If the rate of the reverse reaction is greater than that of the forward reaction, then there is a net conversion of products to reactants. An equilibrium state is reached when these rates are equal."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7.3",
+          "name": "Reaction Quotient and Equilibrium Constant",
+          "suggested_subskill_codes": [
+            "3.A"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "7.3.A",
+              "description": "Represent the reaction quotient Q_c or Q_p for a reversible reaction, and the corresponding equilibrium expressions K_c = Q_c or K_p = Q_p.",
+              "essential_knowledge": [
+                {
+                  "id": "7.3.A.1",
+                  "description": "The reaction quotient Q describes the relative concentrations of reaction species at any time. For gas phase reactions, the reaction quotient may instead be written in terms of partial pressures as Q_p. The reaction quotient tends toward the equilibrium constant such that at equilibrium K_c = Q_c and K_p = Q_p. As examples, for the reaction aA + bB <=> cC + dD the law of mass action indicates that the equilibrium expression for (K_c, Q_c) is EQN: K_c = ([C]^c [D]^d)/([A]^a [B]^b) and that for (K_p, Q_p) is EQN: K_p = ((P_C)^c (P_D)^d)/((P_A)^a (P_B)^b) Exclusion Statement: Conversion between K_c and K_p will not be assessed on the AP Exam. Students should be aware of the conceptual differences and pay attention to whether K_c or K_p is used in an exam question."
+                },
+                {
+                  "id": "",
+                  "description": "Exclusion Statement: Equilibrium calculations on systems where a dissolved species is in equilibrium with that species in the gas phase will not be assessed on the AP Exam."
+                },
+                {
+                  "id": "7.3.A.2",
+                  "description": "The reaction quotient does not include substances whose concentrations (or partial pressures) are independent of the amount, such as for solids and pure liquids."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7.4",
+          "name": "Calculating the Equilibrium Constant",
+          "suggested_subskill_codes": [
+            "5.C"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "7.4.A",
+              "description": "Calculate K_c or K_p based on experimental observations of concentrations or pressures at equilibrium.",
+              "essential_knowledge": [
+                {
+                  "id": "7.4.A.1",
+                  "description": "Equilibrium constants can be determined from experimental measurements of the concentrations or partial pressures of the reactants and products at equilibrium."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7.5",
+          "name": "Magnitude of the Equilibrium Constant",
+          "suggested_subskill_codes": [
+            "6.D"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "7.5.A",
+              "description": "Explain the relationship between very large or very small values of K and the relative concentrations of chemical species at equilibrium.",
+              "essential_knowledge": [
+                {
+                  "id": "7.5.A.1",
+                  "description": "Some equilibrium reactions have very large K values and proceed essentially to completion. Others have very small K values and barely proceed at all."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7.6",
+          "name": "Properties of the Equilibrium Constant",
+          "suggested_subskill_codes": [
+            "5.A"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "7.6.A",
+              "description": "Represent a multistep process with an overall equilibrium expression, using the constituent K expressions for each individual reaction.",
+              "essential_knowledge": [
+                {
+                  "id": "7.6.A.1",
+                  "description": "When a reaction is reversed, K is inverted."
+                },
+                {
+                  "id": "7.6.A.2",
+                  "description": "When the stoichiometric coefficients of a reaction are multiplied by a factor c, K is raised to the power c."
+                },
+                {
+                  "id": "7.6.A.3",
+                  "description": "When reactions are added together, the K of the resulting overall reaction is the product of the K's for the reactions that were summed."
+                },
+                {
+                  "id": "7.6.A.4",
+                  "description": "Since the expressions for K and Q have identical mathematical forms, all valid algebraic manipulations of K also apply to Q."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7.7",
+          "name": "Calculating Equilibrium Concentrations",
+          "suggested_subskill_codes": [
+            "3.A"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "7.7.A",
+              "description": "Identify the concentrations or partial pressures of chemical species at equilibrium based on the initial conditions and the equilibrium constant.",
+              "essential_knowledge": [
+                {
+                  "id": "7.7.A.1",
+                  "description": "The concentrations or partial pressures of species at equilibrium can be predicted given the balanced reaction, initial concentrations, and the appropriate K."
+                },
+                {
+                  "id": "7.7.A.2",
+                  "description": "When Q < K, the reaction will proceed with a net consumption of reactants and generation of products. When Q > K, the reaction will proceed with a net consumption of products and generation of reactants. When Q = K, the system is at dynamic equilibrium; both forward and reverse reactions proceed at the same rate, and the proportion of reactants and products remains constant."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7.8",
+          "name": "Representations of Equilibrium",
+          "suggested_subskill_codes": [
+            "3.C"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "7.8.A",
+              "description": "Represent a system undergoing a reversible reaction with a particulate model.",
+              "essential_knowledge": [
+                {
+                  "id": "7.8.A.1",
+                  "description": "Particulate representations can be used to describe the relative numbers of reactant and product particles present prior to and at equilibrium, and the value of the equilibrium constant."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7.9",
+          "name": "Introduction to Le Châtelier's Principle",
+          "suggested_subskill_codes": [
+            "6.F"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "7.9.A",
+              "description": "Identify the response of a system at equilibrium to an external stress, using Le Châtelier's principle.",
+              "essential_knowledge": [
+                {
+                  "id": "7.9.A.1",
+                  "description": "Le Châtelier's principle can be used to predict the response of a system to stresses such as addition or removal of a chemical species, change in temperature, change in volume/ pressure of a gas-phase system, or dilution of a reaction system."
+                },
+                {
+                  "id": "7.9.A.2",
+                  "description": "Le Châtelier's principle can be used to predict the effect that a stress will have on experimentally measurable properties such as pH, temperature, and color of a solution."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7.10",
+          "name": "Reaction Quotient and Le Châtelier's Principle",
+          "suggested_subskill_codes": [
+            "5.F"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "7.10.A",
+              "description": "Explain the relationships between Q, K, and the direction in which a reversible reaction will proceed to reach equilibrium.",
+              "essential_knowledge": [
+                {
+                  "id": "7.10.A.1",
+                  "description": "A disturbance to a system at equilibrium causes Q to differ from K, thereby taking the system out of equilibrium. The system responds by bringing Q back into agreement with K, thereby establishing a new equilibrium state."
+                },
+                {
+                  "id": "7.10.A.2",
+                  "description": "Some stresses, such as changes in concentration, cause a change in Q only. A change in temperature causes a change in K. In either case, the concentrations or partial pressures of species redistribute to bring Q and K back into equality."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7.11",
+          "name": "Introduction to Solubility Equilibria",
+          "suggested_subskill_codes": [
+            "5.B"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "7.11.A",
+              "description": "Calculate the solubility of a salt based on the value of K_sp for the salt.",
+              "essential_knowledge": [
+                {
+                  "id": "7.11.A.1",
+                  "description": "The dissolution of a salt is a reversible process whose extent can be described by K_sp, the solubility-product constant."
+                },
+                {
+                  "id": "7.11.A.2",
+                  "description": "The solubility of a substance can be calculated from the K_sp for the dissolution process. This relationship can also be used to predict the relative solubility of different substances."
+                },
+                {
+                  "id": "7.11.A.3",
+                  "description": "The solubility rules (see 4.7.A.5) can be quantitatively related to K_sp, in which K_sp values >1 correspond to soluble salts."
+                },
+                {
+                  "id": "7.11.A.4",
+                  "description": "The molar solubility of one or more species in a saturated solution can be used to calculate the K_sp of a substance."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7.12",
+          "name": "Common-Ion Effect",
+          "suggested_subskill_codes": [
+            "2.F"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "7.12.A",
+              "description": "Identify the solubility of a salt, and/or the value of K_sp for the salt, based on the concentration of a common ion already present in solution.",
+              "essential_knowledge": [
+                {
+                  "id": "7.12.A.1",
+                  "description": "The solubility of a salt is reduced when it is dissolved into a solution that already contains one of the ions present in the salt. The impact of this \"common-ion effect\" on solubility can be understood qualitatively using Le Châtelier's principle or calculated from the K_sp for the dissolution process."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Acids and Bases",
+      "developing_understanding": "This unit builds on the content about chemical equilibrium studied in Unit 7. Chemical equilibrium plays an important role in acid-base chemistry and solubility. The proton-exchange reactions of acid-base chemistry are reversible reactions that reach equilibrium quickly, and much of acid-base chemistry can be understood by applying the principles of chemical equilibrium. Most acid-base reactions have either large or small values of K, which means qualitative conclusions regarding equilibrium state can often be drawn without extensive computations. In the final unit, the equilibrium constant is related to temperature and the difference in Gibbs free energy between the reactants and products.",
+      "building_practices": "In Unit 8, students will apply the explanations and calculations they learned in Unit 7 to the acid-base equilibrium system. Students will collect titration data and develop titration curves to represent a variety of acid-base systems. They will analyze these titration curves to describe the similarities and differences between a strong acid-strong base and a weak acid-strong base or weak base-strong acid titration, identify the equivalence points and the half-equivalence points, and identify the buffering regions of the curves. Students will use the information presented graphically in the titration curves to complete calculations to find the equilibrium constant for the reactions (Ka or Kb), determine the concentration of an unknown, and support claims about how a particular buffer system may work when an acid or base is introduced. From these calculations and what is known about the chemical system, students will then develop explanations for how potential sources of error may have affected experimental results and associated calculations.",
+      "preparing_for_exam": "On the AP Exam, students must be able to use experimental data to make calculations and support claims. Students often encounter difficulty with questions that require them to use titration curves to identify the equivalence and half-equivalence points or to complete calculations or estimations of either the concentration or pH of an unknown at a particular point on the curve. They also struggle to justify the selection of an appropriate indicator for the end point of the titration. In these situations, students can face challenges with unit conversion, or they can confuse half-equivalence, equivalence, and endpoint. Students may also struggle to understand what is represented in different types of titration curves. Teachers can provide students with multiple opportunities to describe why titration curves have characteristic shapes for certain acid- base equilibrium systems. Teachers can also provide opportunities to choose and implement mathematical routines to manipulate and interpret titration data and connect that interpretation to chemistry concepts. The half-equivalence point is a helpful reference point to visualize ratios of acid/conjugate base, particularly when combined with particulate representations.",
+      "topics": [
+        {
+          "id": "8.1",
+          "name": "Introduction to Acids and Bases",
+          "suggested_subskill_codes": [
+            "5.B"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "8.1.A",
+              "description": "Calculate the values of pH and pOH, based on K and the concentration of all species present in a neutral solution of water.",
+              "essential_knowledge": [
+                {
+                  "id": "8.1.A.1",
+                  "description": "The concentrations of hydronium ion and hydroxide ion are often reported as pH and pOH, respectively."
+                },
+                {
+                  "id": "8.1.A.2",
+                  "description": "Water autoionizes with an equilibrium constant K ."
+                },
+                {
+                  "id": "8.1.A.3",
+                  "description": "In pure water, pH = pOH is called a neutral solution. At 25°C, pK = 14.0 and thus pH = pOH = 7.0."
+                },
+                {
+                  "id": "8.1.A.4",
+                  "description": "The value of K is temperature dependent, so the pH of pure, neutral water will deviate from 7.0 at temperatures other than 25°C."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8.2",
+          "name": "pH and pOH of Strong Acids and Bases",
+          "suggested_subskill_codes": [
+            "5.B"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "8.2.A",
+              "description": "Calculate pH and pOH based on concentrations of all species in a solution of a strong acid or a strong base.",
+              "essential_knowledge": [
+                {
+                  "id": "8.2.A.1",
+                  "description": "Molecules of a strong acid (e.g., HCl, HBr, HI, HClO₄, H₂SO₄, and HNO₃) will completely ionize in aqueous solution to produce hydronium ions and the conjugate base of the acid. As such, the concentration of H₃O⁺ in a strong acid solution is equal to the initial concentration of the strong acid, and thus the pH of the strong acid solution is easily calculated."
+                },
+                {
+                  "id": "8.2.A.2",
+                  "description": "When dissolved in solution, strong bases (e.g., group I and II hydroxides) completely dissociate to produce hydroxide ions. As such, the concentration of OH⁻ in a strong base solution is equal to the initial concentration of a group I hydroxide and double the initial concentration of a group II hydroxide, and thus the pOH (and pH) of the strong base solution is easily calculated."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8.3",
+          "name": "Weak Acid and Base Equilibria",
+          "suggested_subskill_codes": [
+            "5.C"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "8.3.A",
+              "description": "Explain the relationship among pH, pOH, and concentrations of all species in a solution of a monoprotic weak acid or weak base.",
+              "essential_knowledge": [
+                {
+                  "id": "8.3.A.1",
+                  "description": "Weak acids react with water to produce hydronium ions. However, only a small percentage of molecules of a weak acid will ionize in this way. Thus, the concentration of H₃O⁺ is much less than the initial concentration of the molecular acid, and the vast majority of the acid molecules remain un-ionized."
+                },
+                {
+                  "id": "8.3.A.2",
+                  "description": "A solution of a weak acid involves equilibrium between an un-ionized acid and its conjugate base. The equilibrium constant for this reaction is Kₐ, often reported as pKₐ. The pH of a weak acid solution can be determined from the initial acid concentration and the pKₐ."
+                },
+                {
+                  "id": "8.3.A.3",
+                  "description": "Weak bases react with water to produce hydroxide ions in solution. However, ordinarily just a small percentage of the molecules of a weak base in solution will ionize in this way. Thus, the concentration of OH⁻ in the solution does not equal the initial concentration of the base, and the vast majority of the base molecules remain un-ionized."
+                },
+                {
+                  "id": "8.3.A.4",
+                  "description": "A solution of a weak base involves equilibrium between an un-ionized base and its conjugate acid. The equilibrium constant for this reaction is K , often reported as pK . The pH of a weak base solution can be determined from the initial base concentration and the pK ."
+                },
+                {
+                  "id": "8.3.A.5",
+                  "description": "The percent ionization of a weak acid (or base) can be calculated from its pK (pK ) and the initial concentration of the acid (base). The percent ionization can also be calculated from the initial concentration of the acid (base) and the equilibrium concentration of any of the species in the equilibrium expression."
+                },
+                {
+                  "id": "8.3.A.6",
+                  "description": "For any conjugate acid-base pair, the acid ionization constant and base ionization constant are related by K :"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8.4",
+          "name": "Acid-Base Reactions and Buffers",
+          "suggested_subskill_codes": [
+            "5.F"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "8.4.A",
+              "description": "Explain the relationship among the concentrations of major species in a mixture of weak and strong acids and bases.",
+              "essential_knowledge": [
+                {
+                  "id": "8.4.A.1",
+                  "description": "When a strong acid and a strong base are mixed, they react quantitatively in a reaction represented by the equation:"
+                },
+                {
+                  "id": "8.4.A.2",
+                  "description": "When a weak acid and a strong base are mixed, they react quantitatively in a reaction represented by the equation:"
+                },
+                {
+                  "id": "8.4.A.3",
+                  "description": "When a weak base and a strong acid are mixed, they will react quantitatively in a reaction represented by the equation:"
+                },
+                {
+                  "id": "8.4.A.4",
+                  "description": "When a weak acid and a weak base are mixed, they will react to an equilibrium state whose reaction may be represented by the equation:"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8.5",
+          "name": "Acid-Base Titrations",
+          "suggested_subskill_codes": [
+            "5.D"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "8.5.A",
+              "description": "Explain results from the titration of a mono- or polyprotic acid or base solution, in relation to the properties of the solution and its components.",
+              "essential_knowledge": [
+                {
+                  "id": "8.5.A.1",
+                  "description": "An acid-base reaction can be carried out under controlled conditions in a titration. A titration curve, plotting pH against the volume of titrant added, is useful for summarizing results from a titration."
+                },
+                {
+                  "id": "8.5.A.2",
+                  "description": "At the equivalence point for titrations of monoprotic acids or bases, the number of moles of titrant added is equal to the number of moles of analyte originally present. This relationship can be used to obtain the concentration of the analyte. This is the case for titrations of strong acids/bases and weak acids/bases."
+                },
+                {
+                  "id": "8.5.A.3",
+                  "description": "For titrations of weak acids/bases, it is useful to consider the point halfway to the equivalence point, that is, the half-equivalence point. At this point, there are equal concentrations of each species in the conjugate acid-base pair, for example, for a weak acid [HA] = [A⁻]. Because pH = pKₐ when the conjugate acid and base have equal concentrations, the pKₐ can be determined from the pH at the half-equivalence point in a titration."
+                },
+                {
+                  "id": "8.5.A.4",
+                  "description": "At the equivalence point, pH is determined by the major species in solution. Strong acid and strong base titrations result in neutral pH at the equivalence point. However, in titrations of weak acids (weak bases), the conjugate base of the weak acid (conjugate acid of the weak base) is present at the equivalence point and can undergo proton-transfer reactions with the surrounding water, producing basic (acidic) solutions."
+                },
+                {
+                  "id": "8.5.A.5",
+                  "description": "For polyprotic acids, titration curves can be used to determine the number of acidic protons. In doing so, the major species present at any point along the curve can be identified, along with the pKₐ associated with each proton in a weak polyprotic acid."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8.6",
+          "name": "Molecular Structure of Acids and Bases",
+          "suggested_subskill_codes": [
+            "6.C"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "8.6.A",
+              "description": "Explain the relationship between the strength of an acid or base and the structure of the molecule or ion.",
+              "essential_knowledge": [
+                {
+                  "id": "8.6.A.1",
+                  "description": "The protons on a molecule that will participate in acid-base reactions, and the relative strength of these protons, can be inferred from the molecular structure."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8.7",
+          "name": "pH and pKₐ",
+          "suggested_subskill_codes": [
+            "2.D"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "8.7.A",
+              "description": "Explain the relationship between the predominant form of a weak acid or base in solution at a given pH and the pKₐ of the conjugate acid or the pK of the conjugate base.",
+              "essential_knowledge": [
+                {
+                  "id": "8.7.A.1",
+                  "description": "The protonation state of an acid or base (i.e., the relative concentrations of HA and A⁻) can be predicted by comparing the pH of a solution to the pKₐ of the acid in that solution. When solution pH < acid pKₐ, the acid form has a higher concentration than the base form. When solution pH > acid pKₐ, the base form has a higher concentration than the acid form."
+                },
+                {
+                  "id": "8.7.A.2",
+                  "description": "Acid-base indicators are substances that exhibit different properties (such as color) in their protonated versus deprotonated state, making that property respond to the pH of a solution."
+                },
+                {
+                  "id": "8.7.A.3",
+                  "description": "To ensure accurate results in a titration experiment, acid-base indicators should be selected that have a pKₐ close to the pH at the equivalence point."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8.8",
+          "name": "Properties of Buffers",
+          "suggested_subskill_codes": [
+            "6.D"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "8.8.A",
+              "description": "Explain the relationship between the ability of a buffer to stabilize pH and the reactions that occur when an acid or a base is added to a buffered solution.",
+              "essential_knowledge": [
+                {
+                  "id": "8.8.A.1",
+                  "description": "A buffer solution contains a large concentration of both members in a conjugate acid-base pair. The conjugate acid reacts with added base and the conjugate base reacts with added acid. These reactions are responsible for the ability of a buffer to stabilize pH."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8.9",
+          "name": "Henderson-Hasselbalch Equation",
+          "suggested_subskill_codes": [
+            "5.F"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "8.9.A",
+              "description": "Identify the pH of a buffer solution based on the identity and concentrations of the conjugate acid-base pair used to create the buffer.",
+              "essential_knowledge": [
+                {
+                  "id": "8.9.A.1",
+                  "description": "The pH of the buffer is related to the pKₐ of the acid and the concentration ratio of the conjugate acid-base pair. This relation is a consequence of the equilibrium expression associated with the dissociation of a weak acid, and is described by the Henderson-Hasselbalch equation. Adding small amounts of acid or base to a buffered solution does not significantly change the ratio of [A⁻]/[HA] and thus does not significantly change the solution pH. The change in pH on addition of acid or base to a buffered solution is therefore much less than it would have been in the absence of the buffer."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8.10",
+          "name": "Buffer Capacity",
+          "suggested_subskill_codes": [
+            "6.G"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "8.10.A",
+              "description": "Explain the relationship between the buffer capacity of a solution and the relative concentrations of the conjugate acid and conjugate base components of the solution.",
+              "essential_knowledge": [
+                {
+                  "id": "8.10.A.1",
+                  "description": "Increasing the concentration of the buffer components (while keeping the ratio of these concentrations constant) keeps the pH of the buffer the same but increases the capacity of the buffer to neutralize added acid or base."
+                },
+                {
+                  "id": "8.10.A.2",
+                  "description": "When a buffer has more conjugate acid than base, it has a greater buffer capacity for addition of added base than acid. When a buffer has more conjugate base than acid, it has a greater buffer capacity for addition of added acid than base."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8.11",
+          "name": "pH and Solubility",
+          "suggested_subskill_codes": [
+            "2.D"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "8.11.A",
+              "description": "Identify the qualitative effect of changes in pH on the solubility of a salt.",
+              "essential_knowledge": [
+                {
+                  "id": "8.11.A.1",
+                  "description": "The solubility of a salt is pH sensitive when one of the constituent ions is a weak acid, a weak base, or the hydroxide ion. These effects can be understood qualitatively using Le Châtelier’s principle."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Thermodynamics and Electrochemistry",
+      "developing_understanding": "This unit allows students to connect principles and calculations across Units 1–8. The thermodynamics of a chemical reaction is connected to both the structural aspects of the reaction and the macroscopic outcomes of the reaction. All changes in matter involve some form of energy change. One key determinant of chemical transformations is the change in potential energy that results from changes in electrostatic forces. Chemical systems undergo three main processes that change their energy: heating/cooling, phase transitions, and chemical reactions. Applying the laws of thermodynamics will allow students to describe the essential role of energy and explain and predict the direction of changes in matter.",
+      "building_practices": "5.F 6.D 6.Ε To achieve success in AP Chemistry and in Unit 9 specifically, students must connect principles and calculations across the areas of kinetics, thermodynamics, equilibrium, and electrochemistry to explain and support claims about what is happening in chemical systems. Sometimes support of such claims comes from students being able to estimate an approximate value of a required characteristic of a chemical system rather than use a routine application of an algorithm. Students are introduced to entropy as a factor that is necessary to explain why some endothermic reactions occur in spite of the higher energy that products may have in these changes. Students will use particulate representations and graphical distribution of kinetic energy to describe the increase in entropy with increasing temperature. In addition, students will explore how to use Gibbs free energy for determining the thermodynamic favorability by considering the change in both enthalpy and entropy. Students will use the concepts of thermodynamics to generate more comprehensive claims about what is happening in a galvanic or electrolytic cell.",
+      "preparing_for_exam": "On the AP Exam, students must be able to provide an appropriate explanation of the connection between entropy, enthalpy, and Gibbs free energy and the thermodynamic favorability of a chemical reaction. Students often struggle with questions that require them to reason about whether enthalpy, entropy, or both drive a reaction. They will state that both enthalpy and entropy drive the reaction by using the equation for Gibbs free energy instead of reasoning about which might be more of a driving factor than the other. Further, some students fail to connect macroscopic observational data to the concepts of entropy and enthalpy to support claims about which concept was driving the reaction. Teachers can ensure that students understand that the first step in making thermodynamic favorability predictions is to define and interrelate enthalpy, entropy, and Gibbs free energy in relation to driving chemical or physical processes. Students should be shown how the concepts of kinetics, equilibrium, and thermodynamics are connected in order to explain why thermodynamically favorable reactions might produce small concentrations of product and why unfavorable reactions can produce large concentrations of product.",
+      "topics": [
+        {
+          "id": "9.1",
+          "name": "Introduction to Entropy",
+          "suggested_subskill_codes": [
+            "6.C"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "9.1.A",
+              "description": "Identify the sign and relative magnitude of the entropy change associated with chemical or physical processes.",
+              "essential_knowledge": [
+                {
+                  "id": "9.1.A.1",
+                  "description": "Entropy increases when matter becomes more dispersed. For example, the phase change from solid to liquid or from liquid to gas results in a dispersal of matter as the individual particles become freer to move and generally occupy a larger volume. Similarly, for a gas, the entropy increases when there is an increase in volume (at constant temperature), and the gas molecules are able to move within a larger space. For reactions involving gas-phase reactants or products, the entropy generally increases when the total number of moles of gas-phase products is greater than the total number of moles of gas-phase reactants."
+                },
+                {
+                  "id": "9.1.A.2",
+                  "description": "Entropy increases when energy is dispersed. According to kinetic molecular theory (KMT), the distribution of kinetic energy among the particles of a gas broadens as the temperature increases. As a result, the entropy of the system increases with an increase in temperature."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "9.2",
+          "name": "Absolute Entropy and Entropy Change",
+          "suggested_subskill_codes": [
+            "5.F"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "9.2.A",
+              "description": "Calculate the standard entropy change for a chemical or physical process based on the absolute entropies (standard molar entropies) of the species involved in the process.",
+              "essential_knowledge": [
+                {
+                  "id": "9.2.A.1",
+                  "description": "The entropy change for a process can be calculated from the absolute entropies of the species involved before and after the process occurs. EQN: ΔS°reaction = ΣS°products − ΣS°reactants"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "9.3",
+          "name": "Gibbs Free Energy and Thermodynamic Favorability",
+          "suggested_subskill_codes": [
+            "6.E"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "9.3.A",
+              "description": "Explain whether a physical or chemical process is thermodynamically favored based on an evaluation of ΔG°.",
+              "essential_knowledge": [
+                {
+                  "id": "9.3.A.1",
+                  "description": "The Gibbs free energy change for a chemical process in which all the reactants and products are present in a standard state (as pure substances, as solutions of 1.0 M concentration, or as gases at a pressure of 1.0 atm (or 1.0 bar)) is given the symbol ΔG°."
+                },
+                {
+                  "id": "9.3.A.2",
+                  "description": "The standard Gibbs free energy change for a chemical or physical process is a measure of thermodynamic favorability. Historically, the term \"spontaneous\" has been used to describe processes for which ΔG° < 0. The phrase \"thermodynamically favored\" is preferred instead so that common misunderstandings (equating \"spontaneous\" with \"suddenly\" or \"without cause\") can be avoided. When ΔG° < 0 for the process, it is said to be thermodynamically favored."
+                },
+                {
+                  "id": "9.3.A.3",
+                  "description": "The standard Gibbs free energy change for a physical or chemical process may also be determined from the standard Gibbs free energy of formation of the reactants and products. EQN: ΔG°reaction = ΣΔG°f,products - ΣΔG°f,reactants"
+                },
+                {
+                  "id": "9.3.A.4",
+                  "description": "In some cases, it is necessary to consider both enthalpy and entropy to determine if a process will be thermodynamically favored. The freezing of water and the dissolution of sodium nitrate are examples of such phenomena."
+                },
+                {
+                  "id": "9.3.A.5",
+                  "description": "Knowing the values of ΔH° and ΔS° for a process at a given temperature allows ΔG° to be calculated directly. EQN: ΔG° = ΔH° – TΔS°"
+                },
+                {
+                  "id": "9.3.A.6",
+                  "description": "In general, the temperature conditions for a process to be thermodynamically favored (ΔG° < 0) can be predicted from the signs of ΔH° and ΔS° as shown in the table below: ΔH°"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "9.4",
+          "name": "Thermodynamic and Kinetic Control",
+          "suggested_subskill_codes": [
+            "6.E"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "9.4.A",
+              "description": "Explain, in terms of kinetics, why a thermodynamically favored reaction might not occur at a measurable rate.",
+              "essential_knowledge": [
+                {
+                  "id": "9.4.A.1",
+                  "description": "Many processes that are thermodynamically favored do not occur to any measurable extent, or they occur at extremely slow rates."
+                },
+                {
+                  "id": "9.4.A.2",
+                  "description": "Processes that are thermodynamically favored, but do not proceed at a measurable rate, are under \"kinetic control.\" High activation energy is a common reason for a process to be under kinetic control. The fact that a process does not proceed at a noticeable rate does not mean that the chemical system is at equilibrium. If a process is known to be thermodynamically favored, and yet does not occur at a measurable rate, it is reasonable to conclude that the process is under kinetic control."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "9.5",
+          "name": "Free Energy and Equilibrium",
+          "suggested_subskill_codes": [
+            "6.D"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "9.5.A",
+              "description": "Explain whether a process is thermodynamically favored using the relationships between K, ΔG°, and T.",
+              "essential_knowledge": [
+                {
+                  "id": "9.5.A.1",
+                  "description": "The phrase \"thermodynamically favored\" (ΔG° < 0) means that the products are favored at equilibrium (K > 1) under standard conditions."
+                },
+                {
+                  "id": "9.5.A.2",
+                  "description": "The equilibrium constant is related to free energy by the equations EQN: K = e^−ΔG°/RT and EQN: ΔG° = −RT ln K."
+                },
+                {
+                  "id": "9.5.A.3",
+                  "description": "Connections between K and ΔG° can be made qualitatively through estimation. When ΔG° is near zero, the equilibrium constant will be close to 1. When ΔG° is much larger or much smaller than RT, the value of K deviates strongly from 1."
+                },
+                {
+                  "id": "9.5.A.4",
+                  "description": "Processes with ΔG° < 0 favor products (i.e., K > 1) and those with ΔG° > 0 favor reactants (i.e., K < 1)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "9.6",
+          "name": "Free Energy of Dissolution",
+          "suggested_subskill_codes": [
+            "4.D"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "9.6.A",
+              "description": "Explain the relationship between the solubility of a salt and changes in the enthalpy and entropy that occur in the dissolution process.",
+              "essential_knowledge": [
+                {
+                  "id": "9.6.A.1",
+                  "description": "The free energy change (ΔG°) for dissolution of a substance reflects a number of factors: the breaking of the intermolecular interactions that hold the solid together, the reorganization of the solvent around the dissolved species, and the interaction of the dissolved species with the solvent. It is possible to estimate the sign and relative magnitude of the enthalpic and entropic contributions to each of these factors. However, making predictions for the total change in free energy of dissolution can be challenging due to the cancellations among the free energies associated with the three factors cited."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "9.7",
+          "name": "Coupled Reactions",
+          "suggested_subskill_codes": [
+            "4.D"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "9.7.A",
+              "description": "Explain the relationship between external sources of energy or coupled reactions and their ability to drive thermodynamically unfavorable processes.",
+              "essential_knowledge": [
+                {
+                  "id": "9.7.A.1",
+                  "description": "An external source of energy can be used to make a thermodynamically unfavorable process occur. Examples include: i. Electrical energy to drive an electrolytic cell or charge a battery. ii. Light to drive the overall conversion of carbon dioxide to glucose in photosynthesis."
+                },
+                {
+                  "id": "9.7.A.2",
+                  "description": "A desired product can be formed by coupling a thermodynamically unfavorable reaction that produces that product to a favorable reaction (e.g., the conversion of ATP to ADP in biological systems). In the coupled system, the individual reactions share one or more common intermediates. The sum of the individual reactions produces an overall reaction that achieves the desired outcome and has ΔG° < 0."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "9.8",
+          "name": "Galvanic (Voltaic) and Electrolytic Cells",
+          "suggested_subskill_codes": [
+            "2.F"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "9.8.A",
+              "description": "Explain the relationship between the physical components of an electrochemical cell and the overall operational principles of the cell.",
+              "essential_knowledge": [
+                {
+                  "id": "9.8.A.1",
+                  "description": "Each component of an electrochemical cell (electrodes, solutions in the half-cells, salt bridge, voltage/current measuring device) plays a specific role in the overall functioning of the cell. The operational characteristics of the cell (galvanic vs. electrolytic, direction of electron flow, reactions occurring in each half-cell, change in electrode mass, evolution of a gas at an electrode, ion flow through the salt bridge) can be described at both the macroscopic and particulate levels."
+                },
+                {
+                  "id": "9.8.A.2",
+                  "description": "Galvanic, sometimes called voltaic, cells involve a thermodynamically favored reaction, whereas electrolytic cells involve a thermodynamically unfavored reaction. Visual representations of galvanic and electrolytic cells are tools of analysis to identify where half-reactions occur and in what direction current flows."
+                },
+                {
+                  "id": "9.8.A.3",
+                  "description": "For all electrochemical cells, oxidation occurs at the anode and reduction occurs at the cathode. Exclusion Statement: Labeling an electrode as positive or negative will not be assessed on the AP Exam."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "9.9",
+          "name": "Cell Potential and Free Energy",
+          "suggested_subskill_codes": [
+            "5.F"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "9.9.A",
+              "description": "Explain whether an electrochemical cell is thermodynamically favored, based on its standard cell potential and the constituent half-reactions within the cell.",
+              "essential_knowledge": [
+                {
+                  "id": "9.9.A.1",
+                  "description": "Electrochemistry encompasses the study of redox reactions that occur within electrochemical cells. The reactions are either thermodynamically favored (resulting in a positive voltage) or thermodynamically unfavored (resulting in a negative voltage and requiring an externally applied potential for the reaction to proceed)."
+                },
+                {
+                  "id": "9.9.A.2",
+                  "description": "The standard cell potential of electrochemical cells can be calculated by identifying the oxidation and reduction half-reactions and their respective standard reduction potentials."
+                },
+                {
+                  "id": "9.9.A.3",
+                  "description": "ΔG° (standard Gibbs free energy change) is proportional to the negative of the cell potential for the redox reaction from which it is constructed. Thus, a cell with a positive E° involves a thermodynamically favored reaction, and a cell with a negative E° involves a thermodynamically unfavored reaction. EQN: ΔG° = −nFE°"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "9.10",
+          "name": "Cell Potential Under Nonstandard Conditions",
+          "suggested_subskill_codes": [
+            "6.D"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "9.10.A",
+              "description": "Explain the relationship between deviations from standard cell conditions and changes in the cell potential.",
+              "essential_knowledge": [
+                {
+                  "id": "9.10.A.1",
+                  "description": "In a real system under nonstandard conditions, the cell potential will vary depending on the concentrations of the active species. The cell potential is a driving force toward equilibrium; the farther the reaction is from equilibrium, the greater the magnitude of the cell potential."
+                },
+                {
+                  "id": "9.10.A.2",
+                  "description": "Equilibrium arguments such as Le Châtelier's principle do not apply to electrochemical systems, because the systems are not in equilibrium."
+                },
+                {
+                  "id": "9.10.A.3",
+                  "description": "The standard cell potential E° corresponds to the standard conditions of Q = 1. As the system approaches equilibrium, the magnitude (i.e., absolute value) of the cell potential decreases, reaching zero at equilibrium (when Q = K). Deviations from standard conditions that take the cell further from equilibrium than Q = 1 will increase the magnitude of the cell potential relative to E°. Deviations from standard conditions that take the cell closer to equilibrium than Q= 1 will decrease the magnitude of the cell potential relative to E°. In concentration cells, the direction of spontaneous electron flow can be determined by considering the direction needed to reach equilibrium."
+                },
+                {
+                  "id": "9.10.A.4",
+                  "description": "Algorithmic calculations using the Nernst equation are insufficient to demonstrate an understanding of electrochemical cells under nonstandard conditions. However, students should qualitatively understand the effects of concentration on cell potential and use conceptual reasoning, including the qualitative use of the Nernst equation: EQN: E = E° − (RT/nF) ln Q to solve problems."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "9.11",
+          "name": "Electrolysis and Faraday's Law",
+          "suggested_subskill_codes": [
+            "5.B"
+          ],
+          "big_ideas": [],
+          "learning_objectives": [
+            {
+              "id": "9.11.A",
+              "description": "Calculate the amount of charge flow based on changes in the amounts of reactants and products in an electrochemical cell.",
+              "essential_knowledge": [
+                {
+                  "id": "9.11.A.1",
+                  "description": "Faraday's laws can be used to determine the stoichiometry of the redox reaction occurring in an electrochemical cell with respect to the following: i. Number of electrons transferred ii. Mass of material deposited on or removed from an electrode (as in electroplating) iii. Current iv. Time elapsed v. Charge of ionic species EQN: I = q/t"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exam_sections": [
+    {
+      "section": "I",
+      "question_type": "Multiple Choice",
+      "Number of Questions": "60",
+      "exam_weighting": "50%",
+      "timing": "90 minutes",
+      "descriptions": [
+        "The AP Chemistry Exam assesses student application of the science practices and understanding of the learning objectives outlined in the course framework.",
+        "The exam is 3 hours and 15 minutes long and includes 60 multiple-choice questions and 7 free-response questions.",
+        "A scientific or graphing calculator is recommended for use on both sections of the exam.",
+        "Students are provided with the periodic table and a formula sheet that lists specific and relevant formulas for use on the exam (see Appendixes).",
+        "The details of the exam, including exam weighting and timing, can be found below:",
+        "Science Practices 1, 2, 4, 5, and 6 are all assessed in the multiple-choice section with the following exam weighting (Science Practice 3 is not assessed in the multiple-choice section):",
+        "Practice 1: Models and Representations",
+        "Practice 2: Question and Method",
+        "Practice 4: Model Analysis",
+        "Practice 5: Mathematical Routines",
+        "Practice 6: Argumentation"
+      ]
+    },
+    {
+      "section": "II",
+      "question_type": "Free Response",
+      "Number of Questions": "7",
+      "exam_weighting": "50%",
+      "timing": "105 minutes",
+      "descriptions": [
+        "Long questions (10 points each)",
+        "Short questions (4 points each)",
+        "All six science practices are assessed in the free-response section with the following exam weighting:",
+        "Practice 1: Models and Representations",
+        "Practice 2: Question and Method",
+        "Practice 3: Representing Data and Phenomena",
+        "Practice 4: Model Analysis",
+        "Practice 5: Mathematical Routines",
+        "Practice 6: Argumentation"
+      ]
+    }
+  ],
+  "task_verbs": [
+    {
+      "verb": "Calculate",
+      "description": "Perform mathematical steps to arrive at a final answer, including algebraic expressions, properly substituted numbers, and correct labeling of units and significant figures."
+    },
+    {
+      "verb": "Describe",
+      "description": "Provide the relevant characteristics of a specified topic."
+    },
+    {
+      "verb": "Determine",
+      "description": "Make a decision or arrive at a conclusion after reasoning, observation, or applying mathematical routines (calculations)."
+    },
+    {
+      "verb": "Estimate",
+      "description": "Roughly calculate numerical quantities, values (greater than, equal to, less than), or signs (negative, positive) of quantities based on experimental evidence or provided data."
+    },
+    {
+      "verb": "Explain",
+      "description": "Provide information about how or why a relationship, process, pattern, position, situation, or outcome occurs, using evidence and/or reasoning to support or qualify a claim. Explain \"how\" typically requires analyzing the relationship, process, pattern, position, situation, or outcome; whereas, explain \"why\" typically requires analysis of motivations or reasons for the relationship, process, pattern, position, situation, or outcome. Also phrased as \"give one reason.\""
+    },
+    {
+      "verb": "Identify/Indicate/Circle",
+      "description": "Indicate or provide information about a specified topic in words or by circling given information. Also phrased as \"What is?\" or \"Which?\" or other interrogatory words."
+    },
+    {
+      "verb": "Justify",
+      "description": "Provide evidence to support, qualify, or defend a claim and/or provide reasoning to explain how that evidence supports or qualifies the claim."
+    },
+    {
+      "verb": "Make a claim",
+      "description": "Make an assertion that is based on evidence or knowledge."
+    },
+    {
+      "verb": "Predict/Make a prediction",
+      "description": "Predict the causes or effects of a change in, or disruption to, one or more components in a relationship, pattern, process, or system."
+    },
+    {
+      "verb": "Represent/Draw/Write an Equation/Complete a Diagram",
+      "description": "Use appropriate graphs, symbols, words, and/or models to describe phenomena, characteristics, and/or relationships."
+    }
+  ]
+}

@@ -111,6 +111,25 @@
         margin: 60px 0;
       }
 
+      .generated-image {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: block;
+        margin: 0 auto;
+      }
+
+      .stimulus-error {
+        margin: 15px 0;
+        padding: 10px;
+        background-color: #fff3cd;
+        border: 1px solid #ffc107;
+        border-radius: 4px;
+        font-style: italic;
+      }
+
       @media print {
         body {
           padding: 20px;
@@ -140,9 +159,23 @@
 
       {% if frq.stimulus %}
       <div class="diagram">
-        {% if frq.stimulus.type == "svg" %} {{ frq.stimulus.content | safe }} {%
-        elif frq.stimulus.type == "table" %} {{ frq.stimulus.content | safe }}
-        {% endif %}
+        {% if frq.stimulus.type == "image" %} {% if frq.stimulus.base64 %}
+        <img
+          src="data:image/jpeg;base64,{{ frq.stimulus.base64 }}"
+          alt="{{ frq.stimulus.alt_text }}"
+          class="generated-image"
+        />
+        {% elif frq.stimulus.file_path %}
+        <img
+          src="{{ frq.stimulus.file_path }}"
+          alt="{{ frq.stimulus.alt_text }}"
+          class="generated-image"
+        />
+        {% endif %} {% endif %}
+      </div>
+      {% endif %} {% if frq.stimulus and frq.stimulus.error %}
+      <div class="stimulus-error">
+        <p><em>Visual stimulus unavailable: {{ frq.stimulus.error }}</em></p>
       </div>
       {% endif %} {% for part in frq.parts %}
       <div class="part">

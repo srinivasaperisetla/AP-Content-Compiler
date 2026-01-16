@@ -564,12 +564,14 @@ def get_units(pdf_path):
 TEMPLATE_PATH = "ap_specs/1template.json"
 OUTPUT_DIR = "utils/content"
 AP_COURSES = [
-	"ap_statistics",
+	# "ap_statistics",
+	# "ap_physics_1"
 	# "ap_biology",
 	# "ap_english_language_and_composition",
 	# "ap_african_american_studies",
 	# "ap_calculus_ab_and_bc",
-	# "ap_environmental_science",
+	"ap_environmental_science",
+	"ap_chemistry",
 	# "ap_macroeconomics",
 	# "ap_human_geography",
 ]

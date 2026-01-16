@@ -31,17 +31,20 @@ from utility_functions import (
 	normalize_whitespace,
 	build_skill_lookup,
 	build_big_idea_lookup,
-	is_valid_svg,
-	is_strict_pipe_table,
-	pipe_table_to_html,
-	_looks_like_pipe_table,
 	summarize_invalid_reports,
 	compress_lo_description,
 	initialize_lo_coverage,
 	get_priority_los,
 )
 
+from utils.image_generator import (
+	generate_image_from_prompt,
+	create_image_filename,
+	enhance_prompt_for_image_generation
+)
+
 # Environment and Variables
+load_dotenv()  # Load environment variables from .env file
 os.environ["SSL_CERT_FILE"] = certifi.where()
 
 MODEL = "gemini-2.5-flash"
@@ -143,7 +146,7 @@ def validate_tsv_row(cols: List[str]) -> Optional[str]:
 	if not re.search(r'[a-z][.)]', parts, re.IGNORECASE):
 		return "Parts must contain labeled sections (a., b., etc.)"
 	
-	if stim_type not in {"none", "svg", "table"}:
+	if stim_type not in {"none", "image"}:
 		return "Invalid stimulus_type"
 	
 	if stim_type == "none" and stim_payload.strip():
@@ -151,6 +154,14 @@ def validate_tsv_row(cols: List[str]) -> Optional[str]:
 	
 	if stim_type != "none" and not stim_payload.strip():
 		return "Missing stimulus_payload"
+	
+	if stim_type == "image" and not stim_payload.startswith("IMAGE_PROMPT:"):
+		return "Image stimulus must start with 'IMAGE_PROMPT:'"
+	
+	if stim_type == "image":
+		prompt = stim_payload.replace("IMAGE_PROMPT:", "").strip()
+		if len(prompt) < 20:
+			return "Image prompt must be detailed (min 20 chars)"
 	
 	return None
 
@@ -211,28 +222,29 @@ def validate_rows_individually(
 				log(f"[{context_label}] Row {row_i} rejected: Invalid LOs {invalid_los}")
 			continue
 		
-		# Validate SVG if present
-		if stim_type == "svg" and not is_valid_svg(stim_payload):
-			invalid_reports.append({
-				"row_index": row_i,
-				"reason": "svg_invalid",
-				"detail": ""
-			})
-			if DEBUG:
-				log(f"[{context_label}] Row {row_i} rejected: Invalid SVG")
-			continue
-		
-		# Validate table if present
-		if stim_type == "table":
-			html_table = pipe_table_to_html(stim_payload)
-			if "<table" not in html_table:
+		# Validate image prompt if present
+		if stim_type == "image":
+			# Validation for image prompt format
+			if not stim_payload.startswith("IMAGE_PROMPT:"):
 				invalid_reports.append({
 					"row_index": row_i,
-					"reason": "table_invalid",
-					"detail": "Could not convert pipe table to HTML"
+					"reason": "image_prompt_missing",
+					"detail": "Image stimulus must start with 'IMAGE_PROMPT:'"
 				})
 				if DEBUG:
-					log(f"[{context_label}] Row {row_i} rejected: Invalid table format")
+					log(f"[{context_label}] Row {row_i} rejected: Missing IMAGE_PROMPT: prefix")
+				continue
+			
+			# Extract and validate prompt length
+			prompt = stim_payload.replace("IMAGE_PROMPT:", "").strip()
+			if len(prompt) < 20:
+				invalid_reports.append({
+					"row_index": row_i,
+					"reason": "image_prompt_too_short",
+					"detail": "Image prompt must be detailed (min 20 chars)"
+				})
+				if DEBUG:
+					log(f"[{context_label}] Row {row_i} rejected: Image prompt too short")
 				continue
 		
 		# Parse parts
@@ -248,17 +260,6 @@ def validate_rows_individually(
 		# Parse scoring guidelines
 		scoring_guidelines = parse_scoring_guidelines(guidelines_str)
 		
-		# Build stimulus object
-		stimulus = None
-		if stim_type == "table":
-			html_table = pipe_table_to_html(stim_payload)
-			if "<table" not in html_table:
-				continue  # Skip if table conversion failed
-			stimulus = {"type": "table", "content": html_table}
-		
-		elif stim_type == "svg":
-			stimulus = {"type": "svg", "content": stim_payload}
-		
 		valid_frqs.append({
 			"id": None,  # Will be assigned later
 			"difficulty": diff,
@@ -267,7 +268,9 @@ def validate_rows_individually(
 			"context": context,
 			"parts": parts_list,
 			"scoring_guidelines": scoring_guidelines,
-			"stimulus": stimulus
+			"stimulus_type": stim_type,
+			"stimulus_content": stim_payload,
+			"stimulus": None  # Will be populated during image generation
 		})
 	
 	return valid_frqs, invalid_reports
@@ -621,39 +624,102 @@ async def process_single_set(
 				log(f"[{context_label}] Repair API Error: {e}")
 				break
 
+	# ----------------------------------------
+	# 3. Final Check & Save
+	# ----------------------------------------
+	if len(all_frqs) >= FRQS_PER_SET:
+		all_frqs = all_frqs[:FRQS_PER_SET]
+		
 		# ----------------------------------------
-		# 3. Final Check & Save
+		# 4. Generate Images for Stimuli
 		# ----------------------------------------
-		if len(all_frqs) >= FRQS_PER_SET:
-			all_frqs = all_frqs[:FRQS_PER_SET]
-			
-			assign_frq_ids(
-				all_frqs,
-				course_id,
-				unit_index,
-				set_index
-			)
-			
-			render_html(
-				html_template=html_template,
-				course_name=course_name,
-				course_id=course_id,
-				unit_title=unit_title,
-				unit_index=unit_index,
-				set_index=set_index,
-				frqs=all_frqs,
-				context_label=context_label
-			)
-			
-			# Update coverage tracker
-			for frq in all_frqs:
-				for lo_id in frq.get("aligned_lo_ids", []):
-					if lo_id in coverage_tracker:
-						coverage_tracker[lo_id] += 1
-			
-			log(f"[{context_label}] ✅ SUCCESS: Saved {len(all_frqs)} FRQs")
-		else:
-			log(f"[{context_label}] ❌ FAILED: Only got {len(all_frqs)}/{FRQS_PER_SET}")
+		log(f"[{context_label}] Starting image generation for FRQs with stimulus_type='image'...")
+		images_generated = 0
+		images_failed = 0
+		
+		for frq_idx, frq in enumerate(all_frqs):
+			if frq.get("stimulus_type") == "image":
+				content = frq.get("stimulus_content", "")
+				
+				if content.startswith("IMAGE_PROMPT:"):
+					raw_prompt = content.replace("IMAGE_PROMPT:", "").strip()
+					
+					# Enhance prompt for better image generation with full context
+					question_stem = frq.get("context", "")  # FRQ uses "context" field
+					enhanced_prompt = enhance_prompt_for_image_generation(
+						raw_prompt=raw_prompt,
+						question_stem=question_stem,
+						question_type="FRQ",
+						course_name=course_name,
+						answer_choices=""  # FRQs don't have answer choices
+					)
+					
+					# Create filename
+					filename = create_image_filename(
+						course_name=course_name,
+						question_type="frq",
+						unit_id=unit["id"],
+						set_index=set_index,
+						question_index=frq_idx
+					)
+					
+					# Generate and save image
+					image_path = OUTPUT_DIR / course_name / f"unit_{unit['id']}" / "images" / filename
+					success, base64_data = await generate_image_from_prompt(
+						prompt=enhanced_prompt,
+						output_path=image_path,
+						api_key=os.getenv("GOOGLE_API_KEY"),
+						aspect_ratio="1:1"  # Can adjust based on stimulus type if needed
+					)
+					
+					if success:
+						# Update FRQ with image data
+						frq["stimulus"] = {
+							"type": "image",
+							"file_path": str(image_path),
+							"base64": base64_data,
+							"alt_text": raw_prompt  # Use original prompt as alt text
+						}
+						images_generated += 1
+						log(f"[{context_label}] Generated image: {filename}")
+					else:
+						images_failed += 1
+						log(f"[{context_label}] WARNING: Failed to generate image for FRQ{frq_idx+1}")
+						# Keep FRQ but mark stimulus as failed
+						frq["stimulus"] = {
+							"type": "none",
+							"error": "Image generation failed"
+						}
+		
+		log(f"[{context_label}] Image generation complete: {images_generated} success, {images_failed} failed")
+		
+		assign_frq_ids(
+			all_frqs,
+			course_id,
+			unit_index,
+			set_index
+		)
+		
+		render_html(
+			html_template=html_template,
+			course_name=course_name,
+			course_id=course_id,
+			unit_title=unit_title,
+			unit_index=unit_index,
+			set_index=set_index,
+			frqs=all_frqs,
+			context_label=context_label
+		)
+		
+		# Update coverage tracker
+		for frq in all_frqs:
+			for lo_id in frq.get("aligned_lo_ids", []):
+				if lo_id in coverage_tracker:
+					coverage_tracker[lo_id] += 1
+		
+		log(f"[{context_label}] ✅ SUCCESS: Saved {len(all_frqs)} FRQs")
+	else:
+		log(f"[{context_label}] ❌ FAILED: Only got {len(all_frqs)}/{FRQS_PER_SET}")
 
 
 # TSV parsing

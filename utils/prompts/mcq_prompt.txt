@@ -38,10 +38,11 @@ A, B, C, D:
 - Plain text only
 - NO labels
 - EXACTLY ONE correct
-- Never put tables or SVGs inside A/B/C/D. If a table is needed, set stim_type=table and put the entire table in stim_payload.
+- Never put tables or images inside A/B/C/D. If visual content is needed, set stim_type=image and provide a detailed description in stim_payload.
 
 stim_type:
-- none | table | svg
+- none | image
+- If visual content is needed (chart, table, diagram, molecular structure, circuit, etc.), use "image"
 
 ====================
 MATHEMATICAL NOTATION
@@ -63,46 +64,45 @@ MATHEMATICAL NOTATION
   * BAD: "(x - mu) / (s / sqrt(n))"
 
 ====================
-TABLE FORMAT (STRICT)
+IMAGE PROMPT FORMAT (STRICT)
 ====================
 
-| Col1 | Col2 | Col3 |
-| --- | --- | --- |
-| A | 1 | 0.25 |
-| B | 2 | 0.50 |
+If stim_type = image, provide a detailed prompt describing the image to generate in stim_payload.
 
-RULES:
-- Every row MUST start with "|" and end with "|"
-- Header row REQUIRED
-- Separator row REQUIRED using "---"
-- ALL rows must have the SAME number of columns
-- Use literal "\n" between rows
-- ONE LINE ONLY in TSV
-- NO captions, NO notes, NO extra text
+FORMAT: IMAGE_PROMPT: [detailed description]
 
-====================
-SVG FORMAT (STRICT)
-====================
+CRITICAL IMAGE RULES (AP EXAM STANDARDS):
+✗ DO NOT describe images that include question text
+✗ DO NOT describe images that include answer choices (A/B/C/D)
+✗ DO NOT describe images with question-related titles/captions
+✓ DO describe standalone visual stimuli: diagrams, charts, graphs, data tables, scenarios
+✓ DO include only labels that identify parts of the diagram/data (e.g., axis labels, force vectors, chemical structures)
+✓ The image should be something students look at TO ANSWER a question, not something that CONTAINS the question
 
-RULES:
-- width ≤ 300, height ≤ 200
-- White background
-- Font size ≥ 12
-- Use ONLY: <svg>, <rect>, <line>, <circle>, <text>
-- Maximum 8 <text> elements
-- No overlapping labels
-- Black or dark gray strokes only
-- No gradients, no transforms, no stylesheets
+Write prompts like a creative director: be highly detailed and visually striking.
+Be specific about: layout, labels, values, colors, style, atmosphere, composition, specific visual elements.
+Include descriptive language about the scene, atmosphere, and desired aesthetic.
+
+GOOD IMAGE PROMPT EXAMPLES:
+• "IMAGE_PROMPT: Create a highly detailed bar chart showing test scores in a clean, professional academic style. X-axis displays students labeled A through E. Y-axis ranges from 0 to 100 with clear gridlines. Five vertical bars with heights corresponding to values: A=85, B=72, C=93, D=68, E=88. Use a professional color palette suitable for educational materials with good contrast and readability. NO title, NO question text, NO explanatory captions - just the pure data visualization."
+
+• "IMAGE_PROMPT: Create a precise and educational free body diagram of a block on an inclined plane at 30 degrees. Show three force vectors as arrows: weight force (mg) pointing downward from center, normal force (N) perpendicular to plane surface, friction force (f) parallel to plane pointing upslope. Label ONLY the forces with their physics symbols (mg, N, f). Clean technical diagram suitable for a physics exam with bold lines and clear vector arrows. NO question text, NO explanatory paragraph."
+
+• "IMAGE_PROMPT: Create a professional data table with clear gridlines. Column headers: Year, Revenue (thousands), Profit (thousands). Four data rows: 2020: 100, 20 | 2021: 150, 35 | 2022: 200, 50 | 2023: 180, 40. Use clean typography with good contrast. This is raw data for students to analyze - NO titles, NO question references, NO interpretive text."
+
+IMPORTANT:
+- For tables in images, describe all data clearly in natural language
+- For mathematical content in images, write out formulas in natural language (e.g., "n hat p greater than or equal to 10" rather than using LaTeX)
+- Be comprehensive - the image generator needs all details
 
 ====================
 stim_payload rules
 ====================
 
 - If stim_type = none → MUST be empty
-- If stim_type = table → pipe table ONLY
-- If stim_type = svg → inline <svg>...</svg>
+- If stim_type = image → must start with "IMAGE_PROMPT: " followed by detailed description
 - ONE LINE ONLY
-- No scripts or external references
+- Must be self-contained and complete
 
 STIMULUS REQUIREMENT
 - If stim_type ≠ none, the stimulus MUST be required to answer the question

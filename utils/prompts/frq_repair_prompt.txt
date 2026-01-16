@@ -62,7 +62,8 @@ scoring_guidelines:
 - Clear expectations for earning points
 
 stim_type:
-- none | svg | table
+- none | image
+- If visual content is needed (chart, table, diagram, molecular structure, circuit, experimental setup, etc.), use "image"
 
 ====================
 MATHEMATICAL NOTATION
@@ -86,54 +87,43 @@ MATHEMATICAL NOTATION
 - Tables should use LaTeX for any math in cells
 
 ====================
-TABLE FORMAT (STRICT)
+IMAGE PROMPT FORMAT (STRICT)
 ====================
 
-| Col1 | Col2 | Col3 |
-| --- | --- | --- |
-| A | 1 | 0.25 |
-| B | 2 | 0.50 |
+If stim_type = image, provide a detailed prompt describing the image to generate in stim_payload.
 
-RULES:
-- Every row MUST start with "|" and end with "|"
-- Header row REQUIRED
-- Separator row REQUIRED using "---"
-- ALL rows must have the SAME number of columns
-- Use literal "\n" between rows
-- ONE LINE ONLY in TSV
-- NO captions, NO notes, NO extra text
+FORMAT: IMAGE_PROMPT: [detailed description]
 
-====================
-SVG FORMAT (STRICT)
-====================
+CRITICAL IMAGE RULES (AP EXAM STANDARDS):
+✗ DO NOT describe images that include question text
+✗ DO NOT describe images that include answer choices (A/B/C/D)
+✗ DO NOT describe images with question-related titles/captions
+✓ DO describe standalone visual stimuli: diagrams, charts, graphs, data tables, scenarios
+✓ DO include only labels that identify parts of the diagram/data (e.g., axis labels, force vectors, chemical structures)
+✓ The image should be something students look at TO ANSWER a question, not something that CONTAINS the question
 
-RULES:
-- width ≤ 400, height ≤ 300
-- White background
-- Font size ≥ 12
-- Use ONLY: <svg>, <rect>, <line>, <circle>, <path>, <text>, <polyline>
-- Maximum 8 <text> elements
-- No overlapping labels
-- Black or dark gray strokes/text only
-- No scripts, no external references, no gradients
-- Must be valid self-contained SVG
+Write prompts like a creative director: be highly detailed and visually striking.
+Be specific about: layout, labels, values, colors, style, atmosphere, composition, specific visual elements.
 
-EXAMPLES OF APPROPRIATE SVG:
-- Scatterplots with labeled axes
-- Histograms or bar charts
-- Boxplots
-- Normal distribution curves
-- Simple geometric diagrams
+GOOD IMAGE PROMPT EXAMPLES:
+• "IMAGE_PROMPT: Create a highly detailed scatterplot showing the relationship between study hours (x-axis, 0-10 hours) and test scores (y-axis, 0-100). Plot 15 points showing a positive linear trend with some scatter. Include clear axis labels and gridlines. Use professional academic styling with good contrast and readability. NO title, NO question text, NO explanatory captions - just the pure data visualization."
+
+• "IMAGE_PROMPT: Create a professional data table with clear formatting suitable for academic presentation. Table has 4 columns with headers: Treatment Group, Sample Size, Mean Response, Standard Deviation. Include 3 data rows: Control with n=30, mean=72.5, SD=8.2; Treatment A with n=28, mean=78.3, SD=7.9; Treatment B with n=32, mean=81.7, SD=6.5. Use clean lines, professional fonts, and ensure all text is clearly readable. This is raw data for students to analyze - NO titles, NO question references, NO interpretive text."
+
+IMPORTANT:
+- For tables in images, describe all data clearly in natural language with exact values
+- For mathematical content in images, write out formulas in natural language (e.g., "mu equals 50" rather than using LaTeX)
+- For complex diagrams, be extremely detailed about every element
+- Be comprehensive - the image generator needs all details
 
 ====================
 stim_payload rules
 ====================
 
 - If stim_type = none → MUST be empty
-- If stim_type = table → pipe table ONLY
-- If stim_type = svg → inline <svg>...</svg>
+- If stim_type = image → must start with "IMAGE_PROMPT: " followed by detailed description
 - ONE LINE ONLY
-- No scripts or external references
+- Must be self-contained and complete
 
 STIMULUS REQUIREMENT
 - Include stimulus ONLY if necessary for answering the question
