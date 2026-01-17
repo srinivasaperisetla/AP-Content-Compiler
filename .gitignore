@@ -1,1 +1,7 @@
 .env
+
+# Output / generated files
+output/
+
+# Batch processing temporary files
+batch_jobs/

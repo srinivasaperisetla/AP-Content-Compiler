@@ -9,8 +9,10 @@ Follows the same architecture as mcq_compiler.py:
 
 import os
 import re
+import argparse
 from pathlib import Path
 from typing import Dict, List, Tuple, Any, Optional
+from datetime import datetime
 
 import asyncio
 
@@ -43,6 +45,16 @@ from utils.image_generator import (
 	enhance_prompt_for_image_generation
 )
 
+from utils.batch_state_manager import (
+	BatchJobState,
+	SetData,
+	save_batch_job_state
+)
+
+from utils.batch_image_generator import (
+	create_batch_job_for_unit
+)
+
 # Environment and Variables
 load_dotenv()  # Load environment variables from .env file
 os.environ["SSL_CERT_FILE"] = certifi.where()
@@ -54,7 +66,7 @@ FRQS_PER_SET = 5
 MAX_RETRIES_PER_SET = 4
 
 AP_COURSES = {
-	"AP Statistics": "ap_statistics",
+	"AP Environmental Science": "ap_environmental_science",
 }
 
 CONTENT_DIR = Path("utils/content")
@@ -506,6 +518,176 @@ def build_unit_context(
 	return unit_context, constraints
 
 
+async def process_set_for_batch_frq(
+	text_sem: asyncio.Semaphore,
+	client: genai.Client,
+	course_name: str,
+	course_id: str,
+	unit: dict,
+	unit_index: int,
+	set_index: int,
+	prompt_template: Template,
+	repair_prompt_template: Template,
+	html_template: Template,
+	unit_context: str,
+	constraints: dict,
+	coverage_tracker: Dict[str, int]
+) -> Optional[Dict]:
+	"""
+	Process a single FRQ set in batch mode - generate text, collect image prompts.
+	
+	Returns:
+		Dict with set_index, questions_data, image_requests, or None if file exists
+	"""
+	context_label = f"{course_id} | U{unit_index+1} | Set{set_index+1}"
+	unit_title = unit.get("name", "")
+	
+	# CHECK IF FILE EXISTS FIRST
+	out_dir = OUTPUT_DIR / course_id / "frq"
+	ensure_dir(out_dir)
+	output_path = out_dir / f"unit{unit_index + 1}-set{set_index + 1}.html"
+	
+	if output_path.exists():
+		log(f"[{context_label}] ✓ File already exists, skipping")
+		return None
+	
+	# Generate text FRQs (same as real-time mode)
+	async with text_sem:
+		log(f"[{context_label}] Generating FRQs...")
+		all_frqs = []
+		
+		# Get under-covered LOs
+		priority_los = get_priority_los(
+			coverage_tracker,
+			constraints["allowed_lo_ids"],
+			top_n=10
+		)
+		priority_los_str = ",".join(priority_los)
+		
+		prompt = prompt_template.render(
+			num_frqs=FRQS_PER_SET,
+			unit_context=unit_context,
+			course_name=course_name,
+			priority_los=priority_los_str
+		)
+		
+		try:
+			response = await client.aio.models.generate_content(
+				model=MODEL,
+				contents=prompt
+			)
+			tsv = response.text or ""
+		except Exception as e:
+			log(f"[{context_label}] Initial API Error: {e}")
+			tsv = ""
+		
+		rows = parse_tsv(tsv, context_label)
+		valid, invalid_initial = validate_rows_individually(rows, constraints, context_label)
+		all_frqs.extend(valid)
+		all_invalid_reports = invalid_initial.copy()
+		
+		# Repair loop (same as real-time mode)
+		repair_round = 0
+		while len(all_frqs) < FRQS_PER_SET and repair_round < MAX_RETRIES_PER_SET:
+			repair_round += 1
+			missing = FRQS_PER_SET - len(all_frqs)
+			
+			if missing <= 2:
+				request_count = missing + 2
+			else:
+				buffer = max(1, min(5, int(missing * 0.4)))
+				request_count = missing + buffer
+			
+			repair_summary = summarize_invalid_reports(all_invalid_reports)
+			repair_prompt = repair_prompt_template.render(
+				num_frqs=request_count,
+				unit_context=unit_context,
+				course_name=course_name,
+				validation_errors=repair_summary,
+				priority_los=priority_los_str
+			)
+			
+			try:
+				repair_response = await client.aio.models.generate_content(
+					model=MODEL,
+					contents=repair_prompt
+				)
+				repair_tsv = repair_response.text or ""
+			except Exception as e:
+				log(f"[{context_label}] Repair API Error: {e}")
+				break
+			
+			repair_rows = parse_tsv(repair_tsv, context_label)
+			repair_valid, repair_invalid = validate_rows_individually(repair_rows, constraints, context_label)
+			all_frqs.extend(repair_valid)
+			all_invalid_reports.extend(repair_invalid)
+	
+	# Check if we have enough FRQs
+	if len(all_frqs) < FRQS_PER_SET:
+		log(f"[{context_label}] ❌ FAILED: Only got {len(all_frqs)}/{FRQS_PER_SET}")
+		return None
+	
+	all_frqs = all_frqs[:FRQS_PER_SET]
+	
+	# Collect image prompts
+	image_requests = []
+	for frq_idx, frq in enumerate(all_frqs):
+		if frq.get("stimulus_type") == "image":
+			content = frq.get("stimulus_content", "")
+			
+			if content.startswith("IMAGE_PROMPT:"):
+				raw_prompt = content.replace("IMAGE_PROMPT:", "").strip()
+				
+				# Enhance prompt
+				question_stem = frq.get("context", "")  # FRQ uses "context" field
+				enhanced_prompt = enhance_prompt_for_image_generation(
+					raw_prompt=raw_prompt,
+					question_stem=question_stem,
+					question_type="FRQ",
+					course_name=course_name,
+					answer_choices=""  # FRQs don't have answer choices
+				)
+				
+				# Key format: u{unit}_s{set}_q{question}
+				image_requests.append({
+					"key": f"u{unit_index+1}_s{set_index+1}_q{frq_idx}",
+					"prompt": enhanced_prompt,
+					"question_index": frq_idx
+				})
+	
+	# If no images needed, render HTML immediately
+	if len(image_requests) == 0:
+		assign_frq_ids(all_frqs, course_id, unit_index, set_index)
+		render_html(
+			html_template=html_template,
+			course_name=course_name,
+			course_id=course_id,
+			unit_title=unit_title,
+			unit_index=unit_index,
+			set_index=set_index,
+			frqs=all_frqs,
+			context_label=context_label
+		)
+		log(f"[{context_label}] ✓ No images needed, HTML rendered")
+		
+		# Update coverage tracker
+		for frq in all_frqs:
+			for lo_id in frq.get("aligned_lo_ids", []):
+				if lo_id in coverage_tracker:
+					coverage_tracker[lo_id] += 1
+		
+		return None  # Don't include in batch
+	
+	log(f"[{context_label}] ✓ Generated {len(all_frqs)} FRQs, {len(image_requests)} images needed")
+	
+	# Return data for batch processing
+	return {
+		"set_index": set_index,
+		"questions_data": all_frqs,
+		"image_requests": image_requests
+	}
+
+
 # Gemini call to process a single set
 async def process_single_set(
 	text_sem: asyncio.Semaphore,
@@ -539,7 +721,7 @@ async def process_single_set(
 	# Wait for permission from Text Semaphore (Rate Limit Guard)
 	async with text_sem:
 		log(f"[{context_label}] Starting FRQ generation...")
-	all_frqs = []
+		all_frqs = []
 		
 		# ----------------------------------------
 		# 1. Initial Generation
@@ -563,7 +745,7 @@ async def process_single_set(
 		try:
 			# ASYNC CALL
 			response = await client.aio.models.generate_content(
-			model=MODEL,
+				model=MODEL,
 				contents=prompt
 			)
 			tsv = response.text or ""
@@ -797,8 +979,14 @@ def assign_frq_ids(
 
 
 # Main Async Process
-async def main_async():
-	"""Main entry point for async FRQ generation."""
+async def main_async(batch_mode: bool = False, target_course: Optional[str] = None):
+	"""
+	Main async process for FRQ generation.
+	
+	Args:
+		batch_mode: If True, use batch API for image generation (two-phase)
+		target_course: If provided, only process this course (e.g., 'ap_statistics')
+	"""
 	client = init_client()
 	
 	# Load templates ONCE
@@ -806,22 +994,66 @@ async def main_async():
 	repair_prompt_template = Template(load_text(REPAIR_PROMPT_PATH))
 	html_template = Template(load_text(HTML_TEMPLATE_PATH))
 	
-	# TWO semaphores for different rate limits
-	text_sem = asyncio.Semaphore(40)  # High parallelism for text generation
-	image_sem = asyncio.Semaphore(1)  # Strict serialization for image generation
+	# TWO semaphores for different rate limits (not used in batch mode for images)
+	text_sem = asyncio.Semaphore(100)  # High parallelism for text generation
+	image_sem = asyncio.Semaphore(1)  # Strict serialization for image generation (real-time mode only)
 	
+	# Filter courses if target specified
+	courses_to_process = {}
+	if target_course:
+		if target_course in AP_COURSES:
+			courses_to_process = {AP_COURSES[target_course]: target_course}
+		else:
+			print(f"Error: Course '{target_course}' not found in AP_COURSES")
+			return
+	else:
+		courses_to_process = {v: k for k, v in AP_COURSES.items()}
+	
+	if batch_mode:
+		log("=" * 60)
+		log("BATCH MODE: Phase 1 - Text Generation & Batch Submission")
+		log("=" * 60)
+		await run_batch_mode_frq(
+			client,
+			courses_to_process,
+			prompt_template,
+			repair_prompt_template,
+			html_template,
+			text_sem
+		)
+	else:
+		log("=" * 60)
+		log("REAL-TIME MODE: Text & Image Generation")
+		log("=" * 60)
+		await run_realtime_mode_frq(
+			client,
+			courses_to_process,
+			prompt_template,
+			repair_prompt_template,
+			html_template,
+			text_sem,
+			image_sem
+		)
+
+
+async def run_realtime_mode_frq(
+	client,
+	courses_to_process,
+	prompt_template,
+	repair_prompt_template,
+	html_template,
+	text_sem,
+	image_sem
+):
+	"""Run in real-time mode (original behavior)."""
 	tasks = []
 	
-	for course_name, course_id in AP_COURSES.items():
+	for course_id, course_name in courses_to_process.items():
 		course_spec = load_json(CONTENT_DIR / f"{course_id}.json")
 		skill_lookup = build_skill_lookup(course_spec)
 		big_idea_lookup = build_big_idea_lookup(course_spec)
 		
 		for unit_index, unit in enumerate(course_spec.get("units", [])):
-
-			if unit_index != 6:
-				continue
-
 			# Initialize coverage tracker per unit
 			coverage_tracker = initialize_lo_coverage(unit)
 
@@ -859,5 +1091,210 @@ async def main_async():
 	await asyncio.gather(*tasks)
 
 
+async def process_unit_for_batch_frq(
+	client,
+	course_id,
+	course_name,
+	unit,
+	unit_index,
+	skill_lookup,
+	big_idea_lookup,
+	prompt_template,
+	repair_prompt_template,
+	html_template,
+	text_sem
+):
+	"""
+	Process a single unit in batch mode - generate text in parallel, then create batch job.
+	
+	Returns:
+		Tuple of (batch_jobs_created, total_images) for this unit
+	"""
+	log(f"\n{'='*60}")
+	log(f"Processing {course_name} - Unit {unit_index + 1}: {unit.get('name', '')}")
+	log(f"{'='*60}")
+	
+	# Initialize coverage tracker per unit
+	coverage_tracker = initialize_lo_coverage(unit)
+
+	unit_context, constraints = build_unit_context(
+		load_json(CONTENT_DIR / f"{course_id}.json"),
+		unit,
+		unit_index,
+		skill_lookup,
+		big_idea_lookup,
+		question_type="frq"
+	)
+	
+	# Collect tasks for parallel text generation (one task per set)
+	set_tasks = []
+	for set_index in range(NUM_SETS_PER_UNIT):
+		set_tasks.append(
+			process_set_for_batch_frq(
+				text_sem,
+				client,
+				course_name,
+				course_id,
+				unit,
+				unit_index,
+				set_index,
+				prompt_template,
+				repair_prompt_template,
+				html_template,
+				unit_context,
+				constraints,
+				coverage_tracker
+			)
+		)
+	
+	# Execute all set tasks in parallel
+	log(f"[Unit {unit_index+1}] Generating text for {len(set_tasks)} sets in parallel...")
+	set_results = await asyncio.gather(*set_tasks)
+	
+	# Process results and collect image requests
+	all_sets_data = []
+	all_image_requests = []
+	sets_with_images = 0
+	
+	for set_data in set_results:
+		if set_data:
+			all_sets_data.append(set_data)
+			all_image_requests.extend(set_data["image_requests"])
+			if len(set_data["image_requests"]) > 0:
+				sets_with_images += 1
+	
+	# Create batch job for this unit if there are images
+	if len(all_image_requests) > 0:
+		unit_label = f"{course_id}_u{unit_index+1}_frq"
+		
+		log(f"\n[Unit {unit_index+1}] Creating batch job:")
+		log(f"  - Sets with images: {sets_with_images}/{len(all_sets_data)}")
+		log(f"  - Total images: {len(all_image_requests)}")
+		
+		try:
+			job_name, uploaded_file, jsonl_path = await create_batch_job_for_unit(
+				client,
+				all_image_requests,
+				unit_label
+			)
+			
+			# Save state
+			state = BatchJobState(
+				job_name=job_name,
+				course_id=course_id,
+				course_name=course_name,
+				unit_index=unit_index,
+				unit_title=unit.get("name", ""),
+				question_type="frq",
+				sets=[{
+					"set_index": sd["set_index"],
+					"questions_data": sd["questions_data"],
+					"image_requests": sd["image_requests"]
+				} for sd in all_sets_data if len(sd["image_requests"]) > 0],
+				total_image_requests=len(all_image_requests),
+				jsonl_file_path=str(jsonl_path),
+				uploaded_file_name=uploaded_file,
+				created_at=datetime.now().isoformat()
+			)
+			
+			state_file = save_batch_job_state(state, Path("batch_jobs/state"))
+			
+			log(f"  ✓ Batch job created: {job_name}")
+			log(f"  ✓ State saved: {state_file}")
+			
+			return 1, len(all_image_requests)
+			
+		except Exception as e:
+			log(f"  ✗ Error creating batch job: {e}")
+			return 0, 0
+	else:
+		log(f"[Unit {unit_index+1}] No images needed - all HTML files rendered")
+		return 0, 0
+
+
+async def run_batch_mode_frq(
+	client,
+	courses_to_process,
+	prompt_template,
+	repair_prompt_template,
+	html_template,
+	text_sem
+):
+	"""Run in batch mode - generate text in parallel, submit batch jobs in parallel."""
+	batch_jobs_created = 0
+	total_images = 0
+	
+	# Collect all unit tasks for parallel processing
+	unit_tasks = []
+	
+	for course_id, course_name in courses_to_process.items():
+		course_spec = load_json(CONTENT_DIR / f"{course_id}.json")
+		skill_lookup = build_skill_lookup(course_spec)
+		big_idea_lookup = build_big_idea_lookup(course_spec)
+
+		for unit_index, unit in enumerate(course_spec.get("units", [])):
+			# Add task for this unit (will process sets in parallel, then submit batch job)
+			unit_tasks.append(
+				process_unit_for_batch_frq(
+					client,
+					course_id,
+					course_name,
+					unit,
+					unit_index,
+					skill_lookup,
+					big_idea_lookup,
+					prompt_template,
+					repair_prompt_template,
+					html_template,
+					text_sem
+				)
+			)
+	
+	# Execute all unit tasks in parallel (text generation + batch job submission)
+	log(f"\n{'='*60}")
+	log(f"Starting parallel processing: {len(unit_tasks)} unit(s)")
+	log(f"{'='*60}")
+	
+	unit_results = await asyncio.gather(*unit_tasks)
+	
+	# Aggregate results
+	for jobs, images in unit_results:
+		batch_jobs_created += jobs
+		total_images += images
+	
+	log(f"\n{'='*60}")
+	log(f"PHASE 1 COMPLETE")
+	log(f"{'='*60}")
+	log(f"Batch jobs created: {batch_jobs_created}")
+	log(f"Total images queued: {total_images}")
+	log(f"\nNext steps:")
+	log(f"1. Wait for batch jobs to complete (up to 24 hours)")
+	log(f"2. Run: python batch_retrieve_and_render.py")
+
+
+def main():
+	"""Main entry point with argument parsing."""
+	parser = argparse.ArgumentParser(
+		description='Generate AP-style FRQ questions with optional batch image generation'
+	)
+	parser.add_argument(
+		'--course',
+		type=str,
+		help='Specific course ID to process (e.g., ap_statistics). If not provided, processes all courses.'
+	)
+	parser.add_argument(
+		'--batch',
+		action='store_true',
+		help='Use batch API for image generation (two-phase workflow)'
+	)
+	
+	args = parser.parse_args()
+	
+	asyncio.run(main_async(
+		batch_mode=args.batch,
+		target_course=args.course
+	))
+
+
 if __name__ == "__main__":
-	asyncio.run(main_async())
+	main()
