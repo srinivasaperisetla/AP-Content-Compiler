@@ -106,6 +106,8 @@ stim_payload rules
 
 STIMULUS REQUIREMENT
 - If stim_type ≠ none, the stimulus MUST be required to answer the question
+- AT LEAST 50% of questions MUST include a stimulus (stim_type = image)
+- Visual content (charts, diagrams, data tables) makes questions more engaging and AP-authentic
 
 FINAL VALIDATION
 - Exactly {{ num_questions }} lines

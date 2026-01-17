@@ -58,8 +58,8 @@ MAX_RETRIES_PER_SET = 4
 
 AP_COURSES = {
 	# "AP Statistics": "ap_statistics",
-	"AP Physics 1": "ap_physics_1",
-	"AP Chemistry": "ap_chemistry",
+	# "AP Physics 1": "ap_physics_1",
+	# "AP Chemistry": "ap_chemistry",
 	"AP Environmental Science": "ap_environmental_science",
 }
 
@@ -130,15 +130,15 @@ def validate_rows_individually(
 		if stim_type == "image":
 			# Validation for image prompt format
 			if not stim_payload.startswith("IMAGE_PROMPT:"):
-				invalid_reports.append({
-					"row_index": row_i,
+			invalid_reports.append({
+				"row_index": row_i,
 					"reason": "image_prompt_missing",
 					"detail": "Image stimulus must start with 'IMAGE_PROMPT:'"
-				})
+			})
 				if DEBUG:
 					log(f"[{context_label}] Row {row_i} rejected: Missing IMAGE_PROMPT: prefix")
-				continue
-			
+			continue
+
 			# Extract and validate prompt length
 			prompt = stim_payload.replace("IMAGE_PROMPT:", "").strip()
 			if len(prompt) < 20:
@@ -153,12 +153,12 @@ def validate_rows_individually(
 
 		valid_questions.append({
 		"id": None,
-		"difficulty": diff,
-		"skill_codes": skill_codes,
-		"aligned_lo_ids": lo_ids,
-		"correct_choice_index": int(idx),
-		"question": qtext,
-		"choices": [A, B, C, D],
+			"difficulty": diff,
+			"skill_codes": skill_codes,
+			"aligned_lo_ids": lo_ids,
+			"correct_choice_index": int(idx),
+			"question": qtext,
+			"choices": [A, B, C, D],
 		"stimulus_type": stim_type,
 		"stimulus_content": stim_payload,
 		"stimulus": None  # Will be populated during image generation
@@ -203,7 +203,7 @@ def validate_tsv_row(cols: List[str]) -> Optional[str]:
 
 	if stim_type != "none" and not stim_payload.strip():
 		return "Missing stimulus_payload"
-	
+
 	if stim_type == "image" and not stim_payload.startswith("IMAGE_PROMPT:"):
 		return "Image stimulus must start with 'IMAGE_PROMPT:'"
 	
@@ -397,7 +397,7 @@ def build_unit_context(
 				# Compress description (max 100 chars)
 				desc_short = desc[:100] + ("..." if len(desc) > 100 else "")
 				task_verb_lines.append(f"  {verb}: {desc_short}")
-	
+
 	# -----------------------
 	# Build final unit context (with section line breaks)
 	# -----------------------
@@ -482,6 +482,15 @@ async def process_single_set(
 	context_label = f"{course_id} | U{unit_index+1} | Set{set_index+1}"
 	unit_title = unit.get("name", "")
 	
+	# CHECK IF FILE EXISTS FIRST - EXIT EARLY TO SAVE API QUOTA
+	out_dir = OUTPUT_DIR / course_id / "mcq"
+	ensure_dir(out_dir)
+	output_path = out_dir / f"unit{unit_index + 1}-set{set_index + 1}.html"
+	
+	if output_path.exists():
+		log(f"[{context_label}] ✓ File already exists, skipping generation: {output_path}")
+		return output_path
+	
 	# Wait for permission from Text Semaphore (Rate Limit Guard)
 	async with text_sem:
 		log(f"[{context_label}] Starting generation...")
@@ -502,18 +511,18 @@ async def process_single_set(
 		prompt = prompt_template.render(
 			num_questions=QUESTIONS_PER_SET,
 			unit_context=unit_context,
-			course_name=course_name,
+		course_name=course_name,
 			priority_los=priority_los_str
-		)
-		
-		try:
+	)
+
+	try:
 			# ASYNC CALL
 			response = await client.aio.models.generate_content(
-				model=MODEL,
-				contents=prompt
-			)
+			model=MODEL,
+			contents=prompt
+		)
 			tsv = response.text or ""
-		except Exception as e:
+	except Exception as e:
 			log(f"[{context_label}] Initial API Error: {e}")
 			tsv = ""
 		
@@ -553,7 +562,7 @@ async def process_single_set(
 			
 			repair_prompt_text = repair_prompt_template.render(
 				num_questions=request_count,
-				unit_context=unit_context,
+		unit_context=unit_context,
 				course_name=course_name,
 				error_summary=error_summary,
 				allowed_skills_preview=allowed_skills_preview,
@@ -615,7 +624,8 @@ async def process_single_set(
 						question_stem=question_stem,
 						question_type="MCQ",
 						course_name=course_name,
-						answer_choices=answer_choices
+						answer_choices=answer_choices,
+						correct_answer_index=question.get("correct_choice_index", -1)
 					)
 					
 					# Create filename
@@ -628,7 +638,7 @@ async def process_single_set(
 					)
 					
 				# Generate and save image (with image semaphore for rate limiting)
-				image_path = OUTPUT_DIR / course_name / f"unit_{unit['id']}" / "images" / filename
+				image_path = OUTPUT_DIR / "images" / course_name / f"unit_{unit['id']}" / filename
 				
 				# Use IMAGE semaphore with rate limiting
 				async with image_sem:
@@ -662,6 +672,11 @@ async def process_single_set(
 						}
 		
 		log(f"[{context_label}] Image generation complete: {images_generated} success, {images_failed} failed")
+		
+		# Fail if any images didn't generate
+		if images_failed > 0:
+			log(f"[{context_label}] ❌ FAILED: {images_failed} image(s) failed to generate. Skipping HTML creation.")
+			return None
 		
 		assign_question_ids(
 			all_questions,
@@ -717,11 +732,6 @@ def render_html(html_template, course_name, course_id, unit_title, unit_index, s
 	)
 
 	path = out_dir / f"unit{unit_index + 1}-set{set_index + 1}.html"
-
-	if path.exists():
-		log(f"[{context_label}] Skipping existing file: {path}")
-		return path
-
 	path.write_text(html, encoding="utf-8")
 	log(f"[{context_label}] Wrote file: {path}")
 	return path
@@ -745,10 +755,10 @@ async def main_async():
 	prompt_template = Template(load_text(PROMPT_PATH))
 	repair_prompt_template = Template(load_text(REPAIR_PROMPT_PATH))
 	html_template = Template(load_text(HTML_TEMPLATE_PATH))
-	
+
 	# TWO semaphores for different rate limits
 	text_sem = asyncio.Semaphore(60)  # High parallelism for text generation
-	image_sem = asyncio.Semaphore(1)  # Strict serialization for image generation
+	image_sem = asyncio.Semaphore(5)  # Strict serialization for image generation
 	
 	tasks = []
 	
@@ -756,19 +766,19 @@ async def main_async():
 		course_spec = load_json(CONTENT_DIR / f"{course_id}.json")
 		skill_lookup = build_skill_lookup(course_spec)
 		big_idea_lookup = build_big_idea_lookup(course_spec)
-		
+
 		for unit_index, unit in enumerate(course_spec.get("units", [])):
-			# if unit_index != 0:
-			# 	continue
+			if unit_index != 0:
+				continue
 			
 			# Initialize coverage tracker per unit
 			coverage_tracker = initialize_lo_coverage(unit)
-			
-			unit_context, constraints = build_unit_context(
-				course_spec,
-				unit,
-				unit_index,
-				skill_lookup,
+
+				unit_context, constraints = build_unit_context(
+					course_spec,
+					unit,
+					unit_index,
+					skill_lookup,
 				big_idea_lookup,
 				question_type="mcq"
 			)

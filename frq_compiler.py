@@ -527,10 +527,19 @@ async def process_single_set(
 	context_label = f"{course_id} | U{unit_index+1} | Set{set_index+1}"
 	unit_title = unit.get("name", "")
 	
+	# CHECK IF FILE EXISTS FIRST - EXIT EARLY TO SAVE API QUOTA
+	out_dir = OUTPUT_DIR / course_id / "frq"
+	ensure_dir(out_dir)
+	output_path = out_dir / f"unit{unit_index + 1}-set{set_index + 1}.html"
+	
+	if output_path.exists():
+		log(f"[{context_label}] ✓ File already exists, skipping generation: {output_path}")
+		return output_path
+	
 	# Wait for permission from Text Semaphore (Rate Limit Guard)
 	async with text_sem:
 		log(f"[{context_label}] Starting FRQ generation...")
-		all_frqs = []
+	all_frqs = []
 		
 		# ----------------------------------------
 		# 1. Initial Generation
@@ -665,7 +674,7 @@ async def process_single_set(
 					)
 					
 				# Generate and save image (with image semaphore for rate limiting)
-				image_path = OUTPUT_DIR / course_name / f"unit_{unit['id']}" / "images" / filename
+				image_path = OUTPUT_DIR / "images" / course_name / f"unit_{unit['id']}" / filename
 				
 				# Use IMAGE semaphore with rate limiting
 				async with image_sem:
@@ -699,6 +708,11 @@ async def process_single_set(
 						}
 		
 		log(f"[{context_label}] Image generation complete: {images_generated} success, {images_failed} failed")
+		
+		# Fail if any images didn't generate
+		if images_failed > 0:
+			log(f"[{context_label}] ❌ FAILED: {images_failed} image(s) failed to generate. Skipping HTML creation.")
+			return None
 		
 		assign_frq_ids(
 			all_frqs,
@@ -759,18 +773,13 @@ def render_html(
 	ensure_dir(out_dir)
 	
 	html = html_template.render(
-		course=course_name,
-		unit=f"Unit {unit_index + 1}: {unit_title}",
-		set_number=set_index + 1,
+				course=course_name,
+				unit=f"Unit {unit_index + 1}: {unit_title}",
+				set_number=set_index + 1,
 		frqs=frqs
 	)
 	
 	path = out_dir / f"unit{unit_index + 1}-set{set_index + 1}.html"
-	
-	if path.exists():
-		log(f"[{context_label}] Skipping existing file: {path}")
-		return path
-	
 	path.write_text(html, encoding="utf-8")
 	log(f"[{context_label}] Wrote file: {path}")
 	return path

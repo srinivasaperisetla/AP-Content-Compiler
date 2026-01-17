@@ -128,6 +128,8 @@ stim_payload rules
 STIMULUS REQUIREMENT
 - Include stimulus ONLY if necessary for answering the question
 - If included, the question MUST depend on the stimulus for correctness
+- AT LEAST 50% of FRQs MUST include a stimulus (stim_type = image)
+- Visual content (data sets, diagrams, charts) makes FRQs more engaging and AP-authentic
 
 FRQ DESIGN PRINCIPLES
 - Each FRQ should assess multiple learning objectives when possible

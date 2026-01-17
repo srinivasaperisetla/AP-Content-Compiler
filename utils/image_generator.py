@@ -8,7 +8,7 @@ from google.genai import types
 from PIL import Image
 
 # Model for image generation
-IMAGE_MODEL = "gemini-3-pro-image-preview"
+IMAGE_MODEL = "gemini-2.5-flash-image"
 
 async def generate_image_from_prompt(
     prompt: str,
@@ -91,7 +91,7 @@ def create_image_filename(
     """Create standardized filename for generated images."""
     return f"{course_name}_{question_type}_u{unit_id}_s{set_index}_q{question_index}.jpeg"
 
-def enhance_prompt_for_image_generation(raw_prompt: str, question_stem: str = "", question_type: str = "MCQ", course_name: str = "", answer_choices: str = "") -> str:
+def enhance_prompt_for_image_generation(raw_prompt: str, question_stem: str = "", question_type: str = "MCQ", course_name: str = "", answer_choices: str = "", correct_answer_index: int = -1) -> str:
     """
     Enhance the LLM-generated image prompt with question context for relevance.
     
@@ -101,6 +101,7 @@ def enhance_prompt_for_image_generation(raw_prompt: str, question_stem: str = ""
         question_type: "MCQ" or "FRQ"
         course_name: AP course name (e.g., "AP Physics 1")
         answer_choices: The answer choices (for MCQ only)
+        correct_answer_index: Index of correct answer (0-3 for MCQ, -1 for FRQ/none)
         
     Returns:
         Enhanced prompt with question context and explicit rendering rules
@@ -113,6 +114,12 @@ def enhance_prompt_for_image_generation(raw_prompt: str, question_stem: str = ""
     
     if answer_choices and question_type == "MCQ":
         context_header += f"\nANSWER CHOICES:\n{answer_choices}\n"
+        
+        # Add correct answer indication
+        if correct_answer_index >= 0:
+            choices_list = answer_choices.split('\n')
+            if correct_answer_index < len(choices_list):
+                context_header += f"\nCORRECT ANSWER: {choices_list[correct_answer_index]}\n"
     
     context_header += "\n"
     
